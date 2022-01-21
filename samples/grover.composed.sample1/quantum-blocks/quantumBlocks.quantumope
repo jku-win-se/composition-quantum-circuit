@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<quope:QuantumOperationLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:quope="http://QuantumOpe">
+  <operations name="Hadamard" abbreviation="H" paletteIconPath="" styleIconPath="">
+    <type href="http://QuCircuit#//ElementaryQuantumGate"/>
+  </operations>
+  <operations name="Oracle" abbreviation="Oracle" paletteIconPath="" styleIconPath="">
+    <type href="http://QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations name="Amplification" abbreviation="Amplification" paletteIconPath="" styleIconPath="">
+    <type href="http://QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations name="Reset" abbreviation="Reset">
+    <type href="http://QuCircuit#//StatePreparation"/>
+  </operations>
+  <operations name="MeasurementCompBasis" abbreviation="Measurement in computational basis">
+    <type href="http://QuCircuit#//Measurement"/>
+  </operations>
+</quope:QuantumOperationLibrary>

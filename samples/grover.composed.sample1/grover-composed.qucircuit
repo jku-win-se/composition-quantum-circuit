@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qucircuit:QuantumCircuit xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qucircuit="http://QuCircuit" name="grover-composed">
+  <quantumRegisters>
+    <qubits id="0"/>
+    <qubits id="1"/>
+    <qubits id="2"/>
+  </quantumRegisters>
+  <classicRegisters>
+    <classicBits id="3"/>
+    <classicBits id="4"/>
+    <classicBits id="5"/>
+  </classicRegisters>
+  <layers name="L1">
+    <quantumOperations xsi:type="qucircuit:StatePreparation" name="Reset1" targetQubits="0 1 2">
+      <operation href="quantum-blocks/quantumBlocks.quantumope#//@operations.3"/>
+    </quantumOperations>
+  </layers>
+  <layers name="L2">
+    <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate" name="H1" targetQubits="0 1 2">
+      <operation href="quantum-blocks/quantumBlocks.quantumope#//@operations.0"/>
+    </quantumOperations>
+  </layers>
+  <layers name="L3">
+    <quantumOperations xsi:type="qucircuit:CompositeQuantumGate" name="Oracle1" targetQubits="0 1 2">
+      <operation href="quantum-blocks/quantumBlocks.quantumope#//@operations.1"/>
+    </quantumOperations>
+  </layers>
+  <layers name="L4">
+    <quantumOperations xsi:type="qucircuit:CompositeQuantumGate" name="Amp1" targetQubits="0 1 2">
+      <operation href="quantum-blocks/quantumBlocks.quantumope#//@operations.2"/>
+    </quantumOperations>
+  </layers>
+  <layers name="L5">
+    <quantumOperations xsi:type="qucircuit:Measurement" name="Measurement1" targetQubits="0 1 2" classicBits="3 4 5">
+      <operation href="quantum-blocks/quantumBlocks.quantumope#//@operations.4"/>
+    </quantumOperations>
+  </layers>
+</qucircuit:QuantumCircuit>
