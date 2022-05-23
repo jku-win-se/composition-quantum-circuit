@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="qucircuit" nsURI="http://www.se.jku.at/QuCircuit" nsPrefix="qucircuit">
+  <eClassifiers xsi:type="ecore:EClass" name="QuantumCircuit" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantumRegisters" lowerBound="1"
+        upperBound="-1" eType="#//QuantumRegister" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classicRegisters" upperBound="-1"
+        eType="#//ClassicRegister" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layers" upperBound="-1"
+        eType="#//Layer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuantumRegister" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qubits" upperBound="-1"
+        eType="#//Qubit" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassicRegister" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classicBits" upperBound="-1"
+        eType="#//ClassicBit" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Qubit" eSuperTypes="#//Bit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassicBit" eSuperTypes="#//Bit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Layer" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantumOperations" upperBound="-1"
+        eType="#//QuantumOperation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassicControl">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classicRegister" lowerBound="1"
+        eType="#//ClassicRegister"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuantumOperation" abstract="true" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classicControl" eType="#//ClassicControl"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="ecore:EClass ../../at.jku.se.quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetQubits" lowerBound="1"
+        upperBound="-1" eType="#//Qubit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractQuantumGate" abstract="true"
+      eSuperTypes="#//QuantumOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controlQubits" upperBound="-1"
+        eType="#//Qubit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatePreparation" eSuperTypes="#//QuantumOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Measurement" eSuperTypes="#//QuantumOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classicBits" lowerBound="1"
+        upperBound="-1" eType="#//ClassicBit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementaryQuantumGate" eSuperTypes="#//AbstractQuantumGate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angleParameter" eType="#//AngleParameter"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeQuantumGate" eSuperTypes="#//AbstractQuantumGate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layers" upperBound="-1"
+        eType="#//Layer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngleParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="theta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="phi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lambda" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bit" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
+        iD="true"/>
+  </eClassifiers>
+</ecore:EPackage>

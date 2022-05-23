@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated quantumOpe -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeModelWizardID"
+            name="%_UI_QuantumOpeModelWizard_label"
+            class="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/QuantumOpeModelFile.gif">
+         <description>%_UI_QuantumOpeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated quantumOpe -->
+      <editor
+            id="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeEditorID"
+            name="%_UI_QuantumOpeEditor_label"
+            icon="icons/full/obj16/QuantumOpeModelFile.gif"
+            extensions="quantumope"
+            class="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeEditor"
+            contributorClass="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
