@@ -6,11 +6,13 @@ import at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import qucircuit.AbstractCompositeGate;
 import qucircuit.AbstractQuantumGate;
 import qucircuit.AngleParameter;
 import qucircuit.Bit;
@@ -19,8 +21,8 @@ import qucircuit.ClassicControl;
 import qucircuit.ClassicRegister;
 import qucircuit.CompositeQuantumGate;
 import qucircuit.ElementaryQuantumGate;
-import qucircuit.IrreversibleQuantumGate;
 import qucircuit.Layer;
+import qucircuit.Loop;
 import qucircuit.Measurement;
 import qucircuit.NamedElement;
 import qucircuit.QuCircuitFactory;
@@ -113,13 +115,6 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass irreversibleQuantumGateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass statePreparationEClass = null;
 
 	/**
@@ -156,6 +151,27 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * @generated
 	 */
 	private EClass bitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractCompositeGateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass loopEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum looP_KINDEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -436,24 +452,6 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractQuantumGate_Layers() {
-		return (EReference) abstractQuantumGateEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIrreversibleQuantumGate() {
-		return irreversibleQuantumGateEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStatePreparation() {
 		return statePreparationEClass;
 	}
@@ -562,6 +560,69 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAbstractCompositeGate() {
+		return abstractCompositeGateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractCompositeGate_Layers() {
+		return (EReference) abstractCompositeGateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLoop() {
+		return loopEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_Iterations() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_LoopKind() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_Increment() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getLOOP_KIND() {
+		return looP_KINDEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public QuCircuitFactory getQuCircuitFactory() {
 		return (QuCircuitFactory) getEFactoryInstance();
 	}
@@ -618,9 +679,6 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 
 		abstractQuantumGateEClass = createEClass(ABSTRACT_QUANTUM_GATE);
 		createEReference(abstractQuantumGateEClass, ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS);
-		createEReference(abstractQuantumGateEClass, ABSTRACT_QUANTUM_GATE__LAYERS);
-
-		irreversibleQuantumGateEClass = createEClass(IRREVERSIBLE_QUANTUM_GATE);
 
 		statePreparationEClass = createEClass(STATE_PREPARATION);
 
@@ -639,6 +697,17 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 
 		bitEClass = createEClass(BIT);
 		createEAttribute(bitEClass, BIT__ID);
+
+		abstractCompositeGateEClass = createEClass(ABSTRACT_COMPOSITE_GATE);
+		createEReference(abstractCompositeGateEClass, ABSTRACT_COMPOSITE_GATE__LAYERS);
+
+		loopEClass = createEClass(LOOP);
+		createEAttribute(loopEClass, LOOP__ITERATIONS);
+		createEAttribute(loopEClass, LOOP__LOOP_KIND);
+		createEAttribute(loopEClass, LOOP__INCREMENT);
+
+		// Create enums
+		looP_KINDEEnum = createEEnum(LOOP_KIND);
 	}
 
 	/**
@@ -682,11 +751,12 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		layerEClass.getESuperTypes().add(this.getNamedElement());
 		quantumOperationEClass.getESuperTypes().add(this.getNamedElement());
 		abstractQuantumGateEClass.getESuperTypes().add(this.getQuantumOperation());
-		irreversibleQuantumGateEClass.getESuperTypes().add(this.getQuantumOperation());
-		statePreparationEClass.getESuperTypes().add(this.getIrreversibleQuantumGate());
-		measurementEClass.getESuperTypes().add(this.getIrreversibleQuantumGate());
+		statePreparationEClass.getESuperTypes().add(this.getQuantumOperation());
+		measurementEClass.getESuperTypes().add(this.getQuantumOperation());
 		elementaryQuantumGateEClass.getESuperTypes().add(this.getAbstractQuantumGate());
-		compositeQuantumGateEClass.getESuperTypes().add(this.getAbstractQuantumGate());
+		compositeQuantumGateEClass.getESuperTypes().add(this.getAbstractCompositeGate());
+		abstractCompositeGateEClass.getESuperTypes().add(this.getAbstractQuantumGate());
+		loopEClass.getESuperTypes().add(this.getAbstractCompositeGate());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(quantumCircuitEClass, QuantumCircuit.class, "QuantumCircuit", !IS_ABSTRACT, !IS_INTERFACE,
@@ -754,12 +824,6 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		initEReference(getAbstractQuantumGate_ControlQubits(), this.getQubit(), null, "controlQubits", null, 0, -1,
 				AbstractQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractQuantumGate_Layers(), this.getLayer(), null, "layers", null, 0, -1,
-				AbstractQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(irreversibleQuantumGateEClass, IrreversibleQuantumGate.class, "IrreversibleQuantumGate", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(statePreparationEClass, StatePreparation.class, "StatePreparation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -794,6 +858,26 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		initEClass(bitEClass, Bit.class, "Bit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBit_Id(), ecorePackage.getEIntegerObject(), "id", null, 0, 1, Bit.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(abstractCompositeGateEClass, AbstractCompositeGate.class, "AbstractCompositeGate", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractCompositeGate_Layers(), this.getLayer(), null, "layers", null, 0, -1,
+				AbstractCompositeGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLoop_Iterations(), ecorePackage.getEInt(), "iterations", null, 0, 1, Loop.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_LoopKind(), this.getLOOP_KIND(), "loopKind", null, 0, 1, Loop.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_Increment(), ecorePackage.getEBoolean(), "increment", null, 0, 1, Loop.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(looP_KINDEEnum, qucircuit.LOOP_KIND.class, "LOOP_KIND");
+		addEEnumLiteral(looP_KINDEEnum, qucircuit.LOOP_KIND.CONTROL_QUBITS_LOOP);
+		addEEnumLiteral(looP_KINDEEnum, qucircuit.LOOP_KIND.TARGET_QUBITS_LOOP);
+		addEEnumLiteral(looP_KINDEEnum, qucircuit.LOOP_KIND.SIMPLE_LOOP);
 
 		// Create resource
 		createResource(eNS_URI);

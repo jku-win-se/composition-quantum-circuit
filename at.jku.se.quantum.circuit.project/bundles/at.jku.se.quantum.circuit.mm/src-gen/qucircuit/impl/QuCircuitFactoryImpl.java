@@ -3,6 +3,7 @@
 package qucircuit.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -80,8 +81,40 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 			return createCompositeQuantumGate();
 		case QuCircuitPackage.ANGLE_PARAMETER:
 			return createAngleParameter();
+		case QuCircuitPackage.LOOP:
+			return createLoop();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case QuCircuitPackage.LOOP_KIND:
+			return createLOOP_KINDFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case QuCircuitPackage.LOOP_KIND:
+			return convertLOOP_KINDToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -203,6 +236,38 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	public AngleParameter createAngleParameter() {
 		AngleParameterImpl angleParameter = new AngleParameterImpl();
 		return angleParameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Loop createLoop() {
+		LoopImpl loop = new LoopImpl();
+		return loop;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LOOP_KIND createLOOP_KINDFromString(EDataType eDataType, String initialValue) {
+		LOOP_KIND result = LOOP_KIND.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLOOP_KINDToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

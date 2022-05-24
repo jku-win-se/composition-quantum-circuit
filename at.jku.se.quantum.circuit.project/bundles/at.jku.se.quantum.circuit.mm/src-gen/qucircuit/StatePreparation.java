@@ -12,5 +12,5 @@ package qucircuit;
  * @model
  * @generated
  */
-public interface StatePreparation extends IrreversibleQuantumGate {
+public interface StatePreparation extends QuantumOperation {
 } // StatePreparation

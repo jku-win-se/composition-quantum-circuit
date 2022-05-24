@@ -14,7 +14,7 @@ import qucircuit.QuCircuitPackage;
  *
  * @generated
  */
-public class CompositeQuantumGateImpl extends AbstractQuantumGateImpl implements CompositeQuantumGate {
+public class CompositeQuantumGateImpl extends AbstractCompositeGateImpl implements CompositeQuantumGate {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

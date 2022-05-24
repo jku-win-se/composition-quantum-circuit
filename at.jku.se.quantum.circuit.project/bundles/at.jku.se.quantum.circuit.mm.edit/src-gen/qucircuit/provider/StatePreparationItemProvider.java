@@ -18,7 +18,7 @@ import qucircuit.StatePreparation;
  * <!-- end-user-doc -->
  * @generated
  */
-public class StatePreparationItemProvider extends IrreversibleQuantumGateItemProvider {
+public class StatePreparationItemProvider extends QuantumOperationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

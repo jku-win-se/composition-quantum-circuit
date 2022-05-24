@@ -117,11 +117,6 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseIrreversibleQuantumGate(IrreversibleQuantumGate object) {
-			return createIrreversibleQuantumGateAdapter();
-		}
-
-		@Override
 		public Adapter caseStatePreparation(StatePreparation object) {
 			return createStatePreparationAdapter();
 		}
@@ -149,6 +144,16 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseBit(Bit object) {
 			return createBitAdapter();
+		}
+
+		@Override
+		public Adapter caseAbstractCompositeGate(AbstractCompositeGate object) {
+			return createAbstractCompositeGateAdapter();
+		}
+
+		@Override
+		public Adapter caseLoop(Loop object) {
+			return createLoopAdapter();
 		}
 
 		@Override
@@ -311,20 +316,6 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.IrreversibleQuantumGate <em>Irreversible Quantum Gate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see qucircuit.IrreversibleQuantumGate
-	 * @generated
-	 */
-	public Adapter createIrreversibleQuantumGateAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link qucircuit.StatePreparation <em>State Preparation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -405,6 +396,34 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.AbstractCompositeGate <em>Abstract Composite Gate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.AbstractCompositeGate
+	 * @generated
+	 */
+	public Adapter createAbstractCompositeGateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.Loop <em>Loop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.Loop
+	 * @generated
+	 */
+	public Adapter createLoopAdapter() {
 		return null;
 	}
 

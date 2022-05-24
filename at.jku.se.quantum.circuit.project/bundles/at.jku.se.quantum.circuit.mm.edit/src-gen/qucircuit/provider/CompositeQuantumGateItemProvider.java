@@ -18,7 +18,7 @@ import qucircuit.CompositeQuantumGate;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CompositeQuantumGateItemProvider extends AbstractQuantumGateItemProvider {
+public class CompositeQuantumGateItemProvider extends AbstractCompositeGateItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

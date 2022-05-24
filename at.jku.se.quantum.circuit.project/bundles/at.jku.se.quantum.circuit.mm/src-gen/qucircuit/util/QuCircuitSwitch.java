@@ -154,22 +154,9 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case QuCircuitPackage.IRREVERSIBLE_QUANTUM_GATE: {
-			IrreversibleQuantumGate irreversibleQuantumGate = (IrreversibleQuantumGate) theEObject;
-			T result = caseIrreversibleQuantumGate(irreversibleQuantumGate);
-			if (result == null)
-				result = caseQuantumOperation(irreversibleQuantumGate);
-			if (result == null)
-				result = caseNamedElement(irreversibleQuantumGate);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case QuCircuitPackage.STATE_PREPARATION: {
 			StatePreparation statePreparation = (StatePreparation) theEObject;
 			T result = caseStatePreparation(statePreparation);
-			if (result == null)
-				result = caseIrreversibleQuantumGate(statePreparation);
 			if (result == null)
 				result = caseQuantumOperation(statePreparation);
 			if (result == null)
@@ -181,8 +168,6 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 		case QuCircuitPackage.MEASUREMENT: {
 			Measurement measurement = (Measurement) theEObject;
 			T result = caseMeasurement(measurement);
-			if (result == null)
-				result = caseIrreversibleQuantumGate(measurement);
 			if (result == null)
 				result = caseQuantumOperation(measurement);
 			if (result == null)
@@ -208,6 +193,8 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 			CompositeQuantumGate compositeQuantumGate = (CompositeQuantumGate) theEObject;
 			T result = caseCompositeQuantumGate(compositeQuantumGate);
 			if (result == null)
+				result = caseAbstractCompositeGate(compositeQuantumGate);
+			if (result == null)
 				result = caseAbstractQuantumGate(compositeQuantumGate);
 			if (result == null)
 				result = caseQuantumOperation(compositeQuantumGate);
@@ -227,6 +214,34 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 		case QuCircuitPackage.BIT: {
 			Bit bit = (Bit) theEObject;
 			T result = caseBit(bit);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case QuCircuitPackage.ABSTRACT_COMPOSITE_GATE: {
+			AbstractCompositeGate abstractCompositeGate = (AbstractCompositeGate) theEObject;
+			T result = caseAbstractCompositeGate(abstractCompositeGate);
+			if (result == null)
+				result = caseAbstractQuantumGate(abstractCompositeGate);
+			if (result == null)
+				result = caseQuantumOperation(abstractCompositeGate);
+			if (result == null)
+				result = caseNamedElement(abstractCompositeGate);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case QuCircuitPackage.LOOP: {
+			Loop loop = (Loop) theEObject;
+			T result = caseLoop(loop);
+			if (result == null)
+				result = caseAbstractCompositeGate(loop);
+			if (result == null)
+				result = caseAbstractQuantumGate(loop);
+			if (result == null)
+				result = caseQuantumOperation(loop);
+			if (result == null)
+				result = caseNamedElement(loop);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -387,21 +402,6 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Irreversible Quantum Gate</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Irreversible Quantum Gate</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIrreversibleQuantumGate(IrreversibleQuantumGate object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>State Preparation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -488,6 +488,36 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBit(Bit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Composite Gate</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Composite Gate</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractCompositeGate(AbstractCompositeGate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Loop</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Loop</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLoop(Loop object) {
 		return null;
 	}
 

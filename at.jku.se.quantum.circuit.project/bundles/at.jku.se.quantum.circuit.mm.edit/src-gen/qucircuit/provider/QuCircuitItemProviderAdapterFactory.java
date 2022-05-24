@@ -349,6 +349,29 @@ public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link qucircuit.Loop} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LoopItemProvider loopItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qucircuit.Loop}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLoopAdapter() {
+		if (loopItemProvider == null) {
+			loopItemProvider = new LoopItemProvider(this);
+		}
+
+		return loopItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -471,6 +494,8 @@ public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
 			compositeQuantumGateItemProvider.dispose();
 		if (angleParameterItemProvider != null)
 			angleParameterItemProvider.dispose();
+		if (loopItemProvider != null)
+			loopItemProvider.dispose();
 	}
 
 }

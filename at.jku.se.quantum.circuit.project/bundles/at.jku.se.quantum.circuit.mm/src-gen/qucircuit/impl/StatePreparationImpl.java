@@ -14,7 +14,7 @@ import qucircuit.StatePreparation;
  *
  * @generated
  */
-public class StatePreparationImpl extends IrreversibleQuantumGateImpl implements StatePreparation {
+public class StatePreparationImpl extends QuantumOperationImpl implements StatePreparation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

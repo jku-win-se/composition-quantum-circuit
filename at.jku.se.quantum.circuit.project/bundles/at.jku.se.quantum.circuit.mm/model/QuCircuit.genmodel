@@ -48,9 +48,7 @@
     <genClasses ecoreClass="QuCircuit.ecore#//ElementaryQuantumGate">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//ElementaryQuantumGate/angleParameter"/>
     </genClasses>
-    <genClasses ecoreClass="QuCircuit.ecore#//CompositeQuantumGate">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//CompositeQuantumGate/layers"/>
-    </genClasses>
+    <genClasses ecoreClass="QuCircuit.ecore#//CompositeQuantumGate"/>
     <genClasses ecoreClass="QuCircuit.ecore#//AngleParameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//AngleParameter/theta"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//AngleParameter/phi"/>
@@ -58,6 +56,15 @@
     </genClasses>
     <genClasses image="false" ecoreClass="QuCircuit.ecore#//Bit">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Bit/id"/>
+    </genClasses>
+    <genClasses ecoreClass="QuCircuit.ecore#//AbstractCompositeGate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//AbstractCompositeGate/layers"/>
+    </genClasses>
+    <genClasses ecoreClass="QuCircuit.ecore#//Loop">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/iterations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/fixedControlQubits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/fixedTargetQubits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/loop"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

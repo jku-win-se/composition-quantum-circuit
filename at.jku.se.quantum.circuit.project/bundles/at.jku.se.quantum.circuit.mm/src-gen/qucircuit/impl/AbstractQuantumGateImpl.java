@@ -4,19 +4,13 @@ package qucircuit.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.AbstractQuantumGate;
-import qucircuit.Layer;
 import qucircuit.QuCircuitPackage;
 import qucircuit.Qubit;
 
@@ -29,7 +23,6 @@ import qucircuit.Qubit;
  * </p>
  * <ul>
  *   <li>{@link qucircuit.impl.AbstractQuantumGateImpl#getControlQubits <em>Control Qubits</em>}</li>
- *   <li>{@link qucircuit.impl.AbstractQuantumGateImpl#getLayers <em>Layers</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,16 +37,6 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 	 * @ordered
 	 */
 	protected EList<Qubit> controlQubits;
-
-	/**
-	 * The cached value of the '{@link #getLayers() <em>Layers</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Layer> layers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,40 +75,11 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Layer> getLayers() {
-		if (layers == null) {
-			layers = new EObjectContainmentEList<Layer>(Layer.class, this,
-					QuCircuitPackage.ABSTRACT_QUANTUM_GATE__LAYERS);
-		}
-		return layers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__LAYERS:
-			return ((InternalEList<?>) getLayers()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS:
 			return getControlQubits();
-		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__LAYERS:
-			return getLayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,10 +97,6 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 			getControlQubits().clear();
 			getControlQubits().addAll((Collection<? extends Qubit>) newValue);
 			return;
-		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__LAYERS:
-			getLayers().clear();
-			getLayers().addAll((Collection<? extends Layer>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -162,9 +112,6 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS:
 			getControlQubits().clear();
 			return;
-		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__LAYERS:
-			getLayers().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -179,8 +126,6 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 		switch (featureID) {
 		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS:
 			return controlQubits != null && !controlQubits.isEmpty();
-		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__LAYERS:
-			return layers != null && !layers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

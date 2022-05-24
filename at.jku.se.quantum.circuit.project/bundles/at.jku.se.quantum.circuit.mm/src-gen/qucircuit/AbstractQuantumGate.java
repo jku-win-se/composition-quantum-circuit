@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link qucircuit.AbstractQuantumGate#getControlQubits <em>Control Qubits</em>}</li>
- *   <li>{@link qucircuit.AbstractQuantumGate#getLayers <em>Layers</em>}</li>
  * </ul>
  *
  * @see qucircuit.QuCircuitPackage#getAbstractQuantumGate()
@@ -33,17 +32,5 @@ public interface AbstractQuantumGate extends QuantumOperation {
 	 * @generated
 	 */
 	EList<Qubit> getControlQubits();
-
-	/**
-	 * Returns the value of the '<em><b>Layers</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Layer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layers</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getAbstractQuantumGate_Layers()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Layer> getLayers();
 
 } // AbstractQuantumGate

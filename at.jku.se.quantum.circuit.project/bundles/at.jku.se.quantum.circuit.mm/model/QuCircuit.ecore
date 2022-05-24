@@ -54,10 +54,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="angleParameter" eType="#//AngleParameter"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CompositeQuantumGate" eSuperTypes="#//AbstractQuantumGate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="layers" upperBound="-1"
-        eType="#//Layer" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeQuantumGate" eSuperTypes="#//AbstractCompositeGate"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleParameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="theta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
@@ -66,5 +63,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Bit" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
         iD="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractCompositeGate" abstract="true"
+      eSuperTypes="#//AbstractQuantumGate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layers" upperBound="-1"
+        eType="#//Layer" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//AbstractCompositeGate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iterations" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedControlQubits" upperBound="-1"
+        eType="#//Qubit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fixedTargetQubits" upperBound="-1"
+        eType="#//Qubit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loop" eType="ecore:EClass ../../at.jku.se.quantum.operation.library.mm/model/quantumOpe.ecore#//LoopOperation"/>
   </eClassifiers>
 </ecore:EPackage>

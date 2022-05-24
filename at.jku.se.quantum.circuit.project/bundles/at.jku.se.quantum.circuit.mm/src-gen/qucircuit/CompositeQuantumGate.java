@@ -12,5 +12,5 @@ package qucircuit;
  * @model
  * @generated
  */
-public interface CompositeQuantumGate extends AbstractQuantumGate {
+public interface CompositeQuantumGate extends AbstractCompositeGate {
 } // CompositeQuantumGate

@@ -154,6 +154,9 @@ public class LayerItemProvider extends NamedElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
 				QuCircuitFactory.eINSTANCE.createCompositeQuantumGate()));
+
+		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
+				QuCircuitFactory.eINSTANCE.createLoop()));
 	}
 
 }

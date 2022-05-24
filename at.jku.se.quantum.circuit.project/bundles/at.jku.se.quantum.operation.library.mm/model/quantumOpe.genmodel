@@ -13,15 +13,16 @@
       disposableProviderFactory="true" ecorePackage="quantumOpe.ecore#/">
     <genClasses ecoreClass="quantumOpe.ecore#//QuantumOperationLibrary">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantumOpe.ecore#//QuantumOperationLibrary/operations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantumOpe.ecore#//QuantumOperationLibrary/loopOperations"/>
     </genClasses>
     <genClasses ecoreClass="quantumOpe.ecore#//ConcreteQuantumOperation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantumOpe.ecore#//ConcreteQuantumOperation/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantumOpe.ecore#//ConcreteQuantumOperation/reverseConcreteQuantumOperation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantumOpe.ecore#//ConcreteQuantumOperation/abbreviation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantumOpe.ecore#//ConcreteQuantumOperation/paletteIconPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantumOpe.ecore#//ConcreteQuantumOperation/styleIconPath"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantumOpe.ecore#//ConcreteQuantumOperation/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantumOpe.ecore#//ConcreteQuantumOperation/fixedQuantumOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantumOpe.ecore#//ConcreteQuantumOperation/reverse"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantumOpe.ecore#//ConcreteQuantumOperation/reversible"/>
     </genClasses>
     <genClasses ecoreClass="quantumOpe.ecore#//NamedElement">
@@ -36,5 +37,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantumOpe.ecore#//Parameter/phi"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantumOpe.ecore#//Parameter/lambda"/>
     </genClasses>
+    <genClasses ecoreClass="quantumOpe.ecore#//LoopOperation"/>
   </genPackages>
 </genmodel:GenModel>

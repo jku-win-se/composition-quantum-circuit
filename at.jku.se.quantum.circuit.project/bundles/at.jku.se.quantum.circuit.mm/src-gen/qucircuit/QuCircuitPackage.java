@@ -4,6 +4,7 @@ package qucircuit;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -257,7 +258,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @see qucircuit.impl.QuCircuitPackageImpl#getBit()
 	 * @generated
 	 */
-	int BIT = 16;
+	int BIT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -572,22 +573,13 @@ public interface QuCircuitPackage extends EPackage {
 	int ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS = QUANTUM_OPERATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_QUANTUM_GATE__LAYERS = QUANTUM_OPERATION_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Abstract Quantum Gate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_QUANTUM_GATE_FEATURE_COUNT = QUANTUM_OPERATION_FEATURE_COUNT + 2;
+	int ABSTRACT_QUANTUM_GATE_FEATURE_COUNT = QUANTUM_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Abstract Quantum Gate</em>' class.
@@ -599,70 +591,6 @@ public interface QuCircuitPackage extends EPackage {
 	int ABSTRACT_QUANTUM_GATE_OPERATION_COUNT = QUANTUM_OPERATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link qucircuit.impl.IrreversibleQuantumGateImpl <em>Irreversible Quantum Gate</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see qucircuit.impl.IrreversibleQuantumGateImpl
-	 * @see qucircuit.impl.QuCircuitPackageImpl#getIrreversibleQuantumGate()
-	 * @generated
-	 */
-	int IRREVERSIBLE_QUANTUM_GATE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRREVERSIBLE_QUANTUM_GATE__NAME = QUANTUM_OPERATION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Classic Control</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRREVERSIBLE_QUANTUM_GATE__CLASSIC_CONTROL = QUANTUM_OPERATION__CLASSIC_CONTROL;
-
-	/**
-	 * The feature id for the '<em><b>Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRREVERSIBLE_QUANTUM_GATE__OPERATION = QUANTUM_OPERATION__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Target Qubits</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRREVERSIBLE_QUANTUM_GATE__TARGET_QUBITS = QUANTUM_OPERATION__TARGET_QUBITS;
-
-	/**
-	 * The number of structural features of the '<em>Irreversible Quantum Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRREVERSIBLE_QUANTUM_GATE_FEATURE_COUNT = QUANTUM_OPERATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Irreversible Quantum Gate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IRREVERSIBLE_QUANTUM_GATE_OPERATION_COUNT = QUANTUM_OPERATION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link qucircuit.impl.StatePreparationImpl <em>State Preparation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -670,7 +598,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @see qucircuit.impl.QuCircuitPackageImpl#getStatePreparation()
 	 * @generated
 	 */
-	int STATE_PREPARATION = 11;
+	int STATE_PREPARATION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -679,7 +607,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_PREPARATION__NAME = IRREVERSIBLE_QUANTUM_GATE__NAME;
+	int STATE_PREPARATION__NAME = QUANTUM_OPERATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Classic Control</b></em>' containment reference.
@@ -688,7 +616,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_PREPARATION__CLASSIC_CONTROL = IRREVERSIBLE_QUANTUM_GATE__CLASSIC_CONTROL;
+	int STATE_PREPARATION__CLASSIC_CONTROL = QUANTUM_OPERATION__CLASSIC_CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference.
@@ -697,7 +625,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_PREPARATION__OPERATION = IRREVERSIBLE_QUANTUM_GATE__OPERATION;
+	int STATE_PREPARATION__OPERATION = QUANTUM_OPERATION__OPERATION;
 
 	/**
 	 * The feature id for the '<em><b>Target Qubits</b></em>' reference list.
@@ -706,7 +634,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_PREPARATION__TARGET_QUBITS = IRREVERSIBLE_QUANTUM_GATE__TARGET_QUBITS;
+	int STATE_PREPARATION__TARGET_QUBITS = QUANTUM_OPERATION__TARGET_QUBITS;
 
 	/**
 	 * The number of structural features of the '<em>State Preparation</em>' class.
@@ -715,7 +643,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_PREPARATION_FEATURE_COUNT = IRREVERSIBLE_QUANTUM_GATE_FEATURE_COUNT + 0;
+	int STATE_PREPARATION_FEATURE_COUNT = QUANTUM_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>State Preparation</em>' class.
@@ -724,7 +652,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_PREPARATION_OPERATION_COUNT = IRREVERSIBLE_QUANTUM_GATE_OPERATION_COUNT + 0;
+	int STATE_PREPARATION_OPERATION_COUNT = QUANTUM_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link qucircuit.impl.MeasurementImpl <em>Measurement</em>}' class.
@@ -734,7 +662,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @see qucircuit.impl.QuCircuitPackageImpl#getMeasurement()
 	 * @generated
 	 */
-	int MEASUREMENT = 12;
+	int MEASUREMENT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -743,7 +671,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT__NAME = IRREVERSIBLE_QUANTUM_GATE__NAME;
+	int MEASUREMENT__NAME = QUANTUM_OPERATION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Classic Control</b></em>' containment reference.
@@ -752,7 +680,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT__CLASSIC_CONTROL = IRREVERSIBLE_QUANTUM_GATE__CLASSIC_CONTROL;
+	int MEASUREMENT__CLASSIC_CONTROL = QUANTUM_OPERATION__CLASSIC_CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference.
@@ -761,7 +689,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT__OPERATION = IRREVERSIBLE_QUANTUM_GATE__OPERATION;
+	int MEASUREMENT__OPERATION = QUANTUM_OPERATION__OPERATION;
 
 	/**
 	 * The feature id for the '<em><b>Target Qubits</b></em>' reference list.
@@ -770,7 +698,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT__TARGET_QUBITS = IRREVERSIBLE_QUANTUM_GATE__TARGET_QUBITS;
+	int MEASUREMENT__TARGET_QUBITS = QUANTUM_OPERATION__TARGET_QUBITS;
 
 	/**
 	 * The feature id for the '<em><b>Classic Bits</b></em>' reference list.
@@ -779,7 +707,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT__CLASSIC_BITS = IRREVERSIBLE_QUANTUM_GATE_FEATURE_COUNT + 0;
+	int MEASUREMENT__CLASSIC_BITS = QUANTUM_OPERATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Measurement</em>' class.
@@ -788,7 +716,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT_FEATURE_COUNT = IRREVERSIBLE_QUANTUM_GATE_FEATURE_COUNT + 1;
+	int MEASUREMENT_FEATURE_COUNT = QUANTUM_OPERATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Measurement</em>' class.
@@ -797,7 +725,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEASUREMENT_OPERATION_COUNT = IRREVERSIBLE_QUANTUM_GATE_OPERATION_COUNT + 0;
+	int MEASUREMENT_OPERATION_COUNT = QUANTUM_OPERATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link qucircuit.impl.ElementaryQuantumGateImpl <em>Elementary Quantum Gate</em>}' class.
@@ -807,7 +735,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @see qucircuit.impl.QuCircuitPackageImpl#getElementaryQuantumGate()
 	 * @generated
 	 */
-	int ELEMENTARY_QUANTUM_GATE = 13;
+	int ELEMENTARY_QUANTUM_GATE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -855,15 +783,6 @@ public interface QuCircuitPackage extends EPackage {
 	int ELEMENTARY_QUANTUM_GATE__CONTROL_QUBITS = ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS;
 
 	/**
-	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENTARY_QUANTUM_GATE__LAYERS = ABSTRACT_QUANTUM_GATE__LAYERS;
-
-	/**
 	 * The feature id for the '<em><b>Angle Parameter</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -891,14 +810,14 @@ public interface QuCircuitPackage extends EPackage {
 	int ELEMENTARY_QUANTUM_GATE_OPERATION_COUNT = ABSTRACT_QUANTUM_GATE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link qucircuit.impl.CompositeQuantumGateImpl <em>Composite Quantum Gate</em>}' class.
+	 * The meta object id for the '{@link qucircuit.impl.AbstractCompositeGateImpl <em>Abstract Composite Gate</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see qucircuit.impl.CompositeQuantumGateImpl
-	 * @see qucircuit.impl.QuCircuitPackageImpl#getCompositeQuantumGate()
+	 * @see qucircuit.impl.AbstractCompositeGateImpl
+	 * @see qucircuit.impl.QuCircuitPackageImpl#getAbstractCompositeGate()
 	 * @generated
 	 */
-	int COMPOSITE_QUANTUM_GATE = 14;
+	int ABSTRACT_COMPOSITE_GATE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -907,7 +826,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE__NAME = ABSTRACT_QUANTUM_GATE__NAME;
+	int ABSTRACT_COMPOSITE_GATE__NAME = ABSTRACT_QUANTUM_GATE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Classic Control</b></em>' containment reference.
@@ -916,7 +835,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE__CLASSIC_CONTROL = ABSTRACT_QUANTUM_GATE__CLASSIC_CONTROL;
+	int ABSTRACT_COMPOSITE_GATE__CLASSIC_CONTROL = ABSTRACT_QUANTUM_GATE__CLASSIC_CONTROL;
 
 	/**
 	 * The feature id for the '<em><b>Operation</b></em>' reference.
@@ -925,7 +844,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE__OPERATION = ABSTRACT_QUANTUM_GATE__OPERATION;
+	int ABSTRACT_COMPOSITE_GATE__OPERATION = ABSTRACT_QUANTUM_GATE__OPERATION;
 
 	/**
 	 * The feature id for the '<em><b>Target Qubits</b></em>' reference list.
@@ -934,7 +853,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE__TARGET_QUBITS = ABSTRACT_QUANTUM_GATE__TARGET_QUBITS;
+	int ABSTRACT_COMPOSITE_GATE__TARGET_QUBITS = ABSTRACT_QUANTUM_GATE__TARGET_QUBITS;
 
 	/**
 	 * The feature id for the '<em><b>Control Qubits</b></em>' reference list.
@@ -943,7 +862,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE__CONTROL_QUBITS = ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS;
+	int ABSTRACT_COMPOSITE_GATE__CONTROL_QUBITS = ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS;
 
 	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
@@ -952,7 +871,89 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE__LAYERS = ABSTRACT_QUANTUM_GATE__LAYERS;
+	int ABSTRACT_COMPOSITE_GATE__LAYERS = ABSTRACT_QUANTUM_GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Composite Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT = ABSTRACT_QUANTUM_GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Abstract Composite Gate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_COMPOSITE_GATE_OPERATION_COUNT = ABSTRACT_QUANTUM_GATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link qucircuit.impl.CompositeQuantumGateImpl <em>Composite Quantum Gate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see qucircuit.impl.CompositeQuantumGateImpl
+	 * @see qucircuit.impl.QuCircuitPackageImpl#getCompositeQuantumGate()
+	 * @generated
+	 */
+	int COMPOSITE_QUANTUM_GATE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__NAME = ABSTRACT_COMPOSITE_GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Classic Control</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__CLASSIC_CONTROL = ABSTRACT_COMPOSITE_GATE__CLASSIC_CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__OPERATION = ABSTRACT_COMPOSITE_GATE__OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Target Qubits</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__TARGET_QUBITS = ABSTRACT_COMPOSITE_GATE__TARGET_QUBITS;
+
+	/**
+	 * The feature id for the '<em><b>Control Qubits</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__CONTROL_QUBITS = ABSTRACT_COMPOSITE_GATE__CONTROL_QUBITS;
+
+	/**
+	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__LAYERS = ABSTRACT_COMPOSITE_GATE__LAYERS;
 
 	/**
 	 * The number of structural features of the '<em>Composite Quantum Gate</em>' class.
@@ -961,7 +962,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE_FEATURE_COUNT = ABSTRACT_QUANTUM_GATE_FEATURE_COUNT + 0;
+	int COMPOSITE_QUANTUM_GATE_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Composite Quantum Gate</em>' class.
@@ -970,7 +971,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE_OPERATION_COUNT = ABSTRACT_QUANTUM_GATE_OPERATION_COUNT + 0;
+	int COMPOSITE_QUANTUM_GATE_OPERATION_COUNT = ABSTRACT_COMPOSITE_GATE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link qucircuit.impl.AngleParameterImpl <em>Angle Parameter</em>}' class.
@@ -980,7 +981,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @see qucircuit.impl.QuCircuitPackageImpl#getAngleParameter()
 	 * @generated
 	 */
-	int ANGLE_PARAMETER = 15;
+	int ANGLE_PARAMETER = 14;
 
 	/**
 	 * The feature id for the '<em><b>Theta</b></em>' attribute.
@@ -1026,6 +1027,125 @@ public interface QuCircuitPackage extends EPackage {
 	 * @ordered
 	 */
 	int ANGLE_PARAMETER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link qucircuit.impl.LoopImpl <em>Loop</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see qucircuit.impl.LoopImpl
+	 * @see qucircuit.impl.QuCircuitPackageImpl#getLoop()
+	 * @generated
+	 */
+	int LOOP = 17;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__NAME = ABSTRACT_COMPOSITE_GATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Classic Control</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__CLASSIC_CONTROL = ABSTRACT_COMPOSITE_GATE__CLASSIC_CONTROL;
+
+	/**
+	 * The feature id for the '<em><b>Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__OPERATION = ABSTRACT_COMPOSITE_GATE__OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Target Qubits</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__TARGET_QUBITS = ABSTRACT_COMPOSITE_GATE__TARGET_QUBITS;
+
+	/**
+	 * The feature id for the '<em><b>Control Qubits</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__CONTROL_QUBITS = ABSTRACT_COMPOSITE_GATE__CONTROL_QUBITS;
+
+	/**
+	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__LAYERS = ABSTRACT_COMPOSITE_GATE__LAYERS;
+
+	/**
+	 * The feature id for the '<em><b>Iterations</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__ITERATIONS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Loop Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__LOOP_KIND = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Increment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__INCREMENT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Loop</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_OPERATION_COUNT = ABSTRACT_COMPOSITE_GATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link qucircuit.LOOP_KIND <em>LOOP KIND</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see qucircuit.LOOP_KIND
+	 * @see qucircuit.impl.QuCircuitPackageImpl#getLOOP_KIND()
+	 * @generated
+	 */
+	int LOOP_KIND = 18;
 
 	/**
 	 * Returns the meta object for class '{@link qucircuit.QuantumCircuit <em>Quantum Circuit</em>}'.
@@ -1271,27 +1391,6 @@ public interface QuCircuitPackage extends EPackage {
 	EReference getAbstractQuantumGate_ControlQubits();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link qucircuit.AbstractQuantumGate#getLayers <em>Layers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Layers</em>'.
-	 * @see qucircuit.AbstractQuantumGate#getLayers()
-	 * @see #getAbstractQuantumGate()
-	 * @generated
-	 */
-	EReference getAbstractQuantumGate_Layers();
-
-	/**
-	 * Returns the meta object for class '{@link qucircuit.IrreversibleQuantumGate <em>Irreversible Quantum Gate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Irreversible Quantum Gate</em>'.
-	 * @see qucircuit.IrreversibleQuantumGate
-	 * @generated
-	 */
-	EClass getIrreversibleQuantumGate();
-
-	/**
 	 * Returns the meta object for class '{@link qucircuit.StatePreparation <em>State Preparation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1416,6 +1515,80 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBit_Id();
+
+	/**
+	 * Returns the meta object for class '{@link qucircuit.AbstractCompositeGate <em>Abstract Composite Gate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Composite Gate</em>'.
+	 * @see qucircuit.AbstractCompositeGate
+	 * @generated
+	 */
+	EClass getAbstractCompositeGate();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link qucircuit.AbstractCompositeGate#getLayers <em>Layers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Layers</em>'.
+	 * @see qucircuit.AbstractCompositeGate#getLayers()
+	 * @see #getAbstractCompositeGate()
+	 * @generated
+	 */
+	EReference getAbstractCompositeGate_Layers();
+
+	/**
+	 * Returns the meta object for class '{@link qucircuit.Loop <em>Loop</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Loop</em>'.
+	 * @see qucircuit.Loop
+	 * @generated
+	 */
+	EClass getLoop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getIterations <em>Iterations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Iterations</em>'.
+	 * @see qucircuit.Loop#getIterations()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_Iterations();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getLoopKind <em>Loop Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Loop Kind</em>'.
+	 * @see qucircuit.Loop#getLoopKind()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_LoopKind();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#isIncrement <em>Increment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Increment</em>'.
+	 * @see qucircuit.Loop#isIncrement()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_Increment();
+
+	/**
+	 * Returns the meta object for enum '{@link qucircuit.LOOP_KIND <em>LOOP KIND</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>LOOP KIND</em>'.
+	 * @see qucircuit.LOOP_KIND
+	 * @generated
+	 */
+	EEnum getLOOP_KIND();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1645,24 +1818,6 @@ public interface QuCircuitPackage extends EPackage {
 		EReference ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS = eINSTANCE.getAbstractQuantumGate_ControlQubits();
 
 		/**
-		 * The meta object literal for the '<em><b>Layers</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_QUANTUM_GATE__LAYERS = eINSTANCE.getAbstractQuantumGate_Layers();
-
-		/**
-		 * The meta object literal for the '{@link qucircuit.impl.IrreversibleQuantumGateImpl <em>Irreversible Quantum Gate</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see qucircuit.impl.IrreversibleQuantumGateImpl
-		 * @see qucircuit.impl.QuCircuitPackageImpl#getIrreversibleQuantumGate()
-		 * @generated
-		 */
-		EClass IRREVERSIBLE_QUANTUM_GATE = eINSTANCE.getIrreversibleQuantumGate();
-
-		/**
 		 * The meta object literal for the '{@link qucircuit.impl.StatePreparationImpl <em>State Preparation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1769,6 +1924,68 @@ public interface QuCircuitPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BIT__ID = eINSTANCE.getBit_Id();
+
+		/**
+		 * The meta object literal for the '{@link qucircuit.impl.AbstractCompositeGateImpl <em>Abstract Composite Gate</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see qucircuit.impl.AbstractCompositeGateImpl
+		 * @see qucircuit.impl.QuCircuitPackageImpl#getAbstractCompositeGate()
+		 * @generated
+		 */
+		EClass ABSTRACT_COMPOSITE_GATE = eINSTANCE.getAbstractCompositeGate();
+
+		/**
+		 * The meta object literal for the '<em><b>Layers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_COMPOSITE_GATE__LAYERS = eINSTANCE.getAbstractCompositeGate_Layers();
+
+		/**
+		 * The meta object literal for the '{@link qucircuit.impl.LoopImpl <em>Loop</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see qucircuit.impl.LoopImpl
+		 * @see qucircuit.impl.QuCircuitPackageImpl#getLoop()
+		 * @generated
+		 */
+		EClass LOOP = eINSTANCE.getLoop();
+
+		/**
+		 * The meta object literal for the '<em><b>Iterations</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__ITERATIONS = eINSTANCE.getLoop_Iterations();
+
+		/**
+		 * The meta object literal for the '<em><b>Loop Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__LOOP_KIND = eINSTANCE.getLoop_LoopKind();
+
+		/**
+		 * The meta object literal for the '<em><b>Increment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__INCREMENT = eINSTANCE.getLoop_Increment();
+
+		/**
+		 * The meta object literal for the '{@link qucircuit.LOOP_KIND <em>LOOP KIND</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see qucircuit.LOOP_KIND
+		 * @see qucircuit.impl.QuCircuitPackageImpl#getLOOP_KIND()
+		 * @generated
+		 */
+		EEnum LOOP_KIND = eINSTANCE.getLOOP_KIND();
 
 	}
 

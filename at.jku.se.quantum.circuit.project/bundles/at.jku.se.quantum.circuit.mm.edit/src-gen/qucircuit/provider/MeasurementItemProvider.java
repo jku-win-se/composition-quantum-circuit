@@ -20,7 +20,7 @@ import qucircuit.QuCircuitPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MeasurementItemProvider extends IrreversibleQuantumGateItemProvider {
+public class MeasurementItemProvider extends QuantumOperationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

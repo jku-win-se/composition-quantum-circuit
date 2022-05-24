@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Measurement extends IrreversibleQuantumGate {
+public interface Measurement extends QuantumOperation {
 	/**
 	 * Returns the value of the '<em><b>Classic Bits</b></em>' reference list.
 	 * The list contents are of type {@link qucircuit.ClassicBit}.

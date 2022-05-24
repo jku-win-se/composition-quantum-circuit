@@ -130,6 +130,15 @@ public interface QuCircuitFactory extends EFactory {
 	AngleParameter createAngleParameter();
 
 	/**
+	 * Returns a new object of class '<em>Loop</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Loop</em>'.
+	 * @generated
+	 */
+	Loop createLoop();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

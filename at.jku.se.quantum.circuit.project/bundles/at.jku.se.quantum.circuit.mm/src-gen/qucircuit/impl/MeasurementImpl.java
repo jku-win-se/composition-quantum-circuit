@@ -27,7 +27,7 @@ import qucircuit.QuCircuitPackage;
  *
  * @generated
  */
-public class MeasurementImpl extends IrreversibleQuantumGateImpl implements Measurement {
+public class MeasurementImpl extends QuantumOperationImpl implements Measurement {
 	/**
 	 * The cached value of the '{@link #getClassicBits() <em>Classic Bits</em>}' reference list.
 	 * <!-- begin-user-doc -->
