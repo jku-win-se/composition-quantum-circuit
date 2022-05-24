@@ -149,13 +149,13 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//    {Row}
 		//    '['
 		//        (columns+=Column ( "," columns+=Column)* )?
-		//    =>']';
+		//    ']';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Row}
 		//'['
 		//    (columns+=Column ( "," columns+=Column)* )?
-		//=>']'
+		//']'
 		public Group getGroup() { return cGroup; }
 		
 		//{Row}
@@ -185,7 +185,7 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//Column
 		public RuleCall getColumnsColumnParserRuleCall_2_1_1_0() { return cColumnsColumnParserRuleCall_2_1_1_0; }
 		
-		//=>']'
+		//']'
 		public Keyword getRightSquareBracketKeyword_3() { return cRightSquareBracketKeyword_3; }
 	}
 	public class ColumnElements extends AbstractParserRuleElementFinder {
@@ -193,117 +193,46 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cColumnAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueEDoubleDefinitionParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValueEDoubleParserRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
 		//Column returns Column:
 		//    {Column}
-		//    (value=EDoubleDefinition)?
+		//    (value=EDouble)
 		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{Column}
-		//(value=EDoubleDefinition)?
+		//(value=EDouble)
 		public Group getGroup() { return cGroup; }
 		
 		//{Column}
 		public Action getColumnAction_0() { return cColumnAction_0; }
 		
-		//(value=EDoubleDefinition)?
+		//(value=EDouble)
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
-		//EDoubleDefinition
-		public RuleCall getValueEDoubleDefinitionParserRuleCall_1_0() { return cValueEDoubleDefinitionParserRuleCall_1_0; }
-	}
-	public class EDoubleDefinitionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "at.jku.se.qubo.lang.QUBO.EDoubleDefinition");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cEIntParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cEDoubleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		
-		//EDoubleDefinition returns ecore::EDouble:
-		//    EInt | EDouble
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//EInt | EDouble
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//EInt
-		public RuleCall getEIntParserRuleCall_0() { return cEIntParserRuleCall_0; }
-		
 		//EDouble
-		public RuleCall getEDoubleParserRuleCall_1() { return cEDoubleParserRuleCall_1; }
-	}
-	public class EIntElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "at.jku.se.qubo.lang.QUBO.EInt");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//EInt returns ecore::EIntegerObject:
-		//    '-'? INT
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'-'? INT
-		public Group getGroup() { return cGroup; }
-		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		public RuleCall getValueEDoubleParserRuleCall_1_0() { return cValueEDoubleParserRuleCall_1_0; }
 	}
 	public class EDoubleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "at.jku.se.qubo.lang.QUBO.EDouble");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final RuleCall cINTTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Alternatives cAlternatives_4_0 = (Alternatives)cGroup_4.eContents().get(0);
-		private final Keyword cEKeyword_4_0_0 = (Keyword)cAlternatives_4_0.eContents().get(0);
-		private final Keyword cEKeyword_4_0_1 = (Keyword)cAlternatives_4_0.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_4_2 = (RuleCall)cGroup_4.eContents().get(2);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cE_INTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cE_DOUBLETerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//EDouble returns ecore::EDoubleObject:
-		//    '-'? INT? '.' INT (('E'|'e') '-'? INT)?;
+		//EDouble returns ecore::EDouble:
+		//    E_INT | E_DOUBLE
+		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'-'? INT? '.' INT (('E'|'e') '-'? INT)?
-		public Group getGroup() { return cGroup; }
+		//E_INT | E_DOUBLE
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+		//E_INT
+		public RuleCall getE_INTTerminalRuleCall_0() { return cE_INTTerminalRuleCall_0; }
 		
-		//INT?
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
-		
-		//'.'
-		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_3() { return cINTTerminalRuleCall_3; }
-		
-		//(('E'|'e') '-'? INT)?
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//('E'|'e')
-		public Alternatives getAlternatives_4_0() { return cAlternatives_4_0; }
-		
-		//'E'
-		public Keyword getEKeyword_4_0_0() { return cEKeyword_4_0_0; }
-		
-		//'e'
-		public Keyword getEKeyword_4_0_1() { return cEKeyword_4_0_1; }
-		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_4_1() { return cHyphenMinusKeyword_4_1; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_4_2() { return cINTTerminalRuleCall_4_2; }
+		//E_DOUBLE
+		public RuleCall getE_DOUBLETerminalRuleCall_1() { return cE_DOUBLETerminalRuleCall_1; }
 	}
 	
 	
@@ -311,9 +240,10 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	private final MatrixElements pMatrix;
 	private final RowElements pRow;
 	private final ColumnElements pColumn;
-	private final EDoubleDefinitionElements pEDoubleDefinition;
-	private final EIntElements pEInt;
 	private final EDoubleElements pEDouble;
+	private final TerminalRule tE_INT;
+	private final TerminalRule tE_DOUBLE;
+	private final TerminalRule tINT;
 	
 	private final Grammar grammar;
 	
@@ -328,9 +258,10 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		this.pMatrix = new MatrixElements();
 		this.pRow = new RowElements();
 		this.pColumn = new ColumnElements();
-		this.pEDoubleDefinition = new EDoubleDefinitionElements();
-		this.pEInt = new EIntElements();
 		this.pEDouble = new EDoubleElements();
+		this.tE_INT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "at.jku.se.qubo.lang.QUBO.E_INT");
+		this.tE_DOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "at.jku.se.qubo.lang.QUBO.E_DOUBLE");
+		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "at.jku.se.qubo.lang.QUBO.INT");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -391,7 +322,7 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	//    {Row}
 	//    '['
 	//        (columns+=Column ( "," columns+=Column)* )?
-	//    =>']';
+	//    ']';
 	public RowElements getRowAccess() {
 		return pRow;
 	}
@@ -402,7 +333,7 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	
 	//Column returns Column:
 	//    {Column}
-	//    (value=EDoubleDefinition)?
+	//    (value=EDouble)
 	//    ;
 	public ColumnElements getColumnAccess() {
 		return pColumn;
@@ -412,30 +343,9 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		return getColumnAccess().getRule();
 	}
 	
-	//EDoubleDefinition returns ecore::EDouble:
-	//    EInt | EDouble
-	//;
-	public EDoubleDefinitionElements getEDoubleDefinitionAccess() {
-		return pEDoubleDefinition;
-	}
-	
-	public ParserRule getEDoubleDefinitionRule() {
-		return getEDoubleDefinitionAccess().getRule();
-	}
-	
-	//EInt returns ecore::EIntegerObject:
-	//    '-'? INT
-	//;
-	public EIntElements getEIntAccess() {
-		return pEInt;
-	}
-	
-	public ParserRule getEIntRule() {
-		return getEIntAccess().getRule();
-	}
-	
-	//EDouble returns ecore::EDoubleObject:
-	//    '-'? INT? '.' INT (('E'|'e') '-'? INT)?;
+	//EDouble returns ecore::EDouble:
+	//    E_INT | E_DOUBLE
+	//    ;
 	public EDoubleElements getEDoubleAccess() {
 		return pEDouble;
 	}
@@ -444,14 +354,34 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		return getEDoubleAccess().getRule();
 	}
 	
+	//terminal E_INT:
+	//    '-'? INT
+	//    ;
+	public TerminalRule getE_INTRule() {
+		return tE_INT;
+	}
+	
+	//terminal E_DOUBLE:
+	//    '-'? INT ('.' INT+)? (('E'|'e') ('+'|'-')? INT)?
+	//    ;
+	public TerminalRule getE_DOUBLERule() {
+		return tE_DOUBLE;
+	}
+	
+	///**
+	// * The digit of an integer can not be 0, unless it is 0 itself.
+	// */
+	// @Override
+	//terminal INT returns ecore::EInt:
+	//    ('0' |  (('1'..'9') ('0'..'9')*))
+	//;
+	public TerminalRule getINTRule() {
+		return tINT;
+	}
+	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
-	}
-	
-	//terminal INT returns ecore::EInt: ('0'..'9')+;
-	public TerminalRule getINTRule() {
-		return gaTerminals.getINTRule();
 	}
 	
 	//terminal STRING:

@@ -276,13 +276,10 @@ ruleRow returns [EObject current=null]
 				)
 			)*
 		)?
-		(
-			(']')=>
-			otherlv_5=']'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getRowAccess().getRightSquareBracketKeyword_3());
-			}
-		)
+		otherlv_5=']'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getRowAccess().getRightSquareBracketKeyword_3());
+		}
 	)
 ;
 
@@ -312,9 +309,9 @@ ruleColumn returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getColumnAccess().getValueEDoubleDefinitionParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getColumnAccess().getValueEDoubleParserRuleCall_1_0());
 				}
-				lv_value_1_0=ruleEDoubleDefinition
+				lv_value_1_0=ruleEDouble
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getColumnRule());
@@ -323,84 +320,11 @@ ruleColumn returns [EObject current=null]
 						$current,
 						"value",
 						lv_value_1_0,
-						"at.jku.se.qubo.lang.QUBO.EDoubleDefinition");
+						"at.jku.se.qubo.lang.QUBO.EDouble");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
-	)
-;
-
-// Entry rule entryRuleEDoubleDefinition
-entryRuleEDoubleDefinition returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getEDoubleDefinitionRule()); }
-	iv_ruleEDoubleDefinition=ruleEDoubleDefinition
-	{ $current=$iv_ruleEDoubleDefinition.current.getText(); }
-	EOF;
-
-// Rule EDoubleDefinition
-ruleEDoubleDefinition returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		{
-			newCompositeNode(grammarAccess.getEDoubleDefinitionAccess().getEIntParserRuleCall_0());
-		}
-		this_EInt_0=ruleEInt
-		{
-			$current.merge(this_EInt_0);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getEDoubleDefinitionAccess().getEDoubleParserRuleCall_1());
-		}
-		this_EDouble_1=ruleEDouble
-		{
-			$current.merge(this_EDouble_1);
-		}
-		{
-			afterParserOrEnumRuleCall();
-		}
-	)
-;
-
-// Entry rule entryRuleEInt
-entryRuleEInt returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getEIntRule()); }
-	iv_ruleEInt=ruleEInt
-	{ $current=$iv_ruleEInt.current.getText(); }
-	EOF;
-
-// Rule EInt
-ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			kw='-'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0());
-			}
-		)?
-		this_INT_1=RULE_INT
-		{
-			$current.merge(this_INT_1);
-		}
-		{
-			newLeafNode(this_INT_1, grammarAccess.getEIntAccess().getINTTerminalRuleCall_1());
-		}
+		)
 	)
 ;
 
@@ -420,69 +344,31 @@ ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 	leaveRule();
 }:
 	(
-		(
-			kw='-'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0());
-			}
-		)?
-		(
-			this_INT_1=RULE_INT
-			{
-				$current.merge(this_INT_1);
-			}
-			{
-				newLeafNode(this_INT_1, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_1());
-			}
-		)?
-		kw='.'
+		this_E_INT_0=RULE_E_INT
 		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getEDoubleAccess().getFullStopKeyword_2());
-		}
-		this_INT_3=RULE_INT
-		{
-			$current.merge(this_INT_3);
+			$current.merge(this_E_INT_0);
 		}
 		{
-			newLeafNode(this_INT_3, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3());
+			newLeafNode(this_E_INT_0, grammarAccess.getEDoubleAccess().getE_INTTerminalRuleCall_0());
 		}
-		(
-			(
-				kw='E'
-				{
-					$current.merge(kw);
-					newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_4_0_0());
-				}
-				    |
-				kw='e'
-				{
-					$current.merge(kw);
-					newLeafNode(kw, grammarAccess.getEDoubleAccess().getEKeyword_4_0_1());
-				}
-			)
-			(
-				kw='-'
-				{
-					$current.merge(kw);
-					newLeafNode(kw, grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1());
-				}
-			)?
-			this_INT_7=RULE_INT
-			{
-				$current.merge(this_INT_7);
-			}
-			{
-				newLeafNode(this_INT_7, grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2());
-			}
-		)?
+		    |
+		this_E_DOUBLE_1=RULE_E_DOUBLE
+		{
+			$current.merge(this_E_DOUBLE_1);
+		}
+		{
+			newLeafNode(this_E_DOUBLE_1, grammarAccess.getEDoubleAccess().getE_DOUBLETerminalRuleCall_1());
+		}
 	)
 ;
 
-RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+RULE_E_INT : '-'? RULE_INT;
 
-RULE_INT : ('0'..'9')+;
+RULE_E_DOUBLE : '-'? RULE_INT ('.' RULE_INT+)? (('E'|'e') ('+'|'-')? RULE_INT)?;
+
+fragment RULE_INT : ('0'|'1'..'9' ('0'..'9')*);
+
+RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 

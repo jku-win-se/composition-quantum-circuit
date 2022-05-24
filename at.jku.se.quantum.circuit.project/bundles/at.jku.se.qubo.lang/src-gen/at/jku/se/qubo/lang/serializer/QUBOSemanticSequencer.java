@@ -17,7 +17,9 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class QUBOSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -56,11 +58,17 @@ public class QUBOSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Column returns Column
 	 *
 	 * Constraint:
-	 *     value=EDoubleDefinition?
+	 *     value=EDouble
 	 * </pre>
 	 */
 	protected void sequence_Column(ISerializationContext context, Column semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, QuboPackage.Literals.COLUMN__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, QuboPackage.Literals.COLUMN__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getColumnAccess().getValueEDoubleParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	

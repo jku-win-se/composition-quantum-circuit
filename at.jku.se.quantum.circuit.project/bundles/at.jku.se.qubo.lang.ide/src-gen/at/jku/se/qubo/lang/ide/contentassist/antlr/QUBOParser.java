@@ -31,8 +31,7 @@ public class QUBOParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, QUBOGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getEDoubleDefinitionAccess().getAlternatives(), "rule__EDoubleDefinition__Alternatives");
-			builder.put(grammarAccess.getEDoubleAccess().getAlternatives_4_0(), "rule__EDouble__Alternatives_4_0");
+			builder.put(grammarAccess.getEDoubleAccess().getAlternatives(), "rule__EDouble__Alternatives");
 			builder.put(grammarAccess.getQuboAccess().getGroup(), "rule__Qubo__Group__0");
 			builder.put(grammarAccess.getQuboAccess().getGroup_3(), "rule__Qubo__Group_3__0");
 			builder.put(grammarAccess.getMatrixAccess().getGroup(), "rule__Matrix__Group__0");
@@ -42,9 +41,6 @@ public class QUBOParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRowAccess().getGroup_2(), "rule__Row__Group_2__0");
 			builder.put(grammarAccess.getRowAccess().getGroup_2_1(), "rule__Row__Group_2_1__0");
 			builder.put(grammarAccess.getColumnAccess().getGroup(), "rule__Column__Group__0");
-			builder.put(grammarAccess.getEIntAccess().getGroup(), "rule__EInt__Group__0");
-			builder.put(grammarAccess.getEDoubleAccess().getGroup(), "rule__EDouble__Group__0");
-			builder.put(grammarAccess.getEDoubleAccess().getGroup_4(), "rule__EDouble__Group_4__0");
 			builder.put(grammarAccess.getQuboAccess().getMatrixAssignment_3_1(), "rule__Qubo__MatrixAssignment_3_1");
 			builder.put(grammarAccess.getMatrixAccess().getRowsAssignment_2_0(), "rule__Matrix__RowsAssignment_2_0");
 			builder.put(grammarAccess.getMatrixAccess().getRowsAssignment_2_1_1(), "rule__Matrix__RowsAssignment_2_1_1");
