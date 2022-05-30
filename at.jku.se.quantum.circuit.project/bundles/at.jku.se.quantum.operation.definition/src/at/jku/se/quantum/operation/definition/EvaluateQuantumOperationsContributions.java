@@ -1,5 +1,7 @@
 package at.jku.se.quantum.operation.definition;
 
+import static at.jku.se.quantum.operation.definition.api.utils.QuantumOperationUtils.getConcreteQuantumOperationByName;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.logging.Logger;
@@ -16,7 +18,6 @@ import at.jku.se.quantum.operation.definition.api.IGeneralOperationType;
 import at.jku.se.quantum.operation.definition.api.LibraryQuantumGate;
 import at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation;
 import at.jku.se.quantum.operation.library.mm.quope.impl.QuantumOpeFactoryImpl;
-import static at.jku.se.quantum.operation.definition.api.utils.QuantumOperationUtils.getConcreteQuantumOperationByName;
 
 public class EvaluateQuantumOperationsContributions {
 	

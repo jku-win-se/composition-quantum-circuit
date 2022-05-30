@@ -1,6 +1,6 @@
 package at.jku.se.quantum.operation.contribution.elementaryquantumgate;
 
-import at.jku.se.quantum.operation.contribution.utils.ContributionUtils;
+import at.jku.se.quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import at.jku.se.quantum.operation.definition.api.AbstractExtendElementaryQuantumGate;
 
 public class PauliZ extends AbstractExtendElementaryQuantumGate {
@@ -14,6 +14,6 @@ public class PauliZ extends AbstractExtendElementaryQuantumGate {
 
 	@Override
 	public String getPaletteIconPath() {
-		return ContributionUtils.getIconURI(PALETTE_ICON).toString();
+		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}
 }

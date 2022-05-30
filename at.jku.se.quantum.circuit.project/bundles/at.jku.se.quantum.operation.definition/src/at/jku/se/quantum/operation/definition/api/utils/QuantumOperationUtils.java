@@ -31,5 +31,5 @@ public class QuantumOperationUtils {
 			return qOpe.get();
 		else
 			return null;
-	}
+	}	
 }

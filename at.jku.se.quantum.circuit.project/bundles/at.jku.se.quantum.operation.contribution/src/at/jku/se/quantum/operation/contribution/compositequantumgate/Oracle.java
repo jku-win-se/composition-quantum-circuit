@@ -2,7 +2,7 @@ package at.jku.se.quantum.operation.contribution.compositequantumgate;
 
 import java.util.Collection;
 
-import at.jku.se.quantum.operation.contribution.utils.ContributionUtils;
+import at.jku.se.quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import at.jku.se.quantum.operation.definition.api.AbstractExtendCompositeQuantumGate;
 import at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation;
 import at.jku.se.quantum.operation.library.mm.quope.QuantumOpeFactory;
@@ -23,7 +23,7 @@ public class Oracle extends AbstractExtendCompositeQuantumGate {
 
 	@Override
 	public String getPaletteIconPath() {
-		return ContributionUtils.getIconURI(PALETTE_ICON).toString();
+		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}
 	//TODO add classical bits
 	@Override

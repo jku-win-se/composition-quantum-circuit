@@ -10,6 +10,14 @@
             class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.Hadamard">
       </ElementaryQuantumGate>
       <ElementaryQuantumGate
+            Name="RZ"
+            class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.RZ">
+      </ElementaryQuantumGate>
+       <ElementaryQuantumGate
+            Name="CNOT"
+            class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.CNOT">
+      </ElementaryQuantumGate>
+      <ElementaryQuantumGate
             Name="PauliX"
             class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.PauliX">
       </ElementaryQuantumGate>

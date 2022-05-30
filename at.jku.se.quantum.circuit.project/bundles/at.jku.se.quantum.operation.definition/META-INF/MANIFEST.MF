@@ -7,7 +7,7 @@ Automatic-Module-Name: at.jku.se.quantum.operation.definition
 Bundle-RequiredExecutionEnvironment: JavaSE-16
 Require-Bundle: at.jku.se.quantum.circuit.mm;bundle-version="0.1.0",
  at.jku.se.quantum.operation.library.mm;bundle-version="0.1.0",
- org.eclipse.core.runtime;bundle-version="3.22.0",
- org.eclipse.e4.core.di;bundle-version="1.7.800"
-Export-Package: at.jku.se.quantum.operation.definition.api,
+ org.eclipse.core.runtime;bundle-version="3.22.0"
+Export-Package: at.jku.se.quantum.operation.definition,
+ at.jku.se.quantum.operation.definition.api,
  at.jku.se.quantum.operation.definition.api.utils

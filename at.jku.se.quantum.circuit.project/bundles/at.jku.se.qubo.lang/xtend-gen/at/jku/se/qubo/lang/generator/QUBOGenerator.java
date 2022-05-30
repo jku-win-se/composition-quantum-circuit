@@ -3,6 +3,9 @@
  */
 package at.jku.se.qubo.lang.generator;
 
+import at.jku.se.quantum.operation.definition.api.utils.QuantumOperationUtils;
+import at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage;
+import at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary;
 import at.jku.se.qubo.lang.utils.QuboUtils;
 import at.jku.se.qubo.mm.qubo.Qubo;
 import java.util.Collections;
@@ -26,23 +29,48 @@ import qucircuit.QuantumCircuit;
 public class QUBOGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    QuantumOperationLibrary quantumOpLib = this.generateQuantumLibraryIfNotExist(fsa, resource);
+    this.generateQUBOQuantumCircuit(fsa, resource, quantumOpLib);
+  }
+  
+  public QuantumOperationLibrary generateQuantumLibraryIfNotExist(final IFileSystemAccess2 fsa, final Resource resource) {
     try {
-      URI _appendSegment = fsa.getURI("/").trimSegments(1).appendSegment("qu-circuit");
-      String _lastSegment = resource.getURI().trimFileExtension().lastSegment();
-      String _plus = (_lastSegment + QuCircuitPackage.eNS_PREFIX);
-      URI quCircuitURI = _appendSegment.appendSegment(_plus);
+      URI quOpeURI = this.createURI(fsa, resource, "quantum-operation", QuantumOpePackage.eNS_PREFIX);
+      ResourceSet reset = resource.getResourceSet();
+      Resource quOpeResource = reset.createResource(quOpeURI);
+      boolean _exists = reset.getURIConverter().exists(quOpeURI, Collections.EMPTY_MAP);
+      boolean _not = (!_exists);
+      if (_not) {
+        QuantumOperationLibrary quantumOpLib = QuantumOperationUtils.getAllQuantumOperations();
+        quOpeResource.getContents().add(quantumOpLib);
+        quOpeResource.save(Collections.EMPTY_MAP);
+        return quantumOpLib;
+      } else {
+        quOpeResource.load(Collections.EMPTY_MAP);
+        EObject _get = quOpeResource.getContents().get(0);
+        return ((QuantumOperationLibrary) _get);
+      }
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  public void generateQUBOQuantumCircuit(final IFileSystemAccess2 fsa, final Resource resource, final QuantumOperationLibrary quantumOpLib) {
+    try {
+      URI quCircuitURI = this.createURI(fsa, resource, "qu-circuit", QuCircuitPackage.eNS_PREFIX);
       ResourceSet reset = resource.getResourceSet();
       Resource quCircuit = reset.createResource(quCircuitURI);
-      quCircuit.getContents().add(this.createQuboCircuit(resource));
+      EObject _get = resource.getContents().get(0);
+      Qubo qubo = ((Qubo) _get);
+      QuantumCircuit quantumCircuit = QuboUtils.createQuboCircuit(qubo, quantumOpLib);
+      quCircuit.getContents().add(quantumCircuit);
       quCircuit.save(Collections.EMPTY_MAP);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
   }
   
-  public QuantumCircuit createQuboCircuit(final Resource resource) {
-    EObject _get = resource.getContents().get(0);
-    Qubo qubo = ((Qubo) _get);
-    return QuboUtils.createQuboCircuit(qubo);
+  public URI createURI(final IFileSystemAccess2 fsa, final Resource resource, final String folder, final String ext) {
+    return fsa.getURI("/").trimSegments(1).appendSegment(folder).appendSegment(resource.getURI().trimFileExtension().lastSegment()).appendFileExtension(ext);
   }
 }

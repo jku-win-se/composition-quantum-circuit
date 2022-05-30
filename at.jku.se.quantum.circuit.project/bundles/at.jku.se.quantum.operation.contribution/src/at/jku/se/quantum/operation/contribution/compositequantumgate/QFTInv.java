@@ -2,7 +2,7 @@ package at.jku.se.quantum.operation.contribution.compositequantumgate;
 
 import java.util.Collection;
 
-import at.jku.se.quantum.operation.contribution.utils.ContributionUtils;
+import at.jku.se.quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import at.jku.se.quantum.operation.definition.api.AbstractExtendCompositeQuantumGate;
 import qucircuit.CompositeQuantumGate;
 import qucircuit.QuantumOperation;
@@ -18,7 +18,7 @@ public class QFTInv extends AbstractExtendCompositeQuantumGate {
 
 	@Override
 	public String getPaletteIconPath() {
-		return ContributionUtils.getIconURI(PALETTE_ICON).toString();
+		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}
 
 	@Override
