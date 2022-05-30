@@ -25,7 +25,7 @@ public class Oracle extends AbstractExtendCompositeQuantumGate {
 	public String getPaletteIconPath() {
 		return ContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}
-
+	//TODO add classical bits
 	@Override
 	public CompositeQuantumGate getCustomBlock(Collection<qucircuit.Qubit> qubits,
 			qucircuit.QuantumOperation quOperation) {

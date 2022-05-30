@@ -30,7 +30,7 @@ public interface Row extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Columns</em>' containment reference list.
 	 * @see at.jku.se.qubo.mm.qubo.QuboPackage#getRow_Columns()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Column> getColumns();

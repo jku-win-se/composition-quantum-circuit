@@ -3,10 +3,6 @@
  */
 package at.jku.se.qubo.lang.validation;
 
-import java.util.stream.Collectors;
-
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.validation.Check;
 
 import at.jku.se.qubo.mm.qubo.Matrix;
@@ -21,15 +17,15 @@ import at.jku.se.qubo.mm.qubo.Row;
 public class QUBOValidator extends AbstractQUBOValidator {
 	
 	@Check
-	public void checkGreetingStartsWithCapital(Matrix matrix) {
-		int numberOfRows = matrix.getRows().size();
-		EList<Row> rows = matrix.getRows()
-							.stream()
-							.filter(r -> r.getColumns().size() != numberOfRows)
-							.collect(Collectors.toCollection(BasicEList::new))
-							;
-		for (Row row : rows) {
-			error("The size of this columns must be equal to: " + numberOfRows, row, QuboPackage.Literals.ROW__COLUMNS);
+	public void checkMatrixUppperHalf(Matrix matrix) {
+		//Number of columns of the first Row
+		int numberOfColumns = matrix.getRows().size();
+		for (Row row : matrix.getRows()) {
+			if (row.getColumns().size() != numberOfColumns) {
+				error("The size of this columns must be equal to: " + numberOfColumns, row, QuboPackage.Literals.ROW__COLUMNS);
+			}
+			//Reduce the number of rows
+			numberOfColumns--;
 		}
 	}
 	

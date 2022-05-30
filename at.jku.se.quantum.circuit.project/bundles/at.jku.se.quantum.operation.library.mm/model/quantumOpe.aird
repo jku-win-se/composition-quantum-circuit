@@ -4,7 +4,7 @@
     <semanticResources>quantumOpe.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-3E1QHnYEeyIINjlKBY7Ww">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AcXYEHnZEeyIINjlKBY7Ww" name="quope class diagram" repPath="#_AcTtsHnZEeyIINjlKBY7Ww" changeId="602fc96e-3112-424a-a587-b6532d4366f4">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_AcXYEHnZEeyIINjlKBY7Ww" name="quope class diagram" repPath="#_AcTtsHnZEeyIINjlKBY7Ww" changeId="b3b4978b-ae91-4a92-914a-549fc0d1e668">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="quantumOpe.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -75,11 +75,15 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_Atm5GnnZEeyIINjlKBY7Ww" fontName="Segoe UI" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_Atm5G3nZEeyIINjlKBY7Ww"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_BlUCFtwOEeyuTNEOXWe2qg" type="3010" element="_BlPJkNwOEeyuTNEOXWe2qg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_BlUCF9wOEeyuTNEOXWe2qg" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_BlUCGNwOEeyuTNEOXWe2qg"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_AtlD5XnZEeyIINjlKBY7Ww"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_AtlD5nnZEeyIINjlKBY7Ww"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_AtlD4XnZEeyIINjlKBY7Ww" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AtlD4nnZEeyIINjlKBY7Ww" x="713" y="345" height="78"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AtlD4nnZEeyIINjlKBY7Ww" x="713" y="345" width="340" height="93"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_AtlD53nZEeyIINjlKBY7Ww" type="2003" element="_AtZdsHnZEeyIINjlKBY7Ww">
           <children xmi:type="notation:Node" xmi:id="_AtlD6nnZEeyIINjlKBY7Ww" type="5007"/>
@@ -162,7 +166,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_AtouUHnZEeyIINjlKBY7Ww" type="4001" element="_AtgLYHnZEeyIINjlKBY7Ww" source="_Atj1w3nZEeyIINjlKBY7Ww" target="_AtlD4HnZEeyIINjlKBY7Ww">
           <children xmi:type="notation:Node" xmi:id="_AtpVUHnZEeyIINjlKBY7Ww" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AtpVUXnZEeyIINjlKBY7Ww" x="-151" y="-23"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AtpVUXnZEeyIINjlKBY7Ww" x="-31" y="22"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_AtpVUnnZEeyIINjlKBY7Ww" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AtpVU3nZEeyIINjlKBY7Ww" x="-21" y="-145"/>
@@ -174,7 +178,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_AtouUnnZEeyIINjlKBY7Ww" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AtouU3nZEeyIINjlKBY7Ww" points="[35, 31, -299, -48]$[35, 90, -299, 11]$[193, 90, -141, 11]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtpVVnnZEeyIINjlKBY7Ww" id="(0.5,0.6198347107438017)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtpVV3nZEeyIINjlKBY7Ww" id="(0.5,0.6447368421052632)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AtpVV3nZEeyIINjlKBY7Ww" id="(0.4171597633136095,0.5384615384615384)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_Atp8YnnZEeyIINjlKBY7Ww" type="4001" element="_AtgydnnZEeyIINjlKBY7Ww" source="_Atj1w3nZEeyIINjlKBY7Ww" target="_Atkc03nZEeyIINjlKBY7Ww">
           <children xmi:type="notation:Node" xmi:id="_Atp8ZnnZEeyIINjlKBY7Ww" type="6001">
@@ -355,7 +359,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_AtY2pHnZEeyIINjlKBY7Ww" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JxKCJ9wOEeyuTNEOXWe2qg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -371,6 +375,14 @@
         <target xmi:type="ecore:EAttribute" href="quantumOpe.ecore#//FixedQuantumOperation/numberOfControlQubits"/>
         <semanticElements xmi:type="ecore:EAttribute" href="quantumOpe.ecore#//FixedQuantumOperation/numberOfControlQubits"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_AtdvJHnZEeyIINjlKBY7Ww" labelAlignment="LEFT" description="_AtdvIXnZEeyIINjlKBY7Ww">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_BlPJkNwOEeyuTNEOXWe2qg" name="numberOfClassicBits : EIntegerObject" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="quantumOpe.ecore#//FixedQuantumOperation/numberOfClassicBits"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="quantumOpe.ecore#//FixedQuantumOperation/numberOfClassicBits"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_MJsm0twOEeyuTNEOXWe2qg" labelAlignment="LEFT" description="_AtdvIXnZEeyIINjlKBY7Ww">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

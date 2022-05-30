@@ -40,6 +40,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="QuCircuit.ecore#//AbstractQuantumGate">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//AbstractQuantumGate/controlQubits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//AbstractQuantumGate/inverseForm"/>
     </genClasses>
     <genClasses ecoreClass="QuCircuit.ecore#//StatePreparation"/>
     <genClasses ecoreClass="QuCircuit.ecore#//Measurement">
