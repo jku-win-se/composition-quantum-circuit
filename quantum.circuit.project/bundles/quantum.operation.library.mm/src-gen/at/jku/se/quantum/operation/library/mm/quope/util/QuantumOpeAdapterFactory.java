@@ -92,6 +92,11 @@ public class QuantumOpeAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseLoopOperation(LoopOperation object) {
+			return createLoopOperationAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -177,6 +182,20 @@ public class QuantumOpeAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.jku.se.quantum.operation.library.mm.quope.LoopOperation <em>Loop Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.jku.se.quantum.operation.library.mm.quope.LoopOperation
+	 * @generated
+	 */
+	public Adapter createLoopOperationAdapter() {
 		return null;
 	}
 

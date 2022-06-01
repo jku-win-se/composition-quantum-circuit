@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.FixedQuantumOperationImpl#getNumberOfTargetQubits <em>Number Of Target Qubits</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.FixedQuantumOperationImpl#getNumberOfControlQubits <em>Number Of Control Qubits</em>}</li>
+ *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.FixedQuantumOperationImpl#getNumberOfClassicBits <em>Number Of Classic Bits</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class FixedQuantumOperationImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected Integer numberOfControlQubits = NUMBER_OF_CONTROL_QUBITS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNumberOfClassicBits() <em>Number Of Classic Bits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumberOfClassicBits()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer NUMBER_OF_CLASSIC_BITS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNumberOfClassicBits() <em>Number Of Classic Bits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumberOfClassicBits()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer numberOfClassicBits = NUMBER_OF_CLASSIC_BITS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,6 +158,29 @@ public class FixedQuantumOperationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Integer getNumberOfClassicBits() {
+		return numberOfClassicBits;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumberOfClassicBits(Integer newNumberOfClassicBits) {
+		Integer oldNumberOfClassicBits = numberOfClassicBits;
+		numberOfClassicBits = newNumberOfClassicBits;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS, oldNumberOfClassicBits,
+					numberOfClassicBits));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -144,6 +188,8 @@ public class FixedQuantumOperationImpl extends MinimalEObjectImpl.Container impl
 			return getNumberOfTargetQubits();
 		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS:
 			return getNumberOfControlQubits();
+		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS:
+			return getNumberOfClassicBits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,6 +207,9 @@ public class FixedQuantumOperationImpl extends MinimalEObjectImpl.Container impl
 			return;
 		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS:
 			setNumberOfControlQubits((Integer) newValue);
+			return;
+		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS:
+			setNumberOfClassicBits((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,6 +229,9 @@ public class FixedQuantumOperationImpl extends MinimalEObjectImpl.Container impl
 		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS:
 			setNumberOfControlQubits(NUMBER_OF_CONTROL_QUBITS_EDEFAULT);
 			return;
+		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS:
+			setNumberOfClassicBits(NUMBER_OF_CLASSIC_BITS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,6 +250,9 @@ public class FixedQuantumOperationImpl extends MinimalEObjectImpl.Container impl
 		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS:
 			return NUMBER_OF_CONTROL_QUBITS_EDEFAULT == null ? numberOfControlQubits != null
 					: !NUMBER_OF_CONTROL_QUBITS_EDEFAULT.equals(numberOfControlQubits);
+		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS:
+			return NUMBER_OF_CLASSIC_BITS_EDEFAULT == null ? numberOfClassicBits != null
+					: !NUMBER_OF_CLASSIC_BITS_EDEFAULT.equals(numberOfClassicBits);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,6 +272,8 @@ public class FixedQuantumOperationImpl extends MinimalEObjectImpl.Container impl
 		result.append(numberOfTargetQubits);
 		result.append(", numberOfControlQubits: ");
 		result.append(numberOfControlQubits);
+		result.append(", numberOfClassicBits: ");
+		result.append(numberOfClassicBits);
 		result.append(')');
 		return result.toString();
 	}

@@ -18,13 +18,13 @@ Require-Bundle: qubo.mm,
  quantum.operation.contribution;bundle-version="1.0.0",
  quantum.operation.definition;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: at.jku.se.qubo.lang.parser.antlr.internal,
- at.jku.se.qubo.lang.generator,
- at.jku.se.qubo.lang,
- at.jku.se.qubo.lang.formatting2,
- at.jku.se.qubo.lang.parser.antlr,
- at.jku.se.qubo.lang.validation,
- at.jku.se.qubo.lang.serializer,
- at.jku.se.qubo.lang.scoping,
- at.jku.se.qubo.lang.services
+Export-Package: qubo.lang,
+ qubo.lang.formatting2,
+ qubo.lang.generator,
+ qubo.lang.scoping,
+ qubo.lang.validation,
+ qubo.lang.parser.antlr,
+ qubo.lang.services,
+ qubo.lang.serializer,
+ qubo.lang.parser.antlr.internal
 Import-Package: org.apache.log4j

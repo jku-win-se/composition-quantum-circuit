@@ -10,6 +10,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import qucircuit.AbstractQuantumGate;
 import qucircuit.QuCircuitPackage;
@@ -43,6 +45,7 @@ public class AbstractQuantumGateItemProvider extends QuantumOperationItemProvide
 			super.getPropertyDescriptors(object);
 
 			addControlQubitsPropertyDescriptor(object);
+			addInverseFormPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -60,6 +63,22 @@ public class AbstractQuantumGateItemProvider extends QuantumOperationItemProvide
 				getString("_UI_PropertyDescriptor_description", "_UI_AbstractQuantumGate_controlQubits_feature",
 						"_UI_AbstractQuantumGate_type"),
 				QuCircuitPackage.Literals.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Inverse Form feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInverseFormPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_AbstractQuantumGate_inverseForm_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_AbstractQuantumGate_inverseForm_feature",
+						"_UI_AbstractQuantumGate_type"),
+				QuCircuitPackage.Literals.ABSTRACT_QUANTUM_GATE__INVERSE_FORM, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -95,6 +114,12 @@ public class AbstractQuantumGateItemProvider extends QuantumOperationItemProvide
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(AbstractQuantumGate.class)) {
+		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE__INVERSE_FORM:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

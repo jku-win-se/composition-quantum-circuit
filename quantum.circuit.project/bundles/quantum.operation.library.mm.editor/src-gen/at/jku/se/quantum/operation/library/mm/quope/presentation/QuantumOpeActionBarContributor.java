@@ -39,6 +39,8 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
+import quantum.operation.library.mm.quope.presentation.QuantumOpeEditorPlugin;
+
 /**
  * This is the action bar contributor for the QuantumOpe model editor.
  * <!-- begin-user-doc -->

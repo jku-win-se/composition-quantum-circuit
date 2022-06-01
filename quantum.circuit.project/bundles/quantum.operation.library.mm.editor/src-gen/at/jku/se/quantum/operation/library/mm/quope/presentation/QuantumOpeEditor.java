@@ -157,6 +157,8 @@ import at.jku.se.quantum.operation.library.mm.quope.provider.QuantumOpeItemProvi
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
+import quantum.operation.library.mm.quope.presentation.QuantumOpeEditorPlugin;
+
 /**
  * This is an example of a QuantumOpe model editor.
  * <!-- begin-user-doc -->
@@ -603,9 +605,8 @@ public class QuantumOpeEditor extends MultiPageEditorPart
 	 */
 	protected void updateProblemIndication() {
 		if (updateProblemIndication) {
-			BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
-					"at.jku.se.quantum.operation.library.mm.editor", 0, null,
-					new Object[] { editingDomain.getResourceSet() });
+			BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "quantum.operation.library.mm.editor", 0,
+					null, new Object[] { editingDomain.getResourceSet() });
 			for (Diagnostic childDiagnostic : resourceToDiagnosticMap.values()) {
 				if (childDiagnostic.getSeverity() != Diagnostic.OK) {
 					diagnostic.add(childDiagnostic);
@@ -950,13 +951,13 @@ public class QuantumOpeEditor extends MultiPageEditorPart
 		boolean hasErrors = !resource.getErrors().isEmpty();
 		if (hasErrors || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic = new BasicDiagnostic(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
-					"at.jku.se.quantum.operation.library.mm.editor", 0,
+					"quantum.operation.library.mm.editor", 0,
 					getString("_UI_CreateModelError_message", resource.getURI()),
 					new Object[] { exception == null ? (Object) resource : exception });
 			basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
 			return basicDiagnostic;
 		} else if (exception != null) {
-			return new BasicDiagnostic(Diagnostic.ERROR, "at.jku.se.quantum.operation.library.mm.editor", 0,
+			return new BasicDiagnostic(Diagnostic.ERROR, "quantum.operation.library.mm.editor", 0,
 					getString("_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
 		} else {
 			return Diagnostic.OK_INSTANCE;

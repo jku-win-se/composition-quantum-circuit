@@ -3,6 +3,7 @@
 package at.jku.se.quantum.operation.library.mm.quope.impl;
 
 import at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation;
+import at.jku.se.quantum.operation.library.mm.quope.LoopOperation;
 import at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage;
 import at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary;
 
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.QuantumOperationLibraryImpl#getOperations <em>Operations</em>}</li>
+ *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.QuantumOperationLibraryImpl#getLoopOperations <em>Loop Operations</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +43,16 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 	 * @ordered
 	 */
 	protected EList<ConcreteQuantumOperation> operations;
+
+	/**
+	 * The cached value of the '{@link #getLoopOperations() <em>Loop Operations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLoopOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<LoopOperation> loopOperations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,11 +91,26 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<LoopOperation> getLoopOperations() {
+		if (loopOperations == null) {
+			loopOperations = new EObjectContainmentEList<LoopOperation>(LoopOperation.class, this,
+					QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS);
+		}
+		return loopOperations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			return ((InternalEList<?>) getOperations()).basicRemove(otherEnd, msgs);
+		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
+			return ((InternalEList<?>) getLoopOperations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -98,6 +125,8 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		switch (featureID) {
 		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			return getOperations();
+		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
+			return getLoopOperations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,6 +144,10 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 			getOperations().clear();
 			getOperations().addAll((Collection<? extends ConcreteQuantumOperation>) newValue);
 			return;
+		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
+			getLoopOperations().clear();
+			getLoopOperations().addAll((Collection<? extends LoopOperation>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -130,6 +163,9 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			getOperations().clear();
 			return;
+		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
+			getLoopOperations().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -144,6 +180,8 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		switch (featureID) {
 		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			return operations != null && !operations.isEmpty();
+		case QuantumOpePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
+			return loopOperations != null && !loopOperations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

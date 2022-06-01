@@ -2,14 +2,15 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: quantum.operation.library.mm.editor;singleton:=true
-Automatic-Module-Name: at.jku.se.quantum.operation.library.mm.editor
+Automatic-Module-Name: quantum.operation.library.mm.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeEditorPlugin$Implementation
+Bundle-Activator: quantum.operation.library.mm.quope.presentation.QuantumOpeEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-16
-Export-Package: at.jku.se.quantum.operation.library.mm.quope.presentation
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: at.jku.se.quantum.operation.library.mm.quope.presentation,
+ quantum.operation.library.mm.quope.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  quantum.operation.library.mm.edit;visibility:=reexport,

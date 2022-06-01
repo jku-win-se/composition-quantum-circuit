@@ -46,7 +46,7 @@ public class EvaluateQuantumOperationsContributions {
             }
 			LOGGER.info("Evaluating Reverse Quantum Gates");
 			reverseGate.entrySet().stream()
-				.forEach(e -> e.getKey().setReverseConcreteQuantumOperation(getConcreteQuantumOperationByName(operations,e.getValue())));			
+				.forEach(e -> e.getKey().setReverse(getConcreteQuantumOperationByName(operations,e.getValue())));			
 		} catch (CoreException ex) {
 			LOGGER.severe(ex.getMessage());            
         }	

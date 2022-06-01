@@ -24,12 +24,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getType <em>Type</em>}</li>
- *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getReverseConcreteQuantumOperation <em>Reverse Concrete Quantum Operation</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getAbbreviation <em>Abbreviation</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getPaletteIconPath <em>Palette Icon Path</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getStyleIconPath <em>Style Icon Path</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getFixedQuantumOperation <em>Fixed Quantum Operation</em>}</li>
+ *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getReverse <em>Reverse</em>}</li>
+ *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl#getReversible <em>Reversible</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,16 +45,6 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 	 * @ordered
 	 */
 	protected EClass type;
-
-	/**
-	 * The cached value of the '{@link #getReverseConcreteQuantumOperation() <em>Reverse Concrete Quantum Operation</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReverseConcreteQuantumOperation()
-	 * @generated
-	 * @ordered
-	 */
-	protected ConcreteQuantumOperation reverseConcreteQuantumOperation;
 
 	/**
 	 * The default value of the '{@link #getAbbreviation() <em>Abbreviation</em>}' attribute.
@@ -136,6 +127,36 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 	protected FixedQuantumOperation fixedQuantumOperation;
 
 	/**
+	 * The cached value of the '{@link #getReverse() <em>Reverse</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReverse()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConcreteQuantumOperation reverse;
+
+	/**
+	 * The default value of the '{@link #getReversible() <em>Reversible</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReversible()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean REVERSIBLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReversible() <em>Reversible</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReversible()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean reversible = REVERSIBLE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -192,49 +213,6 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__TYPE,
 					oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConcreteQuantumOperation getReverseConcreteQuantumOperation() {
-		if (reverseConcreteQuantumOperation != null && reverseConcreteQuantumOperation.eIsProxy()) {
-			InternalEObject oldReverseConcreteQuantumOperation = (InternalEObject) reverseConcreteQuantumOperation;
-			reverseConcreteQuantumOperation = (ConcreteQuantumOperation) eResolveProxy(
-					oldReverseConcreteQuantumOperation);
-			if (reverseConcreteQuantumOperation != oldReverseConcreteQuantumOperation) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION,
-							oldReverseConcreteQuantumOperation, reverseConcreteQuantumOperation));
-			}
-		}
-		return reverseConcreteQuantumOperation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ConcreteQuantumOperation basicGetReverseConcreteQuantumOperation() {
-		return reverseConcreteQuantumOperation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReverseConcreteQuantumOperation(ConcreteQuantumOperation newReverseConcreteQuantumOperation) {
-		ConcreteQuantumOperation oldReverseConcreteQuantumOperation = reverseConcreteQuantumOperation;
-		reverseConcreteQuantumOperation = newReverseConcreteQuantumOperation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION,
-					oldReverseConcreteQuantumOperation, reverseConcreteQuantumOperation));
 	}
 
 	/**
@@ -414,6 +392,68 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConcreteQuantumOperation getReverse() {
+		if (reverse != null && reverse.eIsProxy()) {
+			InternalEObject oldReverse = (InternalEObject) reverse;
+			reverse = (ConcreteQuantumOperation) eResolveProxy(oldReverse);
+			if (reverse != oldReverse) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE, oldReverse, reverse));
+			}
+		}
+		return reverse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConcreteQuantumOperation basicGetReverse() {
+		return reverse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReverse(ConcreteQuantumOperation newReverse) {
+		ConcreteQuantumOperation oldReverse = reverse;
+		reverse = newReverse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE,
+					oldReverse, reverse));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Boolean getReversible() {
+		return reversible;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReversible(Boolean newReversible) {
+		Boolean oldReversible = reversible;
+		reversible = newReversible;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSIBLE, oldReversible, reversible));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -437,10 +477,6 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 			if (resolve)
 				return getType();
 			return basicGetType();
-		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION:
-			if (resolve)
-				return getReverseConcreteQuantumOperation();
-			return basicGetReverseConcreteQuantumOperation();
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__ABBREVIATION:
 			return getAbbreviation();
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH:
@@ -451,6 +487,12 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 			return getParameter();
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			return getFixedQuantumOperation();
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE:
+			if (resolve)
+				return getReverse();
+			return basicGetReverse();
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSIBLE:
+			return getReversible();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -465,9 +507,6 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 		switch (featureID) {
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__TYPE:
 			setType((EClass) newValue);
-			return;
-		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION:
-			setReverseConcreteQuantumOperation((ConcreteQuantumOperation) newValue);
 			return;
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__ABBREVIATION:
 			setAbbreviation((String) newValue);
@@ -484,6 +523,12 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			setFixedQuantumOperation((FixedQuantumOperation) newValue);
 			return;
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE:
+			setReverse((ConcreteQuantumOperation) newValue);
+			return;
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSIBLE:
+			setReversible((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -498,9 +543,6 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 		switch (featureID) {
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__TYPE:
 			setType((EClass) null);
-			return;
-		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION:
-			setReverseConcreteQuantumOperation((ConcreteQuantumOperation) null);
 			return;
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__ABBREVIATION:
 			setAbbreviation(ABBREVIATION_EDEFAULT);
@@ -517,6 +559,12 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			setFixedQuantumOperation((FixedQuantumOperation) null);
 			return;
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE:
+			setReverse((ConcreteQuantumOperation) null);
+			return;
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSIBLE:
+			setReversible(REVERSIBLE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -531,8 +579,6 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 		switch (featureID) {
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__TYPE:
 			return type != null;
-		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION:
-			return reverseConcreteQuantumOperation != null;
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__ABBREVIATION:
 			return ABBREVIATION_EDEFAULT == null ? abbreviation != null : !ABBREVIATION_EDEFAULT.equals(abbreviation);
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH:
@@ -545,6 +591,10 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 			return parameter != null;
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			return fixedQuantumOperation != null;
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSE:
+			return reverse != null;
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSIBLE:
+			return REVERSIBLE_EDEFAULT == null ? reversible != null : !REVERSIBLE_EDEFAULT.equals(reversible);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -566,6 +616,8 @@ public class ConcreteQuantumOperationImpl extends NamedElementImpl implements Co
 		result.append(paletteIconPath);
 		result.append(", styleIconPath: ");
 		result.append(styleIconPath);
+		result.append(", reversible: ");
+		result.append(reversible);
 		result.append(')');
 		return result.toString();
 	}

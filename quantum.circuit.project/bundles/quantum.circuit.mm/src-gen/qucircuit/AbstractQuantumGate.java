@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link qucircuit.AbstractQuantumGate#getControlQubits <em>Control Qubits</em>}</li>
+ *   <li>{@link qucircuit.AbstractQuantumGate#getInverseForm <em>Inverse Form</em>}</li>
  * </ul>
  *
  * @see qucircuit.QuCircuitPackage#getAbstractQuantumGate()
@@ -32,5 +33,28 @@ public interface AbstractQuantumGate extends QuantumOperation {
 	 * @generated
 	 */
 	EList<Qubit> getControlQubits();
+
+	/**
+	 * Returns the value of the '<em><b>Inverse Form</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inverse Form</em>' attribute.
+	 * @see #setInverseForm(Boolean)
+	 * @see qucircuit.QuCircuitPackage#getAbstractQuantumGate_InverseForm()
+	 * @model default="false"
+	 * @generated
+	 */
+	Boolean getInverseForm();
+
+	/**
+	 * Sets the value of the '{@link qucircuit.AbstractQuantumGate#getInverseForm <em>Inverse Form</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inverse Form</em>' attribute.
+	 * @see #getInverseForm()
+	 * @generated
+	 */
+	void setInverseForm(Boolean value);
 
 } // AbstractQuantumGate

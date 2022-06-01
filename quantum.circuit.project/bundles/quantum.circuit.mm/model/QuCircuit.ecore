@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="qucircuit" nsURI="http://www.se.jku.at/QuCircuit" nsPrefix="qucircuit">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="qucircuit" nsURI="http://www.eclipse.org/QuCircuit" nsPrefix="qucircuit">
   <eClassifiers xsi:type="ecore:EClass" name="QuantumCircuit" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="quantumRegisters" lowerBound="1"
         upperBound="-1" eType="#//QuantumRegister" containment="true"/>
@@ -78,5 +78,28 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedTargetQubits" upperBound="-1"
         eType="#//Qubit"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loop" eType="ecore:EClass ../../quantum.operation.library.mm/model/quantumOpe.ecore#//LoopOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementControlQubits"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementTargetQubits"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loopTargetQubits" lowerBound="1"
+        upperBound="-1" eType="#//Qubit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loopControlQubits" upperBound="-1"
+        eType="#//Qubit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetQubitsBlockSize"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlQubitsBlockSize"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlQubitsIterationType"
+        eType="#//ITERATION_TYPE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetQubitsIterationType"
+        eType="#//ITERATION_TYPE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ITERATION_TYPE">
+    <eLiterals name="NONE"/>
+    <eLiterals name="SHIFT" value="1"/>
+    <eLiterals name="CHANGE_BLOCK" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

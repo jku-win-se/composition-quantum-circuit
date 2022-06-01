@@ -14,12 +14,13 @@ import org.eclipse.emf.ecore.EClass;
  * </p>
  * <ul>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getType <em>Type</em>}</li>
- *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverseConcreteQuantumOperation <em>Reverse Concrete Quantum Operation</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getAbbreviation <em>Abbreviation</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getPaletteIconPath <em>Palette Icon Path</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getStyleIconPath <em>Style Icon Path</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getParameter <em>Parameter</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getFixedQuantumOperation <em>Fixed Quantum Operation</em>}</li>
+ *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverse <em>Reverse</em>}</li>
+ *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReversible <em>Reversible</em>}</li>
  * </ul>
  *
  * @see at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage#getConcreteQuantumOperation()
@@ -48,28 +49,6 @@ public interface ConcreteQuantumOperation extends NamedElement {
 	 * @generated
 	 */
 	void setType(EClass value);
-
-	/**
-	 * Returns the value of the '<em><b>Reverse Concrete Quantum Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reverse Concrete Quantum Operation</em>' reference.
-	 * @see #setReverseConcreteQuantumOperation(ConcreteQuantumOperation)
-	 * @see at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage#getConcreteQuantumOperation_ReverseConcreteQuantumOperation()
-	 * @model
-	 * @generated
-	 */
-	ConcreteQuantumOperation getReverseConcreteQuantumOperation();
-
-	/**
-	 * Sets the value of the '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverseConcreteQuantumOperation <em>Reverse Concrete Quantum Operation</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reverse Concrete Quantum Operation</em>' reference.
-	 * @see #getReverseConcreteQuantumOperation()
-	 * @generated
-	 */
-	void setReverseConcreteQuantumOperation(ConcreteQuantumOperation value);
 
 	/**
 	 * Returns the value of the '<em><b>Abbreviation</b></em>' attribute.
@@ -180,5 +159,49 @@ public interface ConcreteQuantumOperation extends NamedElement {
 	 * @generated
 	 */
 	void setFixedQuantumOperation(FixedQuantumOperation value);
+
+	/**
+	 * Returns the value of the '<em><b>Reverse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reverse</em>' reference.
+	 * @see #setReverse(ConcreteQuantumOperation)
+	 * @see at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage#getConcreteQuantumOperation_Reverse()
+	 * @model
+	 * @generated
+	 */
+	ConcreteQuantumOperation getReverse();
+
+	/**
+	 * Sets the value of the '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverse <em>Reverse</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reverse</em>' reference.
+	 * @see #getReverse()
+	 * @generated
+	 */
+	void setReverse(ConcreteQuantumOperation value);
+
+	/**
+	 * Returns the value of the '<em><b>Reversible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reversible</em>' attribute.
+	 * @see #setReversible(Boolean)
+	 * @see at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage#getConcreteQuantumOperation_Reversible()
+	 * @model
+	 * @generated
+	 */
+	Boolean getReversible();
+
+	/**
+	 * Sets the value of the '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReversible <em>Reversible</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reversible</em>' attribute.
+	 * @see #getReversible()
+	 * @generated
+	 */
+	void setReversible(Boolean value);
 
 } // ConcreteQuantumOperation

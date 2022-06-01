@@ -64,6 +64,8 @@ public class QuantumOpeFactoryImpl extends EFactoryImpl implements QuantumOpeFac
 			return createFixedQuantumOperation();
 		case QuantumOpePackage.PARAMETER:
 			return createParameter();
+		case QuantumOpePackage.LOOP_OPERATION:
+			return createLoopOperation();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -107,6 +109,16 @@ public class QuantumOpeFactoryImpl extends EFactoryImpl implements QuantumOpeFac
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LoopOperation createLoopOperation() {
+		LoopOperationImpl loopOperation = new LoopOperationImpl();
+		return loopOperation;
 	}
 
 	/**

@@ -171,7 +171,7 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum looP_KINDEEnum = null;
+	private EEnum iteratioN_TYPEEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -452,6 +452,15 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAbstractQuantumGate_InverseForm() {
+		return (EAttribute) abstractQuantumGateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStatePreparation() {
 		return statePreparationEClass;
 	}
@@ -596,8 +605,8 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoop_LoopKind() {
-		return (EAttribute) loopEClass.getEStructuralFeatures().get(1);
+	public EReference getLoop_FixedControlQubits() {
+		return (EReference) loopEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -605,8 +614,8 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoop_Increment() {
-		return (EAttribute) loopEClass.getEStructuralFeatures().get(2);
+	public EReference getLoop_FixedTargetQubits() {
+		return (EReference) loopEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -614,8 +623,89 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getLOOP_KIND() {
-		return looP_KINDEEnum;
+	public EReference getLoop_Loop() {
+		return (EReference) loopEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_IncrementControlQubits() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_IncrementTargetQubits() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoop_LoopTargetQubits() {
+		return (EReference) loopEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoop_LoopControlQubits() {
+		return (EReference) loopEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_TargetQubitsBlockSize() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_ControlQubitsBlockSize() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_ControlQubitsIterationType() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLoop_TargetQubitsIterationType() {
+		return (EAttribute) loopEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getITERATION_TYPE() {
+		return iteratioN_TYPEEEnum;
 	}
 
 	/**
@@ -679,6 +769,7 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 
 		abstractQuantumGateEClass = createEClass(ABSTRACT_QUANTUM_GATE);
 		createEReference(abstractQuantumGateEClass, ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS);
+		createEAttribute(abstractQuantumGateEClass, ABSTRACT_QUANTUM_GATE__INVERSE_FORM);
 
 		statePreparationEClass = createEClass(STATE_PREPARATION);
 
@@ -703,11 +794,20 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 
 		loopEClass = createEClass(LOOP);
 		createEAttribute(loopEClass, LOOP__ITERATIONS);
-		createEAttribute(loopEClass, LOOP__LOOP_KIND);
-		createEAttribute(loopEClass, LOOP__INCREMENT);
+		createEReference(loopEClass, LOOP__FIXED_CONTROL_QUBITS);
+		createEReference(loopEClass, LOOP__FIXED_TARGET_QUBITS);
+		createEReference(loopEClass, LOOP__LOOP);
+		createEAttribute(loopEClass, LOOP__INCREMENT_CONTROL_QUBITS);
+		createEAttribute(loopEClass, LOOP__INCREMENT_TARGET_QUBITS);
+		createEReference(loopEClass, LOOP__LOOP_TARGET_QUBITS);
+		createEReference(loopEClass, LOOP__LOOP_CONTROL_QUBITS);
+		createEAttribute(loopEClass, LOOP__TARGET_QUBITS_BLOCK_SIZE);
+		createEAttribute(loopEClass, LOOP__CONTROL_QUBITS_BLOCK_SIZE);
+		createEAttribute(loopEClass, LOOP__CONTROL_QUBITS_ITERATION_TYPE);
+		createEAttribute(loopEClass, LOOP__TARGET_QUBITS_ITERATION_TYPE);
 
 		// Create enums
-		looP_KINDEEnum = createEEnum(LOOP_KIND);
+		iteratioN_TYPEEEnum = createEEnum(ITERATION_TYPE);
 	}
 
 	/**
@@ -824,6 +924,9 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		initEReference(getAbstractQuantumGate_ControlQubits(), this.getQubit(), null, "controlQubits", null, 0, -1,
 				AbstractQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractQuantumGate_InverseForm(), ecorePackage.getEBooleanObject(), "inverseForm", "false",
+				0, 1, AbstractQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statePreparationEClass, StatePreparation.class, "StatePreparation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -868,16 +971,45 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLoop_Iterations(), ecorePackage.getEInt(), "iterations", null, 0, 1, Loop.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoop_LoopKind(), this.getLOOP_KIND(), "loopKind", null, 0, 1, Loop.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoop_Increment(), ecorePackage.getEBoolean(), "increment", null, 0, 1, Loop.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_FixedControlQubits(), this.getQubit(), null, "fixedControlQubits", null, 0, -1,
+				Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_FixedTargetQubits(), this.getQubit(), null, "fixedTargetQubits", null, 0, -1, Loop.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_Loop(), theQuantumOpePackage.getLoopOperation(), null, "loop", null, 0, 1, Loop.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_IncrementControlQubits(), ecorePackage.getEBooleanObject(), "incrementControlQubits",
+				"true", 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_IncrementTargetQubits(), ecorePackage.getEBooleanObject(), "incrementTargetQubits",
+				"true", 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_LoopTargetQubits(), this.getQubit(), null, "loopTargetQubits", null, 1, -1, Loop.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoop_LoopControlQubits(), this.getQubit(), null, "loopControlQubits", null, 0, -1, Loop.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_TargetQubitsBlockSize(), ecorePackage.getEIntegerObject(), "targetQubitsBlockSize", null,
+				0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_ControlQubitsBlockSize(), ecorePackage.getEIntegerObject(), "controlQubitsBlockSize",
+				null, 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_ControlQubitsIterationType(), this.getITERATION_TYPE(), "controlQubitsIterationType",
+				null, 0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLoop_TargetQubitsIterationType(), this.getITERATION_TYPE(), "targetQubitsIterationType", null,
+				0, 1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(looP_KINDEEnum, qucircuit.LOOP_KIND.class, "LOOP_KIND");
-		addEEnumLiteral(looP_KINDEEnum, qucircuit.LOOP_KIND.CONTROL_QUBITS_LOOP);
-		addEEnumLiteral(looP_KINDEEnum, qucircuit.LOOP_KIND.TARGET_QUBITS_LOOP);
-		addEEnumLiteral(looP_KINDEEnum, qucircuit.LOOP_KIND.SIMPLE_LOOP);
+		initEEnum(iteratioN_TYPEEEnum, qucircuit.ITERATION_TYPE.class, "ITERATION_TYPE");
+		addEEnumLiteral(iteratioN_TYPEEEnum, qucircuit.ITERATION_TYPE.NONE);
+		addEEnumLiteral(iteratioN_TYPEEEnum, qucircuit.ITERATION_TYPE.SHIFT);
+		addEEnumLiteral(iteratioN_TYPEEEnum, qucircuit.ITERATION_TYPE.CHANGE_BLOCK);
 
 		// Create resource
 		createResource(eNS_URI);

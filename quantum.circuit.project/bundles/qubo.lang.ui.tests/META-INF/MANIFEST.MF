@@ -16,4 +16,4 @@ Require-Bundle: qubo.lang.ui,
  org.eclipse.xtext.ui.testing,
  org.eclipse.ui.workbench;resolution:=optional
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Export-Package: at.jku.se.qubo.lang.ui.tests;x-internal=true
+Export-Package: qubo.lang.ui.tests;x-internal=true

@@ -4,6 +4,7 @@ package at.jku.se.quantum.operation.library.mm.quope.impl;
 
 import at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation;
 import at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation;
+import at.jku.se.quantum.operation.library.mm.quope.LoopOperation;
 import at.jku.se.quantum.operation.library.mm.quope.NamedElement;
 import at.jku.se.quantum.operation.library.mm.quope.Parameter;
 import at.jku.se.quantum.operation.library.mm.quope.QuantumOpeFactory;
@@ -58,6 +59,13 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * @generated
 	 */
 	private EClass parameterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass loopOperationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -146,6 +154,15 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getQuantumOperationLibrary_LoopOperations() {
+		return (EReference) quantumOperationLibraryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getConcreteQuantumOperation() {
 		return concreteQuantumOperationEClass;
 	}
@@ -164,17 +181,8 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConcreteQuantumOperation_ReverseConcreteQuantumOperation() {
-		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getConcreteQuantumOperation_Abbreviation() {
-		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -183,7 +191,7 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * @generated
 	 */
 	public EAttribute getConcreteQuantumOperation_PaletteIconPath() {
-		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -192,7 +200,7 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * @generated
 	 */
 	public EAttribute getConcreteQuantumOperation_StyleIconPath() {
-		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -201,7 +209,7 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * @generated
 	 */
 	public EReference getConcreteQuantumOperation_Parameter() {
-		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(5);
+		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -210,7 +218,25 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * @generated
 	 */
 	public EReference getConcreteQuantumOperation_FixedQuantumOperation() {
+		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConcreteQuantumOperation_Reverse() {
 		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConcreteQuantumOperation_Reversible() {
+		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -263,6 +289,15 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFixedQuantumOperation_NumberOfClassicBits() {
+		return (EAttribute) fixedQuantumOperationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -299,6 +334,15 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLoopOperation() {
+		return loopOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public QuantumOpeFactory getQuantumOpeFactory() {
 		return (QuantumOpeFactory) getEFactoryInstance();
 	}
@@ -325,16 +369,17 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 		// Create classes and their features
 		quantumOperationLibraryEClass = createEClass(QUANTUM_OPERATION_LIBRARY);
 		createEReference(quantumOperationLibraryEClass, QUANTUM_OPERATION_LIBRARY__OPERATIONS);
+		createEReference(quantumOperationLibraryEClass, QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS);
 
 		concreteQuantumOperationEClass = createEClass(CONCRETE_QUANTUM_OPERATION);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__TYPE);
-		createEReference(concreteQuantumOperationEClass,
-				CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION);
 		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__ABBREVIATION);
 		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH);
 		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__PARAMETER);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION);
+		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__REVERSE);
+		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__REVERSIBLE);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
@@ -342,11 +387,14 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 		fixedQuantumOperationEClass = createEClass(FIXED_QUANTUM_OPERATION);
 		createEAttribute(fixedQuantumOperationEClass, FIXED_QUANTUM_OPERATION__NUMBER_OF_TARGET_QUBITS);
 		createEAttribute(fixedQuantumOperationEClass, FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS);
+		createEAttribute(fixedQuantumOperationEClass, FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS);
 
 		parameterEClass = createEClass(PARAMETER);
 		createEAttribute(parameterEClass, PARAMETER__THETA);
 		createEAttribute(parameterEClass, PARAMETER__PHI);
 		createEAttribute(parameterEClass, PARAMETER__LAMBDA);
+
+		loopOperationEClass = createEClass(LOOP_OPERATION);
 	}
 
 	/**
@@ -380,6 +428,7 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 		// Add supertypes to classes
 		quantumOperationLibraryEClass.getESuperTypes().add(this.getNamedElement());
 		concreteQuantumOperationEClass.getESuperTypes().add(this.getNamedElement());
+		loopOperationEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(quantumOperationLibraryEClass, QuantumOperationLibrary.class, "QuantumOperationLibrary",
@@ -387,14 +436,13 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 		initEReference(getQuantumOperationLibrary_Operations(), this.getConcreteQuantumOperation(), null, "operations",
 				null, 0, -1, QuantumOperationLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuantumOperationLibrary_LoopOperations(), this.getLoopOperation(), null, "loopOperations",
+				null, 0, -1, QuantumOperationLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(concreteQuantumOperationEClass, ConcreteQuantumOperation.class, "ConcreteQuantumOperation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConcreteQuantumOperation_Type(), ecorePackage.getEClass(), null, "type", null, 1, 1,
-				ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConcreteQuantumOperation_ReverseConcreteQuantumOperation(),
-				this.getConcreteQuantumOperation(), null, "reverseConcreteQuantumOperation", null, 0, 1,
 				ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConcreteQuantumOperation_Abbreviation(), ecorePackage.getEString(), "abbreviation", null, 0,
@@ -412,6 +460,12 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 		initEReference(getConcreteQuantumOperation_FixedQuantumOperation(), this.getFixedQuantumOperation(), null,
 				"fixedQuantumOperation", null, 0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConcreteQuantumOperation_Reverse(), this.getConcreteQuantumOperation(), null, "reverse", null,
+				0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConcreteQuantumOperation_Reversible(), ecorePackage.getEBooleanObject(), "reversible", null,
+				0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -426,6 +480,9 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 		initEAttribute(getFixedQuantumOperation_NumberOfControlQubits(), ecorePackage.getEIntegerObject(),
 				"numberOfControlQubits", null, 1, 1, FixedQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFixedQuantumOperation_NumberOfClassicBits(), ecorePackage.getEIntegerObject(),
+				"numberOfClassicBits", null, 1, 1, FixedQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterEClass, Parameter.class, "Parameter", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -436,6 +493,9 @@ public class QuantumOpePackageImpl extends EPackageImpl implements QuantumOpePac
 		initEAttribute(getParameter_Lambda(), ecorePackage.getEBooleanObject(), "lambda", "false", 0, 1,
 				Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(loopOperationEClass, LoopOperation.class, "LoopOperation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

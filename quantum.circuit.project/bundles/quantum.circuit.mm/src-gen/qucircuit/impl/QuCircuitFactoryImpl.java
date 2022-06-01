@@ -96,8 +96,8 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case QuCircuitPackage.LOOP_KIND:
-			return createLOOP_KINDFromString(eDataType, initialValue);
+		case QuCircuitPackage.ITERATION_TYPE:
+			return createITERATION_TYPEFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -111,8 +111,8 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case QuCircuitPackage.LOOP_KIND:
-			return convertLOOP_KINDToString(eDataType, instanceValue);
+		case QuCircuitPackage.ITERATION_TYPE:
+			return convertITERATION_TYPEToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -253,8 +253,8 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LOOP_KIND createLOOP_KINDFromString(EDataType eDataType, String initialValue) {
-		LOOP_KIND result = LOOP_KIND.get(initialValue);
+	public ITERATION_TYPE createITERATION_TYPEFromString(EDataType eDataType, String initialValue) {
+		ITERATION_TYPE result = ITERATION_TYPE.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -266,7 +266,7 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertLOOP_KINDToString(EDataType eDataType, Object instanceValue) {
+	public String convertITERATION_TYPEToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

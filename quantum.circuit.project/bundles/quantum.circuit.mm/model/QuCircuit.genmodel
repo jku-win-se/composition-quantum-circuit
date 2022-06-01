@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/at.jku.se.quantum.circuit.mm/src-gen" creationIcons="false"
-    editDirectory="/at.jku.se.quantum.circuit.mm.edit/src-gen" editorDirectory="/at.jku.se.quantum.circuit.mm.editor/src-gen"
-    modelPluginID="at.jku.se.quantum.circuit.mm" modelName="QuCircuit" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    modelDirectory="/quantum.circuit.mm/src-gen" creationIcons="false"
+    editDirectory="/quantum.circuit.mm.edit/src-gen" editorDirectory="/quantum.circuit.mm.editor/src-gen"
+    modelPluginID="quantum.circuit.mm" modelName="QuCircuit" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    copyrightFields="false" usedGenPackages="../../quantum.operation.library.mm/model/quantumOpe.genmodel#//quope"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>QuCircuit.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="QuCircuit" disposableProviderFactory="true" ecorePackage="QuCircuit.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="QuCircuit.ecore#//ITERATION_TYPE">
+      <genEnumLiterals ecoreEnumLiteral="QuCircuit.ecore#//ITERATION_TYPE/NONE"/>
+      <genEnumLiterals ecoreEnumLiteral="QuCircuit.ecore#//ITERATION_TYPE/SHIFT"/>
+      <genEnumLiterals ecoreEnumLiteral="QuCircuit.ecore#//ITERATION_TYPE/CHANGE_BLOCK"/>
+    </genEnums>
     <genClasses ecoreClass="QuCircuit.ecore#//QuantumCircuit">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//QuantumCircuit/quantumRegisters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//QuantumCircuit/classicRegisters"/>
@@ -65,36 +71,14 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/fixedControlQubits"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/fixedTargetQubits"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/loop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/incrementControlQubits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/incrementTargetQubits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/loopTargetQubits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Loop/loopControlQubits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/targetQubitsBlockSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/controlQubitsBlockSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/controlQubitsIterationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/targetQubitsIterationType"/>
     </genClasses>
-  </genPackages>
-  <genPackages prefix="Quope" ecorePackage="../../quantum.operation.library.mm/model/quantumOpe.ecore#/">
-    <genClasses ecoreClass="../../quantum.operation.library.mm/model/quantumOpe.ecore#//QuantumOperationLibrary">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../quantum.operation.library.mm/model/quantumOpe.ecore#//QuantumOperationLibrary/operations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../quantum.operation.library.mm/model/quantumOpe.ecore#//QuantumOperationLibrary/loopOperations"/>
-    </genClasses>
-    <genClasses ecoreClass="../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/abbreviation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/paletteIconPath"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/styleIconPath"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/parameter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/fixedQuantumOperation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/reverse"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation/reversible"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="../../quantum.operation.library.mm/model/quantumOpe.ecore#//NamedElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//NamedElement/name"/>
-    </genClasses>
-    <genClasses ecoreClass="../../quantum.operation.library.mm/model/quantumOpe.ecore#//FixedQuantumOperation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//FixedQuantumOperation/numberOfTargetQubits"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//FixedQuantumOperation/numberOfControlQubits"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//FixedQuantumOperation/numberOfClassicBits"/>
-    </genClasses>
-    <genClasses ecoreClass="../../quantum.operation.library.mm/model/quantumOpe.ecore#//Parameter">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//Parameter/theta"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//Parameter/phi"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../quantum.operation.library.mm/model/quantumOpe.ecore#//Parameter/lambda"/>
-    </genClasses>
-    <genClasses ecoreClass="../../quantum.operation.library.mm/model/quantumOpe.ecore#//LoopOperation"/>
   </genPackages>
 </genmodel:GenModel>

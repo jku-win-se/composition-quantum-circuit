@@ -24,6 +24,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
+
 /**
  * This is the item provider adapter for a {@link at.jku.se.quantum.operation.library.mm.quope.Parameter} object.
  * <!-- begin-user-doc -->

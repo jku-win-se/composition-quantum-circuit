@@ -45,8 +45,17 @@ public class LoopItemProvider extends AbstractCompositeGateItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIterationsPropertyDescriptor(object);
-			addLoopKindPropertyDescriptor(object);
-			addIncrementPropertyDescriptor(object);
+			addFixedControlQubitsPropertyDescriptor(object);
+			addFixedTargetQubitsPropertyDescriptor(object);
+			addLoopPropertyDescriptor(object);
+			addIncrementControlQubitsPropertyDescriptor(object);
+			addIncrementTargetQubitsPropertyDescriptor(object);
+			addLoopTargetQubitsPropertyDescriptor(object);
+			addLoopControlQubitsPropertyDescriptor(object);
+			addTargetQubitsBlockSizePropertyDescriptor(object);
+			addControlQubitsBlockSizePropertyDescriptor(object);
+			addControlQubitsIterationTypePropertyDescriptor(object);
+			addTargetQubitsIterationTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -67,33 +76,173 @@ public class LoopItemProvider extends AbstractCompositeGateItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Loop Kind feature.
+	 * This adds a property descriptor for the Fixed Control Qubits feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLoopKindPropertyDescriptor(Object object) {
+	protected void addFixedControlQubitsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Loop_loopKind_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Loop_loopKind_feature", "_UI_Loop_type"),
-						QuCircuitPackage.Literals.LOOP__LOOP_KIND, true, false, false,
+						getResourceLocator(), getString("_UI_Loop_fixedControlQubits_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_fixedControlQubits_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__FIXED_CONTROL_QUBITS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Fixed Target Qubits feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFixedTargetQubitsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_fixedTargetQubits_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_fixedTargetQubits_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__FIXED_TARGET_QUBITS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Loop feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoopPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_loop_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_loop_feature", "_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__LOOP, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Increment Control Qubits feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncrementControlQubitsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_incrementControlQubits_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_incrementControlQubits_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__INCREMENT_CONTROL_QUBITS, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Increment feature.
+	 * This adds a property descriptor for the Increment Target Qubits feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIncrementPropertyDescriptor(Object object) {
+	protected void addIncrementTargetQubitsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Loop_increment_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Loop_increment_feature", "_UI_Loop_type"),
-						QuCircuitPackage.Literals.LOOP__INCREMENT, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_Loop_incrementTargetQubits_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_incrementTargetQubits_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__INCREMENT_TARGET_QUBITS, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Loop Target Qubits feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoopTargetQubitsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_loopTargetQubits_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_loopTargetQubits_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__LOOP_TARGET_QUBITS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Loop Control Qubits feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLoopControlQubitsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_loopControlQubits_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_loopControlQubits_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__LOOP_CONTROL_QUBITS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target Qubits Block Size feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetQubitsBlockSizePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_targetQubitsBlockSize_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_targetQubitsBlockSize_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__TARGET_QUBITS_BLOCK_SIZE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Control Qubits Block Size feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addControlQubitsBlockSizePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_controlQubitsBlockSize_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_controlQubitsBlockSize_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__CONTROL_QUBITS_BLOCK_SIZE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Control Qubits Iteration Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addControlQubitsIterationTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_controlQubitsIterationType_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_controlQubitsIterationType_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__CONTROL_QUBITS_ITERATION_TYPE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target Qubits Iteration Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetQubitsIterationTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Loop_targetQubitsIterationType_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Loop_targetQubitsIterationType_feature",
+								"_UI_Loop_type"),
+						QuCircuitPackage.Literals.LOOP__TARGET_QUBITS_ITERATION_TYPE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -143,8 +292,12 @@ public class LoopItemProvider extends AbstractCompositeGateItemProvider {
 
 		switch (notification.getFeatureID(Loop.class)) {
 		case QuCircuitPackage.LOOP__ITERATIONS:
-		case QuCircuitPackage.LOOP__LOOP_KIND:
-		case QuCircuitPackage.LOOP__INCREMENT:
+		case QuCircuitPackage.LOOP__INCREMENT_CONTROL_QUBITS:
+		case QuCircuitPackage.LOOP__INCREMENT_TARGET_QUBITS:
+		case QuCircuitPackage.LOOP__TARGET_QUBITS_BLOCK_SIZE:
+		case QuCircuitPackage.LOOP__CONTROL_QUBITS_BLOCK_SIZE:
+		case QuCircuitPackage.LOOP__CONTROL_QUBITS_ITERATION_TYPE:
+		case QuCircuitPackage.LOOP__TARGET_QUBITS_ITERATION_TYPE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

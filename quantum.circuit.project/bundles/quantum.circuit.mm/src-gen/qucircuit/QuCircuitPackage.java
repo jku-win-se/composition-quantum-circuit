@@ -39,7 +39,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.se.jku.at/QuCircuit";
+	String eNS_URI = "http://www.eclipse.org/QuCircuit";
 
 	/**
 	 * The package namespace name.
@@ -573,13 +573,22 @@ public interface QuCircuitPackage extends EPackage {
 	int ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS = QUANTUM_OPERATION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Inverse Form</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_QUANTUM_GATE__INVERSE_FORM = QUANTUM_OPERATION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Quantum Gate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_QUANTUM_GATE_FEATURE_COUNT = QUANTUM_OPERATION_FEATURE_COUNT + 1;
+	int ABSTRACT_QUANTUM_GATE_FEATURE_COUNT = QUANTUM_OPERATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract Quantum Gate</em>' class.
@@ -783,6 +792,15 @@ public interface QuCircuitPackage extends EPackage {
 	int ELEMENTARY_QUANTUM_GATE__CONTROL_QUBITS = ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS;
 
 	/**
+	 * The feature id for the '<em><b>Inverse Form</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTARY_QUANTUM_GATE__INVERSE_FORM = ABSTRACT_QUANTUM_GATE__INVERSE_FORM;
+
+	/**
 	 * The feature id for the '<em><b>Angle Parameter</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -865,6 +883,15 @@ public interface QuCircuitPackage extends EPackage {
 	int ABSTRACT_COMPOSITE_GATE__CONTROL_QUBITS = ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS;
 
 	/**
+	 * The feature id for the '<em><b>Inverse Form</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_COMPOSITE_GATE__INVERSE_FORM = ABSTRACT_QUANTUM_GATE__INVERSE_FORM;
+
+	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -945,6 +972,15 @@ public interface QuCircuitPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_QUANTUM_GATE__CONTROL_QUBITS = ABSTRACT_COMPOSITE_GATE__CONTROL_QUBITS;
+
+	/**
+	 * The feature id for the '<em><b>Inverse Form</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__INVERSE_FORM = ABSTRACT_COMPOSITE_GATE__INVERSE_FORM;
 
 	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
@@ -1084,6 +1120,15 @@ public interface QuCircuitPackage extends EPackage {
 	int LOOP__CONTROL_QUBITS = ABSTRACT_COMPOSITE_GATE__CONTROL_QUBITS;
 
 	/**
+	 * The feature id for the '<em><b>Inverse Form</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__INVERSE_FORM = ABSTRACT_COMPOSITE_GATE__INVERSE_FORM;
+
+	/**
 	 * The feature id for the '<em><b>Layers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1102,22 +1147,103 @@ public interface QuCircuitPackage extends EPackage {
 	int LOOP__ITERATIONS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Loop Kind</b></em>' attribute.
+	 * The feature id for the '<em><b>Fixed Control Qubits</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP__LOOP_KIND = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 1;
+	int LOOP__FIXED_CONTROL_QUBITS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Increment</b></em>' attribute.
+	 * The feature id for the '<em><b>Fixed Target Qubits</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP__INCREMENT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 2;
+	int LOOP__FIXED_TARGET_QUBITS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Loop</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__LOOP = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Increment Control Qubits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__INCREMENT_CONTROL_QUBITS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Increment Target Qubits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__INCREMENT_TARGET_QUBITS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Loop Target Qubits</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__LOOP_TARGET_QUBITS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Loop Control Qubits</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__LOOP_CONTROL_QUBITS = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Target Qubits Block Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__TARGET_QUBITS_BLOCK_SIZE = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Control Qubits Block Size</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__CONTROL_QUBITS_BLOCK_SIZE = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Control Qubits Iteration Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__CONTROL_QUBITS_ITERATION_TYPE = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Target Qubits Iteration Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__TARGET_QUBITS_ITERATION_TYPE = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of structural features of the '<em>Loop</em>' class.
@@ -1126,7 +1252,7 @@ public interface QuCircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 3;
+	int LOOP_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Loop</em>' class.
@@ -1138,14 +1264,14 @@ public interface QuCircuitPackage extends EPackage {
 	int LOOP_OPERATION_COUNT = ABSTRACT_COMPOSITE_GATE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link qucircuit.LOOP_KIND <em>LOOP KIND</em>}' enum.
+	 * The meta object id for the '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see qucircuit.LOOP_KIND
-	 * @see qucircuit.impl.QuCircuitPackageImpl#getLOOP_KIND()
+	 * @see qucircuit.ITERATION_TYPE
+	 * @see qucircuit.impl.QuCircuitPackageImpl#getITERATION_TYPE()
 	 * @generated
 	 */
-	int LOOP_KIND = 18;
+	int ITERATION_TYPE = 18;
 
 	/**
 	 * Returns the meta object for class '{@link qucircuit.QuantumCircuit <em>Quantum Circuit</em>}'.
@@ -1391,6 +1517,17 @@ public interface QuCircuitPackage extends EPackage {
 	EReference getAbstractQuantumGate_ControlQubits();
 
 	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.AbstractQuantumGate#getInverseForm <em>Inverse Form</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Inverse Form</em>'.
+	 * @see qucircuit.AbstractQuantumGate#getInverseForm()
+	 * @see #getAbstractQuantumGate()
+	 * @generated
+	 */
+	EAttribute getAbstractQuantumGate_InverseForm();
+
+	/**
 	 * Returns the meta object for class '{@link qucircuit.StatePreparation <em>State Preparation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1559,36 +1696,135 @@ public interface QuCircuitPackage extends EPackage {
 	EAttribute getLoop_Iterations();
 
 	/**
-	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getLoopKind <em>Loop Kind</em>}'.
+	 * Returns the meta object for the reference list '{@link qucircuit.Loop#getFixedControlQubits <em>Fixed Control Qubits</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Loop Kind</em>'.
-	 * @see qucircuit.Loop#getLoopKind()
+	 * @return the meta object for the reference list '<em>Fixed Control Qubits</em>'.
+	 * @see qucircuit.Loop#getFixedControlQubits()
 	 * @see #getLoop()
 	 * @generated
 	 */
-	EAttribute getLoop_LoopKind();
+	EReference getLoop_FixedControlQubits();
 
 	/**
-	 * Returns the meta object for the attribute '{@link qucircuit.Loop#isIncrement <em>Increment</em>}'.
+	 * Returns the meta object for the reference list '{@link qucircuit.Loop#getFixedTargetQubits <em>Fixed Target Qubits</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Increment</em>'.
-	 * @see qucircuit.Loop#isIncrement()
+	 * @return the meta object for the reference list '<em>Fixed Target Qubits</em>'.
+	 * @see qucircuit.Loop#getFixedTargetQubits()
 	 * @see #getLoop()
 	 * @generated
 	 */
-	EAttribute getLoop_Increment();
+	EReference getLoop_FixedTargetQubits();
 
 	/**
-	 * Returns the meta object for enum '{@link qucircuit.LOOP_KIND <em>LOOP KIND</em>}'.
+	 * Returns the meta object for the reference '{@link qucircuit.Loop#getLoop <em>Loop</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>LOOP KIND</em>'.
-	 * @see qucircuit.LOOP_KIND
+	 * @return the meta object for the reference '<em>Loop</em>'.
+	 * @see qucircuit.Loop#getLoop()
+	 * @see #getLoop()
 	 * @generated
 	 */
-	EEnum getLOOP_KIND();
+	EReference getLoop_Loop();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getIncrementControlQubits <em>Increment Control Qubits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Increment Control Qubits</em>'.
+	 * @see qucircuit.Loop#getIncrementControlQubits()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_IncrementControlQubits();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getIncrementTargetQubits <em>Increment Target Qubits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Increment Target Qubits</em>'.
+	 * @see qucircuit.Loop#getIncrementTargetQubits()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_IncrementTargetQubits();
+
+	/**
+	 * Returns the meta object for the reference list '{@link qucircuit.Loop#getLoopTargetQubits <em>Loop Target Qubits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Loop Target Qubits</em>'.
+	 * @see qucircuit.Loop#getLoopTargetQubits()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EReference getLoop_LoopTargetQubits();
+
+	/**
+	 * Returns the meta object for the reference list '{@link qucircuit.Loop#getLoopControlQubits <em>Loop Control Qubits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Loop Control Qubits</em>'.
+	 * @see qucircuit.Loop#getLoopControlQubits()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EReference getLoop_LoopControlQubits();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getTargetQubitsBlockSize <em>Target Qubits Block Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Qubits Block Size</em>'.
+	 * @see qucircuit.Loop#getTargetQubitsBlockSize()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_TargetQubitsBlockSize();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getControlQubitsBlockSize <em>Control Qubits Block Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Control Qubits Block Size</em>'.
+	 * @see qucircuit.Loop#getControlQubitsBlockSize()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_ControlQubitsBlockSize();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getControlQubitsIterationType <em>Control Qubits Iteration Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Control Qubits Iteration Type</em>'.
+	 * @see qucircuit.Loop#getControlQubitsIterationType()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_ControlQubitsIterationType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qucircuit.Loop#getTargetQubitsIterationType <em>Target Qubits Iteration Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Target Qubits Iteration Type</em>'.
+	 * @see qucircuit.Loop#getTargetQubitsIterationType()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EAttribute getLoop_TargetQubitsIterationType();
+
+	/**
+	 * Returns the meta object for enum '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ITERATION TYPE</em>'.
+	 * @see qucircuit.ITERATION_TYPE
+	 * @generated
+	 */
+	EEnum getITERATION_TYPE();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1818,6 +2054,14 @@ public interface QuCircuitPackage extends EPackage {
 		EReference ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS = eINSTANCE.getAbstractQuantumGate_ControlQubits();
 
 		/**
+		 * The meta object literal for the '<em><b>Inverse Form</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_QUANTUM_GATE__INVERSE_FORM = eINSTANCE.getAbstractQuantumGate_InverseForm();
+
+		/**
 		 * The meta object literal for the '{@link qucircuit.impl.StatePreparationImpl <em>State Preparation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1962,30 +2206,102 @@ public interface QuCircuitPackage extends EPackage {
 		EAttribute LOOP__ITERATIONS = eINSTANCE.getLoop_Iterations();
 
 		/**
-		 * The meta object literal for the '<em><b>Loop Kind</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Fixed Control Qubits</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOOP__LOOP_KIND = eINSTANCE.getLoop_LoopKind();
+		EReference LOOP__FIXED_CONTROL_QUBITS = eINSTANCE.getLoop_FixedControlQubits();
 
 		/**
-		 * The meta object literal for the '<em><b>Increment</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Fixed Target Qubits</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOOP__INCREMENT = eINSTANCE.getLoop_Increment();
+		EReference LOOP__FIXED_TARGET_QUBITS = eINSTANCE.getLoop_FixedTargetQubits();
 
 		/**
-		 * The meta object literal for the '{@link qucircuit.LOOP_KIND <em>LOOP KIND</em>}' enum.
+		 * The meta object literal for the '<em><b>Loop</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see qucircuit.LOOP_KIND
-		 * @see qucircuit.impl.QuCircuitPackageImpl#getLOOP_KIND()
 		 * @generated
 		 */
-		EEnum LOOP_KIND = eINSTANCE.getLOOP_KIND();
+		EReference LOOP__LOOP = eINSTANCE.getLoop_Loop();
+
+		/**
+		 * The meta object literal for the '<em><b>Increment Control Qubits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__INCREMENT_CONTROL_QUBITS = eINSTANCE.getLoop_IncrementControlQubits();
+
+		/**
+		 * The meta object literal for the '<em><b>Increment Target Qubits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__INCREMENT_TARGET_QUBITS = eINSTANCE.getLoop_IncrementTargetQubits();
+
+		/**
+		 * The meta object literal for the '<em><b>Loop Target Qubits</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOOP__LOOP_TARGET_QUBITS = eINSTANCE.getLoop_LoopTargetQubits();
+
+		/**
+		 * The meta object literal for the '<em><b>Loop Control Qubits</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOOP__LOOP_CONTROL_QUBITS = eINSTANCE.getLoop_LoopControlQubits();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Qubits Block Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__TARGET_QUBITS_BLOCK_SIZE = eINSTANCE.getLoop_TargetQubitsBlockSize();
+
+		/**
+		 * The meta object literal for the '<em><b>Control Qubits Block Size</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__CONTROL_QUBITS_BLOCK_SIZE = eINSTANCE.getLoop_ControlQubitsBlockSize();
+
+		/**
+		 * The meta object literal for the '<em><b>Control Qubits Iteration Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__CONTROL_QUBITS_ITERATION_TYPE = eINSTANCE.getLoop_ControlQubitsIterationType();
+
+		/**
+		 * The meta object literal for the '<em><b>Target Qubits Iteration Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOOP__TARGET_QUBITS_ITERATION_TYPE = eINSTANCE.getLoop_TargetQubitsIterationType();
+
+		/**
+		 * The meta object literal for the '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see qucircuit.ITERATION_TYPE
+		 * @see qucircuit.impl.QuCircuitPackageImpl#getITERATION_TYPE()
+		 * @generated
+		 */
+		EEnum ITERATION_TYPE = eINSTANCE.getITERATION_TYPE();
 
 	}
 

@@ -70,7 +70,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import at.jku.se.quantum.operation.library.mm.quope.QuantumOpeFactory;
 import at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage;
-import at.jku.se.quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
+import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
 
 import org.eclipse.core.runtime.Path;
 
@@ -81,6 +81,8 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
+
+import quantum.operation.library.mm.quope.presentation.QuantumOpeEditorPlugin;
 
 /**
  * This is a simple wizard for creating a new model file.

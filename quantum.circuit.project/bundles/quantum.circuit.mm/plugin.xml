@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated QuCircuit -->
       <package
-            uri="http://www.se.jku.at/QuCircuit"
+            uri="http://www.eclipse.org/QuCircuit"
             class="qucircuit.QuCircuitPackage"
             genModel="model/QuCircuit.genmodel"/>
    </extension>

@@ -165,6 +165,29 @@ public class QuantumOpeItemProviderAdapterFactory extends QuantumOpeAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link at.jku.se.quantum.operation.library.mm.quope.LoopOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LoopOperationItemProvider loopOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link at.jku.se.quantum.operation.library.mm.quope.LoopOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLoopOperationAdapter() {
+		if (loopOperationItemProvider == null) {
+			loopOperationItemProvider = new LoopOperationItemProvider(this);
+		}
+
+		return loopOperationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -271,6 +294,8 @@ public class QuantumOpeItemProviderAdapterFactory extends QuantumOpeAdapterFacto
 			fixedQuantumOperationItemProvider.dispose();
 		if (parameterItemProvider != null)
 			parameterItemProvider.dispose();
+		if (loopOperationItemProvider != null)
+			loopOperationItemProvider.dispose();
 	}
 
 }

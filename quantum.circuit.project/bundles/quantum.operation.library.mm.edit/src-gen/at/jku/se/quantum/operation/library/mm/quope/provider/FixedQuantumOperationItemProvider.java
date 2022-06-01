@@ -24,6 +24,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
+
 /**
  * This is the item provider adapter for a {@link at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation} object.
  * <!-- begin-user-doc -->
@@ -55,6 +57,7 @@ public class FixedQuantumOperationItemProvider extends ItemProviderAdapter imple
 
 			addNumberOfTargetQubitsPropertyDescriptor(object);
 			addNumberOfControlQubitsPropertyDescriptor(object);
+			addNumberOfClassicBitsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -88,6 +91,22 @@ public class FixedQuantumOperationItemProvider extends ItemProviderAdapter imple
 				getString("_UI_PropertyDescriptor_description",
 						"_UI_FixedQuantumOperation_numberOfControlQubits_feature", "_UI_FixedQuantumOperation_type"),
 				QuantumOpePackage.Literals.FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Number Of Classic Bits feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNumberOfClassicBitsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_FixedQuantumOperation_numberOfClassicBits_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_FixedQuantumOperation_numberOfClassicBits_feature",
+						"_UI_FixedQuantumOperation_type"),
+				QuantumOpePackage.Literals.FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -140,6 +159,7 @@ public class FixedQuantumOperationItemProvider extends ItemProviderAdapter imple
 		switch (notification.getFeatureID(FixedQuantumOperation.class)) {
 		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_TARGET_QUBITS:
 		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS:
+		case QuantumOpePackage.FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

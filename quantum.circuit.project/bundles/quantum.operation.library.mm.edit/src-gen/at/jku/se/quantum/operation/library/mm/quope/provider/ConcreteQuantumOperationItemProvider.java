@@ -48,10 +48,11 @@ public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvid
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
-			addReverseConcreteQuantumOperationPropertyDescriptor(object);
 			addAbbreviationPropertyDescriptor(object);
 			addPaletteIconPathPropertyDescriptor(object);
 			addStyleIconPathPropertyDescriptor(object);
+			addReversePropertyDescriptor(object);
+			addReversiblePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,23 +70,6 @@ public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvid
 				getString("_UI_PropertyDescriptor_description", "_UI_ConcreteQuantumOperation_type_feature",
 						"_UI_ConcreteQuantumOperation_type"),
 				QuantumOpePackage.Literals.CONCRETE_QUANTUM_OPERATION__TYPE, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Reverse Concrete Quantum Operation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addReverseConcreteQuantumOperationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ConcreteQuantumOperation_reverseConcreteQuantumOperation_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_ConcreteQuantumOperation_reverseConcreteQuantumOperation_feature",
-						"_UI_ConcreteQuantumOperation_type"),
-				QuantumOpePackage.Literals.CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION, true, false,
-				true, null, null, null));
 	}
 
 	/**
@@ -134,6 +118,37 @@ public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvid
 						"_UI_ConcreteQuantumOperation_type"),
 				QuantumOpePackage.Literals.CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reverse feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReversePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ConcreteQuantumOperation_reverse_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ConcreteQuantumOperation_reverse_feature",
+						"_UI_ConcreteQuantumOperation_type"),
+				QuantumOpePackage.Literals.CONCRETE_QUANTUM_OPERATION__REVERSE, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reversible feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReversiblePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ConcreteQuantumOperation_reversible_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_ConcreteQuantumOperation_reversible_feature", "_UI_ConcreteQuantumOperation_type"),
+						QuantumOpePackage.Literals.CONCRETE_QUANTUM_OPERATION__REVERSIBLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -216,6 +231,7 @@ public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvid
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__ABBREVIATION:
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH:
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH:
+		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__REVERSIBLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case QuantumOpePackage.CONCRETE_QUANTUM_OPERATION__PARAMETER:

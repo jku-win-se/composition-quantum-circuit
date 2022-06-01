@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation#getNumberOfTargetQubits <em>Number Of Target Qubits</em>}</li>
  *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation#getNumberOfControlQubits <em>Number Of Control Qubits</em>}</li>
+ *   <li>{@link at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation#getNumberOfClassicBits <em>Number Of Classic Bits</em>}</li>
  * </ul>
  *
  * @see at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage#getFixedQuantumOperation()
@@ -65,5 +66,27 @@ public interface FixedQuantumOperation extends EObject {
 	 * @generated
 	 */
 	void setNumberOfControlQubits(Integer value);
+
+	/**
+	 * Returns the value of the '<em><b>Number Of Classic Bits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Number Of Classic Bits</em>' attribute.
+	 * @see #setNumberOfClassicBits(Integer)
+	 * @see at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage#getFixedQuantumOperation_NumberOfClassicBits()
+	 * @model required="true"
+	 * @generated
+	 */
+	Integer getNumberOfClassicBits();
+
+	/**
+	 * Sets the value of the '{@link at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation#getNumberOfClassicBits <em>Number Of Classic Bits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Classic Bits</em>' attribute.
+	 * @see #getNumberOfClassicBits()
+	 * @generated
+	 */
+	void setNumberOfClassicBits(Integer value);
 
 } // FixedQuantumOperation

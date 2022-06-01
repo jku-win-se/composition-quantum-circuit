@@ -2,11 +2,11 @@
  */
 package qucircuit.provider;
 
-import at.jku.se.quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
 
 /**
  * This is the central singleton for the QuCircuit edit plugin.

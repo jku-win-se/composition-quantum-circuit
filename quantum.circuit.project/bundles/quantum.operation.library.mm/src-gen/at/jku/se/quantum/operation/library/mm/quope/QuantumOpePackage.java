@@ -122,13 +122,22 @@ public interface QuantumOpePackage extends EPackage {
 	int QUANTUM_OPERATION_LIBRARY__OPERATIONS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Loop Operations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Quantum Operation Library</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTUM_OPERATION_LIBRARY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int QUANTUM_OPERATION_LIBRARY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Quantum Operation Library</em>' class.
@@ -168,22 +177,13 @@ public interface QuantumOpePackage extends EPackage {
 	int CONCRETE_QUANTUM_OPERATION__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Reverse Concrete Quantum Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Abbreviation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION__ABBREVIATION = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int CONCRETE_QUANTUM_OPERATION__ABBREVIATION = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Palette Icon Path</b></em>' attribute.
@@ -192,7 +192,7 @@ public interface QuantumOpePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Style Icon Path</b></em>' attribute.
@@ -201,7 +201,7 @@ public interface QuantumOpePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' containment reference.
@@ -210,7 +210,7 @@ public interface QuantumOpePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION__PARAMETER = NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int CONCRETE_QUANTUM_OPERATION__PARAMETER = NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Fixed Quantum Operation</b></em>' containment reference.
@@ -219,7 +219,25 @@ public interface QuantumOpePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION = NAMED_ELEMENT_FEATURE_COUNT + 6;
+	int CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION = NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Reverse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_QUANTUM_OPERATION__REVERSE = NAMED_ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Reversible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_QUANTUM_OPERATION__REVERSIBLE = NAMED_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Concrete Quantum Operation</em>' class.
@@ -228,7 +246,7 @@ public interface QuantumOpePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 7;
+	int CONCRETE_QUANTUM_OPERATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Concrete Quantum Operation</em>' class.
@@ -268,13 +286,22 @@ public interface QuantumOpePackage extends EPackage {
 	int FIXED_QUANTUM_OPERATION__NUMBER_OF_CONTROL_QUBITS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Number Of Classic Bits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS = 2;
+
+	/**
 	 * The number of structural features of the '<em>Fixed Quantum Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIXED_QUANTUM_OPERATION_FEATURE_COUNT = 2;
+	int FIXED_QUANTUM_OPERATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Fixed Quantum Operation</em>' class.
@@ -341,6 +368,43 @@ public interface QuantumOpePackage extends EPackage {
 	int PARAMETER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link at.jku.se.quantum.operation.library.mm.quope.impl.LoopOperationImpl <em>Loop Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.jku.se.quantum.operation.library.mm.quope.impl.LoopOperationImpl
+	 * @see at.jku.se.quantum.operation.library.mm.quope.impl.QuantumOpePackageImpl#getLoopOperation()
+	 * @generated
+	 */
+	int LOOP_OPERATION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_OPERATION__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Loop Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_OPERATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Loop Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP_OPERATION_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary <em>Quantum Operation Library</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,6 +426,17 @@ public interface QuantumOpePackage extends EPackage {
 	EReference getQuantumOperationLibrary_Operations();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary#getLoopOperations <em>Loop Operations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Loop Operations</em>'.
+	 * @see at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary#getLoopOperations()
+	 * @see #getQuantumOperationLibrary()
+	 * @generated
+	 */
+	EReference getQuantumOperationLibrary_LoopOperations();
+
+	/**
 	 * Returns the meta object for class '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation <em>Concrete Quantum Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -381,17 +456,6 @@ public interface QuantumOpePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConcreteQuantumOperation_Type();
-
-	/**
-	 * Returns the meta object for the reference '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverseConcreteQuantumOperation <em>Reverse Concrete Quantum Operation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Reverse Concrete Quantum Operation</em>'.
-	 * @see at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverseConcreteQuantumOperation()
-	 * @see #getConcreteQuantumOperation()
-	 * @generated
-	 */
-	EReference getConcreteQuantumOperation_ReverseConcreteQuantumOperation();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getAbbreviation <em>Abbreviation</em>}'.
@@ -449,6 +513,28 @@ public interface QuantumOpePackage extends EPackage {
 	EReference getConcreteQuantumOperation_FixedQuantumOperation();
 
 	/**
+	 * Returns the meta object for the reference '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverse <em>Reverse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reverse</em>'.
+	 * @see at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReverse()
+	 * @see #getConcreteQuantumOperation()
+	 * @generated
+	 */
+	EReference getConcreteQuantumOperation_Reverse();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReversible <em>Reversible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reversible</em>'.
+	 * @see at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation#getReversible()
+	 * @see #getConcreteQuantumOperation()
+	 * @generated
+	 */
+	EAttribute getConcreteQuantumOperation_Reversible();
+
+	/**
 	 * Returns the meta object for class '{@link at.jku.se.quantum.operation.library.mm.quope.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -502,6 +588,17 @@ public interface QuantumOpePackage extends EPackage {
 	EAttribute getFixedQuantumOperation_NumberOfControlQubits();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation#getNumberOfClassicBits <em>Number Of Classic Bits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Of Classic Bits</em>'.
+	 * @see at.jku.se.quantum.operation.library.mm.quope.FixedQuantumOperation#getNumberOfClassicBits()
+	 * @see #getFixedQuantumOperation()
+	 * @generated
+	 */
+	EAttribute getFixedQuantumOperation_NumberOfClassicBits();
+
+	/**
 	 * Returns the meta object for class '{@link at.jku.se.quantum.operation.library.mm.quope.Parameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -545,6 +642,16 @@ public interface QuantumOpePackage extends EPackage {
 	EAttribute getParameter_Lambda();
 
 	/**
+	 * Returns the meta object for class '{@link at.jku.se.quantum.operation.library.mm.quope.LoopOperation <em>Loop Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Loop Operation</em>'.
+	 * @see at.jku.se.quantum.operation.library.mm.quope.LoopOperation
+	 * @generated
+	 */
+	EClass getLoopOperation();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -586,6 +693,14 @@ public interface QuantumOpePackage extends EPackage {
 		EReference QUANTUM_OPERATION_LIBRARY__OPERATIONS = eINSTANCE.getQuantumOperationLibrary_Operations();
 
 		/**
+		 * The meta object literal for the '<em><b>Loop Operations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS = eINSTANCE.getQuantumOperationLibrary_LoopOperations();
+
+		/**
 		 * The meta object literal for the '{@link at.jku.se.quantum.operation.library.mm.quope.impl.ConcreteQuantumOperationImpl <em>Concrete Quantum Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -602,15 +717,6 @@ public interface QuantumOpePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONCRETE_QUANTUM_OPERATION__TYPE = eINSTANCE.getConcreteQuantumOperation_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Reverse Concrete Quantum Operation</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONCRETE_QUANTUM_OPERATION__REVERSE_CONCRETE_QUANTUM_OPERATION = eINSTANCE
-				.getConcreteQuantumOperation_ReverseConcreteQuantumOperation();
 
 		/**
 		 * The meta object literal for the '<em><b>Abbreviation</b></em>' attribute feature.
@@ -653,6 +759,22 @@ public interface QuantumOpePackage extends EPackage {
 		 */
 		EReference CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION = eINSTANCE
 				.getConcreteQuantumOperation_FixedQuantumOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Reverse</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONCRETE_QUANTUM_OPERATION__REVERSE = eINSTANCE.getConcreteQuantumOperation_Reverse();
+
+		/**
+		 * The meta object literal for the '<em><b>Reversible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONCRETE_QUANTUM_OPERATION__REVERSIBLE = eINSTANCE.getConcreteQuantumOperation_Reversible();
 
 		/**
 		 * The meta object literal for the '{@link at.jku.se.quantum.operation.library.mm.quope.impl.NamedElementImpl <em>Named Element</em>}' class.
@@ -701,6 +823,15 @@ public interface QuantumOpePackage extends EPackage {
 				.getFixedQuantumOperation_NumberOfControlQubits();
 
 		/**
+		 * The meta object literal for the '<em><b>Number Of Classic Bits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FIXED_QUANTUM_OPERATION__NUMBER_OF_CLASSIC_BITS = eINSTANCE
+				.getFixedQuantumOperation_NumberOfClassicBits();
+
+		/**
 		 * The meta object literal for the '{@link at.jku.se.quantum.operation.library.mm.quope.impl.ParameterImpl <em>Parameter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -733,6 +864,16 @@ public interface QuantumOpePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PARAMETER__LAMBDA = eINSTANCE.getParameter_Lambda();
+
+		/**
+		 * The meta object literal for the '{@link at.jku.se.quantum.operation.library.mm.quope.impl.LoopOperationImpl <em>Loop Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.jku.se.quantum.operation.library.mm.quope.impl.LoopOperationImpl
+		 * @see at.jku.se.quantum.operation.library.mm.quope.impl.QuantumOpePackageImpl#getLoopOperation()
+		 * @generated
+		 */
+		EClass LOOP_OPERATION = eINSTANCE.getLoopOperation();
 
 	}
 

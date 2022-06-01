@@ -2,13 +2,13 @@
  */
 package qucircuit.presentation;
 
-import at.jku.se.quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
+import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
 
 /**
  * This is the central singleton for the QuCircuit editor plugin.

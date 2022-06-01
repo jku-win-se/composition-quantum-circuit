@@ -605,8 +605,8 @@ public class QuCircuitEditor extends MultiPageEditorPart
 	 */
 	protected void updateProblemIndication() {
 		if (updateProblemIndication) {
-			BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "at.jku.se.quantum.circuit.mm.editor", 0,
-					null, new Object[] { editingDomain.getResourceSet() });
+			BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "quantum.circuit.mm.editor", 0, null,
+					new Object[] { editingDomain.getResourceSet() });
 			for (Diagnostic childDiagnostic : resourceToDiagnosticMap.values()) {
 				if (childDiagnostic.getSeverity() != Diagnostic.OK) {
 					diagnostic.add(childDiagnostic);
@@ -952,13 +952,12 @@ public class QuCircuitEditor extends MultiPageEditorPart
 		boolean hasErrors = !resource.getErrors().isEmpty();
 		if (hasErrors || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic = new BasicDiagnostic(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
-					"at.jku.se.quantum.circuit.mm.editor", 0,
-					getString("_UI_CreateModelError_message", resource.getURI()),
+					"quantum.circuit.mm.editor", 0, getString("_UI_CreateModelError_message", resource.getURI()),
 					new Object[] { exception == null ? (Object) resource : exception });
 			basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
 			return basicDiagnostic;
 		} else if (exception != null) {
-			return new BasicDiagnostic(Diagnostic.ERROR, "at.jku.se.quantum.circuit.mm.editor", 0,
+			return new BasicDiagnostic(Diagnostic.ERROR, "quantum.circuit.mm.editor", 0,
 					getString("_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
 		} else {
 			return Diagnostic.OK_INSTANCE;
