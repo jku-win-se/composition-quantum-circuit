@@ -22,4 +22,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: qubo.lang.ui.contentassist,
  qubo.lang.ui.quickfix,
  qubo.lang.ui.internal
-Bundle-Activator: at.jku.se.qubo.lang.ui.internal.LangActivator
+Bundle-Activator: qubo.lang.ui.internal.LangActivator

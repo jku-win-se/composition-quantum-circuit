@@ -2,8 +2,6 @@
  */
 package qucircuit.impl;
 
-import at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -32,6 +30,8 @@ import qucircuit.QuantumOperation;
 import qucircuit.QuantumRegister;
 import qucircuit.Qubit;
 import qucircuit.StatePreparation;
+
+import quope.QuopePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -224,7 +224,7 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		isInited = true;
 
 		// Initialize simple dependencies
-		QuantumOpePackage.eINSTANCE.eClass();
+		QuopePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theQuCircuitPackage.createPackageContents();
@@ -835,8 +835,7 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		QuantumOpePackage theQuantumOpePackage = (QuantumOpePackage) EPackage.Registry.INSTANCE
-				.getEPackage(QuantumOpePackage.eNS_URI);
+		QuopePackage theQuopePackage = (QuopePackage) EPackage.Registry.INSTANCE.getEPackage(QuopePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -912,7 +911,7 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		initEReference(getQuantumOperation_ClassicControl(), this.getClassicControl(), null, "classicControl", null, 0,
 				1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantumOperation_Operation(), theQuantumOpePackage.getConcreteQuantumOperation(), null,
+		initEReference(getQuantumOperation_Operation(), theQuopePackage.getConcreteQuantumOperation(), null,
 				"operation", null, 0, 1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuantumOperation_TargetQubits(), this.getQubit(), null, "targetQubits", null, 1, -1,
@@ -977,7 +976,7 @@ public class QuCircuitPackageImpl extends EPackageImpl implements QuCircuitPacka
 		initEReference(getLoop_FixedTargetQubits(), this.getQubit(), null, "fixedTargetQubits", null, 0, -1, Loop.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoop_Loop(), theQuantumOpePackage.getLoopOperation(), null, "loop", null, 0, 1, Loop.class,
+		initEReference(getLoop_Loop(), theQuopePackage.getLoopOperation(), null, "loop", null, 0, 1, Loop.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoop_IncrementControlQubits(), ecorePackage.getEBooleanObject(), "incrementControlQubits",

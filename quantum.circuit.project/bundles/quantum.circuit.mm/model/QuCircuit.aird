@@ -5,8 +5,8 @@
     <semanticResources>QuCircuit.ecore</semanticResources>
     <semanticResources>QuCircuit.genmodel</semanticResources>
     <semanticResources>platform:/resource/at.jku.se.quantum.operation.library.mm/model/quantumOpe.genmodel</semanticResources>
-    <semanticResources>platform:/resource/quantum.operation.library.mm/model/quantumOpe.ecore</semanticResources>
-    <semanticResources>platform:/resource/quantum.operation.library.mm/model/quantumOpe.genmodel</semanticResources>
+    <semanticResources>platform:/resource/quantum.operation.library.mm/model/QuantumOpe.ecore</semanticResources>
+    <semanticResources>platform:/resource/quantum.operation.library.mm/model/QuantumOpe.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_kXen0HU0EeyMIZBkdn5Jfg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_lXTtIHU0EeyMIZBkdn5Jfg" name="qcircuit class diagram" repPath="#_lW-9AHU0EeyMIZBkdn5Jfg" changeId="1a413ba8-4c06-4ca8-8788-0b6e7b626ee6">

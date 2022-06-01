@@ -7,30 +7,30 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated quantumOpe -->
+      <!-- @generated QuantumOpe -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeModelWizardID"
-            name="%_UI_QuantumOpeModelWizard_label"
-            class="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeModelWizard"
+            id="quope.presentation.QuopeModelWizardID"
+            name="%_UI_QuopeModelWizard_label"
+            class="quope.presentation.QuopeModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/QuantumOpeModelFile.gif">
-         <description>%_UI_QuantumOpeModelWizard_description</description>
+            icon="icons/full/obj16/QuopeModelFile.gif">
+         <description>%_UI_QuopeModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated quantumOpe -->
+      <!-- @generated QuantumOpe -->
       <editor
-            id="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeEditorID"
-            name="%_UI_QuantumOpeEditor_label"
-            icon="icons/full/obj16/QuantumOpeModelFile.gif"
-            extensions="quantumope"
-            class="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeEditor"
-            contributorClass="at.jku.se.quantum.operation.library.mm.quope.presentation.QuantumOpeActionBarContributor">
+            id="quope.presentation.QuopeEditorID"
+            name="%_UI_QuopeEditor_label"
+            icon="icons/full/obj16/QuopeModelFile.gif"
+            extensions="quope"
+            class="quope.presentation.QuopeEditor"
+            contributorClass="quope.presentation.QuopeActionBarContributor">
       </editor>
    </extension>
 

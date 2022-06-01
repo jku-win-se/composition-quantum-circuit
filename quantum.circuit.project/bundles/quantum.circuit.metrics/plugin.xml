@@ -9,7 +9,7 @@
       </category>
       <view
             category="at.jku.se.quantum.circuit.metrics"
-            class="at.jku.se.quantum.circuit.metrics.views.QuantumCircuitMetricsView"
+            class="quantum.circuit.metrics.views.QuantumCircuitMetricsView"
             icon="icons/quantum-metrics-icon.png"
             id="at.jku.se.quantum.circuit.metrics.views.QuantumCircuitMetricsView"
             inject="true"

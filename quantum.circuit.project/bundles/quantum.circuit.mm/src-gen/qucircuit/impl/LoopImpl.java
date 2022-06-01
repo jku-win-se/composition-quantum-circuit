@@ -2,8 +2,6 @@
  */
 package qucircuit.impl;
 
-import at.jku.se.quantum.operation.library.mm.quope.LoopOperation;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,6 +19,8 @@ import qucircuit.ITERATION_TYPE;
 import qucircuit.Loop;
 import qucircuit.QuCircuitPackage;
 import qucircuit.Qubit;
+
+import quope.LoopOperation;
 
 /**
  * <!-- begin-user-doc -->

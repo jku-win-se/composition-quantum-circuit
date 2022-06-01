@@ -6,13 +6,13 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
-import at.jku.se.quantum.operation.contribution.utils.QuantumOperationContributionUtils;
-import at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary;
+import quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import qucircuit.Layer;
 import qucircuit.QuCircuitFactory;
 import qucircuit.QuantumCircuit;
 import qucircuit.QuantumRegister;
 import qucircuit.Qubit;
+import quope.QuantumOperationLibrary;
 import qubo.Qubo;
 
 public class QuboUtils {

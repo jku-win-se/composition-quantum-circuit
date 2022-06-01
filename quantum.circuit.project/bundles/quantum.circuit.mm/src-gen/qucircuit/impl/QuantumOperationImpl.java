@@ -2,8 +2,6 @@
  */
 package qucircuit.impl;
 
-import at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,6 +20,8 @@ import qucircuit.ClassicControl;
 import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumOperation;
 import qucircuit.Qubit;
+
+import quope.ConcreteQuantumOperation;
 
 /**
  * <!-- begin-user-doc -->

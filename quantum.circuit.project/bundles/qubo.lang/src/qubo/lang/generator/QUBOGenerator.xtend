@@ -13,10 +13,10 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import qucircuit.QuCircuitPackage
 import qucircuit.QuantumCircuit
-import at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage
-import at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary
-import at.jku.se.quantum.operation.definition.api.utils.QuantumOperationUtils
+import quope.QuantumOperationLibrary
+import quantum.operation.definition.api.utils.QuantumOperationUtils
 import qubo.Qubo
+import quope.QuopePackage
 
 /**
  * Generates code from your model files on save.
@@ -33,7 +33,7 @@ class QUBOGenerator extends AbstractGenerator {
 	}
 	
 	def QuantumOperationLibrary generateQuantumLibraryIfNotExist(IFileSystemAccess2 fsa, Resource resource) {
-		var URI quOpeURI = createURI(fsa, resource, 'quantum-operation', QuantumOpePackage.eNS_PREFIX);
+		var URI quOpeURI = createURI(fsa, resource, 'quantum-operation', QuopePackage.eNS_PREFIX);
 		var ResourceSet reset = resource.resourceSet; 
 		var Resource quOpeResource = reset.createResource(quOpeURI);
 		if (!reset.URIConverter.exists(quOpeURI, Collections.EMPTY_MAP)) {

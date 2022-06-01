@@ -4,48 +4,48 @@
 	<extension
 		point="org.eclipse.ui.editors">
 		<editor
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
 			extensions="qubo"
-			id="at.jku.se.qubo.lang.QUBO"
+			id="qubo.lang.QUBO"
 			name="QUBO Editor">
 		</editor>
 	</extension>
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
 			commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
 			<activeWhen>
 				<reference
-					definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+					definitionId="qubo.lang.QUBO.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-			commandId="at.jku.se.qubo.lang.QUBO.validate">
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+			commandId="qubo.lang.QUBO.validate">
 			<activeWhen>
 				<reference
-					definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+					definitionId="qubo.lang.QUBO.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
 		<!-- copy qualified name -->
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
 			<activeWhen>
-				<reference definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened" />
+				<reference definitionId="qubo.lang.QUBO.Editor.opened" />
 			</activeWhen>
 		</handler>
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
 			commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
 			<activeWhen>
 				<and>
-					<reference definitionId="at.jku.se.qubo.lang.QUBO.XtextEditor.opened" />
+					<reference definitionId="qubo.lang.QUBO.XtextEditor.opened" />
 					<iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -54,22 +54,22 @@
 		</handler>
 	</extension>
 	<extension point="org.eclipse.core.expressions.definitions">
-		<definition id="at.jku.se.qubo.lang.QUBO.Editor.opened">
+		<definition id="qubo.lang.QUBO.Editor.opened">
 			<and>
 				<reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
-						value="at.jku.se.qubo.lang.QUBO"
+						value="qubo.lang.QUBO"
 						forcePluginActivation="true"/>
 				</with>
 			</and>
 		</definition>
-		<definition id="at.jku.se.qubo.lang.QUBO.XtextEditor.opened">
+		<definition id="qubo.lang.QUBO.XtextEditor.opened">
 			<and>
 				<reference definitionId="isXtextEditorActive"/>
 				<with variable="activeEditor">
 					<test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName"
-						value="at.jku.se.qubo.lang.QUBO"
+						value="qubo.lang.QUBO"
 						forcePluginActivation="true"/>
 				</with>
 			</and>
@@ -78,33 +78,33 @@
 	<extension
 			point="org.eclipse.ui.preferencePages">
 		<page
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="at.jku.se.qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="qubo.lang.QUBO"
 			name="QUBO">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 		</page>
 		<page
-			category="at.jku.se.qubo.lang.QUBO"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-			id="at.jku.se.qubo.lang.QUBO.coloring"
+			category="qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+			id="qubo.lang.QUBO.coloring"
 			name="Syntax Coloring">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 		</page>
 		<page
-			category="at.jku.se.qubo.lang.QUBO"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-			id="at.jku.se.qubo.lang.QUBO.templates"
+			category="qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+			id="qubo.lang.QUBO.templates"
 			name="Templates">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 		</page>
 	</extension>
 	<extension
 			point="org.eclipse.ui.propertyPages">
 		<page
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-			id="at.jku.se.qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+			id="qubo.lang.QUBO"
 			name="QUBO">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -114,14 +114,14 @@
 	<extension
 		point="org.eclipse.ui.keywords">
 		<keyword
-			id="at.jku.se.qubo.lang.ui.keyword_QUBO"
+			id="qubo.lang.ui.keyword_QUBO"
 			label="QUBO"/>
 	</extension>
 	<extension
 		point="org.eclipse.ui.commands">
 		<command
 			description="Trigger expensive validation"
-			id="at.jku.se.qubo.lang.QUBO.validate"
+			id="qubo.lang.QUBO.validate"
 			name="Validate">
 		</command>
 		<!-- copy qualified name -->
@@ -142,12 +142,12 @@
 		<menuContribution
 			locationURI="popup:#TextEditorContext?after=group.edit">
 			<command
-				commandId="at.jku.se.qubo.lang.QUBO.validate"
+				commandId="qubo.lang.QUBO.validate"
 				style="push"
 				tooltip="Trigger expensive validation">
 				<visibleWhen checkEnabled="false">
 					<reference
-						definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+						definitionId="qubo.lang.QUBO.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -157,7 +157,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened" />
+					<reference definitionId="qubo.lang.QUBO.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -165,7 +165,7 @@
 			<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened" />
+					<reference definitionId="qubo.lang.QUBO.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -174,7 +174,7 @@
 				style="push" tooltip="Copy Qualified Name">
 				<visibleWhen checkEnabled="false">
 					<and>
-						<reference definitionId="at.jku.se.qubo.lang.QUBO.XtextEditor.opened" />
+						<reference definitionId="qubo.lang.QUBO.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -187,7 +187,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+					<reference definitionId="qubo.lang.QUBO.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -195,11 +195,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
 			commandId="org.eclipse.xtext.ui.editor.FindReferences">
 			<activeWhen>
 				<reference
-					definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+					definitionId="qubo.lang.QUBO.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -208,7 +208,7 @@
 		<content-type
 			base-type="org.eclipse.core.runtime.text"
 			file-extensions="qubo"
-			id="at.jku.se.qubo.lang.QUBO.contenttype"
+			id="qubo.lang.QUBO.contenttype"
 			name="QUBO File"
 			priority="normal">
 		</content-type>
@@ -217,17 +217,17 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="qubo">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
 		<resourceServiceProvider
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
 			uriExtension="qubo">
 		</resourceServiceProvider>
 	</extension>
-	<!-- marker definitions for at.jku.se.qubo.lang.QUBO -->
+	<!-- marker definitions for qubo.lang.QUBO -->
 	<extension
 			id="qubo.check.fast"
 			name="QUBO Problem"
@@ -251,34 +251,34 @@
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="at.jku.se.qubo.lang.QUBO"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.validation.ValidatorPreferencePage"
-			id="at.jku.se.qubo.lang.QUBO.validator.preferencePage"
+			category="qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.validation.ValidatorPreferencePage"
+			id="qubo.lang.QUBO.validator.preferencePage"
 			name="Errors/Warnings">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.xtext.builder.participant">
 		<participant
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
 			fileExtensions="qubo"/>
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="at.jku.se.qubo.lang.QUBO"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="at.jku.se.qubo.lang.QUBO.compiler.preferencePage"
+			category="qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="qubo.lang.QUBO.compiler.preferencePage"
 			name="Compiler">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.ui.propertyPages">
 		<page
-			category="at.jku.se.qubo.lang.QUBO"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-			id="at.jku.se.qubo.lang.QUBO.compiler.propertyPage"
+			category="qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+			id="qubo.lang.QUBO.compiler.propertyPage"
 			name="Compiler">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 			<enabledWhen>
 				<adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -289,20 +289,20 @@
 		<menuContribution locationURI="popup:#TextEditorContext?after=xtext.ui.openDeclaration">
 			<command
 				commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand"
-				id="at.jku.se.qubo.lang.QUBO.OpenGeneratedCode"
+				id="qubo.lang.QUBO.OpenGeneratedCode"
 				style="push">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened" />
+					<reference definitionId="qubo.lang.QUBO.Editor.opened" />
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.generator.trace.OpenGeneratedFileHandler"
 			commandId="org.eclipse.xtext.ui.OpenGeneratedFileCommand">
 			<activeWhen>
-				<reference definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened" />
+				<reference definitionId="qubo.lang.QUBO.Editor.opened" />
 			</activeWhen>
 		</handler>
 	</extension>
@@ -310,11 +310,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+					definitionId="qubo.lang.QUBO.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -334,33 +334,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened"/>
+					<reference definitionId="qubo.lang.QUBO.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-	<!-- quickfix marker resolution generator for at.jku.se.qubo.lang.QUBO -->
+	<!-- quickfix marker resolution generator for qubo.lang.QUBO -->
 	<extension
 			point="org.eclipse.ui.ide.markerResolution">
 		<markerResolutionGenerator
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="at.jku.se.qubo.lang.ui.qubo.check.fast">
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="qubo.lang.ui.qubo.check.fast">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
 			</attribute>
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="at.jku.se.qubo.lang.ui.qubo.check.normal">
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="qubo.lang.ui.qubo.check.normal">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
 			</attribute>
 		</markerResolutionGenerator>
 		<markerResolutionGenerator
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-			markerType="at.jku.se.qubo.lang.ui.qubo.check.expensive">
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+			markerType="qubo.lang.ui.qubo.check.expensive">
 			<attribute
 				name="FIXABLE_KEY"
 				value="true">
@@ -370,11 +370,11 @@
 	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+					definitionId="qubo.lang.QUBO.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -386,7 +386,7 @@
 				style="push">
 				<visibleWhen checkEnabled="false">
 					<reference
-						definitionId="at.jku.se.qubo.lang.QUBO.Editor.opened">
+						definitionId="qubo.lang.QUBO.Editor.opened">
 					</reference>
 				</visibleWhen>
 			</command>
@@ -394,34 +394,34 @@
 	</extension>
 	<extension point="org.eclipse.ui.preferencePages">
 		<page
-			category="at.jku.se.qubo.lang.QUBO"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-			id="at.jku.se.qubo.lang.QUBO.refactoring"
+			category="qubo.lang.QUBO"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+			id="qubo.lang.QUBO.refactoring"
 			name="Refactoring">
-			<keywordReference id="at.jku.se.qubo.lang.ui.keyword_QUBO"/>
+			<keywordReference id="qubo.lang.ui.keyword_QUBO"/>
 		</page>
 	</extension>
 	<extension point="org.eclipse.compare.contentViewers">
-		<viewer id="at.jku.se.qubo.lang.QUBO.compare.contentViewers"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+		<viewer id="qubo.lang.QUBO.compare.contentViewers"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="qubo">
 		</viewer>
 		<contentTypeBinding
-			contentTypeId="at.jku.se.qubo.lang.QUBO.contenttype"
-			contentViewerId="at.jku.se.qubo.lang.QUBO.compare.contentViewers" />
+			contentTypeId="qubo.lang.QUBO.contenttype"
+			contentViewerId="qubo.lang.QUBO.compare.contentViewers" />
 	</extension>
 	<extension point="org.eclipse.compare.contentMergeViewers">
-		<viewer id="at.jku.se.qubo.lang.QUBO.compare.contentMergeViewers"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+		<viewer id="qubo.lang.QUBO.compare.contentMergeViewers"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
 			extensions="qubo" label="QUBO Compare">
 		</viewer>
 		<contentTypeBinding
-			contentTypeId="at.jku.se.qubo.lang.QUBO.contenttype"
-			contentMergeViewerId="at.jku.se.qubo.lang.QUBO.compare.contentMergeViewers" />
+			contentTypeId="qubo.lang.QUBO.contenttype"
+			contentMergeViewerId="qubo.lang.QUBO.compare.contentMergeViewers" />
 	</extension>
 	<extension point="org.eclipse.ui.editors.documentProviders">
-		<provider id="at.jku.se.qubo.lang.QUBO.editors.documentProviders"
-			class="at.jku.se.qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+		<provider id="qubo.lang.QUBO.editors.documentProviders"
+			class="qubo.lang.ui.QUBOExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
 			extensions="qubo">
 		</provider>
 	</extension>

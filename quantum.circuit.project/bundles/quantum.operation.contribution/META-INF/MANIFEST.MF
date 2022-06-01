@@ -11,9 +11,9 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.22.0",
  quantum.circuit.mm;bundle-version="0.1.0",
  quantum.operation.definition;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
-Bundle-Activator: at.jku.se.quantum.operation.contribution.Activator
-Export-Package: at.jku.se.quantum.operation.contribution.compositequantumgate,
- at.jku.se.quantum.operation.contribution.elementaryquantumgate,
- at.jku.se.quantum.operation.contribution.measurement,
- at.jku.se.quantum.operation.contribution.statepreparation,
- at.jku.se.quantum.operation.contribution.utils
+Bundle-Activator: quantum.operation.contribution.Activator
+Export-Package: quantum.operation.contribution.compositequantumgate,
+ quantum.operation.contribution.elementaryquantumgate,
+ quantum.operation.contribution.measurement,
+ quantum.operation.contribution.statepreparation,
+ quantum.operation.contribution.utils

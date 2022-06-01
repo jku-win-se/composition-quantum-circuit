@@ -36,7 +36,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="classicControl" eType="#//ClassicControl"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="ecore:EClass ../../quantum.operation.library.mm/model/quantumOpe.ecore#//ConcreteQuantumOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//ConcreteQuantumOperation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetQubits" lowerBound="1"
         upperBound="-1" eType="#//Qubit"/>
   </eClassifiers>
@@ -77,7 +77,7 @@
         eType="#//Qubit"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedTargetQubits" upperBound="-1"
         eType="#//Qubit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="loop" eType="ecore:EClass ../../quantum.operation.library.mm/model/quantumOpe.ecore#//LoopOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loop" eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//LoopOperation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementControlQubits"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>

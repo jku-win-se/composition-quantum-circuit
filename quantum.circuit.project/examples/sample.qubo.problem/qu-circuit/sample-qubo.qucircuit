@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<qucircuit:QuantumCircuit xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qucircuit="http://www.se.jku.at/QuCircuit" name="Generated Qubo Circuit">
+<qucircuit:QuantumCircuit xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:qucircuit="http://www.eclipse.org/QuCircuit" name="Generated Qubo Circuit">
   <quantumRegisters>
     <qubits/>
     <qubits/>
@@ -13,7 +13,7 @@
   <layers>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate" targetQubits="//@quantumRegisters.0/@qubits.1">
       <operation href="../quantum-operation/sample-qubo.quope#//@operations.1"/>
-      <angleParameter theta="103.84194347143229"/>
+      <angleParameter theta="1311.3382817282813"/>
     </quantumOperations>
   </layers>
   <layers>
@@ -29,7 +29,7 @@
   <layers>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate" targetQubits="//@quantumRegisters.0/@qubits.2">
       <operation href="../quantum-operation/sample-qubo.quope#//@operations.1"/>
-      <angleParameter theta="0.7940854500756587"/>
+      <angleParameter theta="10.027880977922152"/>
     </quantumOperations>
   </layers>
   <layers>
@@ -45,7 +45,7 @@
   <layers>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate" targetQubits="//@quantumRegisters.0/@qubits.1">
       <operation href="../quantum-operation/sample-qubo.quope#//@operations.1"/>
-      <angleParameter theta="3.665009769579963"/>
+      <angleParameter theta="46.28252759040993"/>
     </quantumOperations>
   </layers>
   <layers>
@@ -56,15 +56,15 @@
   <layers>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate" targetQubits="//@quantumRegisters.0/@qubits.0">
       <operation href="../quantum-operation/sample-qubo.quope#//@operations.1"/>
-      <angleParameter theta="3.665009769579963"/>
+      <angleParameter theta="46.28252759040993"/>
     </quantumOperations>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate" targetQubits="//@quantumRegisters.0/@qubits.1">
       <operation href="../quantum-operation/sample-qubo.quope#//@operations.1"/>
-      <angleParameter theta="7.635437019958256"/>
+      <angleParameter theta="96.42193248002069"/>
     </quantumOperations>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate" targetQubits="//@quantumRegisters.0/@qubits.2">
       <operation href="../quantum-operation/sample-qubo.quope#//@operations.1"/>
-      <angleParameter theta="12.827534193529871"/>
+      <angleParameter theta="188.98698766084055"/>
     </quantumOperations>
   </layers>
 </qucircuit:QuantumCircuit>

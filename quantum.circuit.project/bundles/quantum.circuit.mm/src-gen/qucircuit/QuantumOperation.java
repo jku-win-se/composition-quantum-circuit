@@ -2,9 +2,9 @@
  */
 package qucircuit;
 
-import at.jku.se.quantum.operation.library.mm.quope.ConcreteQuantumOperation;
-
 import org.eclipse.emf.common.util.EList;
+
+import quope.ConcreteQuantumOperation;
 
 /**
  * <!-- begin-user-doc -->

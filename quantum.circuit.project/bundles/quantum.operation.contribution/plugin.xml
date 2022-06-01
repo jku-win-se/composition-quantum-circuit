@@ -7,23 +7,23 @@
          point="at.jku.se.quantum.operation">
       <ElementaryQuantumGate
             Name="Hadamard"
-            class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.Hadamard">
+            class="quantum.operation.contribution.elementaryquantumgate.Hadamard">
       </ElementaryQuantumGate>
       <ElementaryQuantumGate
             Name="RZ"
-            class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.RZ">
+            class="quantum.operation.contribution.elementaryquantumgate.RZ">
       </ElementaryQuantumGate>
        <ElementaryQuantumGate
             Name="CNOT"
-            class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.CNOT">
+            class="quantum.operation.contribution.elementaryquantumgate.CNOT">
       </ElementaryQuantumGate>
       <ElementaryQuantumGate
             Name="PauliX"
-            class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.PauliX">
+            class="quantum.operation.contribution.elementaryquantumgate.PauliX">
       </ElementaryQuantumGate>
       <ElementaryQuantumGate
             Name="PauliZ"
-            class="at.jku.se.quantum.operation.contribution.elementaryquantumgate.PauliZ">
+            class="quantum.operation.contribution.elementaryquantumgate.PauliZ">
       </ElementaryQuantumGate>
    </extension>
    <extension
@@ -31,23 +31,23 @@
          point="at.jku.se.quantum.operation">
       <CompositeBlock
             Name="Oracle"
-            class="at.jku.se.quantum.operation.contribution.compositequantumgate.Oracle">
+            class="quantum.operation.contribution.compositequantumgate.Oracle">
       </CompositeBlock>
       <CompositeBlock
             Name="Amplification"
-            class="at.jku.se.quantum.operation.contribution.compositequantumgate.Amplification">
+            class="quantum.operation.contribution.compositequantumgate.Amplification">
       </CompositeBlock>
       <CompositeBlock
             Name="Initialize"
-            class="at.jku.se.quantum.operation.contribution.compositequantumgate.Initialize">
+            class="quantum.operation.contribution.compositequantumgate.Initialize">
       </CompositeBlock>
       <CompositeBlock
             Name="Grover"
-            class="at.jku.se.quantum.operation.contribution.compositequantumgate.Grover">
+            class="quantum.operation.contribution.compositequantumgate.Grover">
       </CompositeBlock>
       <CompositeBlock
             Name="QFTInv"
-            class="at.jku.se.quantum.operation.contribution.compositequantumgate.QFTInv">
+            class="quantum.operation.contribution.compositequantumgate.QFTInv">
       </CompositeBlock>
    </extension>
    <extension
@@ -55,14 +55,14 @@
          point="at.jku.se.quantum.operation">
       <StatePreparation
             Name="Reset"
-            class="at.jku.se.quantum.operation.contribution.statepreparation.Reset"></StatePreparation>
+            class="quantum.operation.contribution.statepreparation.Reset"></StatePreparation>
    </extension>
    <extension
          id="MeasurementQuantumGates"
          point="at.jku.se.quantum.operation">
       <Measurement
             Name="MeasurementCompBasis"
-            class="at.jku.se.quantum.operation.contribution.measurement.MeasurementCompBasis">
+            class="quantum.operation.contribution.measurement.MeasurementCompBasis">
       </Measurement>
    </extension>
 </plugin>

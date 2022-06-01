@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated quantumOpe -->
+      <!-- @generated QuantumOpe -->
       <factory
-            uri="http://www.se.jku.at/QuantumOpe"
-            class="at.jku.se.quantum.operation.library.mm.quope.provider.QuantumOpeItemProviderAdapterFactory"
+            uri="http://www.eclipse.org/QuantumOpe"
+            class="quope.provider.QuopeItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

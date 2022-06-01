@@ -2,9 +2,9 @@
  */
 package qucircuit;
 
-import at.jku.se.quantum.operation.library.mm.quope.LoopOperation;
-
 import org.eclipse.emf.common.util.EList;
+
+import quope.LoopOperation;
 
 /**
  * <!-- begin-user-doc -->

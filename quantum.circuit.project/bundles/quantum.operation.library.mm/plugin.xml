@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated quantumOpe -->
+      <!-- @generated QuantumOpe -->
       <package
-            uri="http://www.se.jku.at/QuantumOpe"
-            class="at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage"
-            genModel="model/quantumOpe.genmodel"/>
+            uri="http://www.eclipse.org/QuantumOpe"
+            class="quope.QuopePackage"
+            genModel="model/QuantumOpe.genmodel"/>
    </extension>
 
 </plugin>

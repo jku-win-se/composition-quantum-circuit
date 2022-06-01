@@ -9,8 +9,8 @@ Bundle-Activator: quantum.operation.library.mm.quope.presentation.QuantumOpeEdit
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: at.jku.se.quantum.operation.library.mm.quope.presentation,
- quantum.operation.library.mm.quope.presentation
+Export-Package: quantum.operation.library.mm.quope.presentation,
+ quope.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  quantum.operation.library.mm.edit;visibility:=reexport,

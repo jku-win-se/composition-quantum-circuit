@@ -5,7 +5,7 @@
     editDirectory="/quantum.circuit.mm.edit/src-gen" editorDirectory="/quantum.circuit.mm.editor/src-gen"
     modelPluginID="quantum.circuit.mm" modelName="QuCircuit" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
-    copyrightFields="false" usedGenPackages="../../quantum.operation.library.mm/model/quantumOpe.genmodel#//quope"
+    copyrightFields="false" usedGenPackages="../../quantum.operation.library.mm/model/QuantumOpe.genmodel#//quope"
     operationReflection="true" importOrganizing="true">
   <foreignModel>QuCircuit.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>

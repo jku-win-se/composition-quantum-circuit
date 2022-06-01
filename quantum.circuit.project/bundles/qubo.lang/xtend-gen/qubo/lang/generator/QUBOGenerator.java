@@ -3,9 +3,6 @@
  */
 package qubo.lang.generator;
 
-import at.jku.se.quantum.operation.definition.api.utils.QuantumOperationUtils;
-import at.jku.se.quantum.operation.library.mm.quope.QuantumOpePackage;
-import at.jku.se.quantum.operation.library.mm.quope.QuantumOperationLibrary;
 import java.util.Collections;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -15,10 +12,13 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.Exceptions;
+import quantum.operation.definition.api.utils.QuantumOperationUtils;
 import qubo.Qubo;
 import qubo.lang.utils.QuboUtils;
 import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumCircuit;
+import quope.QuantumOperationLibrary;
+import quope.QuopePackage;
 
 /**
  * Generates code from your model files on save.
@@ -35,7 +35,7 @@ public class QUBOGenerator extends AbstractGenerator {
   
   public QuantumOperationLibrary generateQuantumLibraryIfNotExist(final IFileSystemAccess2 fsa, final Resource resource) {
     try {
-      URI quOpeURI = this.createURI(fsa, resource, "quantum-operation", QuantumOpePackage.eNS_PREFIX);
+      URI quOpeURI = this.createURI(fsa, resource, "quantum-operation", QuopePackage.eNS_PREFIX);
       ResourceSet reset = resource.getResourceSet();
       Resource quOpeResource = reset.createResource(quOpeURI);
       boolean _exists = reset.getURIConverter().exists(quOpeURI, Collections.EMPTY_MAP);
