@@ -5,9 +5,10 @@
     <semanticResources>QuCircuit.ecore</semanticResources>
     <semanticResources>QuCircuit.genmodel</semanticResources>
     <semanticResources>platform:/resource/at.jku.se.quantum.operation.library.mm/model/quantumOpe.genmodel</semanticResources>
+    <semanticResources>platform:/resource/quantum.operation.library.mm/model/quantumOpe.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_kXen0HU0EeyMIZBkdn5Jfg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_lXTtIHU0EeyMIZBkdn5Jfg" name="qcircuit class diagram" repPath="#_lW-9AHU0EeyMIZBkdn5Jfg" changeId="d7cb3401-40cc-43e1-869a-ba79e484bdb1">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_lXTtIHU0EeyMIZBkdn5Jfg" name="qcircuit class diagram" repPath="#_lW-9AHU0EeyMIZBkdn5Jfg" changeId="a04dd5b6-b08a-41d9-9e86-03676fe1c314">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="QuCircuit.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -493,7 +494,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_mGXykHU0EeyMIZBkdn5Jfg" type="4001" element="_mFmWiXU0EeyMIZBkdn5Jfg" source="_mF-xAHU0EeyMIZBkdn5Jfg" target="_mF-J8HU0EeyMIZBkdn5Jfg">
           <children xmi:type="notation:Node" xmi:id="_mGXylHU0EeyMIZBkdn5Jfg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mGXylXU0EeyMIZBkdn5Jfg" x="27" y="71"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mGXylXU0EeyMIZBkdn5Jfg" x="91" y="4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_mGXylnU0EeyMIZBkdn5Jfg" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mGXyl3U0EeyMIZBkdn5Jfg" x="-1"/>
@@ -829,7 +830,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mFGAMHU0EeyMIZBkdn5Jfg" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kSHA8-GjEey2BtI1DnjiJA" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
         <labelFormat>italic</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
@@ -1211,12 +1212,12 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_mFwHgHU0EeyMIZBkdn5Jfg" sourceNode="_mFFZInU0EeyMIZBkdn5Jfg" targetNode="_mE-rcHU0EeyMIZBkdn5Jfg">
       <target xmi:type="ecore:EClass" href="QuCircuit.ecore#//QuantumOperation"/>
       <semanticElements xmi:type="ecore:EClass" href="QuCircuit.ecore#//QuantumOperation"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_mFwHgXU0EeyMIZBkdn5Jfg" targetArrow="InputClosedArrow" routingStyle="tree">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kSOVyOGjEey2BtI1DnjiJA" targetArrow="InputClosedArrow" routingStyle="tree">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_mFwHgnU0EeyMIZBkdn5Jfg" showIcon="false">
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_kSOVyeGjEey2BtI1DnjiJA" showIcon="false">
           <labelFormat>italic</labelFormat>
         </beginLabelStyle>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_mFwHg3U0EeyMIZBkdn5Jfg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_kSOVyuGjEey2BtI1DnjiJA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
@@ -1310,7 +1311,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ahxIttqaEeyc14e_AJW79g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_nndMK-GjEey2BtI1DnjiJA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -1334,12 +1335,12 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_mFSljtqREeyc14e_AJW79g" sourceNode="_MFo3QNqPEeyc14e_AJW79g" targetNode="_fom9ENqOEeyc14e_AJW79g">
       <target xmi:type="ecore:EClass" href="QuCircuit.ecore#//Loop"/>
       <semanticElements xmi:type="ecore:EClass" href="QuCircuit.ecore#//Loop"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ahy-HtqaEeyc14e_AJW79g" targetArrow="InputClosedArrow" routingStyle="tree">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_nnj53OGjEey2BtI1DnjiJA" targetArrow="InputClosedArrow" routingStyle="tree">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_ahy-H9qaEeyc14e_AJW79g" showIcon="false">
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_nnj53eGjEey2BtI1DnjiJA" showIcon="false">
           <labelFormat>italic</labelFormat>
         </beginLabelStyle>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ahy-INqaEeyc14e_AJW79g" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_nnj53uGjEey2BtI1DnjiJA" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
