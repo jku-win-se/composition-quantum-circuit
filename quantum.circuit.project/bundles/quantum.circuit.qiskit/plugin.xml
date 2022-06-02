@@ -10,7 +10,7 @@
                id="Composition-based-Circuit"
                label="Composition-based Circuit">
             <command
-                  commandId="at.jku.se.quantum.circuit.qiskit.generate"
+                  commandId="quantum.circuit.qiskit.generate"
                   id="GenerateQiskitCode"
                   label="Generate Qiskit Code"
                   style="push">
@@ -37,7 +37,7 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            id="at.jku.se.quantum.circuit.qiskit.generate"
+            id="quantum.circuit.qiskit.generate"
             name="Generate Qiskit Code">
       </command>
    </extension>
@@ -45,7 +45,7 @@
          point="org.eclipse.ui.handlers">
       <handler
             class="quantum.circuit.qiskit.menu.QuantumCircuitDesignerMenu"
-            commandId="at.jku.se.quantum.circuit.qiskit.generate">
+            commandId="quantum.circuit.qiskit.generate">
       </handler>
    </extension>
 

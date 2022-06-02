@@ -4,7 +4,7 @@
    <extension
          id="ElementaryQuantumGate"
          name="Elementary Quantum Gate"
-         point="at.jku.se.quantum.operation">
+         point="quantum.operation">
       <ElementaryQuantumGate
             Name="Hadamard"
             class="quantum.operation.contribution.elementaryquantumgate.Hadamard">
@@ -28,7 +28,7 @@
    </extension>
    <extension
          id="CompositeQuantumGates"
-         point="at.jku.se.quantum.operation">
+         point="quantum.operation">
       <CompositeBlock
             Name="Oracle"
             class="quantum.operation.contribution.compositequantumgate.Oracle">
@@ -52,14 +52,14 @@
    </extension>
    <extension
          id="StatePreparationQuantumGates"
-         point="at.jku.se.quantum.operation">
+         point="quantum.operation">
       <StatePreparation
             Name="Reset"
             class="quantum.operation.contribution.statepreparation.Reset"></StatePreparation>
    </extension>
    <extension
          id="MeasurementQuantumGates"
-         point="at.jku.se.quantum.operation">
+         point="quantum.operation">
       <Measurement
             Name="MeasurementCompBasis"
             class="quantum.operation.contribution.measurement.MeasurementCompBasis">

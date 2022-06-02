@@ -21,7 +21,7 @@ import quantum.operation.definition.api.LibraryQuantumGate;
 
 public class EvaluateQuantumOperationsContributions {
 	
-	private static final String QUANTUM_OPERATION = "at.jku.se.quantum.operation";
+	private static final String QUANTUM_OPERATION = "quantum.operation";
 	private static final String QUANTUM_OPERATION_NAME_ATTRIBUTE = "Name";
 	
 	private static final Logger LOGGER = Logger.getLogger(EvaluateQuantumOperationsContributions.class.getName());

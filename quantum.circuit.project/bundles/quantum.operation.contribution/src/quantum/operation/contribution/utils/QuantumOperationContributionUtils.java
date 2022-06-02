@@ -13,7 +13,7 @@ public class QuantumOperationContributionUtils {
 	
 	public static final String ICONS_FOLDER = "icons";
 	
-	public static String PLUGIN_NAME = "at.jku.se.quantum.operation.contribution";
+	public static String PLUGIN_NAME = "quantum.operation.contribution";
 	
 	//Suppress default constructor for noninstantiability
 	private QuantumOperationContributionUtils() {

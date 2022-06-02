@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Definition
 Bundle-SymbolicName: quantum.operation.definition;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Automatic-Module-Name: at.jku.se.quantum.operation.definition
+Automatic-Module-Name: quantum.operation.definition
 Bundle-RequiredExecutionEnvironment: JavaSE-16
 Require-Bundle: quantum.circuit.mm;bundle-version="0.1.0",
  quantum.operation.library.mm;bundle-version="0.1.0",

@@ -7,14 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated qubo -->
-      <package
-            uri="http://www.se.jku.at/Qubo"
-            class="at.jku.se.qubo.mm.qubo.QuboPackage"
-            genModel="model/Qubo.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated Qubo -->
       <package
             uri="http://www.eclipse.org/Qubo"

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="at.jku.se.quantum.operation.definition" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="quantum.operation.definition" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="at.jku.se.quantum.operation.definition" id="at.jku.se.quantum.operation" name="QuantumOperation"/>
+         <meta.schema plugin="quantum.operation.definition" id="quantum.operation" name="QuantumOperation"/>
       </appinfo>
       <documentation>
          [Enter description of this extension point.]
@@ -65,7 +65,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn="at.jku.se.quantum.operation.definition.api.AbstractExtendElementaryQuantumGate:"/>
+                  <meta.attribute kind="java" basedOn="quantum.operation.definition.api.AbstractExtendElementaryQuantumGate:"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -87,7 +87,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn="at.jku.se.quantum.operation.definition.api.AbstractExtendCompositeQuantumGate:"/>
+                  <meta.attribute kind="java" basedOn="quantum.operation.definition.api.AbstractExtendCompositeQuantumGate:"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -109,7 +109,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn="at.jku.se.quantum.operation.definition.api.AbstractExtendStatePreparation:"/>
+                  <meta.attribute kind="java" basedOn="quantum.operation.definition.api.AbstractExtendStatePreparation:"/>
                </appinfo>
             </annotation>
          </attribute>
@@ -131,7 +131,7 @@
                   
                </documentation>
                <appinfo>
-                  <meta.attribute kind="java" basedOn="at.jku.se.quantum.operation.definition.api.AbstractExtendMeasurement:"/>
+                  <meta.attribute kind="java" basedOn="quantum.operation.definition.api.AbstractExtendMeasurement:"/>
                </appinfo>
             </annotation>
          </attribute>

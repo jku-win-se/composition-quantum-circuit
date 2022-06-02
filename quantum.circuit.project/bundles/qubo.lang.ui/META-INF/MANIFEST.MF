@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Automatic-Module-Name: at.jku.se.qubo.lang.ui
+Automatic-Module-Name: qubo.lang.ui
 Bundle-ManifestVersion: 2
-Bundle-Name: at.jku.se.qubo.lang.ui
+Bundle-Name: qubo.lang.ui
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: qubo.lang.ui;singleton:=true

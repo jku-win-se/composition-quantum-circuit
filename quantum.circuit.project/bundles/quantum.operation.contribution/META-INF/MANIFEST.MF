@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Contribution
 Bundle-SymbolicName: quantum.operation.contribution;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Automatic-Module-Name: at.jku.se.quantum.operation.contribution
+Automatic-Module-Name: quantum.operation.contribution
 Bundle-RequiredExecutionEnvironment: JavaSE-16
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.22.0",
  org.eclipse.emf.ecore,

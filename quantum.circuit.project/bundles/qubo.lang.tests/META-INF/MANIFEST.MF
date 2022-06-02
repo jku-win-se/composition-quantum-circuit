@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Automatic-Module-Name: at.jku.se.qubo.lang.tests
+Automatic-Module-Name: qubo.lang.tests
 Bundle-ManifestVersion: 2
-Bundle-Name: at.jku.se.qubo.lang.tests
+Bundle-Name: qubo.lang.tests
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: qubo.lang.tests;singleton:=true

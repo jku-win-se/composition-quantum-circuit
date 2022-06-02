@@ -45,7 +45,7 @@ public class QuantumCircuitMetricsView extends ViewPart {
 	/**
 	 * The ID of the view as specified by the extension.
 	 */
-	public static final String ID = "at.jku.se.quantum.circuit.metrics.views.QuantumCircuitMetricsView";
+	public static final String ID = "quantum.circuit.metrics.views.QuantumCircuitMetricsView";
 
 	@Inject IWorkbench workbench;
 	
@@ -70,7 +70,7 @@ public class QuantumCircuitMetricsView extends ViewPart {
         viewer.setInput(new MetricProvider(getQuantumCircuit()).getMetrics());
 
 		// Create the help context id for the viewer's control
-		workbench.getHelpSystem().setHelp(viewer.getControl(), "at.jku.se.quantum.circuit.metrics.viewer");
+		workbench.getHelpSystem().setHelp(viewer.getControl(), "quantum.circuit.metrics.viewer");
 		getSite().setSelectionProvider(viewer);
 		makeActions();
 		hookContextMenu();
