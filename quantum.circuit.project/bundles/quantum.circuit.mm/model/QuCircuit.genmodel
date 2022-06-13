@@ -79,6 +79,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/controlQubitsBlockSize"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/controlQubitsIterationType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/targetQubitsIterationType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/incrementBlockTargetQubits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/incrementBlockControlQubits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//Loop/incrementBy"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

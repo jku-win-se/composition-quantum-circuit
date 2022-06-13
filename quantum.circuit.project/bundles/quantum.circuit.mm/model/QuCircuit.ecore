@@ -96,6 +96,11 @@
         eType="#//ITERATION_TYPE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetQubitsIterationType"
         eType="#//ITERATION_TYPE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementBlockTargetQubits"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementBlockControlQubits"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementBy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ITERATION_TYPE">
     <eLiterals name="NONE"/>
