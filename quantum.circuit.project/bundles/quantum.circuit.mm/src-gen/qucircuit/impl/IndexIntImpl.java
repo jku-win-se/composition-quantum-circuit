@@ -7,51 +7,50 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import qucircuit.Bit;
-import qucircuit.QuCircuitPackage;
+import qucircuit.IndexInt;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Bit</b></em>'.
+ * An implementation of the model object '<em><b>Index Int</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link qucircuit.impl.BitImpl#getId <em>Id</em>}</li>
+ *   <li>{@link qucircuit.impl.IndexIntImpl#getIndex <em>Index</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bit {
+public class IndexIntImpl extends IndexImpl implements IndexInt {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getIndex() <em>Index</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getIndex()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer ID_EDEFAULT = null;
+	protected static final Integer INDEX_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getIndex() <em>Index</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getIndex()
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer id = ID_EDEFAULT;
+	protected Integer index = INDEX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BitImpl() {
+	protected IndexIntImpl() {
 		super();
 	}
 
@@ -62,7 +61,7 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.BIT;
+		return QucircuitPackage.Literals.INDEX_INT;
 	}
 
 	/**
@@ -70,8 +69,8 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getId() {
-		return id;
+	public Integer getIndex() {
+		return index;
 	}
 
 	/**
@@ -79,11 +78,11 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(Integer newId) {
-		Integer oldId = id;
-		id = newId;
+	public void setIndex(Integer newIndex) {
+		Integer oldIndex = index;
+		index = newIndex;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QuCircuitPackage.BIT__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.INDEX_INT__INDEX, oldIndex, index));
 	}
 
 	/**
@@ -94,8 +93,8 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.BIT__ID:
-			return getId();
+			case QucircuitPackage.INDEX_INT__INDEX:
+				return getIndex();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,9 +107,9 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.BIT__ID:
-			setId((Integer) newValue);
-			return;
+			case QucircuitPackage.INDEX_INT__INDEX:
+				setIndex((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -123,9 +122,9 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.BIT__ID:
-			setId(ID_EDEFAULT);
-			return;
+			case QucircuitPackage.INDEX_INT__INDEX:
+				setIndex(INDEX_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -138,8 +137,8 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.BIT__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case QucircuitPackage.INDEX_INT__INDEX:
+				return INDEX_EDEFAULT == null ? index != null : !INDEX_EDEFAULT.equals(index);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -151,14 +150,13 @@ public abstract class BitImpl extends MinimalEObjectImpl.Container implements Bi
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (index: ");
+		result.append(index);
 		result.append(')');
 		return result.toString();
 	}
 
-} //BitImpl
+} //IndexIntImpl

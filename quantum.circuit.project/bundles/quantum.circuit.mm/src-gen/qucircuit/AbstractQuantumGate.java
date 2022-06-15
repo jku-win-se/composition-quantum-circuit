@@ -17,22 +17,22 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link qucircuit.AbstractQuantumGate#getInverseForm <em>Inverse Form</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getAbstractQuantumGate()
+ * @see qucircuit.QucircuitPackage#getAbstractQuantumGate()
  * @model abstract="true"
  * @generated
  */
 public interface AbstractQuantumGate extends QuantumOperation {
 	/**
-	 * Returns the value of the '<em><b>Control Qubits</b></em>' reference list.
-	 * The list contents are of type {@link qucircuit.Qubit}.
+	 * Returns the value of the '<em><b>Control Qubits</b></em>' containment reference list.
+	 * The list contents are of type {@link qucircuit.Index}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Control Qubits</em>' reference list.
-	 * @see qucircuit.QuCircuitPackage#getAbstractQuantumGate_ControlQubits()
-	 * @model
+	 * @return the value of the '<em>Control Qubits</em>' containment reference list.
+	 * @see qucircuit.QucircuitPackage#getAbstractQuantumGate_ControlQubits()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Qubit> getControlQubits();
+	EList<Index> getControlQubits();
 
 	/**
 	 * Returns the value of the '<em><b>Inverse Form</b></em>' attribute.
@@ -41,7 +41,7 @@ public interface AbstractQuantumGate extends QuantumOperation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Inverse Form</em>' attribute.
 	 * @see #setInverseForm(Boolean)
-	 * @see qucircuit.QuCircuitPackage#getAbstractQuantumGate_InverseForm()
+	 * @see qucircuit.QucircuitPackage#getAbstractQuantumGate_InverseForm()
 	 * @model default="false"
 	 * @generated
 	 */

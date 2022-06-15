@@ -2,6 +2,7 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -14,8 +15,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import qucircuit.Layer;
-import qucircuit.QuCircuitFactory;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitFactory;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.Layer} object.
@@ -61,7 +62,7 @@ public class LayerItemProvider extends NamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS);
+			childrenFeatures.add(QucircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -91,16 +92,6 @@ public class LayerItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,10 +99,12 @@ public class LayerItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Layer) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Layer_type")
-				: getString("_UI_Layer_type") + " " + label;
+		String label = ((Layer)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Layer_type") :
+			getString("_UI_Layer_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -125,9 +118,9 @@ public class LayerItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Layer.class)) {
-		case QuCircuitPackage.LAYER__QUANTUM_OPERATIONS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case QucircuitPackage.LAYER__QUANTUM_OPERATIONS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -143,20 +136,30 @@ public class LayerItemProvider extends NamedElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
-				QuCircuitFactory.eINSTANCE.createStatePreparation()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
+				 QucircuitFactory.eINSTANCE.createStatePreparation()));
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
-				QuCircuitFactory.eINSTANCE.createMeasurement()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
+				 QucircuitFactory.eINSTANCE.createMeasurement()));
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
-				QuCircuitFactory.eINSTANCE.createElementaryQuantumGate()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
+				 QucircuitFactory.eINSTANCE.createElementaryQuantumGate()));
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
-				QuCircuitFactory.eINSTANCE.createCompositeQuantumGate()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
+				 QucircuitFactory.eINSTANCE.createCompositeQuantumGate()));
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
-				QuCircuitFactory.eINSTANCE.createLoop()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.LAYER__QUANTUM_OPERATIONS,
+				 QucircuitFactory.eINSTANCE.createLoopOperation()));
 	}
 
 }

@@ -3,7 +3,7 @@ package quantum.operation.definition.api;
 import org.eclipse.emf.ecore.EClass;
 
 import quope.Parameter;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 public abstract class AbstractExtendElementaryQuantumGate extends LibraryQuantumGate {
 	
@@ -17,6 +17,6 @@ public abstract class AbstractExtendElementaryQuantumGate extends LibraryQuantum
 	
 	@Override
 	public EClass getAbstractQuantumGate() {
-		return QuCircuitPackage.eINSTANCE.getElementaryQuantumGate();
+		return QucircuitPackage.eINSTANCE.getElementaryQuantumGate();
 	}	
 }

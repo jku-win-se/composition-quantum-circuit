@@ -16,11 +16,11 @@ import quope.ConcreteQuantumOperation;
  * </p>
  * <ul>
  *   <li>{@link qucircuit.QuantumOperation#getClassicControl <em>Classic Control</em>}</li>
- *   <li>{@link qucircuit.QuantumOperation#getOperation <em>Operation</em>}</li>
+ *   <li>{@link qucircuit.QuantumOperation#getOperations <em>Operations</em>}</li>
  *   <li>{@link qucircuit.QuantumOperation#getTargetQubits <em>Target Qubits</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getQuantumOperation()
+ * @see qucircuit.QucircuitPackage#getQuantumOperation()
  * @model abstract="true"
  *        annotation="http://www.eclipse.org/emf/2002/GenModel"
  * @generated
@@ -32,7 +32,7 @@ public interface QuantumOperation extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Classic Control</em>' containment reference.
 	 * @see #setClassicControl(ClassicControl)
-	 * @see qucircuit.QuCircuitPackage#getQuantumOperation_ClassicControl()
+	 * @see qucircuit.QucircuitPackage#getQuantumOperation_ClassicControl()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -49,37 +49,27 @@ public interface QuantumOperation extends NamedElement {
 	void setClassicControl(ClassicControl value);
 
 	/**
-	 * Returns the value of the '<em><b>Operation</b></em>' reference.
+	 * Returns the value of the '<em><b>Operations</b></em>' reference list.
+	 * The list contents are of type {@link quope.ConcreteQuantumOperation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operation</em>' reference.
-	 * @see #setOperation(ConcreteQuantumOperation)
-	 * @see qucircuit.QuCircuitPackage#getQuantumOperation_Operation()
-	 * @model
-	 * @generated
-	 */
-	ConcreteQuantumOperation getOperation();
-
-	/**
-	 * Sets the value of the '{@link qucircuit.QuantumOperation#getOperation <em>Operation</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Operation</em>' reference.
-	 * @see #getOperation()
-	 * @generated
-	 */
-	void setOperation(ConcreteQuantumOperation value);
-
-	/**
-	 * Returns the value of the '<em><b>Target Qubits</b></em>' reference list.
-	 * The list contents are of type {@link qucircuit.Qubit}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Qubits</em>' reference list.
-	 * @see qucircuit.QuCircuitPackage#getQuantumOperation_TargetQubits()
+	 * @return the value of the '<em>Operations</em>' reference list.
+	 * @see qucircuit.QucircuitPackage#getQuantumOperation_Operations()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Qubit> getTargetQubits();
+	EList<ConcreteQuantumOperation> getOperations();
+
+	/**
+	 * Returns the value of the '<em><b>Target Qubits</b></em>' containment reference list.
+	 * The list contents are of type {@link qucircuit.Index}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Target Qubits</em>' containment reference list.
+	 * @see qucircuit.QucircuitPackage#getQuantumOperation_TargetQubits()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<Index> getTargetQubits();
 
 } // QuantumOperation

@@ -2,6 +2,7 @@
  */
 package qucircuit.presentation;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -68,9 +69,10 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import qucircuit.QuCircuitFactory;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitFactory;
+import qucircuit.QucircuitPackage;
 import qucircuit.provider.QuCircuitEditPlugin;
+
 
 import org.eclipse.core.runtime.Path;
 
@@ -82,21 +84,22 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 
+
 /**
  * This is a simple wizard for creating a new model file.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class QuCircuitModelWizard extends Wizard implements INewWizard {
+public class QucircuitModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The supported extensions for created files.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<String> FILE_EXTENSIONS = Collections.unmodifiableList(Arrays.asList(
-			QuCircuitEditorPlugin.INSTANCE.getString("_UI_QuCircuitEditorFilenameExtensions").split("\\s*,\\s*")));
+	public static final List<String> FILE_EXTENSIONS =
+		Collections.unmodifiableList(Arrays.asList(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -104,8 +107,8 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final String FORMATTED_FILE_EXTENSIONS = QuCircuitEditorPlugin.INSTANCE
-			.getString("_UI_QuCircuitEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+	public static final String FORMATTED_FILE_EXTENSIONS =
+		QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -113,7 +116,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QuCircuitPackage quCircuitPackage = QuCircuitPackage.eINSTANCE;
+	protected QucircuitPackage qucircuitPackage = QucircuitPackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -121,7 +124,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QuCircuitFactory quCircuitFactory = quCircuitPackage.getQuCircuitFactory();
+	protected QucircuitFactory qucircuitFactory = qucircuitPackage.getQucircuitFactory();
 
 	/**
 	 * This is the file creation page.
@@ -129,7 +132,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QuCircuitModelWizardNewFileCreationPage newFileCreationPage;
+	protected QucircuitModelWizardNewFileCreationPage newFileCreationPage;
 
 	/**
 	 * This is the initial object creation page.
@@ -137,7 +140,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QuCircuitModelWizardInitialObjectCreationPage initialObjectCreationPage;
+	protected QucircuitModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
 	/**
 	 * Remember the selection during initialization for populating the default container.
@@ -173,8 +176,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 		this.workbench = workbench;
 		this.selection = selection;
 		setWindowTitle(QuCircuitEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
-				.getImageDescriptor(QuCircuitEditorPlugin.INSTANCE.getImage("full/wizban/NewQuCircuit")));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(QuCircuitEditorPlugin.INSTANCE.getImage("full/wizban/NewQucircuit")));
 	}
 
 	/**
@@ -186,9 +188,9 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	protected Collection<String> getInitialObjectNames() {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : quCircuitPackage.getEClassifiers()) {
+			for (EClassifier eClassifier : qucircuitPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
-					EClass eClass = (EClass) eClassifier;
+					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
 						initialObjectNames.add(eClass.getName());
 					}
@@ -206,8 +208,8 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	protected EObject createInitialModel() {
-		EClass eClass = (EClass) quCircuitPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = quCircuitFactory.create(eClass);
+		EClass eClass = (EClass)qucircuitPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = qucircuitFactory.create(eClass);
 		return rootObject;
 	}
 
@@ -226,41 +228,44 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 
 			// Do the work within an operation.
 			//
-			WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
-				@Override
-				protected void execute(IProgressMonitor progressMonitor) {
-					try {
-						// Create a resource set
-						//
-						ResourceSet resourceSet = new ResourceSetImpl();
+			WorkspaceModifyOperation operation =
+				new WorkspaceModifyOperation() {
+					@Override
+					protected void execute(IProgressMonitor progressMonitor) {
+						try {
+							// Create a resource set
+							//
+							ResourceSet resourceSet = new ResourceSetImpl();
 
-						// Get the URI of the model file.
-						//
-						URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
+							// Get the URI of the model file.
+							//
+							URI fileURI = URI.createPlatformResourceURI(modelFile.getFullPath().toString(), true);
 
-						// Create a resource for this file.
-						//
-						Resource resource = resourceSet.createResource(fileURI);
+							// Create a resource for this file.
+							//
+							Resource resource = resourceSet.createResource(fileURI);
 
-						// Add the initial model object to the contents.
-						//
-						EObject rootObject = createInitialModel();
-						if (rootObject != null) {
-							resource.getContents().add(rootObject);
+							// Add the initial model object to the contents.
+							//
+							EObject rootObject = createInitialModel();
+							if (rootObject != null) {
+								resource.getContents().add(rootObject);
+							}
+
+							// Save the contents of the resource to the file system.
+							//
+							Map<Object, Object> options = new HashMap<Object, Object>();
+							options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
+							resource.save(options);
 						}
-
-						// Save the contents of the resource to the file system.
-						//
-						Map<Object, Object> options = new HashMap<Object, Object>();
-						options.put(XMLResource.OPTION_ENCODING, initialObjectCreationPage.getEncoding());
-						resource.save(options);
-					} catch (Exception exception) {
-						QuCircuitEditorPlugin.INSTANCE.log(exception);
-					} finally {
-						progressMonitor.done();
+						catch (Exception exception) {
+							QuCircuitEditorPlugin.INSTANCE.log(exception);
+						}
+						finally {
+							progressMonitor.done();
+						}
 					}
-				}
-			};
+				};
 
 			getContainer().run(false, false, operation);
 
@@ -271,26 +276,29 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 			final IWorkbenchPart activePart = page.getActivePart();
 			if (activePart instanceof ISetSelectionTarget) {
 				final ISelection targetSelection = new StructuredSelection(modelFile);
-				getShell().getDisplay().asyncExec(new Runnable() {
-					public void run() {
-						((ISetSelectionTarget) activePart).selectReveal(targetSelection);
-					}
-				});
+				getShell().getDisplay().asyncExec
+					(new Runnable() {
+						 public void run() {
+							 ((ISetSelectionTarget)activePart).selectReveal(targetSelection);
+						 }
+					 });
 			}
 
 			// Open an editor on the new file.
 			//
 			try {
-				page.openEditor(new FileEditorInput(modelFile),
-						workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());
-			} catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(),
-						QuCircuitEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+				page.openEditor
+					(new FileEditorInput(modelFile),
+					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
+			}
+			catch (PartInitException exception) {
+				MessageDialog.openError(workbenchWindow.getShell(), QuCircuitEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			QuCircuitEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
@@ -302,14 +310,14 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class QuCircuitModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+	public class QucircuitModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public QuCircuitModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
+		public QucircuitModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
 			super(pageId, selection);
 		}
 
@@ -325,8 +333,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(
-							QuCircuitEditorPlugin.INSTANCE.getString(key, new Object[] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(QuCircuitEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -350,7 +357,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class QuCircuitModelWizardInitialObjectCreationPage extends WizardPage {
+	public class QucircuitModelWizardInitialObjectCreationPage extends WizardPage {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -378,7 +385,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public QuCircuitModelWizardInitialObjectCreationPage(String pageId) {
+		public QucircuitModelWizardInitialObjectCreationPage(String pageId) {
 			super(pageId);
 		}
 
@@ -388,8 +395,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE);
-			{
+			Composite composite = new Composite(parent, SWT.NONE); {
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;
@@ -460,11 +466,12 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected ModifyListener validator = new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				setPageComplete(validatePage());
-			}
-		};
+		protected ModifyListener validator =
+			new ModifyListener() {
+				public void modifyText(ModifyEvent e) {
+					setPageComplete(validatePage());
+				}
+			};
 
 		/**
 		 * <!-- begin-user-doc -->
@@ -487,7 +494,8 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 				if (initialObjectField.getItemCount() == 1) {
 					initialObjectField.clearSelection();
 					encodingField.setFocus();
-				} else {
+				}
+				else {
 					encodingField.clearSelection();
 					initialObjectField.setFocus();
 				}
@@ -528,7 +536,8 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 		protected String getLabel(String typeName) {
 			try {
 				return QuCircuitEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
-			} catch (MissingResourceException mre) {
+			}
+			catch(MissingResourceException mre) {
 				QuCircuitEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
@@ -542,9 +551,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(
-						QuCircuitEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer
-								.hasMoreTokens();) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(QuCircuitEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -558,17 +565,14 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
+		@Override
 	public void addPages() {
 		// Create a page, set the title, and the initial model file name.
 		//
-		newFileCreationPage = new QuCircuitModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QuCircuitModelWizard_label"));
-		newFileCreationPage
-				.setDescription(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QuCircuitModelWizard_description"));
-		newFileCreationPage
-				.setFileName(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QuCircuitEditorFilenameDefaultBase") + "."
-						+ FILE_EXTENSIONS.get(0));
+		newFileCreationPage = new QucircuitModelWizardNewFileCreationPage("Whatever", selection);
+		newFileCreationPage.setTitle(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitModelWizard_label"));
+		newFileCreationPage.setDescription(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitModelWizard_description"));
+		newFileCreationPage.setFileName(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -580,7 +584,7 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 			if (selectedElement instanceof IResource) {
 				// Get the resource parent, if its a file.
 				//
-				IResource selectedResource = (IResource) selectedElement;
+				IResource selectedResource = (IResource)selectedElement;
 				if (selectedResource.getType() == IResource.FILE) {
 					selectedResource = selectedResource.getParent();
 				}
@@ -594,21 +598,19 @@ public class QuCircuitModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = QuCircuitEditorPlugin.INSTANCE
-							.getString("_UI_QuCircuitEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
-					for (int i = 1; ((IContainer) selectedResource).findMember(modelFilename) != null; ++i) {
+					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
 						modelFilename = defaultModelBaseFilename + i + "." + defaultModelFilenameExtension;
 					}
 					newFileCreationPage.setFileName(modelFilename);
 				}
 			}
 		}
-		initialObjectCreationPage = new QuCircuitModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QuCircuitModelWizard_label"));
-		initialObjectCreationPage
-				.setDescription(QuCircuitEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage = new QucircuitModelWizardInitialObjectCreationPage("Whatever2");
+		initialObjectCreationPage.setTitle(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitModelWizard_label"));
+		initialObjectCreationPage.setDescription(QuCircuitEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 

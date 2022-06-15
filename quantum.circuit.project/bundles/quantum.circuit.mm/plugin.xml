@@ -10,7 +10,7 @@
       <!-- @generated QuCircuit -->
       <package
             uri="http://www.eclipse.org/QuCircuit"
-            class="qucircuit.QuCircuitPackage"
+            class="qucircuit.QucircuitPackage"
             genModel="model/QuCircuit.genmodel"/>
    </extension>
 

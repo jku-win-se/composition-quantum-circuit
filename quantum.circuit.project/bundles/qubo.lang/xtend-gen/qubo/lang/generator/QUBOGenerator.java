@@ -15,8 +15,8 @@ import org.eclipse.xtext.xbase.lib.Exceptions;
 import quantum.operation.definition.api.utils.QuantumOperationUtils;
 import qubo.Qubo;
 import qubo.lang.utils.QuboUtils;
-import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumCircuit;
+import qucircuit.QucircuitPackage;
 import quope.QuantumOperationLibrary;
 import quope.QuopePackage;
 
@@ -57,7 +57,7 @@ public class QUBOGenerator extends AbstractGenerator {
   
   public void generateQUBOQuantumCircuit(final IFileSystemAccess2 fsa, final Resource resource, final QuantumOperationLibrary quantumOpLib) {
     try {
-      URI quCircuitURI = this.createURI(fsa, resource, "qu-circuit", QuCircuitPackage.eNS_PREFIX);
+      URI quCircuitURI = this.createURI(fsa, resource, "qu-circuit", QucircuitPackage.eNS_PREFIX);
       ResourceSet reset = resource.getResourceSet();
       Resource quCircuit = reset.createResource(quCircuitURI);
       EObject _get = resource.getContents().get(0);

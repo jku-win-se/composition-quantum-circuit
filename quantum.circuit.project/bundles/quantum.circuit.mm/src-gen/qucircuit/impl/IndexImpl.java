@@ -4,23 +4,25 @@ package qucircuit.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import qucircuit.QuCircuitPackage;
-import qucircuit.Qubit;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import qucircuit.Index;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Qubit</b></em>'.
+ * An implementation of the model object '<em><b>Index</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class QubitImpl extends BitImpl implements Qubit {
+public abstract class IndexImpl extends MinimalEObjectImpl.Container implements Index {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QubitImpl() {
+	protected IndexImpl() {
 		super();
 	}
 
@@ -31,7 +33,7 @@ public class QubitImpl extends BitImpl implements Qubit {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.QUBIT;
+		return QucircuitPackage.Literals.INDEX;
 	}
 
-} //QubitImpl
+} //IndexImpl

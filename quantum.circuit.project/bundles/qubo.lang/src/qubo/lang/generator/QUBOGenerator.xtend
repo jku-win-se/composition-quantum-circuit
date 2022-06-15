@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import qucircuit.QuCircuitPackage
+import qucircuit.QucircuitPackage
 import qucircuit.QuantumCircuit
 import quope.QuantumOperationLibrary
 import quantum.operation.definition.api.utils.QuantumOperationUtils
@@ -48,7 +48,7 @@ class QUBOGenerator extends AbstractGenerator {
 	}
 	
 	def generateQUBOQuantumCircuit(IFileSystemAccess2 fsa, Resource resource, QuantumOperationLibrary quantumOpLib) {
-		var URI quCircuitURI = createURI(fsa, resource, 'qu-circuit', QuCircuitPackage.eNS_PREFIX)
+		var URI quCircuitURI = createURI(fsa, resource, 'qu-circuit', QucircuitPackage.eNS_PREFIX)
 		var ResourceSet reset = resource.resourceSet; 
 		var Resource quCircuit = reset.createResource(quCircuitURI);
 		var Qubo qubo = resource.contents.get(0) as Qubo;

@@ -19,17 +19,17 @@ import qucircuit.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see qucircuit.QuCircuitPackage
+ * @see qucircuit.QucircuitPackage
  * @generated
  */
-public class QuCircuitSwitch<T> extends Switch<T> {
+public class QucircuitSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static QuCircuitPackage modelPackage;
+	protected static QucircuitPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuCircuitSwitch() {
+	public QucircuitSwitch() {
 		if (modelPackage == null) {
-			modelPackage = QuCircuitPackage.eINSTANCE;
+			modelPackage = QucircuitPackage.eINSTANCE;
 		}
 	}
 
@@ -66,188 +66,142 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT: {
-			QuantumCircuit quantumCircuit = (QuantumCircuit) theEObject;
-			T result = caseQuantumCircuit(quantumCircuit);
-			if (result == null)
-				result = caseNamedElement(quantumCircuit);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.NAMED_ELEMENT: {
-			NamedElement namedElement = (NamedElement) theEObject;
-			T result = caseNamedElement(namedElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.QUANTUM_REGISTER: {
-			QuantumRegister quantumRegister = (QuantumRegister) theEObject;
-			T result = caseQuantumRegister(quantumRegister);
-			if (result == null)
-				result = caseNamedElement(quantumRegister);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.CLASSIC_REGISTER: {
-			ClassicRegister classicRegister = (ClassicRegister) theEObject;
-			T result = caseClassicRegister(classicRegister);
-			if (result == null)
-				result = caseNamedElement(classicRegister);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.QUBIT: {
-			Qubit qubit = (Qubit) theEObject;
-			T result = caseQubit(qubit);
-			if (result == null)
-				result = caseBit(qubit);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.CLASSIC_BIT: {
-			ClassicBit classicBit = (ClassicBit) theEObject;
-			T result = caseClassicBit(classicBit);
-			if (result == null)
-				result = caseBit(classicBit);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.LAYER: {
-			Layer layer = (Layer) theEObject;
-			T result = caseLayer(layer);
-			if (result == null)
-				result = caseNamedElement(layer);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.CLASSIC_CONTROL: {
-			ClassicControl classicControl = (ClassicControl) theEObject;
-			T result = caseClassicControl(classicControl);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.QUANTUM_OPERATION: {
-			QuantumOperation quantumOperation = (QuantumOperation) theEObject;
-			T result = caseQuantumOperation(quantumOperation);
-			if (result == null)
-				result = caseNamedElement(quantumOperation);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.ABSTRACT_QUANTUM_GATE: {
-			AbstractQuantumGate abstractQuantumGate = (AbstractQuantumGate) theEObject;
-			T result = caseAbstractQuantumGate(abstractQuantumGate);
-			if (result == null)
-				result = caseQuantumOperation(abstractQuantumGate);
-			if (result == null)
-				result = caseNamedElement(abstractQuantumGate);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.STATE_PREPARATION: {
-			StatePreparation statePreparation = (StatePreparation) theEObject;
-			T result = caseStatePreparation(statePreparation);
-			if (result == null)
-				result = caseQuantumOperation(statePreparation);
-			if (result == null)
-				result = caseNamedElement(statePreparation);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.MEASUREMENT: {
-			Measurement measurement = (Measurement) theEObject;
-			T result = caseMeasurement(measurement);
-			if (result == null)
-				result = caseQuantumOperation(measurement);
-			if (result == null)
-				result = caseNamedElement(measurement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE: {
-			ElementaryQuantumGate elementaryQuantumGate = (ElementaryQuantumGate) theEObject;
-			T result = caseElementaryQuantumGate(elementaryQuantumGate);
-			if (result == null)
-				result = caseAbstractQuantumGate(elementaryQuantumGate);
-			if (result == null)
-				result = caseQuantumOperation(elementaryQuantumGate);
-			if (result == null)
-				result = caseNamedElement(elementaryQuantumGate);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.COMPOSITE_QUANTUM_GATE: {
-			CompositeQuantumGate compositeQuantumGate = (CompositeQuantumGate) theEObject;
-			T result = caseCompositeQuantumGate(compositeQuantumGate);
-			if (result == null)
-				result = caseAbstractCompositeGate(compositeQuantumGate);
-			if (result == null)
-				result = caseAbstractQuantumGate(compositeQuantumGate);
-			if (result == null)
-				result = caseQuantumOperation(compositeQuantumGate);
-			if (result == null)
-				result = caseNamedElement(compositeQuantumGate);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.ANGLE_PARAMETER: {
-			AngleParameter angleParameter = (AngleParameter) theEObject;
-			T result = caseAngleParameter(angleParameter);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.BIT: {
-			Bit bit = (Bit) theEObject;
-			T result = caseBit(bit);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.ABSTRACT_COMPOSITE_GATE: {
-			AbstractCompositeGate abstractCompositeGate = (AbstractCompositeGate) theEObject;
-			T result = caseAbstractCompositeGate(abstractCompositeGate);
-			if (result == null)
-				result = caseAbstractQuantumGate(abstractCompositeGate);
-			if (result == null)
-				result = caseQuantumOperation(abstractCompositeGate);
-			if (result == null)
-				result = caseNamedElement(abstractCompositeGate);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case QuCircuitPackage.LOOP: {
-			Loop loop = (Loop) theEObject;
-			T result = caseLoop(loop);
-			if (result == null)
-				result = caseAbstractCompositeGate(loop);
-			if (result == null)
-				result = caseAbstractQuantumGate(loop);
-			if (result == null)
-				result = caseQuantumOperation(loop);
-			if (result == null)
-				result = caseNamedElement(loop);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		default:
-			return defaultCase(theEObject);
+			case QucircuitPackage.QUANTUM_CIRCUIT: {
+				QuantumCircuit quantumCircuit = (QuantumCircuit)theEObject;
+				T result = caseQuantumCircuit(quantumCircuit);
+				if (result == null) result = caseNamedElement(quantumCircuit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.NAMED_ELEMENT: {
+				NamedElement namedElement = (NamedElement)theEObject;
+				T result = caseNamedElement(namedElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.QUANTUM_REGISTER: {
+				QuantumRegister quantumRegister = (QuantumRegister)theEObject;
+				T result = caseQuantumRegister(quantumRegister);
+				if (result == null) result = caseNamedElement(quantumRegister);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.CLASSIC_REGISTER: {
+				ClassicRegister classicRegister = (ClassicRegister)theEObject;
+				T result = caseClassicRegister(classicRegister);
+				if (result == null) result = caseNamedElement(classicRegister);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.LAYER: {
+				Layer layer = (Layer)theEObject;
+				T result = caseLayer(layer);
+				if (result == null) result = caseNamedElement(layer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.CLASSIC_CONTROL: {
+				ClassicControl classicControl = (ClassicControl)theEObject;
+				T result = caseClassicControl(classicControl);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.QUANTUM_OPERATION: {
+				QuantumOperation quantumOperation = (QuantumOperation)theEObject;
+				T result = caseQuantumOperation(quantumOperation);
+				if (result == null) result = caseNamedElement(quantumOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.ABSTRACT_QUANTUM_GATE: {
+				AbstractQuantumGate abstractQuantumGate = (AbstractQuantumGate)theEObject;
+				T result = caseAbstractQuantumGate(abstractQuantumGate);
+				if (result == null) result = caseQuantumOperation(abstractQuantumGate);
+				if (result == null) result = caseNamedElement(abstractQuantumGate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.STATE_PREPARATION: {
+				StatePreparation statePreparation = (StatePreparation)theEObject;
+				T result = caseStatePreparation(statePreparation);
+				if (result == null) result = caseQuantumOperation(statePreparation);
+				if (result == null) result = caseNamedElement(statePreparation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.MEASUREMENT: {
+				Measurement measurement = (Measurement)theEObject;
+				T result = caseMeasurement(measurement);
+				if (result == null) result = caseQuantumOperation(measurement);
+				if (result == null) result = caseNamedElement(measurement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE: {
+				ElementaryQuantumGate elementaryQuantumGate = (ElementaryQuantumGate)theEObject;
+				T result = caseElementaryQuantumGate(elementaryQuantumGate);
+				if (result == null) result = caseAbstractQuantumGate(elementaryQuantumGate);
+				if (result == null) result = caseQuantumOperation(elementaryQuantumGate);
+				if (result == null) result = caseNamedElement(elementaryQuantumGate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.COMPOSITE_QUANTUM_GATE: {
+				CompositeQuantumGate compositeQuantumGate = (CompositeQuantumGate)theEObject;
+				T result = caseCompositeQuantumGate(compositeQuantumGate);
+				if (result == null) result = caseAbstractCompositeGate(compositeQuantumGate);
+				if (result == null) result = caseAbstractQuantumGate(compositeQuantumGate);
+				if (result == null) result = caseQuantumOperation(compositeQuantumGate);
+				if (result == null) result = caseNamedElement(compositeQuantumGate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.ANGLE_PARAMETER: {
+				AngleParameter angleParameter = (AngleParameter)theEObject;
+				T result = caseAngleParameter(angleParameter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.ABSTRACT_COMPOSITE_GATE: {
+				AbstractCompositeGate abstractCompositeGate = (AbstractCompositeGate)theEObject;
+				T result = caseAbstractCompositeGate(abstractCompositeGate);
+				if (result == null) result = caseAbstractQuantumGate(abstractCompositeGate);
+				if (result == null) result = caseQuantumOperation(abstractCompositeGate);
+				if (result == null) result = caseNamedElement(abstractCompositeGate);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.LOOP_OPERATION: {
+				LoopOperation loopOperation = (LoopOperation)theEObject;
+				T result = caseLoopOperation(loopOperation);
+				if (result == null) result = caseAbstractCompositeGate(loopOperation);
+				if (result == null) result = caseAbstractQuantumGate(loopOperation);
+				if (result == null) result = caseQuantumOperation(loopOperation);
+				if (result == null) result = caseNamedElement(loopOperation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.INDEX: {
+				Index index = (Index)theEObject;
+				T result = caseIndex(index);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.INDEX_INT: {
+				IndexInt indexInt = (IndexInt)theEObject;
+				T result = caseIndexInt(indexInt);
+				if (result == null) result = caseIndex(indexInt);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.INDEX_RANGE: {
+				IndexRange indexRange = (IndexRange)theEObject;
+				T result = caseIndexRange(indexRange);
+				if (result == null) result = caseIndex(indexRange);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			default: return defaultCase(theEObject);
 		}
 	}
 
@@ -308,36 +262,6 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClassicRegister(ClassicRegister object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Qubit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Qubit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQubit(Qubit object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Classic Bit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Classic Bit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseClassicBit(ClassicBit object) {
 		return null;
 	}
 
@@ -477,21 +401,6 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bit</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bit</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBit(Bit object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Abstract Composite Gate</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -507,17 +416,62 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Loop</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Loop Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Loop</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Loop Operation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLoop(Loop object) {
+	public T caseLoopOperation(LoopOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Index</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Index</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIndex(Index object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Index Int</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Index Int</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIndexInt(IndexInt object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Index Range</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Index Range</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIndexRange(IndexRange object) {
 		return null;
 	}
 
@@ -537,4 +491,4 @@ public class QuCircuitSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //QuCircuitSwitch
+} //QucircuitSwitch

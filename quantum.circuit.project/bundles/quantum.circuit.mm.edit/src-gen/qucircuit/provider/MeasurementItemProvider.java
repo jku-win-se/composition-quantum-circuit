@@ -2,17 +2,21 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import qucircuit.Measurement;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitFactory;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.Measurement} object.
@@ -42,24 +46,38 @@ public class MeasurementItemProvider extends QuantumOperationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addClassicBitsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Classic Bits feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClassicBitsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Measurement_classicBits_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Measurement_classicBits_feature",
-								"_UI_Measurement_type"),
-						QuCircuitPackage.Literals.MEASUREMENT__CLASSIC_BITS, true, false, true, null, null, null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(QucircuitPackage.Literals.MEASUREMENT__CLASSIC_BITS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -74,16 +92,6 @@ public class MeasurementItemProvider extends QuantumOperationItemProvider {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,10 +99,12 @@ public class MeasurementItemProvider extends QuantumOperationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Measurement) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Measurement_type")
-				: getString("_UI_Measurement_type") + " " + label;
+		String label = ((Measurement)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Measurement_type") :
+			getString("_UI_Measurement_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -106,6 +116,12 @@ public class MeasurementItemProvider extends QuantumOperationItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Measurement.class)) {
+			case QucircuitPackage.MEASUREMENT__CLASSIC_BITS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -119,6 +135,39 @@ public class MeasurementItemProvider extends QuantumOperationItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.MEASUREMENT__CLASSIC_BITS,
+				 QucircuitFactory.eINSTANCE.createIndexInt()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.MEASUREMENT__CLASSIC_BITS,
+				 QucircuitFactory.eINSTANCE.createIndexRange()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS ||
+			childFeature == QucircuitPackage.Literals.MEASUREMENT__CLASSIC_BITS;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

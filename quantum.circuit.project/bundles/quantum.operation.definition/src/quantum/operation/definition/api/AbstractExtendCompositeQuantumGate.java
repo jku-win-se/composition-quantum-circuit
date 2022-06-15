@@ -5,13 +5,13 @@ import java.util.Collection;
 import org.eclipse.emf.ecore.EClass;
 
 import qucircuit.CompositeQuantumGate;
-import qucircuit.QuCircuitPackage;
+import qucircuit.Index;
+import qucircuit.QucircuitPackage;
 import qucircuit.QuantumOperation;
-import qucircuit.Qubit;
 
 public abstract class AbstractExtendCompositeQuantumGate extends LibraryQuantumGate {
 	
-	public abstract CompositeQuantumGate getCustomBlock(Collection<Qubit> qubits, QuantumOperation quOperation);
+	public abstract CompositeQuantumGate getCustomBlock(Collection<Index> qubits, QuantumOperation quOperation);
 	
 	protected boolean reversible() {
 		return true;
@@ -19,6 +19,6 @@ public abstract class AbstractExtendCompositeQuantumGate extends LibraryQuantumG
 	
 	@Override
 	public EClass getAbstractQuantumGate() {
-		return QuCircuitPackage.eINSTANCE.getCompositeQuantumGate();
+		return QucircuitPackage.eINSTANCE.getCompositeQuantumGate();
 	}
 }

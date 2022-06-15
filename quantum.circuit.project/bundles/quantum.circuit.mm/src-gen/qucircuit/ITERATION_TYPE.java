@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>ITERATION TYPE</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see qucircuit.QuCircuitPackage#getITERATION_TYPE()
+ * @see qucircuit.QucircuitPackage#getITERATION_TYPE()
  * @model
  * @generated
  */
@@ -87,7 +87,12 @@ public enum ITERATION_TYPE implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ITERATION_TYPE[] VALUES_ARRAY = new ITERATION_TYPE[] { NONE, SHIFT, CHANGE_BLOCK, };
+	private static final ITERATION_TYPE[] VALUES_ARRAY =
+		new ITERATION_TYPE[] {
+			NONE,
+			SHIFT,
+			CHANGE_BLOCK,
+		};
 
 	/**
 	 * A public read-only list of all the '<em><b>ITERATION TYPE</b></em>' enumerators.
@@ -143,12 +148,9 @@ public enum ITERATION_TYPE implements Enumerator {
 	 */
 	public static ITERATION_TYPE get(int value) {
 		switch (value) {
-		case NONE_VALUE:
-			return NONE;
-		case SHIFT_VALUE:
-			return SHIFT;
-		case CHANGE_BLOCK_VALUE:
-			return CHANGE_BLOCK;
+			case NONE_VALUE: return NONE;
+			case SHIFT_VALUE: return SHIFT;
+			case CHANGE_BLOCK_VALUE: return CHANGE_BLOCK;
 		}
 		return null;
 	}
@@ -192,7 +194,7 @@ public enum ITERATION_TYPE implements Enumerator {
 	 * @generated
 	 */
 	public int getValue() {
-		return value;
+	  return value;
 	}
 
 	/**
@@ -201,7 +203,7 @@ public enum ITERATION_TYPE implements Enumerator {
 	 * @generated
 	 */
 	public String getName() {
-		return name;
+	  return name;
 	}
 
 	/**
@@ -210,7 +212,7 @@ public enum ITERATION_TYPE implements Enumerator {
 	 * @generated
 	 */
 	public String getLiteral() {
-		return literal;
+	  return literal;
 	}
 
 	/**
@@ -223,5 +225,5 @@ public enum ITERATION_TYPE implements Enumerator {
 	public String toString() {
 		return literal;
 	}
-
+	
 } //ITERATION_TYPE

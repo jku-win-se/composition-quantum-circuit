@@ -38,7 +38,10 @@ public final class QuCircuitEditPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public QuCircuitEditPlugin() {
-		super(new ResourceLocator[] { QuantumOpeEditPlugin.INSTANCE, });
+		super
+		  (new ResourceLocator [] {
+		     QuantumOpeEditPlugin.INSTANCE,
+		   });
 	}
 
 	/**

@@ -2,7 +2,6 @@
  */
 package qucircuit;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,24 +12,34 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link qucircuit.ClassicRegister#getClassicBits <em>Classic Bits</em>}</li>
+ *   <li>{@link qucircuit.ClassicRegister#getNumberOfBits <em>Number Of Bits</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getClassicRegister()
+ * @see qucircuit.QucircuitPackage#getClassicRegister()
  * @model
  * @generated
  */
 public interface ClassicRegister extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Classic Bits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.ClassicBit}.
+	 * Returns the value of the '<em><b>Number Of Bits</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Classic Bits</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getClassicRegister_ClassicBits()
-	 * @model containment="true"
+	 * @return the value of the '<em>Number Of Bits</em>' attribute.
+	 * @see #setNumberOfBits(Integer)
+	 * @see qucircuit.QucircuitPackage#getClassicRegister_NumberOfBits()
+	 * @model
 	 * @generated
 	 */
-	EList<ClassicBit> getClassicBits();
+	Integer getNumberOfBits();
+
+	/**
+	 * Sets the value of the '{@link qucircuit.ClassicRegister#getNumberOfBits <em>Number Of Bits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Bits</em>' attribute.
+	 * @see #getNumberOfBits()
+	 * @generated
+	 */
+	void setNumberOfBits(Integer value);
 
 } // ClassicRegister

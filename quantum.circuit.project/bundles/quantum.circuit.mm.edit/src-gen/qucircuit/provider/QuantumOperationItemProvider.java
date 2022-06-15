@@ -2,6 +2,7 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -14,9 +15,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import qucircuit.QuCircuitFactory;
-import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumOperation;
+import qucircuit.QucircuitFactory;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.QuantumOperation} object.
@@ -46,40 +47,31 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addOperationPropertyDescriptor(object);
-			addTargetQubitsPropertyDescriptor(object);
+			addOperationsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Operation feature.
+	 * This adds a property descriptor for the Operations feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOperationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_QuantumOperation_operation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_QuantumOperation_operation_feature",
-								"_UI_QuantumOperation_type"),
-						QuCircuitPackage.Literals.QUANTUM_OPERATION__OPERATION, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Target Qubits feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetQubitsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_QuantumOperation_targetQubits_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_QuantumOperation_targetQubits_feature",
-						"_UI_QuantumOperation_type"),
-				QuCircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS, true, false, true, null, null, null));
+	protected void addOperationsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_QuantumOperation_operations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_QuantumOperation_operations_feature", "_UI_QuantumOperation_type"),
+				 QucircuitPackage.Literals.QUANTUM_OPERATION__OPERATIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -94,7 +86,8 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(QuCircuitPackage.Literals.QUANTUM_OPERATION__CLASSIC_CONTROL);
+			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_OPERATION__CLASSIC_CONTROL);
+			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS);
 		}
 		return childrenFeatures;
 	}
@@ -113,16 +106,6 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,10 +113,12 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((QuantumOperation) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_QuantumOperation_type")
-				: getString("_UI_QuantumOperation_type") + " " + label;
+		String label = ((QuantumOperation)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_QuantumOperation_type") :
+			getString("_UI_QuantumOperation_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -147,9 +132,10 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(QuantumOperation.class)) {
-		case QuCircuitPackage.QUANTUM_OPERATION__CLASSIC_CONTROL:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case QucircuitPackage.QUANTUM_OPERATION__CLASSIC_CONTROL:
+			case QucircuitPackage.QUANTUM_OPERATION__TARGET_QUBITS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -165,8 +151,20 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.QUANTUM_OPERATION__CLASSIC_CONTROL,
-				QuCircuitFactory.eINSTANCE.createClassicControl()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.QUANTUM_OPERATION__CLASSIC_CONTROL,
+				 QucircuitFactory.eINSTANCE.createClassicControl()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS,
+				 QucircuitFactory.eINSTANCE.createIndexInt()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS,
+				 QucircuitFactory.eINSTANCE.createIndexRange()));
 	}
 
 }

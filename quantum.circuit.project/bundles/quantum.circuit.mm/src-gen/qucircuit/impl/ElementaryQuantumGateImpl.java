@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import qucircuit.AngleParameter;
 import qucircuit.ElementaryQuantumGate;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.ELEMENTARY_QUANTUM_GATE;
+		return QucircuitPackage.Literals.ELEMENTARY_QUANTUM_GATE;
 	}
 
 	/**
@@ -75,12 +75,8 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 		AngleParameter oldAngleParameter = angleParameter;
 		angleParameter = newAngleParameter;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, oldAngleParameter, newAngleParameter);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, oldAngleParameter, newAngleParameter);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -94,17 +90,14 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 		if (newAngleParameter != angleParameter) {
 			NotificationChain msgs = null;
 			if (angleParameter != null)
-				msgs = ((InternalEObject) angleParameter).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, null, msgs);
+				msgs = ((InternalEObject)angleParameter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, null, msgs);
 			if (newAngleParameter != null)
-				msgs = ((InternalEObject) newAngleParameter).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, null, msgs);
+				msgs = ((InternalEObject)newAngleParameter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, null, msgs);
 			msgs = basicSetAngleParameter(newAngleParameter, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, newAngleParameter, newAngleParameter));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER, newAngleParameter, newAngleParameter));
 	}
 
 	/**
@@ -115,8 +108,8 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
-			return basicSetAngleParameter(null, msgs);
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
+				return basicSetAngleParameter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -129,8 +122,8 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
-			return getAngleParameter();
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
+				return getAngleParameter();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,9 +136,9 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
-			setAngleParameter((AngleParameter) newValue);
-			return;
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
+				setAngleParameter((AngleParameter)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -158,9 +151,9 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
-			setAngleParameter((AngleParameter) null);
-			return;
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
+				setAngleParameter((AngleParameter)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -173,8 +166,8 @@ public class ElementaryQuantumGateImpl extends AbstractQuantumGateImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
-			return angleParameter != null;
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
+				return angleParameter != null;
 		}
 		return super.eIsSet(featureID);
 	}

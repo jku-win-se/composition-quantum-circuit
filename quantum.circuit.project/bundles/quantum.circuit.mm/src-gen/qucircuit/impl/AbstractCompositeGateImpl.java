@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.AbstractCompositeGate;
 import qucircuit.Layer;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +58,7 @@ public abstract class AbstractCompositeGateImpl extends AbstractQuantumGateImpl 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.ABSTRACT_COMPOSITE_GATE;
+		return QucircuitPackage.Literals.ABSTRACT_COMPOSITE_GATE;
 	}
 
 	/**
@@ -68,8 +68,7 @@ public abstract class AbstractCompositeGateImpl extends AbstractQuantumGateImpl 
 	 */
 	public EList<Layer> getLayers() {
 		if (layers == null) {
-			layers = new EObjectContainmentEList<Layer>(Layer.class, this,
-					QuCircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS);
+			layers = new EObjectContainmentEList<Layer>(Layer.class, this, QucircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS);
 		}
 		return layers;
 	}
@@ -82,8 +81,8 @@ public abstract class AbstractCompositeGateImpl extends AbstractQuantumGateImpl 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case QuCircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
-			return ((InternalEList<?>) getLayers()).basicRemove(otherEnd, msgs);
+			case QucircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
+				return ((InternalEList<?>)getLayers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +95,8 @@ public abstract class AbstractCompositeGateImpl extends AbstractQuantumGateImpl 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
-			return getLayers();
+			case QucircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
+				return getLayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,10 +110,10 @@ public abstract class AbstractCompositeGateImpl extends AbstractQuantumGateImpl 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
-			getLayers().clear();
-			getLayers().addAll((Collection<? extends Layer>) newValue);
-			return;
+			case QucircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
+				getLayers().clear();
+				getLayers().addAll((Collection<? extends Layer>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -127,9 +126,9 @@ public abstract class AbstractCompositeGateImpl extends AbstractQuantumGateImpl 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
-			getLayers().clear();
-			return;
+			case QucircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
+				getLayers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,8 +141,8 @@ public abstract class AbstractCompositeGateImpl extends AbstractQuantumGateImpl 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
-			return layers != null && !layers.isEmpty();
+			case QucircuitPackage.ABSTRACT_COMPOSITE_GATE__LAYERS:
+				return layers != null && !layers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

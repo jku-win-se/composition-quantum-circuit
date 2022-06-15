@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link qucircuit.ClassicControl#getClassicRegister <em>Classic Register</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getClassicControl()
+ * @see qucircuit.QucircuitPackage#getClassicControl()
  * @model
  * @generated
  */
@@ -28,7 +28,7 @@ public interface ClassicControl extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(Double)
-	 * @see qucircuit.QuCircuitPackage#getClassicControl_Value()
+	 * @see qucircuit.QucircuitPackage#getClassicControl_Value()
 	 * @model
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface ClassicControl extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Classic Register</em>' reference.
 	 * @see #setClassicRegister(ClassicRegister)
-	 * @see qucircuit.QuCircuitPackage#getClassicControl_ClassicRegister()
+	 * @see qucircuit.QucircuitPackage#getClassicControl_ClassicRegister()
 	 * @model required="true"
 	 * @generated
 	 */

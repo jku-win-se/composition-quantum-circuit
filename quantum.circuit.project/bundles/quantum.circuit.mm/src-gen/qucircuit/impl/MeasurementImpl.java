@@ -4,15 +4,19 @@ package qucircuit.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
-import qucircuit.ClassicBit;
+import qucircuit.Index;
 import qucircuit.Measurement;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,14 +33,14 @@ import qucircuit.QuCircuitPackage;
  */
 public class MeasurementImpl extends QuantumOperationImpl implements Measurement {
 	/**
-	 * The cached value of the '{@link #getClassicBits() <em>Classic Bits</em>}' reference list.
+	 * The cached value of the '{@link #getClassicBits() <em>Classic Bits</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getClassicBits()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ClassicBit> classicBits;
+	protected EList<Index> classicBits;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,7 +58,7 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.MEASUREMENT;
+		return QucircuitPackage.Literals.MEASUREMENT;
 	}
 
 	/**
@@ -62,10 +66,9 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ClassicBit> getClassicBits() {
+	public EList<Index> getClassicBits() {
 		if (classicBits == null) {
-			classicBits = new EObjectResolvingEList<ClassicBit>(ClassicBit.class, this,
-					QuCircuitPackage.MEASUREMENT__CLASSIC_BITS);
+			classicBits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.MEASUREMENT__CLASSIC_BITS);
 		}
 		return classicBits;
 	}
@@ -76,10 +79,24 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case QucircuitPackage.MEASUREMENT__CLASSIC_BITS:
+				return ((InternalEList<?>)getClassicBits()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.MEASUREMENT__CLASSIC_BITS:
-			return getClassicBits();
+			case QucircuitPackage.MEASUREMENT__CLASSIC_BITS:
+				return getClassicBits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -93,10 +110,10 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.MEASUREMENT__CLASSIC_BITS:
-			getClassicBits().clear();
-			getClassicBits().addAll((Collection<? extends ClassicBit>) newValue);
-			return;
+			case QucircuitPackage.MEASUREMENT__CLASSIC_BITS:
+				getClassicBits().clear();
+				getClassicBits().addAll((Collection<? extends Index>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -109,9 +126,9 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.MEASUREMENT__CLASSIC_BITS:
-			getClassicBits().clear();
-			return;
+			case QucircuitPackage.MEASUREMENT__CLASSIC_BITS:
+				getClassicBits().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -124,8 +141,8 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.MEASUREMENT__CLASSIC_BITS:
-			return classicBits != null && !classicBits.isEmpty();
+			case QucircuitPackage.MEASUREMENT__CLASSIC_BITS:
+				return classicBits != null && !classicBits.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

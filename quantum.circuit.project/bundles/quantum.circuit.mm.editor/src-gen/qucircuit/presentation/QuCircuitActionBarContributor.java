@@ -40,13 +40,14 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
 /**
- * This is the action bar contributor for the QuCircuit model editor.
+ * This is the action bar contributor for the Qucircuit model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class QuCircuitActionBarContributor extends EditingDomainActionBarContributor
-		implements ISelectionChangedListener {
+public class QucircuitActionBarContributor
+	extends EditingDomainActionBarContributor
+	implements ISelectionChangedListener {
 	/**
 	 * This keeps track of the active editor.
 	 * <!-- begin-user-doc -->
@@ -69,17 +70,18 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IAction showPropertiesViewAction = new Action(
-			QuCircuitEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
-		@Override
-		public void run() {
-			try {
-				getPage().showView("org.eclipse.ui.views.PropertySheet");
-			} catch (PartInitException exception) {
-				QuCircuitEditorPlugin.INSTANCE.log(exception);
+	protected IAction showPropertiesViewAction =
+		new Action(QuCircuitEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+			@Override
+			public void run() {
+				try {
+					getPage().showView("org.eclipse.ui.views.PropertySheet");
+				}
+				catch (PartInitException exception) {
+					QuCircuitEditorPlugin.INSTANCE.log(exception);
+				}
 			}
-		}
-	};
+		};
 
 	/**
 	 * This action refreshes the viewer of the current editor if the editor
@@ -88,23 +90,23 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IAction refreshViewerAction = new Action(
-			QuCircuitEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
-		@Override
-		public boolean isEnabled() {
-			return activeEditorPart instanceof IViewerProvider;
-		}
+	protected IAction refreshViewerAction =
+		new Action(QuCircuitEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+			@Override
+			public boolean isEnabled() {
+				return activeEditorPart instanceof IViewerProvider;
+			}
 
-		@Override
-		public void run() {
-			if (activeEditorPart instanceof IViewerProvider) {
-				Viewer viewer = ((IViewerProvider) activeEditorPart).getViewer();
-				if (viewer != null) {
-					viewer.refresh();
+			@Override
+			public void run() {
+				if (activeEditorPart instanceof IViewerProvider) {
+					Viewer viewer = ((IViewerProvider)activeEditorPart).getViewer();
+					if (viewer != null) {
+						viewer.refresh();
+					}
 				}
 			}
-		}
-	};
+		};
 
 	/**
 	 * This will contain one {@link org.eclipse.emf.edit.ui.action.CreateChildAction} corresponding to each descriptor
@@ -146,7 +148,7 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuCircuitActionBarContributor() {
+	public QucircuitActionBarContributor() {
 		super(ADDITIONS_LAST_STYLE);
 		loadResourceAction = new LoadResourceAction();
 		validateAction = new ValidateAction();
@@ -177,8 +179,7 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(
-				QuCircuitEditorPlugin.INSTANCE.getString("_UI_QuCircuitEditor_menu"), "qucircuitMenuID");
+		IMenuManager submenuManager = new MenuManager(QuCircuitEditorPlugin.INSTANCE.getString("_UI_QucircuitEditor_menu"), "qucircuitMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -192,17 +193,17 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(
-				QuCircuitEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(QuCircuitEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
 		// Force an update because Eclipse hides empty menus now.
 		//
-		submenuManager.addMenuListener(new IMenuListener() {
-			public void menuAboutToShow(IMenuManager menuManager) {
-				menuManager.updateAll(true);
-			}
-		});
+		submenuManager.addMenuListener
+			(new IMenuListener() {
+				 public void menuAboutToShow(IMenuManager menuManager) {
+					 menuManager.updateAll(true);
+				 }
+			 });
 
 		addGlobalActions(submenuManager);
 	}
@@ -225,7 +226,8 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 		}
 		if (part == null) {
 			selectionProvider = null;
-		} else {
+		}
+		else {
 			selectionProvider = part.getSite().getSelectionProvider();
 			selectionProvider.addSelectionChangedListener(this);
 
@@ -261,10 +263,10 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 		Collection<?> newSiblingDescriptors = null;
 
 		ISelection selection = event.getSelection();
-		if (selection instanceof IStructuredSelection && ((IStructuredSelection) selection).size() == 1) {
-			Object object = ((IStructuredSelection) selection).getFirstElement();
+		if (selection instanceof IStructuredSelection && ((IStructuredSelection)selection).size() == 1) {
+			Object object = ((IStructuredSelection)selection).getFirstElement();
 
-			EditingDomain domain = ((IEditingDomainProvider) activeEditorPart).getEditingDomain();
+			EditingDomain domain = ((IEditingDomainProvider)activeEditorPart).getEditingDomain();
 
 			newChildDescriptors = domain.getNewChildDescriptors(object, null);
 			newSiblingDescriptors = domain.getNewChildDescriptors(null, object);
@@ -328,19 +330,19 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void populateManager(IContributionManager manager, Collection<? extends IAction> actions,
-			String contributionID) {
+	protected void populateManager(IContributionManager manager, Collection<? extends IAction> actions, String contributionID) {
 		if (actions != null) {
 			for (IAction action : actions) {
 				if (contributionID != null) {
 					manager.insertBefore(contributionID, action);
-				} else {
+				}
+				else {
 					manager.add(action);
 				}
 			}
 		}
 	}
-
+		
 	/**
 	 * This removes from the specified <code>manager</code> all {@link org.eclipse.jface.action.ActionContributionItem}s
 	 * based on the {@link org.eclipse.jface.action.IAction}s contained in the <code>actions</code> collection.
@@ -356,13 +358,13 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 				//
 				IContributionItem contributionItem = items[i];
 				while (contributionItem instanceof SubContributionItem) {
-					contributionItem = ((SubContributionItem) contributionItem).getInnerItem();
+					contributionItem = ((SubContributionItem)contributionItem).getInnerItem();
 				}
 
 				// Delete the ActionContributionItems with matching action.
 				//
 				if (contributionItem instanceof ActionContributionItem) {
-					IAction action = ((ActionContributionItem) contributionItem).getAction();
+					IAction action = ((ActionContributionItem)contributionItem).getAction();
 					if (actions.contains(action)) {
 						manager.remove(contributionItem);
 					}
@@ -402,7 +404,7 @@ public class QuCircuitActionBarContributor extends EditingDomainActionBarContrib
 		menuManager.insertAfter("additions-end", new Separator("ui-actions"));
 		menuManager.insertAfter("ui-actions", showPropertiesViewAction);
 
-		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());
+		refreshViewerAction.setEnabled(refreshViewerAction.isEnabled());		
 		menuManager.insertAfter("ui-actions", refreshViewerAction);
 
 		super.addGlobalActions(menuManager);
