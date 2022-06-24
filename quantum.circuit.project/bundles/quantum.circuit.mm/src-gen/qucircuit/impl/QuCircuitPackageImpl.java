@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import qucircuit.AbstractCompositeGate;
@@ -222,6 +223,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 
 		// Initialize simple dependencies
 		QuopePackage.eINSTANCE.eClass();
+		EcorePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theQucircuitPackage.createPackageContents();
@@ -918,7 +920,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEAttribute(getClassicRegister_NumberOfBits(), ecorePackage.getEIntegerObject(), "numberOfBits", null, 0, 1, ClassicRegister.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(layerEClass, Layer.class, "Layer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLayer_QuantumOperations(), this.getQuantumOperation(), null, "quantumOperations", null, 0, -1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLayer_QuantumOperations(), this.getQuantumOperation(), null, "quantumOperations", null, 1, -1, Layer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classicControlEClass, ClassicControl.class, "ClassicControl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getClassicControl_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, 1, ClassicControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -955,7 +957,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEAttribute(getLoopOperation_Iterations(), ecorePackage.getEInt(), "iterations", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLoopOperation_FixedControlQubits(), this.getIndex(), null, "fixedControlQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLoopOperation_FixedTargetQubits(), this.getIndex(), null, "fixedTargetQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoopOperation_Loop(), theQuopePackage.getLoopOperation(), null, "loop", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoopOperation_Loop(), theQuopePackage.getConcreteLoopOperation(), null, "loop", null, 1, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_IncrementControlQubits(), ecorePackage.getEBooleanObject(), "incrementControlQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_IncrementTargetQubits(), ecorePackage.getEBooleanObject(), "incrementTargetQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLoopOperation_LoopTargetQubits(), this.getIndex(), null, "loopTargetQubits", null, 1, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

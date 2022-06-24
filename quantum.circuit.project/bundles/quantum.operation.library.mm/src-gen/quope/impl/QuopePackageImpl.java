@@ -6,12 +6,14 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import quope.AbstractQuantumOperation;
+import quope.ConcreteLoopOperation;
 import quope.ConcreteQuantumOperation;
 import quope.FixedQuantumOperation;
-import quope.LoopOperation;
 import quope.NamedElement;
 import quope.Parameter;
 import quope.QuantumOperationLibrary;
@@ -65,7 +67,14 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass loopOperationEClass = null;
+	private EClass concreteLoopOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractQuantumOperationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -117,6 +126,9 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		EcorePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theQuopePackage.createPackageContents();
 
@@ -154,15 +166,6 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQuantumOperationLibrary_LoopOperations() {
-		return (EReference) quantumOperationLibraryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getConcreteQuantumOperation() {
 		return concreteQuantumOperationEClass;
 	}
@@ -172,7 +175,7 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConcreteQuantumOperation_Type() {
+	public EReference getConcreteQuantumOperation_Parameter() {
 		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -181,44 +184,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getConcreteQuantumOperation_Abbreviation() {
-		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getConcreteQuantumOperation_PaletteIconPath() {
-		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getConcreteQuantumOperation_StyleIconPath() {
-		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConcreteQuantumOperation_Parameter() {
-		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getConcreteQuantumOperation_FixedQuantumOperation() {
-		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(5);
+		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -227,16 +194,7 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * @generated
 	 */
 	public EReference getConcreteQuantumOperation_Reverse() {
-		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getConcreteQuantumOperation_Reversible() {
-		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(7);
+		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -334,8 +292,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLoopOperation() {
-		return loopOperationEClass;
+	public EClass getConcreteLoopOperation() {
+		return concreteLoopOperationEClass;
 	}
 
 	/**
@@ -343,8 +301,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsFixedControlQubits() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getConcreteLoopOperation_AllowsFixedControlQubits() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -352,8 +310,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsFixedTargetQubits() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(1);
+	public EAttribute getConcreteLoopOperation_AllowsFixedTargetQubits() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -361,8 +319,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsControlQubitsIterationType() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(2);
+	public EAttribute getConcreteLoopOperation_AllowsControlQubitsIterationType() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -370,8 +328,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsTargetQubitsIterationType() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(3);
+	public EAttribute getConcreteLoopOperation_AllowsTargetQubitsIterationType() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -379,8 +337,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsControlQubitsBlockSize() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(4);
+	public EAttribute getConcreteLoopOperation_AllowsControlQubitsBlockSize() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -388,8 +346,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsTargetQubitsBlockSize() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(5);
+	public EAttribute getConcreteLoopOperation_AllowsTargetQubitsBlockSize() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -397,8 +355,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsIncrementControlQubits() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(6);
+	public EAttribute getConcreteLoopOperation_AllowsIncrementControlQubits() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -406,8 +364,8 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsIncrementTargetQubits() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(7);
+	public EAttribute getConcreteLoopOperation_AllowsIncrementTargetQubits() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -415,8 +373,62 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLoopOperation_AllowsIterations() {
-		return (EAttribute) loopOperationEClass.getEStructuralFeatures().get(8);
+	public EAttribute getConcreteLoopOperation_AllowsIterations() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConcreteLoopOperation_AllowsMultipleOperations() {
+		return (EAttribute) concreteLoopOperationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAbstractQuantumOperation() {
+		return abstractQuantumOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractQuantumOperation_PaletteIconPath() {
+		return (EAttribute) abstractQuantumOperationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractQuantumOperation_StyleIconPath() {
+		return (EAttribute) abstractQuantumOperationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractQuantumOperation_Reversible() {
+		return (EAttribute) abstractQuantumOperationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractQuantumOperation_Type() {
+		return (EReference) abstractQuantumOperationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -450,17 +462,11 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		// Create classes and their features
 		quantumOperationLibraryEClass = createEClass(QUANTUM_OPERATION_LIBRARY);
 		createEReference(quantumOperationLibraryEClass, QUANTUM_OPERATION_LIBRARY__OPERATIONS);
-		createEReference(quantumOperationLibraryEClass, QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS);
 
 		concreteQuantumOperationEClass = createEClass(CONCRETE_QUANTUM_OPERATION);
-		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__TYPE);
-		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__ABBREVIATION);
-		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH);
-		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__PARAMETER);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__REVERSE);
-		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__REVERSIBLE);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
@@ -475,16 +481,23 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		createEAttribute(parameterEClass, PARAMETER__PHI);
 		createEAttribute(parameterEClass, PARAMETER__LAMBDA);
 
-		loopOperationEClass = createEClass(LOOP_OPERATION);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS);
-		createEAttribute(loopOperationEClass, LOOP_OPERATION__ALLOWS_ITERATIONS);
+		concreteLoopOperationEClass = createEClass(CONCRETE_LOOP_OPERATION);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_ITERATIONS);
+		createEAttribute(concreteLoopOperationEClass, CONCRETE_LOOP_OPERATION__ALLOWS_MULTIPLE_OPERATIONS);
+
+		abstractQuantumOperationEClass = createEClass(ABSTRACT_QUANTUM_OPERATION);
+		createEAttribute(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__PALETTE_ICON_PATH);
+		createEAttribute(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__STYLE_ICON_PATH);
+		createEAttribute(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__REVERSIBLE);
+		createEReference(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__TYPE);
 	}
 
 	/**
@@ -511,39 +524,28 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
 		quantumOperationLibraryEClass.getESuperTypes().add(this.getNamedElement());
-		concreteQuantumOperationEClass.getESuperTypes().add(this.getNamedElement());
-		loopOperationEClass.getESuperTypes().add(this.getNamedElement());
+		concreteQuantumOperationEClass.getESuperTypes().add(this.getAbstractQuantumOperation());
+		concreteLoopOperationEClass.getESuperTypes().add(this.getAbstractQuantumOperation());
+		abstractQuantumOperationEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(quantumOperationLibraryEClass, QuantumOperationLibrary.class, "QuantumOperationLibrary",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQuantumOperationLibrary_Operations(), this.getConcreteQuantumOperation(), null, "operations",
-				null, 0, -1, QuantumOperationLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantumOperationLibrary_LoopOperations(), this.getLoopOperation(), null, "loopOperations",
+		initEReference(getQuantumOperationLibrary_Operations(), this.getAbstractQuantumOperation(), null, "operations",
 				null, 0, -1, QuantumOperationLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(concreteQuantumOperationEClass, ConcreteQuantumOperation.class, "ConcreteQuantumOperation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConcreteQuantumOperation_Type(), ecorePackage.getEClass(), null, "type", null, 1, 1,
-				ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConcreteQuantumOperation_Abbreviation(), ecorePackage.getEString(), "abbreviation", null, 0,
-				1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConcreteQuantumOperation_PaletteIconPath(), ecorePackage.getEString(), "paletteIconPath",
-				null, 0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
-				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConcreteQuantumOperation_StyleIconPath(), ecorePackage.getEString(), "styleIconPath", null, 0,
-				1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConcreteQuantumOperation_Parameter(), this.getParameter(), null, "parameter", null, 0, 1,
 				ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -553,14 +555,11 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		initEReference(getConcreteQuantumOperation_Reverse(), this.getConcreteQuantumOperation(), null, "reverse", null,
 				0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getConcreteQuantumOperation_Reversible(), ecorePackage.getEBooleanObject(), "reversible", null,
-				0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
-				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fixedQuantumOperationEClass, FixedQuantumOperation.class, "FixedQuantumOperation", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -584,35 +583,53 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 				Parameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(loopOperationEClass, LoopOperation.class, "LoopOperation", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLoopOperation_AllowsFixedControlQubits(), ecorePackage.getEBooleanObject(),
-				"allowsFixedControlQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEClass(concreteLoopOperationEClass, ConcreteLoopOperation.class, "ConcreteLoopOperation", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getConcreteLoopOperation_AllowsFixedControlQubits(), ecorePackage.getEBooleanObject(),
+				"allowsFixedControlQubits", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsFixedTargetQubits(), ecorePackage.getEBooleanObject(),
-				"allowsFixedTargetQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEAttribute(getConcreteLoopOperation_AllowsFixedTargetQubits(), ecorePackage.getEBooleanObject(),
+				"allowsFixedTargetQubits", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsControlQubitsIterationType(), ecorePackage.getEBooleanObject(),
-				"allowsControlQubitsIterationType", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEAttribute(getConcreteLoopOperation_AllowsControlQubitsIterationType(), ecorePackage.getEBooleanObject(),
+				"allowsControlQubitsIterationType", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConcreteLoopOperation_AllowsTargetQubitsIterationType(), ecorePackage.getEBooleanObject(),
+				"allowsTargetQubitsIterationType", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConcreteLoopOperation_AllowsControlQubitsBlockSize(), ecorePackage.getEBooleanObject(),
+				"allowsControlQubitsBlockSize", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsTargetQubitsIterationType(), ecorePackage.getEBooleanObject(),
-				"allowsTargetQubitsIterationType", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEAttribute(getConcreteLoopOperation_AllowsTargetQubitsBlockSize(), ecorePackage.getEBooleanObject(),
+				"allowsTargetQubitsBlockSize", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsControlQubitsBlockSize(), ecorePackage.getEBooleanObject(),
-				"allowsControlQubitsBlockSize", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEAttribute(getConcreteLoopOperation_AllowsIncrementControlQubits(), ecorePackage.getEBooleanObject(),
+				"allowsIncrementControlQubits", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsTargetQubitsBlockSize(), ecorePackage.getEBooleanObject(),
-				"allowsTargetQubitsBlockSize", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEAttribute(getConcreteLoopOperation_AllowsIncrementTargetQubits(), ecorePackage.getEBooleanObject(),
+				"allowsIncrementTargetQubits", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsIncrementControlQubits(), ecorePackage.getEBooleanObject(),
-				"allowsIncrementControlQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEAttribute(getConcreteLoopOperation_AllowsIterations(), ecorePackage.getEBooleanObject(),
+				"allowsIterations", "true", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsIncrementTargetQubits(), ecorePackage.getEBooleanObject(),
-				"allowsIncrementTargetQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEAttribute(getConcreteLoopOperation_AllowsMultipleOperations(), theEcorePackage.getEBooleanObject(),
+				"allowsMultipleOperations", "false", 0, 1, ConcreteLoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLoopOperation_AllowsIterations(), ecorePackage.getEBooleanObject(), "allowsIterations",
-				"true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+
+		initEClass(abstractQuantumOperationEClass, AbstractQuantumOperation.class, "AbstractQuantumOperation",
+				IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAbstractQuantumOperation_PaletteIconPath(), ecorePackage.getEString(), "paletteIconPath",
+				null, 0, 1, AbstractQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractQuantumOperation_StyleIconPath(), ecorePackage.getEString(), "styleIconPath", null, 0,
+				1, AbstractQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractQuantumOperation_Reversible(), ecorePackage.getEBooleanObject(), "reversible", null,
+				0, 1, AbstractQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractQuantumOperation_Type(), theEcorePackage.getEClass(), null, "type", null, 1, 1,
+				AbstractQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

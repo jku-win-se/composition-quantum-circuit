@@ -165,26 +165,26 @@ public class QuopeItemProviderAdapterFactory extends QuopeAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link quope.LoopOperation} instances.
+	 * This keeps track of the one adapter used for all {@link quope.ConcreteLoopOperation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LoopOperationItemProvider loopOperationItemProvider;
+	protected ConcreteLoopOperationItemProvider concreteLoopOperationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link quope.LoopOperation}.
+	 * This creates an adapter for a {@link quope.ConcreteLoopOperation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLoopOperationAdapter() {
-		if (loopOperationItemProvider == null) {
-			loopOperationItemProvider = new LoopOperationItemProvider(this);
+	public Adapter createConcreteLoopOperationAdapter() {
+		if (concreteLoopOperationItemProvider == null) {
+			concreteLoopOperationItemProvider = new ConcreteLoopOperationItemProvider(this);
 		}
 
-		return loopOperationItemProvider;
+		return concreteLoopOperationItemProvider;
 	}
 
 	/**
@@ -294,8 +294,8 @@ public class QuopeItemProviderAdapterFactory extends QuopeAdapterFactory
 			fixedQuantumOperationItemProvider.dispose();
 		if (parameterItemProvider != null)
 			parameterItemProvider.dispose();
-		if (loopOperationItemProvider != null)
-			loopOperationItemProvider.dispose();
+		if (concreteLoopOperationItemProvider != null)
+			concreteLoopOperationItemProvider.dispose();
 	}
 
 }

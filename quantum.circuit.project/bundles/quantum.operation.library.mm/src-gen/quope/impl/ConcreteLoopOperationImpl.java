@@ -8,31 +8,32 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import quope.LoopOperation;
+import quope.ConcreteLoopOperation;
 import quope.QuopePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Loop Operation</b></em>'.
+ * An implementation of the model object '<em><b>Concrete Loop Operation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsFixedControlQubits <em>Allows Fixed Control Qubits</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsFixedTargetQubits <em>Allows Fixed Target Qubits</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsControlQubitsIterationType <em>Allows Control Qubits Iteration Type</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsTargetQubitsIterationType <em>Allows Target Qubits Iteration Type</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsControlQubitsBlockSize <em>Allows Control Qubits Block Size</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsTargetQubitsBlockSize <em>Allows Target Qubits Block Size</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsIncrementControlQubits <em>Allows Increment Control Qubits</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsIncrementTargetQubits <em>Allows Increment Target Qubits</em>}</li>
- *   <li>{@link quope.impl.LoopOperationImpl#getAllowsIterations <em>Allows Iterations</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsFixedControlQubits <em>Allows Fixed Control Qubits</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsFixedTargetQubits <em>Allows Fixed Target Qubits</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsControlQubitsIterationType <em>Allows Control Qubits Iteration Type</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsTargetQubitsIterationType <em>Allows Target Qubits Iteration Type</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsControlQubitsBlockSize <em>Allows Control Qubits Block Size</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsTargetQubitsBlockSize <em>Allows Target Qubits Block Size</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsIncrementControlQubits <em>Allows Increment Control Qubits</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsIncrementTargetQubits <em>Allows Increment Target Qubits</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsIterations <em>Allows Iterations</em>}</li>
+ *   <li>{@link quope.impl.ConcreteLoopOperationImpl#getAllowsMultipleOperations <em>Allows Multiple Operations</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LoopOperationImpl extends NamedElementImpl implements LoopOperation {
+public class ConcreteLoopOperationImpl extends AbstractQuantumOperationImpl implements ConcreteLoopOperation {
 	/**
 	 * The default value of the '{@link #getAllowsFixedControlQubits() <em>Allows Fixed Control Qubits</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -214,11 +215,31 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 	protected Boolean allowsIterations = ALLOWS_ITERATIONS_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getAllowsMultipleOperations() <em>Allows Multiple Operations</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAllowsMultipleOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean ALLOWS_MULTIPLE_OPERATIONS_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The cached value of the '{@link #getAllowsMultipleOperations() <em>Allows Multiple Operations</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAllowsMultipleOperations()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean allowsMultipleOperations = ALLOWS_MULTIPLE_OPERATIONS_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LoopOperationImpl() {
+	protected ConcreteLoopOperationImpl() {
 		super();
 	}
 
@@ -229,7 +250,7 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuopePackage.Literals.LOOP_OPERATION;
+		return QuopePackage.Literals.CONCRETE_LOOP_OPERATION;
 	}
 
 	/**
@@ -251,7 +272,7 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsFixedControlQubits = newAllowsFixedControlQubits;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS, oldAllowsFixedControlQubits,
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS, oldAllowsFixedControlQubits,
 					allowsFixedControlQubits));
 	}
 
@@ -274,7 +295,7 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsFixedTargetQubits = newAllowsFixedTargetQubits;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS, oldAllowsFixedTargetQubits,
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS, oldAllowsFixedTargetQubits,
 					allowsFixedTargetQubits));
 	}
 
@@ -297,7 +318,7 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsControlQubitsIterationType = newAllowsControlQubitsIterationType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE,
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE,
 					oldAllowsControlQubitsIterationType, allowsControlQubitsIterationType));
 	}
 
@@ -320,7 +341,7 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsTargetQubitsIterationType = newAllowsTargetQubitsIterationType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE,
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE,
 					oldAllowsTargetQubitsIterationType, allowsTargetQubitsIterationType));
 	}
 
@@ -343,8 +364,8 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsControlQubitsBlockSize = newAllowsControlQubitsBlockSize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE, oldAllowsControlQubitsBlockSize,
-					allowsControlQubitsBlockSize));
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE,
+					oldAllowsControlQubitsBlockSize, allowsControlQubitsBlockSize));
 	}
 
 	/**
@@ -366,8 +387,8 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsTargetQubitsBlockSize = newAllowsTargetQubitsBlockSize;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE, oldAllowsTargetQubitsBlockSize,
-					allowsTargetQubitsBlockSize));
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE,
+					oldAllowsTargetQubitsBlockSize, allowsTargetQubitsBlockSize));
 	}
 
 	/**
@@ -389,8 +410,8 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsIncrementControlQubits = newAllowsIncrementControlQubits;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS, oldAllowsIncrementControlQubits,
-					allowsIncrementControlQubits));
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS,
+					oldAllowsIncrementControlQubits, allowsIncrementControlQubits));
 	}
 
 	/**
@@ -412,8 +433,8 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		allowsIncrementTargetQubits = newAllowsIncrementTargetQubits;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS, oldAllowsIncrementTargetQubits,
-					allowsIncrementTargetQubits));
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS,
+					oldAllowsIncrementTargetQubits, allowsIncrementTargetQubits));
 	}
 
 	/**
@@ -434,8 +455,31 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		Boolean oldAllowsIterations = allowsIterations;
 		allowsIterations = newAllowsIterations;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QuopePackage.LOOP_OPERATION__ALLOWS_ITERATIONS,
-					oldAllowsIterations, allowsIterations));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_ITERATIONS, oldAllowsIterations, allowsIterations));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Boolean getAllowsMultipleOperations() {
+		return allowsMultipleOperations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAllowsMultipleOperations(Boolean newAllowsMultipleOperations) {
+		Boolean oldAllowsMultipleOperations = allowsMultipleOperations;
+		allowsMultipleOperations = newAllowsMultipleOperations;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_MULTIPLE_OPERATIONS, oldAllowsMultipleOperations,
+					allowsMultipleOperations));
 	}
 
 	/**
@@ -446,24 +490,26 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
 			return getAllowsFixedControlQubits();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
 			return getAllowsFixedTargetQubits();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
 			return getAllowsControlQubitsIterationType();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
 			return getAllowsTargetQubitsIterationType();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
 			return getAllowsControlQubitsBlockSize();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
 			return getAllowsTargetQubitsBlockSize();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
 			return getAllowsIncrementControlQubits();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
 			return getAllowsIncrementTargetQubits();
-		case QuopePackage.LOOP_OPERATION__ALLOWS_ITERATIONS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_ITERATIONS:
 			return getAllowsIterations();
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_MULTIPLE_OPERATIONS:
+			return getAllowsMultipleOperations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -476,32 +522,35 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
 			setAllowsFixedControlQubits((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
 			setAllowsFixedTargetQubits((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
 			setAllowsControlQubitsIterationType((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
 			setAllowsTargetQubitsIterationType((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
 			setAllowsControlQubitsBlockSize((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
 			setAllowsTargetQubitsBlockSize((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
 			setAllowsIncrementControlQubits((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
 			setAllowsIncrementTargetQubits((Boolean) newValue);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_ITERATIONS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_ITERATIONS:
 			setAllowsIterations((Boolean) newValue);
+			return;
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_MULTIPLE_OPERATIONS:
+			setAllowsMultipleOperations((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -515,32 +564,35 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
 			setAllowsFixedControlQubits(ALLOWS_FIXED_CONTROL_QUBITS_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
 			setAllowsFixedTargetQubits(ALLOWS_FIXED_TARGET_QUBITS_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
 			setAllowsControlQubitsIterationType(ALLOWS_CONTROL_QUBITS_ITERATION_TYPE_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
 			setAllowsTargetQubitsIterationType(ALLOWS_TARGET_QUBITS_ITERATION_TYPE_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
 			setAllowsControlQubitsBlockSize(ALLOWS_CONTROL_QUBITS_BLOCK_SIZE_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
 			setAllowsTargetQubitsBlockSize(ALLOWS_TARGET_QUBITS_BLOCK_SIZE_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
 			setAllowsIncrementControlQubits(ALLOWS_INCREMENT_CONTROL_QUBITS_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
 			setAllowsIncrementTargetQubits(ALLOWS_INCREMENT_TARGET_QUBITS_EDEFAULT);
 			return;
-		case QuopePackage.LOOP_OPERATION__ALLOWS_ITERATIONS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_ITERATIONS:
 			setAllowsIterations(ALLOWS_ITERATIONS_EDEFAULT);
+			return;
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_MULTIPLE_OPERATIONS:
+			setAllowsMultipleOperations(ALLOWS_MULTIPLE_OPERATIONS_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -554,33 +606,36 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_CONTROL_QUBITS:
 			return ALLOWS_FIXED_CONTROL_QUBITS_EDEFAULT == null ? allowsFixedControlQubits != null
 					: !ALLOWS_FIXED_CONTROL_QUBITS_EDEFAULT.equals(allowsFixedControlQubits);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_FIXED_TARGET_QUBITS:
 			return ALLOWS_FIXED_TARGET_QUBITS_EDEFAULT == null ? allowsFixedTargetQubits != null
 					: !ALLOWS_FIXED_TARGET_QUBITS_EDEFAULT.equals(allowsFixedTargetQubits);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_ITERATION_TYPE:
 			return ALLOWS_CONTROL_QUBITS_ITERATION_TYPE_EDEFAULT == null ? allowsControlQubitsIterationType != null
 					: !ALLOWS_CONTROL_QUBITS_ITERATION_TYPE_EDEFAULT.equals(allowsControlQubitsIterationType);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_ITERATION_TYPE:
 			return ALLOWS_TARGET_QUBITS_ITERATION_TYPE_EDEFAULT == null ? allowsTargetQubitsIterationType != null
 					: !ALLOWS_TARGET_QUBITS_ITERATION_TYPE_EDEFAULT.equals(allowsTargetQubitsIterationType);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_CONTROL_QUBITS_BLOCK_SIZE:
 			return ALLOWS_CONTROL_QUBITS_BLOCK_SIZE_EDEFAULT == null ? allowsControlQubitsBlockSize != null
 					: !ALLOWS_CONTROL_QUBITS_BLOCK_SIZE_EDEFAULT.equals(allowsControlQubitsBlockSize);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_TARGET_QUBITS_BLOCK_SIZE:
 			return ALLOWS_TARGET_QUBITS_BLOCK_SIZE_EDEFAULT == null ? allowsTargetQubitsBlockSize != null
 					: !ALLOWS_TARGET_QUBITS_BLOCK_SIZE_EDEFAULT.equals(allowsTargetQubitsBlockSize);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_CONTROL_QUBITS:
 			return ALLOWS_INCREMENT_CONTROL_QUBITS_EDEFAULT == null ? allowsIncrementControlQubits != null
 					: !ALLOWS_INCREMENT_CONTROL_QUBITS_EDEFAULT.equals(allowsIncrementControlQubits);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_INCREMENT_TARGET_QUBITS:
 			return ALLOWS_INCREMENT_TARGET_QUBITS_EDEFAULT == null ? allowsIncrementTargetQubits != null
 					: !ALLOWS_INCREMENT_TARGET_QUBITS_EDEFAULT.equals(allowsIncrementTargetQubits);
-		case QuopePackage.LOOP_OPERATION__ALLOWS_ITERATIONS:
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_ITERATIONS:
 			return ALLOWS_ITERATIONS_EDEFAULT == null ? allowsIterations != null
 					: !ALLOWS_ITERATIONS_EDEFAULT.equals(allowsIterations);
+		case QuopePackage.CONCRETE_LOOP_OPERATION__ALLOWS_MULTIPLE_OPERATIONS:
+			return ALLOWS_MULTIPLE_OPERATIONS_EDEFAULT == null ? allowsMultipleOperations != null
+					: !ALLOWS_MULTIPLE_OPERATIONS_EDEFAULT.equals(allowsMultipleOperations);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -614,8 +669,10 @@ public class LoopOperationImpl extends NamedElementImpl implements LoopOperation
 		result.append(allowsIncrementTargetQubits);
 		result.append(", allowsIterations: ");
 		result.append(allowsIterations);
+		result.append(", allowsMultipleOperations: ");
+		result.append(allowsMultipleOperations);
 		result.append(')');
 		return result.toString();
 	}
 
-} //LoopOperationImpl
+} //ConcreteLoopOperationImpl

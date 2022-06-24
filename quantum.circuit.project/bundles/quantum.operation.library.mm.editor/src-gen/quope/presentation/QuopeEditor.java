@@ -155,6 +155,8 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import quope.provider.QuopeItemProviderAdapterFactory;
 
+import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
+
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import quantum.operation.library.mm.quope.presentation.QuantumOpeEditorPlugin;
@@ -678,6 +680,7 @@ public class QuopeEditor extends MultiPageEditorPart
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new QuopeItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

@@ -8,11 +8,11 @@ import qucircuit.CompositeQuantumGate;
 import qucircuit.Index;
 import qucircuit.QuantumOperation;
 
-public class QFTInv extends AbstractExtendCompositeQuantumGate {
+public class QFTElement extends AbstractExtendCompositeQuantumGate {
 	
 	public static final String PALETTE_ICON = "qfinv-block-gate.png";
 	
-	public QFTInv() {
+	public QFTElement() {
 		// Do nothing
 	}
 

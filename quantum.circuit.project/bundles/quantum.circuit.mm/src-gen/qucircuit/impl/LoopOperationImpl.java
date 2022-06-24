@@ -21,6 +21,7 @@ import qucircuit.ITERATION_TYPE;
 import qucircuit.Index;
 import qucircuit.LoopOperation;
 import qucircuit.QucircuitPackage;
+import quope.ConcreteLoopOperation;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,7 +99,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * @generated
 	 * @ordered
 	 */
-	protected quope.LoopOperation loop;
+	protected ConcreteLoopOperation loop;
 
 	/**
 	 * The default value of the '{@link #getIncrementControlQubits() <em>Increment Control Qubits</em>}' attribute.
@@ -369,10 +370,10 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public quope.LoopOperation getLoop() {
+	public ConcreteLoopOperation getLoop() {
 		if (loop != null && loop.eIsProxy()) {
 			InternalEObject oldLoop = (InternalEObject)loop;
-			loop = (quope.LoopOperation)eResolveProxy(oldLoop);
+			loop = (ConcreteLoopOperation)eResolveProxy(oldLoop);
 			if (loop != oldLoop) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, QucircuitPackage.LOOP_OPERATION__LOOP, oldLoop, loop));
@@ -386,7 +387,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public quope.LoopOperation basicGetLoop() {
+	public ConcreteLoopOperation basicGetLoop() {
 		return loop;
 	}
 
@@ -395,8 +396,8 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLoop(quope.LoopOperation newLoop) {
-		quope.LoopOperation oldLoop = loop;
+	public void setLoop(ConcreteLoopOperation newLoop) {
+		ConcreteLoopOperation oldLoop = loop;
 		loop = newLoop;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.LOOP_OPERATION__LOOP, oldLoop, loop));
@@ -699,7 +700,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 				getFixedTargetQubits().addAll((Collection<? extends Index>)newValue);
 				return;
 			case QucircuitPackage.LOOP_OPERATION__LOOP:
-				setLoop((quope.LoopOperation)newValue);
+				setLoop((ConcreteLoopOperation)newValue);
 				return;
 			case QucircuitPackage.LOOP_OPERATION__INCREMENT_CONTROL_QUBITS:
 				setIncrementControlQubits((Boolean)newValue);
@@ -758,7 +759,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 				getFixedTargetQubits().clear();
 				return;
 			case QucircuitPackage.LOOP_OPERATION__LOOP:
-				setLoop((quope.LoopOperation)null);
+				setLoop((ConcreteLoopOperation)null);
 				return;
 			case QucircuitPackage.LOOP_OPERATION__INCREMENT_CONTROL_QUBITS:
 				setIncrementControlQubits(INCREMENT_CONTROL_QUBITS_EDEFAULT);

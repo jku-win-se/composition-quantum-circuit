@@ -79,6 +79,8 @@ public class QuopeSwitch<T> extends Switch<T> {
 			ConcreteQuantumOperation concreteQuantumOperation = (ConcreteQuantumOperation) theEObject;
 			T result = caseConcreteQuantumOperation(concreteQuantumOperation);
 			if (result == null)
+				result = caseAbstractQuantumOperation(concreteQuantumOperation);
+			if (result == null)
 				result = caseNamedElement(concreteQuantumOperation);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -105,11 +107,22 @@ public class QuopeSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case QuopePackage.LOOP_OPERATION: {
-			LoopOperation loopOperation = (LoopOperation) theEObject;
-			T result = caseLoopOperation(loopOperation);
+		case QuopePackage.CONCRETE_LOOP_OPERATION: {
+			ConcreteLoopOperation concreteLoopOperation = (ConcreteLoopOperation) theEObject;
+			T result = caseConcreteLoopOperation(concreteLoopOperation);
 			if (result == null)
-				result = caseNamedElement(loopOperation);
+				result = caseAbstractQuantumOperation(concreteLoopOperation);
+			if (result == null)
+				result = caseNamedElement(concreteLoopOperation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case QuopePackage.ABSTRACT_QUANTUM_OPERATION: {
+			AbstractQuantumOperation abstractQuantumOperation = (AbstractQuantumOperation) theEObject;
+			T result = caseAbstractQuantumOperation(abstractQuantumOperation);
+			if (result == null)
+				result = caseNamedElement(abstractQuantumOperation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -195,17 +208,32 @@ public class QuopeSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Loop Operation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Concrete Loop Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Loop Operation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Concrete Loop Operation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLoopOperation(LoopOperation object) {
+	public T caseConcreteLoopOperation(ConcreteLoopOperation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Quantum Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Quantum Operation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractQuantumOperation(AbstractQuantumOperation object) {
 		return null;
 	}
 

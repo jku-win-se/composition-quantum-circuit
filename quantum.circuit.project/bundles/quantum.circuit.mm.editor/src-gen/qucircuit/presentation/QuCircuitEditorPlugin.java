@@ -8,6 +8,7 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
 
 /**
@@ -43,6 +44,7 @@ public final class QuCircuitEditorPlugin extends EMFPlugin {
 		super
 			(new ResourceLocator [] {
 				QuantumOpeEditPlugin.INSTANCE,
+				EcoreEditPlugin.INSTANCE,
 			});
 	}
 

@@ -14,5 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  quantum.circuit.mm;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  quantum.operation.library.mm;visibility:=reexport,
- quantum.operation.library.mm.edit;visibility:=reexport
+ quantum.operation.library.mm.edit;visibility:=reexport,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

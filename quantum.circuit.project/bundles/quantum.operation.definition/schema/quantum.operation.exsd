@@ -22,6 +22,7 @@
             <element ref="CompositeBlock"/>
             <element ref="Measurement"/>
             <element ref="StatePreparation"/>
+            <element ref="LoopOperation"/>
          </choice>
          <attribute name="point" type="string" use="required">
             <annotation>
@@ -132,6 +133,28 @@
                </documentation>
                <appinfo>
                   <meta.attribute kind="java" basedOn="quantum.operation.definition.api.AbstractExtendMeasurement:"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="LoopOperation">
+      <complexType>
+         <attribute name="Name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="class" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn="quantum.operation.definition.api.AbstractLoopOperation:"/>
                </appinfo>
             </annotation>
          </attribute>

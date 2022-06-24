@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import quope.ConcreteQuantumOperation;
@@ -25,7 +24,7 @@ import quope.QuopePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvider {
+public class ConcreteQuantumOperationItemProvider extends AbstractQuantumOperationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -47,77 +46,9 @@ public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvid
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTypePropertyDescriptor(object);
-			addAbbreviationPropertyDescriptor(object);
-			addPaletteIconPathPropertyDescriptor(object);
-			addStyleIconPathPropertyDescriptor(object);
 			addReversePropertyDescriptor(object);
-			addReversiblePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Type feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ConcreteQuantumOperation_type_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ConcreteQuantumOperation_type_feature",
-								"_UI_ConcreteQuantumOperation_type"),
-						QuopePackage.Literals.CONCRETE_QUANTUM_OPERATION__TYPE, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Abbreviation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAbbreviationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ConcreteQuantumOperation_abbreviation_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ConcreteQuantumOperation_abbreviation_feature",
-						"_UI_ConcreteQuantumOperation_type"),
-				QuopePackage.Literals.CONCRETE_QUANTUM_OPERATION__ABBREVIATION, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Palette Icon Path feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPaletteIconPathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ConcreteQuantumOperation_paletteIconPath_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ConcreteQuantumOperation_paletteIconPath_feature",
-						"_UI_ConcreteQuantumOperation_type"),
-				QuopePackage.Literals.CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Icon Path feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleIconPathPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ConcreteQuantumOperation_styleIconPath_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ConcreteQuantumOperation_styleIconPath_feature",
-						"_UI_ConcreteQuantumOperation_type"),
-				QuopePackage.Literals.CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -133,22 +64,6 @@ public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvid
 				getString("_UI_PropertyDescriptor_description", "_UI_ConcreteQuantumOperation_reverse_feature",
 						"_UI_ConcreteQuantumOperation_type"),
 				QuopePackage.Literals.CONCRETE_QUANTUM_OPERATION__REVERSE, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Reversible feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addReversiblePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ConcreteQuantumOperation_reversible_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_ConcreteQuantumOperation_reversible_feature", "_UI_ConcreteQuantumOperation_type"),
-						QuopePackage.Literals.CONCRETE_QUANTUM_OPERATION__REVERSIBLE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -228,12 +143,6 @@ public class ConcreteQuantumOperationItemProvider extends NamedElementItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConcreteQuantumOperation.class)) {
-		case QuopePackage.CONCRETE_QUANTUM_OPERATION__ABBREVIATION:
-		case QuopePackage.CONCRETE_QUANTUM_OPERATION__PALETTE_ICON_PATH:
-		case QuopePackage.CONCRETE_QUANTUM_OPERATION__STYLE_ICON_PATH:
-		case QuopePackage.CONCRETE_QUANTUM_OPERATION__REVERSIBLE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__PARAMETER:
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));

@@ -28,7 +28,7 @@ public interface Layer extends NamedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantum Operations</em>' containment reference list.
 	 * @see qucircuit.QucircuitPackage#getLayer_QuantumOperations()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<QuantumOperation> getQuantumOperations();

@@ -92,8 +92,13 @@ public class QuopeAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLoopOperation(LoopOperation object) {
-			return createLoopOperationAdapter();
+		public Adapter caseConcreteLoopOperation(ConcreteLoopOperation object) {
+			return createConcreteLoopOperationAdapter();
+		}
+
+		@Override
+		public Adapter caseAbstractQuantumOperation(AbstractQuantumOperation object) {
+			return createAbstractQuantumOperationAdapter();
 		}
 
 		@Override
@@ -186,16 +191,30 @@ public class QuopeAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link quope.LoopOperation <em>Loop Operation</em>}'.
+	 * Creates a new adapter for an object of class '{@link quope.ConcreteLoopOperation <em>Concrete Loop Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see quope.LoopOperation
+	 * @see quope.ConcreteLoopOperation
 	 * @generated
 	 */
-	public Adapter createLoopOperationAdapter() {
+	public Adapter createConcreteLoopOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link quope.AbstractQuantumOperation <em>Abstract Quantum Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see quope.AbstractQuantumOperation
+	 * @generated
+	 */
+	public Adapter createAbstractQuantumOperationAdapter() {
 		return null;
 	}
 

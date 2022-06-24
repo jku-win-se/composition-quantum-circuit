@@ -1,0 +1,18 @@
+QuantumCircuit QuantumCounting {
+	QuantumRegister { NumberOfQubits 8}
+	ClassicRegister { NumberOfBits 4 }
+	Layer L1 {
+		Hadamard..
+			
+	}
+	Layer L2 {
+		Power2Loop
+	} 
+	inverse QFT 
+	Layer L3 {
+		general loop swaps
+	}
+	Layer L4 {
+		general loop
+	}
+}

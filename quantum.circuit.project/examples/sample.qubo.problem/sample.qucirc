@@ -1,0 +1,46 @@
+QuantumCircuit QuantumCounting{
+	QuantumRegister qr {NumberOfQubits 4}
+	QuantumRegister qr1 {NumberOfQubits 4}
+	ClassicRegister cr {NumberOfBits 3}
+	Layer L1 {
+		ElementaryQuantumGate e1 {
+			operation Hadamard
+			targetQubits [0-7]
+		}
+	}
+	Layer L2 {
+		Loop loop1 {
+			operation Grover
+			targetQubits [0-7]
+			loop Power2Loop	
+			loopTargetQubits [4-7]
+			loopControlQubits [0-3]
+		}
+	}	
+	
+	Layer L3 {
+		Loop loop2 {
+			operation Swap
+			targetQubits [0-3]
+			loop GeneralLoop
+			loopTargetQubits [0-1]
+			loopControlQubits [2-3]
+		}
+	}
+	Layer L4 {
+		Loop loop3 {
+			operation QFTElement
+			targetQubits [0-3]
+			loop GeneralLoop
+			loopTargetQubits [0-3]
+		}
+	}
+	
+	Layer L5 {
+		Measurement M1 {
+			operation MeasurementCompBasis
+			targetQubits [0-3]
+			classicBits [0-3]
+		}
+	}
+}

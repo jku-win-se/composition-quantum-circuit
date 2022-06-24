@@ -8,6 +8,8 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+
 /**
  * This is the central singleton for the QuantumOpe editor plugin.
  * <!-- begin-user-doc -->
@@ -38,7 +40,7 @@ public final class QuantumOpeEditorPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public QuantumOpeEditorPlugin() {
-		super(new ResourceLocator[] {});
+		super(new ResourceLocator[] { EcoreEditPlugin.INSTANCE, });
 	}
 
 	/**

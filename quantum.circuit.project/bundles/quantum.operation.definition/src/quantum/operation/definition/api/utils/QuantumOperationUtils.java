@@ -4,9 +4,9 @@ import java.util.Collection;
 
 import org.eclipse.core.runtime.Platform;
 
+import quope.AbstractQuantumOperation;
 import quope.ConcreteQuantumOperation;
 import quope.QuantumOperationLibrary;
-import quope.impl.QuopeFactoryImpl;
 import quantum.operation.definition.EvaluateQuantumOperationsContributions;
 
 public class QuantumOperationUtils {
@@ -16,19 +16,20 @@ public class QuantumOperationUtils {
 		throw new AssertionError();
 	}
 	
+	public static String QUANTUM_OPERATION_NAME = "QuantumLibrary";
+	
 	public static QuantumOperationLibrary getAllQuantumOperations() {
-		var quantumOpe = QuopeFactoryImpl.init().createQuantumOperationLibrary();
-		var operations = new EvaluateQuantumOperationsContributions().execute(Platform.getExtensionRegistry());
-		quantumOpe.getOperations().addAll(operations);
-		return quantumOpe;
+		return new EvaluateQuantumOperationsContributions().execute(Platform.getExtensionRegistry());	
 	}
 	
-	public static ConcreteQuantumOperation getConcreteQuantumOperationByName(Collection<ConcreteQuantumOperation> quantumOperations, String name) {
+	public static ConcreteQuantumOperation getConcreteQuantumOperationByName(Collection<AbstractQuantumOperation> quantumOperations, String name) {
 		var qOpe = quantumOperations.stream()
-						.filter(ope -> ope.getName().equals(name))
+						.filter(ope -> ope.getName().equals(name) && ope instanceof ConcreteQuantumOperation)
+						.map(ope -> (ConcreteQuantumOperation) ope)
 						.findAny();
-		if (qOpe.isPresent())
+		if (qOpe.isPresent()) {
 			return qOpe.get();
+		}
 		else
 			return null;
 	}	

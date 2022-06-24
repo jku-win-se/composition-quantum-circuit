@@ -3,6 +3,7 @@
 package qucircuit;
 
 import org.eclipse.emf.common.util.EList;
+import quope.ConcreteLoopOperation;
 
 /**
  * <!-- begin-user-doc -->
@@ -86,12 +87,12 @@ public interface LoopOperation extends AbstractCompositeGate {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Loop</em>' reference.
-	 * @see #setLoop(quope.LoopOperation)
+	 * @see #setLoop(ConcreteLoopOperation)
 	 * @see qucircuit.QucircuitPackage#getLoopOperation_Loop()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	quope.LoopOperation getLoop();
+	ConcreteLoopOperation getLoop();
 
 	/**
 	 * Sets the value of the '{@link qucircuit.LoopOperation#getLoop <em>Loop</em>}' reference.
@@ -101,7 +102,7 @@ public interface LoopOperation extends AbstractCompositeGate {
 	 * @see #getLoop()
 	 * @generated
 	 */
-	void setLoop(quope.LoopOperation value);
+	void setLoop(ConcreteLoopOperation value);
 
 	/**
 	 * Returns the value of the '<em><b>Increment Control Qubits</b></em>' attribute.

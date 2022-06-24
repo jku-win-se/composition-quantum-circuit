@@ -5,12 +5,12 @@ import quantum.operation.definition.api.AbstractExtendStatePreparation;
 public class Reset extends AbstractExtendStatePreparation {
 
 	public Reset() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
 	public String getAbbreviation() {
-		return "Reset";
+		return "reset";
 	}
 
 	@Override

@@ -62,7 +62,6 @@ public class QuantumOperationLibraryItemProvider extends NamedElementItemProvide
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(QuopePackage.Literals.QUANTUM_OPERATION_LIBRARY__OPERATIONS);
-			childrenFeatures.add(QuopePackage.Literals.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -127,7 +126,6 @@ public class QuantumOperationLibraryItemProvider extends NamedElementItemProvide
 
 		switch (notification.getFeatureID(QuantumOperationLibrary.class)) {
 		case QuopePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
-		case QuopePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -148,8 +146,8 @@ public class QuantumOperationLibraryItemProvider extends NamedElementItemProvide
 		newChildDescriptors.add(createChildParameter(QuopePackage.Literals.QUANTUM_OPERATION_LIBRARY__OPERATIONS,
 				QuopeFactory.eINSTANCE.createConcreteQuantumOperation()));
 
-		newChildDescriptors.add(createChildParameter(QuopePackage.Literals.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS,
-				QuopeFactory.eINSTANCE.createLoopOperation()));
+		newChildDescriptors.add(createChildParameter(QuopePackage.Literals.QUANTUM_OPERATION_LIBRARY__OPERATIONS,
+				QuopeFactory.eINSTANCE.createConcreteLoopOperation()));
 	}
 
 }

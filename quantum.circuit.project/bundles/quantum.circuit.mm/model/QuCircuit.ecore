@@ -20,8 +20,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Layer" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="quantumOperations" upperBound="-1"
-        eType="#//QuantumOperation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantumOperations" lowerBound="1"
+        upperBound="-1" eType="#//QuantumOperation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClassicControl">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
@@ -70,7 +70,7 @@
         eType="#//Index" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedTargetQubits" upperBound="-1"
         eType="#//Index" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="loop" eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//LoopOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="loop" lowerBound="1" eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//ConcreteLoopOperation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementControlQubits"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>

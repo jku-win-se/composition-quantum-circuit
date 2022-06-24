@@ -4,7 +4,7 @@
     editorDirectory="/quantum.circuit.mm.editor/src-gen" modelPluginID="quantum.circuit.mm"
     modelName="QuCircuit" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/quantum.circuit.mm.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../quantum.operation.library.mm/model/QuantumOpe.genmodel#//quope"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../quantum.operation.library.mm/model/QuantumOpe.genmodel#//quope ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
     operationReflection="true" importOrganizing="true">
   <foreignModel>QuCircuit.ecore</foreignModel>
   <genPackages prefix="Qucircuit" disposableProviderFactory="true" ecorePackage="QuCircuit.ecore#/">
