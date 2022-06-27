@@ -12,7 +12,7 @@
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate">
       <operations href="../quantum-operation/sample-qubo.quope#RZ"/>
       <targetQubits xsi:type="qucircuit:IndexInt" index="1"/>
-      <angleParameter theta="1715.9763484029256"/>
+      <angleParameter theta="228.9374973523647"/>
     </quantumOperations>
   </layers>
   <layers>
@@ -33,7 +33,7 @@
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate">
       <operations href="../quantum-operation/sample-qubo.quope#RZ"/>
       <targetQubits xsi:type="qucircuit:IndexInt" index="2"/>
-      <angleParameter theta="13.122172076022373"/>
+      <angleParameter theta="1.7506985091651417"/>
     </quantumOperations>
   </layers>
   <layers>
@@ -54,7 +54,7 @@
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate">
       <operations href="../quantum-operation/sample-qubo.quope#RZ"/>
       <targetQubits xsi:type="qucircuit:IndexInt" index="1"/>
-      <angleParameter theta="60.56387112010326"/>
+      <angleParameter theta="8.080146965377576"/>
     </quantumOperations>
   </layers>
   <layers>
@@ -68,17 +68,17 @@
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate">
       <operations href="../quantum-operation/sample-qubo.quope#RZ"/>
       <targetQubits xsi:type="qucircuit:IndexInt" index="0"/>
-      <angleParameter theta="5.046989260008605"/>
+      <angleParameter theta="0.6733455804481314"/>
     </quantumOperations>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate">
       <operations href="../quantum-operation/sample-qubo.quope#RZ"/>
       <targetQubits xsi:type="qucircuit:IndexInt" index="1"/>
-      <angleParameter theta="25.234946300043024"/>
+      <angleParameter theta="3.3667279022406573"/>
     </quantumOperations>
     <quantumOperations xsi:type="qucircuit:ElementaryQuantumGate">
       <operations href="../quantum-operation/sample-qubo.quope#RZ"/>
       <targetQubits xsi:type="qucircuit:IndexInt" index="2"/>
-      <angleParameter theta="20.18795704003442"/>
+      <angleParameter theta="2.6933823217925257"/>
     </quantumOperations>
   </layers>
 </qucircuit:QuantumCircuit>

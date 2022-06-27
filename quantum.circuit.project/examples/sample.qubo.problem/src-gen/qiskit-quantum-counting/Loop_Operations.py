@@ -4,7 +4,6 @@ from qiskit.circuit import Gate
 import numpy as np
 from numpy.random import choice, random as rand, randint
 
-import import_ipynb
 import Composite_Gates
 import Measurements
 import Elementary_Gates
@@ -165,77 +164,77 @@ class LoopOperation:
                     qc.append(gate1,control_qubits+target_qubits)
 
 
-				if iter_type_t=="shift":
-		            for i in range(p):
-		                control_qubits=flex_cq+f_cqubits
-		                if increment_t==True:
-		                    t_qubits=flex_tq[i:block_size_tq+i]
-		                else:
-		                    t_qubits=flex_tq[len(flex_tq)-block_size_tq-i:len(flex_tq)-i]
-		                target_qubits=t_qubits+f_tqubits
+        if iter_type_t=="shift":
+            for i in range(p):
+                control_qubits=flex_cq+f_cqubits
+                if increment_t==True:
+                    t_qubits=flex_tq[i:block_size_tq+i]
+                else:
+                    t_qubits=flex_tq[len(flex_tq)-block_size_tq-i:len(flex_tq)-i]
+                target_qubits=t_qubits+f_tqubits
 
-						if iter_type_c=="change_block":
-	                    if incr_block_cq==True:
-	                        if increment_c==True:
-	                            flex_cq1=flex_cq[:block_size_cq+i]
-	                        else:
-	                            flex_cq1=flex_cq[len(flex_cq)-block_size_cq-i:]
-	                    else:
-	                        if increment_c==True:
-	                            flex_cq1=flex_cq[i:]
-	                        else:
-	                            flex_cq1=flex_cq[:len(flex_cq)-i]
-	                    control_qubits=flex_cq1+f_cqubits
-	                    gate1=gate(target_qubits,control_qubits)
-	                    qc.append(gate1,control_qubits+target_qubits)
-
-
-	                elif iter_type_c=="shift":
-	                    if increment_c==True:
-	                        c_qubits=flex_cq[i:block_size_cq+i]
-	                    else:
-	                        c_qubits=flex_cq[len(flex_cq)-block_size_cq-i:len(flex_cq)-i]
-	                    control_qubits=c_qubits+f_cqubits
-	                    gate1=gate(target_qubits,control_qubits)
-	                    qc.append(gate1,control_qubits+target_qubits)
-
-	                elif iter_type_c==None:
-	                    gate1=gate(target_qubits,control_qubits)
-	                    qc.append(gate1,control_qubits+target_qubits)
-
-	             if iter_type_t==None:
-		            for i in range(p):
-		                control_qubits=flex_cq+f_cqubits
-
-		                if iter_type_c=="change_block":
-		                    if incr_block_cq==True:
-		                        if increment_c==True:
-		                            flex_cq1=flex_cq[:block_size_cq+i]
-		                        else:
-		                            flex_cq1=flex_cq[len(flex_cq)-block_size_cq-i:]
-		                    else:
-		                        if increment_c==True:
-		                            flex_cq1=flex_cq[i:]
-		                        else:
-		                            flex_cq1=flex_cq[:len(flex_cq)-i]
-		                    control_qubits=flex_cq1+f_cqubits
-		                    gate1=gate(target_qubits,control_qubits)
-		                    qc.append(gate1,control_qubits+target_qubits)
+                if iter_type_c=="change_block":
+                    if incr_block_cq==True:
+                        if increment_c==True:
+                            flex_cq1=flex_cq[:block_size_cq+i]
+                        else:
+                            flex_cq1=flex_cq[len(flex_cq)-block_size_cq-i:]
+                    else:
+                        if increment_c==True:
+                            flex_cq1=flex_cq[i:]
+                        else:
+                            flex_cq1=flex_cq[:len(flex_cq)-i]
+                    control_qubits=flex_cq1+f_cqubits
+                    gate1=gate(target_qubits,control_qubits)
+                    qc.append(gate1,control_qubits+target_qubits)
 
 
-		                elif iter_type_c=="shift":
-		                    if increment_c==True:
-		                        c_qubits=flex_cq[i:block_size_cq+i]
-		                    else:
-		                        c_qubits=flex_cq[len(flex_cq)-block_size_cq-i:len(flex_cq)-i]
-		                    control_qubits=c_qubits+f_cqubits
-		                    gate1=gate(target_qubits,control_qubits)
-		                    qc.append(gate1,control_qubits+target_qubits)
+                elif iter_type_c=="shift":
+                    if increment_c==True:
+                        c_qubits=flex_cq[i:block_size_cq+i]
+                    else:
+                        c_qubits=flex_cq[len(flex_cq)-block_size_cq-i:len(flex_cq)-i]
+                    control_qubits=c_qubits+f_cqubits
+                    gate1=gate(target_qubits,control_qubits)
+                    qc.append(gate1,control_qubits+target_qubits)
 
-		                elif iter_type_c==None:
-		                    gate1=gate(target_qubits,control_qubits)
-		                    qc.append(gate1,control_qubits+target_qubits)
-		        gl_gate=qc.to_instruction()
-		        if inverse==True:
-		            gl_gate=gl_gate.inverse()
-		        return gl_gate
+                elif iter_type_c==None:
+                    gate1=gate(target_qubits,control_qubits)
+                    qc.append(gate1,control_qubits+target_qubits)
+
+                if iter_type_t==None:
+                    for i in range(p):
+                        control_qubits=flex_cq+f_cqubits
+
+                        if iter_type_c=="change_block":
+                            if incr_block_cq==True:
+                                if increment_c==True:
+                                    flex_cq1=flex_cq[:block_size_cq+i]
+                                else:
+                                    flex_cq1=flex_cq[len(flex_cq)-block_size_cq-i:]
+                            else:
+                                if increment_c==True:
+                                    flex_cq1=flex_cq[i:]
+                                else:
+                                    flex_cq1=flex_cq[:len(flex_cq)-i]
+                            control_qubits=flex_cq1+f_cqubits
+                            gate1=gate(target_qubits,control_qubits)
+                            qc.append(gate1,control_qubits+target_qubits)
+
+
+                        elif iter_type_c=="shift":
+                            if increment_c==True:
+                                c_qubits=flex_cq[i:block_size_cq+i]
+                            else:
+                                c_qubits=flex_cq[len(flex_cq)-block_size_cq-i:len(flex_cq)-i]
+                            control_qubits=c_qubits+f_cqubits
+                            gate1=gate(target_qubits,control_qubits)
+                            qc.append(gate1,control_qubits+target_qubits)
+
+                        elif iter_type_c==None:
+                            gate1=gate(target_qubits,control_qubits)
+                            qc.append(gate1,control_qubits+target_qubits)
+        gl_gate=qc.to_instruction()
+        if inverse==True:
+            gl_gate=gl_gate.inverse()
+        return gl_gate

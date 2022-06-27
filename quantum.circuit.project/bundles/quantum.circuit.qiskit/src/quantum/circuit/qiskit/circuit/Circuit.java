@@ -7,7 +7,6 @@ import quantum.operation.contribution.compositequantumgate.QFTElement;
 import quantum.operation.contribution.elementaryquantumgate.Swap;
 import quantum.operation.contribution.loops.GeneralLoop;
 import quantum.operation.contribution.loops.Power2Loop;
-import qucircuit.AbstractQuantumGate;
 import qucircuit.ClassicRegister;
 import qucircuit.ElementaryQuantumGate;
 import qucircuit.Index;
