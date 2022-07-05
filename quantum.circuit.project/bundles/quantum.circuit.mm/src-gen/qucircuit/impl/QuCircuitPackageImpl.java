@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import qubo.QuboPackage;
-import qubo.impl.QuboPackageImpl;
 import qucircuit.AbstractCompositeGate;
 import qucircuit.AbstractQuantumGate;
 import qucircuit.AngleParameter;
@@ -224,20 +223,15 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		isInited = true;
 
 		// Initialize simple dependencies
-		QuopePackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
-
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(QuboPackage.eNS_URI);
-		QuboPackageImpl theQuboPackage = (QuboPackageImpl)(registeredPackage instanceof QuboPackageImpl ? registeredPackage : QuboPackage.eINSTANCE);
+		QuopePackage.eINSTANCE.eClass();
+		QuboPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theQucircuitPackage.createPackageContents();
-		theQuboPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theQucircuitPackage.initializePackageContents();
-		theQuboPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theQucircuitPackage.freeze();

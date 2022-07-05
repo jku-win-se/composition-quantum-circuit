@@ -34,32 +34,4 @@
       </editor>
    </extension>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated QuCircuit -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="qubo.presentation.QuboModelWizardID"
-            name="%_UI_QuboModelWizard_label"
-            class="qubo.presentation.QuboModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/QuboModelFile.gif">
-         <description>%_UI_QuboModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated QuCircuit -->
-      <editor
-            id="qubo.presentation.QuboEditorID"
-            name="%_UI_QuboEditor_label"
-            icon="icons/full/obj16/QuboModelFile.gif"
-            extensions="qubo"
-            class="qubo.presentation.QuboEditor"
-            contributorClass="qubo.presentation.QuboActionBarContributor">
-      </editor>
-   </extension>
-
 </plugin>

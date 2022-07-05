@@ -1,6 +1,6 @@
 /**
  */
-package qucircuit.presentation;
+package qubo.presentation;
 
 import org.eclipse.emf.common.EMFPlugin;
 
@@ -8,27 +8,21 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-
-import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
-
-import qubo.provider.QuboEditPlugin;
-
 /**
- * This is the central singleton for the QuCircuit editor plugin.
+ * This is the central singleton for the Qubo editor plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class QuCircuitEditorPlugin extends EMFPlugin {
+public final class QuboEditorPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final QuCircuitEditorPlugin INSTANCE = new QuCircuitEditorPlugin();
-	
+	public static final QuboEditorPlugin INSTANCE = new QuboEditorPlugin();
+
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -43,13 +37,8 @@ public final class QuCircuitEditorPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuCircuitEditorPlugin() {
-		super
-			(new ResourceLocator [] {
-				EcoreEditPlugin.INSTANCE,
-				QuantumOpeEditPlugin.INSTANCE,
-				QuboEditPlugin.INSTANCE,
-			});
+	public QuboEditorPlugin() {
+		super(new ResourceLocator[] {});
 	}
 
 	/**
@@ -63,7 +52,7 @@ public final class QuCircuitEditorPlugin extends EMFPlugin {
 	public ResourceLocator getPluginResourceLocator() {
 		return plugin;
 	}
-	
+
 	/**
 	 * Returns the singleton instance of the Eclipse plugin.
 	 * <!-- begin-user-doc -->
@@ -74,7 +63,7 @@ public final class QuCircuitEditorPlugin extends EMFPlugin {
 	public static Implementation getPlugin() {
 		return plugin;
 	}
-	
+
 	/**
 	 * The actual implementation of the Eclipse <b>Plugin</b>.
 	 * <!-- begin-user-doc -->
@@ -90,7 +79,7 @@ public final class QuCircuitEditorPlugin extends EMFPlugin {
 		 */
 		public Implementation() {
 			super();
-	
+
 			// Remember the static instance.
 			//
 			plugin = this;

@@ -2,7 +2,6 @@
  */
 package qubo.provider;
 
-
 import java.util.Collection;
 import java.util.List;
 
@@ -92,6 +91,16 @@ public class QuboItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected boolean shouldComposeCreationImage() {
+		return true;
+	}
+
+	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,12 +108,10 @@ public class QuboItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Qubo)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Qubo_type") :
-			getString("_UI_Qubo_type") + " " + label;
+		String label = ((Qubo) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Qubo_type")
+				: getString("_UI_Qubo_type") + " " + label;
 	}
-
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -118,9 +125,9 @@ public class QuboItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Qubo.class)) {
-			case QuboPackage.QUBO__MATRIX:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
+		case QuboPackage.QUBO__MATRIX:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -136,10 +143,8 @@ public class QuboItemProvider extends NamedElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add
-			(createChildParameter
-				(QuboPackage.Literals.QUBO__MATRIX,
-				 QuboFactory.eINSTANCE.createMatrix()));
+		newChildDescriptors
+				.add(createChildParameter(QuboPackage.Literals.QUBO__MATRIX, QuboFactory.eINSTANCE.createMatrix()));
 	}
 
 }

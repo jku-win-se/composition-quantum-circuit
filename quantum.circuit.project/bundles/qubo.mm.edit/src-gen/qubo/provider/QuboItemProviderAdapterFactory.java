@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ChangeNotifier;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IChangeNotifier;
+import org.eclipse.emf.edit.provider.IDisposable;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
@@ -31,7 +32,8 @@ import qubo.util.QuboAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class QuboItemProviderAdapterFactory extends QuboAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier {
+public class QuboItemProviderAdapterFactory extends QuboAdapterFactory
+		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -212,7 +214,7 @@ public class QuboItemProviderAdapterFactory extends QuboAdapterFactory implement
 	public Object adapt(Object object, Object type) {
 		if (isFactoryForType(type)) {
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
 				return adapter;
 			}
 		}
@@ -252,6 +254,23 @@ public class QuboItemProviderAdapterFactory extends QuboAdapterFactory implement
 		if (parentAdapterFactory != null) {
 			parentAdapterFactory.fireNotifyChanged(notification);
 		}
+	}
+
+	/**
+	 * This disposes all of the item providers created by this factory. 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void dispose() {
+		if (quboItemProvider != null)
+			quboItemProvider.dispose();
+		if (matrixItemProvider != null)
+			matrixItemProvider.dispose();
+		if (rowItemProvider != null)
+			rowItemProvider.dispose();
+		if (columnItemProvider != null)
+			columnItemProvider.dispose();
 	}
 
 }

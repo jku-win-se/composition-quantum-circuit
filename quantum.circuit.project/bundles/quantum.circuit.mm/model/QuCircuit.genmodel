@@ -4,7 +4,7 @@
     editorDirectory="/quantum.circuit.mm.editor/src-gen" modelPluginID="quantum.circuit.mm"
     modelName="QuCircuit" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="/quantum.circuit.mm.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../quantum.operation.library.mm/model/QuantumOpe.genmodel#//quope ../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../quantum.operation.library.mm/model/QuantumOpe.genmodel#//quope ../../qubo.mm/model/Qubo.genmodel#//qubo"
     operationReflection="true" importOrganizing="true">
   <foreignModel>QuCircuit.ecore</foreignModel>
   <genPackages prefix="Qucircuit" disposableProviderFactory="true" ecorePackage="QuCircuit.ecore#/">
@@ -85,23 +85,6 @@
     <genClasses ecoreClass="QuCircuit.ecore#//IndexRange">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//IndexRange/begin"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//IndexRange/end"/>
-    </genClasses>
-  </genPackages>
-  <genPackages prefix="Qubo" ecorePackage="../../qubo.mm/model/Qubo.ecore#/">
-    <genClasses ecoreClass="../../qubo.mm/model/Qubo.ecore#//Qubo">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../qubo.mm/model/Qubo.ecore#//Qubo/matrix"/>
-    </genClasses>
-    <genClasses ecoreClass="../../qubo.mm/model/Qubo.ecore#//Matrix">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../qubo.mm/model/Qubo.ecore#//Matrix/rows"/>
-    </genClasses>
-    <genClasses ecoreClass="../../qubo.mm/model/Qubo.ecore#//Row">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../qubo.mm/model/Qubo.ecore#//Row/columns"/>
-    </genClasses>
-    <genClasses ecoreClass="../../qubo.mm/model/Qubo.ecore#//Column">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../qubo.mm/model/Qubo.ecore#//Column/value"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="../../qubo.mm/model/Qubo.ecore#//NamedElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../qubo.mm/model/Qubo.ecore#//NamedElement/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

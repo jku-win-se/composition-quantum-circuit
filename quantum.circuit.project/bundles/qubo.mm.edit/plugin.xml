@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated QuCircuit -->
+      <!-- @generated Qubo -->
       <factory
-            uri="http://www.eclipse.org/QuCircuit"
-            class="qucircuit.provider.QucircuitItemProviderAdapterFactory"
+            uri="http://www.eclipse.org/Qubo"
+            class="qubo.provider.QuboItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

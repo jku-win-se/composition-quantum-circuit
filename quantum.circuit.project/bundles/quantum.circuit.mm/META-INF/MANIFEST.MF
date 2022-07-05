@@ -16,6 +16,7 @@ Export-Package: qubo,
  qucircuit.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  quantum.operation.library.mm;visibility:=reexport,
+ qubo.mm;visibility:=reexport,
  org.eclipse.core.runtime,
  org.eclipse.emf.common
 Bundle-ActivationPolicy: lazy
