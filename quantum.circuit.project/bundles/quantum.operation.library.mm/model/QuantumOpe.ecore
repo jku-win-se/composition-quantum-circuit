@@ -10,7 +10,6 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedQuantumOperation"
         eType="#//FixedQuantumOperation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reverse" eType="#//ConcreteQuantumOperation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -69,5 +68,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="styleIconPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reversible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reverse" eType="#//AbstractQuantumOperation"/>
   </eClassifiers>
 </ecore:EPackage>

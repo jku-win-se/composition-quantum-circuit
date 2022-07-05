@@ -195,13 +195,22 @@ public interface QuopePackage extends EPackage {
 	int ABSTRACT_QUANTUM_OPERATION__TYPE = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Reverse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_QUANTUM_OPERATION__REVERSE = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Quantum Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Abstract Quantum Operation</em>' class.
@@ -268,6 +277,15 @@ public interface QuopePackage extends EPackage {
 	int CONCRETE_QUANTUM_OPERATION__TYPE = ABSTRACT_QUANTUM_OPERATION__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Reverse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_QUANTUM_OPERATION__REVERSE = ABSTRACT_QUANTUM_OPERATION__REVERSE;
+
+	/**
 	 * The feature id for the '<em><b>Parameter</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -286,22 +304,13 @@ public interface QuopePackage extends EPackage {
 	int CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Reverse</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONCRETE_QUANTUM_OPERATION__REVERSE = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Concrete Quantum Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION_FEATURE_COUNT = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 3;
+	int CONCRETE_QUANTUM_OPERATION_FEATURE_COUNT = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Concrete Quantum Operation</em>' class.
@@ -478,6 +487,15 @@ public interface QuopePackage extends EPackage {
 	int CONCRETE_LOOP_OPERATION__TYPE = ABSTRACT_QUANTUM_OPERATION__TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Reverse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_LOOP_OPERATION__REVERSE = ABSTRACT_QUANTUM_OPERATION__REVERSE;
+
+	/**
 	 * The feature id for the '<em><b>Allows Fixed Control Qubits</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -637,17 +655,6 @@ public interface QuopePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConcreteQuantumOperation_FixedQuantumOperation();
-
-	/**
-	 * Returns the meta object for the reference '{@link quope.ConcreteQuantumOperation#getReverse <em>Reverse</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Reverse</em>'.
-	 * @see quope.ConcreteQuantumOperation#getReverse()
-	 * @see #getConcreteQuantumOperation()
-	 * @generated
-	 */
-	EReference getConcreteQuantumOperation_Reverse();
 
 	/**
 	 * Returns the meta object for class '{@link quope.NamedElement <em>Named Element</em>}'.
@@ -931,6 +938,17 @@ public interface QuopePackage extends EPackage {
 	EReference getAbstractQuantumOperation_Type();
 
 	/**
+	 * Returns the meta object for the reference '{@link quope.AbstractQuantumOperation#getReverse <em>Reverse</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reverse</em>'.
+	 * @see quope.AbstractQuantumOperation#getReverse()
+	 * @see #getAbstractQuantumOperation()
+	 * @generated
+	 */
+	EReference getAbstractQuantumOperation_Reverse();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -997,14 +1015,6 @@ public interface QuopePackage extends EPackage {
 		 */
 		EReference CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION = eINSTANCE
 				.getConcreteQuantumOperation_FixedQuantumOperation();
-
-		/**
-		 * The meta object literal for the '<em><b>Reverse</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONCRETE_QUANTUM_OPERATION__REVERSE = eINSTANCE.getConcreteQuantumOperation_Reverse();
 
 		/**
 		 * The meta object literal for the '{@link quope.impl.NamedElementImpl <em>Named Element</em>}' class.
@@ -1236,6 +1246,14 @@ public interface QuopePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_QUANTUM_OPERATION__TYPE = eINSTANCE.getAbstractQuantumOperation_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Reverse</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_QUANTUM_OPERATION__REVERSE = eINSTANCE.getAbstractQuantumOperation_Reverse();
 
 	}
 

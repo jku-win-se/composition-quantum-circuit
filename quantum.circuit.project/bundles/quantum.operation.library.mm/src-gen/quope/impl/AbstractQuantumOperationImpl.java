@@ -24,6 +24,7 @@ import quope.QuopePackage;
  *   <li>{@link quope.impl.AbstractQuantumOperationImpl#getStyleIconPath <em>Style Icon Path</em>}</li>
  *   <li>{@link quope.impl.AbstractQuantumOperationImpl#getReversible <em>Reversible</em>}</li>
  *   <li>{@link quope.impl.AbstractQuantumOperationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link quope.impl.AbstractQuantumOperationImpl#getReverse <em>Reverse</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,6 +99,16 @@ public abstract class AbstractQuantumOperationImpl extends NamedElementImpl impl
 	 * @ordered
 	 */
 	protected EClass type;
+
+	/**
+	 * The cached value of the '{@link #getReverse() <em>Reverse</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReverse()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractQuantumOperation reverse;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -229,6 +240,46 @@ public abstract class AbstractQuantumOperationImpl extends NamedElementImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AbstractQuantumOperation getReverse() {
+		if (reverse != null && reverse.eIsProxy()) {
+			InternalEObject oldReverse = (InternalEObject) reverse;
+			reverse = (AbstractQuantumOperation) eResolveProxy(oldReverse);
+			if (reverse != oldReverse) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							QuopePackage.ABSTRACT_QUANTUM_OPERATION__REVERSE, oldReverse, reverse));
+			}
+		}
+		return reverse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractQuantumOperation basicGetReverse() {
+		return reverse;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReverse(AbstractQuantumOperation newReverse) {
+		AbstractQuantumOperation oldReverse = reverse;
+		reverse = newReverse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QuopePackage.ABSTRACT_QUANTUM_OPERATION__REVERSE,
+					oldReverse, reverse));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -242,6 +293,10 @@ public abstract class AbstractQuantumOperationImpl extends NamedElementImpl impl
 			if (resolve)
 				return getType();
 			return basicGetType();
+		case QuopePackage.ABSTRACT_QUANTUM_OPERATION__REVERSE:
+			if (resolve)
+				return getReverse();
+			return basicGetReverse();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,6 +320,9 @@ public abstract class AbstractQuantumOperationImpl extends NamedElementImpl impl
 			return;
 		case QuopePackage.ABSTRACT_QUANTUM_OPERATION__TYPE:
 			setType((EClass) newValue);
+			return;
+		case QuopePackage.ABSTRACT_QUANTUM_OPERATION__REVERSE:
+			setReverse((AbstractQuantumOperation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -290,6 +348,9 @@ public abstract class AbstractQuantumOperationImpl extends NamedElementImpl impl
 		case QuopePackage.ABSTRACT_QUANTUM_OPERATION__TYPE:
 			setType((EClass) null);
 			return;
+		case QuopePackage.ABSTRACT_QUANTUM_OPERATION__REVERSE:
+			setReverse((AbstractQuantumOperation) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -312,6 +373,8 @@ public abstract class AbstractQuantumOperationImpl extends NamedElementImpl impl
 			return REVERSIBLE_EDEFAULT == null ? reversible != null : !REVERSIBLE_EDEFAULT.equals(reversible);
 		case QuopePackage.ABSTRACT_QUANTUM_OPERATION__TYPE:
 			return type != null;
+		case QuopePackage.ABSTRACT_QUANTUM_OPERATION__REVERSE:
+			return reverse != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -19,7 +19,6 @@
     <genClasses ecoreClass="QuantumOpe.ecore#//ConcreteQuantumOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuantumOpe.ecore#//ConcreteQuantumOperation/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuantumOpe.ecore#//ConcreteQuantumOperation/fixedQuantumOperation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuantumOpe.ecore#//ConcreteQuantumOperation/reverse"/>
     </genClasses>
     <genClasses image="false" ecoreClass="QuantumOpe.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuantumOpe.ecore#//NamedElement/name"/>
@@ -51,6 +50,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuantumOpe.ecore#//AbstractQuantumOperation/styleIconPath"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuantumOpe.ecore#//AbstractQuantumOperation/reversible"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuantumOpe.ecore#//AbstractQuantumOperation/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuantumOpe.ecore#//AbstractQuantumOperation/reverse"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

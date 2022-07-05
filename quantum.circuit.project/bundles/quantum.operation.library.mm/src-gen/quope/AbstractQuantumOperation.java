@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
  *   <li>{@link quope.AbstractQuantumOperation#getStyleIconPath <em>Style Icon Path</em>}</li>
  *   <li>{@link quope.AbstractQuantumOperation#getReversible <em>Reversible</em>}</li>
  *   <li>{@link quope.AbstractQuantumOperation#getType <em>Type</em>}</li>
+ *   <li>{@link quope.AbstractQuantumOperation#getReverse <em>Reverse</em>}</li>
  * </ul>
  *
  * @see quope.QuopePackage#getAbstractQuantumOperation()
@@ -111,5 +112,27 @@ public interface AbstractQuantumOperation extends NamedElement {
 	 * @generated
 	 */
 	void setType(EClass value);
+
+	/**
+	 * Returns the value of the '<em><b>Reverse</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reverse</em>' reference.
+	 * @see #setReverse(AbstractQuantumOperation)
+	 * @see quope.QuopePackage#getAbstractQuantumOperation_Reverse()
+	 * @model
+	 * @generated
+	 */
+	AbstractQuantumOperation getReverse();
+
+	/**
+	 * Sets the value of the '{@link quope.AbstractQuantumOperation#getReverse <em>Reverse</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reverse</em>' reference.
+	 * @see #getReverse()
+	 * @generated
+	 */
+	void setReverse(AbstractQuantumOperation value);
 
 } // AbstractQuantumOperation

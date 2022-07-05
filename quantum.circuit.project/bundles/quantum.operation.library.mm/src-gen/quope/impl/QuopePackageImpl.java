@@ -193,15 +193,6 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConcreteQuantumOperation_Reverse() {
-		return (EReference) concreteQuantumOperationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -436,6 +427,15 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAbstractQuantumOperation_Reverse() {
+		return (EReference) abstractQuantumOperationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public QuopeFactory getQuopeFactory() {
 		return (QuopeFactory) getEFactoryInstance();
 	}
@@ -466,7 +466,6 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		concreteQuantumOperationEClass = createEClass(CONCRETE_QUANTUM_OPERATION);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__PARAMETER);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION);
-		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__REVERSE);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
@@ -498,6 +497,7 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		createEAttribute(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__STYLE_ICON_PATH);
 		createEAttribute(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__REVERSIBLE);
 		createEReference(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__TYPE);
+		createEReference(abstractQuantumOperationEClass, ABSTRACT_QUANTUM_OPERATION__REVERSE);
 	}
 
 	/**
@@ -552,9 +552,6 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		initEReference(getConcreteQuantumOperation_FixedQuantumOperation(), this.getFixedQuantumOperation(), null,
 				"fixedQuantumOperation", null, 0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConcreteQuantumOperation_Reverse(), this.getConcreteQuantumOperation(), null, "reverse", null,
-				0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -629,6 +626,9 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractQuantumOperation_Type(), theEcorePackage.getEClass(), null, "type", null, 1, 1,
 				AbstractQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractQuantumOperation_Reverse(), this.getAbstractQuantumOperation(), null, "reverse", null,
+				0, 1, AbstractQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
