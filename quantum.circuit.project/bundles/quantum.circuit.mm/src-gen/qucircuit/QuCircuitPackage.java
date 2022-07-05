@@ -881,13 +881,22 @@ public interface QucircuitPackage extends EPackage {
 	int COMPOSITE_QUANTUM_GATE__LAYERS = ABSTRACT_COMPOSITE_GATE__LAYERS;
 
 	/**
+	 * The feature id for the '<em><b>Qubo</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_QUANTUM_GATE__QUBO = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Composite Quantum Gate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 0;
+	int COMPOSITE_QUANTUM_GATE_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Composite Quantum Gate</em>' class.
@@ -1598,6 +1607,17 @@ public interface QucircuitPackage extends EPackage {
 	EClass getCompositeQuantumGate();
 
 	/**
+	 * Returns the meta object for the reference '{@link qucircuit.CompositeQuantumGate#getQubo <em>Qubo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Qubo</em>'.
+	 * @see qucircuit.CompositeQuantumGate#getQubo()
+	 * @see #getCompositeQuantumGate()
+	 * @generated
+	 */
+	EReference getCompositeQuantumGate_Qubo();
+
+	/**
 	 * Returns the meta object for class '{@link qucircuit.AngleParameter <em>Angle Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2179,6 +2199,14 @@ public interface QucircuitPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COMPOSITE_QUANTUM_GATE = eINSTANCE.getCompositeQuantumGate();
+
+		/**
+		 * The meta object literal for the '<em><b>Qubo</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITE_QUANTUM_GATE__QUBO = eINSTANCE.getCompositeQuantumGate_Qubo();
 
 		/**
 		 * The meta object literal for the '{@link qucircuit.impl.AngleParameterImpl <em>Angle Parameter</em>}' class.

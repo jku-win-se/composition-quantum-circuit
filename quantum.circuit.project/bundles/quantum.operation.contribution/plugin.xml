@@ -53,6 +53,10 @@
             Name="QFTElement"
             class="quantum.operation.contribution.compositequantumgate.QFTElement">
       </CompositeBlock>
+      <CompositeBlock
+            Name="MixerUnitaryQAOA"
+            class="quantum.operation.contribution.compositequantumgate.MixerUnitaryQAOA">
+      </CompositeBlock>
    </extension>
    <extension
          id="StatePreparationQuantumGates"

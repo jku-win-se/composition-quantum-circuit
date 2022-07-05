@@ -17,6 +17,8 @@ import quope.QuantumOperationLibrary
 import quantum.operation.definition.api.utils.QuantumOperationUtils
 import qubo.Qubo
 import quope.QuopePackage
+import org.eclipse.xtext.resource.XtextResource
+import org.eclipse.xtext.resource.XtextResourceSet
 
 /**
  * Generates code from your model files on save.
@@ -48,13 +50,14 @@ class QUBOGenerator extends AbstractGenerator {
 	}
 	
 	def generateQUBOQuantumCircuit(IFileSystemAccess2 fsa, Resource resource, QuantumOperationLibrary quantumOpLib) {
-		var URI quCircuitURI = createURI(fsa, resource, 'qu-circuit', QucircuitPackage.eNS_PREFIX)
-		var ResourceSet reset = resource.resourceSet; 
-		var Resource quCircuit = reset.createResource(quCircuitURI);
+		var URI quCircuitURI = createURI(fsa, resource, 'qu-circuit', 'qucirc')
+		var XtextResourceSet reset = resource.resourceSet as XtextResourceSet; 
+		var Resource quCircuitXtext = reset.createResource(quCircuitURI);
+		//var Resource quCircuit = reset.createResource(quCircuitURI);
 		var Qubo qubo = resource.contents.get(0) as Qubo;
 		var QuantumCircuit quantumCircuit = QuboUtils.createQuboCircuit(qubo, quantumOpLib);
-		quCircuit.contents.add(quantumCircuit);
-		quCircuit.save(Collections.EMPTY_MAP)
+		quCircuitXtext.contents.add(quantumCircuit);
+		quCircuitXtext.save(Collections.EMPTY_MAP)
 	}
 	
 	def createURI(IFileSystemAccess2 fsa, Resource resource, String folder, String ext) {

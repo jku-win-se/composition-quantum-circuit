@@ -33,28 +33,28 @@ public class QUBOFormatter extends AbstractFormatter2 {
     }
   }
   
-  public void format(final Object matrix, final IFormattableDocument document) {
-    if (matrix instanceof XtextResource) {
-      _format((XtextResource)matrix, document);
+  public void format(final Object qubo, final IFormattableDocument document) {
+    if (qubo instanceof XtextResource) {
+      _format((XtextResource)qubo, document);
       return;
-    } else if (matrix instanceof Matrix) {
-      _format((Matrix)matrix, document);
+    } else if (qubo instanceof Qubo) {
+      _format((Qubo)qubo, document);
       return;
-    } else if (matrix instanceof Qubo) {
-      _format((Qubo)matrix, document);
+    } else if (qubo instanceof Matrix) {
+      _format((Matrix)qubo, document);
       return;
-    } else if (matrix instanceof EObject) {
-      _format((EObject)matrix, document);
+    } else if (qubo instanceof EObject) {
+      _format((EObject)qubo, document);
       return;
-    } else if (matrix == null) {
+    } else if (qubo == null) {
       _format((Void)null, document);
       return;
-    } else if (matrix != null) {
-      _format(matrix, document);
+    } else if (qubo != null) {
+      _format(qubo, document);
       return;
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
-        Arrays.<Object>asList(matrix, document).toString());
+        Arrays.<Object>asList(qubo, document).toString());
     }
   }
 }

@@ -160,6 +160,7 @@ import qucircuit.provider.QucircuitItemProviderAdapterFactory;
 import org.eclipse.emf.ecore.provider.EcoreItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
+import qubo.provider.QuboItemProviderAdapterFactory;
 import quope.provider.QuopeItemProviderAdapterFactory;
 
 
@@ -704,6 +705,7 @@ public class QucircuitEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new QucircuitItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new QuboItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new QuopeItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EcoreItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());

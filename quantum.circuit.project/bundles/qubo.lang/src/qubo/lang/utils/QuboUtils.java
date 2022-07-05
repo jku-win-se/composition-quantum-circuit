@@ -24,9 +24,10 @@ public class QuboUtils {
 		final double gamma = Math.PI * new Random().nextDouble();
 		//Create the Circuit		
 		final QuantumCircuit quCircuit = QucircuitFactory.eINSTANCE.createQuantumCircuit();
-		quCircuit.setName("Generated Qubo Circuit");
+		quCircuit.setName("Generated-Qubo-Circuit");
 		final QuantumRegister quRegister = QucircuitFactory.eINSTANCE.createQuantumRegister();
 		quRegister.setNumberOfQubits(numberOfQubits);
+		quRegister.setName("qr1");
 		
 //		final EList<Qubit> quBits = new BasicEList<Qubit>(numberOfQubits);
 //		for (int i = 0; i < numberOfQubits; i++) {
@@ -36,8 +37,10 @@ public class QuboUtils {
 		quCircuit.getQuantumRegisters().add(quRegister);	
 		//Diagonal Rz
 		final Layer diagonalRzLayer = QucircuitFactory.eINSTANCE.createLayer();		
+		diagonalRzLayer.setName("L1");
 		for (int i = 0; i < numberOfQubits; i++) {
 			var quOpeDiagonalRz = QucircuitFactory.eINSTANCE.createElementaryQuantumGate();
+			quOpeDiagonalRz.setName("RZ");
 			quOpeDiagonalRz.getOperations().add(rz);
 			//Set angle
 			var parameter =  QucircuitFactory.eINSTANCE.createAngleParameter();
@@ -53,7 +56,9 @@ public class QuboUtils {
 			diagonalRzLayer.getQuantumOperations().add(quOpeDiagonalRz);
 			for (int j = 1; j < qubo.getMatrix().getRows().get(i).getColumns().size(); j++) {
 				final Layer cnotLayer = QucircuitFactory.eINSTANCE.createLayer();
+				cnotLayer.setName("CNOTLayer" + i + j);
 				var quOpeCNotBegin = QucircuitFactory.eINSTANCE.createElementaryQuantumGate();
+				quOpeCNotBegin.setName("quOpeCNotBegin" + i + j);
 				quOpeCNotBegin.getOperations().add(cnot);
 				//CreateIndex Target Qubit
 				IndexInt targetQubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();
@@ -66,7 +71,9 @@ public class QuboUtils {
 				cnotLayer.getQuantumOperations().add(quOpeCNotBegin);
 				quCircuit.getLayers().add(cnotLayer);
 				final Layer rzLayer = QucircuitFactory.eINSTANCE.createLayer();
+				rzLayer.setName("rzLayer" + i + j);
 				var quOpeRz = QucircuitFactory.eINSTANCE.createElementaryQuantumGate();
+				quOpeRz.setName("quOpeRz" + i +j);
 				quOpeRz.getOperations().add(rz);
 				//CreateIndex RZ Target Qubit
 				IndexInt targetRzQubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();

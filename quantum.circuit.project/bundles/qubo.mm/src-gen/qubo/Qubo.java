@@ -2,8 +2,6 @@
  */
 package qubo;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Qubo</b></em>'.
@@ -20,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Qubo extends EObject {
+public interface Qubo extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Matrix</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

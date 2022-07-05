@@ -57,6 +57,43 @@ public interface QuboPackage extends EPackage {
 	QuboPackage eINSTANCE = qubo.impl.QuboPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link qubo.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see qubo.impl.NamedElementImpl
+	 * @see qubo.impl.QuboPackageImpl#getNamedElement()
+	 * @generated
+	 */
+	int NAMED_ELEMENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link qubo.impl.QuboImpl <em>Qubo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,13 +104,22 @@ public interface QuboPackage extends EPackage {
 	int QUBO = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUBO__NAME = NAMED_ELEMENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Matrix</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUBO__MATRIX = 0;
+	int QUBO__MATRIX = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Qubo</em>' class.
@@ -82,7 +128,7 @@ public interface QuboPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUBO_FEATURE_COUNT = 1;
+	int QUBO_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Qubo</em>' class.
@@ -91,7 +137,7 @@ public interface QuboPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUBO_OPERATION_COUNT = 0;
+	int QUBO_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link qubo.impl.MatrixImpl <em>Matrix</em>}' class.
@@ -289,6 +335,27 @@ public interface QuboPackage extends EPackage {
 	EAttribute getColumn_Value();
 
 	/**
+	 * Returns the meta object for class '{@link qubo.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Element</em>'.
+	 * @see qubo.NamedElement
+	 * @generated
+	 */
+	EClass getNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link qubo.NamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see qubo.NamedElement#getName()
+	 * @see #getNamedElement()
+	 * @generated
+	 */
+	EAttribute getNamedElement_Name();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -382,6 +449,24 @@ public interface QuboPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLUMN__VALUE = eINSTANCE.getColumn_Value();
+
+		/**
+		 * The meta object literal for the '{@link qubo.impl.NamedElementImpl <em>Named Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see qubo.impl.NamedElementImpl
+		 * @see qubo.impl.QuboPackageImpl#getNamedElement()
+		 * @generated
+		 */
+		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
 
 	}
 

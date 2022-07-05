@@ -8,9 +8,11 @@
     <semanticResources>QuCircuit.genmodel</semanticResources>
     <semanticResources>platform:/resource/quantum.operation.library.mm/model/QuantumOpe.genmodel</semanticResources>
     <semanticResources>platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel</semanticResources>
+    <semanticResources>platform:/resource/qubo.mm/model/Qubo.genmodel</semanticResources>
+    <semanticResources>platform:/resource/qubo.mm/model/Qubo.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_kXen0HU0EeyMIZBkdn5Jfg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_lXTtIHU0EeyMIZBkdn5Jfg" name="qcircuit class diagram" repPath="#_lW-9AHU0EeyMIZBkdn5Jfg" changeId="d9d9c428-bba0-4e76-a492-688197882cbf">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_lXTtIHU0EeyMIZBkdn5Jfg" name="qcircuit class diagram" repPath="#_lW-9AHU0EeyMIZBkdn5Jfg" changeId="cfc93e0f-707b-4ff3-ab87-b24ad5274a17">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="QuCircuit.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -145,11 +147,15 @@
         <children xmi:type="notation:Node" xmi:id="_mGBNR3U0EeyMIZBkdn5Jfg" type="2003" element="_mFJqkXU0EeyMIZBkdn5Jfg">
           <children xmi:type="notation:Node" xmi:id="_mGB0UHU0EeyMIZBkdn5Jfg" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_mGB0UXU0EeyMIZBkdn5Jfg" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_xt51gPxvEeyUY5-ddwe_kw" type="3010" element="_xtnhoPxvEeyUY5-ddwe_kw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_xt51gfxvEeyUY5-ddwe_kw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_xt51gvxvEeyUY5-ddwe_kw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_mGB0UnU0EeyMIZBkdn5Jfg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_mGB0U3U0EeyMIZBkdn5Jfg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_mGBNSHU0EeyMIZBkdn5Jfg" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mGBNSXU0EeyMIZBkdn5Jfg" x="690" y="510" width="168" height="48"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mGBNSXU0EeyMIZBkdn5Jfg" x="645" y="510" width="213" height="63"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_mGCbYHU0EeyMIZBkdn5Jfg" type="2003" element="_mFK4sHU0EeyMIZBkdn5Jfg">
           <children xmi:type="notation:Node" xmi:id="_mGDCcHU0EeyMIZBkdn5Jfg" type="5007"/>
@@ -596,7 +602,7 @@
           <styles xmi:type="notation:ConnectorStyle" xmi:id="__t4QYdqOEeyc14e_AJW79g" routing="Tree"/>
           <styles xmi:type="notation:FontStyle" xmi:id="__t4QYtqOEeyc14e_AJW79g" fontName="Segoe UI" fontHeight="8"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__t4QY9qOEeyc14e_AJW79g" points="[0, 0, -44, 67]$[0, -15, -44, 52]$[43, -15, -1, 52]$[43, -44, -1, 23]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__t43dNqOEeyc14e_AJW79g" id="(0.8132530120481928,0.0)"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__t43dNqOEeyc14e_AJW79g" id="(0.8530805687203792,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__t43ddqOEeyc14e_AJW79g" id="(0.30102040816326536,0.8260869565217391)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_mFYr4NqREeyc14e_AJW79g" type="4001" element="_mFSljtqREeyc14e_AJW79g" source="_MFvk8NqPEeyc14e_AJW79g" target="_fowuENqOEeyc14e_AJW79g">
@@ -982,6 +988,14 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_xtnhoPxvEeyUY5-ddwe_kw" name=" qubo : Qubo" tooltipText="">
+        <target xmi:type="ecore:EReference" href="QuCircuit.ecore#//CompositeQuantumGate/qubo"/>
+        <semanticElements xmi:type="ecore:EReference" href="QuCircuit.ecore#//CompositeQuantumGate/qubo"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_xtnhofxvEeyUY5-ddwe_kw" labelAlignment="LEFT" color="114,159,207">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_mFK4sHU0EeyMIZBkdn5Jfg" name="AngleParameter" tooltipText="" incomingEdges="_mFpZ1nU0EeyMIZBkdn5Jfg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="QuCircuit.ecore#//AngleParameter"/>

@@ -21,5 +21,8 @@
     <genClasses ecoreClass="Qubo.ecore#//Column">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Qubo.ecore#//Column/value"/>
     </genClasses>
+    <genClasses ecoreClass="Qubo.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Qubo.ecore#//NamedElement/name"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

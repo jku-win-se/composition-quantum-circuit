@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.xbase.lib.Exceptions;
 import quantum.operation.definition.api.utils.QuantumOperationUtils;
 import qubo.Qubo;
 import qubo.lang.utils.QuboUtils;
 import qucircuit.QuantumCircuit;
-import qucircuit.QucircuitPackage;
 import quope.QuantumOperationLibrary;
 import quope.QuopePackage;
 
@@ -57,14 +57,15 @@ public class QUBOGenerator extends AbstractGenerator {
   
   public void generateQUBOQuantumCircuit(final IFileSystemAccess2 fsa, final Resource resource, final QuantumOperationLibrary quantumOpLib) {
     try {
-      URI quCircuitURI = this.createURI(fsa, resource, "qu-circuit", QucircuitPackage.eNS_PREFIX);
-      ResourceSet reset = resource.getResourceSet();
-      Resource quCircuit = reset.createResource(quCircuitURI);
+      URI quCircuitURI = this.createURI(fsa, resource, "qu-circuit", "qucirc");
+      ResourceSet _resourceSet = resource.getResourceSet();
+      XtextResourceSet reset = ((XtextResourceSet) _resourceSet);
+      Resource quCircuitXtext = reset.createResource(quCircuitURI);
       EObject _get = resource.getContents().get(0);
       Qubo qubo = ((Qubo) _get);
       QuantumCircuit quantumCircuit = QuboUtils.createQuboCircuit(qubo, quantumOpLib);
-      quCircuit.getContents().add(quantumCircuit);
-      quCircuit.save(Collections.EMPTY_MAP);
+      quCircuitXtext.getContents().add(quantumCircuit);
+      quCircuitXtext.save(Collections.EMPTY_MAP);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }

@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import qubo.QuboPackage;
+import qubo.impl.QuboPackageImpl;
 import qucircuit.AbstractCompositeGate;
 import qucircuit.AbstractQuantumGate;
 import qucircuit.AngleParameter;
@@ -225,11 +227,17 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		QuopePackage.eINSTANCE.eClass();
 		EcorePackage.eINSTANCE.eClass();
 
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(QuboPackage.eNS_URI);
+		QuboPackageImpl theQuboPackage = (QuboPackageImpl)(registeredPackage instanceof QuboPackageImpl ? registeredPackage : QuboPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theQucircuitPackage.createPackageContents();
+		theQuboPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theQucircuitPackage.initializePackageContents();
+		theQuboPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theQucircuitPackage.freeze();
@@ -489,6 +497,15 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 */
 	public EClass getCompositeQuantumGate() {
 		return compositeQuantumGateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompositeQuantumGate_Qubo() {
+		return (EReference)compositeQuantumGateEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -819,6 +836,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		createEReference(elementaryQuantumGateEClass, ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER);
 
 		compositeQuantumGateEClass = createEClass(COMPOSITE_QUANTUM_GATE);
+		createEReference(compositeQuantumGateEClass, COMPOSITE_QUANTUM_GATE__QUBO);
 
 		angleParameterEClass = createEClass(ANGLE_PARAMETER);
 		createEAttribute(angleParameterEClass, ANGLE_PARAMETER__THETA);
@@ -883,6 +901,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 
 		// Obtain other dependent packages
 		QuopePackage theQuopePackage = (QuopePackage)EPackage.Registry.INSTANCE.getEPackage(QuopePackage.eNS_URI);
+		QuboPackage theQuboPackage = (QuboPackage)EPackage.Registry.INSTANCE.getEPackage(QuboPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -944,6 +963,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEReference(getElementaryQuantumGate_AngleParameter(), this.getAngleParameter(), null, "angleParameter", null, 0, 1, ElementaryQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeQuantumGateEClass, CompositeQuantumGate.class, "CompositeQuantumGate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCompositeQuantumGate_Qubo(), theQuboPackage.getQubo(), null, "qubo", null, 0, 1, CompositeQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(angleParameterEClass, AngleParameter.class, "AngleParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAngleParameter_Theta(), ecorePackage.getEDoubleObject(), "theta", null, 0, 1, AngleParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

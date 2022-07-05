@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import qubo.Column;
 import qubo.Matrix;
+import qubo.NamedElement;
 import qubo.Qubo;
 import qubo.QuboFactory;
 import qubo.QuboPackage;
@@ -50,6 +51,13 @@ public class QuboPackageImpl extends EPackageImpl implements QuboPackage {
 	 * @generated
 	 */
 	private EClass columnEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedElementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -192,6 +200,24 @@ public class QuboPackageImpl extends EPackageImpl implements QuboPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNamedElement() {
+		return namedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedElement_Name() {
+		return (EAttribute) namedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public QuboFactory getQuboFactory() {
 		return (QuboFactory) getEFactoryInstance();
 	}
@@ -227,6 +253,9 @@ public class QuboPackageImpl extends EPackageImpl implements QuboPackage {
 
 		columnEClass = createEClass(COLUMN);
 		createEAttribute(columnEClass, COLUMN__VALUE);
+
+		namedElementEClass = createEClass(NAMED_ELEMENT);
+		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 	}
 
 	/**
@@ -258,6 +287,7 @@ public class QuboPackageImpl extends EPackageImpl implements QuboPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		quboEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(quboEClass, Qubo.class, "Qubo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -277,6 +307,11 @@ public class QuboPackageImpl extends EPackageImpl implements QuboPackage {
 
 		initEClass(columnEClass, Column.class, "Column", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getColumn_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, 1, Column.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
