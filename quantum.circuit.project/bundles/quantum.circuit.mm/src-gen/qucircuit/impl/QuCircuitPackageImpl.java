@@ -26,6 +26,7 @@ import qucircuit.Layer;
 import qucircuit.LoopOperation;
 import qucircuit.Measurement;
 import qucircuit.NamedElement;
+import qucircuit.Operation;
 import qucircuit.QuantumCircuit;
 import qucircuit.QuantumOperation;
 import qucircuit.QuantumRegister;
@@ -167,6 +168,13 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * @generated
 	 */
 	private EClass indexRangeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass operationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -498,15 +506,6 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCompositeQuantumGate_Qubo() {
-		return (EReference)compositeQuantumGateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAngleParameter() {
 		return angleParameterEClass;
 	}
@@ -759,6 +758,33 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOperation() {
+		return operationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperation_Qubo() {
+		return (EReference)operationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperation_Operation() {
+		return (EReference)operationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getITERATION_TYPE() {
 		return iteratioN_TYPEEEnum;
 	}
@@ -830,7 +856,6 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		createEReference(elementaryQuantumGateEClass, ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER);
 
 		compositeQuantumGateEClass = createEClass(COMPOSITE_QUANTUM_GATE);
-		createEReference(compositeQuantumGateEClass, COMPOSITE_QUANTUM_GATE__QUBO);
 
 		angleParameterEClass = createEClass(ANGLE_PARAMETER);
 		createEAttribute(angleParameterEClass, ANGLE_PARAMETER__THETA);
@@ -865,6 +890,10 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		indexRangeEClass = createEClass(INDEX_RANGE);
 		createEAttribute(indexRangeEClass, INDEX_RANGE__BEGIN);
 		createEAttribute(indexRangeEClass, INDEX_RANGE__END);
+
+		operationEClass = createEClass(OPERATION);
+		createEReference(operationEClass, OPERATION__QUBO);
+		createEReference(operationEClass, OPERATION__OPERATION);
 
 		// Create enums
 		iteratioN_TYPEEEnum = createEEnum(ITERATION_TYPE);
@@ -941,7 +970,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 
 		initEClass(quantumOperationEClass, QuantumOperation.class, "QuantumOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuantumOperation_ClassicControl(), this.getClassicControl(), null, "classicControl", null, 0, 1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantumOperation_Operations(), theQuopePackage.getConcreteQuantumOperation(), null, "operations", null, 1, -1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuantumOperation_Operations(), this.getOperation(), null, "operations", null, 1, -1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuantumOperation_TargetQubits(), this.getIndex(), null, "targetQubits", null, 1, -1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractQuantumGateEClass, AbstractQuantumGate.class, "AbstractQuantumGate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -957,7 +986,6 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEReference(getElementaryQuantumGate_AngleParameter(), this.getAngleParameter(), null, "angleParameter", null, 0, 1, ElementaryQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeQuantumGateEClass, CompositeQuantumGate.class, "CompositeQuantumGate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCompositeQuantumGate_Qubo(), theQuboPackage.getQubo(), null, "qubo", null, 0, 1, CompositeQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(angleParameterEClass, AngleParameter.class, "AngleParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAngleParameter_Theta(), ecorePackage.getEDoubleObject(), "theta", null, 0, 1, AngleParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -992,6 +1020,10 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEClass(indexRangeEClass, IndexRange.class, "IndexRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIndexRange_Begin(), ecorePackage.getEIntegerObject(), "begin", null, 0, 1, IndexRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIndexRange_End(), ecorePackage.getEIntegerObject(), "end", null, 0, 1, IndexRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperation_Qubo(), theQuboPackage.getQubo(), null, "qubo", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperation_Operation(), theQuopePackage.getConcreteQuantumOperation(), null, "operation", null, 1, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(iteratioN_TYPEEEnum, qucircuit.ITERATION_TYPE.class, "ITERATION_TYPE");

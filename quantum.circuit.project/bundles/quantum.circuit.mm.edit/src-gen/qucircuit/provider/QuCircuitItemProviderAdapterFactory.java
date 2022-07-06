@@ -371,6 +371,29 @@ public class QucircuitItemProviderAdapterFactory extends QucircuitAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link qucircuit.Operation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OperationItemProvider operationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qucircuit.Operation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOperationAdapter() {
+		if (operationItemProvider == null) {
+			operationItemProvider = new OperationItemProvider(this);
+		}
+
+		return operationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -482,6 +505,7 @@ public class QucircuitItemProviderAdapterFactory extends QucircuitAdapterFactory
 		if (loopOperationItemProvider != null) loopOperationItemProvider.dispose();
 		if (indexIntItemProvider != null) indexIntItemProvider.dispose();
 		if (indexRangeItemProvider != null) indexRangeItemProvider.dispose();
+		if (operationItemProvider != null) operationItemProvider.dispose();
 	}
 
 }

@@ -15,15 +15,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.ClassicControl;
 import qucircuit.Index;
+import qucircuit.Operation;
 import qucircuit.QuantumOperation;
 import qucircuit.QucircuitPackage;
-
-import quope.ConcreteQuantumOperation;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,14 +50,14 @@ public abstract class QuantumOperationImpl extends NamedElementImpl implements Q
 	protected ClassicControl classicControl;
 
 	/**
-	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' reference list.
+	 * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOperations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConcreteQuantumOperation> operations;
+	protected EList<Operation> operations;
 
 	/**
 	 * The cached value of the '{@link #getTargetQubits() <em>Target Qubits</em>}' containment reference list.
@@ -138,9 +136,9 @@ public abstract class QuantumOperationImpl extends NamedElementImpl implements Q
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ConcreteQuantumOperation> getOperations() {
+	public EList<Operation> getOperations() {
 		if (operations == null) {
-			operations = new EObjectResolvingEList<ConcreteQuantumOperation>(ConcreteQuantumOperation.class, this, QucircuitPackage.QUANTUM_OPERATION__OPERATIONS);
+			operations = new EObjectContainmentEList<Operation>(Operation.class, this, QucircuitPackage.QUANTUM_OPERATION__OPERATIONS);
 		}
 		return operations;
 	}
@@ -167,6 +165,8 @@ public abstract class QuantumOperationImpl extends NamedElementImpl implements Q
 		switch (featureID) {
 			case QucircuitPackage.QUANTUM_OPERATION__CLASSIC_CONTROL:
 				return basicSetClassicControl(null, msgs);
+			case QucircuitPackage.QUANTUM_OPERATION__OPERATIONS:
+				return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
 			case QucircuitPackage.QUANTUM_OPERATION__TARGET_QUBITS:
 				return ((InternalEList<?>)getTargetQubits()).basicRemove(otherEnd, msgs);
 		}
@@ -205,7 +205,7 @@ public abstract class QuantumOperationImpl extends NamedElementImpl implements Q
 				return;
 			case QucircuitPackage.QUANTUM_OPERATION__OPERATIONS:
 				getOperations().clear();
-				getOperations().addAll((Collection<? extends ConcreteQuantumOperation>)newValue);
+				getOperations().addAll((Collection<? extends Operation>)newValue);
 				return;
 			case QucircuitPackage.QUANTUM_OPERATION__TARGET_QUBITS:
 				getTargetQubits().clear();

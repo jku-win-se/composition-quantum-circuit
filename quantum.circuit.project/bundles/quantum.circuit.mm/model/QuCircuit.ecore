@@ -33,7 +33,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="classicControl" eType="#//ClassicControl"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//ConcreteQuantumOperation"/>
+        upperBound="-1" eType="#//Operation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetQubits" lowerBound="1"
         upperBound="-1" eType="#//Index" containment="true"/>
   </eClassifiers>
@@ -53,9 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="angleParameter" eType="#//AngleParameter"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CompositeQuantumGate" eSuperTypes="#//AbstractCompositeGate">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="qubo" eType="ecore:EClass ../../qubo.mm/model/Qubo.ecore#//Qubo"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeQuantumGate" eSuperTypes="#//AbstractCompositeGate"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleParameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="theta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phi" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
@@ -109,5 +107,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="IndexRange" eSuperTypes="#//Index">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="begin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="qubo" eType="ecore:EClass ../../qubo.mm/model/Qubo.ecore#//Qubo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
+        eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//ConcreteQuantumOperation"/>
   </eClassifiers>
 </ecore:EPackage>

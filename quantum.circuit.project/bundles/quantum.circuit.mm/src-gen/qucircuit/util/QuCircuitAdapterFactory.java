@@ -140,6 +140,10 @@ public class QucircuitAdapterFactory extends AdapterFactoryImpl {
 				return createIndexRangeAdapter();
 			}
 			@Override
+			public Adapter caseOperation(Operation object) {
+				return createOperationAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -408,6 +412,20 @@ public class QucircuitAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIndexRangeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.Operation <em>Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.Operation
+	 * @generated
+	 */
+	public Adapter createOperationAdapter() {
 		return null;
 	}
 

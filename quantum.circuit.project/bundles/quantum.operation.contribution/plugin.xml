@@ -57,6 +57,10 @@
             Name="MixerUnitaryQAOA"
             class="quantum.operation.contribution.compositequantumgate.MixerUnitaryQAOA">
       </CompositeBlock>
+      <CompositeBlock
+            Name="CostUnitary"
+            class="quantum.operation.contribution.compositequantumgate.CostUnitary">
+      </CompositeBlock>
    </extension>
    <extension
          id="StatePreparationQuantumGates"

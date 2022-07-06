@@ -79,9 +79,9 @@ public class Circuit implements QiskitCircuit {
 					}
 					else if (loopOperation.getLoop().getName().equals(GeneralLoop.class.getSimpleName())) {
 						quantumOperation.append("loopGate=l_gate.general_loop(");
-						if (loopOperation.getOperations().get(0).getName().equals(Swap.class.getSimpleName()))
+						if (loopOperation.getOperations().get(0).getOperation().getName().equals(Swap.class.getSimpleName()))
 							quantumOperation.append("e_gate.swap, loop_tqubits, loop_cqubits, iter_type_t=\"shift\", iter_type_c=\"shift\", block_size_tq=1, block_size_cq=1, increment_t=False, increment_c=True) #definition of LoopOperation").append("\n");
-						else if (loopOperation.getOperations().get(0).getName().equals(QFTElement.class.getSimpleName()))
+						else if (loopOperation.getOperations().get(0).getOperation().getName().equals(QFTElement.class.getSimpleName()))
 							quantumOperation.append("c_gate.qft_elements, qft_loop_tqubits,iter_type_t=\"change_block\", block_size_tq=1)").append("\n");
 						
 						quantumOperation.append(qucircuit.getName() + ".append(loopGate, target_qubits) #append LoopOperation to Circuit").append("\n");

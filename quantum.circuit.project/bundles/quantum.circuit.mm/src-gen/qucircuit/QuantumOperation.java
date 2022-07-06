@@ -4,8 +4,6 @@ package qucircuit;
 
 import org.eclipse.emf.common.util.EList;
 
-import quope.ConcreteQuantumOperation;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Quantum Operation</b></em>'.
@@ -49,16 +47,16 @@ public interface QuantumOperation extends NamedElement {
 	void setClassicControl(ClassicControl value);
 
 	/**
-	 * Returns the value of the '<em><b>Operations</b></em>' reference list.
-	 * The list contents are of type {@link quope.ConcreteQuantumOperation}.
+	 * Returns the value of the '<em><b>Operations</b></em>' containment reference list.
+	 * The list contents are of type {@link qucircuit.Operation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operations</em>' reference list.
+	 * @return the value of the '<em>Operations</em>' containment reference list.
 	 * @see qucircuit.QucircuitPackage#getQuantumOperation_Operations()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<ConcreteQuantumOperation> getOperations();
+	EList<Operation> getOperations();
 
 	/**
 	 * Returns the value of the '<em><b>Target Qubits</b></em>' containment reference list.

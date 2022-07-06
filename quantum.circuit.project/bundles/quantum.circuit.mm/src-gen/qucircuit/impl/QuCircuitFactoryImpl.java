@@ -70,6 +70,7 @@ public class QucircuitFactoryImpl extends EFactoryImpl implements QucircuitFacto
 			case QucircuitPackage.LOOP_OPERATION: return createLoopOperation();
 			case QucircuitPackage.INDEX_INT: return createIndexInt();
 			case QucircuitPackage.INDEX_RANGE: return createIndexRange();
+			case QucircuitPackage.OPERATION: return createOperation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -233,6 +234,16 @@ public class QucircuitFactoryImpl extends EFactoryImpl implements QucircuitFacto
 	public IndexRange createIndexRange() {
 		IndexRangeImpl indexRange = new IndexRangeImpl();
 		return indexRange;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Operation createOperation() {
+		OperationImpl operation = new OperationImpl();
+		return operation;
 	}
 
 	/**

@@ -87,6 +87,7 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_OPERATION__CLASSIC_CONTROL);
+			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_OPERATION__OPERATIONS);
 			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS);
 		}
 		return childrenFeatures;
@@ -133,6 +134,7 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 
 		switch (notification.getFeatureID(QuantumOperation.class)) {
 			case QucircuitPackage.QUANTUM_OPERATION__CLASSIC_CONTROL:
+			case QucircuitPackage.QUANTUM_OPERATION__OPERATIONS:
 			case QucircuitPackage.QUANTUM_OPERATION__TARGET_QUBITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -155,6 +157,11 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(QucircuitPackage.Literals.QUANTUM_OPERATION__CLASSIC_CONTROL,
 				 QucircuitFactory.eINSTANCE.createClassicControl()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.QUANTUM_OPERATION__OPERATIONS,
+				 QucircuitFactory.eINSTANCE.createOperation()));
 
 		newChildDescriptors.add
 			(createChildParameter

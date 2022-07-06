@@ -41,7 +41,9 @@ public class QuboUtils {
 		for (int i = 0; i < numberOfQubits; i++) {
 			var quOpeDiagonalRz = QucircuitFactory.eINSTANCE.createElementaryQuantumGate();
 			quOpeDiagonalRz.setName("RZ");
-			quOpeDiagonalRz.getOperations().add(rz);
+			var operationRZ = QucircuitFactory.eINSTANCE.createOperation();
+			operationRZ.setOperation(rz);
+			quOpeDiagonalRz.getOperations().add(operationRZ);
 			//Set angle
 			var parameter =  QucircuitFactory.eINSTANCE.createAngleParameter();
 			parameter.setTheta(2*gamma*qubo.getMatrix().getRows().get(i).getColumns().get(0).getValue());
@@ -59,7 +61,9 @@ public class QuboUtils {
 				cnotLayer.setName("CNOTLayer" + i + j);
 				var quOpeCNotBegin = QucircuitFactory.eINSTANCE.createElementaryQuantumGate();
 				quOpeCNotBegin.setName("quOpeCNotBegin" + i + j);
-				quOpeCNotBegin.getOperations().add(cnot);
+				var operationCNOT = QucircuitFactory.eINSTANCE.createOperation();
+				operationCNOT.setOperation(cnot);
+				quOpeCNotBegin.getOperations().add(operationCNOT);
 				//CreateIndex Target Qubit
 				IndexInt targetQubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();
 				targetQubitIndex.setIndex(j);
@@ -74,7 +78,9 @@ public class QuboUtils {
 				rzLayer.setName("rzLayer" + i + j);
 				var quOpeRz = QucircuitFactory.eINSTANCE.createElementaryQuantumGate();
 				quOpeRz.setName("quOpeRz" + i +j);
-				quOpeRz.getOperations().add(rz);
+				var operationRZ1 = QucircuitFactory.eINSTANCE.createOperation();
+				operationRZ1.setOperation(rz);
+				quOpeRz.getOperations().add(operationRZ1);
 				//CreateIndex RZ Target Qubit
 				IndexInt targetRzQubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();
 				targetRzQubitIndex.setIndex(j);

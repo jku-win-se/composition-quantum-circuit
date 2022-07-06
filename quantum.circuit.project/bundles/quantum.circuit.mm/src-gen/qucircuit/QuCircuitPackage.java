@@ -371,7 +371,7 @@ public interface QucircuitPackage extends EPackage {
 	int QUANTUM_OPERATION__CLASSIC_CONTROL = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -435,7 +435,7 @@ public interface QucircuitPackage extends EPackage {
 	int ABSTRACT_QUANTUM_GATE__CLASSIC_CONTROL = QUANTUM_OPERATION__CLASSIC_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -517,7 +517,7 @@ public interface QucircuitPackage extends EPackage {
 	int STATE_PREPARATION__CLASSIC_CONTROL = QUANTUM_OPERATION__CLASSIC_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -581,7 +581,7 @@ public interface QucircuitPackage extends EPackage {
 	int MEASUREMENT__CLASSIC_CONTROL = QUANTUM_OPERATION__CLASSIC_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -654,7 +654,7 @@ public interface QucircuitPackage extends EPackage {
 	int ELEMENTARY_QUANTUM_GATE__CLASSIC_CONTROL = ABSTRACT_QUANTUM_GATE__CLASSIC_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -745,7 +745,7 @@ public interface QucircuitPackage extends EPackage {
 	int ABSTRACT_COMPOSITE_GATE__CLASSIC_CONTROL = ABSTRACT_QUANTUM_GATE__CLASSIC_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -836,7 +836,7 @@ public interface QucircuitPackage extends EPackage {
 	int COMPOSITE_QUANTUM_GATE__CLASSIC_CONTROL = ABSTRACT_COMPOSITE_GATE__CLASSIC_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -881,22 +881,13 @@ public interface QucircuitPackage extends EPackage {
 	int COMPOSITE_QUANTUM_GATE__LAYERS = ABSTRACT_COMPOSITE_GATE__LAYERS;
 
 	/**
-	 * The feature id for the '<em><b>Qubo</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_QUANTUM_GATE__QUBO = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Composite Quantum Gate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_QUANTUM_GATE_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 1;
+	int COMPOSITE_QUANTUM_GATE_FEATURE_COUNT = ABSTRACT_COMPOSITE_GATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Composite Quantum Gate</em>' class.
@@ -991,7 +982,7 @@ public interface QucircuitPackage extends EPackage {
 	int LOOP_OPERATION__CLASSIC_CONTROL = ABSTRACT_COMPOSITE_GATE__CLASSIC_CONTROL;
 
 	/**
-	 * The feature id for the '<em><b>Operations</b></em>' reference list.
+	 * The feature id for the '<em><b>Operations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1300,6 +1291,52 @@ public interface QucircuitPackage extends EPackage {
 	int INDEX_RANGE_OPERATION_COUNT = INDEX_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link qucircuit.impl.OperationImpl <em>Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see qucircuit.impl.OperationImpl
+	 * @see qucircuit.impl.QucircuitPackageImpl#getOperation()
+	 * @generated
+	 */
+	int OPERATION = 18;
+
+	/**
+	 * The feature id for the '<em><b>Qubo</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__QUBO = 0;
+
+	/**
+	 * The feature id for the '<em><b>Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__OPERATION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1307,7 +1344,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @see qucircuit.impl.QucircuitPackageImpl#getITERATION_TYPE()
 	 * @generated
 	 */
-	int ITERATION_TYPE = 18;
+	int ITERATION_TYPE = 19;
 
 
 	/**
@@ -1491,10 +1528,10 @@ public interface QucircuitPackage extends EPackage {
 	EReference getQuantumOperation_ClassicControl();
 
 	/**
-	 * Returns the meta object for the reference list '{@link qucircuit.QuantumOperation#getOperations <em>Operations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link qucircuit.QuantumOperation#getOperations <em>Operations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Operations</em>'.
+	 * @return the meta object for the containment reference list '<em>Operations</em>'.
 	 * @see qucircuit.QuantumOperation#getOperations()
 	 * @see #getQuantumOperation()
 	 * @generated
@@ -1605,17 +1642,6 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCompositeQuantumGate();
-
-	/**
-	 * Returns the meta object for the reference '{@link qucircuit.CompositeQuantumGate#getQubo <em>Qubo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Qubo</em>'.
-	 * @see qucircuit.CompositeQuantumGate#getQubo()
-	 * @see #getCompositeQuantumGate()
-	 * @generated
-	 */
-	EReference getCompositeQuantumGate_Qubo();
 
 	/**
 	 * Returns the meta object for class '{@link qucircuit.AngleParameter <em>Angle Parameter</em>}'.
@@ -1920,6 +1946,38 @@ public interface QucircuitPackage extends EPackage {
 	EAttribute getIndexRange_End();
 
 	/**
+	 * Returns the meta object for class '{@link qucircuit.Operation <em>Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Operation</em>'.
+	 * @see qucircuit.Operation
+	 * @generated
+	 */
+	EClass getOperation();
+
+	/**
+	 * Returns the meta object for the reference '{@link qucircuit.Operation#getQubo <em>Qubo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Qubo</em>'.
+	 * @see qucircuit.Operation#getQubo()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EReference getOperation_Qubo();
+
+	/**
+	 * Returns the meta object for the reference '{@link qucircuit.Operation#getOperation <em>Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Operation</em>'.
+	 * @see qucircuit.Operation#getOperation()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EReference getOperation_Operation();
+
+	/**
 	 * Returns the meta object for enum '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2103,7 +2161,7 @@ public interface QucircuitPackage extends EPackage {
 		EReference QUANTUM_OPERATION__CLASSIC_CONTROL = eINSTANCE.getQuantumOperation_ClassicControl();
 
 		/**
-		 * The meta object literal for the '<em><b>Operations</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2199,14 +2257,6 @@ public interface QucircuitPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COMPOSITE_QUANTUM_GATE = eINSTANCE.getCompositeQuantumGate();
-
-		/**
-		 * The meta object literal for the '<em><b>Qubo</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPOSITE_QUANTUM_GATE__QUBO = eINSTANCE.getCompositeQuantumGate_Qubo();
 
 		/**
 		 * The meta object literal for the '{@link qucircuit.impl.AngleParameterImpl <em>Angle Parameter</em>}' class.
@@ -2443,6 +2493,32 @@ public interface QucircuitPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INDEX_RANGE__END = eINSTANCE.getIndexRange_End();
+
+		/**
+		 * The meta object literal for the '{@link qucircuit.impl.OperationImpl <em>Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see qucircuit.impl.OperationImpl
+		 * @see qucircuit.impl.QucircuitPackageImpl#getOperation()
+		 * @generated
+		 */
+		EClass OPERATION = eINSTANCE.getOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Qubo</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATION__QUBO = eINSTANCE.getOperation_Qubo();
+
+		/**
+		 * The meta object literal for the '<em><b>Operation</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATION__OPERATION = eINSTANCE.getOperation_Operation();
 
 		/**
 		 * The meta object literal for the '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}' enum.
