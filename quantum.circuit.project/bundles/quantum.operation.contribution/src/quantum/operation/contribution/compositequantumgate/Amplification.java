@@ -17,11 +17,6 @@ public class Amplification extends AbstractExtendCompositeQuantumGate {
 	}
 	
 	@Override
-	public String getAbbreviation() {
-		return "Amplification";
-	}
-
-	@Override
 	public CompositeQuantumGate getCustomBlock(Collection<Index> qubits, QuantumOperation quOperation) {
 		// TODO Auto-generated method stub
 		

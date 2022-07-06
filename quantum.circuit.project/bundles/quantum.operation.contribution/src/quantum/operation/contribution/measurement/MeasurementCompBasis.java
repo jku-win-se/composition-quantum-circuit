@@ -9,11 +9,6 @@ public class MeasurementCompBasis extends AbstractExtendMeasurement {
 	}
 
 	@Override
-	public String getAbbreviation() {
-		return "Measurement in computational basis";
-	}
-
-	@Override
 	public String getPaletteIconPath() {
 		// TODO Auto-generated method stub
 		return null;

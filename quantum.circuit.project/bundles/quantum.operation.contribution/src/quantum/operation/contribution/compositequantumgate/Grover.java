@@ -17,11 +17,6 @@ public class Grover extends AbstractExtendCompositeQuantumGate {
 	}
 	
 	@Override
-	public String getAbbreviation() {
-		return "Grover";
-	}
-
-	@Override
 	public String getPaletteIconPath() {
 		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}

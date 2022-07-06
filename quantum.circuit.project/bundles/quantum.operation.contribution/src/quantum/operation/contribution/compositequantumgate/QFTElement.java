@@ -21,13 +21,6 @@ public class QFTElement extends AbstractExtendCompositeQuantumGate {
 		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}
 
-	
-
-	@Override
-	public String getAbbreviation() {
-		return "QFTInv";
-	}
-
 	@Override
 	public CompositeQuantumGate getCustomBlock(Collection<Index> qubits, QuantumOperation quOperation) {
 		// TODO Auto-generated method stub

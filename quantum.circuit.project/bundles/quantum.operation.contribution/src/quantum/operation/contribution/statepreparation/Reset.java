@@ -9,11 +9,6 @@ public class Reset extends AbstractExtendStatePreparation {
 	}
 
 	@Override
-	public String getAbbreviation() {
-		return "reset";
-	}
-
-	@Override
 	public String getPaletteIconPath() {
 		// TODO Auto-generated method stub
 		return null;

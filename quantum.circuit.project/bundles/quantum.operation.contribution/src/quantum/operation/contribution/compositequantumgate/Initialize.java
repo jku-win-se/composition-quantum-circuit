@@ -16,13 +16,7 @@ public class Initialize extends AbstractExtendCompositeQuantumGate {
 	public Initialize() {
 		// Do nothing
 	}
-
-	@Override
-	public String getAbbreviation() {
-		return "Initialize";
-	}
-	
-		
+			
 	@Override
 	public String getPaletteIconPath() {
 		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();

@@ -17,12 +17,7 @@ public class Oracle extends AbstractExtendCompositeQuantumGate {
 	public Oracle() {
 		// Do nothing
 	}
-	
-	@Override
-	public String getAbbreviation() {
-		return "Oracle";
-	}	
-
+		
 	@Override
 	public String getPaletteIconPath() {
 		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
