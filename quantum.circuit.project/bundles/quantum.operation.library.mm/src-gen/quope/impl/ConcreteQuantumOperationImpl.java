@@ -25,6 +25,7 @@ import quope.QuopePackage;
  * <ul>
  *   <li>{@link quope.impl.ConcreteQuantumOperationImpl#getParameter <em>Parameter</em>}</li>
  *   <li>{@link quope.impl.ConcreteQuantumOperationImpl#getFixedQuantumOperation <em>Fixed Quantum Operation</em>}</li>
+ *   <li>{@link quope.impl.ConcreteQuantumOperationImpl#isAllowsQubo <em>Allows Qubo</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +50,26 @@ public class ConcreteQuantumOperationImpl extends AbstractQuantumOperationImpl i
 	 * @ordered
 	 */
 	protected FixedQuantumOperation fixedQuantumOperation;
+
+	/**
+	 * The default value of the '{@link #isAllowsQubo() <em>Allows Qubo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAllowsQubo()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ALLOWS_QUBO_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAllowsQubo() <em>Allows Qubo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAllowsQubo()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean allowsQubo = ALLOWS_QUBO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,6 +200,28 @@ public class ConcreteQuantumOperationImpl extends AbstractQuantumOperationImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isAllowsQubo() {
+		return allowsQubo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAllowsQubo(boolean newAllowsQubo) {
+		boolean oldAllowsQubo = allowsQubo;
+		allowsQubo = newAllowsQubo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QuopePackage.CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO,
+					oldAllowsQubo, allowsQubo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -202,6 +245,8 @@ public class ConcreteQuantumOperationImpl extends AbstractQuantumOperationImpl i
 			return getParameter();
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			return getFixedQuantumOperation();
+		case QuopePackage.CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO:
+			return isAllowsQubo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,6 +264,9 @@ public class ConcreteQuantumOperationImpl extends AbstractQuantumOperationImpl i
 			return;
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			setFixedQuantumOperation((FixedQuantumOperation) newValue);
+			return;
+		case QuopePackage.CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO:
+			setAllowsQubo((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -238,6 +286,9 @@ public class ConcreteQuantumOperationImpl extends AbstractQuantumOperationImpl i
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			setFixedQuantumOperation((FixedQuantumOperation) null);
 			return;
+		case QuopePackage.CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO:
+			setAllowsQubo(ALLOWS_QUBO_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -254,8 +305,27 @@ public class ConcreteQuantumOperationImpl extends AbstractQuantumOperationImpl i
 			return parameter != null;
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			return fixedQuantumOperation != null;
+		case QuopePackage.CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO:
+			return allowsQubo != ALLOWS_QUBO_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (allowsQubo: ");
+		result.append(allowsQubo);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ConcreteQuantumOperationImpl

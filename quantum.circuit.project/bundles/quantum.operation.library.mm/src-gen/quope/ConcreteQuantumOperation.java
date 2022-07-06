@@ -13,6 +13,7 @@ package quope;
  * <ul>
  *   <li>{@link quope.ConcreteQuantumOperation#getParameter <em>Parameter</em>}</li>
  *   <li>{@link quope.ConcreteQuantumOperation#getFixedQuantumOperation <em>Fixed Quantum Operation</em>}</li>
+ *   <li>{@link quope.ConcreteQuantumOperation#isAllowsQubo <em>Allows Qubo</em>}</li>
  * </ul>
  *
  * @see quope.QuopePackage#getConcreteQuantumOperation()
@@ -63,5 +64,27 @@ public interface ConcreteQuantumOperation extends AbstractQuantumOperation {
 	 * @generated
 	 */
 	void setFixedQuantumOperation(FixedQuantumOperation value);
+
+	/**
+	 * Returns the value of the '<em><b>Allows Qubo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Allows Qubo</em>' attribute.
+	 * @see #setAllowsQubo(boolean)
+	 * @see quope.QuopePackage#getConcreteQuantumOperation_AllowsQubo()
+	 * @model
+	 * @generated
+	 */
+	boolean isAllowsQubo();
+
+	/**
+	 * Sets the value of the '{@link quope.ConcreteQuantumOperation#isAllowsQubo <em>Allows Qubo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Allows Qubo</em>' attribute.
+	 * @see #isAllowsQubo()
+	 * @generated
+	 */
+	void setAllowsQubo(boolean value);
 
 } // ConcreteQuantumOperation

@@ -9,7 +9,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import quope.ConcreteQuantumOperation;
@@ -44,8 +46,25 @@ public class ConcreteQuantumOperationItemProvider extends AbstractQuantumOperati
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addAllowsQuboPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Allows Qubo feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAllowsQuboPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ConcreteQuantumOperation_allowsQubo_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_ConcreteQuantumOperation_allowsQubo_feature", "_UI_ConcreteQuantumOperation_type"),
+						QuopePackage.Literals.CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -125,6 +144,9 @@ public class ConcreteQuantumOperationItemProvider extends AbstractQuantumOperati
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConcreteQuantumOperation.class)) {
+		case QuopePackage.CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__PARAMETER:
 		case QuopePackage.CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));

@@ -10,6 +10,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedQuantumOperation"
         eType="#//FixedQuantumOperation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowsQubo" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"

@@ -19,6 +19,7 @@
     <genClasses ecoreClass="QuantumOpe.ecore#//ConcreteQuantumOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuantumOpe.ecore#//ConcreteQuantumOperation/parameter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QuantumOpe.ecore#//ConcreteQuantumOperation/fixedQuantumOperation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuantumOpe.ecore#//ConcreteQuantumOperation/allowsQubo"/>
     </genClasses>
     <genClasses image="false" ecoreClass="QuantumOpe.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuantumOpe.ecore#//NamedElement/name"/>

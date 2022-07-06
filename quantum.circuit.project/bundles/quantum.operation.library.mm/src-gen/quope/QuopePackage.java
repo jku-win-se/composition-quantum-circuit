@@ -304,13 +304,22 @@ public interface QuopePackage extends EPackage {
 	int CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Allows Qubo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Concrete Quantum Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONCRETE_QUANTUM_OPERATION_FEATURE_COUNT = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 2;
+	int CONCRETE_QUANTUM_OPERATION_FEATURE_COUNT = ABSTRACT_QUANTUM_OPERATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Concrete Quantum Operation</em>' class.
@@ -655,6 +664,17 @@ public interface QuopePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConcreteQuantumOperation_FixedQuantumOperation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link quope.ConcreteQuantumOperation#isAllowsQubo <em>Allows Qubo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Allows Qubo</em>'.
+	 * @see quope.ConcreteQuantumOperation#isAllowsQubo()
+	 * @see #getConcreteQuantumOperation()
+	 * @generated
+	 */
+	EAttribute getConcreteQuantumOperation_AllowsQubo();
 
 	/**
 	 * Returns the meta object for class '{@link quope.NamedElement <em>Named Element</em>}'.
@@ -1015,6 +1035,14 @@ public interface QuopePackage extends EPackage {
 		 */
 		EReference CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION = eINSTANCE
 				.getConcreteQuantumOperation_FixedQuantumOperation();
+
+		/**
+		 * The meta object literal for the '<em><b>Allows Qubo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO = eINSTANCE.getConcreteQuantumOperation_AllowsQubo();
 
 		/**
 		 * The meta object literal for the '{@link quope.impl.NamedElementImpl <em>Named Element</em>}' class.

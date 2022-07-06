@@ -193,6 +193,15 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getConcreteQuantumOperation_AllowsQubo() {
+		return (EAttribute) concreteQuantumOperationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -466,6 +475,7 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		concreteQuantumOperationEClass = createEClass(CONCRETE_QUANTUM_OPERATION);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__PARAMETER);
 		createEReference(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__FIXED_QUANTUM_OPERATION);
+		createEAttribute(concreteQuantumOperationEClass, CONCRETE_QUANTUM_OPERATION__ALLOWS_QUBO);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
@@ -552,6 +562,9 @@ public class QuopePackageImpl extends EPackageImpl implements QuopePackage {
 		initEReference(getConcreteQuantumOperation_FixedQuantumOperation(), this.getFixedQuantumOperation(), null,
 				"fixedQuantumOperation", null, 0, 1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConcreteQuantumOperation_AllowsQubo(), theEcorePackage.getEBoolean(), "allowsQubo", null, 0,
+				1, ConcreteQuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
