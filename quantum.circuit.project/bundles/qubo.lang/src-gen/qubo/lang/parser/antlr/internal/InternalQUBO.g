@@ -87,21 +87,40 @@ ruleQubo returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getQuboAccess().getQuboKeyword_1());
 		}
-		otherlv_2='{'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getQuboAccess().getNameEStringParserRuleCall_2_0());
+				}
+				lv_name_2_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getQuboRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_2_0,
+						"qubo.lang.QUBO.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getQuboAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getQuboAccess().getLeftCurlyBracketKeyword_3());
 		}
 		(
-			otherlv_3='matrix'
+			otherlv_4='matrix'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getQuboAccess().getMatrixKeyword_3_0());
+				newLeafNode(otherlv_4, grammarAccess.getQuboAccess().getMatrixKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getQuboAccess().getMatrixMatrixParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getQuboAccess().getMatrixMatrixParserRuleCall_4_1_0());
 					}
-					lv_matrix_4_0=ruleMatrix
+					lv_matrix_5_0=ruleMatrix
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getQuboRule());
@@ -109,16 +128,16 @@ ruleQubo returns [EObject current=null]
 						set(
 							$current,
 							"matrix",
-							lv_matrix_4_0,
+							lv_matrix_5_0,
 							"qubo.lang.QUBO.Matrix");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_5='}'
+		otherlv_6='}'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getQuboAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getQuboAccess().getRightCurlyBracketKeyword_5());
 		}
 	)
 ;
@@ -358,6 +377,40 @@ ruleEDouble returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 		}
 		{
 			newLeafNode(this_E_DOUBLE_1, grammarAccess.getEDoubleAccess().getE_DOUBLETerminalRuleCall_1());
+		}
+	)
+;
+
+// Entry rule entryRuleEString
+entryRuleEString returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getEStringRule()); }
+	iv_ruleEString=ruleEString
+	{ $current=$iv_ruleEString.current.getText(); }
+	EOF;
+
+// Rule EString
+ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_STRING_0=RULE_STRING
+		{
+			$current.merge(this_STRING_0);
+		}
+		{
+			newLeafNode(this_STRING_0, grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0());
+		}
+		    |
+		this_ID_1=RULE_ID
+		{
+			$current.merge(this_ID_1);
+		}
+		{
+			newLeafNode(this_ID_1, grammarAccess.getEStringAccess().getIDTerminalRuleCall_1());
 		}
 	)
 ;

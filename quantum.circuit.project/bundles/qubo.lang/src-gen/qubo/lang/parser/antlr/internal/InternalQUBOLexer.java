@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalQUBOLexer extends Lexer {
-    public static final int RULE_STRING=8;
+    public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=10;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -27,7 +27,7 @@ public class InternalQUBOLexer extends Lexer {
     public static final int RULE_WS=11;
     public static final int RULE_E_INT=4;
     public static final int RULE_ANY_OTHER=12;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=8;
     public static final int RULE_ML_COMMENT=9;
 
     // delegates
@@ -190,10 +190,10 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_E_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:365:12: ( ( '-' )? RULE_INT )
-            // InternalQUBO.g:365:14: ( '-' )? RULE_INT
+            // InternalQUBO.g:418:12: ( ( '-' )? RULE_INT )
+            // InternalQUBO.g:418:14: ( '-' )? RULE_INT
             {
-            // InternalQUBO.g:365:14: ( '-' )?
+            // InternalQUBO.g:418:14: ( '-' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -202,7 +202,7 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalQUBO.g:365:14: '-'
+                    // InternalQUBO.g:418:14: '-'
                     {
                     match('-'); 
 
@@ -228,10 +228,10 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_E_DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:367:15: ( ( '-' )? RULE_INT ( '.' ( RULE_INT )+ )? ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT )? )
-            // InternalQUBO.g:367:17: ( '-' )? RULE_INT ( '.' ( RULE_INT )+ )? ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT )?
+            // InternalQUBO.g:420:15: ( ( '-' )? RULE_INT ( '.' ( RULE_INT )+ )? ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT )? )
+            // InternalQUBO.g:420:17: ( '-' )? RULE_INT ( '.' ( RULE_INT )+ )? ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT )?
             {
-            // InternalQUBO.g:367:17: ( '-' )?
+            // InternalQUBO.g:420:17: ( '-' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -240,7 +240,7 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalQUBO.g:367:17: '-'
+                    // InternalQUBO.g:420:17: '-'
                     {
                     match('-'); 
 
@@ -250,7 +250,7 @@ public class InternalQUBOLexer extends Lexer {
             }
 
             mRULE_INT(); 
-            // InternalQUBO.g:367:31: ( '.' ( RULE_INT )+ )?
+            // InternalQUBO.g:420:31: ( '.' ( RULE_INT )+ )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -259,10 +259,10 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalQUBO.g:367:32: '.' ( RULE_INT )+
+                    // InternalQUBO.g:420:32: '.' ( RULE_INT )+
                     {
                     match('.'); 
-                    // InternalQUBO.g:367:36: ( RULE_INT )+
+                    // InternalQUBO.g:420:36: ( RULE_INT )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -276,7 +276,7 @@ public class InternalQUBOLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // InternalQUBO.g:367:36: RULE_INT
+                    	    // InternalQUBO.g:420:36: RULE_INT
                     	    {
                     	    mRULE_INT(); 
 
@@ -298,7 +298,7 @@ public class InternalQUBOLexer extends Lexer {
 
             }
 
-            // InternalQUBO.g:367:48: ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT )?
+            // InternalQUBO.g:420:48: ( ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -307,7 +307,7 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalQUBO.g:367:49: ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT
+                    // InternalQUBO.g:420:49: ( 'E' | 'e' ) ( '+' | '-' )? RULE_INT
                     {
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                         input.consume();
@@ -318,7 +318,7 @@ public class InternalQUBOLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // InternalQUBO.g:367:59: ( '+' | '-' )?
+                    // InternalQUBO.g:420:59: ( '+' | '-' )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -365,10 +365,10 @@ public class InternalQUBOLexer extends Lexer {
     // $ANTLR start "RULE_INT"
     public final void mRULE_INT() throws RecognitionException {
         try {
-            // InternalQUBO.g:369:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
-            // InternalQUBO.g:369:21: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // InternalQUBO.g:422:19: ( ( '0' | '1' .. '9' ( '0' .. '9' )* ) )
+            // InternalQUBO.g:422:21: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             {
-            // InternalQUBO.g:369:21: ( '0' | '1' .. '9' ( '0' .. '9' )* )
+            // InternalQUBO.g:422:21: ( '0' | '1' .. '9' ( '0' .. '9' )* )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -386,17 +386,17 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalQUBO.g:369:22: '0'
+                    // InternalQUBO.g:422:22: '0'
                     {
                     match('0'); 
 
                     }
                     break;
                 case 2 :
-                    // InternalQUBO.g:369:26: '1' .. '9' ( '0' .. '9' )*
+                    // InternalQUBO.g:422:26: '1' .. '9' ( '0' .. '9' )*
                     {
                     matchRange('1','9'); 
-                    // InternalQUBO.g:369:35: ( '0' .. '9' )*
+                    // InternalQUBO.g:422:35: ( '0' .. '9' )*
                     loop7:
                     do {
                         int alt7=2;
@@ -409,7 +409,7 @@ public class InternalQUBOLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // InternalQUBO.g:369:36: '0' .. '9'
+                    	    // InternalQUBO.g:422:36: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -441,10 +441,10 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:371:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalQUBO.g:371:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalQUBO.g:424:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalQUBO.g:424:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalQUBO.g:371:11: ( '^' )?
+            // InternalQUBO.g:424:11: ( '^' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -453,7 +453,7 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // InternalQUBO.g:371:11: '^'
+                    // InternalQUBO.g:424:11: '^'
                     {
                     match('^'); 
 
@@ -471,7 +471,7 @@ public class InternalQUBOLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalQUBO.g:371:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalQUBO.g:424:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop10:
             do {
                 int alt10=2;
@@ -520,10 +520,10 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:373:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalQUBO.g:373:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalQUBO.g:426:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalQUBO.g:426:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalQUBO.g:373:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalQUBO.g:426:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -541,10 +541,10 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalQUBO.g:373:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalQUBO.g:426:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalQUBO.g:373:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalQUBO.g:426:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop11:
                     do {
                         int alt11=3;
@@ -560,7 +560,7 @@ public class InternalQUBOLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // InternalQUBO.g:373:21: '\\\\' .
+                    	    // InternalQUBO.g:426:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -568,7 +568,7 @@ public class InternalQUBOLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalQUBO.g:373:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalQUBO.g:426:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -593,10 +593,10 @@ public class InternalQUBOLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalQUBO.g:373:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalQUBO.g:426:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalQUBO.g:373:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalQUBO.g:426:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop12:
                     do {
                         int alt12=3;
@@ -612,7 +612,7 @@ public class InternalQUBOLexer extends Lexer {
 
                         switch (alt12) {
                     	case 1 :
-                    	    // InternalQUBO.g:373:54: '\\\\' .
+                    	    // InternalQUBO.g:426:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -620,7 +620,7 @@ public class InternalQUBOLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalQUBO.g:373:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalQUBO.g:426:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -663,12 +663,12 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:375:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalQUBO.g:375:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalQUBO.g:428:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalQUBO.g:428:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalQUBO.g:375:24: ( options {greedy=false; } : . )*
+            // InternalQUBO.g:428:24: ( options {greedy=false; } : . )*
             loop14:
             do {
                 int alt14=2;
@@ -693,7 +693,7 @@ public class InternalQUBOLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalQUBO.g:375:52: .
+            	    // InternalQUBO.g:428:52: .
             	    {
             	    matchAny(); 
 
@@ -723,12 +723,12 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:377:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalQUBO.g:377:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalQUBO.g:430:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalQUBO.g:430:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalQUBO.g:377:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalQUBO.g:430:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop15:
             do {
                 int alt15=2;
@@ -741,7 +741,7 @@ public class InternalQUBOLexer extends Lexer {
 
                 switch (alt15) {
             	case 1 :
-            	    // InternalQUBO.g:377:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalQUBO.g:430:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -761,7 +761,7 @@ public class InternalQUBOLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalQUBO.g:377:40: ( ( '\\r' )? '\\n' )?
+            // InternalQUBO.g:430:40: ( ( '\\r' )? '\\n' )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -770,9 +770,9 @@ public class InternalQUBOLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // InternalQUBO.g:377:41: ( '\\r' )? '\\n'
+                    // InternalQUBO.g:430:41: ( '\\r' )? '\\n'
                     {
-                    // InternalQUBO.g:377:41: ( '\\r' )?
+                    // InternalQUBO.g:430:41: ( '\\r' )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -781,7 +781,7 @@ public class InternalQUBOLexer extends Lexer {
                     }
                     switch (alt16) {
                         case 1 :
-                            // InternalQUBO.g:377:41: '\\r'
+                            // InternalQUBO.g:430:41: '\\r'
                             {
                             match('\r'); 
 
@@ -813,10 +813,10 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:379:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalQUBO.g:379:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalQUBO.g:432:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalQUBO.g:432:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalQUBO.g:379:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalQUBO.g:432:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt18=0;
             loop18:
             do {
@@ -870,8 +870,8 @@ public class InternalQUBOLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalQUBO.g:381:16: ( . )
-            // InternalQUBO.g:381:18: .
+            // InternalQUBO.g:434:16: ( . )
+            // InternalQUBO.g:434:18: .
             {
             matchAny(); 
 
