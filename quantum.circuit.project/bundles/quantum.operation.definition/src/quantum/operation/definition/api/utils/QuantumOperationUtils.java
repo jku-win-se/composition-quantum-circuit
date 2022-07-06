@@ -1,8 +1,13 @@
 package quantum.operation.definition.api.utils;
 
+import java.io.IOException;
 import java.util.Collection;
+import java.util.Collections;
 
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 import quope.AbstractQuantumOperation;
 import quope.ConcreteQuantumOperation;
@@ -33,4 +38,17 @@ public class QuantumOperationUtils {
 		else
 			return null;
 	}	
+	
+	public static Resource saveLibraryConcreteQuantumOperation(URI libraryUri) {
+		var reset = new ResourceSetImpl();
+		var quOpeResource = reset.createResource(libraryUri);
+		var quantumOpLib = QuantumOperationUtils.getAllQuantumOperations();
+		quOpeResource.getContents().add(quantumOpLib);
+		try {
+			quOpeResource.save(Collections.EMPTY_MAP);
+		} catch (IOException e) {			
+			e.printStackTrace();
+		}		
+		return quOpeResource;
+	}
 }

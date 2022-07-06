@@ -7,6 +7,7 @@ import quantum.operation.contribution.compositequantumgate.QFTElement;
 import quantum.operation.contribution.elementaryquantumgate.Swap;
 import quantum.operation.contribution.loops.GeneralLoop;
 import quantum.operation.contribution.loops.Power2Loop;
+import quantum.operation.contribution.loops.StaticLoop;
 import qucircuit.ClassicRegister;
 import qucircuit.ElementaryQuantumGate;
 import qucircuit.Index;
@@ -15,9 +16,11 @@ import qucircuit.IndexRange;
 import qucircuit.Layer;
 import qucircuit.LoopOperation;
 import qucircuit.Measurement;
+import qucircuit.Operation;
 import qucircuit.QuantumCircuit;
 import qucircuit.QuantumOperation;
 import qucircuit.QuantumRegister;
+import quope.ConcreteQuantumOperation;
 
 public class Circuit implements QiskitCircuit {
 
@@ -85,7 +88,11 @@ public class Circuit implements QiskitCircuit {
 							quantumOperation.append("c_gate.qft_elements, qft_loop_tqubits,iter_type_t=\"change_block\", block_size_tq=1)").append("\n");
 						
 						quantumOperation.append(qucircuit.getName() + ".append(loopGate, target_qubits) #append LoopOperation to Circuit").append("\n");
-					}					
+					}
+					else if (loopOperation.getLoop().getName().equals(StaticLoop.class.getSimpleName())) {
+						quantumOperation.append("sl_gate=l_gate.simple_loop(" + loopOperation.getIterations() + ", [c_gate.cost_unitary_fixed(), c_gate.mixer_unitary(qc.num_qubits)],loopTargetQubits)" ).append("\n");
+						quantumOperation.append("qc.append(sl_gate,target_qubits)").append("\n");						
+					}
 				}
 			}		
 			

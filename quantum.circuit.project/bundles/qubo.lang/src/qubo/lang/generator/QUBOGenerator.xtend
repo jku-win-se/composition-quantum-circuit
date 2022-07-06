@@ -3,22 +3,10 @@
  */
 package qubo.lang.generator
 
-import qubo.lang.utils.QuboUtils
-import java.util.Collections
-import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import qucircuit.QucircuitPackage
-import qucircuit.QuantumCircuit
-import quope.QuantumOperationLibrary
-import quantum.operation.definition.api.utils.QuantumOperationUtils
-import qubo.Qubo
-import quope.QuopePackage
-import org.eclipse.xtext.resource.XtextResource
-import org.eclipse.xtext.resource.XtextResourceSet
 
 /**
  * Generates code from your model files on save.
@@ -27,41 +15,7 @@ import org.eclipse.xtext.resource.XtextResourceSet
  */
 class QUBOGenerator extends AbstractGenerator {
 	
-	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-		//Generate library of Quantum Operations
-		var quantumOpLib = generateQuantumLibraryIfNotExist(fsa, resource);
-		//Generate Qubo Circuit
-		generateQUBOQuantumCircuit(fsa, resource, quantumOpLib);
-	}
-	
-	def QuantumOperationLibrary generateQuantumLibraryIfNotExist(IFileSystemAccess2 fsa, Resource resource) {
-		var URI quOpeURI = createURI(fsa, resource, 'quantum-operation', QuopePackage.eNS_PREFIX);
-		var ResourceSet reset = resource.resourceSet; 
-		var Resource quOpeResource = reset.createResource(quOpeURI);
-		if (!reset.URIConverter.exists(quOpeURI, Collections.EMPTY_MAP)) {
-			var quantumOpLib = QuantumOperationUtils.getAllQuantumOperations();
-			quOpeResource.contents.add(quantumOpLib);
-			quOpeResource.save(Collections.EMPTY_MAP);
-			return quantumOpLib;	
-		} else {
-			quOpeResource.load(Collections.EMPTY_MAP);
-			return quOpeResource.contents.get(0) as QuantumOperationLibrary;
-		}			
-	}
-	
-	def generateQUBOQuantumCircuit(IFileSystemAccess2 fsa, Resource resource, QuantumOperationLibrary quantumOpLib) {
-		var URI quCircuitURI = createURI(fsa, resource, 'qu-circuit', 'qucirc')
-		var XtextResourceSet reset = resource.resourceSet as XtextResourceSet; 
-		var Resource quCircuitXtext = reset.createResource(quCircuitURI);
-		//var Resource quCircuit = reset.createResource(quCircuitURI);
-		var Qubo qubo = resource.contents.get(0) as Qubo;
-		var QuantumCircuit quantumCircuit = QuboUtils.createQuboCircuit(qubo, quantumOpLib);
-		quCircuitXtext.contents.add(quantumCircuit);
-		quCircuitXtext.save(Collections.EMPTY_MAP)
-	}
-	
-	def createURI(IFileSystemAccess2 fsa, Resource resource, String folder, String ext) {
-		return fsa.getURI('/').trimSegments(1).appendSegment(folder)
-					.appendSegment(resource.URI.trimFileExtension.lastSegment).appendFileExtension(ext);				
+	override doGenerate(Resource input, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		//Do nothing
 	}	
 }
