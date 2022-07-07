@@ -1,5 +1,9 @@
 package quantum.operation.definition.api;
 
+import org.eclipse.emf.ecore.EClass;
+
+import qucircuit.QucircuitPackage;
+
 public interface ILoopOperationLibrary {
 	
 	public boolean allowsFixedControlQubits();
@@ -11,5 +15,9 @@ public interface ILoopOperationLibrary {
 	public boolean allowsIncrementControlQubits();
 	public boolean allowsIncrementTargetQubits();
 	public boolean allowsIteration();
-	public boolean allowsMultipleOperations();
+	public boolean allowsMultipleOperations();	
+	
+	public default EClass getAbstractLoopGate() {
+		return QucircuitPackage.eINSTANCE.getLoopOperation();
+	}
 }

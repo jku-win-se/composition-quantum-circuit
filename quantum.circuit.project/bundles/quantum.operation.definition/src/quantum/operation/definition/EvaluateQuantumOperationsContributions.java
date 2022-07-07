@@ -46,8 +46,8 @@ public class EvaluateQuantumOperationsContributions {
                 if (o instanceof IGeneralOperationType) {
                    executeExtensionConcreteOperation(operations, reverseGate, o, configElement);                   
                 }
-                if (o instanceof ILoopOperationLibrary) {
-                	executeExtensionLoopOperation(operations, o, configElement);
+                if (o instanceof ILoopOperationLibrary ope) {
+                	executeExtensionLoopOperation(operations, ope, configElement);
                 }
             }
 			LOGGER.info("Evaluating Reverse Quantum Gates");
@@ -60,7 +60,7 @@ public class EvaluateQuantumOperationsContributions {
 		return quantumOpe;	
 	}
 
-	private void executeExtensionLoopOperation(EList<AbstractQuantumOperation> operations, Object o,
+	private void executeExtensionLoopOperation(EList<AbstractQuantumOperation> operations, ILoopOperationLibrary o,
 			IConfigurationElement configElement) {
 		ISafeRunnable runnable = new ISafeRunnable() {
 			
@@ -73,6 +73,7 @@ public class EvaluateQuantumOperationsContributions {
 			public void run() throws Exception {
 				var loopOperation = QuopeFactoryImpl.init().createConcreteLoopOperation();
 				loopOperation.setName(configElement.getAttribute(QUANTUM_OPERATION_NAME_ATTRIBUTE));
+				loopOperation.setType(o.getAbstractLoopGate());
 				//TODO finish to add the rest of the elements...
 				operations.add(loopOperation);				
 			}			

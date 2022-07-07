@@ -4,6 +4,6 @@ import qucircuit.QuantumCircuit;
 
 public interface QiskitCircuit {
 	
-	public String generateCircuitFile(QuantumCircuit qucircuit);
+	public String generateCode(QuantumCircuit qucircuit);
 	
 }

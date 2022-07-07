@@ -10,7 +10,7 @@ public class GeneralLoop extends AbstractLoopOperation {
 	
 	@Override
 	public boolean allowsMultipleOperations() {
-		return false;
+		return false; 
 	}
 
 }

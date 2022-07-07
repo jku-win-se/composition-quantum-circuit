@@ -6,6 +6,8 @@ public class CompositeGatesUtils implements QiskitLibrary {
 	
 	@Override
 	public String generateLibraryFile() {
+		
+		//TODO add the extended composite gate
 		return """ 
 				#composite Gates
 				from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
