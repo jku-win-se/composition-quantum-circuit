@@ -1,13 +1,29 @@
 package quantum.circuit.qiskit.library;
 
 import quantum.circuit.qiskit.api.QiskitLibrary;
+import quantum.circuit.qiskit.utils.QiskitCodeGenerationUtils;
+import quantum.operation.definition.api.utils.QuantumOperationUtils;
+import qucircuit.Operation;
+import qucircuit.QuantumCircuit;
+import quope.ConcreteQuantumOperation;
 
 public class CompositeGatesUtils implements QiskitLibrary {
 	
 	@Override
-	public String generateLibraryFile() {
-		
+	public String generateLibraryFile(QuantumCircuit quCircuit) {
 		//TODO add the extended composite gate
+		//get the operation
+		var allOperation = QiskitCodeGenerationUtils.listOfCompositeConcreteOperations(quCircuit);
+//		for (Operation concreteQuantumOperation : allCompositeGates) {
+//			
+//			var compositeQuantumOperation = QuantumOperationUtils.getQuantumOperationByName(concreteQuantumOperation.getName());
+//			compositeQuantumOperation.
+//			
+//			
+//			//System.out.println("asd");
+//		}
+		
+		
 		return """ 
 				#composite Gates
 				from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister

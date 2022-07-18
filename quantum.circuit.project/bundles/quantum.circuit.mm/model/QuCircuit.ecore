@@ -12,10 +12,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QuantumRegister" eSuperTypes="#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="QuantumRegister" eSuperTypes="#//Register">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfQubits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassicRegister" eSuperTypes="#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ClassicRegister" eSuperTypes="#//Register">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfBits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Layer" eSuperTypes="#//NamedElement">
@@ -100,7 +100,9 @@
     <eLiterals name="SHIFT" value="1"/>
     <eLiterals name="CHANGE_BLOCK" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Index" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Index" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="register" eType="#//Register"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IndexInt" eSuperTypes="#//Index">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
@@ -113,4 +115,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="operation" lowerBound="1"
         eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//ConcreteQuantumOperation"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Register" abstract="true" eSuperTypes="#//NamedElement"/>
 </ecore:EPackage>

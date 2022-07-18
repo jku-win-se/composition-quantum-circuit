@@ -9,28 +9,24 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import qucircuit.QuantumRegister;
-import qucircuit.QucircuitPackage;
+import qucircuit.Register;
 
 /**
- * This is the item provider adapter for a {@link qucircuit.QuantumRegister} object.
+ * This is the item provider adapter for a {@link qucircuit.Register} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class QuantumRegisterItemProvider extends RegisterItemProvider {
+public class RegisterItemProvider extends NamedElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuantumRegisterItemProvider(AdapterFactory adapterFactory) {
+	public RegisterItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,42 +41,19 @@ public class QuantumRegisterItemProvider extends RegisterItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNumberOfQubitsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Number Of Qubits feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNumberOfQubitsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_QuantumRegister_numberOfQubits_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_QuantumRegister_numberOfQubits_feature", "_UI_QuantumRegister_type"),
-				 QucircuitPackage.Literals.QUANTUM_REGISTER__NUMBER_OF_QUBITS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This returns QuantumRegister.gif.
+	 * This returns Register.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/QuantumRegister"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Register"));
 	}
 
 	/**
@@ -91,10 +64,10 @@ public class QuantumRegisterItemProvider extends RegisterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((QuantumRegister)object).getName();
+		String label = ((Register)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_QuantumRegister_type") :
-			getString("_UI_QuantumRegister_type") + " " + label;
+			getString("_UI_Register_type") :
+			getString("_UI_Register_type") + " " + label;
 	}
 
 
@@ -108,12 +81,6 @@ public class QuantumRegisterItemProvider extends RegisterItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(QuantumRegister.class)) {
-			case QucircuitPackage.QUANTUM_REGISTER__NUMBER_OF_QUBITS:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

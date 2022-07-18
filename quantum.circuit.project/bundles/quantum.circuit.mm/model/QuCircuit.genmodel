@@ -76,7 +76,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//LoopOperation/incrementBlockControlQubits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//LoopOperation/incrementBy"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="QuCircuit.ecore#//Index"/>
+    <genClasses image="false" ecoreClass="QuCircuit.ecore#//Index">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Index/register"/>
+    </genClasses>
     <genClasses ecoreClass="QuCircuit.ecore#//IndexInt">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//IndexInt/index"/>
     </genClasses>
@@ -88,5 +90,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Operation/qubo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Operation/operation"/>
     </genClasses>
+    <genClasses ecoreClass="QuCircuit.ecore#//Register"/>
   </genPackages>
 </genmodel:GenModel>

@@ -82,6 +82,7 @@ public class QucircuitSwitch<T> extends Switch<T> {
 			case QucircuitPackage.QUANTUM_REGISTER: {
 				QuantumRegister quantumRegister = (QuantumRegister)theEObject;
 				T result = caseQuantumRegister(quantumRegister);
+				if (result == null) result = caseRegister(quantumRegister);
 				if (result == null) result = caseNamedElement(quantumRegister);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -89,6 +90,7 @@ public class QucircuitSwitch<T> extends Switch<T> {
 			case QucircuitPackage.CLASSIC_REGISTER: {
 				ClassicRegister classicRegister = (ClassicRegister)theEObject;
 				T result = caseClassicRegister(classicRegister);
+				if (result == null) result = caseRegister(classicRegister);
 				if (result == null) result = caseNamedElement(classicRegister);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -204,6 +206,13 @@ public class QucircuitSwitch<T> extends Switch<T> {
 			case QucircuitPackage.OPERATION: {
 				Operation operation = (Operation)theEObject;
 				T result = caseOperation(operation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case QucircuitPackage.REGISTER: {
+				Register register = (Register)theEObject;
+				T result = caseRegister(register);
+				if (result == null) result = caseNamedElement(register);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -493,6 +502,21 @@ public class QucircuitSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOperation(Operation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Register</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Register</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRegister(Register object) {
 		return null;
 	}
 

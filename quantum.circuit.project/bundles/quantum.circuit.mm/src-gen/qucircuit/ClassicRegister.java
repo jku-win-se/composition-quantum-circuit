@@ -19,7 +19,7 @@ package qucircuit;
  * @model
  * @generated
  */
-public interface ClassicRegister extends NamedElement {
+public interface ClassicRegister extends Register {
 	/**
 	 * Returns the value of the '<em><b>Number Of Bits</b></em>' attribute.
 	 * <!-- begin-user-doc -->

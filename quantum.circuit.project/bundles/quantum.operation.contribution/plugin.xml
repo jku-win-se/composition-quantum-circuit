@@ -61,6 +61,10 @@
             Name="CostUnitary"
             class="quantum.operation.contribution.compositequantumgate.CostUnitary">
       </CompositeBlock>
+      <CompositeBlock
+            Name="QFT"
+            class="quantum.operation.contribution.compositequantumgate.QFT">
+      </CompositeBlock>
    </extension>
    <extension
          id="StatePreparationQuantumGates"

@@ -1,11 +1,12 @@
 package quantum.circuit.qiskit.library;
 
 import quantum.circuit.qiskit.api.QiskitLibrary;
+import qucircuit.QuantumCircuit;
 
 public class Measurements implements QiskitLibrary {
 
 	@Override
-	public String generateLibraryFile() {
+	public String generateLibraryFile(QuantumCircuit quCircuit) {
 		return """
 				#Measurement Gates
 				from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister

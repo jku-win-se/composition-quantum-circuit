@@ -32,6 +32,7 @@ import qucircuit.QuantumOperation;
 import qucircuit.QuantumRegister;
 import qucircuit.QucircuitFactory;
 import qucircuit.QucircuitPackage;
+import qucircuit.Register;
 import qucircuit.StatePreparation;
 
 import quope.QuopePackage;
@@ -175,6 +176,13 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * @generated
 	 */
 	private EClass operationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass registerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -713,6 +721,15 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIndex_Register() {
+		return (EReference)indexEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIndexInt() {
 		return indexIntEClass;
 	}
@@ -778,6 +795,15 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 */
 	public EReference getOperation_Operation() {
 		return (EReference)operationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRegister() {
+		return registerEClass;
 	}
 
 	/**
@@ -883,6 +909,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		createEAttribute(loopOperationEClass, LOOP_OPERATION__INCREMENT_BY);
 
 		indexEClass = createEClass(INDEX);
+		createEReference(indexEClass, INDEX__REGISTER);
 
 		indexIntEClass = createEClass(INDEX_INT);
 		createEAttribute(indexIntEClass, INDEX_INT__INDEX);
@@ -894,6 +921,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		operationEClass = createEClass(OPERATION);
 		createEReference(operationEClass, OPERATION__QUBO);
 		createEReference(operationEClass, OPERATION__OPERATION);
+
+		registerEClass = createEClass(REGISTER);
 
 		// Create enums
 		iteratioN_TYPEEEnum = createEEnum(ITERATION_TYPE);
@@ -932,8 +961,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 
 		// Add supertypes to classes
 		quantumCircuitEClass.getESuperTypes().add(this.getNamedElement());
-		quantumRegisterEClass.getESuperTypes().add(this.getNamedElement());
-		classicRegisterEClass.getESuperTypes().add(this.getNamedElement());
+		quantumRegisterEClass.getESuperTypes().add(this.getRegister());
+		classicRegisterEClass.getESuperTypes().add(this.getRegister());
 		layerEClass.getESuperTypes().add(this.getNamedElement());
 		quantumOperationEClass.getESuperTypes().add(this.getNamedElement());
 		abstractQuantumGateEClass.getESuperTypes().add(this.getQuantumOperation());
@@ -945,6 +974,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		loopOperationEClass.getESuperTypes().add(this.getAbstractCompositeGate());
 		indexIntEClass.getESuperTypes().add(this.getIndex());
 		indexRangeEClass.getESuperTypes().add(this.getIndex());
+		registerEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(quantumCircuitEClass, QuantumCircuit.class, "QuantumCircuit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1013,6 +1043,7 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEAttribute(getLoopOperation_IncrementBy(), ecorePackage.getEIntegerObject(), "incrementBy", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(indexEClass, Index.class, "Index", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIndex_Register(), this.getRegister(), null, "register", null, 0, 1, Index.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(indexIntEClass, IndexInt.class, "IndexInt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIndexInt_Index(), ecorePackage.getEIntegerObject(), "index", null, 0, 1, IndexInt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1024,6 +1055,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperation_Qubo(), theQuboPackage.getQubo(), null, "qubo", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperation_Operation(), theQuopePackage.getConcreteQuantumOperation(), null, "operation", null, 1, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(registerEClass, Register.class, "Register", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(iteratioN_TYPEEEnum, qucircuit.ITERATION_TYPE.class, "ITERATION_TYPE");

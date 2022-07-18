@@ -15,6 +15,7 @@ import quope.AbstractQuantumOperation;
 import quope.ConcreteQuantumOperation;
 import quope.QuantumOperationLibrary;
 import quope.impl.QuopeFactoryImpl;
+import quantum.operation.definition.api.AbstractExtendCompositeQuantumGate;
 import quantum.operation.definition.api.IGeneralOperationType;
 import quantum.operation.definition.api.ILoopOperationLibrary;
 import quantum.operation.definition.api.LibraryQuantumGate;
@@ -30,6 +31,21 @@ public class EvaluateQuantumOperationsContributions {
 	public EvaluateQuantumOperationsContributions() {
 		// Do nothing
 	}
+	
+	public AbstractExtendCompositeQuantumGate getQuantumOperationByName(IExtensionRegistry registry, String name) {
+		IConfigurationElement[] config = registry.getConfigurationElementsFor(QUANTUM_OPERATION);
+		for (IConfigurationElement iConfigurationElement : config) {
+			 try {
+				final Object o = iConfigurationElement.createExecutableExtension("class");
+				if (o instanceof AbstractExtendCompositeQuantumGate comp && iConfigurationElement.getAttribute(QUANTUM_OPERATION_NAME_ATTRIBUTE).equals(name)) {
+					return comp;
+				}
+			} catch (CoreException e) {
+				LOGGER.severe(e.getMessage()); 
+			}			 
+		}
+		return null;
+	}	
 	
 	public QuantumOperationLibrary execute(IExtensionRegistry registry) {
 		var quantumOpe = QuopeFactoryImpl.init().createQuantumOperationLibrary();

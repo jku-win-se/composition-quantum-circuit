@@ -24,7 +24,7 @@ import qucircuit.QucircuitPackage;
  *
  * @generated
  */
-public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegister {
+public class ClassicRegisterImpl extends RegisterImpl implements ClassicRegister {
 	/**
 	 * The default value of the '{@link #getNumberOfBits() <em>Number Of Bits</em>}' attribute.
 	 * <!-- begin-user-doc -->

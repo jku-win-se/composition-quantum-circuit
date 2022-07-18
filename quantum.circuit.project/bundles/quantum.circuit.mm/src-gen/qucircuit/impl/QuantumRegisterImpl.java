@@ -24,7 +24,7 @@ import qucircuit.QucircuitPackage;
  *
  * @generated
  */
-public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegister {
+public class QuantumRegisterImpl extends RegisterImpl implements QuantumRegister {
 	/**
 	 * The default value of the '{@link #getNumberOfQubits() <em>Number Of Qubits</em>}' attribute.
 	 * <!-- begin-user-doc -->

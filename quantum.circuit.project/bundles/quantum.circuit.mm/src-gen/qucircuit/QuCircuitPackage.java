@@ -159,6 +159,43 @@ public interface QucircuitPackage extends EPackage {
 	int QUANTUM_CIRCUIT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link qucircuit.impl.RegisterImpl <em>Register</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see qucircuit.impl.RegisterImpl
+	 * @see qucircuit.impl.QucircuitPackageImpl#getRegister()
+	 * @generated
+	 */
+	int REGISTER = 19;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Register</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Register</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTER_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link qucircuit.impl.QuantumRegisterImpl <em>Quantum Register</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,7 +212,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTUM_REGISTER__NAME = NAMED_ELEMENT__NAME;
+	int QUANTUM_REGISTER__NAME = REGISTER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Qubits</b></em>' attribute.
@@ -184,7 +221,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTUM_REGISTER__NUMBER_OF_QUBITS = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int QUANTUM_REGISTER__NUMBER_OF_QUBITS = REGISTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Quantum Register</em>' class.
@@ -193,7 +230,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTUM_REGISTER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int QUANTUM_REGISTER_FEATURE_COUNT = REGISTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Quantum Register</em>' class.
@@ -202,7 +239,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTUM_REGISTER_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int QUANTUM_REGISTER_OPERATION_COUNT = REGISTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link qucircuit.impl.ClassicRegisterImpl <em>Classic Register</em>}' class.
@@ -221,7 +258,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIC_REGISTER__NAME = NAMED_ELEMENT__NAME;
+	int CLASSIC_REGISTER__NAME = REGISTER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Bits</b></em>' attribute.
@@ -230,7 +267,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIC_REGISTER__NUMBER_OF_BITS = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int CLASSIC_REGISTER__NUMBER_OF_BITS = REGISTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Classic Register</em>' class.
@@ -239,7 +276,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIC_REGISTER_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CLASSIC_REGISTER_FEATURE_COUNT = REGISTER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Classic Register</em>' class.
@@ -248,7 +285,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASSIC_REGISTER_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int CLASSIC_REGISTER_OPERATION_COUNT = REGISTER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link qucircuit.impl.LayerImpl <em>Layer</em>}' class.
@@ -1190,13 +1227,22 @@ public interface QucircuitPackage extends EPackage {
 	int INDEX = 15;
 
 	/**
+	 * The feature id for the '<em><b>Register</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX__REGISTER = 0;
+
+	/**
 	 * The number of structural features of the '<em>Index</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_FEATURE_COUNT = 0;
+	int INDEX_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Index</em>' class.
@@ -1216,6 +1262,15 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 */
 	int INDEX_INT = 16;
+
+	/**
+	 * The feature id for the '<em><b>Register</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_INT__REGISTER = INDEX__REGISTER;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' attribute.
@@ -1253,6 +1308,15 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 */
 	int INDEX_RANGE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Register</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDEX_RANGE__REGISTER = INDEX__REGISTER;
 
 	/**
 	 * The feature id for the '<em><b>Begin</b></em>' attribute.
@@ -1344,7 +1408,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @see qucircuit.impl.QucircuitPackageImpl#getITERATION_TYPE()
 	 * @generated
 	 */
-	int ITERATION_TYPE = 19;
+	int ITERATION_TYPE = 20;
 
 
 	/**
@@ -1893,6 +1957,17 @@ public interface QucircuitPackage extends EPackage {
 	EClass getIndex();
 
 	/**
+	 * Returns the meta object for the reference '{@link qucircuit.Index#getRegister <em>Register</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Register</em>'.
+	 * @see qucircuit.Index#getRegister()
+	 * @see #getIndex()
+	 * @generated
+	 */
+	EReference getIndex_Register();
+
+	/**
 	 * Returns the meta object for class '{@link qucircuit.IndexInt <em>Index Int</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1976,6 +2051,16 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getOperation_Operation();
+
+	/**
+	 * Returns the meta object for class '{@link qucircuit.Register <em>Register</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Register</em>'.
+	 * @see qucircuit.Register
+	 * @generated
+	 */
+	EClass getRegister();
 
 	/**
 	 * Returns the meta object for enum '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}'.
@@ -2451,6 +2536,14 @@ public interface QucircuitPackage extends EPackage {
 		EClass INDEX = eINSTANCE.getIndex();
 
 		/**
+		 * The meta object literal for the '<em><b>Register</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INDEX__REGISTER = eINSTANCE.getIndex_Register();
+
+		/**
 		 * The meta object literal for the '{@link qucircuit.impl.IndexIntImpl <em>Index Int</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2519,6 +2612,16 @@ public interface QucircuitPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OPERATION__OPERATION = eINSTANCE.getOperation_Operation();
+
+		/**
+		 * The meta object literal for the '{@link qucircuit.impl.RegisterImpl <em>Register</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see qucircuit.impl.RegisterImpl
+		 * @see qucircuit.impl.QucircuitPackageImpl#getRegister()
+		 * @generated
+		 */
+		EClass REGISTER = eINSTANCE.getRegister();
 
 		/**
 		 * The meta object literal for the '{@link qucircuit.ITERATION_TYPE <em>ITERATION TYPE</em>}' enum.

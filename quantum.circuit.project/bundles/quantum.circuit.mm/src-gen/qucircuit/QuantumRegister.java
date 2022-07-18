@@ -19,7 +19,7 @@ package qucircuit;
  * @model
  * @generated
  */
-public interface QuantumRegister extends NamedElement {
+public interface QuantumRegister extends Register {
 	/**
 	 * Returns the value of the '<em><b>Number Of Qubits</b></em>' attribute.
 	 * <!-- begin-user-doc -->

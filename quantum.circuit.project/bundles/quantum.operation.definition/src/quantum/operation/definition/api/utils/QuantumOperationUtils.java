@@ -13,6 +13,7 @@ import quope.AbstractQuantumOperation;
 import quope.ConcreteQuantumOperation;
 import quope.QuantumOperationLibrary;
 import quantum.operation.definition.EvaluateQuantumOperationsContributions;
+import quantum.operation.definition.api.AbstractExtendCompositeQuantumGate;
 
 public class QuantumOperationUtils {
 	
@@ -25,6 +26,10 @@ public class QuantumOperationUtils {
 	
 	public static QuantumOperationLibrary getAllQuantumOperations() {
 		return new EvaluateQuantumOperationsContributions().execute(Platform.getExtensionRegistry());	
+	}
+	
+	public static AbstractExtendCompositeQuantumGate getQuantumOperationByName(String name) {
+		return new EvaluateQuantumOperationsContributions().getQuantumOperationByName(Platform.getExtensionRegistry(), name);	
 	}
 	
 	public static ConcreteQuantumOperation getConcreteQuantumOperationByName(Collection<AbstractQuantumOperation> quantumOperations, String name) {

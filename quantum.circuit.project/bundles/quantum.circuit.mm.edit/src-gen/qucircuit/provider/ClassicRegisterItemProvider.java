@@ -23,7 +23,7 @@ import qucircuit.QucircuitPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ClassicRegisterItemProvider extends NamedElementItemProvider {
+public class ClassicRegisterItemProvider extends RegisterItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

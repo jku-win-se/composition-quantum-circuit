@@ -1,11 +1,12 @@
 package quantum.circuit.qiskit.library;
 
 import quantum.circuit.qiskit.api.QiskitLibrary;
+import qucircuit.QuantumCircuit;
 
 public class LoopOperationsUtils implements QiskitLibrary {
 
 	@Override
-	public String generateLibraryFile() {
+	public String generateLibraryFile(QuantumCircuit quCircuit) {
 		return """
 				#Loop Operations
 				from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister

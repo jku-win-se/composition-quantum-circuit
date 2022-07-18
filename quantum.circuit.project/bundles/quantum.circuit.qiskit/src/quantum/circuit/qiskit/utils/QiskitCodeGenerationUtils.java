@@ -1,10 +1,17 @@
 package quantum.circuit.qiskit.utils;
 
+import java.util.Collection;
+import java.util.stream.Collectors;
+
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
+import qucircuit.CompositeQuantumGate;
 import qucircuit.Index;
 import qucircuit.IndexInt;
 import qucircuit.IndexRange;
+import qucircuit.Operation;
+import qucircuit.QuantumCircuit;
 
 public class QiskitCodeGenerationUtils {
 	
@@ -30,6 +37,17 @@ public class QiskitCodeGenerationUtils {
 		//Delete the last comma
 		rangeOfValues.deleteCharAt(rangeOfValues.length() - 1);
 		return rangeOfValues.append("]").toString();
+	}
+	
+	public static Collection<Operation> listOfCompositeConcreteOperations(QuantumCircuit quCircuit) {
+		 return quCircuit.getLayers().stream()
+						.map(l -> l.getQuantumOperations())
+						.flatMap(Collection::stream)
+						.map(quOpe -> quOpe.getOperations())
+						.flatMap(Collection::stream)
+						.filter(ope -> ope.getOperation().getType().getName().equals(CompositeQuantumGate.class.getSimpleName()))
+						.collect(Collectors.toCollection(ECollections::newBasicEList))						
+						;	 
 	}
 
 }
