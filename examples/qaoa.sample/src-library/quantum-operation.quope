@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ASCII"?>
+<quope:QuantumOperationLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:quope="http://www.eclipse.org/QuantumOpe" name="QuantumLibrary">
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="Hadamard" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/hadamard-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//ElementaryQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="RZ" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/rz-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//ElementaryQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="CNOT" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/cnot-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//ElementaryQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="PauliX" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/x-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//ElementaryQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="PauliZ" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/multicontrolledz-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//ElementaryQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="Swap" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/swap-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//ElementaryQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="Oracle" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/oracle-block-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="Amplification" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/amplification-block-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="Initialize" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/init-block-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="Grover" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/cgrover-block-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="QFTElement" paletteIconPath="platform:/plugin/quantum.operation.contribution/icons/qfinv-block-gate.png" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="MixerUnitaryQAOA" paletteIconPath="" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="CostUnitary" paletteIconPath="" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="Reset">
+    <type href="http://www.eclipse.org/QuCircuit#//StatePreparation"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="MeasurementCompBasis">
+    <type href="http://www.eclipse.org/QuCircuit#//Measurement"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteLoopOperation" name="StaticLoop">
+    <type href="http://www.eclipse.org/QuCircuit#//LoopOperation"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteLoopOperation" name="Power2Loop">
+    <type href="http://www.eclipse.org/QuCircuit#//LoopOperation"/>
+  </operations>
+  <operations xsi:type="quope:ConcreteLoopOperation" name="GeneralLoop">
+    <type href="http://www.eclipse.org/QuCircuit#//LoopOperation"/>
+  </operations>
+</quope:QuantumOperationLibrary>
