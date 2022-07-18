@@ -3,6 +3,7 @@
 package qucircuit.impl;
 
 import org.eclipse.emf.ecore.EClass;
+
 import qucircuit.CompositeQuantumGate;
 import qucircuit.QucircuitPackage;
 

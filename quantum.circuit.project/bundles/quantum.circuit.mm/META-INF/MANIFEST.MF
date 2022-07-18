@@ -8,10 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-16
-Export-Package: qubo,
- qubo.impl,
- qubo.util,
- qucircuit,
+Export-Package: qucircuit,
  qucircuit.impl,
  qucircuit.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,

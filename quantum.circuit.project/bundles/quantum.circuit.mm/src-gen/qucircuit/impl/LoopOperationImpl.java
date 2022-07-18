@@ -21,6 +21,7 @@ import qucircuit.ITERATION_TYPE;
 import qucircuit.Index;
 import qucircuit.LoopOperation;
 import qucircuit.QucircuitPackage;
+
 import quope.ConcreteLoopOperation;
 
 /**

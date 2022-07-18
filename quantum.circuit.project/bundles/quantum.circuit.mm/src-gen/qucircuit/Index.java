@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Index extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Register</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -43,4 +42,5 @@ public interface Index extends EObject {
 	 * @generated
 	 */
 	void setRegister(Register value);
+
 } // Index

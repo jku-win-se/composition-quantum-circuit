@@ -3,6 +3,7 @@
 package qucircuit;
 
 import org.eclipse.emf.common.util.EList;
+
 import quope.ConcreteLoopOperation;
 
 /**

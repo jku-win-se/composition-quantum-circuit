@@ -7,11 +7,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.EcorePackage;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import qubo.QuboPackage;
+
 import qucircuit.AbstractCompositeGate;
 import qucircuit.AbstractQuantumGate;
 import qucircuit.AngleParameter;
