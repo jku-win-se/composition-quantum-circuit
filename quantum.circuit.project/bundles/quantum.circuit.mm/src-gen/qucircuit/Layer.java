@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link qucircuit.Layer#getQuantumOperations <em>Quantum Operations</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getLayer()
+ * @see qucircuit.QucircuitPackage#getLayer()
  * @model annotation="http://www.eclipse.org/emf/2002/GenModel"
  * @generated
  */
@@ -27,8 +27,8 @@ public interface Layer extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantum Operations</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getLayer_QuantumOperations()
-	 * @model containment="true"
+	 * @see qucircuit.QucircuitPackage#getLayer_QuantumOperations()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<QuantumOperation> getQuantumOperations();

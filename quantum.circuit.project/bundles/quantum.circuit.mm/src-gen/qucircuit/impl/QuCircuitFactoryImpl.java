@@ -19,24 +19,24 @@ import qucircuit.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFactory {
+public class QucircuitFactoryImpl extends EFactoryImpl implements QucircuitFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static QuCircuitFactory init() {
+	public static QucircuitFactory init() {
 		try {
-			QuCircuitFactory theQuCircuitFactory = (QuCircuitFactory) EPackage.Registry.INSTANCE
-					.getEFactory(QuCircuitPackage.eNS_URI);
-			if (theQuCircuitFactory != null) {
-				return theQuCircuitFactory;
+			QucircuitFactory theQucircuitFactory = (QucircuitFactory)EPackage.Registry.INSTANCE.getEFactory(QucircuitPackage.eNS_URI);
+			if (theQucircuitFactory != null) {
+				return theQucircuitFactory;
 			}
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new QuCircuitFactoryImpl();
+		return new QucircuitFactoryImpl();
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuCircuitFactoryImpl() {
+	public QucircuitFactoryImpl() {
 		super();
 	}
 
@@ -57,34 +57,22 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT:
-			return createQuantumCircuit();
-		case QuCircuitPackage.QUANTUM_REGISTER:
-			return createQuantumRegister();
-		case QuCircuitPackage.CLASSIC_REGISTER:
-			return createClassicRegister();
-		case QuCircuitPackage.QUBIT:
-			return createQubit();
-		case QuCircuitPackage.CLASSIC_BIT:
-			return createClassicBit();
-		case QuCircuitPackage.LAYER:
-			return createLayer();
-		case QuCircuitPackage.CLASSIC_CONTROL:
-			return createClassicControl();
-		case QuCircuitPackage.STATE_PREPARATION:
-			return createStatePreparation();
-		case QuCircuitPackage.MEASUREMENT:
-			return createMeasurement();
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE:
-			return createElementaryQuantumGate();
-		case QuCircuitPackage.COMPOSITE_QUANTUM_GATE:
-			return createCompositeQuantumGate();
-		case QuCircuitPackage.ANGLE_PARAMETER:
-			return createAngleParameter();
-		case QuCircuitPackage.LOOP:
-			return createLoop();
-		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+			case QucircuitPackage.QUANTUM_CIRCUIT: return createQuantumCircuit();
+			case QucircuitPackage.QUANTUM_REGISTER: return createQuantumRegister();
+			case QucircuitPackage.CLASSIC_REGISTER: return createClassicRegister();
+			case QucircuitPackage.LAYER: return createLayer();
+			case QucircuitPackage.CLASSIC_CONTROL: return createClassicControl();
+			case QucircuitPackage.STATE_PREPARATION: return createStatePreparation();
+			case QucircuitPackage.MEASUREMENT: return createMeasurement();
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE: return createElementaryQuantumGate();
+			case QucircuitPackage.COMPOSITE_QUANTUM_GATE: return createCompositeQuantumGate();
+			case QucircuitPackage.ANGLE_PARAMETER: return createAngleParameter();
+			case QucircuitPackage.LOOP_OPERATION: return createLoopOperation();
+			case QucircuitPackage.INDEX_INT: return createIndexInt();
+			case QucircuitPackage.INDEX_RANGE: return createIndexRange();
+			case QucircuitPackage.OPERATION: return createOperation();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -96,10 +84,10 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case QuCircuitPackage.ITERATION_TYPE:
-			return createITERATION_TYPEFromString(eDataType, initialValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case QucircuitPackage.ITERATION_TYPE:
+				return createITERATION_TYPEFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -111,10 +99,10 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case QuCircuitPackage.ITERATION_TYPE:
-			return convertITERATION_TYPEToString(eDataType, instanceValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case QucircuitPackage.ITERATION_TYPE:
+				return convertITERATION_TYPEToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -146,26 +134,6 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	public ClassicRegister createClassicRegister() {
 		ClassicRegisterImpl classicRegister = new ClassicRegisterImpl();
 		return classicRegister;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Qubit createQubit() {
-		QubitImpl qubit = new QubitImpl();
-		return qubit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ClassicBit createClassicBit() {
-		ClassicBitImpl classicBit = new ClassicBitImpl();
-		return classicBit;
 	}
 
 	/**
@@ -243,9 +211,39 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Loop createLoop() {
-		LoopImpl loop = new LoopImpl();
-		return loop;
+	public LoopOperation createLoopOperation() {
+		LoopOperationImpl loopOperation = new LoopOperationImpl();
+		return loopOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IndexInt createIndexInt() {
+		IndexIntImpl indexInt = new IndexIntImpl();
+		return indexInt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IndexRange createIndexRange() {
+		IndexRangeImpl indexRange = new IndexRangeImpl();
+		return indexRange;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Operation createOperation() {
+		OperationImpl operation = new OperationImpl();
+		return operation;
 	}
 
 	/**
@@ -255,9 +253,7 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	 */
 	public ITERATION_TYPE createITERATION_TYPEFromString(EDataType eDataType, String initialValue) {
 		ITERATION_TYPE result = ITERATION_TYPE.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
@@ -275,8 +271,8 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuCircuitPackage getQuCircuitPackage() {
-		return (QuCircuitPackage) getEPackage();
+	public QucircuitPackage getQucircuitPackage() {
+		return (QucircuitPackage)getEPackage();
 	}
 
 	/**
@@ -286,8 +282,8 @@ public class QuCircuitFactoryImpl extends EFactoryImpl implements QuCircuitFacto
 	 * @generated
 	 */
 	@Deprecated
-	public static QuCircuitPackage getPackage() {
-		return QuCircuitPackage.eINSTANCE;
+	public static QucircuitPackage getPackage() {
+		return QucircuitPackage.eINSTANCE;
 	}
 
-} //QuCircuitFactoryImpl
+} //QucircuitFactoryImpl

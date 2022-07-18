@@ -58,13 +58,13 @@ public interface QuopeFactory extends EFactory {
 	Parameter createParameter();
 
 	/**
-	 * Returns a new object of class '<em>Loop Operation</em>'.
+	 * Returns a new object of class '<em>Concrete Loop Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Loop Operation</em>'.
+	 * @return a new object of class '<em>Concrete Loop Operation</em>'.
 	 * @generated
 	 */
-	LoopOperation createLoopOperation();
+	ConcreteLoopOperation createConcreteLoopOperation();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -14,8 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import quope.ConcreteQuantumOperation;
-import quope.LoopOperation;
+import quope.AbstractQuantumOperation;
 import quope.QuantumOperationLibrary;
 import quope.QuopePackage;
 
@@ -28,7 +27,6 @@ import quope.QuopePackage;
  * </p>
  * <ul>
  *   <li>{@link quope.impl.QuantumOperationLibraryImpl#getOperations <em>Operations</em>}</li>
- *   <li>{@link quope.impl.QuantumOperationLibraryImpl#getLoopOperations <em>Loop Operations</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,17 +40,7 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ConcreteQuantumOperation> operations;
-
-	/**
-	 * The cached value of the '{@link #getLoopOperations() <em>Loop Operations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLoopOperations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LoopOperation> loopOperations;
+	protected EList<AbstractQuantumOperation> operations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,25 +66,12 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ConcreteQuantumOperation> getOperations() {
+	public EList<AbstractQuantumOperation> getOperations() {
 		if (operations == null) {
-			operations = new EObjectContainmentEList<ConcreteQuantumOperation>(ConcreteQuantumOperation.class, this,
+			operations = new EObjectContainmentEList<AbstractQuantumOperation>(AbstractQuantumOperation.class, this,
 					QuopePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS);
 		}
 		return operations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<LoopOperation> getLoopOperations() {
-		if (loopOperations == null) {
-			loopOperations = new EObjectContainmentEList<LoopOperation>(LoopOperation.class, this,
-					QuopePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS);
-		}
-		return loopOperations;
 	}
 
 	/**
@@ -109,8 +84,6 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		switch (featureID) {
 		case QuopePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			return ((InternalEList<?>) getOperations()).basicRemove(otherEnd, msgs);
-		case QuopePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
-			return ((InternalEList<?>) getLoopOperations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -125,8 +98,6 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		switch (featureID) {
 		case QuopePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			return getOperations();
-		case QuopePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
-			return getLoopOperations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -142,11 +113,7 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		switch (featureID) {
 		case QuopePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			getOperations().clear();
-			getOperations().addAll((Collection<? extends ConcreteQuantumOperation>) newValue);
-			return;
-		case QuopePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
-			getLoopOperations().clear();
-			getLoopOperations().addAll((Collection<? extends LoopOperation>) newValue);
+			getOperations().addAll((Collection<? extends AbstractQuantumOperation>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -163,9 +130,6 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		case QuopePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			getOperations().clear();
 			return;
-		case QuopePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
-			getLoopOperations().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -180,8 +144,6 @@ public class QuantumOperationLibraryImpl extends NamedElementImpl implements Qua
 		switch (featureID) {
 		case QuopePackage.QUANTUM_OPERATION_LIBRARY__OPERATIONS:
 			return operations != null && !operations.isEmpty();
-		case QuopePackage.QUANTUM_OPERATION_LIBRARY__LOOP_OPERATIONS:
-			return loopOperations != null && !loopOperations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

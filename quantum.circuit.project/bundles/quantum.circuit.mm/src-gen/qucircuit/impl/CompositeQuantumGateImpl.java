@@ -3,9 +3,8 @@
 package qucircuit.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import qucircuit.CompositeQuantumGate;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +30,7 @@ public class CompositeQuantumGateImpl extends AbstractCompositeGateImpl implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.COMPOSITE_QUANTUM_GATE;
+		return QucircuitPackage.Literals.COMPOSITE_QUANTUM_GATE;
 	}
 
 } //CompositeQuantumGateImpl

@@ -2,21 +2,14 @@
  */
 package qucircuit.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import qucircuit.ClassicBit;
 import qucircuit.ClassicRegister;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,21 +19,31 @@ import qucircuit.QuCircuitPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link qucircuit.impl.ClassicRegisterImpl#getClassicBits <em>Classic Bits</em>}</li>
+ *   <li>{@link qucircuit.impl.ClassicRegisterImpl#getNumberOfBits <em>Number Of Bits</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegister {
+public class ClassicRegisterImpl extends RegisterImpl implements ClassicRegister {
 	/**
-	 * The cached value of the '{@link #getClassicBits() <em>Classic Bits</em>}' containment reference list.
+	 * The default value of the '{@link #getNumberOfBits() <em>Number Of Bits</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClassicBits()
+	 * @see #getNumberOfBits()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ClassicBit> classicBits;
+	protected static final Integer NUMBER_OF_BITS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNumberOfBits() <em>Number Of Bits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumberOfBits()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer numberOfBits = NUMBER_OF_BITS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,7 +61,7 @@ public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.CLASSIC_REGISTER;
+		return QucircuitPackage.Literals.CLASSIC_REGISTER;
 	}
 
 	/**
@@ -66,12 +69,8 @@ public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ClassicBit> getClassicBits() {
-		if (classicBits == null) {
-			classicBits = new EObjectContainmentEList<ClassicBit>(ClassicBit.class, this,
-					QuCircuitPackage.CLASSIC_REGISTER__CLASSIC_BITS);
-		}
-		return classicBits;
+	public Integer getNumberOfBits() {
+		return numberOfBits;
 	}
 
 	/**
@@ -79,13 +78,11 @@ public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_REGISTER__CLASSIC_BITS:
-			return ((InternalEList<?>) getClassicBits()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setNumberOfBits(Integer newNumberOfBits) {
+		Integer oldNumberOfBits = numberOfBits;
+		numberOfBits = newNumberOfBits;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.CLASSIC_REGISTER__NUMBER_OF_BITS, oldNumberOfBits, numberOfBits));
 	}
 
 	/**
@@ -96,8 +93,8 @@ public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_REGISTER__CLASSIC_BITS:
-			return getClassicBits();
+			case QucircuitPackage.CLASSIC_REGISTER__NUMBER_OF_BITS:
+				return getNumberOfBits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,14 +104,12 @@ public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_REGISTER__CLASSIC_BITS:
-			getClassicBits().clear();
-			getClassicBits().addAll((Collection<? extends ClassicBit>) newValue);
-			return;
+			case QucircuitPackage.CLASSIC_REGISTER__NUMBER_OF_BITS:
+				setNumberOfBits((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -127,9 +122,9 @@ public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_REGISTER__CLASSIC_BITS:
-			getClassicBits().clear();
-			return;
+			case QucircuitPackage.CLASSIC_REGISTER__NUMBER_OF_BITS:
+				setNumberOfBits(NUMBER_OF_BITS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,10 +137,26 @@ public class ClassicRegisterImpl extends NamedElementImpl implements ClassicRegi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_REGISTER__CLASSIC_BITS:
-			return classicBits != null && !classicBits.isEmpty();
+			case QucircuitPackage.CLASSIC_REGISTER__NUMBER_OF_BITS:
+				return NUMBER_OF_BITS_EDEFAULT == null ? numberOfBits != null : !NUMBER_OF_BITS_EDEFAULT.equals(numberOfBits);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (numberOfBits: ");
+		result.append(numberOfBits);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ClassicRegisterImpl

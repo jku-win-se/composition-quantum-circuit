@@ -5,12 +5,8 @@ import quantum.operation.definition.api.AbstractExtendElementaryQuantumGate;
 
 public class CNOT extends AbstractExtendElementaryQuantumGate {
 	
-public static final String PALETTE_ICON = "cnot-gate.png";
+	public static final String PALETTE_ICON = "cnot-gate.png";
 	
-	@Override
-	public String getAbbreviation() {
-		return "CNOT";
-	}
 
 	@Override
 	public String getPaletteIconPath() {

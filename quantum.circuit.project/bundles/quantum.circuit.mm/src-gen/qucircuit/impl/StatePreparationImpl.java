@@ -4,7 +4,7 @@ package qucircuit.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 import qucircuit.StatePreparation;
 
 /**
@@ -31,7 +31,7 @@ public class StatePreparationImpl extends QuantumOperationImpl implements StateP
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.STATE_PREPARATION;
+		return QucircuitPackage.Literals.STATE_PREPARATION;
 	}
 
 } //StatePreparationImpl

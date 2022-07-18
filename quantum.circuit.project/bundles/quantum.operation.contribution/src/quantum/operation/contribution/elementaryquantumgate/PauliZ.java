@@ -8,11 +8,6 @@ public class PauliZ extends AbstractExtendElementaryQuantumGate {
 	public static final String PALETTE_ICON = "multicontrolledz-gate.png";//TODO only Z..
 	
 	@Override
-	public String getAbbreviation() {
-		return "Z";
-	}
-
-	@Override
 	public String getPaletteIconPath() {
 		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}

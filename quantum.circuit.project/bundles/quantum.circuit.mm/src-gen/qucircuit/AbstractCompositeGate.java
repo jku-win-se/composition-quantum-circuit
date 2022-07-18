@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link qucircuit.AbstractCompositeGate#getLayers <em>Layers</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getAbstractCompositeGate()
+ * @see qucircuit.QucircuitPackage#getAbstractCompositeGate()
  * @model abstract="true"
  * @generated
  */
@@ -27,7 +27,7 @@ public interface AbstractCompositeGate extends AbstractQuantumGate {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Layers</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getAbstractCompositeGate_Layers()
+	 * @see qucircuit.QucircuitPackage#getAbstractCompositeGate_Layers()
 	 * @model containment="true"
 	 * @generated
 	 */

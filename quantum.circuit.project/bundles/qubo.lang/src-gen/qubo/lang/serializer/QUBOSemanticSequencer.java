@@ -92,7 +92,7 @@ public class QUBOSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Qubo returns Qubo
 	 *
 	 * Constraint:
-	 *     matrix=Matrix?
+	 *     (name=EString matrix=Matrix?)
 	 * </pre>
 	 */
 	protected void sequence_Qubo(ISerializationContext context, Qubo semanticObject) {

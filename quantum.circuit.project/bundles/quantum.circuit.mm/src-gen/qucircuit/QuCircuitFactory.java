@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see qucircuit.QuCircuitPackage
+ * @see qucircuit.QucircuitPackage
  * @generated
  */
-public interface QuCircuitFactory extends EFactory {
+public interface QucircuitFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	QuCircuitFactory eINSTANCE = qucircuit.impl.QuCircuitFactoryImpl.init();
+	QucircuitFactory eINSTANCE = qucircuit.impl.QucircuitFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Quantum Circuit</em>'.
@@ -47,24 +47,6 @@ public interface QuCircuitFactory extends EFactory {
 	 * @generated
 	 */
 	ClassicRegister createClassicRegister();
-
-	/**
-	 * Returns a new object of class '<em>Qubit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Qubit</em>'.
-	 * @generated
-	 */
-	Qubit createQubit();
-
-	/**
-	 * Returns a new object of class '<em>Classic Bit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Classic Bit</em>'.
-	 * @generated
-	 */
-	ClassicBit createClassicBit();
 
 	/**
 	 * Returns a new object of class '<em>Layer</em>'.
@@ -130,13 +112,40 @@ public interface QuCircuitFactory extends EFactory {
 	AngleParameter createAngleParameter();
 
 	/**
-	 * Returns a new object of class '<em>Loop</em>'.
+	 * Returns a new object of class '<em>Loop Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Loop</em>'.
+	 * @return a new object of class '<em>Loop Operation</em>'.
 	 * @generated
 	 */
-	Loop createLoop();
+	LoopOperation createLoopOperation();
+
+	/**
+	 * Returns a new object of class '<em>Index Int</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Index Int</em>'.
+	 * @generated
+	 */
+	IndexInt createIndexInt();
+
+	/**
+	 * Returns a new object of class '<em>Index Range</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Index Range</em>'.
+	 * @generated
+	 */
+	IndexRange createIndexRange();
+
+	/**
+	 * Returns a new object of class '<em>Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Operation</em>'.
+	 * @generated
+	 */
+	Operation createOperation();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -145,6 +154,6 @@ public interface QuCircuitFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	QuCircuitPackage getQuCircuitPackage();
+	QucircuitPackage getQucircuitPackage();
 
-} //QuCircuitFactory
+} //QucircuitFactory

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link qucircuit.AngleParameter#getLambda <em>Lambda</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getAngleParameter()
+ * @see qucircuit.QucircuitPackage#getAngleParameter()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface AngleParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Theta</em>' attribute.
 	 * @see #setTheta(Double)
-	 * @see qucircuit.QuCircuitPackage#getAngleParameter_Theta()
+	 * @see qucircuit.QucircuitPackage#getAngleParameter_Theta()
 	 * @model
 	 * @generated
 	 */
@@ -51,7 +51,7 @@ public interface AngleParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Phi</em>' attribute.
 	 * @see #setPhi(Double)
-	 * @see qucircuit.QuCircuitPackage#getAngleParameter_Phi()
+	 * @see qucircuit.QucircuitPackage#getAngleParameter_Phi()
 	 * @model
 	 * @generated
 	 */
@@ -73,7 +73,7 @@ public interface AngleParameter extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lambda</em>' attribute.
 	 * @see #setLambda(Double)
-	 * @see qucircuit.QuCircuitPackage#getAngleParameter_Lambda()
+	 * @see qucircuit.QucircuitPackage#getAngleParameter_Lambda()
 	 * @model
 	 * @generated
 	 */

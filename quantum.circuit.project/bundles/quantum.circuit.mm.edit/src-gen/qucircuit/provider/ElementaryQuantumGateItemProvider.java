@@ -2,6 +2,7 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -14,8 +15,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import qucircuit.ElementaryQuantumGate;
-import qucircuit.QuCircuitFactory;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitFactory;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.ElementaryQuantumGate} object.
@@ -61,7 +62,7 @@ public class ElementaryQuantumGateItemProvider extends AbstractQuantumGateItemPr
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(QuCircuitPackage.Literals.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER);
+			childrenFeatures.add(QucircuitPackage.Literals.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER);
 		}
 		return childrenFeatures;
 	}
@@ -91,16 +92,6 @@ public class ElementaryQuantumGateItemProvider extends AbstractQuantumGateItemPr
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -108,10 +99,12 @@ public class ElementaryQuantumGateItemProvider extends AbstractQuantumGateItemPr
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ElementaryQuantumGate) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_ElementaryQuantumGate_type")
-				: getString("_UI_ElementaryQuantumGate_type") + " " + label;
+		String label = ((ElementaryQuantumGate)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ElementaryQuantumGate_type") :
+			getString("_UI_ElementaryQuantumGate_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -125,9 +118,9 @@ public class ElementaryQuantumGateItemProvider extends AbstractQuantumGateItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ElementaryQuantumGate.class)) {
-		case QuCircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case QucircuitPackage.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -143,8 +136,33 @@ public class ElementaryQuantumGateItemProvider extends AbstractQuantumGateItemPr
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER,
-				QuCircuitFactory.eINSTANCE.createAngleParameter()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.ELEMENTARY_QUANTUM_GATE__ANGLE_PARAMETER,
+				 QucircuitFactory.eINSTANCE.createAngleParameter()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS ||
+			childFeature == QucircuitPackage.Literals.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

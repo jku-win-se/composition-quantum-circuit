@@ -2,6 +2,7 @@
  */
 package qucircuit;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Elementary Quantum Gate</b></em>'.
@@ -14,7 +15,7 @@ package qucircuit;
  *   <li>{@link qucircuit.ElementaryQuantumGate#getAngleParameter <em>Angle Parameter</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getElementaryQuantumGate()
+ * @see qucircuit.QucircuitPackage#getElementaryQuantumGate()
  * @model
  * @generated
  */
@@ -25,7 +26,7 @@ public interface ElementaryQuantumGate extends AbstractQuantumGate {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angle Parameter</em>' containment reference.
 	 * @see #setAngleParameter(AngleParameter)
-	 * @see qucircuit.QuCircuitPackage#getElementaryQuantumGate_AngleParameter()
+	 * @see qucircuit.QucircuitPackage#getElementaryQuantumGate_AngleParameter()
 	 * @model containment="true"
 	 * @generated
 	 */

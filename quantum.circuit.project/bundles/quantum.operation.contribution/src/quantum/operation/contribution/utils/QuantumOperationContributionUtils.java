@@ -2,6 +2,7 @@ package quantum.operation.contribution.utils;
 
 import org.eclipse.emf.common.util.URI;
 
+import quope.AbstractQuantumOperation;
 import quope.ConcreteQuantumOperation;
 import quope.QuantumOperationLibrary;
 import quantum.operation.contribution.elementaryquantumgate.CNOT;
@@ -25,14 +26,23 @@ public class QuantumOperationContributionUtils {
 	}
 	
 	public static ConcreteQuantumOperation getHadamardOperation(QuantumOperationLibrary quantumOpLib) {
-		return QuantumOperationUtils.getConcreteQuantumOperationByName(quantumOpLib.getOperations(), Hadamard.class.getSimpleName());
+		 var operation = QuantumOperationUtils.getConcreteQuantumOperationByName(quantumOpLib.getOperations(), Hadamard.class.getSimpleName());
+		 return getConcreteQuantumOperation(operation);
 	}
 
 	public static ConcreteQuantumOperation getCNOTOperation(QuantumOperationLibrary quantumOpLib) {
-		return QuantumOperationUtils.getConcreteQuantumOperationByName(quantumOpLib.getOperations(), CNOT.class.getSimpleName());
+		var operation = QuantumOperationUtils.getConcreteQuantumOperationByName(quantumOpLib.getOperations(), CNOT.class.getSimpleName());
+		return getConcreteQuantumOperation(operation);
 	}
 	
 	public static ConcreteQuantumOperation getRZOperation(QuantumOperationLibrary quantumOpLib) {
-		return QuantumOperationUtils.getConcreteQuantumOperationByName(quantumOpLib.getOperations(), RZ.class.getSimpleName());
+		var operation =  QuantumOperationUtils.getConcreteQuantumOperationByName(quantumOpLib.getOperations(), RZ.class.getSimpleName());
+		return getConcreteQuantumOperation(operation);
+	}
+	
+	private static ConcreteQuantumOperation getConcreteQuantumOperation(AbstractQuantumOperation abstractQuantumOpe) {
+		if (abstractQuantumOpe instanceof ConcreteQuantumOperation concreteOperation)
+			 return concreteOperation;
+		 throw new IllegalAccessError("Not found ConcreteQuantumOperation");
 	}
 }

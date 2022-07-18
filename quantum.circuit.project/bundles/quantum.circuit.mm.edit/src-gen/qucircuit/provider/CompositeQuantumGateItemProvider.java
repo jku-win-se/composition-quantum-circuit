@@ -2,15 +2,16 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import qucircuit.CompositeQuantumGate;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.CompositeQuantumGate} object.
@@ -56,16 +57,6 @@ public class CompositeQuantumGateItemProvider extends AbstractCompositeGateItemP
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,10 +64,12 @@ public class CompositeQuantumGateItemProvider extends AbstractCompositeGateItemP
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CompositeQuantumGate) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_CompositeQuantumGate_type")
-				: getString("_UI_CompositeQuantumGate_type") + " " + label;
+		String label = ((CompositeQuantumGate)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CompositeQuantumGate_type") :
+			getString("_UI_CompositeQuantumGate_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -101,6 +94,29 @@ public class CompositeQuantumGateItemProvider extends AbstractCompositeGateItemP
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS ||
+			childFeature == QucircuitPackage.Literals.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

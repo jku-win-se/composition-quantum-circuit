@@ -6,7 +6,11 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
+
 import quantum.operation.library.mm.quope.provider.QuantumOpeEditPlugin;
+
+import qubo.provider.QuboEditPlugin;
 
 /**
  * This is the central singleton for the QuCircuit edit plugin.
@@ -38,7 +42,12 @@ public final class QuCircuitEditPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public QuCircuitEditPlugin() {
-		super(new ResourceLocator[] { QuantumOpeEditPlugin.INSTANCE, });
+		super
+		  (new ResourceLocator [] {
+		     EcoreEditPlugin.INSTANCE,
+		     QuantumOpeEditPlugin.INSTANCE,
+		     QuboEditPlugin.INSTANCE,
+		   });
 	}
 
 	/**

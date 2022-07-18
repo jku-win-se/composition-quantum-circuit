@@ -16,17 +16,17 @@ import qucircuit.*;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see qucircuit.QuCircuitPackage
+ * @see qucircuit.QucircuitPackage
  * @generated
  */
-public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
+public class QucircuitAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static QuCircuitPackage modelPackage;
+	protected static QucircuitPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuCircuitAdapterFactory() {
+	public QucircuitAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = QuCircuitPackage.eINSTANCE;
+			modelPackage = QucircuitPackage.eINSTANCE;
 		}
 	}
 
@@ -54,7 +54,7 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 			return true;
 		}
 		if (object instanceof EObject) {
-			return ((EObject) object).eClass().getEPackage() == modelPackage;
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
 	}
@@ -65,102 +65,93 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QuCircuitSwitch<Adapter> modelSwitch = new QuCircuitSwitch<Adapter>() {
-		@Override
-		public Adapter caseQuantumCircuit(QuantumCircuit object) {
-			return createQuantumCircuitAdapter();
-		}
-
-		@Override
-		public Adapter caseNamedElement(NamedElement object) {
-			return createNamedElementAdapter();
-		}
-
-		@Override
-		public Adapter caseQuantumRegister(QuantumRegister object) {
-			return createQuantumRegisterAdapter();
-		}
-
-		@Override
-		public Adapter caseClassicRegister(ClassicRegister object) {
-			return createClassicRegisterAdapter();
-		}
-
-		@Override
-		public Adapter caseQubit(Qubit object) {
-			return createQubitAdapter();
-		}
-
-		@Override
-		public Adapter caseClassicBit(ClassicBit object) {
-			return createClassicBitAdapter();
-		}
-
-		@Override
-		public Adapter caseLayer(Layer object) {
-			return createLayerAdapter();
-		}
-
-		@Override
-		public Adapter caseClassicControl(ClassicControl object) {
-			return createClassicControlAdapter();
-		}
-
-		@Override
-		public Adapter caseQuantumOperation(QuantumOperation object) {
-			return createQuantumOperationAdapter();
-		}
-
-		@Override
-		public Adapter caseAbstractQuantumGate(AbstractQuantumGate object) {
-			return createAbstractQuantumGateAdapter();
-		}
-
-		@Override
-		public Adapter caseStatePreparation(StatePreparation object) {
-			return createStatePreparationAdapter();
-		}
-
-		@Override
-		public Adapter caseMeasurement(Measurement object) {
-			return createMeasurementAdapter();
-		}
-
-		@Override
-		public Adapter caseElementaryQuantumGate(ElementaryQuantumGate object) {
-			return createElementaryQuantumGateAdapter();
-		}
-
-		@Override
-		public Adapter caseCompositeQuantumGate(CompositeQuantumGate object) {
-			return createCompositeQuantumGateAdapter();
-		}
-
-		@Override
-		public Adapter caseAngleParameter(AngleParameter object) {
-			return createAngleParameterAdapter();
-		}
-
-		@Override
-		public Adapter caseBit(Bit object) {
-			return createBitAdapter();
-		}
-
-		@Override
-		public Adapter caseAbstractCompositeGate(AbstractCompositeGate object) {
-			return createAbstractCompositeGateAdapter();
-		}
-
-		@Override
-		public Adapter caseLoop(Loop object) {
-			return createLoopAdapter();
-		}
-
-		@Override
-		public Adapter defaultCase(EObject object) {
-			return createEObjectAdapter();
-		}
-	};
+	protected QucircuitSwitch<Adapter> modelSwitch =
+		new QucircuitSwitch<Adapter>() {
+			@Override
+			public Adapter caseQuantumCircuit(QuantumCircuit object) {
+				return createQuantumCircuitAdapter();
+			}
+			@Override
+			public Adapter caseNamedElement(NamedElement object) {
+				return createNamedElementAdapter();
+			}
+			@Override
+			public Adapter caseQuantumRegister(QuantumRegister object) {
+				return createQuantumRegisterAdapter();
+			}
+			@Override
+			public Adapter caseClassicRegister(ClassicRegister object) {
+				return createClassicRegisterAdapter();
+			}
+			@Override
+			public Adapter caseLayer(Layer object) {
+				return createLayerAdapter();
+			}
+			@Override
+			public Adapter caseClassicControl(ClassicControl object) {
+				return createClassicControlAdapter();
+			}
+			@Override
+			public Adapter caseQuantumOperation(QuantumOperation object) {
+				return createQuantumOperationAdapter();
+			}
+			@Override
+			public Adapter caseAbstractQuantumGate(AbstractQuantumGate object) {
+				return createAbstractQuantumGateAdapter();
+			}
+			@Override
+			public Adapter caseStatePreparation(StatePreparation object) {
+				return createStatePreparationAdapter();
+			}
+			@Override
+			public Adapter caseMeasurement(Measurement object) {
+				return createMeasurementAdapter();
+			}
+			@Override
+			public Adapter caseElementaryQuantumGate(ElementaryQuantumGate object) {
+				return createElementaryQuantumGateAdapter();
+			}
+			@Override
+			public Adapter caseCompositeQuantumGate(CompositeQuantumGate object) {
+				return createCompositeQuantumGateAdapter();
+			}
+			@Override
+			public Adapter caseAngleParameter(AngleParameter object) {
+				return createAngleParameterAdapter();
+			}
+			@Override
+			public Adapter caseAbstractCompositeGate(AbstractCompositeGate object) {
+				return createAbstractCompositeGateAdapter();
+			}
+			@Override
+			public Adapter caseLoopOperation(LoopOperation object) {
+				return createLoopOperationAdapter();
+			}
+			@Override
+			public Adapter caseIndex(Index object) {
+				return createIndexAdapter();
+			}
+			@Override
+			public Adapter caseIndexInt(IndexInt object) {
+				return createIndexIntAdapter();
+			}
+			@Override
+			public Adapter caseIndexRange(IndexRange object) {
+				return createIndexRangeAdapter();
+			}
+			@Override
+			public Adapter caseOperation(Operation object) {
+				return createOperationAdapter();
+			}
+			@Override
+			public Adapter caseRegister(Register object) {
+				return createRegisterAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
 
 	/**
 	 * Creates an adapter for the <code>target</code>.
@@ -172,8 +163,9 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	 */
 	@Override
 	public Adapter createAdapter(Notifier target) {
-		return modelSwitch.doSwitch((EObject) target);
+		return modelSwitch.doSwitch((EObject)target);
 	}
+
 
 	/**
 	 * Creates a new adapter for an object of class '{@link qucircuit.QuantumCircuit <em>Quantum Circuit</em>}'.
@@ -228,34 +220,6 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createClassicRegisterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.Qubit <em>Qubit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see qucircuit.Qubit
-	 * @generated
-	 */
-	public Adapter createQubitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.ClassicBit <em>Classic Bit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see qucircuit.ClassicBit
-	 * @generated
-	 */
-	public Adapter createClassicBitAdapter() {
 		return null;
 	}
 
@@ -386,20 +350,6 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.Bit <em>Bit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see qucircuit.Bit
-	 * @generated
-	 */
-	public Adapter createBitAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link qucircuit.AbstractCompositeGate <em>Abstract Composite Gate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -414,16 +364,86 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.Loop <em>Loop</em>}'.
+	 * Creates a new adapter for an object of class '{@link qucircuit.LoopOperation <em>Loop Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see qucircuit.Loop
+	 * @see qucircuit.LoopOperation
 	 * @generated
 	 */
-	public Adapter createLoopAdapter() {
+	public Adapter createLoopOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.Index <em>Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.Index
+	 * @generated
+	 */
+	public Adapter createIndexAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.IndexInt <em>Index Int</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.IndexInt
+	 * @generated
+	 */
+	public Adapter createIndexIntAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.IndexRange <em>Index Range</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.IndexRange
+	 * @generated
+	 */
+	public Adapter createIndexRangeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.Operation <em>Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.Operation
+	 * @generated
+	 */
+	public Adapter createOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link qucircuit.Register <em>Register</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see qucircuit.Register
+	 * @generated
+	 */
+	public Adapter createRegisterAdapter() {
 		return null;
 	}
 
@@ -439,4 +459,4 @@ public class QuCircuitAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //QuCircuitAdapterFactory
+} //QucircuitAdapterFactory

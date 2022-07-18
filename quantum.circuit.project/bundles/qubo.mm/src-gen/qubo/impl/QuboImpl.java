@@ -9,8 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import qubo.Matrix;
 import qubo.Qubo;
 import qubo.QuboPackage;
@@ -28,7 +26,7 @@ import qubo.QuboPackage;
  *
  * @generated
  */
-public class QuboImpl extends MinimalEObjectImpl.Container implements Qubo {
+public class QuboImpl extends NamedElementImpl implements Qubo {
 	/**
 	 * The cached value of the '{@link #getMatrix() <em>Matrix</em>}' containment reference.
 	 * <!-- begin-user-doc -->

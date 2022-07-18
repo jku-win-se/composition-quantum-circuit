@@ -8,7 +8,7 @@ package qucircuit;
  * <!-- end-user-doc -->
  *
  *
- * @see qucircuit.QuCircuitPackage#getCompositeQuantumGate()
+ * @see qucircuit.QucircuitPackage#getCompositeQuantumGate()
  * @model
  * @generated
  */

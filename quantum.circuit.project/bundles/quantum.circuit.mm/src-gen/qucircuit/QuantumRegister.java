@@ -2,7 +2,6 @@
  */
 package qucircuit;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,24 +12,34 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link qucircuit.QuantumRegister#getQubits <em>Qubits</em>}</li>
+ *   <li>{@link qucircuit.QuantumRegister#getNumberOfQubits <em>Number Of Qubits</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getQuantumRegister()
+ * @see qucircuit.QucircuitPackage#getQuantumRegister()
  * @model
  * @generated
  */
-public interface QuantumRegister extends NamedElement {
+public interface QuantumRegister extends Register {
 	/**
-	 * Returns the value of the '<em><b>Qubits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Qubit}.
+	 * Returns the value of the '<em><b>Number Of Qubits</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Qubits</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getQuantumRegister_Qubits()
-	 * @model containment="true"
+	 * @return the value of the '<em>Number Of Qubits</em>' attribute.
+	 * @see #setNumberOfQubits(Integer)
+	 * @see qucircuit.QucircuitPackage#getQuantumRegister_NumberOfQubits()
+	 * @model
 	 * @generated
 	 */
-	EList<Qubit> getQubits();
+	Integer getNumberOfQubits();
+
+	/**
+	 * Sets the value of the '{@link qucircuit.QuantumRegister#getNumberOfQubits <em>Number Of Qubits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Number Of Qubits</em>' attribute.
+	 * @see #getNumberOfQubits()
+	 * @generated
+	 */
+	void setNumberOfQubits(Integer value);
 
 } // QuantumRegister

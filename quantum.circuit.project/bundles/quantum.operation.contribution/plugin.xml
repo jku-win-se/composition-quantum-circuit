@@ -25,6 +25,10 @@
             Name="PauliZ"
             class="quantum.operation.contribution.elementaryquantumgate.PauliZ">
       </ElementaryQuantumGate>
+      <ElementaryQuantumGate
+            Name="Swap"
+            class="quantum.operation.contribution.elementaryquantumgate.Swap">
+      </ElementaryQuantumGate>
    </extension>
    <extension
          id="CompositeQuantumGates"
@@ -46,8 +50,20 @@
             class="quantum.operation.contribution.compositequantumgate.Grover">
       </CompositeBlock>
       <CompositeBlock
-            Name="QFTInv"
-            class="quantum.operation.contribution.compositequantumgate.QFTInv">
+            Name="QFTElement"
+            class="quantum.operation.contribution.compositequantumgate.QFTElement">
+      </CompositeBlock>
+      <CompositeBlock
+            Name="MixerUnitaryQAOA"
+            class="quantum.operation.contribution.compositequantumgate.MixerUnitaryQAOA">
+      </CompositeBlock>
+      <CompositeBlock
+            Name="CostUnitary"
+            class="quantum.operation.contribution.compositequantumgate.CostUnitary">
+      </CompositeBlock>
+      <CompositeBlock
+            Name="QFT"
+            class="quantum.operation.contribution.compositequantumgate.QFT">
       </CompositeBlock>
    </extension>
    <extension
@@ -64,5 +80,19 @@
             Name="MeasurementCompBasis"
             class="quantum.operation.contribution.measurement.MeasurementCompBasis">
       </Measurement>
+   </extension>
+   <extension
+         point="quantum.operation">
+      <LoopOperation
+            Name="StaticLoop"
+            class="quantum.operation.contribution.loops.StaticLoop">
+      </LoopOperation>
+      <LoopOperation
+            Name="Power2Loop"
+            class="quantum.operation.contribution.loops.Power2Loop">
+      </LoopOperation>
+      <LoopOperation
+            Name="GeneralLoop"
+            class="quantum.operation.contribution.loops.GeneralLoop"></LoopOperation>
    </extension>
 </plugin>

@@ -14,6 +14,7 @@ Bundle-ActivationPolicy: lazy
 Bundle-Activator: quantum.operation.contribution.Activator
 Export-Package: quantum.operation.contribution.compositequantumgate,
  quantum.operation.contribution.elementaryquantumgate,
+ quantum.operation.contribution.loops,
  quantum.operation.contribution.measurement,
  quantum.operation.contribution.statepreparation,
  quantum.operation.contribution.utils

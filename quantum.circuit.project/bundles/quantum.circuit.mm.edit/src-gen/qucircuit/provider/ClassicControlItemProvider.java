@@ -2,6 +2,7 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -22,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import qucircuit.ClassicControl;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.ClassicControl} object.
@@ -30,8 +31,14 @@ import qucircuit.QuCircuitPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ClassicControlItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class ClassicControlItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -66,13 +73,19 @@ public class ClassicControlItemProvider extends ItemProviderAdapter implements I
 	 * @generated
 	 */
 	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ClassicControl_value_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ClassicControl_value_feature",
-								"_UI_ClassicControl_type"),
-						QuCircuitPackage.Literals.CLASSIC_CONTROL__VALUE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ClassicControl_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ClassicControl_value_feature", "_UI_ClassicControl_type"),
+				 QucircuitPackage.Literals.CLASSIC_CONTROL__VALUE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -82,13 +95,19 @@ public class ClassicControlItemProvider extends ItemProviderAdapter implements I
 	 * @generated
 	 */
 	protected void addClassicRegisterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ClassicControl_classicRegister_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ClassicControl_classicRegister_feature",
-								"_UI_ClassicControl_type"),
-						QuCircuitPackage.Literals.CLASSIC_CONTROL__CLASSIC_REGISTER, true, false, true, null, null,
-						null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ClassicControl_classicRegister_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ClassicControl_classicRegister_feature", "_UI_ClassicControl_type"),
+				 QucircuitPackage.Literals.CLASSIC_CONTROL__CLASSIC_REGISTER,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -103,16 +122,6 @@ public class ClassicControlItemProvider extends ItemProviderAdapter implements I
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -120,11 +129,13 @@ public class ClassicControlItemProvider extends ItemProviderAdapter implements I
 	 */
 	@Override
 	public String getText(Object object) {
-		Double labelValue = ((ClassicControl) object).getValue();
+		Double labelValue = ((ClassicControl)object).getValue();
 		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ? getString("_UI_ClassicControl_type")
-				: getString("_UI_ClassicControl_type") + " " + label;
+		return label == null || label.length() == 0 ?
+			getString("_UI_ClassicControl_type") :
+			getString("_UI_ClassicControl_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -138,9 +149,9 @@ public class ClassicControlItemProvider extends ItemProviderAdapter implements I
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ClassicControl.class)) {
-		case QuCircuitPackage.CLASSIC_CONTROL__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case QucircuitPackage.CLASSIC_CONTROL__VALUE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

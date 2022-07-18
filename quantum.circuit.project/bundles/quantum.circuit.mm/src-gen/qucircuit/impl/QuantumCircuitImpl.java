@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.ClassicRegister;
 import qucircuit.Layer;
-import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumCircuit;
 import qucircuit.QuantumRegister;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.QUANTUM_CIRCUIT;
+		return QucircuitPackage.Literals.QUANTUM_CIRCUIT;
 	}
 
 	/**
@@ -92,8 +92,7 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	 */
 	public EList<QuantumRegister> getQuantumRegisters() {
 		if (quantumRegisters == null) {
-			quantumRegisters = new EObjectContainmentEList<QuantumRegister>(QuantumRegister.class, this,
-					QuCircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS);
+			quantumRegisters = new EObjectContainmentEList<QuantumRegister>(QuantumRegister.class, this, QucircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS);
 		}
 		return quantumRegisters;
 	}
@@ -105,8 +104,7 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	 */
 	public EList<ClassicRegister> getClassicRegisters() {
 		if (classicRegisters == null) {
-			classicRegisters = new EObjectContainmentEList<ClassicRegister>(ClassicRegister.class, this,
-					QuCircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS);
+			classicRegisters = new EObjectContainmentEList<ClassicRegister>(ClassicRegister.class, this, QucircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS);
 		}
 		return classicRegisters;
 	}
@@ -118,7 +116,7 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	 */
 	public EList<Layer> getLayers() {
 		if (layers == null) {
-			layers = new EObjectContainmentEList<Layer>(Layer.class, this, QuCircuitPackage.QUANTUM_CIRCUIT__LAYERS);
+			layers = new EObjectContainmentEList<Layer>(Layer.class, this, QucircuitPackage.QUANTUM_CIRCUIT__LAYERS);
 		}
 		return layers;
 	}
@@ -131,12 +129,12 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
-			return ((InternalEList<?>) getQuantumRegisters()).basicRemove(otherEnd, msgs);
-		case QuCircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
-			return ((InternalEList<?>) getClassicRegisters()).basicRemove(otherEnd, msgs);
-		case QuCircuitPackage.QUANTUM_CIRCUIT__LAYERS:
-			return ((InternalEList<?>) getLayers()).basicRemove(otherEnd, msgs);
+			case QucircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
+				return ((InternalEList<?>)getQuantumRegisters()).basicRemove(otherEnd, msgs);
+			case QucircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
+				return ((InternalEList<?>)getClassicRegisters()).basicRemove(otherEnd, msgs);
+			case QucircuitPackage.QUANTUM_CIRCUIT__LAYERS:
+				return ((InternalEList<?>)getLayers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -149,12 +147,12 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
-			return getQuantumRegisters();
-		case QuCircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
-			return getClassicRegisters();
-		case QuCircuitPackage.QUANTUM_CIRCUIT__LAYERS:
-			return getLayers();
+			case QucircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
+				return getQuantumRegisters();
+			case QucircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
+				return getClassicRegisters();
+			case QucircuitPackage.QUANTUM_CIRCUIT__LAYERS:
+				return getLayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -168,18 +166,18 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
-			getQuantumRegisters().clear();
-			getQuantumRegisters().addAll((Collection<? extends QuantumRegister>) newValue);
-			return;
-		case QuCircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
-			getClassicRegisters().clear();
-			getClassicRegisters().addAll((Collection<? extends ClassicRegister>) newValue);
-			return;
-		case QuCircuitPackage.QUANTUM_CIRCUIT__LAYERS:
-			getLayers().clear();
-			getLayers().addAll((Collection<? extends Layer>) newValue);
-			return;
+			case QucircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
+				getQuantumRegisters().clear();
+				getQuantumRegisters().addAll((Collection<? extends QuantumRegister>)newValue);
+				return;
+			case QucircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
+				getClassicRegisters().clear();
+				getClassicRegisters().addAll((Collection<? extends ClassicRegister>)newValue);
+				return;
+			case QucircuitPackage.QUANTUM_CIRCUIT__LAYERS:
+				getLayers().clear();
+				getLayers().addAll((Collection<? extends Layer>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -192,15 +190,15 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
-			getQuantumRegisters().clear();
-			return;
-		case QuCircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
-			getClassicRegisters().clear();
-			return;
-		case QuCircuitPackage.QUANTUM_CIRCUIT__LAYERS:
-			getLayers().clear();
-			return;
+			case QucircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
+				getQuantumRegisters().clear();
+				return;
+			case QucircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
+				getClassicRegisters().clear();
+				return;
+			case QucircuitPackage.QUANTUM_CIRCUIT__LAYERS:
+				getLayers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,12 +211,12 @@ public class QuantumCircuitImpl extends NamedElementImpl implements QuantumCircu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
-			return quantumRegisters != null && !quantumRegisters.isEmpty();
-		case QuCircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
-			return classicRegisters != null && !classicRegisters.isEmpty();
-		case QuCircuitPackage.QUANTUM_CIRCUIT__LAYERS:
-			return layers != null && !layers.isEmpty();
+			case QucircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
+				return quantumRegisters != null && !quantumRegisters.isEmpty();
+			case QucircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
+				return classicRegisters != null && !classicRegisters.isEmpty();
+			case QucircuitPackage.QUANTUM_CIRCUIT__LAYERS:
+				return layers != null && !layers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

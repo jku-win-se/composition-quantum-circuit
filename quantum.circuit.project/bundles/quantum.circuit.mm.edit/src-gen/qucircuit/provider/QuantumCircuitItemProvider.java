@@ -2,6 +2,7 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -13,9 +14,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import qucircuit.QuCircuitFactory;
-import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumCircuit;
+import qucircuit.QucircuitFactory;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.QuantumCircuit} object.
@@ -61,9 +62,9 @@ public class QuantumCircuitItemProvider extends NamedElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(QuCircuitPackage.Literals.QUANTUM_CIRCUIT__QUANTUM_REGISTERS);
-			childrenFeatures.add(QuCircuitPackage.Literals.QUANTUM_CIRCUIT__CLASSIC_REGISTERS);
-			childrenFeatures.add(QuCircuitPackage.Literals.QUANTUM_CIRCUIT__LAYERS);
+			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_CIRCUIT__QUANTUM_REGISTERS);
+			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_CIRCUIT__CLASSIC_REGISTERS);
+			childrenFeatures.add(QucircuitPackage.Literals.QUANTUM_CIRCUIT__LAYERS);
 		}
 		return childrenFeatures;
 	}
@@ -93,16 +94,6 @@ public class QuantumCircuitItemProvider extends NamedElementItemProvider {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,10 +101,12 @@ public class QuantumCircuitItemProvider extends NamedElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((QuantumCircuit) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_QuantumCircuit_type")
-				: getString("_UI_QuantumCircuit_type") + " " + label;
+		String label = ((QuantumCircuit)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_QuantumCircuit_type") :
+			getString("_UI_QuantumCircuit_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -127,11 +120,11 @@ public class QuantumCircuitItemProvider extends NamedElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(QuantumCircuit.class)) {
-		case QuCircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
-		case QuCircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
-		case QuCircuitPackage.QUANTUM_CIRCUIT__LAYERS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
+			case QucircuitPackage.QUANTUM_CIRCUIT__QUANTUM_REGISTERS:
+			case QucircuitPackage.QUANTUM_CIRCUIT__CLASSIC_REGISTERS:
+			case QucircuitPackage.QUANTUM_CIRCUIT__LAYERS:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -147,14 +140,20 @@ public class QuantumCircuitItemProvider extends NamedElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.QUANTUM_CIRCUIT__QUANTUM_REGISTERS,
-				QuCircuitFactory.eINSTANCE.createQuantumRegister()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.QUANTUM_CIRCUIT__QUANTUM_REGISTERS,
+				 QucircuitFactory.eINSTANCE.createQuantumRegister()));
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.QUANTUM_CIRCUIT__CLASSIC_REGISTERS,
-				QuCircuitFactory.eINSTANCE.createClassicRegister()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.QUANTUM_CIRCUIT__CLASSIC_REGISTERS,
+				 QucircuitFactory.eINSTANCE.createClassicRegister()));
 
-		newChildDescriptors.add(createChildParameter(QuCircuitPackage.Literals.QUANTUM_CIRCUIT__LAYERS,
-				QuCircuitFactory.eINSTANCE.createLayer()));
+		newChildDescriptors.add
+			(createChildParameter
+				(QucircuitPackage.Literals.QUANTUM_CIRCUIT__LAYERS,
+				 QucircuitFactory.eINSTANCE.createLayer()));
 	}
 
 }

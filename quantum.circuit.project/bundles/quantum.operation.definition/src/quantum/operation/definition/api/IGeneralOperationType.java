@@ -4,8 +4,6 @@ import org.eclipse.emf.ecore.EClass;
 
 public interface IGeneralOperationType {	
 	
-	//Abbreviation
-	public String getAbbreviation();
 	//Palette icon path
 	public String getPaletteIconPath();
 	//Style icon path

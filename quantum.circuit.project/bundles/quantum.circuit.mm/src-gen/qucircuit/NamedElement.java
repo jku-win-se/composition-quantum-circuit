@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link qucircuit.NamedElement#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getNamedElement()
+ * @see qucircuit.QucircuitPackage#getNamedElement()
  * @model abstract="true"
  * @generated
  */
@@ -27,7 +27,7 @@ public interface NamedElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see qucircuit.QuCircuitPackage#getNamedElement_Name()
+	 * @see qucircuit.QucircuitPackage#getNamedElement_Name()
 	 * @model
 	 * @generated
 	 */

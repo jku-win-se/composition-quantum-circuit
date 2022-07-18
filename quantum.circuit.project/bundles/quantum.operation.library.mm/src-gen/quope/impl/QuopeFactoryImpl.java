@@ -63,8 +63,8 @@ public class QuopeFactoryImpl extends EFactoryImpl implements QuopeFactory {
 			return createFixedQuantumOperation();
 		case QuopePackage.PARAMETER:
 			return createParameter();
-		case QuopePackage.LOOP_OPERATION:
-			return createLoopOperation();
+		case QuopePackage.CONCRETE_LOOP_OPERATION:
+			return createConcreteLoopOperation();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -115,9 +115,9 @@ public class QuopeFactoryImpl extends EFactoryImpl implements QuopeFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LoopOperation createLoopOperation() {
-		LoopOperationImpl loopOperation = new LoopOperationImpl();
-		return loopOperation;
+	public ConcreteLoopOperation createConcreteLoopOperation() {
+		ConcreteLoopOperationImpl concreteLoopOperation = new ConcreteLoopOperationImpl();
+		return concreteLoopOperation;
 	}
 
 	/**

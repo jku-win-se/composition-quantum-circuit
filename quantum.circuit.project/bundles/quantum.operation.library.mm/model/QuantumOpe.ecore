@@ -3,24 +3,18 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="quope" nsURI="http://www.eclipse.org/QuantumOpe" nsPrefix="quope">
   <eClassifiers xsi:type="ecore:EClass" name="QuantumOperationLibrary" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
-        eType="#//ConcreteQuantumOperation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="loopOperations" upperBound="-1"
-        eType="#//LoopOperation" containment="true"/>
+        eType="#//AbstractQuantumOperation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConcreteQuantumOperation" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abbreviation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paletteIconPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="styleIconPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConcreteQuantumOperation" eSuperTypes="#//AbstractQuantumOperation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" eType="#//Parameter"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedQuantumOperation"
         eType="#//FixedQuantumOperation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reverse" eType="#//ConcreteQuantumOperation"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reversible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowsQubo" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FixedQuantumOperation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfTargetQubits" lowerBound="1"
@@ -38,7 +32,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lambda" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LoopOperation" eSuperTypes="#//NamedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ConcreteLoopOperation" eSuperTypes="#//AbstractQuantumOperation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowsFixedControlQubits"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>
@@ -65,5 +59,16 @@
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowsIterations" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="allowsMultipleOperations"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBooleanObject"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractQuantumOperation" abstract="true"
+      eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paletteIconPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="styleIconPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reversible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reverse" eType="#//AbstractQuantumOperation"/>
   </eClassifiers>
 </ecore:EPackage>

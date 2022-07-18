@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import qucircuit.ClassicControl;
 import qucircuit.ClassicRegister;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.CLASSIC_CONTROL;
+		return QucircuitPackage.Literals.CLASSIC_CONTROL;
 	}
 
 	/**
@@ -96,8 +96,7 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 		Double oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QuCircuitPackage.CLASSIC_CONTROL__VALUE, oldValue,
-					value));
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.CLASSIC_CONTROL__VALUE, oldValue, value));
 	}
 
 	/**
@@ -107,12 +106,11 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public ClassicRegister getClassicRegister() {
 		if (classicRegister != null && classicRegister.eIsProxy()) {
-			InternalEObject oldClassicRegister = (InternalEObject) classicRegister;
-			classicRegister = (ClassicRegister) eResolveProxy(oldClassicRegister);
+			InternalEObject oldClassicRegister = (InternalEObject)classicRegister;
+			classicRegister = (ClassicRegister)eResolveProxy(oldClassicRegister);
 			if (classicRegister != oldClassicRegister) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							QuCircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER, oldClassicRegister, classicRegister));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, QucircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER, oldClassicRegister, classicRegister));
 			}
 		}
 		return classicRegister;
@@ -136,8 +134,7 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 		ClassicRegister oldClassicRegister = classicRegister;
 		classicRegister = newClassicRegister;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QuCircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER,
-					oldClassicRegister, classicRegister));
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER, oldClassicRegister, classicRegister));
 	}
 
 	/**
@@ -148,12 +145,11 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_CONTROL__VALUE:
-			return getValue();
-		case QuCircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
-			if (resolve)
-				return getClassicRegister();
-			return basicGetClassicRegister();
+			case QucircuitPackage.CLASSIC_CONTROL__VALUE:
+				return getValue();
+			case QucircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
+				if (resolve) return getClassicRegister();
+				return basicGetClassicRegister();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,12 +162,12 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_CONTROL__VALUE:
-			setValue((Double) newValue);
-			return;
-		case QuCircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
-			setClassicRegister((ClassicRegister) newValue);
-			return;
+			case QucircuitPackage.CLASSIC_CONTROL__VALUE:
+				setValue((Double)newValue);
+				return;
+			case QucircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
+				setClassicRegister((ClassicRegister)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -184,12 +180,12 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_CONTROL__VALUE:
-			setValue(VALUE_EDEFAULT);
-			return;
-		case QuCircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
-			setClassicRegister((ClassicRegister) null);
-			return;
+			case QucircuitPackage.CLASSIC_CONTROL__VALUE:
+				setValue(VALUE_EDEFAULT);
+				return;
+			case QucircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
+				setClassicRegister((ClassicRegister)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -202,10 +198,10 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.CLASSIC_CONTROL__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-		case QuCircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
-			return classicRegister != null;
+			case QucircuitPackage.CLASSIC_CONTROL__VALUE:
+				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case QucircuitPackage.CLASSIC_CONTROL__CLASSIC_REGISTER:
+				return classicRegister != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,8 +213,7 @@ public class ClassicControlImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");

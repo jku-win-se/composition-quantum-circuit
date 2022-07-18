@@ -22,9 +22,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQUBOParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_E_INT", "RULE_E_DOUBLE", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Qubo'", "'{'", "'}'", "'matrix'", "'['", "']'", "','"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_E_INT", "RULE_E_DOUBLE", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Qubo'", "'{'", "'}'", "'matrix'", "'['", "']'", "','"
     };
-    public static final int RULE_STRING=8;
+    public static final int RULE_STRING=6;
     public static final int RULE_SL_COMMENT=10;
     public static final int T__19=19;
     public static final int T__15=15;
@@ -39,7 +39,7 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
     public static final int RULE_WS=11;
     public static final int RULE_E_INT=4;
     public static final int RULE_ANY_OTHER=12;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=8;
     public static final int RULE_ML_COMMENT=9;
 
     // delegates
@@ -462,14 +462,91 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleEDouble"
 
 
+    // $ANTLR start "entryRuleEString"
+    // InternalQUBO.g:178:1: entryRuleEString : ruleEString EOF ;
+    public final void entryRuleEString() throws RecognitionException {
+        try {
+            // InternalQUBO.g:179:1: ( ruleEString EOF )
+            // InternalQUBO.g:180:1: ruleEString EOF
+            {
+             before(grammarAccess.getEStringRule()); 
+            pushFollow(FOLLOW_1);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getEStringRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleEString"
+
+
+    // $ANTLR start "ruleEString"
+    // InternalQUBO.g:187:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
+    public final void ruleEString() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQUBO.g:191:2: ( ( ( rule__EString__Alternatives ) ) )
+            // InternalQUBO.g:192:2: ( ( rule__EString__Alternatives ) )
+            {
+            // InternalQUBO.g:192:2: ( ( rule__EString__Alternatives ) )
+            // InternalQUBO.g:193:3: ( rule__EString__Alternatives )
+            {
+             before(grammarAccess.getEStringAccess().getAlternatives()); 
+            // InternalQUBO.g:194:3: ( rule__EString__Alternatives )
+            // InternalQUBO.g:194:4: rule__EString__Alternatives
+            {
+            pushFollow(FOLLOW_2);
+            rule__EString__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getEStringAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleEString"
+
+
     // $ANTLR start "rule__EDouble__Alternatives"
-    // InternalQUBO.g:177:1: rule__EDouble__Alternatives : ( ( RULE_E_INT ) | ( RULE_E_DOUBLE ) );
+    // InternalQUBO.g:202:1: rule__EDouble__Alternatives : ( ( RULE_E_INT ) | ( RULE_E_DOUBLE ) );
     public final void rule__EDouble__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:181:1: ( ( RULE_E_INT ) | ( RULE_E_DOUBLE ) )
+            // InternalQUBO.g:206:1: ( ( RULE_E_INT ) | ( RULE_E_DOUBLE ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -487,10 +564,10 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalQUBO.g:182:2: ( RULE_E_INT )
+                    // InternalQUBO.g:207:2: ( RULE_E_INT )
                     {
-                    // InternalQUBO.g:182:2: ( RULE_E_INT )
-                    // InternalQUBO.g:183:3: RULE_E_INT
+                    // InternalQUBO.g:207:2: ( RULE_E_INT )
+                    // InternalQUBO.g:208:3: RULE_E_INT
                     {
                      before(grammarAccess.getEDoubleAccess().getE_INTTerminalRuleCall_0()); 
                     match(input,RULE_E_INT,FOLLOW_2); 
@@ -502,10 +579,10 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalQUBO.g:188:2: ( RULE_E_DOUBLE )
+                    // InternalQUBO.g:213:2: ( RULE_E_DOUBLE )
                     {
-                    // InternalQUBO.g:188:2: ( RULE_E_DOUBLE )
-                    // InternalQUBO.g:189:3: RULE_E_DOUBLE
+                    // InternalQUBO.g:213:2: ( RULE_E_DOUBLE )
+                    // InternalQUBO.g:214:3: RULE_E_DOUBLE
                     {
                      before(grammarAccess.getEDoubleAccess().getE_DOUBLETerminalRuleCall_1()); 
                     match(input,RULE_E_DOUBLE,FOLLOW_2); 
@@ -533,15 +610,86 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__EDouble__Alternatives"
 
 
+    // $ANTLR start "rule__EString__Alternatives"
+    // InternalQUBO.g:223:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
+    public final void rule__EString__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQUBO.g:227:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0==RULE_STRING) ) {
+                alt2=1;
+            }
+            else if ( (LA2_0==RULE_ID) ) {
+                alt2=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 2, 0, input);
+
+                throw nvae;
+            }
+            switch (alt2) {
+                case 1 :
+                    // InternalQUBO.g:228:2: ( RULE_STRING )
+                    {
+                    // InternalQUBO.g:228:2: ( RULE_STRING )
+                    // InternalQUBO.g:229:3: RULE_STRING
+                    {
+                     before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
+                    match(input,RULE_STRING,FOLLOW_2); 
+                     after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalQUBO.g:234:2: ( RULE_ID )
+                    {
+                    // InternalQUBO.g:234:2: ( RULE_ID )
+                    // InternalQUBO.g:235:3: RULE_ID
+                    {
+                     before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
+                    match(input,RULE_ID,FOLLOW_2); 
+                     after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__EString__Alternatives"
+
+
     // $ANTLR start "rule__Qubo__Group__0"
-    // InternalQUBO.g:198:1: rule__Qubo__Group__0 : rule__Qubo__Group__0__Impl rule__Qubo__Group__1 ;
+    // InternalQUBO.g:244:1: rule__Qubo__Group__0 : rule__Qubo__Group__0__Impl rule__Qubo__Group__1 ;
     public final void rule__Qubo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:202:1: ( rule__Qubo__Group__0__Impl rule__Qubo__Group__1 )
-            // InternalQUBO.g:203:2: rule__Qubo__Group__0__Impl rule__Qubo__Group__1
+            // InternalQUBO.g:248:1: ( rule__Qubo__Group__0__Impl rule__Qubo__Group__1 )
+            // InternalQUBO.g:249:2: rule__Qubo__Group__0__Impl rule__Qubo__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Qubo__Group__0__Impl();
@@ -572,21 +720,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__0__Impl"
-    // InternalQUBO.g:210:1: rule__Qubo__Group__0__Impl : ( () ) ;
+    // InternalQUBO.g:256:1: rule__Qubo__Group__0__Impl : ( () ) ;
     public final void rule__Qubo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:214:1: ( ( () ) )
-            // InternalQUBO.g:215:1: ( () )
+            // InternalQUBO.g:260:1: ( ( () ) )
+            // InternalQUBO.g:261:1: ( () )
             {
-            // InternalQUBO.g:215:1: ( () )
-            // InternalQUBO.g:216:2: ()
+            // InternalQUBO.g:261:1: ( () )
+            // InternalQUBO.g:262:2: ()
             {
              before(grammarAccess.getQuboAccess().getQuboAction_0()); 
-            // InternalQUBO.g:217:2: ()
-            // InternalQUBO.g:217:3: 
+            // InternalQUBO.g:263:2: ()
+            // InternalQUBO.g:263:3: 
             {
             }
 
@@ -609,14 +757,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__1"
-    // InternalQUBO.g:225:1: rule__Qubo__Group__1 : rule__Qubo__Group__1__Impl rule__Qubo__Group__2 ;
+    // InternalQUBO.g:271:1: rule__Qubo__Group__1 : rule__Qubo__Group__1__Impl rule__Qubo__Group__2 ;
     public final void rule__Qubo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:229:1: ( rule__Qubo__Group__1__Impl rule__Qubo__Group__2 )
-            // InternalQUBO.g:230:2: rule__Qubo__Group__1__Impl rule__Qubo__Group__2
+            // InternalQUBO.g:275:1: ( rule__Qubo__Group__1__Impl rule__Qubo__Group__2 )
+            // InternalQUBO.g:276:2: rule__Qubo__Group__1__Impl rule__Qubo__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Qubo__Group__1__Impl();
@@ -647,17 +795,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__1__Impl"
-    // InternalQUBO.g:237:1: rule__Qubo__Group__1__Impl : ( 'Qubo' ) ;
+    // InternalQUBO.g:283:1: rule__Qubo__Group__1__Impl : ( 'Qubo' ) ;
     public final void rule__Qubo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:241:1: ( ( 'Qubo' ) )
-            // InternalQUBO.g:242:1: ( 'Qubo' )
+            // InternalQUBO.g:287:1: ( ( 'Qubo' ) )
+            // InternalQUBO.g:288:1: ( 'Qubo' )
             {
-            // InternalQUBO.g:242:1: ( 'Qubo' )
-            // InternalQUBO.g:243:2: 'Qubo'
+            // InternalQUBO.g:288:1: ( 'Qubo' )
+            // InternalQUBO.g:289:2: 'Qubo'
             {
              before(grammarAccess.getQuboAccess().getQuboKeyword_1()); 
             match(input,13,FOLLOW_2); 
@@ -684,14 +832,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__2"
-    // InternalQUBO.g:252:1: rule__Qubo__Group__2 : rule__Qubo__Group__2__Impl rule__Qubo__Group__3 ;
+    // InternalQUBO.g:298:1: rule__Qubo__Group__2 : rule__Qubo__Group__2__Impl rule__Qubo__Group__3 ;
     public final void rule__Qubo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:256:1: ( rule__Qubo__Group__2__Impl rule__Qubo__Group__3 )
-            // InternalQUBO.g:257:2: rule__Qubo__Group__2__Impl rule__Qubo__Group__3
+            // InternalQUBO.g:302:1: ( rule__Qubo__Group__2__Impl rule__Qubo__Group__3 )
+            // InternalQUBO.g:303:2: rule__Qubo__Group__2__Impl rule__Qubo__Group__3
             {
             pushFollow(FOLLOW_5);
             rule__Qubo__Group__2__Impl();
@@ -722,21 +870,31 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__2__Impl"
-    // InternalQUBO.g:264:1: rule__Qubo__Group__2__Impl : ( '{' ) ;
+    // InternalQUBO.g:310:1: rule__Qubo__Group__2__Impl : ( ( rule__Qubo__NameAssignment_2 ) ) ;
     public final void rule__Qubo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:268:1: ( ( '{' ) )
-            // InternalQUBO.g:269:1: ( '{' )
+            // InternalQUBO.g:314:1: ( ( ( rule__Qubo__NameAssignment_2 ) ) )
+            // InternalQUBO.g:315:1: ( ( rule__Qubo__NameAssignment_2 ) )
             {
-            // InternalQUBO.g:269:1: ( '{' )
-            // InternalQUBO.g:270:2: '{'
+            // InternalQUBO.g:315:1: ( ( rule__Qubo__NameAssignment_2 ) )
+            // InternalQUBO.g:316:2: ( rule__Qubo__NameAssignment_2 )
             {
-             before(grammarAccess.getQuboAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,14,FOLLOW_2); 
-             after(grammarAccess.getQuboAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getQuboAccess().getNameAssignment_2()); 
+            // InternalQUBO.g:317:2: ( rule__Qubo__NameAssignment_2 )
+            // InternalQUBO.g:317:3: rule__Qubo__NameAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Qubo__NameAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getQuboAccess().getNameAssignment_2()); 
 
             }
 
@@ -759,16 +917,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__3"
-    // InternalQUBO.g:279:1: rule__Qubo__Group__3 : rule__Qubo__Group__3__Impl rule__Qubo__Group__4 ;
+    // InternalQUBO.g:325:1: rule__Qubo__Group__3 : rule__Qubo__Group__3__Impl rule__Qubo__Group__4 ;
     public final void rule__Qubo__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:283:1: ( rule__Qubo__Group__3__Impl rule__Qubo__Group__4 )
-            // InternalQUBO.g:284:2: rule__Qubo__Group__3__Impl rule__Qubo__Group__4
+            // InternalQUBO.g:329:1: ( rule__Qubo__Group__3__Impl rule__Qubo__Group__4 )
+            // InternalQUBO.g:330:2: rule__Qubo__Group__3__Impl rule__Qubo__Group__4
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_6);
             rule__Qubo__Group__3__Impl();
 
             state._fsp--;
@@ -797,42 +955,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__3__Impl"
-    // InternalQUBO.g:291:1: rule__Qubo__Group__3__Impl : ( ( rule__Qubo__Group_3__0 )? ) ;
+    // InternalQUBO.g:337:1: rule__Qubo__Group__3__Impl : ( '{' ) ;
     public final void rule__Qubo__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:295:1: ( ( ( rule__Qubo__Group_3__0 )? ) )
-            // InternalQUBO.g:296:1: ( ( rule__Qubo__Group_3__0 )? )
+            // InternalQUBO.g:341:1: ( ( '{' ) )
+            // InternalQUBO.g:342:1: ( '{' )
             {
-            // InternalQUBO.g:296:1: ( ( rule__Qubo__Group_3__0 )? )
-            // InternalQUBO.g:297:2: ( rule__Qubo__Group_3__0 )?
+            // InternalQUBO.g:342:1: ( '{' )
+            // InternalQUBO.g:343:2: '{'
             {
-             before(grammarAccess.getQuboAccess().getGroup_3()); 
-            // InternalQUBO.g:298:2: ( rule__Qubo__Group_3__0 )?
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0==16) ) {
-                alt2=1;
-            }
-            switch (alt2) {
-                case 1 :
-                    // InternalQUBO.g:298:3: rule__Qubo__Group_3__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Qubo__Group_3__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getQuboAccess().getGroup_3()); 
+             before(grammarAccess.getQuboAccess().getLeftCurlyBracketKeyword_3()); 
+            match(input,14,FOLLOW_2); 
+             after(grammarAccess.getQuboAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
 
@@ -855,17 +992,22 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__4"
-    // InternalQUBO.g:306:1: rule__Qubo__Group__4 : rule__Qubo__Group__4__Impl ;
+    // InternalQUBO.g:352:1: rule__Qubo__Group__4 : rule__Qubo__Group__4__Impl rule__Qubo__Group__5 ;
     public final void rule__Qubo__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:310:1: ( rule__Qubo__Group__4__Impl )
-            // InternalQUBO.g:311:2: rule__Qubo__Group__4__Impl
+            // InternalQUBO.g:356:1: ( rule__Qubo__Group__4__Impl rule__Qubo__Group__5 )
+            // InternalQUBO.g:357:2: rule__Qubo__Group__4__Impl rule__Qubo__Group__5
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_6);
             rule__Qubo__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Qubo__Group__5();
 
             state._fsp--;
 
@@ -888,21 +1030,42 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Qubo__Group__4__Impl"
-    // InternalQUBO.g:317:1: rule__Qubo__Group__4__Impl : ( '}' ) ;
+    // InternalQUBO.g:364:1: rule__Qubo__Group__4__Impl : ( ( rule__Qubo__Group_4__0 )? ) ;
     public final void rule__Qubo__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:321:1: ( ( '}' ) )
-            // InternalQUBO.g:322:1: ( '}' )
+            // InternalQUBO.g:368:1: ( ( ( rule__Qubo__Group_4__0 )? ) )
+            // InternalQUBO.g:369:1: ( ( rule__Qubo__Group_4__0 )? )
             {
-            // InternalQUBO.g:322:1: ( '}' )
-            // InternalQUBO.g:323:2: '}'
+            // InternalQUBO.g:369:1: ( ( rule__Qubo__Group_4__0 )? )
+            // InternalQUBO.g:370:2: ( rule__Qubo__Group_4__0 )?
             {
-             before(grammarAccess.getQuboAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,15,FOLLOW_2); 
-             after(grammarAccess.getQuboAccess().getRightCurlyBracketKeyword_4()); 
+             before(grammarAccess.getQuboAccess().getGroup_4()); 
+            // InternalQUBO.g:371:2: ( rule__Qubo__Group_4__0 )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( (LA3_0==16) ) {
+                alt3=1;
+            }
+            switch (alt3) {
+                case 1 :
+                    // InternalQUBO.g:371:3: rule__Qubo__Group_4__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Qubo__Group_4__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getQuboAccess().getGroup_4()); 
 
             }
 
@@ -924,23 +1087,18 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Qubo__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Qubo__Group_3__0"
-    // InternalQUBO.g:333:1: rule__Qubo__Group_3__0 : rule__Qubo__Group_3__0__Impl rule__Qubo__Group_3__1 ;
-    public final void rule__Qubo__Group_3__0() throws RecognitionException {
+    // $ANTLR start "rule__Qubo__Group__5"
+    // InternalQUBO.g:379:1: rule__Qubo__Group__5 : rule__Qubo__Group__5__Impl ;
+    public final void rule__Qubo__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:337:1: ( rule__Qubo__Group_3__0__Impl rule__Qubo__Group_3__1 )
-            // InternalQUBO.g:338:2: rule__Qubo__Group_3__0__Impl rule__Qubo__Group_3__1
+            // InternalQUBO.g:383:1: ( rule__Qubo__Group__5__Impl )
+            // InternalQUBO.g:384:2: rule__Qubo__Group__5__Impl
             {
-            pushFollow(FOLLOW_6);
-            rule__Qubo__Group_3__0__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Qubo__Group_3__1();
+            rule__Qubo__Group__5__Impl();
 
             state._fsp--;
 
@@ -959,25 +1117,100 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Qubo__Group_3__0"
+    // $ANTLR end "rule__Qubo__Group__5"
 
 
-    // $ANTLR start "rule__Qubo__Group_3__0__Impl"
-    // InternalQUBO.g:345:1: rule__Qubo__Group_3__0__Impl : ( 'matrix' ) ;
-    public final void rule__Qubo__Group_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Qubo__Group__5__Impl"
+    // InternalQUBO.g:390:1: rule__Qubo__Group__5__Impl : ( '}' ) ;
+    public final void rule__Qubo__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:349:1: ( ( 'matrix' ) )
-            // InternalQUBO.g:350:1: ( 'matrix' )
+            // InternalQUBO.g:394:1: ( ( '}' ) )
+            // InternalQUBO.g:395:1: ( '}' )
             {
-            // InternalQUBO.g:350:1: ( 'matrix' )
-            // InternalQUBO.g:351:2: 'matrix'
+            // InternalQUBO.g:395:1: ( '}' )
+            // InternalQUBO.g:396:2: '}'
             {
-             before(grammarAccess.getQuboAccess().getMatrixKeyword_3_0()); 
+             before(grammarAccess.getQuboAccess().getRightCurlyBracketKeyword_5()); 
+            match(input,15,FOLLOW_2); 
+             after(grammarAccess.getQuboAccess().getRightCurlyBracketKeyword_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Qubo__Group__5__Impl"
+
+
+    // $ANTLR start "rule__Qubo__Group_4__0"
+    // InternalQUBO.g:406:1: rule__Qubo__Group_4__0 : rule__Qubo__Group_4__0__Impl rule__Qubo__Group_4__1 ;
+    public final void rule__Qubo__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQUBO.g:410:1: ( rule__Qubo__Group_4__0__Impl rule__Qubo__Group_4__1 )
+            // InternalQUBO.g:411:2: rule__Qubo__Group_4__0__Impl rule__Qubo__Group_4__1
+            {
+            pushFollow(FOLLOW_7);
+            rule__Qubo__Group_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Qubo__Group_4__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Qubo__Group_4__0"
+
+
+    // $ANTLR start "rule__Qubo__Group_4__0__Impl"
+    // InternalQUBO.g:418:1: rule__Qubo__Group_4__0__Impl : ( 'matrix' ) ;
+    public final void rule__Qubo__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQUBO.g:422:1: ( ( 'matrix' ) )
+            // InternalQUBO.g:423:1: ( 'matrix' )
+            {
+            // InternalQUBO.g:423:1: ( 'matrix' )
+            // InternalQUBO.g:424:2: 'matrix'
+            {
+             before(grammarAccess.getQuboAccess().getMatrixKeyword_4_0()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getQuboAccess().getMatrixKeyword_3_0()); 
+             after(grammarAccess.getQuboAccess().getMatrixKeyword_4_0()); 
 
             }
 
@@ -996,21 +1229,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Qubo__Group_3__0__Impl"
+    // $ANTLR end "rule__Qubo__Group_4__0__Impl"
 
 
-    // $ANTLR start "rule__Qubo__Group_3__1"
-    // InternalQUBO.g:360:1: rule__Qubo__Group_3__1 : rule__Qubo__Group_3__1__Impl ;
-    public final void rule__Qubo__Group_3__1() throws RecognitionException {
+    // $ANTLR start "rule__Qubo__Group_4__1"
+    // InternalQUBO.g:433:1: rule__Qubo__Group_4__1 : rule__Qubo__Group_4__1__Impl ;
+    public final void rule__Qubo__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:364:1: ( rule__Qubo__Group_3__1__Impl )
-            // InternalQUBO.g:365:2: rule__Qubo__Group_3__1__Impl
+            // InternalQUBO.g:437:1: ( rule__Qubo__Group_4__1__Impl )
+            // InternalQUBO.g:438:2: rule__Qubo__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Qubo__Group_3__1__Impl();
+            rule__Qubo__Group_4__1__Impl();
 
             state._fsp--;
 
@@ -1029,35 +1262,35 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Qubo__Group_3__1"
+    // $ANTLR end "rule__Qubo__Group_4__1"
 
 
-    // $ANTLR start "rule__Qubo__Group_3__1__Impl"
-    // InternalQUBO.g:371:1: rule__Qubo__Group_3__1__Impl : ( ( rule__Qubo__MatrixAssignment_3_1 ) ) ;
-    public final void rule__Qubo__Group_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Qubo__Group_4__1__Impl"
+    // InternalQUBO.g:444:1: rule__Qubo__Group_4__1__Impl : ( ( rule__Qubo__MatrixAssignment_4_1 ) ) ;
+    public final void rule__Qubo__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:375:1: ( ( ( rule__Qubo__MatrixAssignment_3_1 ) ) )
-            // InternalQUBO.g:376:1: ( ( rule__Qubo__MatrixAssignment_3_1 ) )
+            // InternalQUBO.g:448:1: ( ( ( rule__Qubo__MatrixAssignment_4_1 ) ) )
+            // InternalQUBO.g:449:1: ( ( rule__Qubo__MatrixAssignment_4_1 ) )
             {
-            // InternalQUBO.g:376:1: ( ( rule__Qubo__MatrixAssignment_3_1 ) )
-            // InternalQUBO.g:377:2: ( rule__Qubo__MatrixAssignment_3_1 )
+            // InternalQUBO.g:449:1: ( ( rule__Qubo__MatrixAssignment_4_1 ) )
+            // InternalQUBO.g:450:2: ( rule__Qubo__MatrixAssignment_4_1 )
             {
-             before(grammarAccess.getQuboAccess().getMatrixAssignment_3_1()); 
-            // InternalQUBO.g:378:2: ( rule__Qubo__MatrixAssignment_3_1 )
-            // InternalQUBO.g:378:3: rule__Qubo__MatrixAssignment_3_1
+             before(grammarAccess.getQuboAccess().getMatrixAssignment_4_1()); 
+            // InternalQUBO.g:451:2: ( rule__Qubo__MatrixAssignment_4_1 )
+            // InternalQUBO.g:451:3: rule__Qubo__MatrixAssignment_4_1
             {
             pushFollow(FOLLOW_2);
-            rule__Qubo__MatrixAssignment_3_1();
+            rule__Qubo__MatrixAssignment_4_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getQuboAccess().getMatrixAssignment_3_1()); 
+             after(grammarAccess.getQuboAccess().getMatrixAssignment_4_1()); 
 
             }
 
@@ -1076,20 +1309,20 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Qubo__Group_3__1__Impl"
+    // $ANTLR end "rule__Qubo__Group_4__1__Impl"
 
 
     // $ANTLR start "rule__Matrix__Group__0"
-    // InternalQUBO.g:387:1: rule__Matrix__Group__0 : rule__Matrix__Group__0__Impl rule__Matrix__Group__1 ;
+    // InternalQUBO.g:460:1: rule__Matrix__Group__0 : rule__Matrix__Group__0__Impl rule__Matrix__Group__1 ;
     public final void rule__Matrix__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:391:1: ( rule__Matrix__Group__0__Impl rule__Matrix__Group__1 )
-            // InternalQUBO.g:392:2: rule__Matrix__Group__0__Impl rule__Matrix__Group__1
+            // InternalQUBO.g:464:1: ( rule__Matrix__Group__0__Impl rule__Matrix__Group__1 )
+            // InternalQUBO.g:465:2: rule__Matrix__Group__0__Impl rule__Matrix__Group__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_7);
             rule__Matrix__Group__0__Impl();
 
             state._fsp--;
@@ -1118,21 +1351,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group__0__Impl"
-    // InternalQUBO.g:399:1: rule__Matrix__Group__0__Impl : ( () ) ;
+    // InternalQUBO.g:472:1: rule__Matrix__Group__0__Impl : ( () ) ;
     public final void rule__Matrix__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:403:1: ( ( () ) )
-            // InternalQUBO.g:404:1: ( () )
+            // InternalQUBO.g:476:1: ( ( () ) )
+            // InternalQUBO.g:477:1: ( () )
             {
-            // InternalQUBO.g:404:1: ( () )
-            // InternalQUBO.g:405:2: ()
+            // InternalQUBO.g:477:1: ( () )
+            // InternalQUBO.g:478:2: ()
             {
              before(grammarAccess.getMatrixAccess().getMatrixAction_0()); 
-            // InternalQUBO.g:406:2: ()
-            // InternalQUBO.g:406:3: 
+            // InternalQUBO.g:479:2: ()
+            // InternalQUBO.g:479:3: 
             {
             }
 
@@ -1155,16 +1388,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group__1"
-    // InternalQUBO.g:414:1: rule__Matrix__Group__1 : rule__Matrix__Group__1__Impl rule__Matrix__Group__2 ;
+    // InternalQUBO.g:487:1: rule__Matrix__Group__1 : rule__Matrix__Group__1__Impl rule__Matrix__Group__2 ;
     public final void rule__Matrix__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:418:1: ( rule__Matrix__Group__1__Impl rule__Matrix__Group__2 )
-            // InternalQUBO.g:419:2: rule__Matrix__Group__1__Impl rule__Matrix__Group__2
+            // InternalQUBO.g:491:1: ( rule__Matrix__Group__1__Impl rule__Matrix__Group__2 )
+            // InternalQUBO.g:492:2: rule__Matrix__Group__1__Impl rule__Matrix__Group__2
             {
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_8);
             rule__Matrix__Group__1__Impl();
 
             state._fsp--;
@@ -1193,17 +1426,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group__1__Impl"
-    // InternalQUBO.g:426:1: rule__Matrix__Group__1__Impl : ( '[' ) ;
+    // InternalQUBO.g:499:1: rule__Matrix__Group__1__Impl : ( '[' ) ;
     public final void rule__Matrix__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:430:1: ( ( '[' ) )
-            // InternalQUBO.g:431:1: ( '[' )
+            // InternalQUBO.g:503:1: ( ( '[' ) )
+            // InternalQUBO.g:504:1: ( '[' )
             {
-            // InternalQUBO.g:431:1: ( '[' )
-            // InternalQUBO.g:432:2: '['
+            // InternalQUBO.g:504:1: ( '[' )
+            // InternalQUBO.g:505:2: '['
             {
              before(grammarAccess.getMatrixAccess().getLeftSquareBracketKeyword_1()); 
             match(input,17,FOLLOW_2); 
@@ -1230,16 +1463,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group__2"
-    // InternalQUBO.g:441:1: rule__Matrix__Group__2 : rule__Matrix__Group__2__Impl rule__Matrix__Group__3 ;
+    // InternalQUBO.g:514:1: rule__Matrix__Group__2 : rule__Matrix__Group__2__Impl rule__Matrix__Group__3 ;
     public final void rule__Matrix__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:445:1: ( rule__Matrix__Group__2__Impl rule__Matrix__Group__3 )
-            // InternalQUBO.g:446:2: rule__Matrix__Group__2__Impl rule__Matrix__Group__3
+            // InternalQUBO.g:518:1: ( rule__Matrix__Group__2__Impl rule__Matrix__Group__3 )
+            // InternalQUBO.g:519:2: rule__Matrix__Group__2__Impl rule__Matrix__Group__3
             {
-            pushFollow(FOLLOW_7);
+            pushFollow(FOLLOW_8);
             rule__Matrix__Group__2__Impl();
 
             state._fsp--;
@@ -1268,29 +1501,29 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group__2__Impl"
-    // InternalQUBO.g:453:1: rule__Matrix__Group__2__Impl : ( ( rule__Matrix__Group_2__0 )? ) ;
+    // InternalQUBO.g:526:1: rule__Matrix__Group__2__Impl : ( ( rule__Matrix__Group_2__0 )? ) ;
     public final void rule__Matrix__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:457:1: ( ( ( rule__Matrix__Group_2__0 )? ) )
-            // InternalQUBO.g:458:1: ( ( rule__Matrix__Group_2__0 )? )
+            // InternalQUBO.g:530:1: ( ( ( rule__Matrix__Group_2__0 )? ) )
+            // InternalQUBO.g:531:1: ( ( rule__Matrix__Group_2__0 )? )
             {
-            // InternalQUBO.g:458:1: ( ( rule__Matrix__Group_2__0 )? )
-            // InternalQUBO.g:459:2: ( rule__Matrix__Group_2__0 )?
+            // InternalQUBO.g:531:1: ( ( rule__Matrix__Group_2__0 )? )
+            // InternalQUBO.g:532:2: ( rule__Matrix__Group_2__0 )?
             {
              before(grammarAccess.getMatrixAccess().getGroup_2()); 
-            // InternalQUBO.g:460:2: ( rule__Matrix__Group_2__0 )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // InternalQUBO.g:533:2: ( rule__Matrix__Group_2__0 )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA3_0==17) ) {
-                alt3=1;
+            if ( (LA4_0==17) ) {
+                alt4=1;
             }
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // InternalQUBO.g:460:3: rule__Matrix__Group_2__0
+                    // InternalQUBO.g:533:3: rule__Matrix__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Matrix__Group_2__0();
@@ -1326,14 +1559,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group__3"
-    // InternalQUBO.g:468:1: rule__Matrix__Group__3 : rule__Matrix__Group__3__Impl ;
+    // InternalQUBO.g:541:1: rule__Matrix__Group__3 : rule__Matrix__Group__3__Impl ;
     public final void rule__Matrix__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:472:1: ( rule__Matrix__Group__3__Impl )
-            // InternalQUBO.g:473:2: rule__Matrix__Group__3__Impl
+            // InternalQUBO.g:545:1: ( rule__Matrix__Group__3__Impl )
+            // InternalQUBO.g:546:2: rule__Matrix__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Matrix__Group__3__Impl();
@@ -1359,17 +1592,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group__3__Impl"
-    // InternalQUBO.g:479:1: rule__Matrix__Group__3__Impl : ( ']' ) ;
+    // InternalQUBO.g:552:1: rule__Matrix__Group__3__Impl : ( ']' ) ;
     public final void rule__Matrix__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:483:1: ( ( ']' ) )
-            // InternalQUBO.g:484:1: ( ']' )
+            // InternalQUBO.g:556:1: ( ( ']' ) )
+            // InternalQUBO.g:557:1: ( ']' )
             {
-            // InternalQUBO.g:484:1: ( ']' )
-            // InternalQUBO.g:485:2: ']'
+            // InternalQUBO.g:557:1: ( ']' )
+            // InternalQUBO.g:558:2: ']'
             {
              before(grammarAccess.getMatrixAccess().getRightSquareBracketKeyword_3()); 
             match(input,18,FOLLOW_2); 
@@ -1396,16 +1629,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2__0"
-    // InternalQUBO.g:495:1: rule__Matrix__Group_2__0 : rule__Matrix__Group_2__0__Impl rule__Matrix__Group_2__1 ;
+    // InternalQUBO.g:568:1: rule__Matrix__Group_2__0 : rule__Matrix__Group_2__0__Impl rule__Matrix__Group_2__1 ;
     public final void rule__Matrix__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:499:1: ( rule__Matrix__Group_2__0__Impl rule__Matrix__Group_2__1 )
-            // InternalQUBO.g:500:2: rule__Matrix__Group_2__0__Impl rule__Matrix__Group_2__1
+            // InternalQUBO.g:572:1: ( rule__Matrix__Group_2__0__Impl rule__Matrix__Group_2__1 )
+            // InternalQUBO.g:573:2: rule__Matrix__Group_2__0__Impl rule__Matrix__Group_2__1
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__Matrix__Group_2__0__Impl();
 
             state._fsp--;
@@ -1434,21 +1667,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2__0__Impl"
-    // InternalQUBO.g:507:1: rule__Matrix__Group_2__0__Impl : ( ( rule__Matrix__RowsAssignment_2_0 ) ) ;
+    // InternalQUBO.g:580:1: rule__Matrix__Group_2__0__Impl : ( ( rule__Matrix__RowsAssignment_2_0 ) ) ;
     public final void rule__Matrix__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:511:1: ( ( ( rule__Matrix__RowsAssignment_2_0 ) ) )
-            // InternalQUBO.g:512:1: ( ( rule__Matrix__RowsAssignment_2_0 ) )
+            // InternalQUBO.g:584:1: ( ( ( rule__Matrix__RowsAssignment_2_0 ) ) )
+            // InternalQUBO.g:585:1: ( ( rule__Matrix__RowsAssignment_2_0 ) )
             {
-            // InternalQUBO.g:512:1: ( ( rule__Matrix__RowsAssignment_2_0 ) )
-            // InternalQUBO.g:513:2: ( rule__Matrix__RowsAssignment_2_0 )
+            // InternalQUBO.g:585:1: ( ( rule__Matrix__RowsAssignment_2_0 ) )
+            // InternalQUBO.g:586:2: ( rule__Matrix__RowsAssignment_2_0 )
             {
              before(grammarAccess.getMatrixAccess().getRowsAssignment_2_0()); 
-            // InternalQUBO.g:514:2: ( rule__Matrix__RowsAssignment_2_0 )
-            // InternalQUBO.g:514:3: rule__Matrix__RowsAssignment_2_0
+            // InternalQUBO.g:587:2: ( rule__Matrix__RowsAssignment_2_0 )
+            // InternalQUBO.g:587:3: rule__Matrix__RowsAssignment_2_0
             {
             pushFollow(FOLLOW_2);
             rule__Matrix__RowsAssignment_2_0();
@@ -1481,14 +1714,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2__1"
-    // InternalQUBO.g:522:1: rule__Matrix__Group_2__1 : rule__Matrix__Group_2__1__Impl ;
+    // InternalQUBO.g:595:1: rule__Matrix__Group_2__1 : rule__Matrix__Group_2__1__Impl ;
     public final void rule__Matrix__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:526:1: ( rule__Matrix__Group_2__1__Impl )
-            // InternalQUBO.g:527:2: rule__Matrix__Group_2__1__Impl
+            // InternalQUBO.g:599:1: ( rule__Matrix__Group_2__1__Impl )
+            // InternalQUBO.g:600:2: rule__Matrix__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Matrix__Group_2__1__Impl();
@@ -1514,35 +1747,35 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2__1__Impl"
-    // InternalQUBO.g:533:1: rule__Matrix__Group_2__1__Impl : ( ( rule__Matrix__Group_2_1__0 )* ) ;
+    // InternalQUBO.g:606:1: rule__Matrix__Group_2__1__Impl : ( ( rule__Matrix__Group_2_1__0 )* ) ;
     public final void rule__Matrix__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:537:1: ( ( ( rule__Matrix__Group_2_1__0 )* ) )
-            // InternalQUBO.g:538:1: ( ( rule__Matrix__Group_2_1__0 )* )
+            // InternalQUBO.g:610:1: ( ( ( rule__Matrix__Group_2_1__0 )* ) )
+            // InternalQUBO.g:611:1: ( ( rule__Matrix__Group_2_1__0 )* )
             {
-            // InternalQUBO.g:538:1: ( ( rule__Matrix__Group_2_1__0 )* )
-            // InternalQUBO.g:539:2: ( rule__Matrix__Group_2_1__0 )*
+            // InternalQUBO.g:611:1: ( ( rule__Matrix__Group_2_1__0 )* )
+            // InternalQUBO.g:612:2: ( rule__Matrix__Group_2_1__0 )*
             {
              before(grammarAccess.getMatrixAccess().getGroup_2_1()); 
-            // InternalQUBO.g:540:2: ( rule__Matrix__Group_2_1__0 )*
-            loop4:
+            // InternalQUBO.g:613:2: ( rule__Matrix__Group_2_1__0 )*
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA4_0==19) ) {
-                    alt4=1;
+                if ( (LA5_0==19) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // InternalQUBO.g:540:3: rule__Matrix__Group_2_1__0
+            	    // InternalQUBO.g:613:3: rule__Matrix__Group_2_1__0
             	    {
-            	    pushFollow(FOLLOW_9);
+            	    pushFollow(FOLLOW_10);
             	    rule__Matrix__Group_2_1__0();
 
             	    state._fsp--;
@@ -1552,7 +1785,7 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop5;
                 }
             } while (true);
 
@@ -1579,16 +1812,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2_1__0"
-    // InternalQUBO.g:549:1: rule__Matrix__Group_2_1__0 : rule__Matrix__Group_2_1__0__Impl rule__Matrix__Group_2_1__1 ;
+    // InternalQUBO.g:622:1: rule__Matrix__Group_2_1__0 : rule__Matrix__Group_2_1__0__Impl rule__Matrix__Group_2_1__1 ;
     public final void rule__Matrix__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:553:1: ( rule__Matrix__Group_2_1__0__Impl rule__Matrix__Group_2_1__1 )
-            // InternalQUBO.g:554:2: rule__Matrix__Group_2_1__0__Impl rule__Matrix__Group_2_1__1
+            // InternalQUBO.g:626:1: ( rule__Matrix__Group_2_1__0__Impl rule__Matrix__Group_2_1__1 )
+            // InternalQUBO.g:627:2: rule__Matrix__Group_2_1__0__Impl rule__Matrix__Group_2_1__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_7);
             rule__Matrix__Group_2_1__0__Impl();
 
             state._fsp--;
@@ -1617,17 +1850,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2_1__0__Impl"
-    // InternalQUBO.g:561:1: rule__Matrix__Group_2_1__0__Impl : ( ',' ) ;
+    // InternalQUBO.g:634:1: rule__Matrix__Group_2_1__0__Impl : ( ',' ) ;
     public final void rule__Matrix__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:565:1: ( ( ',' ) )
-            // InternalQUBO.g:566:1: ( ',' )
+            // InternalQUBO.g:638:1: ( ( ',' ) )
+            // InternalQUBO.g:639:1: ( ',' )
             {
-            // InternalQUBO.g:566:1: ( ',' )
-            // InternalQUBO.g:567:2: ','
+            // InternalQUBO.g:639:1: ( ',' )
+            // InternalQUBO.g:640:2: ','
             {
              before(grammarAccess.getMatrixAccess().getCommaKeyword_2_1_0()); 
             match(input,19,FOLLOW_2); 
@@ -1654,14 +1887,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2_1__1"
-    // InternalQUBO.g:576:1: rule__Matrix__Group_2_1__1 : rule__Matrix__Group_2_1__1__Impl ;
+    // InternalQUBO.g:649:1: rule__Matrix__Group_2_1__1 : rule__Matrix__Group_2_1__1__Impl ;
     public final void rule__Matrix__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:580:1: ( rule__Matrix__Group_2_1__1__Impl )
-            // InternalQUBO.g:581:2: rule__Matrix__Group_2_1__1__Impl
+            // InternalQUBO.g:653:1: ( rule__Matrix__Group_2_1__1__Impl )
+            // InternalQUBO.g:654:2: rule__Matrix__Group_2_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Matrix__Group_2_1__1__Impl();
@@ -1687,21 +1920,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__Group_2_1__1__Impl"
-    // InternalQUBO.g:587:1: rule__Matrix__Group_2_1__1__Impl : ( ( rule__Matrix__RowsAssignment_2_1_1 ) ) ;
+    // InternalQUBO.g:660:1: rule__Matrix__Group_2_1__1__Impl : ( ( rule__Matrix__RowsAssignment_2_1_1 ) ) ;
     public final void rule__Matrix__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:591:1: ( ( ( rule__Matrix__RowsAssignment_2_1_1 ) ) )
-            // InternalQUBO.g:592:1: ( ( rule__Matrix__RowsAssignment_2_1_1 ) )
+            // InternalQUBO.g:664:1: ( ( ( rule__Matrix__RowsAssignment_2_1_1 ) ) )
+            // InternalQUBO.g:665:1: ( ( rule__Matrix__RowsAssignment_2_1_1 ) )
             {
-            // InternalQUBO.g:592:1: ( ( rule__Matrix__RowsAssignment_2_1_1 ) )
-            // InternalQUBO.g:593:2: ( rule__Matrix__RowsAssignment_2_1_1 )
+            // InternalQUBO.g:665:1: ( ( rule__Matrix__RowsAssignment_2_1_1 ) )
+            // InternalQUBO.g:666:2: ( rule__Matrix__RowsAssignment_2_1_1 )
             {
              before(grammarAccess.getMatrixAccess().getRowsAssignment_2_1_1()); 
-            // InternalQUBO.g:594:2: ( rule__Matrix__RowsAssignment_2_1_1 )
-            // InternalQUBO.g:594:3: rule__Matrix__RowsAssignment_2_1_1
+            // InternalQUBO.g:667:2: ( rule__Matrix__RowsAssignment_2_1_1 )
+            // InternalQUBO.g:667:3: rule__Matrix__RowsAssignment_2_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Matrix__RowsAssignment_2_1_1();
@@ -1734,16 +1967,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__0"
-    // InternalQUBO.g:603:1: rule__Row__Group__0 : rule__Row__Group__0__Impl rule__Row__Group__1 ;
+    // InternalQUBO.g:676:1: rule__Row__Group__0 : rule__Row__Group__0__Impl rule__Row__Group__1 ;
     public final void rule__Row__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:607:1: ( rule__Row__Group__0__Impl rule__Row__Group__1 )
-            // InternalQUBO.g:608:2: rule__Row__Group__0__Impl rule__Row__Group__1
+            // InternalQUBO.g:680:1: ( rule__Row__Group__0__Impl rule__Row__Group__1 )
+            // InternalQUBO.g:681:2: rule__Row__Group__0__Impl rule__Row__Group__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_7);
             rule__Row__Group__0__Impl();
 
             state._fsp--;
@@ -1772,21 +2005,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__0__Impl"
-    // InternalQUBO.g:615:1: rule__Row__Group__0__Impl : ( () ) ;
+    // InternalQUBO.g:688:1: rule__Row__Group__0__Impl : ( () ) ;
     public final void rule__Row__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:619:1: ( ( () ) )
-            // InternalQUBO.g:620:1: ( () )
+            // InternalQUBO.g:692:1: ( ( () ) )
+            // InternalQUBO.g:693:1: ( () )
             {
-            // InternalQUBO.g:620:1: ( () )
-            // InternalQUBO.g:621:2: ()
+            // InternalQUBO.g:693:1: ( () )
+            // InternalQUBO.g:694:2: ()
             {
              before(grammarAccess.getRowAccess().getRowAction_0()); 
-            // InternalQUBO.g:622:2: ()
-            // InternalQUBO.g:622:3: 
+            // InternalQUBO.g:695:2: ()
+            // InternalQUBO.g:695:3: 
             {
             }
 
@@ -1809,16 +2042,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__1"
-    // InternalQUBO.g:630:1: rule__Row__Group__1 : rule__Row__Group__1__Impl rule__Row__Group__2 ;
+    // InternalQUBO.g:703:1: rule__Row__Group__1 : rule__Row__Group__1__Impl rule__Row__Group__2 ;
     public final void rule__Row__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:634:1: ( rule__Row__Group__1__Impl rule__Row__Group__2 )
-            // InternalQUBO.g:635:2: rule__Row__Group__1__Impl rule__Row__Group__2
+            // InternalQUBO.g:707:1: ( rule__Row__Group__1__Impl rule__Row__Group__2 )
+            // InternalQUBO.g:708:2: rule__Row__Group__1__Impl rule__Row__Group__2
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_11);
             rule__Row__Group__1__Impl();
 
             state._fsp--;
@@ -1847,17 +2080,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__1__Impl"
-    // InternalQUBO.g:642:1: rule__Row__Group__1__Impl : ( '[' ) ;
+    // InternalQUBO.g:715:1: rule__Row__Group__1__Impl : ( '[' ) ;
     public final void rule__Row__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:646:1: ( ( '[' ) )
-            // InternalQUBO.g:647:1: ( '[' )
+            // InternalQUBO.g:719:1: ( ( '[' ) )
+            // InternalQUBO.g:720:1: ( '[' )
             {
-            // InternalQUBO.g:647:1: ( '[' )
-            // InternalQUBO.g:648:2: '['
+            // InternalQUBO.g:720:1: ( '[' )
+            // InternalQUBO.g:721:2: '['
             {
              before(grammarAccess.getRowAccess().getLeftSquareBracketKeyword_1()); 
             match(input,17,FOLLOW_2); 
@@ -1884,16 +2117,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__2"
-    // InternalQUBO.g:657:1: rule__Row__Group__2 : rule__Row__Group__2__Impl rule__Row__Group__3 ;
+    // InternalQUBO.g:730:1: rule__Row__Group__2 : rule__Row__Group__2__Impl rule__Row__Group__3 ;
     public final void rule__Row__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:661:1: ( rule__Row__Group__2__Impl rule__Row__Group__3 )
-            // InternalQUBO.g:662:2: rule__Row__Group__2__Impl rule__Row__Group__3
+            // InternalQUBO.g:734:1: ( rule__Row__Group__2__Impl rule__Row__Group__3 )
+            // InternalQUBO.g:735:2: rule__Row__Group__2__Impl rule__Row__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_11);
             rule__Row__Group__2__Impl();
 
             state._fsp--;
@@ -1922,29 +2155,29 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__2__Impl"
-    // InternalQUBO.g:669:1: rule__Row__Group__2__Impl : ( ( rule__Row__Group_2__0 )? ) ;
+    // InternalQUBO.g:742:1: rule__Row__Group__2__Impl : ( ( rule__Row__Group_2__0 )? ) ;
     public final void rule__Row__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:673:1: ( ( ( rule__Row__Group_2__0 )? ) )
-            // InternalQUBO.g:674:1: ( ( rule__Row__Group_2__0 )? )
+            // InternalQUBO.g:746:1: ( ( ( rule__Row__Group_2__0 )? ) )
+            // InternalQUBO.g:747:1: ( ( rule__Row__Group_2__0 )? )
             {
-            // InternalQUBO.g:674:1: ( ( rule__Row__Group_2__0 )? )
-            // InternalQUBO.g:675:2: ( rule__Row__Group_2__0 )?
+            // InternalQUBO.g:747:1: ( ( rule__Row__Group_2__0 )? )
+            // InternalQUBO.g:748:2: ( rule__Row__Group_2__0 )?
             {
              before(grammarAccess.getRowAccess().getGroup_2()); 
-            // InternalQUBO.g:676:2: ( rule__Row__Group_2__0 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // InternalQUBO.g:749:2: ( rule__Row__Group_2__0 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( ((LA5_0>=RULE_E_INT && LA5_0<=RULE_E_DOUBLE)) ) {
-                alt5=1;
+            if ( ((LA6_0>=RULE_E_INT && LA6_0<=RULE_E_DOUBLE)) ) {
+                alt6=1;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // InternalQUBO.g:676:3: rule__Row__Group_2__0
+                    // InternalQUBO.g:749:3: rule__Row__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Row__Group_2__0();
@@ -1980,14 +2213,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__3"
-    // InternalQUBO.g:684:1: rule__Row__Group__3 : rule__Row__Group__3__Impl ;
+    // InternalQUBO.g:757:1: rule__Row__Group__3 : rule__Row__Group__3__Impl ;
     public final void rule__Row__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:688:1: ( rule__Row__Group__3__Impl )
-            // InternalQUBO.g:689:2: rule__Row__Group__3__Impl
+            // InternalQUBO.g:761:1: ( rule__Row__Group__3__Impl )
+            // InternalQUBO.g:762:2: rule__Row__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Row__Group__3__Impl();
@@ -2013,17 +2246,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group__3__Impl"
-    // InternalQUBO.g:695:1: rule__Row__Group__3__Impl : ( ']' ) ;
+    // InternalQUBO.g:768:1: rule__Row__Group__3__Impl : ( ']' ) ;
     public final void rule__Row__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:699:1: ( ( ']' ) )
-            // InternalQUBO.g:700:1: ( ']' )
+            // InternalQUBO.g:772:1: ( ( ']' ) )
+            // InternalQUBO.g:773:1: ( ']' )
             {
-            // InternalQUBO.g:700:1: ( ']' )
-            // InternalQUBO.g:701:2: ']'
+            // InternalQUBO.g:773:1: ( ']' )
+            // InternalQUBO.g:774:2: ']'
             {
              before(grammarAccess.getRowAccess().getRightSquareBracketKeyword_3()); 
             match(input,18,FOLLOW_2); 
@@ -2050,16 +2283,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2__0"
-    // InternalQUBO.g:711:1: rule__Row__Group_2__0 : rule__Row__Group_2__0__Impl rule__Row__Group_2__1 ;
+    // InternalQUBO.g:784:1: rule__Row__Group_2__0 : rule__Row__Group_2__0__Impl rule__Row__Group_2__1 ;
     public final void rule__Row__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:715:1: ( rule__Row__Group_2__0__Impl rule__Row__Group_2__1 )
-            // InternalQUBO.g:716:2: rule__Row__Group_2__0__Impl rule__Row__Group_2__1
+            // InternalQUBO.g:788:1: ( rule__Row__Group_2__0__Impl rule__Row__Group_2__1 )
+            // InternalQUBO.g:789:2: rule__Row__Group_2__0__Impl rule__Row__Group_2__1
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__Row__Group_2__0__Impl();
 
             state._fsp--;
@@ -2088,21 +2321,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2__0__Impl"
-    // InternalQUBO.g:723:1: rule__Row__Group_2__0__Impl : ( ( rule__Row__ColumnsAssignment_2_0 ) ) ;
+    // InternalQUBO.g:796:1: rule__Row__Group_2__0__Impl : ( ( rule__Row__ColumnsAssignment_2_0 ) ) ;
     public final void rule__Row__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:727:1: ( ( ( rule__Row__ColumnsAssignment_2_0 ) ) )
-            // InternalQUBO.g:728:1: ( ( rule__Row__ColumnsAssignment_2_0 ) )
+            // InternalQUBO.g:800:1: ( ( ( rule__Row__ColumnsAssignment_2_0 ) ) )
+            // InternalQUBO.g:801:1: ( ( rule__Row__ColumnsAssignment_2_0 ) )
             {
-            // InternalQUBO.g:728:1: ( ( rule__Row__ColumnsAssignment_2_0 ) )
-            // InternalQUBO.g:729:2: ( rule__Row__ColumnsAssignment_2_0 )
+            // InternalQUBO.g:801:1: ( ( rule__Row__ColumnsAssignment_2_0 ) )
+            // InternalQUBO.g:802:2: ( rule__Row__ColumnsAssignment_2_0 )
             {
              before(grammarAccess.getRowAccess().getColumnsAssignment_2_0()); 
-            // InternalQUBO.g:730:2: ( rule__Row__ColumnsAssignment_2_0 )
-            // InternalQUBO.g:730:3: rule__Row__ColumnsAssignment_2_0
+            // InternalQUBO.g:803:2: ( rule__Row__ColumnsAssignment_2_0 )
+            // InternalQUBO.g:803:3: rule__Row__ColumnsAssignment_2_0
             {
             pushFollow(FOLLOW_2);
             rule__Row__ColumnsAssignment_2_0();
@@ -2135,14 +2368,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2__1"
-    // InternalQUBO.g:738:1: rule__Row__Group_2__1 : rule__Row__Group_2__1__Impl ;
+    // InternalQUBO.g:811:1: rule__Row__Group_2__1 : rule__Row__Group_2__1__Impl ;
     public final void rule__Row__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:742:1: ( rule__Row__Group_2__1__Impl )
-            // InternalQUBO.g:743:2: rule__Row__Group_2__1__Impl
+            // InternalQUBO.g:815:1: ( rule__Row__Group_2__1__Impl )
+            // InternalQUBO.g:816:2: rule__Row__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Row__Group_2__1__Impl();
@@ -2168,35 +2401,35 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2__1__Impl"
-    // InternalQUBO.g:749:1: rule__Row__Group_2__1__Impl : ( ( rule__Row__Group_2_1__0 )* ) ;
+    // InternalQUBO.g:822:1: rule__Row__Group_2__1__Impl : ( ( rule__Row__Group_2_1__0 )* ) ;
     public final void rule__Row__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:753:1: ( ( ( rule__Row__Group_2_1__0 )* ) )
-            // InternalQUBO.g:754:1: ( ( rule__Row__Group_2_1__0 )* )
+            // InternalQUBO.g:826:1: ( ( ( rule__Row__Group_2_1__0 )* ) )
+            // InternalQUBO.g:827:1: ( ( rule__Row__Group_2_1__0 )* )
             {
-            // InternalQUBO.g:754:1: ( ( rule__Row__Group_2_1__0 )* )
-            // InternalQUBO.g:755:2: ( rule__Row__Group_2_1__0 )*
+            // InternalQUBO.g:827:1: ( ( rule__Row__Group_2_1__0 )* )
+            // InternalQUBO.g:828:2: ( rule__Row__Group_2_1__0 )*
             {
              before(grammarAccess.getRowAccess().getGroup_2_1()); 
-            // InternalQUBO.g:756:2: ( rule__Row__Group_2_1__0 )*
-            loop6:
+            // InternalQUBO.g:829:2: ( rule__Row__Group_2_1__0 )*
+            loop7:
             do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                if ( (LA6_0==19) ) {
-                    alt6=1;
+                if ( (LA7_0==19) ) {
+                    alt7=1;
                 }
 
 
-                switch (alt6) {
+                switch (alt7) {
             	case 1 :
-            	    // InternalQUBO.g:756:3: rule__Row__Group_2_1__0
+            	    // InternalQUBO.g:829:3: rule__Row__Group_2_1__0
             	    {
-            	    pushFollow(FOLLOW_9);
+            	    pushFollow(FOLLOW_10);
             	    rule__Row__Group_2_1__0();
 
             	    state._fsp--;
@@ -2206,7 +2439,7 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop6;
+            	    break loop7;
                 }
             } while (true);
 
@@ -2233,16 +2466,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2_1__0"
-    // InternalQUBO.g:765:1: rule__Row__Group_2_1__0 : rule__Row__Group_2_1__0__Impl rule__Row__Group_2_1__1 ;
+    // InternalQUBO.g:838:1: rule__Row__Group_2_1__0 : rule__Row__Group_2_1__0__Impl rule__Row__Group_2_1__1 ;
     public final void rule__Row__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:769:1: ( rule__Row__Group_2_1__0__Impl rule__Row__Group_2_1__1 )
-            // InternalQUBO.g:770:2: rule__Row__Group_2_1__0__Impl rule__Row__Group_2_1__1
+            // InternalQUBO.g:842:1: ( rule__Row__Group_2_1__0__Impl rule__Row__Group_2_1__1 )
+            // InternalQUBO.g:843:2: rule__Row__Group_2_1__0__Impl rule__Row__Group_2_1__1
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__Row__Group_2_1__0__Impl();
 
             state._fsp--;
@@ -2271,17 +2504,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2_1__0__Impl"
-    // InternalQUBO.g:777:1: rule__Row__Group_2_1__0__Impl : ( ',' ) ;
+    // InternalQUBO.g:850:1: rule__Row__Group_2_1__0__Impl : ( ',' ) ;
     public final void rule__Row__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:781:1: ( ( ',' ) )
-            // InternalQUBO.g:782:1: ( ',' )
+            // InternalQUBO.g:854:1: ( ( ',' ) )
+            // InternalQUBO.g:855:1: ( ',' )
             {
-            // InternalQUBO.g:782:1: ( ',' )
-            // InternalQUBO.g:783:2: ','
+            // InternalQUBO.g:855:1: ( ',' )
+            // InternalQUBO.g:856:2: ','
             {
              before(grammarAccess.getRowAccess().getCommaKeyword_2_1_0()); 
             match(input,19,FOLLOW_2); 
@@ -2308,14 +2541,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2_1__1"
-    // InternalQUBO.g:792:1: rule__Row__Group_2_1__1 : rule__Row__Group_2_1__1__Impl ;
+    // InternalQUBO.g:865:1: rule__Row__Group_2_1__1 : rule__Row__Group_2_1__1__Impl ;
     public final void rule__Row__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:796:1: ( rule__Row__Group_2_1__1__Impl )
-            // InternalQUBO.g:797:2: rule__Row__Group_2_1__1__Impl
+            // InternalQUBO.g:869:1: ( rule__Row__Group_2_1__1__Impl )
+            // InternalQUBO.g:870:2: rule__Row__Group_2_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Row__Group_2_1__1__Impl();
@@ -2341,21 +2574,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__Group_2_1__1__Impl"
-    // InternalQUBO.g:803:1: rule__Row__Group_2_1__1__Impl : ( ( rule__Row__ColumnsAssignment_2_1_1 ) ) ;
+    // InternalQUBO.g:876:1: rule__Row__Group_2_1__1__Impl : ( ( rule__Row__ColumnsAssignment_2_1_1 ) ) ;
     public final void rule__Row__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:807:1: ( ( ( rule__Row__ColumnsAssignment_2_1_1 ) ) )
-            // InternalQUBO.g:808:1: ( ( rule__Row__ColumnsAssignment_2_1_1 ) )
+            // InternalQUBO.g:880:1: ( ( ( rule__Row__ColumnsAssignment_2_1_1 ) ) )
+            // InternalQUBO.g:881:1: ( ( rule__Row__ColumnsAssignment_2_1_1 ) )
             {
-            // InternalQUBO.g:808:1: ( ( rule__Row__ColumnsAssignment_2_1_1 ) )
-            // InternalQUBO.g:809:2: ( rule__Row__ColumnsAssignment_2_1_1 )
+            // InternalQUBO.g:881:1: ( ( rule__Row__ColumnsAssignment_2_1_1 ) )
+            // InternalQUBO.g:882:2: ( rule__Row__ColumnsAssignment_2_1_1 )
             {
              before(grammarAccess.getRowAccess().getColumnsAssignment_2_1_1()); 
-            // InternalQUBO.g:810:2: ( rule__Row__ColumnsAssignment_2_1_1 )
-            // InternalQUBO.g:810:3: rule__Row__ColumnsAssignment_2_1_1
+            // InternalQUBO.g:883:2: ( rule__Row__ColumnsAssignment_2_1_1 )
+            // InternalQUBO.g:883:3: rule__Row__ColumnsAssignment_2_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Row__ColumnsAssignment_2_1_1();
@@ -2388,16 +2621,16 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Column__Group__0"
-    // InternalQUBO.g:819:1: rule__Column__Group__0 : rule__Column__Group__0__Impl rule__Column__Group__1 ;
+    // InternalQUBO.g:892:1: rule__Column__Group__0 : rule__Column__Group__0__Impl rule__Column__Group__1 ;
     public final void rule__Column__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:823:1: ( rule__Column__Group__0__Impl rule__Column__Group__1 )
-            // InternalQUBO.g:824:2: rule__Column__Group__0__Impl rule__Column__Group__1
+            // InternalQUBO.g:896:1: ( rule__Column__Group__0__Impl rule__Column__Group__1 )
+            // InternalQUBO.g:897:2: rule__Column__Group__0__Impl rule__Column__Group__1
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__Column__Group__0__Impl();
 
             state._fsp--;
@@ -2426,21 +2659,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Column__Group__0__Impl"
-    // InternalQUBO.g:831:1: rule__Column__Group__0__Impl : ( () ) ;
+    // InternalQUBO.g:904:1: rule__Column__Group__0__Impl : ( () ) ;
     public final void rule__Column__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:835:1: ( ( () ) )
-            // InternalQUBO.g:836:1: ( () )
+            // InternalQUBO.g:908:1: ( ( () ) )
+            // InternalQUBO.g:909:1: ( () )
             {
-            // InternalQUBO.g:836:1: ( () )
-            // InternalQUBO.g:837:2: ()
+            // InternalQUBO.g:909:1: ( () )
+            // InternalQUBO.g:910:2: ()
             {
              before(grammarAccess.getColumnAccess().getColumnAction_0()); 
-            // InternalQUBO.g:838:2: ()
-            // InternalQUBO.g:838:3: 
+            // InternalQUBO.g:911:2: ()
+            // InternalQUBO.g:911:3: 
             {
             }
 
@@ -2463,14 +2696,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Column__Group__1"
-    // InternalQUBO.g:846:1: rule__Column__Group__1 : rule__Column__Group__1__Impl ;
+    // InternalQUBO.g:919:1: rule__Column__Group__1 : rule__Column__Group__1__Impl ;
     public final void rule__Column__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:850:1: ( rule__Column__Group__1__Impl )
-            // InternalQUBO.g:851:2: rule__Column__Group__1__Impl
+            // InternalQUBO.g:923:1: ( rule__Column__Group__1__Impl )
+            // InternalQUBO.g:924:2: rule__Column__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Column__Group__1__Impl();
@@ -2496,21 +2729,21 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Column__Group__1__Impl"
-    // InternalQUBO.g:857:1: rule__Column__Group__1__Impl : ( ( rule__Column__ValueAssignment_1 ) ) ;
+    // InternalQUBO.g:930:1: rule__Column__Group__1__Impl : ( ( rule__Column__ValueAssignment_1 ) ) ;
     public final void rule__Column__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:861:1: ( ( ( rule__Column__ValueAssignment_1 ) ) )
-            // InternalQUBO.g:862:1: ( ( rule__Column__ValueAssignment_1 ) )
+            // InternalQUBO.g:934:1: ( ( ( rule__Column__ValueAssignment_1 ) ) )
+            // InternalQUBO.g:935:1: ( ( rule__Column__ValueAssignment_1 ) )
             {
-            // InternalQUBO.g:862:1: ( ( rule__Column__ValueAssignment_1 ) )
-            // InternalQUBO.g:863:2: ( rule__Column__ValueAssignment_1 )
+            // InternalQUBO.g:935:1: ( ( rule__Column__ValueAssignment_1 ) )
+            // InternalQUBO.g:936:2: ( rule__Column__ValueAssignment_1 )
             {
              before(grammarAccess.getColumnAccess().getValueAssignment_1()); 
-            // InternalQUBO.g:864:2: ( rule__Column__ValueAssignment_1 )
-            // InternalQUBO.g:864:3: rule__Column__ValueAssignment_1
+            // InternalQUBO.g:937:2: ( rule__Column__ValueAssignment_1 )
+            // InternalQUBO.g:937:3: rule__Column__ValueAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Column__ValueAssignment_1();
@@ -2542,26 +2775,26 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Column__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Qubo__MatrixAssignment_3_1"
-    // InternalQUBO.g:873:1: rule__Qubo__MatrixAssignment_3_1 : ( ruleMatrix ) ;
-    public final void rule__Qubo__MatrixAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Qubo__NameAssignment_2"
+    // InternalQUBO.g:946:1: rule__Qubo__NameAssignment_2 : ( ruleEString ) ;
+    public final void rule__Qubo__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:877:1: ( ( ruleMatrix ) )
-            // InternalQUBO.g:878:2: ( ruleMatrix )
+            // InternalQUBO.g:950:1: ( ( ruleEString ) )
+            // InternalQUBO.g:951:2: ( ruleEString )
             {
-            // InternalQUBO.g:878:2: ( ruleMatrix )
-            // InternalQUBO.g:879:3: ruleMatrix
+            // InternalQUBO.g:951:2: ( ruleEString )
+            // InternalQUBO.g:952:3: ruleEString
             {
-             before(grammarAccess.getQuboAccess().getMatrixMatrixParserRuleCall_3_1_0()); 
+             before(grammarAccess.getQuboAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleMatrix();
+            ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getQuboAccess().getMatrixMatrixParserRuleCall_3_1_0()); 
+             after(grammarAccess.getQuboAccess().getNameEStringParserRuleCall_2_0()); 
 
             }
 
@@ -2580,21 +2813,62 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Qubo__MatrixAssignment_3_1"
+    // $ANTLR end "rule__Qubo__NameAssignment_2"
+
+
+    // $ANTLR start "rule__Qubo__MatrixAssignment_4_1"
+    // InternalQUBO.g:961:1: rule__Qubo__MatrixAssignment_4_1 : ( ruleMatrix ) ;
+    public final void rule__Qubo__MatrixAssignment_4_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQUBO.g:965:1: ( ( ruleMatrix ) )
+            // InternalQUBO.g:966:2: ( ruleMatrix )
+            {
+            // InternalQUBO.g:966:2: ( ruleMatrix )
+            // InternalQUBO.g:967:3: ruleMatrix
+            {
+             before(grammarAccess.getQuboAccess().getMatrixMatrixParserRuleCall_4_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleMatrix();
+
+            state._fsp--;
+
+             after(grammarAccess.getQuboAccess().getMatrixMatrixParserRuleCall_4_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Qubo__MatrixAssignment_4_1"
 
 
     // $ANTLR start "rule__Matrix__RowsAssignment_2_0"
-    // InternalQUBO.g:888:1: rule__Matrix__RowsAssignment_2_0 : ( ruleRow ) ;
+    // InternalQUBO.g:976:1: rule__Matrix__RowsAssignment_2_0 : ( ruleRow ) ;
     public final void rule__Matrix__RowsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:892:1: ( ( ruleRow ) )
-            // InternalQUBO.g:893:2: ( ruleRow )
+            // InternalQUBO.g:980:1: ( ( ruleRow ) )
+            // InternalQUBO.g:981:2: ( ruleRow )
             {
-            // InternalQUBO.g:893:2: ( ruleRow )
-            // InternalQUBO.g:894:3: ruleRow
+            // InternalQUBO.g:981:2: ( ruleRow )
+            // InternalQUBO.g:982:3: ruleRow
             {
              before(grammarAccess.getMatrixAccess().getRowsRowParserRuleCall_2_0_0()); 
             pushFollow(FOLLOW_2);
@@ -2625,17 +2899,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Matrix__RowsAssignment_2_1_1"
-    // InternalQUBO.g:903:1: rule__Matrix__RowsAssignment_2_1_1 : ( ruleRow ) ;
+    // InternalQUBO.g:991:1: rule__Matrix__RowsAssignment_2_1_1 : ( ruleRow ) ;
     public final void rule__Matrix__RowsAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:907:1: ( ( ruleRow ) )
-            // InternalQUBO.g:908:2: ( ruleRow )
+            // InternalQUBO.g:995:1: ( ( ruleRow ) )
+            // InternalQUBO.g:996:2: ( ruleRow )
             {
-            // InternalQUBO.g:908:2: ( ruleRow )
-            // InternalQUBO.g:909:3: ruleRow
+            // InternalQUBO.g:996:2: ( ruleRow )
+            // InternalQUBO.g:997:3: ruleRow
             {
              before(grammarAccess.getMatrixAccess().getRowsRowParserRuleCall_2_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -2666,17 +2940,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__ColumnsAssignment_2_0"
-    // InternalQUBO.g:918:1: rule__Row__ColumnsAssignment_2_0 : ( ruleColumn ) ;
+    // InternalQUBO.g:1006:1: rule__Row__ColumnsAssignment_2_0 : ( ruleColumn ) ;
     public final void rule__Row__ColumnsAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:922:1: ( ( ruleColumn ) )
-            // InternalQUBO.g:923:2: ( ruleColumn )
+            // InternalQUBO.g:1010:1: ( ( ruleColumn ) )
+            // InternalQUBO.g:1011:2: ( ruleColumn )
             {
-            // InternalQUBO.g:923:2: ( ruleColumn )
-            // InternalQUBO.g:924:3: ruleColumn
+            // InternalQUBO.g:1011:2: ( ruleColumn )
+            // InternalQUBO.g:1012:3: ruleColumn
             {
              before(grammarAccess.getRowAccess().getColumnsColumnParserRuleCall_2_0_0()); 
             pushFollow(FOLLOW_2);
@@ -2707,17 +2981,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Row__ColumnsAssignment_2_1_1"
-    // InternalQUBO.g:933:1: rule__Row__ColumnsAssignment_2_1_1 : ( ruleColumn ) ;
+    // InternalQUBO.g:1021:1: rule__Row__ColumnsAssignment_2_1_1 : ( ruleColumn ) ;
     public final void rule__Row__ColumnsAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:937:1: ( ( ruleColumn ) )
-            // InternalQUBO.g:938:2: ( ruleColumn )
+            // InternalQUBO.g:1025:1: ( ( ruleColumn ) )
+            // InternalQUBO.g:1026:2: ( ruleColumn )
             {
-            // InternalQUBO.g:938:2: ( ruleColumn )
-            // InternalQUBO.g:939:3: ruleColumn
+            // InternalQUBO.g:1026:2: ( ruleColumn )
+            // InternalQUBO.g:1027:3: ruleColumn
             {
              before(grammarAccess.getRowAccess().getColumnsColumnParserRuleCall_2_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -2748,17 +3022,17 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Column__ValueAssignment_1"
-    // InternalQUBO.g:948:1: rule__Column__ValueAssignment_1 : ( ruleEDouble ) ;
+    // InternalQUBO.g:1036:1: rule__Column__ValueAssignment_1 : ( ruleEDouble ) ;
     public final void rule__Column__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQUBO.g:952:1: ( ( ruleEDouble ) )
-            // InternalQUBO.g:953:2: ( ruleEDouble )
+            // InternalQUBO.g:1040:1: ( ( ruleEDouble ) )
+            // InternalQUBO.g:1041:2: ( ruleEDouble )
             {
-            // InternalQUBO.g:953:2: ( ruleEDouble )
-            // InternalQUBO.g:954:3: ruleEDouble
+            // InternalQUBO.g:1041:2: ( ruleEDouble )
+            // InternalQUBO.g:1042:3: ruleEDouble
             {
              before(grammarAccess.getColumnAccess().getValueEDoubleParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -2795,13 +3069,14 @@ public class InternalQUBOParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000060000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000040030L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x00000000000000C0L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000018000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000060000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000040030L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000030L});
 
 }

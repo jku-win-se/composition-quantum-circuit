@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 
-import qucircuit.util.QuCircuitAdapterFactory;
+import qucircuit.util.QucircuitAdapterFactory;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -32,8 +32,7 @@ import qucircuit.util.QuCircuitAdapterFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
-		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class QucircuitItemProviderAdapterFactory extends QucircuitAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -64,7 +63,7 @@ public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QuCircuitItemProviderAdapterFactory() {
+	public QucircuitItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -139,52 +138,6 @@ public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
 		}
 
 		return classicRegisterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qucircuit.Qubit} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected QubitItemProvider qubitItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qucircuit.Qubit}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createQubitAdapter() {
-		if (qubitItemProvider == null) {
-			qubitItemProvider = new QubitItemProvider(this);
-		}
-
-		return qubitItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link qucircuit.ClassicBit} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ClassicBitItemProvider classicBitItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link qucircuit.ClassicBit}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createClassicBitAdapter() {
-		if (classicBitItemProvider == null) {
-			classicBitItemProvider = new ClassicBitItemProvider(this);
-		}
-
-		return classicBitItemProvider;
 	}
 
 	/**
@@ -349,26 +302,95 @@ public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qucircuit.Loop} instances.
+	 * This keeps track of the one adapter used for all {@link qucircuit.LoopOperation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LoopItemProvider loopItemProvider;
+	protected LoopOperationItemProvider loopOperationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qucircuit.Loop}.
+	 * This creates an adapter for a {@link qucircuit.LoopOperation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLoopAdapter() {
-		if (loopItemProvider == null) {
-			loopItemProvider = new LoopItemProvider(this);
+	public Adapter createLoopOperationAdapter() {
+		if (loopOperationItemProvider == null) {
+			loopOperationItemProvider = new LoopOperationItemProvider(this);
 		}
 
-		return loopItemProvider;
+		return loopOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qucircuit.IndexInt} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IndexIntItemProvider indexIntItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qucircuit.IndexInt}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIndexIntAdapter() {
+		if (indexIntItemProvider == null) {
+			indexIntItemProvider = new IndexIntItemProvider(this);
+		}
+
+		return indexIntItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qucircuit.IndexRange} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IndexRangeItemProvider indexRangeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qucircuit.IndexRange}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIndexRangeAdapter() {
+		if (indexRangeItemProvider == null) {
+			indexRangeItemProvider = new IndexRangeItemProvider(this);
+		}
+
+		return indexRangeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link qucircuit.Operation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OperationItemProvider operationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link qucircuit.Operation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOperationAdapter() {
+		if (operationItemProvider == null) {
+			operationItemProvider = new OperationItemProvider(this);
+		}
+
+		return operationItemProvider;
 	}
 
 	/**
@@ -421,7 +443,7 @@ public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
 	public Object adapt(Object object, Object type) {
 		if (isFactoryForType(type)) {
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
+			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
 				return adapter;
 			}
 		}
@@ -470,32 +492,20 @@ public class QuCircuitItemProviderAdapterFactory extends QuCircuitAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (quantumCircuitItemProvider != null)
-			quantumCircuitItemProvider.dispose();
-		if (quantumRegisterItemProvider != null)
-			quantumRegisterItemProvider.dispose();
-		if (classicRegisterItemProvider != null)
-			classicRegisterItemProvider.dispose();
-		if (qubitItemProvider != null)
-			qubitItemProvider.dispose();
-		if (classicBitItemProvider != null)
-			classicBitItemProvider.dispose();
-		if (layerItemProvider != null)
-			layerItemProvider.dispose();
-		if (classicControlItemProvider != null)
-			classicControlItemProvider.dispose();
-		if (statePreparationItemProvider != null)
-			statePreparationItemProvider.dispose();
-		if (measurementItemProvider != null)
-			measurementItemProvider.dispose();
-		if (elementaryQuantumGateItemProvider != null)
-			elementaryQuantumGateItemProvider.dispose();
-		if (compositeQuantumGateItemProvider != null)
-			compositeQuantumGateItemProvider.dispose();
-		if (angleParameterItemProvider != null)
-			angleParameterItemProvider.dispose();
-		if (loopItemProvider != null)
-			loopItemProvider.dispose();
+		if (quantumCircuitItemProvider != null) quantumCircuitItemProvider.dispose();
+		if (quantumRegisterItemProvider != null) quantumRegisterItemProvider.dispose();
+		if (classicRegisterItemProvider != null) classicRegisterItemProvider.dispose();
+		if (layerItemProvider != null) layerItemProvider.dispose();
+		if (classicControlItemProvider != null) classicControlItemProvider.dispose();
+		if (statePreparationItemProvider != null) statePreparationItemProvider.dispose();
+		if (measurementItemProvider != null) measurementItemProvider.dispose();
+		if (elementaryQuantumGateItemProvider != null) elementaryQuantumGateItemProvider.dispose();
+		if (compositeQuantumGateItemProvider != null) compositeQuantumGateItemProvider.dispose();
+		if (angleParameterItemProvider != null) angleParameterItemProvider.dispose();
+		if (loopOperationItemProvider != null) loopOperationItemProvider.dispose();
+		if (indexIntItemProvider != null) indexIntItemProvider.dispose();
+		if (indexRangeItemProvider != null) indexRangeItemProvider.dispose();
+		if (operationItemProvider != null) operationItemProvider.dispose();
 	}
 
 }

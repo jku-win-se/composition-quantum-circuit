@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import qucircuit.AngleParameter;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -104,7 +104,7 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.ANGLE_PARAMETER;
+		return QucircuitPackage.Literals.ANGLE_PARAMETER;
 	}
 
 	/**
@@ -125,8 +125,7 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 		Double oldTheta = theta;
 		theta = newTheta;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QuCircuitPackage.ANGLE_PARAMETER__THETA, oldTheta,
-					theta));
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.ANGLE_PARAMETER__THETA, oldTheta, theta));
 	}
 
 	/**
@@ -147,7 +146,7 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 		Double oldPhi = phi;
 		phi = newPhi;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QuCircuitPackage.ANGLE_PARAMETER__PHI, oldPhi, phi));
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.ANGLE_PARAMETER__PHI, oldPhi, phi));
 	}
 
 	/**
@@ -168,8 +167,7 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 		Double oldLambda = lambda;
 		lambda = newLambda;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, QuCircuitPackage.ANGLE_PARAMETER__LAMBDA, oldLambda,
-					lambda));
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.ANGLE_PARAMETER__LAMBDA, oldLambda, lambda));
 	}
 
 	/**
@@ -180,12 +178,12 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.ANGLE_PARAMETER__THETA:
-			return getTheta();
-		case QuCircuitPackage.ANGLE_PARAMETER__PHI:
-			return getPhi();
-		case QuCircuitPackage.ANGLE_PARAMETER__LAMBDA:
-			return getLambda();
+			case QucircuitPackage.ANGLE_PARAMETER__THETA:
+				return getTheta();
+			case QucircuitPackage.ANGLE_PARAMETER__PHI:
+				return getPhi();
+			case QucircuitPackage.ANGLE_PARAMETER__LAMBDA:
+				return getLambda();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -198,15 +196,15 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.ANGLE_PARAMETER__THETA:
-			setTheta((Double) newValue);
-			return;
-		case QuCircuitPackage.ANGLE_PARAMETER__PHI:
-			setPhi((Double) newValue);
-			return;
-		case QuCircuitPackage.ANGLE_PARAMETER__LAMBDA:
-			setLambda((Double) newValue);
-			return;
+			case QucircuitPackage.ANGLE_PARAMETER__THETA:
+				setTheta((Double)newValue);
+				return;
+			case QucircuitPackage.ANGLE_PARAMETER__PHI:
+				setPhi((Double)newValue);
+				return;
+			case QucircuitPackage.ANGLE_PARAMETER__LAMBDA:
+				setLambda((Double)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -219,15 +217,15 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.ANGLE_PARAMETER__THETA:
-			setTheta(THETA_EDEFAULT);
-			return;
-		case QuCircuitPackage.ANGLE_PARAMETER__PHI:
-			setPhi(PHI_EDEFAULT);
-			return;
-		case QuCircuitPackage.ANGLE_PARAMETER__LAMBDA:
-			setLambda(LAMBDA_EDEFAULT);
-			return;
+			case QucircuitPackage.ANGLE_PARAMETER__THETA:
+				setTheta(THETA_EDEFAULT);
+				return;
+			case QucircuitPackage.ANGLE_PARAMETER__PHI:
+				setPhi(PHI_EDEFAULT);
+				return;
+			case QucircuitPackage.ANGLE_PARAMETER__LAMBDA:
+				setLambda(LAMBDA_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -240,12 +238,12 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.ANGLE_PARAMETER__THETA:
-			return THETA_EDEFAULT == null ? theta != null : !THETA_EDEFAULT.equals(theta);
-		case QuCircuitPackage.ANGLE_PARAMETER__PHI:
-			return PHI_EDEFAULT == null ? phi != null : !PHI_EDEFAULT.equals(phi);
-		case QuCircuitPackage.ANGLE_PARAMETER__LAMBDA:
-			return LAMBDA_EDEFAULT == null ? lambda != null : !LAMBDA_EDEFAULT.equals(lambda);
+			case QucircuitPackage.ANGLE_PARAMETER__THETA:
+				return THETA_EDEFAULT == null ? theta != null : !THETA_EDEFAULT.equals(theta);
+			case QucircuitPackage.ANGLE_PARAMETER__PHI:
+				return PHI_EDEFAULT == null ? phi != null : !PHI_EDEFAULT.equals(phi);
+			case QucircuitPackage.ANGLE_PARAMETER__LAMBDA:
+				return LAMBDA_EDEFAULT == null ? lambda != null : !LAMBDA_EDEFAULT.equals(lambda);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -257,8 +255,7 @@ public class AngleParameterImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (theta: ");

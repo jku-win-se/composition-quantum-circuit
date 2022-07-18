@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link qucircuit.QuantumCircuit#getLayers <em>Layers</em>}</li>
  * </ul>
  *
- * @see qucircuit.QuCircuitPackage#getQuantumCircuit()
+ * @see qucircuit.QucircuitPackage#getQuantumCircuit()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface QuantumCircuit extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantum Registers</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getQuantumCircuit_QuantumRegisters()
+	 * @see qucircuit.QucircuitPackage#getQuantumCircuit_QuantumRegisters()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -41,7 +41,7 @@ public interface QuantumCircuit extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Classic Registers</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getQuantumCircuit_ClassicRegisters()
+	 * @see qucircuit.QucircuitPackage#getQuantumCircuit_ClassicRegisters()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -53,7 +53,7 @@ public interface QuantumCircuit extends NamedElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Layers</em>' containment reference list.
-	 * @see qucircuit.QuCircuitPackage#getQuantumCircuit_Layers()
+	 * @see qucircuit.QucircuitPackage#getQuantumCircuit_Layers()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.Layer;
-import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumOperation;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +58,7 @@ public class LayerImpl extends NamedElementImpl implements Layer {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.LAYER;
+		return QucircuitPackage.Literals.LAYER;
 	}
 
 	/**
@@ -68,8 +68,7 @@ public class LayerImpl extends NamedElementImpl implements Layer {
 	 */
 	public EList<QuantumOperation> getQuantumOperations() {
 		if (quantumOperations == null) {
-			quantumOperations = new EObjectContainmentEList<QuantumOperation>(QuantumOperation.class, this,
-					QuCircuitPackage.LAYER__QUANTUM_OPERATIONS);
+			quantumOperations = new EObjectContainmentEList<QuantumOperation>(QuantumOperation.class, this, QucircuitPackage.LAYER__QUANTUM_OPERATIONS);
 		}
 		return quantumOperations;
 	}
@@ -82,8 +81,8 @@ public class LayerImpl extends NamedElementImpl implements Layer {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case QuCircuitPackage.LAYER__QUANTUM_OPERATIONS:
-			return ((InternalEList<?>) getQuantumOperations()).basicRemove(otherEnd, msgs);
+			case QucircuitPackage.LAYER__QUANTUM_OPERATIONS:
+				return ((InternalEList<?>)getQuantumOperations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +95,8 @@ public class LayerImpl extends NamedElementImpl implements Layer {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.LAYER__QUANTUM_OPERATIONS:
-			return getQuantumOperations();
+			case QucircuitPackage.LAYER__QUANTUM_OPERATIONS:
+				return getQuantumOperations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,10 +110,10 @@ public class LayerImpl extends NamedElementImpl implements Layer {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.LAYER__QUANTUM_OPERATIONS:
-			getQuantumOperations().clear();
-			getQuantumOperations().addAll((Collection<? extends QuantumOperation>) newValue);
-			return;
+			case QucircuitPackage.LAYER__QUANTUM_OPERATIONS:
+				getQuantumOperations().clear();
+				getQuantumOperations().addAll((Collection<? extends QuantumOperation>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -127,9 +126,9 @@ public class LayerImpl extends NamedElementImpl implements Layer {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.LAYER__QUANTUM_OPERATIONS:
-			getQuantumOperations().clear();
-			return;
+			case QucircuitPackage.LAYER__QUANTUM_OPERATIONS:
+				getQuantumOperations().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,8 +141,8 @@ public class LayerImpl extends NamedElementImpl implements Layer {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.LAYER__QUANTUM_OPERATIONS:
-			return quantumOperations != null && !quantumOperations.isEmpty();
+			case QucircuitPackage.LAYER__QUANTUM_OPERATIONS:
+				return quantumOperations != null && !quantumOperations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

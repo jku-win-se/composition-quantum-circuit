@@ -16,5 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- quantum.operation.library.mm.edit;visibility:=reexport
+ org.eclipse.emf.ecore.edit;visibility:=reexport,
+ quantum.operation.library.mm.edit;visibility:=reexport,
+ qubo.mm.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

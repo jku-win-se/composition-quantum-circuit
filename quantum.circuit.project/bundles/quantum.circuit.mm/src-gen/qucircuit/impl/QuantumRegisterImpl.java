@@ -2,21 +2,14 @@
  */
 package qucircuit.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import qucircuit.QuCircuitPackage;
 import qucircuit.QuantumRegister;
-import qucircuit.Qubit;
+import qucircuit.QucircuitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,21 +19,31 @@ import qucircuit.Qubit;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link qucircuit.impl.QuantumRegisterImpl#getQubits <em>Qubits</em>}</li>
+ *   <li>{@link qucircuit.impl.QuantumRegisterImpl#getNumberOfQubits <em>Number Of Qubits</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegister {
+public class QuantumRegisterImpl extends RegisterImpl implements QuantumRegister {
 	/**
-	 * The cached value of the '{@link #getQubits() <em>Qubits</em>}' containment reference list.
+	 * The default value of the '{@link #getNumberOfQubits() <em>Number Of Qubits</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQubits()
+	 * @see #getNumberOfQubits()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Qubit> qubits;
+	protected static final Integer NUMBER_OF_QUBITS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNumberOfQubits() <em>Number Of Qubits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumberOfQubits()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer numberOfQubits = NUMBER_OF_QUBITS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -58,7 +61,7 @@ public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return QuCircuitPackage.Literals.QUANTUM_REGISTER;
+		return QucircuitPackage.Literals.QUANTUM_REGISTER;
 	}
 
 	/**
@@ -66,11 +69,8 @@ public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Qubit> getQubits() {
-		if (qubits == null) {
-			qubits = new EObjectContainmentEList<Qubit>(Qubit.class, this, QuCircuitPackage.QUANTUM_REGISTER__QUBITS);
-		}
-		return qubits;
+	public Integer getNumberOfQubits() {
+		return numberOfQubits;
 	}
 
 	/**
@@ -78,13 +78,11 @@ public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_REGISTER__QUBITS:
-			return ((InternalEList<?>) getQubits()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setNumberOfQubits(Integer newNumberOfQubits) {
+		Integer oldNumberOfQubits = numberOfQubits;
+		numberOfQubits = newNumberOfQubits;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, QucircuitPackage.QUANTUM_REGISTER__NUMBER_OF_QUBITS, oldNumberOfQubits, numberOfQubits));
 	}
 
 	/**
@@ -95,8 +93,8 @@ public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_REGISTER__QUBITS:
-			return getQubits();
+			case QucircuitPackage.QUANTUM_REGISTER__NUMBER_OF_QUBITS:
+				return getNumberOfQubits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -106,14 +104,12 @@ public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_REGISTER__QUBITS:
-			getQubits().clear();
-			getQubits().addAll((Collection<? extends Qubit>) newValue);
-			return;
+			case QucircuitPackage.QUANTUM_REGISTER__NUMBER_OF_QUBITS:
+				setNumberOfQubits((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -126,9 +122,9 @@ public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_REGISTER__QUBITS:
-			getQubits().clear();
-			return;
+			case QucircuitPackage.QUANTUM_REGISTER__NUMBER_OF_QUBITS:
+				setNumberOfQubits(NUMBER_OF_QUBITS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -141,10 +137,26 @@ public class QuantumRegisterImpl extends NamedElementImpl implements QuantumRegi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case QuCircuitPackage.QUANTUM_REGISTER__QUBITS:
-			return qubits != null && !qubits.isEmpty();
+			case QucircuitPackage.QUANTUM_REGISTER__NUMBER_OF_QUBITS:
+				return NUMBER_OF_QUBITS_EDEFAULT == null ? numberOfQubits != null : !NUMBER_OF_QUBITS_EDEFAULT.equals(numberOfQubits);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (numberOfQubits: ");
+		result.append(numberOfQubits);
+		result.append(')');
+		return result.toString();
 	}
 
 } //QuantumRegisterImpl

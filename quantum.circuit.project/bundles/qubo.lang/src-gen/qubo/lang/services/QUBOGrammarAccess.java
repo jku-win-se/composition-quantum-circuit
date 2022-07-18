@@ -28,16 +28,19 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cQuboAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cQuboKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cMatrixKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cMatrixAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cMatrixMatrixParserRuleCall_3_1_0 = (RuleCall)cMatrixAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cMatrixKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cMatrixAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cMatrixMatrixParserRuleCall_4_1_0 = (RuleCall)cMatrixAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Qubo returns Qubo:
 		//    {Qubo}
 		//    'Qubo'
+		//    name=EString
 		//    '{'
 		//        ('matrix' matrix=Matrix)?
 		//    '}';
@@ -45,6 +48,7 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		
 		//{Qubo}
 		//'Qubo'
+		//name=EString
 		//'{'
 		//    ('matrix' matrix=Matrix)?
 		//'}'
@@ -56,23 +60,29 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'Qubo'
 		public Keyword getQuboKeyword_1() { return cQuboKeyword_1; }
 		
+		//name=EString
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//EString
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
+		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
 		//('matrix' matrix=Matrix)?
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'matrix'
-		public Keyword getMatrixKeyword_3_0() { return cMatrixKeyword_3_0; }
+		public Keyword getMatrixKeyword_4_0() { return cMatrixKeyword_4_0; }
 		
 		//matrix=Matrix
-		public Assignment getMatrixAssignment_3_1() { return cMatrixAssignment_3_1; }
+		public Assignment getMatrixAssignment_4_1() { return cMatrixAssignment_4_1; }
 		
 		//Matrix
-		public RuleCall getMatrixMatrixParserRuleCall_3_1_0() { return cMatrixMatrixParserRuleCall_3_1_0; }
+		public RuleCall getMatrixMatrixParserRuleCall_4_1_0() { return cMatrixMatrixParserRuleCall_4_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class MatrixElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "qubo.lang.QUBO.Matrix");
@@ -234,6 +244,25 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//E_DOUBLE
 		public RuleCall getE_DOUBLETerminalRuleCall_1() { return cE_DOUBLETerminalRuleCall_1; }
 	}
+	public class EStringElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "qubo.lang.QUBO.EString");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//EString returns ecore::EString:
+		//    STRING | ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//STRING | ID
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_0() { return cSTRINGTerminalRuleCall_0; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+	}
 	
 	
 	private final QuboElements pQubo;
@@ -244,6 +273,7 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	private final TerminalRule tE_INT;
 	private final TerminalRule tE_DOUBLE;
 	private final TerminalRule tINT;
+	private final EStringElements pEString;
 	
 	private final Grammar grammar;
 	
@@ -262,6 +292,7 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		this.tE_INT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "qubo.lang.QUBO.E_INT");
 		this.tE_DOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "qubo.lang.QUBO.E_DOUBLE");
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "qubo.lang.QUBO.INT");
+		this.pEString = new EStringElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -294,6 +325,7 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	//Qubo returns Qubo:
 	//    {Qubo}
 	//    'Qubo'
+	//    name=EString
 	//    '{'
 	//        ('matrix' matrix=Matrix)?
 	//    '}';
@@ -377,6 +409,16 @@ public class QUBOGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	//;
 	public TerminalRule getINTRule() {
 		return tINT;
+	}
+	
+	//EString returns ecore::EString:
+	//    STRING | ID;
+	public EStringElements getEStringAccess() {
+		return pEString;
+	}
+	
+	public ParserRule getEStringRule() {
+		return getEStringAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

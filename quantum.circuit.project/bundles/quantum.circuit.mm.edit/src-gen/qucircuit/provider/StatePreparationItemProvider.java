@@ -2,6 +2,7 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -56,16 +57,6 @@ public class StatePreparationItemProvider extends QuantumOperationItemProvider {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,10 +64,12 @@ public class StatePreparationItemProvider extends QuantumOperationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((StatePreparation) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_StatePreparation_type")
-				: getString("_UI_StatePreparation_type") + " " + label;
+		String label = ((StatePreparation)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_StatePreparation_type") :
+			getString("_UI_StatePreparation_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

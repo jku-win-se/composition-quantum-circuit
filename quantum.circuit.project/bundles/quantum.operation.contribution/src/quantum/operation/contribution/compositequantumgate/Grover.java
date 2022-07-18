@@ -4,7 +4,11 @@ import java.util.Collection;
 
 import quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import quantum.operation.definition.api.AbstractExtendCompositeQuantumGate;
+import qubo.Qubo;
 import qucircuit.CompositeQuantumGate;
+import qucircuit.Index;
+import qucircuit.QuantumOperation;
+import quope.QuantumOperationLibrary;
 
 public class Grover extends AbstractExtendCompositeQuantumGate {
 
@@ -15,20 +19,13 @@ public class Grover extends AbstractExtendCompositeQuantumGate {
 	}
 	
 	@Override
-	public String getAbbreviation() {
-		return "Grover";
-	}
-
-	@Override
 	public String getPaletteIconPath() {
 		return QuantumOperationContributionUtils.getIconURI(PALETTE_ICON).toString();
 	}
 
 	@Override
-	public CompositeQuantumGate getCustomBlock(Collection<qucircuit.Qubit> qubits,
-			qucircuit.QuantumOperation quOperation) {
+	public void getCustomBlock(Qubo qubo, QuantumOperationLibrary quantumOpLib) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
-
 }

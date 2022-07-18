@@ -1,0 +1,30 @@
+QuantumCircuit QAOA {
+	QuantumRegister qr {
+		NumberOfQubits 4
+	}
+	ClassicRegister cr {
+		NumberOfBits 4
+	}
+	Layer L1 {
+		ElementaryQuantumGate e1 {
+			operation Hadamard
+			targetQubits [(0-3)]
+		}
+	}	
+	Layer L2 {
+		Loop SimpleLoop1 {
+			iterations 2
+			operations (CostUnitary(SampleMatrix),MixerUnitaryQAOA)
+			targetQubits [(0-3)] 
+			loop StaticLoop
+			loopTargetQubits [(0-3)]			 
+		}
+	}
+	Layer L3 {
+		Measurement M1 { 
+			operation MeasurementCompBasis
+			targetQubits [(0-3)]
+			classicBits [(0-3)]
+		}
+	}
+}

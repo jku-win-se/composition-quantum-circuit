@@ -2,6 +2,7 @@
  */
 package qucircuit.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -22,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import qucircuit.AngleParameter;
-import qucircuit.QuCircuitPackage;
+import qucircuit.QucircuitPackage;
 
 /**
  * This is the item provider adapter for a {@link qucircuit.AngleParameter} object.
@@ -30,8 +31,14 @@ import qucircuit.QuCircuitPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AngleParameterItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class AngleParameterItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -67,13 +74,19 @@ public class AngleParameterItemProvider extends ItemProviderAdapter implements I
 	 * @generated
 	 */
 	protected void addThetaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_AngleParameter_theta_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_AngleParameter_theta_feature",
-								"_UI_AngleParameter_type"),
-						QuCircuitPackage.Literals.ANGLE_PARAMETER__THETA, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AngleParameter_theta_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AngleParameter_theta_feature", "_UI_AngleParameter_type"),
+				 QucircuitPackage.Literals.ANGLE_PARAMETER__THETA,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -83,13 +96,19 @@ public class AngleParameterItemProvider extends ItemProviderAdapter implements I
 	 * @generated
 	 */
 	protected void addPhiPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_AngleParameter_phi_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_AngleParameter_phi_feature",
-								"_UI_AngleParameter_type"),
-						QuCircuitPackage.Literals.ANGLE_PARAMETER__PHI, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AngleParameter_phi_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AngleParameter_phi_feature", "_UI_AngleParameter_type"),
+				 QucircuitPackage.Literals.ANGLE_PARAMETER__PHI,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -99,13 +118,19 @@ public class AngleParameterItemProvider extends ItemProviderAdapter implements I
 	 * @generated
 	 */
 	protected void addLambdaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_AngleParameter_lambda_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_AngleParameter_lambda_feature",
-								"_UI_AngleParameter_type"),
-						QuCircuitPackage.Literals.ANGLE_PARAMETER__LAMBDA, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AngleParameter_lambda_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AngleParameter_lambda_feature", "_UI_AngleParameter_type"),
+				 QucircuitPackage.Literals.ANGLE_PARAMETER__LAMBDA,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -120,16 +145,6 @@ public class AngleParameterItemProvider extends ItemProviderAdapter implements I
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected boolean shouldComposeCreationImage() {
-		return true;
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,11 +152,13 @@ public class AngleParameterItemProvider extends ItemProviderAdapter implements I
 	 */
 	@Override
 	public String getText(Object object) {
-		Double labelValue = ((AngleParameter) object).getTheta();
+		Double labelValue = ((AngleParameter)object).getTheta();
 		String label = labelValue == null ? null : labelValue.toString();
-		return label == null || label.length() == 0 ? getString("_UI_AngleParameter_type")
-				: getString("_UI_AngleParameter_type") + " " + label;
+		return label == null || label.length() == 0 ?
+			getString("_UI_AngleParameter_type") :
+			getString("_UI_AngleParameter_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -155,11 +172,11 @@ public class AngleParameterItemProvider extends ItemProviderAdapter implements I
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AngleParameter.class)) {
-		case QuCircuitPackage.ANGLE_PARAMETER__THETA:
-		case QuCircuitPackage.ANGLE_PARAMETER__PHI:
-		case QuCircuitPackage.ANGLE_PARAMETER__LAMBDA:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+			case QucircuitPackage.ANGLE_PARAMETER__THETA:
+			case QucircuitPackage.ANGLE_PARAMETER__PHI:
+			case QucircuitPackage.ANGLE_PARAMETER__LAMBDA:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}

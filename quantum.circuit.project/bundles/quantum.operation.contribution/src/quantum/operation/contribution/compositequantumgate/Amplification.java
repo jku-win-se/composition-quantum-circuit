@@ -4,9 +4,11 @@ import java.util.Collection;
 
 import quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import quantum.operation.definition.api.AbstractExtendCompositeQuantumGate;
+import qubo.Qubo;
 import qucircuit.CompositeQuantumGate;
+import qucircuit.Index;
 import qucircuit.QuantumOperation;
-import qucircuit.Qubit;
+import quope.QuantumOperationLibrary;
 
 public class Amplification extends AbstractExtendCompositeQuantumGate {
 	
@@ -17,14 +19,9 @@ public class Amplification extends AbstractExtendCompositeQuantumGate {
 	}
 	
 	@Override
-	public String getAbbreviation() {
-		return "Amplification";
-	}
-
-	@Override
-	public CompositeQuantumGate getCustomBlock(Collection<Qubit> qubits, QuantumOperation quOperation) {
+	public void getCustomBlock(Qubo qubo, QuantumOperationLibrary quantumOpLib) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 	
 	@Override
