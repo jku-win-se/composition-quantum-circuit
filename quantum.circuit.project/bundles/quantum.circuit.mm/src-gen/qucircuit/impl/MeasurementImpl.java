@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import qucircuit.Index;
 import qucircuit.Measurement;
 import qucircuit.QucircuitPackage;
+import qucircuit.Selector;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Index> classicBits;
+	protected EList<Selector> classicBits;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Index> getClassicBits() {
+	public EList<Selector> getClassicBits() {
 		if (classicBits == null) {
-			classicBits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.MEASUREMENT__CLASSIC_BITS);
+			classicBits = new EObjectContainmentEList<Selector>(Selector.class, this, QucircuitPackage.MEASUREMENT__CLASSIC_BITS);
 		}
 		return classicBits;
 	}
@@ -112,7 +112,7 @@ public class MeasurementImpl extends QuantumOperationImpl implements Measurement
 		switch (featureID) {
 			case QucircuitPackage.MEASUREMENT__CLASSIC_BITS:
 				getClassicBits().clear();
-				getClassicBits().addAll((Collection<? extends Index>)newValue);
+				getClassicBits().addAll((Collection<? extends Selector>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

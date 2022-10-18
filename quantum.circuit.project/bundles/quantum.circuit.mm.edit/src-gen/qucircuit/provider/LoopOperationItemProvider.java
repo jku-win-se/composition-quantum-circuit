@@ -412,42 +412,42 @@ public class LoopOperationItemProvider extends AbstractCompositeGateItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__FIXED_CONTROL_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexInt()));
+				 QucircuitFactory.eINSTANCE.createElementSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__FIXED_CONTROL_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexRange()));
+				 QucircuitFactory.eINSTANCE.createRangeSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__FIXED_TARGET_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexInt()));
+				 QucircuitFactory.eINSTANCE.createElementSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__FIXED_TARGET_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexRange()));
+				 QucircuitFactory.eINSTANCE.createRangeSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__LOOP_TARGET_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexInt()));
+				 QucircuitFactory.eINSTANCE.createElementSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__LOOP_TARGET_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexRange()));
+				 QucircuitFactory.eINSTANCE.createRangeSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__LOOP_CONTROL_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexInt()));
+				 QucircuitFactory.eINSTANCE.createElementSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.LOOP_OPERATION__LOOP_CONTROL_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexRange()));
+				 QucircuitFactory.eINSTANCE.createRangeSelector()));
 	}
 
 	/**

@@ -6,7 +6,6 @@ import quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import quantum.operation.definition.api.AbstractExtendCompositeQuantumGate;
 import qubo.Qubo;
 import qucircuit.CompositeQuantumGate;
-import qucircuit.Index;
 import qucircuit.QuantumOperation;
 import quope.QuantumOperationLibrary;
 

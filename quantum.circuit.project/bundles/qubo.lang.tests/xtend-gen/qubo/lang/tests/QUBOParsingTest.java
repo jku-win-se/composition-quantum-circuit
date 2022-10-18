@@ -23,7 +23,7 @@ import qubo.Qubo;
 public class QUBOParsingTest {
   @Inject
   private ParseHelper<Qubo> parseHelper;
-  
+
   @Test
   public void loadModel() {
     try {

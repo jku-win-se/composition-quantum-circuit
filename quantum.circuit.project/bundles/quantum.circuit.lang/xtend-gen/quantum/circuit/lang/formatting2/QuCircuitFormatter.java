@@ -22,7 +22,7 @@ public class QuCircuitFormatter extends AbstractFormatter2 {
   @Inject
   @Extension
   private QuCircuitGrammarAccess _quCircuitGrammarAccess;
-  
+
   protected void _format(final QuantumCircuit quantumCircuit, @Extension final IFormattableDocument document) {
     EList<QuantumRegister> _quantumRegisters = quantumCircuit.getQuantumRegisters();
     for (final QuantumRegister quantumRegister : _quantumRegisters) {
@@ -37,7 +37,7 @@ public class QuCircuitFormatter extends AbstractFormatter2 {
       document.<Layer>format(layer);
     }
   }
-  
+
   public void format(final Object quantumCircuit, final IFormattableDocument document) {
     if (quantumCircuit instanceof XtextResource) {
       _format((XtextResource)quantumCircuit, document);

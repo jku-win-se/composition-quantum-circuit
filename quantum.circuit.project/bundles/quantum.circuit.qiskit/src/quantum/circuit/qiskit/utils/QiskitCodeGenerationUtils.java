@@ -7,11 +7,14 @@ import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import qucircuit.CompositeQuantumGate;
-import qucircuit.Index;
-import qucircuit.IndexInt;
-import qucircuit.IndexRange;
+import qucircuit.ElementSelector;
+import qucircuit.Selector;
+import qucircuit.ElementSelector;
+import qucircuit.RangeSelector;
 import qucircuit.Operation;
 import qucircuit.QuantumCircuit;
+import qucircuit.RangeSelector;
+import qucircuit.Selector;
 
 public class QiskitCodeGenerationUtils {
 	
@@ -22,13 +25,13 @@ public class QiskitCodeGenerationUtils {
 	//TODO define file names
 	public static String COMPOSITE_GATE = "Composite_Gates";
 	
-	public static String indexes(EList<Index> indexes) {
+	public static String indexes(EList<Selector> indexes) {
 		var rangeOfValues = new StringBuilder().append("[");
-		for (Index index : indexes) {
-			if (index instanceof IndexInt indexObject) {
+		for (Selector index : indexes) {
+			if (index instanceof ElementSelector indexObject) {
 				rangeOfValues.append(indexObject.getIndex()).append(",");
 			}
-			else if (index instanceof IndexRange indexRangeObject) {
+			else if (index instanceof RangeSelector indexRangeObject) {
 				for (int i = indexRangeObject.getBegin(); i <= indexRangeObject.getEnd(); i++) {
 					rangeOfValues.append(i).append(",");				
 				}

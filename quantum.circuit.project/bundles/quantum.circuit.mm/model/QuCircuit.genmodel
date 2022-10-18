@@ -76,15 +76,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//LoopOperation/incrementBlockControlQubits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//LoopOperation/incrementBy"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="QuCircuit.ecore#//Index">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Index/register"/>
+    <genClasses image="false" ecoreClass="QuCircuit.ecore#//Selector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Selector/register"/>
     </genClasses>
-    <genClasses ecoreClass="QuCircuit.ecore#//IndexInt">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//IndexInt/index"/>
+    <genClasses ecoreClass="QuCircuit.ecore#//ElementSelector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//ElementSelector/index"/>
     </genClasses>
-    <genClasses ecoreClass="QuCircuit.ecore#//IndexRange">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//IndexRange/begin"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//IndexRange/end"/>
+    <genClasses ecoreClass="QuCircuit.ecore#//RangeSelector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//RangeSelector/begin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QuCircuit.ecore#//RangeSelector/end"/>
     </genClasses>
     <genClasses ecoreClass="QuCircuit.ecore#//Operation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference QuCircuit.ecore#//Operation/qubo"/>

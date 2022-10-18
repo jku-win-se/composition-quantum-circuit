@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Measurement extends QuantumOperation {
 	/**
 	 * Returns the value of the '<em><b>Classic Bits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Index}.
+	 * The list contents are of type {@link qucircuit.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Classic Bits</em>' containment reference list.
@@ -31,6 +31,6 @@ public interface Measurement extends QuantumOperation {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Index> getClassicBits();
+	EList<Selector> getClassicBits();
 
 } // Measurement

@@ -5,7 +5,7 @@ import java.util.Random;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import quantum.operation.contribution.utils.QuantumOperationContributionUtils;
-import qucircuit.IndexInt;
+import qucircuit.ElementSelector;
 import qucircuit.Layer;
 import qucircuit.QucircuitFactory;
 import qucircuit.QuantumCircuit;
@@ -50,7 +50,7 @@ public class QuboUtils {
 			//Set Parameter
 			quOpeDiagonalRz.setAngleParameter(parameter);
 			//Create IndexInt
-			IndexInt qubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();
+			ElementSelector qubitIndex = QucircuitFactory.eINSTANCE.createElementSelector();
 			qubitIndex.setIndex(i);
 			//Set Qubit
 			quOpeDiagonalRz.getTargetQubits().add(qubitIndex);
@@ -65,11 +65,11 @@ public class QuboUtils {
 				operationCNOT.setOperation(cnot);
 				quOpeCNotBegin.getOperations().add(operationCNOT);
 				//CreateIndex Target Qubit
-				IndexInt targetQubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();
+				ElementSelector targetQubitIndex = QucircuitFactory.eINSTANCE.createElementSelector();
 				targetQubitIndex.setIndex(j);
 				quOpeCNotBegin.getTargetQubits().add(targetQubitIndex);
 				//CreateIndex Control Qubit
-				IndexInt controlQubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();
+				ElementSelector controlQubitIndex = QucircuitFactory.eINSTANCE.createElementSelector();
 				controlQubitIndex.setIndex(i);			
 				quOpeCNotBegin.getControlQubits().add(controlQubitIndex);
 				cnotLayer.getQuantumOperations().add(quOpeCNotBegin);
@@ -82,7 +82,7 @@ public class QuboUtils {
 				operationRZ1.setOperation(rz);
 				quOpeRz.getOperations().add(operationRZ1);
 				//CreateIndex RZ Target Qubit
-				IndexInt targetRzQubitIndex = QucircuitFactory.eINSTANCE.createIndexInt();
+				ElementSelector targetRzQubitIndex = QucircuitFactory.eINSTANCE.createElementSelector();
 				targetRzQubitIndex.setIndex(j);
 				quOpeRz.getTargetQubits().add(targetRzQubitIndex);
 				//Set angle

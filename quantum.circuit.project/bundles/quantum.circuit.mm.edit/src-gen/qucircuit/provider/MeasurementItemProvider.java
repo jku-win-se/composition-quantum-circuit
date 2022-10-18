@@ -139,12 +139,12 @@ public class MeasurementItemProvider extends QuantumOperationItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.MEASUREMENT__CLASSIC_BITS,
-				 QucircuitFactory.eINSTANCE.createIndexInt()));
+				 QucircuitFactory.eINSTANCE.createElementSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.MEASUREMENT__CLASSIC_BITS,
-				 QucircuitFactory.eINSTANCE.createIndexRange()));
+				 QucircuitFactory.eINSTANCE.createRangeSelector()));
 	}
 
 	/**

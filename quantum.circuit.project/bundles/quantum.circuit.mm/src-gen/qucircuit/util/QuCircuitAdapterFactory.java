@@ -128,16 +128,16 @@ public class QucircuitAdapterFactory extends AdapterFactoryImpl {
 				return createLoopOperationAdapter();
 			}
 			@Override
-			public Adapter caseIndex(Index object) {
-				return createIndexAdapter();
+			public Adapter caseSelector(Selector object) {
+				return createSelectorAdapter();
 			}
 			@Override
-			public Adapter caseIndexInt(IndexInt object) {
-				return createIndexIntAdapter();
+			public Adapter caseElementSelector(ElementSelector object) {
+				return createElementSelectorAdapter();
 			}
 			@Override
-			public Adapter caseIndexRange(IndexRange object) {
-				return createIndexRangeAdapter();
+			public Adapter caseRangeSelector(RangeSelector object) {
+				return createRangeSelectorAdapter();
 			}
 			@Override
 			public Adapter caseOperation(Operation object) {
@@ -378,44 +378,44 @@ public class QucircuitAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.Index <em>Index</em>}'.
+	 * Creates a new adapter for an object of class '{@link qucircuit.Selector <em>Selector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see qucircuit.Index
+	 * @see qucircuit.Selector
 	 * @generated
 	 */
-	public Adapter createIndexAdapter() {
+	public Adapter createSelectorAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.IndexInt <em>Index Int</em>}'.
+	 * Creates a new adapter for an object of class '{@link qucircuit.ElementSelector <em>Element Selector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see qucircuit.IndexInt
+	 * @see qucircuit.ElementSelector
 	 * @generated
 	 */
-	public Adapter createIndexIntAdapter() {
+	public Adapter createElementSelectorAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link qucircuit.IndexRange <em>Index Range</em>}'.
+	 * Creates a new adapter for an object of class '{@link qucircuit.RangeSelector <em>Range Selector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see qucircuit.IndexRange
+	 * @see qucircuit.RangeSelector
 	 * @generated
 	 */
-	public Adapter createIndexRangeAdapter() {
+	public Adapter createRangeSelectorAdapter() {
 		return null;
 	}
 

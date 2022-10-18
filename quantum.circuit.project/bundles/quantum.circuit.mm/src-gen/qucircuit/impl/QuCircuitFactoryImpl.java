@@ -68,8 +68,8 @@ public class QucircuitFactoryImpl extends EFactoryImpl implements QucircuitFacto
 			case QucircuitPackage.COMPOSITE_QUANTUM_GATE: return createCompositeQuantumGate();
 			case QucircuitPackage.ANGLE_PARAMETER: return createAngleParameter();
 			case QucircuitPackage.LOOP_OPERATION: return createLoopOperation();
-			case QucircuitPackage.INDEX_INT: return createIndexInt();
-			case QucircuitPackage.INDEX_RANGE: return createIndexRange();
+			case QucircuitPackage.ELEMENT_SELECTOR: return createElementSelector();
+			case QucircuitPackage.RANGE_SELECTOR: return createRangeSelector();
 			case QucircuitPackage.OPERATION: return createOperation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -221,9 +221,9 @@ public class QucircuitFactoryImpl extends EFactoryImpl implements QucircuitFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IndexInt createIndexInt() {
-		IndexIntImpl indexInt = new IndexIntImpl();
-		return indexInt;
+	public ElementSelector createElementSelector() {
+		ElementSelectorImpl elementSelector = new ElementSelectorImpl();
+		return elementSelector;
 	}
 
 	/**
@@ -231,9 +231,9 @@ public class QucircuitFactoryImpl extends EFactoryImpl implements QucircuitFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IndexRange createIndexRange() {
-		IndexRangeImpl indexRange = new IndexRangeImpl();
-		return indexRange;
+	public RangeSelector createRangeSelector() {
+		RangeSelectorImpl rangeSelector = new RangeSelectorImpl();
+		return rangeSelector;
 	}
 
 	/**

@@ -1300,7 +1300,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStatePreparation"
-    // InternalQuCircuit.g:543:1: ruleStatePreparation returns [EObject current=null] : (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleIndex ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleIndex ) ) )* otherlv_12= ']' otherlv_13= '}' ) ;
+    // InternalQuCircuit.g:543:1: ruleStatePreparation returns [EObject current=null] : (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleSelector ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleSelector ) ) )* otherlv_12= ']' otherlv_13= '}' ) ;
     public final EObject ruleStatePreparation() throws RecognitionException {
         EObject current = null;
 
@@ -1328,11 +1328,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalQuCircuit.g:549:2: ( (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleIndex ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleIndex ) ) )* otherlv_12= ']' otherlv_13= '}' ) )
-            // InternalQuCircuit.g:550:2: (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleIndex ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleIndex ) ) )* otherlv_12= ']' otherlv_13= '}' )
+            // InternalQuCircuit.g:549:2: ( (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleSelector ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleSelector ) ) )* otherlv_12= ']' otherlv_13= '}' ) )
+            // InternalQuCircuit.g:550:2: (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleSelector ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleSelector ) ) )* otherlv_12= ']' otherlv_13= '}' )
             {
-            // InternalQuCircuit.g:550:2: (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleIndex ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleIndex ) ) )* otherlv_12= ']' otherlv_13= '}' )
-            // InternalQuCircuit.g:551:3: otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleIndex ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleIndex ) ) )* otherlv_12= ']' otherlv_13= '}'
+            // InternalQuCircuit.g:550:2: (otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleSelector ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleSelector ) ) )* otherlv_12= ']' otherlv_13= '}' )
+            // InternalQuCircuit.g:551:3: otherlv_0= 'StatePreparation' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) (otherlv_5= ',' ( (lv_operations_6_0= ruleOperation ) ) )* otherlv_7= 'targetQubits' otherlv_8= '[' ( (lv_targetQubits_9_0= ruleSelector ) ) (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleSelector ) ) )* otherlv_12= ']' otherlv_13= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_3); 
 
@@ -1475,17 +1475,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getStatePreparationAccess().getLeftSquareBracketKeyword_7());
             		
-            // InternalQuCircuit.g:634:3: ( (lv_targetQubits_9_0= ruleIndex ) )
-            // InternalQuCircuit.g:635:4: (lv_targetQubits_9_0= ruleIndex )
+            // InternalQuCircuit.g:634:3: ( (lv_targetQubits_9_0= ruleSelector ) )
+            // InternalQuCircuit.g:635:4: (lv_targetQubits_9_0= ruleSelector )
             {
-            // InternalQuCircuit.g:635:4: (lv_targetQubits_9_0= ruleIndex )
-            // InternalQuCircuit.g:636:5: lv_targetQubits_9_0= ruleIndex
+            // InternalQuCircuit.g:635:4: (lv_targetQubits_9_0= ruleSelector )
+            // InternalQuCircuit.g:636:5: lv_targetQubits_9_0= ruleSelector
             {
 
-            					newCompositeNode(grammarAccess.getStatePreparationAccess().getTargetQubitsIndexParserRuleCall_8_0());
+            					newCompositeNode(grammarAccess.getStatePreparationAccess().getTargetQubitsSelectorParserRuleCall_8_0());
             				
             pushFollow(FOLLOW_18);
-            lv_targetQubits_9_0=ruleIndex();
+            lv_targetQubits_9_0=ruleSelector();
 
             state._fsp--;
 
@@ -1497,7 +1497,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             						current,
             						"targetQubits",
             						lv_targetQubits_9_0,
-            						"quantum.circuit.lang.QuCircuit.Index");
+            						"quantum.circuit.lang.QuCircuit.Selector");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1506,7 +1506,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalQuCircuit.g:653:3: (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleIndex ) ) )*
+            // InternalQuCircuit.g:653:3: (otherlv_10= ',' ( (lv_targetQubits_11_0= ruleSelector ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1519,23 +1519,23 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalQuCircuit.g:654:4: otherlv_10= ',' ( (lv_targetQubits_11_0= ruleIndex ) )
+            	    // InternalQuCircuit.g:654:4: otherlv_10= ',' ( (lv_targetQubits_11_0= ruleSelector ) )
             	    {
             	    otherlv_10=(Token)match(input,19,FOLLOW_17); 
 
             	    				newLeafNode(otherlv_10, grammarAccess.getStatePreparationAccess().getCommaKeyword_9_0());
             	    			
-            	    // InternalQuCircuit.g:658:4: ( (lv_targetQubits_11_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:659:5: (lv_targetQubits_11_0= ruleIndex )
+            	    // InternalQuCircuit.g:658:4: ( (lv_targetQubits_11_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:659:5: (lv_targetQubits_11_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:659:5: (lv_targetQubits_11_0= ruleIndex )
-            	    // InternalQuCircuit.g:660:6: lv_targetQubits_11_0= ruleIndex
+            	    // InternalQuCircuit.g:659:5: (lv_targetQubits_11_0= ruleSelector )
+            	    // InternalQuCircuit.g:660:6: lv_targetQubits_11_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getStatePreparationAccess().getTargetQubitsIndexParserRuleCall_9_1_0());
+            	    						newCompositeNode(grammarAccess.getStatePreparationAccess().getTargetQubitsSelectorParserRuleCall_9_1_0());
             	    					
             	    pushFollow(FOLLOW_18);
-            	    lv_targetQubits_11_0=ruleIndex();
+            	    lv_targetQubits_11_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -1547,7 +1547,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"targetQubits",
             	    							lv_targetQubits_11_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -1632,7 +1632,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElementaryQuantumGate"
-    // InternalQuCircuit.g:697:1: ruleElementaryQuantumGate returns [EObject current=null] : (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' ) ;
+    // InternalQuCircuit.g:697:1: ruleElementaryQuantumGate returns [EObject current=null] : (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' ) ;
     public final EObject ruleElementaryQuantumGate() throws RecognitionException {
         EObject current = null;
 
@@ -1673,11 +1673,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalQuCircuit.g:703:2: ( (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' ) )
-            // InternalQuCircuit.g:704:2: (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' )
+            // InternalQuCircuit.g:703:2: ( (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' ) )
+            // InternalQuCircuit.g:704:2: (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' )
             {
-            // InternalQuCircuit.g:704:2: (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' )
-            // InternalQuCircuit.g:705:3: otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}'
+            // InternalQuCircuit.g:704:2: (otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}' )
+            // InternalQuCircuit.g:705:3: otherlv_0= 'ElementaryQuantumGate' ( (lv_inverseForm_1_0= 'inverseForm' ) )? ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )* (otherlv_22= 'angleParameter' ( (lv_angleParameter_23_0= ruleAngleParameter ) ) )? otherlv_24= '}'
             {
             otherlv_0=(Token)match(input,25,FOLLOW_19); 
 
@@ -1815,17 +1815,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getElementaryQuantumGateAccess().getLeftParenthesisKeyword_7());
             		
-            // InternalQuCircuit.g:783:3: ( (lv_targetQubits_9_0= ruleIndex ) )
-            // InternalQuCircuit.g:784:4: (lv_targetQubits_9_0= ruleIndex )
+            // InternalQuCircuit.g:783:3: ( (lv_targetQubits_9_0= ruleSelector ) )
+            // InternalQuCircuit.g:784:4: (lv_targetQubits_9_0= ruleSelector )
             {
-            // InternalQuCircuit.g:784:4: (lv_targetQubits_9_0= ruleIndex )
-            // InternalQuCircuit.g:785:5: lv_targetQubits_9_0= ruleIndex
+            // InternalQuCircuit.g:784:4: (lv_targetQubits_9_0= ruleSelector )
+            // InternalQuCircuit.g:785:5: lv_targetQubits_9_0= ruleSelector
             {
 
-            					newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsIndexParserRuleCall_8_0());
+            					newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_8_0());
             				
             pushFollow(FOLLOW_23);
-            lv_targetQubits_9_0=ruleIndex();
+            lv_targetQubits_9_0=ruleSelector();
 
             state._fsp--;
 
@@ -1837,7 +1837,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             						current,
             						"targetQubits",
             						lv_targetQubits_9_0,
-            						"quantum.circuit.lang.QuCircuit.Index");
+            						"quantum.circuit.lang.QuCircuit.Selector");
             					afterParserOrEnumRuleCall();
             				
 
@@ -1850,7 +1850,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_10, grammarAccess.getElementaryQuantumGateAccess().getRightParenthesisKeyword_9());
             		
-            // InternalQuCircuit.g:806:3: (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )*
+            // InternalQuCircuit.g:806:3: (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )*
             loop12:
             do {
                 int alt12=2;
@@ -1863,7 +1863,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalQuCircuit.g:807:4: otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')'
+            	    // InternalQuCircuit.g:807:4: otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')'
             	    {
             	    otherlv_11=(Token)match(input,19,FOLLOW_22); 
 
@@ -1873,17 +1873,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    				newLeafNode(otherlv_12, grammarAccess.getElementaryQuantumGateAccess().getLeftParenthesisKeyword_10_1());
             	    			
-            	    // InternalQuCircuit.g:815:4: ( (lv_targetQubits_13_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:816:5: (lv_targetQubits_13_0= ruleIndex )
+            	    // InternalQuCircuit.g:815:4: ( (lv_targetQubits_13_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:816:5: (lv_targetQubits_13_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:816:5: (lv_targetQubits_13_0= ruleIndex )
-            	    // InternalQuCircuit.g:817:6: lv_targetQubits_13_0= ruleIndex
+            	    // InternalQuCircuit.g:816:5: (lv_targetQubits_13_0= ruleSelector )
+            	    // InternalQuCircuit.g:817:6: lv_targetQubits_13_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsIndexParserRuleCall_10_2_0());
+            	    						newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_10_2_0());
             	    					
             	    pushFollow(FOLLOW_23);
-            	    lv_targetQubits_13_0=ruleIndex();
+            	    lv_targetQubits_13_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -1895,7 +1895,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"targetQubits",
             	    							lv_targetQubits_13_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -1921,7 +1921,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_15, grammarAccess.getElementaryQuantumGateAccess().getRightSquareBracketKeyword_11());
             		
-            // InternalQuCircuit.g:843:3: (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )*
+            // InternalQuCircuit.g:843:3: (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )*
             loop14:
             do {
                 int alt14=2;
@@ -1934,7 +1934,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalQuCircuit.g:844:4: otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']'
+            	    // InternalQuCircuit.g:844:4: otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']'
             	    {
             	    otherlv_16=(Token)match(input,29,FOLLOW_16); 
 
@@ -1944,17 +1944,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    				newLeafNode(otherlv_17, grammarAccess.getElementaryQuantumGateAccess().getLeftSquareBracketKeyword_12_1());
             	    			
-            	    // InternalQuCircuit.g:852:4: ( (lv_controlQubits_18_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:853:5: (lv_controlQubits_18_0= ruleIndex )
+            	    // InternalQuCircuit.g:852:4: ( (lv_controlQubits_18_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:853:5: (lv_controlQubits_18_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:853:5: (lv_controlQubits_18_0= ruleIndex )
-            	    // InternalQuCircuit.g:854:6: lv_controlQubits_18_0= ruleIndex
+            	    // InternalQuCircuit.g:853:5: (lv_controlQubits_18_0= ruleSelector )
+            	    // InternalQuCircuit.g:854:6: lv_controlQubits_18_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsIndexParserRuleCall_12_2_0());
+            	    						newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_2_0());
             	    					
             	    pushFollow(FOLLOW_18);
-            	    lv_controlQubits_18_0=ruleIndex();
+            	    lv_controlQubits_18_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -1966,7 +1966,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"controlQubits",
             	    							lv_controlQubits_18_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -1975,7 +1975,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalQuCircuit.g:871:4: (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )*
+            	    // InternalQuCircuit.g:871:4: (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )*
             	    loop13:
             	    do {
             	        int alt13=2;
@@ -1988,23 +1988,23 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	        switch (alt13) {
             	    	case 1 :
-            	    	    // InternalQuCircuit.g:872:5: otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) )
+            	    	    // InternalQuCircuit.g:872:5: otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) )
             	    	    {
             	    	    otherlv_19=(Token)match(input,19,FOLLOW_17); 
 
             	    	    					newLeafNode(otherlv_19, grammarAccess.getElementaryQuantumGateAccess().getCommaKeyword_12_3_0());
             	    	    				
-            	    	    // InternalQuCircuit.g:876:5: ( (lv_controlQubits_20_0= ruleIndex ) )
-            	    	    // InternalQuCircuit.g:877:6: (lv_controlQubits_20_0= ruleIndex )
+            	    	    // InternalQuCircuit.g:876:5: ( (lv_controlQubits_20_0= ruleSelector ) )
+            	    	    // InternalQuCircuit.g:877:6: (lv_controlQubits_20_0= ruleSelector )
             	    	    {
-            	    	    // InternalQuCircuit.g:877:6: (lv_controlQubits_20_0= ruleIndex )
-            	    	    // InternalQuCircuit.g:878:7: lv_controlQubits_20_0= ruleIndex
+            	    	    // InternalQuCircuit.g:877:6: (lv_controlQubits_20_0= ruleSelector )
+            	    	    // InternalQuCircuit.g:878:7: lv_controlQubits_20_0= ruleSelector
             	    	    {
 
-            	    	    							newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsIndexParserRuleCall_12_3_1_0());
+            	    	    							newCompositeNode(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_3_1_0());
             	    	    						
             	    	    pushFollow(FOLLOW_18);
-            	    	    lv_controlQubits_20_0=ruleIndex();
+            	    	    lv_controlQubits_20_0=ruleSelector();
 
             	    	    state._fsp--;
 
@@ -2016,7 +2016,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    	    								current,
             	    	    								"controlQubits",
             	    	    								lv_controlQubits_20_0,
-            	    	    								"quantum.circuit.lang.QuCircuit.Index");
+            	    	    								"quantum.circuit.lang.QuCircuit.Selector");
             	    	    							afterParserOrEnumRuleCall();
             	    	    						
 
@@ -2427,7 +2427,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMeasurement"
-    // InternalQuCircuit.g:1054:1: ruleMeasurement returns [EObject current=null] : (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleIndex ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleIndex ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleIndex ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleIndex ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' ) ;
+    // InternalQuCircuit.g:1054:1: ruleMeasurement returns [EObject current=null] : (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleSelector ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleSelector ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleSelector ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleSelector ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' ) ;
     public final EObject ruleMeasurement() throws RecognitionException {
         EObject current = null;
 
@@ -2468,11 +2468,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalQuCircuit.g:1060:2: ( (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleIndex ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleIndex ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleIndex ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleIndex ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' ) )
-            // InternalQuCircuit.g:1061:2: (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleIndex ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleIndex ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleIndex ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleIndex ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' )
+            // InternalQuCircuit.g:1060:2: ( (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleSelector ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleSelector ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleSelector ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleSelector ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' ) )
+            // InternalQuCircuit.g:1061:2: (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleSelector ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleSelector ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleSelector ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleSelector ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' )
             {
-            // InternalQuCircuit.g:1061:2: (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleIndex ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleIndex ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleIndex ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleIndex ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' )
-            // InternalQuCircuit.g:1062:3: otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleIndex ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleIndex ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleIndex ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleIndex ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}'
+            // InternalQuCircuit.g:1061:2: (otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleSelector ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleSelector ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleSelector ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleSelector ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}' )
+            // InternalQuCircuit.g:1062:3: otherlv_0= 'Measurement' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' (otherlv_3= 'operation' ( (lv_operations_4_0= ruleOperation ) ) )? otherlv_5= 'targetQubits' otherlv_6= '[' otherlv_7= '(' ( (lv_targetQubits_8_0= ruleSelector ) ) otherlv_9= ')' (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleSelector ) ) otherlv_13= ')' )* otherlv_14= ']' otherlv_15= 'classicBits' otherlv_16= '[' otherlv_17= '(' ( (lv_classicBits_18_0= ruleSelector ) ) otherlv_19= ')' (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleSelector ) ) otherlv_23= ')' )* otherlv_24= ']' otherlv_25= '}'
             {
             otherlv_0=(Token)match(input,35,FOLLOW_3); 
 
@@ -2577,17 +2577,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_7, grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_6());
             		
-            // InternalQuCircuit.g:1126:3: ( (lv_targetQubits_8_0= ruleIndex ) )
-            // InternalQuCircuit.g:1127:4: (lv_targetQubits_8_0= ruleIndex )
+            // InternalQuCircuit.g:1126:3: ( (lv_targetQubits_8_0= ruleSelector ) )
+            // InternalQuCircuit.g:1127:4: (lv_targetQubits_8_0= ruleSelector )
             {
-            // InternalQuCircuit.g:1127:4: (lv_targetQubits_8_0= ruleIndex )
-            // InternalQuCircuit.g:1128:5: lv_targetQubits_8_0= ruleIndex
+            // InternalQuCircuit.g:1127:4: (lv_targetQubits_8_0= ruleSelector )
+            // InternalQuCircuit.g:1128:5: lv_targetQubits_8_0= ruleSelector
             {
 
-            					newCompositeNode(grammarAccess.getMeasurementAccess().getTargetQubitsIndexParserRuleCall_7_0());
+            					newCompositeNode(grammarAccess.getMeasurementAccess().getTargetQubitsSelectorParserRuleCall_7_0());
             				
             pushFollow(FOLLOW_23);
-            lv_targetQubits_8_0=ruleIndex();
+            lv_targetQubits_8_0=ruleSelector();
 
             state._fsp--;
 
@@ -2599,7 +2599,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             						current,
             						"targetQubits",
             						lv_targetQubits_8_0,
-            						"quantum.circuit.lang.QuCircuit.Index");
+            						"quantum.circuit.lang.QuCircuit.Selector");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2612,7 +2612,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_9, grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_8());
             		
-            // InternalQuCircuit.g:1149:3: (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleIndex ) ) otherlv_13= ')' )*
+            // InternalQuCircuit.g:1149:3: (otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleSelector ) ) otherlv_13= ')' )*
             loop20:
             do {
                 int alt20=2;
@@ -2625,7 +2625,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // InternalQuCircuit.g:1150:4: otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleIndex ) ) otherlv_13= ')'
+            	    // InternalQuCircuit.g:1150:4: otherlv_10= ',' otherlv_11= '(' ( (lv_targetQubits_12_0= ruleSelector ) ) otherlv_13= ')'
             	    {
             	    otherlv_10=(Token)match(input,19,FOLLOW_22); 
 
@@ -2635,17 +2635,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    				newLeafNode(otherlv_11, grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_9_1());
             	    			
-            	    // InternalQuCircuit.g:1158:4: ( (lv_targetQubits_12_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:1159:5: (lv_targetQubits_12_0= ruleIndex )
+            	    // InternalQuCircuit.g:1158:4: ( (lv_targetQubits_12_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:1159:5: (lv_targetQubits_12_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:1159:5: (lv_targetQubits_12_0= ruleIndex )
-            	    // InternalQuCircuit.g:1160:6: lv_targetQubits_12_0= ruleIndex
+            	    // InternalQuCircuit.g:1159:5: (lv_targetQubits_12_0= ruleSelector )
+            	    // InternalQuCircuit.g:1160:6: lv_targetQubits_12_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getMeasurementAccess().getTargetQubitsIndexParserRuleCall_9_2_0());
+            	    						newCompositeNode(grammarAccess.getMeasurementAccess().getTargetQubitsSelectorParserRuleCall_9_2_0());
             	    					
             	    pushFollow(FOLLOW_23);
-            	    lv_targetQubits_12_0=ruleIndex();
+            	    lv_targetQubits_12_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -2657,7 +2657,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"targetQubits",
             	    							lv_targetQubits_12_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -2695,17 +2695,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_17, grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_13());
             		
-            // InternalQuCircuit.g:1198:3: ( (lv_classicBits_18_0= ruleIndex ) )
-            // InternalQuCircuit.g:1199:4: (lv_classicBits_18_0= ruleIndex )
+            // InternalQuCircuit.g:1198:3: ( (lv_classicBits_18_0= ruleSelector ) )
+            // InternalQuCircuit.g:1199:4: (lv_classicBits_18_0= ruleSelector )
             {
-            // InternalQuCircuit.g:1199:4: (lv_classicBits_18_0= ruleIndex )
-            // InternalQuCircuit.g:1200:5: lv_classicBits_18_0= ruleIndex
+            // InternalQuCircuit.g:1199:4: (lv_classicBits_18_0= ruleSelector )
+            // InternalQuCircuit.g:1200:5: lv_classicBits_18_0= ruleSelector
             {
 
-            					newCompositeNode(grammarAccess.getMeasurementAccess().getClassicBitsIndexParserRuleCall_14_0());
+            					newCompositeNode(grammarAccess.getMeasurementAccess().getClassicBitsSelectorParserRuleCall_14_0());
             				
             pushFollow(FOLLOW_23);
-            lv_classicBits_18_0=ruleIndex();
+            lv_classicBits_18_0=ruleSelector();
 
             state._fsp--;
 
@@ -2717,7 +2717,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             						current,
             						"classicBits",
             						lv_classicBits_18_0,
-            						"quantum.circuit.lang.QuCircuit.Index");
+            						"quantum.circuit.lang.QuCircuit.Selector");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2730,7 +2730,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_19, grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_15());
             		
-            // InternalQuCircuit.g:1221:3: (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleIndex ) ) otherlv_23= ')' )*
+            // InternalQuCircuit.g:1221:3: (otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleSelector ) ) otherlv_23= ')' )*
             loop21:
             do {
                 int alt21=2;
@@ -2743,7 +2743,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalQuCircuit.g:1222:4: otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleIndex ) ) otherlv_23= ')'
+            	    // InternalQuCircuit.g:1222:4: otherlv_20= ',' otherlv_21= '(' ( (lv_classicBits_22_0= ruleSelector ) ) otherlv_23= ')'
             	    {
             	    otherlv_20=(Token)match(input,19,FOLLOW_22); 
 
@@ -2753,17 +2753,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    				newLeafNode(otherlv_21, grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_16_1());
             	    			
-            	    // InternalQuCircuit.g:1230:4: ( (lv_classicBits_22_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:1231:5: (lv_classicBits_22_0= ruleIndex )
+            	    // InternalQuCircuit.g:1230:4: ( (lv_classicBits_22_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:1231:5: (lv_classicBits_22_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:1231:5: (lv_classicBits_22_0= ruleIndex )
-            	    // InternalQuCircuit.g:1232:6: lv_classicBits_22_0= ruleIndex
+            	    // InternalQuCircuit.g:1231:5: (lv_classicBits_22_0= ruleSelector )
+            	    // InternalQuCircuit.g:1232:6: lv_classicBits_22_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getMeasurementAccess().getClassicBitsIndexParserRuleCall_16_2_0());
+            	    						newCompositeNode(grammarAccess.getMeasurementAccess().getClassicBitsSelectorParserRuleCall_16_2_0());
             	    					
             	    pushFollow(FOLLOW_23);
-            	    lv_classicBits_22_0=ruleIndex();
+            	    lv_classicBits_22_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -2775,7 +2775,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"classicBits",
             	    							lv_classicBits_22_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -2864,7 +2864,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompositeQuantumGate"
-    // InternalQuCircuit.g:1273:1: ruleCompositeQuantumGate returns [EObject current=null] : (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )? otherlv_22= '}' ) ;
+    // InternalQuCircuit.g:1273:1: ruleCompositeQuantumGate returns [EObject current=null] : (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )? otherlv_22= '}' ) ;
     public final EObject ruleCompositeQuantumGate() throws RecognitionException {
         EObject current = null;
 
@@ -2902,11 +2902,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalQuCircuit.g:1279:2: ( (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )? otherlv_22= '}' ) )
-            // InternalQuCircuit.g:1280:2: (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )? otherlv_22= '}' )
+            // InternalQuCircuit.g:1279:2: ( (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )? otherlv_22= '}' ) )
+            // InternalQuCircuit.g:1280:2: (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )? otherlv_22= '}' )
             {
-            // InternalQuCircuit.g:1280:2: (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )? otherlv_22= '}' )
-            // InternalQuCircuit.g:1281:3: otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleIndex ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )? otherlv_22= '}'
+            // InternalQuCircuit.g:1280:2: (otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )? otherlv_22= '}' )
+            // InternalQuCircuit.g:1281:3: otherlv_0= 'CompositeQuantumGate' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? (otherlv_4= 'operation' ( (lv_operations_5_0= ruleOperation ) ) )? otherlv_6= 'targetQubits' otherlv_7= '[' otherlv_8= '(' ( (lv_targetQubits_9_0= ruleSelector ) ) otherlv_10= ')' (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )* otherlv_15= ']' (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )? otherlv_22= '}'
             {
             otherlv_0=(Token)match(input,37,FOLLOW_3); 
 
@@ -3044,17 +3044,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getCompositeQuantumGateAccess().getLeftParenthesisKeyword_7());
             		
-            // InternalQuCircuit.g:1359:3: ( (lv_targetQubits_9_0= ruleIndex ) )
-            // InternalQuCircuit.g:1360:4: (lv_targetQubits_9_0= ruleIndex )
+            // InternalQuCircuit.g:1359:3: ( (lv_targetQubits_9_0= ruleSelector ) )
+            // InternalQuCircuit.g:1360:4: (lv_targetQubits_9_0= ruleSelector )
             {
-            // InternalQuCircuit.g:1360:4: (lv_targetQubits_9_0= ruleIndex )
-            // InternalQuCircuit.g:1361:5: lv_targetQubits_9_0= ruleIndex
+            // InternalQuCircuit.g:1360:4: (lv_targetQubits_9_0= ruleSelector )
+            // InternalQuCircuit.g:1361:5: lv_targetQubits_9_0= ruleSelector
             {
 
-            					newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsIndexParserRuleCall_8_0());
+            					newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_8_0());
             				
             pushFollow(FOLLOW_23);
-            lv_targetQubits_9_0=ruleIndex();
+            lv_targetQubits_9_0=ruleSelector();
 
             state._fsp--;
 
@@ -3066,7 +3066,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             						current,
             						"targetQubits",
             						lv_targetQubits_9_0,
-            						"quantum.circuit.lang.QuCircuit.Index");
+            						"quantum.circuit.lang.QuCircuit.Selector");
             					afterParserOrEnumRuleCall();
             				
 
@@ -3079,7 +3079,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_10, grammarAccess.getCompositeQuantumGateAccess().getRightParenthesisKeyword_9());
             		
-            // InternalQuCircuit.g:1382:3: (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')' )*
+            // InternalQuCircuit.g:1382:3: (otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')' )*
             loop24:
             do {
                 int alt24=2;
@@ -3092,7 +3092,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalQuCircuit.g:1383:4: otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleIndex ) ) otherlv_14= ')'
+            	    // InternalQuCircuit.g:1383:4: otherlv_11= ',' otherlv_12= '(' ( (lv_targetQubits_13_0= ruleSelector ) ) otherlv_14= ')'
             	    {
             	    otherlv_11=(Token)match(input,19,FOLLOW_22); 
 
@@ -3102,17 +3102,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    				newLeafNode(otherlv_12, grammarAccess.getCompositeQuantumGateAccess().getLeftParenthesisKeyword_10_1());
             	    			
-            	    // InternalQuCircuit.g:1391:4: ( (lv_targetQubits_13_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:1392:5: (lv_targetQubits_13_0= ruleIndex )
+            	    // InternalQuCircuit.g:1391:4: ( (lv_targetQubits_13_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:1392:5: (lv_targetQubits_13_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:1392:5: (lv_targetQubits_13_0= ruleIndex )
-            	    // InternalQuCircuit.g:1393:6: lv_targetQubits_13_0= ruleIndex
+            	    // InternalQuCircuit.g:1392:5: (lv_targetQubits_13_0= ruleSelector )
+            	    // InternalQuCircuit.g:1393:6: lv_targetQubits_13_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsIndexParserRuleCall_10_2_0());
+            	    						newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_10_2_0());
             	    					
             	    pushFollow(FOLLOW_23);
-            	    lv_targetQubits_13_0=ruleIndex();
+            	    lv_targetQubits_13_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -3124,7 +3124,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"targetQubits",
             	    							lv_targetQubits_13_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -3150,7 +3150,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_15, grammarAccess.getCompositeQuantumGateAccess().getRightSquareBracketKeyword_11());
             		
-            // InternalQuCircuit.g:1419:3: (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']' )?
+            // InternalQuCircuit.g:1419:3: (otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']' )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -3159,7 +3159,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             }
             switch (alt26) {
                 case 1 :
-                    // InternalQuCircuit.g:1420:4: otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleIndex ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )* otherlv_21= ']'
+                    // InternalQuCircuit.g:1420:4: otherlv_16= 'controlQubits' otherlv_17= '[' ( (lv_controlQubits_18_0= ruleSelector ) ) (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )* otherlv_21= ']'
                     {
                     otherlv_16=(Token)match(input,29,FOLLOW_16); 
 
@@ -3169,17 +3169,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_17, grammarAccess.getCompositeQuantumGateAccess().getLeftSquareBracketKeyword_12_1());
                     			
-                    // InternalQuCircuit.g:1428:4: ( (lv_controlQubits_18_0= ruleIndex ) )
-                    // InternalQuCircuit.g:1429:5: (lv_controlQubits_18_0= ruleIndex )
+                    // InternalQuCircuit.g:1428:4: ( (lv_controlQubits_18_0= ruleSelector ) )
+                    // InternalQuCircuit.g:1429:5: (lv_controlQubits_18_0= ruleSelector )
                     {
-                    // InternalQuCircuit.g:1429:5: (lv_controlQubits_18_0= ruleIndex )
-                    // InternalQuCircuit.g:1430:6: lv_controlQubits_18_0= ruleIndex
+                    // InternalQuCircuit.g:1429:5: (lv_controlQubits_18_0= ruleSelector )
+                    // InternalQuCircuit.g:1430:6: lv_controlQubits_18_0= ruleSelector
                     {
 
-                    						newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsIndexParserRuleCall_12_2_0());
+                    						newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_2_0());
                     					
                     pushFollow(FOLLOW_18);
-                    lv_controlQubits_18_0=ruleIndex();
+                    lv_controlQubits_18_0=ruleSelector();
 
                     state._fsp--;
 
@@ -3191,7 +3191,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     							current,
                     							"controlQubits",
                     							lv_controlQubits_18_0,
-                    							"quantum.circuit.lang.QuCircuit.Index");
+                    							"quantum.circuit.lang.QuCircuit.Selector");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -3200,7 +3200,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalQuCircuit.g:1447:4: (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) ) )*
+                    // InternalQuCircuit.g:1447:4: (otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) ) )*
                     loop25:
                     do {
                         int alt25=2;
@@ -3213,23 +3213,23 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                         switch (alt25) {
                     	case 1 :
-                    	    // InternalQuCircuit.g:1448:5: otherlv_19= ',' ( (lv_controlQubits_20_0= ruleIndex ) )
+                    	    // InternalQuCircuit.g:1448:5: otherlv_19= ',' ( (lv_controlQubits_20_0= ruleSelector ) )
                     	    {
                     	    otherlv_19=(Token)match(input,19,FOLLOW_17); 
 
                     	    					newLeafNode(otherlv_19, grammarAccess.getCompositeQuantumGateAccess().getCommaKeyword_12_3_0());
                     	    				
-                    	    // InternalQuCircuit.g:1452:5: ( (lv_controlQubits_20_0= ruleIndex ) )
-                    	    // InternalQuCircuit.g:1453:6: (lv_controlQubits_20_0= ruleIndex )
+                    	    // InternalQuCircuit.g:1452:5: ( (lv_controlQubits_20_0= ruleSelector ) )
+                    	    // InternalQuCircuit.g:1453:6: (lv_controlQubits_20_0= ruleSelector )
                     	    {
-                    	    // InternalQuCircuit.g:1453:6: (lv_controlQubits_20_0= ruleIndex )
-                    	    // InternalQuCircuit.g:1454:7: lv_controlQubits_20_0= ruleIndex
+                    	    // InternalQuCircuit.g:1453:6: (lv_controlQubits_20_0= ruleSelector )
+                    	    // InternalQuCircuit.g:1454:7: lv_controlQubits_20_0= ruleSelector
                     	    {
 
-                    	    							newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsIndexParserRuleCall_12_3_1_0());
+                    	    							newCompositeNode(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_3_1_0());
                     	    						
                     	    pushFollow(FOLLOW_18);
-                    	    lv_controlQubits_20_0=ruleIndex();
+                    	    lv_controlQubits_20_0=ruleSelector();
 
                     	    state._fsp--;
 
@@ -3241,7 +3241,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     	    								current,
                     	    								"controlQubits",
                     	    								lv_controlQubits_20_0,
-                    	    								"quantum.circuit.lang.QuCircuit.Index");
+                    	    								"quantum.circuit.lang.QuCircuit.Selector");
                     	    							afterParserOrEnumRuleCall();
                     	    						
 
@@ -3332,7 +3332,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoop"
-    // InternalQuCircuit.g:1492:1: ruleLoop returns [EObject current=null] : (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleIndex ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleIndex ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleIndex ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleIndex ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleIndex ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleIndex ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleIndex ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleIndex ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' ) ;
+    // InternalQuCircuit.g:1492:1: ruleLoop returns [EObject current=null] : (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleSelector ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleSelector ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleSelector ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleSelector ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleSelector ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleSelector ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleSelector ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleSelector ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' ) ;
     public final EObject ruleLoop() throws RecognitionException {
         EObject current = null;
 
@@ -3434,11 +3434,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalQuCircuit.g:1498:2: ( (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleIndex ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleIndex ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleIndex ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleIndex ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleIndex ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleIndex ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleIndex ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleIndex ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' ) )
-            // InternalQuCircuit.g:1499:2: (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleIndex ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleIndex ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleIndex ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleIndex ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleIndex ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleIndex ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleIndex ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleIndex ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' )
+            // InternalQuCircuit.g:1498:2: ( (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleSelector ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleSelector ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleSelector ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleSelector ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleSelector ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleSelector ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleSelector ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleSelector ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' ) )
+            // InternalQuCircuit.g:1499:2: (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleSelector ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleSelector ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleSelector ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleSelector ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleSelector ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleSelector ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleSelector ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleSelector ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' )
             {
-            // InternalQuCircuit.g:1499:2: (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleIndex ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleIndex ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleIndex ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleIndex ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleIndex ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleIndex ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleIndex ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleIndex ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' )
-            // InternalQuCircuit.g:1500:3: otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleIndex ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleIndex ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleIndex ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleIndex ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleIndex ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleIndex ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleIndex ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleIndex ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}'
+            // InternalQuCircuit.g:1499:2: (otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleSelector ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleSelector ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleSelector ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleSelector ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleSelector ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleSelector ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleSelector ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleSelector ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}' )
+            // InternalQuCircuit.g:1500:3: otherlv_0= 'Loop' ( (lv_name_1_0= ruleEString ) ) otherlv_2= '{' ( (lv_inverseForm_3_0= 'inverseForm' ) )? ( (lv_incrementBlockTargetQubits_4_0= 'incrementBlockTargetQubits' ) )? ( (lv_incrementBlockControlQubits_5_0= 'incrementBlockControlQubits' ) )? (otherlv_6= 'iterations' ( (lv_iterations_7_0= RULE_INT ) ) )? ( (lv_incrementTargetQubits_8_0= 'incrementTargetQubits' ) )? ( (lv_incrementControlQubits_9_0= 'incrementControlQubits' ) )? (otherlv_10= 'targetQubitsBlockSize' ( (lv_targetQubitsBlockSize_11_0= RULE_INT ) ) )? (otherlv_12= 'controlQubitsBlockSize' ( (lv_controlQubitsBlockSize_13_0= RULE_INT ) ) )? (otherlv_14= 'controlQubitsIterationType' ( (lv_controlQubitsIterationType_15_0= ruleITERATION_TYPE ) ) )? (otherlv_16= 'targetQubitsIterationType' ( (lv_targetQubitsIterationType_17_0= ruleITERATION_TYPE ) ) )? (otherlv_18= 'incrementBy' ( (lv_incrementBy_19_0= RULE_INT ) ) )? (otherlv_20= 'operations' otherlv_21= '(' ( (lv_operations_22_0= ruleOperation ) ) (otherlv_23= ',' ( (lv_operations_24_0= ruleOperation ) ) )* otherlv_25= ')' )? otherlv_26= 'targetQubits' otherlv_27= '[' otherlv_28= '(' ( (lv_targetQubits_29_0= ruleSelector ) ) otherlv_30= ')' (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleSelector ) ) otherlv_34= ')' )* otherlv_35= ']' (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleSelector ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )* otherlv_41= ']' )? (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleSelector ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )* otherlv_47= ']' )? (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleSelector ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )* otherlv_53= ']' )? otherlv_54= 'loop' ( ( ruleEString ) ) otherlv_56= 'loopTargetQubits' otherlv_57= '[' otherlv_58= '(' ( (lv_loopTargetQubits_59_0= ruleSelector ) ) otherlv_60= ')' (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleSelector ) ) otherlv_64= ')' )* otherlv_65= ']' (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleSelector ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )* otherlv_75= ']' )? otherlv_76= '}'
             {
             otherlv_0=(Token)match(input,38,FOLLOW_3); 
 
@@ -4067,17 +4067,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_28, grammarAccess.getLoopAccess().getLeftParenthesisKeyword_17());
             		
-            // InternalQuCircuit.g:1813:3: ( (lv_targetQubits_29_0= ruleIndex ) )
-            // InternalQuCircuit.g:1814:4: (lv_targetQubits_29_0= ruleIndex )
+            // InternalQuCircuit.g:1813:3: ( (lv_targetQubits_29_0= ruleSelector ) )
+            // InternalQuCircuit.g:1814:4: (lv_targetQubits_29_0= ruleSelector )
             {
-            // InternalQuCircuit.g:1814:4: (lv_targetQubits_29_0= ruleIndex )
-            // InternalQuCircuit.g:1815:5: lv_targetQubits_29_0= ruleIndex
+            // InternalQuCircuit.g:1814:4: (lv_targetQubits_29_0= ruleSelector )
+            // InternalQuCircuit.g:1815:5: lv_targetQubits_29_0= ruleSelector
             {
 
-            					newCompositeNode(grammarAccess.getLoopAccess().getTargetQubitsIndexParserRuleCall_18_0());
+            					newCompositeNode(grammarAccess.getLoopAccess().getTargetQubitsSelectorParserRuleCall_18_0());
             				
             pushFollow(FOLLOW_23);
-            lv_targetQubits_29_0=ruleIndex();
+            lv_targetQubits_29_0=ruleSelector();
 
             state._fsp--;
 
@@ -4089,7 +4089,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             						current,
             						"targetQubits",
             						lv_targetQubits_29_0,
-            						"quantum.circuit.lang.QuCircuit.Index");
+            						"quantum.circuit.lang.QuCircuit.Selector");
             					afterParserOrEnumRuleCall();
             				
 
@@ -4102,7 +4102,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_30, grammarAccess.getLoopAccess().getRightParenthesisKeyword_19());
             		
-            // InternalQuCircuit.g:1836:3: (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleIndex ) ) otherlv_34= ')' )*
+            // InternalQuCircuit.g:1836:3: (otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleSelector ) ) otherlv_34= ')' )*
             loop40:
             do {
                 int alt40=2;
@@ -4115,7 +4115,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt40) {
             	case 1 :
-            	    // InternalQuCircuit.g:1837:4: otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleIndex ) ) otherlv_34= ')'
+            	    // InternalQuCircuit.g:1837:4: otherlv_31= ',' otherlv_32= '(' ( (lv_targetQubits_33_0= ruleSelector ) ) otherlv_34= ')'
             	    {
             	    otherlv_31=(Token)match(input,19,FOLLOW_22); 
 
@@ -4125,17 +4125,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    				newLeafNode(otherlv_32, grammarAccess.getLoopAccess().getLeftParenthesisKeyword_20_1());
             	    			
-            	    // InternalQuCircuit.g:1845:4: ( (lv_targetQubits_33_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:1846:5: (lv_targetQubits_33_0= ruleIndex )
+            	    // InternalQuCircuit.g:1845:4: ( (lv_targetQubits_33_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:1846:5: (lv_targetQubits_33_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:1846:5: (lv_targetQubits_33_0= ruleIndex )
-            	    // InternalQuCircuit.g:1847:6: lv_targetQubits_33_0= ruleIndex
+            	    // InternalQuCircuit.g:1846:5: (lv_targetQubits_33_0= ruleSelector )
+            	    // InternalQuCircuit.g:1847:6: lv_targetQubits_33_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getLoopAccess().getTargetQubitsIndexParserRuleCall_20_2_0());
+            	    						newCompositeNode(grammarAccess.getLoopAccess().getTargetQubitsSelectorParserRuleCall_20_2_0());
             	    					
             	    pushFollow(FOLLOW_23);
-            	    lv_targetQubits_33_0=ruleIndex();
+            	    lv_targetQubits_33_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -4147,7 +4147,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"targetQubits",
             	    							lv_targetQubits_33_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -4173,7 +4173,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_35, grammarAccess.getLoopAccess().getRightSquareBracketKeyword_21());
             		
-            // InternalQuCircuit.g:1873:3: (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleIndex ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )* otherlv_41= ']' )?
+            // InternalQuCircuit.g:1873:3: (otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleSelector ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )* otherlv_41= ']' )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -4182,7 +4182,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             }
             switch (alt42) {
                 case 1 :
-                    // InternalQuCircuit.g:1874:4: otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleIndex ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )* otherlv_41= ']'
+                    // InternalQuCircuit.g:1874:4: otherlv_36= 'controlQubits' otherlv_37= '[' ( (lv_controlQubits_38_0= ruleSelector ) ) (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )* otherlv_41= ']'
                     {
                     otherlv_36=(Token)match(input,29,FOLLOW_16); 
 
@@ -4192,17 +4192,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_37, grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_22_1());
                     			
-                    // InternalQuCircuit.g:1882:4: ( (lv_controlQubits_38_0= ruleIndex ) )
-                    // InternalQuCircuit.g:1883:5: (lv_controlQubits_38_0= ruleIndex )
+                    // InternalQuCircuit.g:1882:4: ( (lv_controlQubits_38_0= ruleSelector ) )
+                    // InternalQuCircuit.g:1883:5: (lv_controlQubits_38_0= ruleSelector )
                     {
-                    // InternalQuCircuit.g:1883:5: (lv_controlQubits_38_0= ruleIndex )
-                    // InternalQuCircuit.g:1884:6: lv_controlQubits_38_0= ruleIndex
+                    // InternalQuCircuit.g:1883:5: (lv_controlQubits_38_0= ruleSelector )
+                    // InternalQuCircuit.g:1884:6: lv_controlQubits_38_0= ruleSelector
                     {
 
-                    						newCompositeNode(grammarAccess.getLoopAccess().getControlQubitsIndexParserRuleCall_22_2_0());
+                    						newCompositeNode(grammarAccess.getLoopAccess().getControlQubitsSelectorParserRuleCall_22_2_0());
                     					
                     pushFollow(FOLLOW_18);
-                    lv_controlQubits_38_0=ruleIndex();
+                    lv_controlQubits_38_0=ruleSelector();
 
                     state._fsp--;
 
@@ -4214,7 +4214,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     							current,
                     							"controlQubits",
                     							lv_controlQubits_38_0,
-                    							"quantum.circuit.lang.QuCircuit.Index");
+                    							"quantum.circuit.lang.QuCircuit.Selector");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -4223,7 +4223,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalQuCircuit.g:1901:4: (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) ) )*
+                    // InternalQuCircuit.g:1901:4: (otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) ) )*
                     loop41:
                     do {
                         int alt41=2;
@@ -4236,23 +4236,23 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                         switch (alt41) {
                     	case 1 :
-                    	    // InternalQuCircuit.g:1902:5: otherlv_39= ',' ( (lv_controlQubits_40_0= ruleIndex ) )
+                    	    // InternalQuCircuit.g:1902:5: otherlv_39= ',' ( (lv_controlQubits_40_0= ruleSelector ) )
                     	    {
                     	    otherlv_39=(Token)match(input,19,FOLLOW_17); 
 
                     	    					newLeafNode(otherlv_39, grammarAccess.getLoopAccess().getCommaKeyword_22_3_0());
                     	    				
-                    	    // InternalQuCircuit.g:1906:5: ( (lv_controlQubits_40_0= ruleIndex ) )
-                    	    // InternalQuCircuit.g:1907:6: (lv_controlQubits_40_0= ruleIndex )
+                    	    // InternalQuCircuit.g:1906:5: ( (lv_controlQubits_40_0= ruleSelector ) )
+                    	    // InternalQuCircuit.g:1907:6: (lv_controlQubits_40_0= ruleSelector )
                     	    {
-                    	    // InternalQuCircuit.g:1907:6: (lv_controlQubits_40_0= ruleIndex )
-                    	    // InternalQuCircuit.g:1908:7: lv_controlQubits_40_0= ruleIndex
+                    	    // InternalQuCircuit.g:1907:6: (lv_controlQubits_40_0= ruleSelector )
+                    	    // InternalQuCircuit.g:1908:7: lv_controlQubits_40_0= ruleSelector
                     	    {
 
-                    	    							newCompositeNode(grammarAccess.getLoopAccess().getControlQubitsIndexParserRuleCall_22_3_1_0());
+                    	    							newCompositeNode(grammarAccess.getLoopAccess().getControlQubitsSelectorParserRuleCall_22_3_1_0());
                     	    						
                     	    pushFollow(FOLLOW_18);
-                    	    lv_controlQubits_40_0=ruleIndex();
+                    	    lv_controlQubits_40_0=ruleSelector();
 
                     	    state._fsp--;
 
@@ -4264,7 +4264,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     	    								current,
                     	    								"controlQubits",
                     	    								lv_controlQubits_40_0,
-                    	    								"quantum.circuit.lang.QuCircuit.Index");
+                    	    								"quantum.circuit.lang.QuCircuit.Selector");
                     	    							afterParserOrEnumRuleCall();
                     	    						
 
@@ -4292,7 +4292,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalQuCircuit.g:1931:3: (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleIndex ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )* otherlv_47= ']' )?
+            // InternalQuCircuit.g:1931:3: (otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleSelector ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )* otherlv_47= ']' )?
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -4301,7 +4301,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             }
             switch (alt44) {
                 case 1 :
-                    // InternalQuCircuit.g:1932:4: otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleIndex ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )* otherlv_47= ']'
+                    // InternalQuCircuit.g:1932:4: otherlv_42= 'fixedControlQubits' otherlv_43= '[' ( (lv_fixedControlQubits_44_0= ruleSelector ) ) (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )* otherlv_47= ']'
                     {
                     otherlv_42=(Token)match(input,50,FOLLOW_16); 
 
@@ -4311,17 +4311,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_43, grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_23_1());
                     			
-                    // InternalQuCircuit.g:1940:4: ( (lv_fixedControlQubits_44_0= ruleIndex ) )
-                    // InternalQuCircuit.g:1941:5: (lv_fixedControlQubits_44_0= ruleIndex )
+                    // InternalQuCircuit.g:1940:4: ( (lv_fixedControlQubits_44_0= ruleSelector ) )
+                    // InternalQuCircuit.g:1941:5: (lv_fixedControlQubits_44_0= ruleSelector )
                     {
-                    // InternalQuCircuit.g:1941:5: (lv_fixedControlQubits_44_0= ruleIndex )
-                    // InternalQuCircuit.g:1942:6: lv_fixedControlQubits_44_0= ruleIndex
+                    // InternalQuCircuit.g:1941:5: (lv_fixedControlQubits_44_0= ruleSelector )
+                    // InternalQuCircuit.g:1942:6: lv_fixedControlQubits_44_0= ruleSelector
                     {
 
-                    						newCompositeNode(grammarAccess.getLoopAccess().getFixedControlQubitsIndexParserRuleCall_23_2_0());
+                    						newCompositeNode(grammarAccess.getLoopAccess().getFixedControlQubitsSelectorParserRuleCall_23_2_0());
                     					
                     pushFollow(FOLLOW_18);
-                    lv_fixedControlQubits_44_0=ruleIndex();
+                    lv_fixedControlQubits_44_0=ruleSelector();
 
                     state._fsp--;
 
@@ -4333,7 +4333,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     							current,
                     							"fixedControlQubits",
                     							lv_fixedControlQubits_44_0,
-                    							"quantum.circuit.lang.QuCircuit.Index");
+                    							"quantum.circuit.lang.QuCircuit.Selector");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -4342,7 +4342,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalQuCircuit.g:1959:4: (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) ) )*
+                    // InternalQuCircuit.g:1959:4: (otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) ) )*
                     loop43:
                     do {
                         int alt43=2;
@@ -4355,23 +4355,23 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                         switch (alt43) {
                     	case 1 :
-                    	    // InternalQuCircuit.g:1960:5: otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleIndex ) )
+                    	    // InternalQuCircuit.g:1960:5: otherlv_45= ',' ( (lv_fixedControlQubits_46_0= ruleSelector ) )
                     	    {
                     	    otherlv_45=(Token)match(input,19,FOLLOW_17); 
 
                     	    					newLeafNode(otherlv_45, grammarAccess.getLoopAccess().getCommaKeyword_23_3_0());
                     	    				
-                    	    // InternalQuCircuit.g:1964:5: ( (lv_fixedControlQubits_46_0= ruleIndex ) )
-                    	    // InternalQuCircuit.g:1965:6: (lv_fixedControlQubits_46_0= ruleIndex )
+                    	    // InternalQuCircuit.g:1964:5: ( (lv_fixedControlQubits_46_0= ruleSelector ) )
+                    	    // InternalQuCircuit.g:1965:6: (lv_fixedControlQubits_46_0= ruleSelector )
                     	    {
-                    	    // InternalQuCircuit.g:1965:6: (lv_fixedControlQubits_46_0= ruleIndex )
-                    	    // InternalQuCircuit.g:1966:7: lv_fixedControlQubits_46_0= ruleIndex
+                    	    // InternalQuCircuit.g:1965:6: (lv_fixedControlQubits_46_0= ruleSelector )
+                    	    // InternalQuCircuit.g:1966:7: lv_fixedControlQubits_46_0= ruleSelector
                     	    {
 
-                    	    							newCompositeNode(grammarAccess.getLoopAccess().getFixedControlQubitsIndexParserRuleCall_23_3_1_0());
+                    	    							newCompositeNode(grammarAccess.getLoopAccess().getFixedControlQubitsSelectorParserRuleCall_23_3_1_0());
                     	    						
                     	    pushFollow(FOLLOW_18);
-                    	    lv_fixedControlQubits_46_0=ruleIndex();
+                    	    lv_fixedControlQubits_46_0=ruleSelector();
 
                     	    state._fsp--;
 
@@ -4383,7 +4383,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     	    								current,
                     	    								"fixedControlQubits",
                     	    								lv_fixedControlQubits_46_0,
-                    	    								"quantum.circuit.lang.QuCircuit.Index");
+                    	    								"quantum.circuit.lang.QuCircuit.Selector");
                     	    							afterParserOrEnumRuleCall();
                     	    						
 
@@ -4411,7 +4411,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalQuCircuit.g:1989:3: (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleIndex ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )* otherlv_53= ']' )?
+            // InternalQuCircuit.g:1989:3: (otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleSelector ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )* otherlv_53= ']' )?
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -4420,7 +4420,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             }
             switch (alt46) {
                 case 1 :
-                    // InternalQuCircuit.g:1990:4: otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleIndex ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )* otherlv_53= ']'
+                    // InternalQuCircuit.g:1990:4: otherlv_48= 'fixedTargetQubits' otherlv_49= '[' ( (lv_fixedTargetQubits_50_0= ruleSelector ) ) (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )* otherlv_53= ']'
                     {
                     otherlv_48=(Token)match(input,51,FOLLOW_16); 
 
@@ -4430,17 +4430,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_49, grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_24_1());
                     			
-                    // InternalQuCircuit.g:1998:4: ( (lv_fixedTargetQubits_50_0= ruleIndex ) )
-                    // InternalQuCircuit.g:1999:5: (lv_fixedTargetQubits_50_0= ruleIndex )
+                    // InternalQuCircuit.g:1998:4: ( (lv_fixedTargetQubits_50_0= ruleSelector ) )
+                    // InternalQuCircuit.g:1999:5: (lv_fixedTargetQubits_50_0= ruleSelector )
                     {
-                    // InternalQuCircuit.g:1999:5: (lv_fixedTargetQubits_50_0= ruleIndex )
-                    // InternalQuCircuit.g:2000:6: lv_fixedTargetQubits_50_0= ruleIndex
+                    // InternalQuCircuit.g:1999:5: (lv_fixedTargetQubits_50_0= ruleSelector )
+                    // InternalQuCircuit.g:2000:6: lv_fixedTargetQubits_50_0= ruleSelector
                     {
 
-                    						newCompositeNode(grammarAccess.getLoopAccess().getFixedTargetQubitsIndexParserRuleCall_24_2_0());
+                    						newCompositeNode(grammarAccess.getLoopAccess().getFixedTargetQubitsSelectorParserRuleCall_24_2_0());
                     					
                     pushFollow(FOLLOW_18);
-                    lv_fixedTargetQubits_50_0=ruleIndex();
+                    lv_fixedTargetQubits_50_0=ruleSelector();
 
                     state._fsp--;
 
@@ -4452,7 +4452,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     							current,
                     							"fixedTargetQubits",
                     							lv_fixedTargetQubits_50_0,
-                    							"quantum.circuit.lang.QuCircuit.Index");
+                    							"quantum.circuit.lang.QuCircuit.Selector");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -4461,7 +4461,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalQuCircuit.g:2017:4: (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) ) )*
+                    // InternalQuCircuit.g:2017:4: (otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) ) )*
                     loop45:
                     do {
                         int alt45=2;
@@ -4474,23 +4474,23 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                         switch (alt45) {
                     	case 1 :
-                    	    // InternalQuCircuit.g:2018:5: otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleIndex ) )
+                    	    // InternalQuCircuit.g:2018:5: otherlv_51= ',' ( (lv_fixedTargetQubits_52_0= ruleSelector ) )
                     	    {
                     	    otherlv_51=(Token)match(input,19,FOLLOW_17); 
 
                     	    					newLeafNode(otherlv_51, grammarAccess.getLoopAccess().getCommaKeyword_24_3_0());
                     	    				
-                    	    // InternalQuCircuit.g:2022:5: ( (lv_fixedTargetQubits_52_0= ruleIndex ) )
-                    	    // InternalQuCircuit.g:2023:6: (lv_fixedTargetQubits_52_0= ruleIndex )
+                    	    // InternalQuCircuit.g:2022:5: ( (lv_fixedTargetQubits_52_0= ruleSelector ) )
+                    	    // InternalQuCircuit.g:2023:6: (lv_fixedTargetQubits_52_0= ruleSelector )
                     	    {
-                    	    // InternalQuCircuit.g:2023:6: (lv_fixedTargetQubits_52_0= ruleIndex )
-                    	    // InternalQuCircuit.g:2024:7: lv_fixedTargetQubits_52_0= ruleIndex
+                    	    // InternalQuCircuit.g:2023:6: (lv_fixedTargetQubits_52_0= ruleSelector )
+                    	    // InternalQuCircuit.g:2024:7: lv_fixedTargetQubits_52_0= ruleSelector
                     	    {
 
-                    	    							newCompositeNode(grammarAccess.getLoopAccess().getFixedTargetQubitsIndexParserRuleCall_24_3_1_0());
+                    	    							newCompositeNode(grammarAccess.getLoopAccess().getFixedTargetQubitsSelectorParserRuleCall_24_3_1_0());
                     	    						
                     	    pushFollow(FOLLOW_18);
-                    	    lv_fixedTargetQubits_52_0=ruleIndex();
+                    	    lv_fixedTargetQubits_52_0=ruleSelector();
 
                     	    state._fsp--;
 
@@ -4502,7 +4502,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     	    								current,
                     	    								"fixedTargetQubits",
                     	    								lv_fixedTargetQubits_52_0,
-                    	    								"quantum.circuit.lang.QuCircuit.Index");
+                    	    								"quantum.circuit.lang.QuCircuit.Selector");
                     	    							afterParserOrEnumRuleCall();
                     	    						
 
@@ -4574,17 +4574,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_58, grammarAccess.getLoopAccess().getLeftParenthesisKeyword_29());
             		
-            // InternalQuCircuit.g:2079:3: ( (lv_loopTargetQubits_59_0= ruleIndex ) )
-            // InternalQuCircuit.g:2080:4: (lv_loopTargetQubits_59_0= ruleIndex )
+            // InternalQuCircuit.g:2079:3: ( (lv_loopTargetQubits_59_0= ruleSelector ) )
+            // InternalQuCircuit.g:2080:4: (lv_loopTargetQubits_59_0= ruleSelector )
             {
-            // InternalQuCircuit.g:2080:4: (lv_loopTargetQubits_59_0= ruleIndex )
-            // InternalQuCircuit.g:2081:5: lv_loopTargetQubits_59_0= ruleIndex
+            // InternalQuCircuit.g:2080:4: (lv_loopTargetQubits_59_0= ruleSelector )
+            // InternalQuCircuit.g:2081:5: lv_loopTargetQubits_59_0= ruleSelector
             {
 
-            					newCompositeNode(grammarAccess.getLoopAccess().getLoopTargetQubitsIndexParserRuleCall_30_0());
+            					newCompositeNode(grammarAccess.getLoopAccess().getLoopTargetQubitsSelectorParserRuleCall_30_0());
             				
             pushFollow(FOLLOW_23);
-            lv_loopTargetQubits_59_0=ruleIndex();
+            lv_loopTargetQubits_59_0=ruleSelector();
 
             state._fsp--;
 
@@ -4596,7 +4596,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             						current,
             						"loopTargetQubits",
             						lv_loopTargetQubits_59_0,
-            						"quantum.circuit.lang.QuCircuit.Index");
+            						"quantum.circuit.lang.QuCircuit.Selector");
             					afterParserOrEnumRuleCall();
             				
 
@@ -4609,7 +4609,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_60, grammarAccess.getLoopAccess().getRightParenthesisKeyword_31());
             		
-            // InternalQuCircuit.g:2102:3: (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleIndex ) ) otherlv_64= ')' )*
+            // InternalQuCircuit.g:2102:3: (otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleSelector ) ) otherlv_64= ')' )*
             loop47:
             do {
                 int alt47=2;
@@ -4622,7 +4622,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                 switch (alt47) {
             	case 1 :
-            	    // InternalQuCircuit.g:2103:4: otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleIndex ) ) otherlv_64= ')'
+            	    // InternalQuCircuit.g:2103:4: otherlv_61= ',' otherlv_62= '(' ( (lv_loopTargetQubits_63_0= ruleSelector ) ) otherlv_64= ')'
             	    {
             	    otherlv_61=(Token)match(input,19,FOLLOW_22); 
 
@@ -4632,17 +4632,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             	    				newLeafNode(otherlv_62, grammarAccess.getLoopAccess().getLeftParenthesisKeyword_32_1());
             	    			
-            	    // InternalQuCircuit.g:2111:4: ( (lv_loopTargetQubits_63_0= ruleIndex ) )
-            	    // InternalQuCircuit.g:2112:5: (lv_loopTargetQubits_63_0= ruleIndex )
+            	    // InternalQuCircuit.g:2111:4: ( (lv_loopTargetQubits_63_0= ruleSelector ) )
+            	    // InternalQuCircuit.g:2112:5: (lv_loopTargetQubits_63_0= ruleSelector )
             	    {
-            	    // InternalQuCircuit.g:2112:5: (lv_loopTargetQubits_63_0= ruleIndex )
-            	    // InternalQuCircuit.g:2113:6: lv_loopTargetQubits_63_0= ruleIndex
+            	    // InternalQuCircuit.g:2112:5: (lv_loopTargetQubits_63_0= ruleSelector )
+            	    // InternalQuCircuit.g:2113:6: lv_loopTargetQubits_63_0= ruleSelector
             	    {
 
-            	    						newCompositeNode(grammarAccess.getLoopAccess().getLoopTargetQubitsIndexParserRuleCall_32_2_0());
+            	    						newCompositeNode(grammarAccess.getLoopAccess().getLoopTargetQubitsSelectorParserRuleCall_32_2_0());
             	    					
             	    pushFollow(FOLLOW_23);
-            	    lv_loopTargetQubits_63_0=ruleIndex();
+            	    lv_loopTargetQubits_63_0=ruleSelector();
 
             	    state._fsp--;
 
@@ -4654,7 +4654,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             	    							current,
             	    							"loopTargetQubits",
             	    							lv_loopTargetQubits_63_0,
-            	    							"quantum.circuit.lang.QuCircuit.Index");
+            	    							"quantum.circuit.lang.QuCircuit.Selector");
             	    						afterParserOrEnumRuleCall();
             	    					
 
@@ -4680,7 +4680,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_65, grammarAccess.getLoopAccess().getRightSquareBracketKeyword_33());
             		
-            // InternalQuCircuit.g:2139:3: (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleIndex ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )* otherlv_75= ']' )?
+            // InternalQuCircuit.g:2139:3: (otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleSelector ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )* otherlv_75= ']' )?
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -4689,7 +4689,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             }
             switch (alt49) {
                 case 1 :
-                    // InternalQuCircuit.g:2140:4: otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleIndex ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )* otherlv_75= ']'
+                    // InternalQuCircuit.g:2140:4: otherlv_66= 'loopControlQubits' otherlv_67= '[' otherlv_68= '(' ( (lv_loopControlQubits_69_0= ruleSelector ) ) otherlv_70= ')' (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )* otherlv_75= ']'
                     {
                     otherlv_66=(Token)match(input,54,FOLLOW_16); 
 
@@ -4703,17 +4703,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_68, grammarAccess.getLoopAccess().getLeftParenthesisKeyword_34_2());
                     			
-                    // InternalQuCircuit.g:2152:4: ( (lv_loopControlQubits_69_0= ruleIndex ) )
-                    // InternalQuCircuit.g:2153:5: (lv_loopControlQubits_69_0= ruleIndex )
+                    // InternalQuCircuit.g:2152:4: ( (lv_loopControlQubits_69_0= ruleSelector ) )
+                    // InternalQuCircuit.g:2153:5: (lv_loopControlQubits_69_0= ruleSelector )
                     {
-                    // InternalQuCircuit.g:2153:5: (lv_loopControlQubits_69_0= ruleIndex )
-                    // InternalQuCircuit.g:2154:6: lv_loopControlQubits_69_0= ruleIndex
+                    // InternalQuCircuit.g:2153:5: (lv_loopControlQubits_69_0= ruleSelector )
+                    // InternalQuCircuit.g:2154:6: lv_loopControlQubits_69_0= ruleSelector
                     {
 
-                    						newCompositeNode(grammarAccess.getLoopAccess().getLoopControlQubitsIndexParserRuleCall_34_3_0());
+                    						newCompositeNode(grammarAccess.getLoopAccess().getLoopControlQubitsSelectorParserRuleCall_34_3_0());
                     					
                     pushFollow(FOLLOW_23);
-                    lv_loopControlQubits_69_0=ruleIndex();
+                    lv_loopControlQubits_69_0=ruleSelector();
 
                     state._fsp--;
 
@@ -4725,7 +4725,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     							current,
                     							"loopControlQubits",
                     							lv_loopControlQubits_69_0,
-                    							"quantum.circuit.lang.QuCircuit.Index");
+                    							"quantum.circuit.lang.QuCircuit.Selector");
                     						afterParserOrEnumRuleCall();
                     					
 
@@ -4738,7 +4738,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_70, grammarAccess.getLoopAccess().getRightParenthesisKeyword_34_4());
                     			
-                    // InternalQuCircuit.g:2175:4: (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')' )*
+                    // InternalQuCircuit.g:2175:4: (otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')' )*
                     loop48:
                     do {
                         int alt48=2;
@@ -4751,7 +4751,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                         switch (alt48) {
                     	case 1 :
-                    	    // InternalQuCircuit.g:2176:5: otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleIndex ) ) otherlv_74= ')'
+                    	    // InternalQuCircuit.g:2176:5: otherlv_71= ',' otherlv_72= '(' ( (lv_loopControlQubits_73_0= ruleSelector ) ) otherlv_74= ')'
                     	    {
                     	    otherlv_71=(Token)match(input,19,FOLLOW_22); 
 
@@ -4761,17 +4761,17 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     	    					newLeafNode(otherlv_72, grammarAccess.getLoopAccess().getLeftParenthesisKeyword_34_5_1());
                     	    				
-                    	    // InternalQuCircuit.g:2184:5: ( (lv_loopControlQubits_73_0= ruleIndex ) )
-                    	    // InternalQuCircuit.g:2185:6: (lv_loopControlQubits_73_0= ruleIndex )
+                    	    // InternalQuCircuit.g:2184:5: ( (lv_loopControlQubits_73_0= ruleSelector ) )
+                    	    // InternalQuCircuit.g:2185:6: (lv_loopControlQubits_73_0= ruleSelector )
                     	    {
-                    	    // InternalQuCircuit.g:2185:6: (lv_loopControlQubits_73_0= ruleIndex )
-                    	    // InternalQuCircuit.g:2186:7: lv_loopControlQubits_73_0= ruleIndex
+                    	    // InternalQuCircuit.g:2185:6: (lv_loopControlQubits_73_0= ruleSelector )
+                    	    // InternalQuCircuit.g:2186:7: lv_loopControlQubits_73_0= ruleSelector
                     	    {
 
-                    	    							newCompositeNode(grammarAccess.getLoopAccess().getLoopControlQubitsIndexParserRuleCall_34_5_2_0());
+                    	    							newCompositeNode(grammarAccess.getLoopAccess().getLoopControlQubitsSelectorParserRuleCall_34_5_2_0());
                     	    						
                     	    pushFollow(FOLLOW_23);
-                    	    lv_loopControlQubits_73_0=ruleIndex();
+                    	    lv_loopControlQubits_73_0=ruleSelector();
 
                     	    state._fsp--;
 
@@ -4783,7 +4783,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     	    								current,
                     	    								"loopControlQubits",
                     	    								lv_loopControlQubits_73_0,
-                    	    								"quantum.circuit.lang.QuCircuit.Index");
+                    	    								"quantum.circuit.lang.QuCircuit.Selector");
                     	    							afterParserOrEnumRuleCall();
                     	    						
 
@@ -4998,25 +4998,25 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleOperation"
 
 
-    // $ANTLR start "entryRuleIndex"
-    // InternalQuCircuit.g:2282:1: entryRuleIndex returns [EObject current=null] : iv_ruleIndex= ruleIndex EOF ;
-    public final EObject entryRuleIndex() throws RecognitionException {
+    // $ANTLR start "entryRuleSelector"
+    // InternalQuCircuit.g:2282:1: entryRuleSelector returns [EObject current=null] : iv_ruleSelector= ruleSelector EOF ;
+    public final EObject entryRuleSelector() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleIndex = null;
+        EObject iv_ruleSelector = null;
 
 
         try {
-            // InternalQuCircuit.g:2282:46: (iv_ruleIndex= ruleIndex EOF )
-            // InternalQuCircuit.g:2283:2: iv_ruleIndex= ruleIndex EOF
+            // InternalQuCircuit.g:2282:49: (iv_ruleSelector= ruleSelector EOF )
+            // InternalQuCircuit.g:2283:2: iv_ruleSelector= ruleSelector EOF
             {
-             newCompositeNode(grammarAccess.getIndexRule()); 
+             newCompositeNode(grammarAccess.getSelectorRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleIndex=ruleIndex();
+            iv_ruleSelector=ruleSelector();
 
             state._fsp--;
 
-             current =iv_ruleIndex; 
+             current =iv_ruleSelector; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -5031,27 +5031,27 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleIndex"
+    // $ANTLR end "entryRuleSelector"
 
 
-    // $ANTLR start "ruleIndex"
-    // InternalQuCircuit.g:2289:1: ruleIndex returns [EObject current=null] : (this_IndexInt_0= ruleIndexInt | this_IndexRange_1= ruleIndexRange ) ;
-    public final EObject ruleIndex() throws RecognitionException {
+    // $ANTLR start "ruleSelector"
+    // InternalQuCircuit.g:2289:1: ruleSelector returns [EObject current=null] : (this_ElementSelector_0= ruleElementSelector | this_RangeSelector_1= ruleRangeSelector ) ;
+    public final EObject ruleSelector() throws RecognitionException {
         EObject current = null;
 
-        EObject this_IndexInt_0 = null;
+        EObject this_ElementSelector_0 = null;
 
-        EObject this_IndexRange_1 = null;
+        EObject this_RangeSelector_1 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalQuCircuit.g:2295:2: ( (this_IndexInt_0= ruleIndexInt | this_IndexRange_1= ruleIndexRange ) )
-            // InternalQuCircuit.g:2296:2: (this_IndexInt_0= ruleIndexInt | this_IndexRange_1= ruleIndexRange )
+            // InternalQuCircuit.g:2295:2: ( (this_ElementSelector_0= ruleElementSelector | this_RangeSelector_1= ruleRangeSelector ) )
+            // InternalQuCircuit.g:2296:2: (this_ElementSelector_0= ruleElementSelector | this_RangeSelector_1= ruleRangeSelector )
             {
-            // InternalQuCircuit.g:2296:2: (this_IndexInt_0= ruleIndexInt | this_IndexRange_1= ruleIndexRange )
+            // InternalQuCircuit.g:2296:2: (this_ElementSelector_0= ruleElementSelector | this_RangeSelector_1= ruleRangeSelector )
             int alt51=2;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -5157,36 +5157,36 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             switch (alt51) {
                 case 1 :
-                    // InternalQuCircuit.g:2297:3: this_IndexInt_0= ruleIndexInt
+                    // InternalQuCircuit.g:2297:3: this_ElementSelector_0= ruleElementSelector
                     {
 
-                    			newCompositeNode(grammarAccess.getIndexAccess().getIndexIntParserRuleCall_0());
+                    			newCompositeNode(grammarAccess.getSelectorAccess().getElementSelectorParserRuleCall_0());
                     		
                     pushFollow(FOLLOW_2);
-                    this_IndexInt_0=ruleIndexInt();
+                    this_ElementSelector_0=ruleElementSelector();
 
                     state._fsp--;
 
 
-                    			current = this_IndexInt_0;
+                    			current = this_ElementSelector_0;
                     			afterParserOrEnumRuleCall();
                     		
 
                     }
                     break;
                 case 2 :
-                    // InternalQuCircuit.g:2306:3: this_IndexRange_1= ruleIndexRange
+                    // InternalQuCircuit.g:2306:3: this_RangeSelector_1= ruleRangeSelector
                     {
 
-                    			newCompositeNode(grammarAccess.getIndexAccess().getIndexRangeParserRuleCall_1());
+                    			newCompositeNode(grammarAccess.getSelectorAccess().getRangeSelectorParserRuleCall_1());
                     		
                     pushFollow(FOLLOW_2);
-                    this_IndexRange_1=ruleIndexRange();
+                    this_RangeSelector_1=ruleRangeSelector();
 
                     state._fsp--;
 
 
-                    			current = this_IndexRange_1;
+                    			current = this_RangeSelector_1;
                     			afterParserOrEnumRuleCall();
                     		
 
@@ -5211,28 +5211,28 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleIndex"
+    // $ANTLR end "ruleSelector"
 
 
-    // $ANTLR start "entryRuleIndexInt"
-    // InternalQuCircuit.g:2318:1: entryRuleIndexInt returns [EObject current=null] : iv_ruleIndexInt= ruleIndexInt EOF ;
-    public final EObject entryRuleIndexInt() throws RecognitionException {
+    // $ANTLR start "entryRuleElementSelector"
+    // InternalQuCircuit.g:2318:1: entryRuleElementSelector returns [EObject current=null] : iv_ruleElementSelector= ruleElementSelector EOF ;
+    public final EObject entryRuleElementSelector() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleIndexInt = null;
+        EObject iv_ruleElementSelector = null;
 
 
         try {
-            // InternalQuCircuit.g:2318:49: (iv_ruleIndexInt= ruleIndexInt EOF )
-            // InternalQuCircuit.g:2319:2: iv_ruleIndexInt= ruleIndexInt EOF
+            // InternalQuCircuit.g:2318:56: (iv_ruleElementSelector= ruleElementSelector EOF )
+            // InternalQuCircuit.g:2319:2: iv_ruleElementSelector= ruleElementSelector EOF
             {
-             newCompositeNode(grammarAccess.getIndexIntRule()); 
+             newCompositeNode(grammarAccess.getElementSelectorRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleIndexInt=ruleIndexInt();
+            iv_ruleElementSelector=ruleElementSelector();
 
             state._fsp--;
 
-             current =iv_ruleIndexInt; 
+             current =iv_ruleElementSelector; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -5247,12 +5247,12 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleIndexInt"
+    // $ANTLR end "entryRuleElementSelector"
 
 
-    // $ANTLR start "ruleIndexInt"
-    // InternalQuCircuit.g:2325:1: ruleIndexInt returns [EObject current=null] : ( () ( ( ( ruleEString ) ) otherlv_2= ',' )? ( (lv_index_3_0= RULE_INT ) ) ) ;
-    public final EObject ruleIndexInt() throws RecognitionException {
+    // $ANTLR start "ruleElementSelector"
+    // InternalQuCircuit.g:2325:1: ruleElementSelector returns [EObject current=null] : ( () ( ( ( ruleEString ) ) otherlv_2= ',' )? ( (lv_index_3_0= RULE_INT ) ) ) ;
+    public final EObject ruleElementSelector() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_2=null;
@@ -5273,7 +5273,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             {
 
             				current = forceCreateModelElement(
-            					grammarAccess.getIndexIntAccess().getIndexIntAction_0(),
+            					grammarAccess.getElementSelectorAccess().getElementSelectorAction_0(),
             					current);
             			
 
@@ -5298,11 +5298,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     {
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getIndexIntRule());
+                    							current = createModelElement(grammarAccess.getElementSelectorRule());
                     						}
                     					
 
-                    						newCompositeNode(grammarAccess.getIndexIntAccess().getRegisterRegisterCrossReference_1_0_0());
+                    						newCompositeNode(grammarAccess.getElementSelectorAccess().getRegisterRegisterCrossReference_1_0_0());
                     					
                     pushFollow(FOLLOW_54);
                     ruleEString();
@@ -5320,7 +5320,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     otherlv_2=(Token)match(input,19,FOLLOW_9); 
 
-                    				newLeafNode(otherlv_2, grammarAccess.getIndexIntAccess().getCommaKeyword_1_1());
+                    				newLeafNode(otherlv_2, grammarAccess.getElementSelectorAccess().getCommaKeyword_1_1());
                     			
 
                     }
@@ -5336,11 +5336,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             {
             lv_index_3_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-            					newLeafNode(lv_index_3_0, grammarAccess.getIndexIntAccess().getIndexINTTerminalRuleCall_2_0());
+            					newLeafNode(lv_index_3_0, grammarAccess.getElementSelectorAccess().getIndexINTTerminalRuleCall_2_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getIndexIntRule());
+            						current = createModelElement(grammarAccess.getElementSelectorRule());
             					}
             					setWithLastConsumed(
             						current,
@@ -5373,28 +5373,28 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleIndexInt"
+    // $ANTLR end "ruleElementSelector"
 
 
-    // $ANTLR start "entryRuleIndexRange"
-    // InternalQuCircuit.g:2384:1: entryRuleIndexRange returns [EObject current=null] : iv_ruleIndexRange= ruleIndexRange EOF ;
-    public final EObject entryRuleIndexRange() throws RecognitionException {
+    // $ANTLR start "entryRuleRangeSelector"
+    // InternalQuCircuit.g:2384:1: entryRuleRangeSelector returns [EObject current=null] : iv_ruleRangeSelector= ruleRangeSelector EOF ;
+    public final EObject entryRuleRangeSelector() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleIndexRange = null;
+        EObject iv_ruleRangeSelector = null;
 
 
         try {
-            // InternalQuCircuit.g:2384:51: (iv_ruleIndexRange= ruleIndexRange EOF )
-            // InternalQuCircuit.g:2385:2: iv_ruleIndexRange= ruleIndexRange EOF
+            // InternalQuCircuit.g:2384:54: (iv_ruleRangeSelector= ruleRangeSelector EOF )
+            // InternalQuCircuit.g:2385:2: iv_ruleRangeSelector= ruleRangeSelector EOF
             {
-             newCompositeNode(grammarAccess.getIndexRangeRule()); 
+             newCompositeNode(grammarAccess.getRangeSelectorRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleIndexRange=ruleIndexRange();
+            iv_ruleRangeSelector=ruleRangeSelector();
 
             state._fsp--;
 
-             current =iv_ruleIndexRange; 
+             current =iv_ruleRangeSelector; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -5409,12 +5409,12 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleIndexRange"
+    // $ANTLR end "entryRuleRangeSelector"
 
 
-    // $ANTLR start "ruleIndexRange"
-    // InternalQuCircuit.g:2391:1: ruleIndexRange returns [EObject current=null] : ( () ( ( ( ruleEString ) ) otherlv_2= ',' )? ( (lv_begin_3_0= RULE_INT ) ) otherlv_4= '-' ( (lv_end_5_0= RULE_INT ) ) ) ;
-    public final EObject ruleIndexRange() throws RecognitionException {
+    // $ANTLR start "ruleRangeSelector"
+    // InternalQuCircuit.g:2391:1: ruleRangeSelector returns [EObject current=null] : ( () ( ( ( ruleEString ) ) otherlv_2= ',' )? ( (lv_begin_3_0= RULE_INT ) ) otherlv_4= '-' ( (lv_end_5_0= RULE_INT ) ) ) ;
+    public final EObject ruleRangeSelector() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_2=null;
@@ -5437,7 +5437,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             {
 
             				current = forceCreateModelElement(
-            					grammarAccess.getIndexRangeAccess().getIndexRangeAction_0(),
+            					grammarAccess.getRangeSelectorAccess().getRangeSelectorAction_0(),
             					current);
             			
 
@@ -5462,11 +5462,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
                     {
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getIndexRangeRule());
+                    							current = createModelElement(grammarAccess.getRangeSelectorRule());
                     						}
                     					
 
-                    						newCompositeNode(grammarAccess.getIndexRangeAccess().getRegisterRegisterCrossReference_1_0_0());
+                    						newCompositeNode(grammarAccess.getRangeSelectorAccess().getRegisterRegisterCrossReference_1_0_0());
                     					
                     pushFollow(FOLLOW_54);
                     ruleEString();
@@ -5484,7 +5484,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
                     otherlv_2=(Token)match(input,19,FOLLOW_9); 
 
-                    				newLeafNode(otherlv_2, grammarAccess.getIndexRangeAccess().getCommaKeyword_1_1());
+                    				newLeafNode(otherlv_2, grammarAccess.getRangeSelectorAccess().getCommaKeyword_1_1());
                     			
 
                     }
@@ -5500,11 +5500,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             {
             lv_begin_3_0=(Token)match(input,RULE_INT,FOLLOW_55); 
 
-            					newLeafNode(lv_begin_3_0, grammarAccess.getIndexRangeAccess().getBeginINTTerminalRuleCall_2_0());
+            					newLeafNode(lv_begin_3_0, grammarAccess.getRangeSelectorAccess().getBeginINTTerminalRuleCall_2_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getIndexRangeRule());
+            						current = createModelElement(grammarAccess.getRangeSelectorRule());
             					}
             					setWithLastConsumed(
             						current,
@@ -5520,7 +5520,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
 
             otherlv_4=(Token)match(input,55,FOLLOW_9); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getIndexRangeAccess().getHyphenMinusKeyword_3());
+            			newLeafNode(otherlv_4, grammarAccess.getRangeSelectorAccess().getHyphenMinusKeyword_3());
             		
             // InternalQuCircuit.g:2450:3: ( (lv_end_5_0= RULE_INT ) )
             // InternalQuCircuit.g:2451:4: (lv_end_5_0= RULE_INT )
@@ -5530,11 +5530,11 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
             {
             lv_end_5_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-            					newLeafNode(lv_end_5_0, grammarAccess.getIndexRangeAccess().getEndINTTerminalRuleCall_4_0());
+            					newLeafNode(lv_end_5_0, grammarAccess.getRangeSelectorAccess().getEndINTTerminalRuleCall_4_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getIndexRangeRule());
+            						current = createModelElement(grammarAccess.getRangeSelectorRule());
             					}
             					setWithLastConsumed(
             						current,
@@ -5567,7 +5567,7 @@ public class InternalQuCircuitParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleIndexRange"
+    // $ANTLR end "ruleRangeSelector"
 
 
     // $ANTLR start "entryRuleEString"

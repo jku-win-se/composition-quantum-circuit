@@ -50,7 +50,7 @@ StatePreparation returns StatePreparation:
 	name=EString
 	'{'
 		'operation' operations+=Operation ( "," operations+=Operation)*
-		'targetQubits' '[' targetQubits+=Index ( "," targetQubits+=Index)* ']'
+		'targetQubits' '[' targetQubits+=Selector ( "," targetQubits+=Selector)* ']'
 		//TODO classic control 
 		//('classicControl' classicControl=ClassicControl)?
 	'}';
@@ -61,8 +61,8 @@ ElementaryQuantumGate returns ElementaryQuantumGate:
 	name=EString
 	'{'
 		('operation' operations+=Operation)?
-		'targetQubits' '[' '(' targetQubits+=Index ')' ( "," '(' targetQubits+=Index ')')* ']'
-		('controlQubits' '[' controlQubits+=Index ( "," controlQubits+=Index)* ']')*
+		'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
+		('controlQubits' '[' controlQubits+=Selector ( "," controlQubits+=Selector)* ']')*
 		//TODO ('classicControl' classicControl=ClassicControl)?
 		('angleParameter' angleParameter=AngleParameter)?
 	'}';	
@@ -81,8 +81,8 @@ Measurement returns Measurement:
 	name=EString
 	'{'
 		('operation' operations+=Operation)?
-		'targetQubits' '[' '(' targetQubits+=Index ')' ( "," '(' targetQubits+=Index ')')* ']' 
-		'classicBits' '[' '(' classicBits+=Index  ')' ( "," '(' classicBits+=Index ')')* ']' 
+		'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']' 
+		'classicBits' '[' '(' classicBits+=Selector  ')' ( "," '(' classicBits+=Selector ')')* ']' 
 		//TODO ('classicControl' classicControl=ClassicControl)?
 	'}';
 
@@ -92,8 +92,8 @@ CompositeQuantumGate returns CompositeQuantumGate:
 	'{'
 		(inverseForm?='inverseForm')?
 		('operation' operations+=Operation)?
-		'targetQubits' '[' '(' targetQubits+=Index ')' ( ","  '(' targetQubits+=Index ')' )* ']' 
-		('controlQubits' '[' controlQubits+=Index ( "," controlQubits+=Index)* ']' )?
+		'targetQubits' '[' '(' targetQubits+=Selector ')' ( ","  '(' targetQubits+=Selector ')' )* ']' 
+		('controlQubits' '[' controlQubits+=Selector ( "," controlQubits+=Selector)* ']' )?
 		//TODO ('classicControl' classicControl=ClassicControl)?
 		//TODO ('layers' '{' layers+=Layer ( "," layers+=Layer)* '}' )?		
 	'}';
@@ -114,13 +114,13 @@ Loop returns LoopOperation:
 		('targetQubitsIterationType' targetQubitsIterationType=ITERATION_TYPE)?
 		('incrementBy' incrementBy=INT)?
 		('operations' '(' operations+=Operation ( "," operations+=Operation)* ')')?
-		'targetQubits' '[' '(' targetQubits+=Index ')' ( "," '(' targetQubits+=Index ')' )* ']' 
-		('controlQubits' '[' controlQubits+=Index ( "," controlQubits+=Index)* ']' )?
-		('fixedControlQubits' '[' fixedControlQubits+=Index ( "," fixedControlQubits+=Index)* ']' )?
-		('fixedTargetQubits' '[' fixedTargetQubits+=Index ( "," fixedTargetQubits+=Index)* ']' )?
+		'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')' )* ']' 
+		('controlQubits' '[' controlQubits+=Selector ( "," controlQubits+=Selector)* ']' )?
+		('fixedControlQubits' '[' fixedControlQubits+=Selector ( "," fixedControlQubits+=Selector)* ']' )?
+		('fixedTargetQubits' '[' fixedTargetQubits+=Selector ( "," fixedTargetQubits+=Selector)* ']' )?
 		'loop' loop=[quope::ConcreteLoopOperation|EString]
-		'loopTargetQubits' '[' '(' loopTargetQubits+=Index ')' ( "," '(' loopTargetQubits+=Index ')')* ']' 
-		('loopControlQubits' '[' '(' loopControlQubits+=Index ')' ( "," '(' loopControlQubits+=Index ')' )* ']' )?
+		'loopTargetQubits' '[' '(' loopTargetQubits+=Selector ')' ( "," '(' loopTargetQubits+=Selector ')')* ']' 
+		('loopControlQubits' '[' '(' loopControlQubits+=Selector ')' ( "," '(' loopControlQubits+=Selector ')' )* ']' )?
 //TODO	('classicControl' classicControl=ClassicControl)?
 //		('layers' '{' layers+=Layer ( "," layers+=Layer)* '}' )?
 	'}';
@@ -129,17 +129,17 @@ Operation returns Operation:
 	operation=[quope::ConcreteQuantumOperation|EString] ('(' qubo=[qubo::Qubo|EString] ')')?	
 	;	
 
-Index returns Index:
-	IndexInt | IndexRange
+Selector returns Selector:
+	ElementSelector | RangeSelector
 	;
 	
-IndexInt returns IndexInt:
-	{IndexInt}
+ElementSelector returns ElementSelector:
+	{ElementSelector}
 	(register=[Register|EString] ',')? index=INT
 	;
 
-IndexRange returns IndexRange:
-	{IndexRange}
+RangeSelector returns RangeSelector:
+	{RangeSelector}
 	(register=[Register|EString] ',')? begin=INT'-'end=INT
 	;
 

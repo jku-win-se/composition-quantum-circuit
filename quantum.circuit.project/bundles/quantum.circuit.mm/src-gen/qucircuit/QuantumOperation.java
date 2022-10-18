@@ -60,7 +60,7 @@ public interface QuantumOperation extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Target Qubits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Index}.
+	 * The list contents are of type {@link qucircuit.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Qubits</em>' containment reference list.
@@ -68,6 +68,6 @@ public interface QuantumOperation extends NamedElement {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Index> getTargetQubits();
+	EList<Selector> getTargetQubits();
 
 } // QuantumOperation

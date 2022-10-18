@@ -18,9 +18,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.ITERATION_TYPE;
-import qucircuit.Index;
 import qucircuit.LoopOperation;
 import qucircuit.QucircuitPackage;
+import qucircuit.Selector;
 
 import quope.ConcreteLoopOperation;
 
@@ -80,7 +80,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Index> fixedControlQubits;
+	protected EList<Selector> fixedControlQubits;
 
 	/**
 	 * The cached value of the '{@link #getFixedTargetQubits() <em>Fixed Target Qubits</em>}' containment reference list.
@@ -90,7 +90,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Index> fixedTargetQubits;
+	protected EList<Selector> fixedTargetQubits;
 
 	/**
 	 * The cached value of the '{@link #getLoop() <em>Loop</em>}' reference.
@@ -150,7 +150,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Index> loopTargetQubits;
+	protected EList<Selector> loopTargetQubits;
 
 	/**
 	 * The cached value of the '{@link #getLoopControlQubits() <em>Loop Control Qubits</em>}' containment reference list.
@@ -160,7 +160,7 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Index> loopControlQubits;
+	protected EList<Selector> loopControlQubits;
 
 	/**
 	 * The default value of the '{@link #getTargetQubitsBlockSize() <em>Target Qubits Block Size</em>}' attribute.
@@ -347,9 +347,9 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Index> getFixedControlQubits() {
+	public EList<Selector> getFixedControlQubits() {
 		if (fixedControlQubits == null) {
-			fixedControlQubits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.LOOP_OPERATION__FIXED_CONTROL_QUBITS);
+			fixedControlQubits = new EObjectContainmentEList<Selector>(Selector.class, this, QucircuitPackage.LOOP_OPERATION__FIXED_CONTROL_QUBITS);
 		}
 		return fixedControlQubits;
 	}
@@ -359,9 +359,9 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Index> getFixedTargetQubits() {
+	public EList<Selector> getFixedTargetQubits() {
 		if (fixedTargetQubits == null) {
-			fixedTargetQubits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.LOOP_OPERATION__FIXED_TARGET_QUBITS);
+			fixedTargetQubits = new EObjectContainmentEList<Selector>(Selector.class, this, QucircuitPackage.LOOP_OPERATION__FIXED_TARGET_QUBITS);
 		}
 		return fixedTargetQubits;
 	}
@@ -451,9 +451,9 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Index> getLoopTargetQubits() {
+	public EList<Selector> getLoopTargetQubits() {
 		if (loopTargetQubits == null) {
-			loopTargetQubits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.LOOP_OPERATION__LOOP_TARGET_QUBITS);
+			loopTargetQubits = new EObjectContainmentEList<Selector>(Selector.class, this, QucircuitPackage.LOOP_OPERATION__LOOP_TARGET_QUBITS);
 		}
 		return loopTargetQubits;
 	}
@@ -463,9 +463,9 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Index> getLoopControlQubits() {
+	public EList<Selector> getLoopControlQubits() {
 		if (loopControlQubits == null) {
-			loopControlQubits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.LOOP_OPERATION__LOOP_CONTROL_QUBITS);
+			loopControlQubits = new EObjectContainmentEList<Selector>(Selector.class, this, QucircuitPackage.LOOP_OPERATION__LOOP_CONTROL_QUBITS);
 		}
 		return loopControlQubits;
 	}
@@ -694,11 +694,11 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 				return;
 			case QucircuitPackage.LOOP_OPERATION__FIXED_CONTROL_QUBITS:
 				getFixedControlQubits().clear();
-				getFixedControlQubits().addAll((Collection<? extends Index>)newValue);
+				getFixedControlQubits().addAll((Collection<? extends Selector>)newValue);
 				return;
 			case QucircuitPackage.LOOP_OPERATION__FIXED_TARGET_QUBITS:
 				getFixedTargetQubits().clear();
-				getFixedTargetQubits().addAll((Collection<? extends Index>)newValue);
+				getFixedTargetQubits().addAll((Collection<? extends Selector>)newValue);
 				return;
 			case QucircuitPackage.LOOP_OPERATION__LOOP:
 				setLoop((ConcreteLoopOperation)newValue);
@@ -711,11 +711,11 @@ public class LoopOperationImpl extends AbstractCompositeGateImpl implements Loop
 				return;
 			case QucircuitPackage.LOOP_OPERATION__LOOP_TARGET_QUBITS:
 				getLoopTargetQubits().clear();
-				getLoopTargetQubits().addAll((Collection<? extends Index>)newValue);
+				getLoopTargetQubits().addAll((Collection<? extends Selector>)newValue);
 				return;
 			case QucircuitPackage.LOOP_OPERATION__LOOP_CONTROL_QUBITS:
 				getLoopControlQubits().clear();
-				getLoopControlQubits().addAll((Collection<? extends Index>)newValue);
+				getLoopControlQubits().addAll((Collection<? extends Selector>)newValue);
 				return;
 			case QucircuitPackage.LOOP_OPERATION__TARGET_QUBITS_BLOCK_SIZE:
 				setTargetQubitsBlockSize((Integer)newValue);

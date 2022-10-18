@@ -166,12 +166,12 @@ public class QuantumOperationItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexInt()));
+				 QucircuitFactory.eINSTANCE.createElementSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.QUANTUM_OPERATION__TARGET_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexRange()));
+				 QucircuitFactory.eINSTANCE.createRangeSelector()));
 	}
 
 }

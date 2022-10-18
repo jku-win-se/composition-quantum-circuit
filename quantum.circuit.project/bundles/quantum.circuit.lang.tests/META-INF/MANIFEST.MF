@@ -8,7 +8,6 @@ Bundle-SymbolicName: quantum.circuit.lang.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: quantum.circuit.lang,
  quantum.circuit.mm,
- org.junit.jupiter.api;bundle-version="[5.1.0,6.0.0)",
  org.eclipse.xtext.testing,
  org.eclipse.xtext.xbase.testing,
  org.eclipse.xtext.xbase.lib;bundle-version="2.14.0"

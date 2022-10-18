@@ -121,22 +121,22 @@ public interface QucircuitFactory extends EFactory {
 	LoopOperation createLoopOperation();
 
 	/**
-	 * Returns a new object of class '<em>Index Int</em>'.
+	 * Returns a new object of class '<em>Element Selector</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Index Int</em>'.
+	 * @return a new object of class '<em>Element Selector</em>'.
 	 * @generated
 	 */
-	IndexInt createIndexInt();
+	ElementSelector createElementSelector();
 
 	/**
-	 * Returns a new object of class '<em>Index Range</em>'.
+	 * Returns a new object of class '<em>Range Selector</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Index Range</em>'.
+	 * @return a new object of class '<em>Range Selector</em>'.
 	 * @generated
 	 */
-	IndexRange createIndexRange();
+	RangeSelector createRangeSelector();
 
 	/**
 	 * Returns a new object of class '<em>Operation</em>'.

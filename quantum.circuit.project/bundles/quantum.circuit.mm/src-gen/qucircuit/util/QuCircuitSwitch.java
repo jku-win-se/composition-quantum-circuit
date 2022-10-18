@@ -183,23 +183,23 @@ public class QucircuitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case QucircuitPackage.INDEX: {
-				Index index = (Index)theEObject;
-				T result = caseIndex(index);
+			case QucircuitPackage.SELECTOR: {
+				Selector selector = (Selector)theEObject;
+				T result = caseSelector(selector);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case QucircuitPackage.INDEX_INT: {
-				IndexInt indexInt = (IndexInt)theEObject;
-				T result = caseIndexInt(indexInt);
-				if (result == null) result = caseIndex(indexInt);
+			case QucircuitPackage.ELEMENT_SELECTOR: {
+				ElementSelector elementSelector = (ElementSelector)theEObject;
+				T result = caseElementSelector(elementSelector);
+				if (result == null) result = caseSelector(elementSelector);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case QucircuitPackage.INDEX_RANGE: {
-				IndexRange indexRange = (IndexRange)theEObject;
-				T result = caseIndexRange(indexRange);
-				if (result == null) result = caseIndex(indexRange);
+			case QucircuitPackage.RANGE_SELECTOR: {
+				RangeSelector rangeSelector = (RangeSelector)theEObject;
+				T result = caseRangeSelector(rangeSelector);
+				if (result == null) result = caseSelector(rangeSelector);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -446,47 +446,47 @@ public class QucircuitSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Index</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Selector</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Index</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Selector</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIndex(Index object) {
+	public T caseSelector(Selector object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Index Int</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Element Selector</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Index Int</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Element Selector</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIndexInt(IndexInt object) {
+	public T caseElementSelector(ElementSelector object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Index Range</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Range Selector</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Index Range</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Range Selector</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIndexRange(IndexRange object) {
+	public T caseRangeSelector(RangeSelector object) {
 		return null;
 	}
 

@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.ClassicControl;
-import qucircuit.Index;
 import qucircuit.Operation;
 import qucircuit.QuantumOperation;
 import qucircuit.QucircuitPackage;
+import qucircuit.Selector;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public abstract class QuantumOperationImpl extends NamedElementImpl implements Q
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Index> targetQubits;
+	protected EList<Selector> targetQubits;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,9 +148,9 @@ public abstract class QuantumOperationImpl extends NamedElementImpl implements Q
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Index> getTargetQubits() {
+	public EList<Selector> getTargetQubits() {
 		if (targetQubits == null) {
-			targetQubits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.QUANTUM_OPERATION__TARGET_QUBITS);
+			targetQubits = new EObjectContainmentEList<Selector>(Selector.class, this, QucircuitPackage.QUANTUM_OPERATION__TARGET_QUBITS);
 		}
 		return targetQubits;
 	}
@@ -209,7 +209,7 @@ public abstract class QuantumOperationImpl extends NamedElementImpl implements Q
 				return;
 			case QucircuitPackage.QUANTUM_OPERATION__TARGET_QUBITS:
 				getTargetQubits().clear();
-				getTargetQubits().addAll((Collection<? extends Index>)newValue);
+				getTargetQubits().addAll((Collection<? extends Selector>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

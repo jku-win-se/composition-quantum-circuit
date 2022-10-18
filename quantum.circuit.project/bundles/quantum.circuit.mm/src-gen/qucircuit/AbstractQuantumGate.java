@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
 public interface AbstractQuantumGate extends QuantumOperation {
 	/**
 	 * Returns the value of the '<em><b>Control Qubits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Index}.
+	 * The list contents are of type {@link qucircuit.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Control Qubits</em>' containment reference list.
@@ -32,7 +32,7 @@ public interface AbstractQuantumGate extends QuantumOperation {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Index> getControlQubits();
+	EList<Selector> getControlQubits();
 
 	/**
 	 * Returns the value of the '<em><b>Inverse Form</b></em>' attribute.

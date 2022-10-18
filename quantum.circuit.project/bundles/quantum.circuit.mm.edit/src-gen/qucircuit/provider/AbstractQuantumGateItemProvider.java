@@ -156,12 +156,12 @@ public class AbstractQuantumGateItemProvider extends QuantumOperationItemProvide
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexInt()));
+				 QucircuitFactory.eINSTANCE.createElementSelector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(QucircuitPackage.Literals.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS,
-				 QucircuitFactory.eINSTANCE.createIndexRange()));
+				 QucircuitFactory.eINSTANCE.createRangeSelector()));
 	}
 
 	/**

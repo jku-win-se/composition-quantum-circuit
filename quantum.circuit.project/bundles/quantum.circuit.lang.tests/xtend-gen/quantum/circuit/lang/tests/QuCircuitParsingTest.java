@@ -23,7 +23,7 @@ import qucircuit.QuantumCircuit;
 public class QuCircuitParsingTest {
   @Inject
   private ParseHelper<QuantumCircuit> parseHelper;
-  
+
   @Test
   public void loadModel() {
     try {

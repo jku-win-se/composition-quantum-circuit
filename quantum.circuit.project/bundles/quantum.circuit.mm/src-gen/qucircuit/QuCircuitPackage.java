@@ -1217,14 +1217,14 @@ public interface QucircuitPackage extends EPackage {
 	int LOOP_OPERATION_OPERATION_COUNT = ABSTRACT_COMPOSITE_GATE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link qucircuit.impl.IndexImpl <em>Index</em>}' class.
+	 * The meta object id for the '{@link qucircuit.impl.SelectorImpl <em>Selector</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see qucircuit.impl.IndexImpl
-	 * @see qucircuit.impl.QucircuitPackageImpl#getIndex()
+	 * @see qucircuit.impl.SelectorImpl
+	 * @see qucircuit.impl.QucircuitPackageImpl#getSelector()
 	 * @generated
 	 */
-	int INDEX = 15;
+	int SELECTOR = 15;
 
 	/**
 	 * The feature id for the '<em><b>Register</b></em>' reference.
@@ -1233,35 +1233,35 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX__REGISTER = 0;
+	int SELECTOR__REGISTER = 0;
 
 	/**
-	 * The number of structural features of the '<em>Index</em>' class.
+	 * The number of structural features of the '<em>Selector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_FEATURE_COUNT = 1;
+	int SELECTOR_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Index</em>' class.
+	 * The number of operations of the '<em>Selector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_OPERATION_COUNT = 0;
+	int SELECTOR_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link qucircuit.impl.IndexIntImpl <em>Index Int</em>}' class.
+	 * The meta object id for the '{@link qucircuit.impl.ElementSelectorImpl <em>Element Selector</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see qucircuit.impl.IndexIntImpl
-	 * @see qucircuit.impl.QucircuitPackageImpl#getIndexInt()
+	 * @see qucircuit.impl.ElementSelectorImpl
+	 * @see qucircuit.impl.QucircuitPackageImpl#getElementSelector()
 	 * @generated
 	 */
-	int INDEX_INT = 16;
+	int ELEMENT_SELECTOR = 16;
 
 	/**
 	 * The feature id for the '<em><b>Register</b></em>' reference.
@@ -1270,7 +1270,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_INT__REGISTER = INDEX__REGISTER;
+	int ELEMENT_SELECTOR__REGISTER = SELECTOR__REGISTER;
 
 	/**
 	 * The feature id for the '<em><b>Index</b></em>' attribute.
@@ -1279,35 +1279,35 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_INT__INDEX = INDEX_FEATURE_COUNT + 0;
+	int ELEMENT_SELECTOR__INDEX = SELECTOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Index Int</em>' class.
+	 * The number of structural features of the '<em>Element Selector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_INT_FEATURE_COUNT = INDEX_FEATURE_COUNT + 1;
+	int ELEMENT_SELECTOR_FEATURE_COUNT = SELECTOR_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Index Int</em>' class.
+	 * The number of operations of the '<em>Element Selector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_INT_OPERATION_COUNT = INDEX_OPERATION_COUNT + 0;
+	int ELEMENT_SELECTOR_OPERATION_COUNT = SELECTOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link qucircuit.impl.IndexRangeImpl <em>Index Range</em>}' class.
+	 * The meta object id for the '{@link qucircuit.impl.RangeSelectorImpl <em>Range Selector</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see qucircuit.impl.IndexRangeImpl
-	 * @see qucircuit.impl.QucircuitPackageImpl#getIndexRange()
+	 * @see qucircuit.impl.RangeSelectorImpl
+	 * @see qucircuit.impl.QucircuitPackageImpl#getRangeSelector()
 	 * @generated
 	 */
-	int INDEX_RANGE = 17;
+	int RANGE_SELECTOR = 17;
 
 	/**
 	 * The feature id for the '<em><b>Register</b></em>' reference.
@@ -1316,7 +1316,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_RANGE__REGISTER = INDEX__REGISTER;
+	int RANGE_SELECTOR__REGISTER = SELECTOR__REGISTER;
 
 	/**
 	 * The feature id for the '<em><b>Begin</b></em>' attribute.
@@ -1325,7 +1325,7 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_RANGE__BEGIN = INDEX_FEATURE_COUNT + 0;
+	int RANGE_SELECTOR__BEGIN = SELECTOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' attribute.
@@ -1334,25 +1334,25 @@ public interface QucircuitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_RANGE__END = INDEX_FEATURE_COUNT + 1;
+	int RANGE_SELECTOR__END = SELECTOR_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Index Range</em>' class.
+	 * The number of structural features of the '<em>Range Selector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_RANGE_FEATURE_COUNT = INDEX_FEATURE_COUNT + 2;
+	int RANGE_SELECTOR_FEATURE_COUNT = SELECTOR_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Index Range</em>' class.
+	 * The number of operations of the '<em>Range Selector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDEX_RANGE_OPERATION_COUNT = INDEX_OPERATION_COUNT + 0;
+	int RANGE_SELECTOR_OPERATION_COUNT = SELECTOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link qucircuit.impl.OperationImpl <em>Operation</em>}' class.
@@ -1947,78 +1947,78 @@ public interface QucircuitPackage extends EPackage {
 	EAttribute getLoopOperation_IncrementBy();
 
 	/**
-	 * Returns the meta object for class '{@link qucircuit.Index <em>Index</em>}'.
+	 * Returns the meta object for class '{@link qucircuit.Selector <em>Selector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Index</em>'.
-	 * @see qucircuit.Index
+	 * @return the meta object for class '<em>Selector</em>'.
+	 * @see qucircuit.Selector
 	 * @generated
 	 */
-	EClass getIndex();
+	EClass getSelector();
 
 	/**
-	 * Returns the meta object for the reference '{@link qucircuit.Index#getRegister <em>Register</em>}'.
+	 * Returns the meta object for the reference '{@link qucircuit.Selector#getRegister <em>Register</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Register</em>'.
-	 * @see qucircuit.Index#getRegister()
-	 * @see #getIndex()
+	 * @see qucircuit.Selector#getRegister()
+	 * @see #getSelector()
 	 * @generated
 	 */
-	EReference getIndex_Register();
+	EReference getSelector_Register();
 
 	/**
-	 * Returns the meta object for class '{@link qucircuit.IndexInt <em>Index Int</em>}'.
+	 * Returns the meta object for class '{@link qucircuit.ElementSelector <em>Element Selector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Index Int</em>'.
-	 * @see qucircuit.IndexInt
+	 * @return the meta object for class '<em>Element Selector</em>'.
+	 * @see qucircuit.ElementSelector
 	 * @generated
 	 */
-	EClass getIndexInt();
+	EClass getElementSelector();
 
 	/**
-	 * Returns the meta object for the attribute '{@link qucircuit.IndexInt#getIndex <em>Index</em>}'.
+	 * Returns the meta object for the attribute '{@link qucircuit.ElementSelector#getIndex <em>Index</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Index</em>'.
-	 * @see qucircuit.IndexInt#getIndex()
-	 * @see #getIndexInt()
+	 * @see qucircuit.ElementSelector#getIndex()
+	 * @see #getElementSelector()
 	 * @generated
 	 */
-	EAttribute getIndexInt_Index();
+	EAttribute getElementSelector_Index();
 
 	/**
-	 * Returns the meta object for class '{@link qucircuit.IndexRange <em>Index Range</em>}'.
+	 * Returns the meta object for class '{@link qucircuit.RangeSelector <em>Range Selector</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Index Range</em>'.
-	 * @see qucircuit.IndexRange
+	 * @return the meta object for class '<em>Range Selector</em>'.
+	 * @see qucircuit.RangeSelector
 	 * @generated
 	 */
-	EClass getIndexRange();
+	EClass getRangeSelector();
 
 	/**
-	 * Returns the meta object for the attribute '{@link qucircuit.IndexRange#getBegin <em>Begin</em>}'.
+	 * Returns the meta object for the attribute '{@link qucircuit.RangeSelector#getBegin <em>Begin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Begin</em>'.
-	 * @see qucircuit.IndexRange#getBegin()
-	 * @see #getIndexRange()
+	 * @see qucircuit.RangeSelector#getBegin()
+	 * @see #getRangeSelector()
 	 * @generated
 	 */
-	EAttribute getIndexRange_Begin();
+	EAttribute getRangeSelector_Begin();
 
 	/**
-	 * Returns the meta object for the attribute '{@link qucircuit.IndexRange#getEnd <em>End</em>}'.
+	 * Returns the meta object for the attribute '{@link qucircuit.RangeSelector#getEnd <em>End</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>End</em>'.
-	 * @see qucircuit.IndexRange#getEnd()
-	 * @see #getIndexRange()
+	 * @see qucircuit.RangeSelector#getEnd()
+	 * @see #getRangeSelector()
 	 * @generated
 	 */
-	EAttribute getIndexRange_End();
+	EAttribute getRangeSelector_End();
 
 	/**
 	 * Returns the meta object for class '{@link qucircuit.Operation <em>Operation</em>}'.
@@ -2526,14 +2526,14 @@ public interface QucircuitPackage extends EPackage {
 		EAttribute LOOP_OPERATION__INCREMENT_BY = eINSTANCE.getLoopOperation_IncrementBy();
 
 		/**
-		 * The meta object literal for the '{@link qucircuit.impl.IndexImpl <em>Index</em>}' class.
+		 * The meta object literal for the '{@link qucircuit.impl.SelectorImpl <em>Selector</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see qucircuit.impl.IndexImpl
-		 * @see qucircuit.impl.QucircuitPackageImpl#getIndex()
+		 * @see qucircuit.impl.SelectorImpl
+		 * @see qucircuit.impl.QucircuitPackageImpl#getSelector()
 		 * @generated
 		 */
-		EClass INDEX = eINSTANCE.getIndex();
+		EClass SELECTOR = eINSTANCE.getSelector();
 
 		/**
 		 * The meta object literal for the '<em><b>Register</b></em>' reference feature.
@@ -2541,17 +2541,17 @@ public interface QucircuitPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INDEX__REGISTER = eINSTANCE.getIndex_Register();
+		EReference SELECTOR__REGISTER = eINSTANCE.getSelector_Register();
 
 		/**
-		 * The meta object literal for the '{@link qucircuit.impl.IndexIntImpl <em>Index Int</em>}' class.
+		 * The meta object literal for the '{@link qucircuit.impl.ElementSelectorImpl <em>Element Selector</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see qucircuit.impl.IndexIntImpl
-		 * @see qucircuit.impl.QucircuitPackageImpl#getIndexInt()
+		 * @see qucircuit.impl.ElementSelectorImpl
+		 * @see qucircuit.impl.QucircuitPackageImpl#getElementSelector()
 		 * @generated
 		 */
-		EClass INDEX_INT = eINSTANCE.getIndexInt();
+		EClass ELEMENT_SELECTOR = eINSTANCE.getElementSelector();
 
 		/**
 		 * The meta object literal for the '<em><b>Index</b></em>' attribute feature.
@@ -2559,17 +2559,17 @@ public interface QucircuitPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INDEX_INT__INDEX = eINSTANCE.getIndexInt_Index();
+		EAttribute ELEMENT_SELECTOR__INDEX = eINSTANCE.getElementSelector_Index();
 
 		/**
-		 * The meta object literal for the '{@link qucircuit.impl.IndexRangeImpl <em>Index Range</em>}' class.
+		 * The meta object literal for the '{@link qucircuit.impl.RangeSelectorImpl <em>Range Selector</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see qucircuit.impl.IndexRangeImpl
-		 * @see qucircuit.impl.QucircuitPackageImpl#getIndexRange()
+		 * @see qucircuit.impl.RangeSelectorImpl
+		 * @see qucircuit.impl.QucircuitPackageImpl#getRangeSelector()
 		 * @generated
 		 */
-		EClass INDEX_RANGE = eINSTANCE.getIndexRange();
+		EClass RANGE_SELECTOR = eINSTANCE.getRangeSelector();
 
 		/**
 		 * The meta object literal for the '<em><b>Begin</b></em>' attribute feature.
@@ -2577,7 +2577,7 @@ public interface QucircuitPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INDEX_RANGE__BEGIN = eINSTANCE.getIndexRange_Begin();
+		EAttribute RANGE_SELECTOR__BEGIN = eINSTANCE.getRangeSelector_Begin();
 
 		/**
 		 * The meta object literal for the '<em><b>End</b></em>' attribute feature.
@@ -2585,7 +2585,7 @@ public interface QucircuitPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INDEX_RANGE__END = eINSTANCE.getIndexRange_End();
+		EAttribute RANGE_SELECTOR__END = eINSTANCE.getRangeSelector_End();
 
 		/**
 		 * The meta object literal for the '{@link qucircuit.impl.OperationImpl <em>Operation</em>}' class.

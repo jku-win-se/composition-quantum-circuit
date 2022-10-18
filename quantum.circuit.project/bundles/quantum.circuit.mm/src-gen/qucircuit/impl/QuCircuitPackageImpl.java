@@ -19,10 +19,8 @@ import qucircuit.AngleParameter;
 import qucircuit.ClassicControl;
 import qucircuit.ClassicRegister;
 import qucircuit.CompositeQuantumGate;
+import qucircuit.ElementSelector;
 import qucircuit.ElementaryQuantumGate;
-import qucircuit.Index;
-import qucircuit.IndexInt;
-import qucircuit.IndexRange;
 import qucircuit.Layer;
 import qucircuit.LoopOperation;
 import qucircuit.Measurement;
@@ -33,7 +31,9 @@ import qucircuit.QuantumOperation;
 import qucircuit.QuantumRegister;
 import qucircuit.QucircuitFactory;
 import qucircuit.QucircuitPackage;
+import qucircuit.RangeSelector;
 import qucircuit.Register;
+import qucircuit.Selector;
 import qucircuit.StatePreparation;
 
 import quope.QuopePackage;
@@ -155,21 +155,21 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass indexEClass = null;
+	private EClass selectorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass indexIntEClass = null;
+	private EClass elementSelectorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass indexRangeEClass = null;
+	private EClass rangeSelectorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,7 +210,6 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	private QucircuitPackageImpl() {
 		super(eNS_URI, QucircuitFactory.eINSTANCE);
 	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -713,8 +712,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIndex() {
-		return indexEClass;
+	public EClass getSelector() {
+		return selectorEClass;
 	}
 
 	/**
@@ -722,8 +721,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIndex_Register() {
-		return (EReference)indexEClass.getEStructuralFeatures().get(0);
+	public EReference getSelector_Register() {
+		return (EReference)selectorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -731,8 +730,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIndexInt() {
-		return indexIntEClass;
+	public EClass getElementSelector() {
+		return elementSelectorEClass;
 	}
 
 	/**
@@ -740,8 +739,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIndexInt_Index() {
-		return (EAttribute)indexIntEClass.getEStructuralFeatures().get(0);
+	public EAttribute getElementSelector_Index() {
+		return (EAttribute)elementSelectorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -749,8 +748,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIndexRange() {
-		return indexRangeEClass;
+	public EClass getRangeSelector() {
+		return rangeSelectorEClass;
 	}
 
 	/**
@@ -758,8 +757,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIndexRange_Begin() {
-		return (EAttribute)indexRangeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getRangeSelector_Begin() {
+		return (EAttribute)rangeSelectorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -767,8 +766,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIndexRange_End() {
-		return (EAttribute)indexRangeEClass.getEStructuralFeatures().get(1);
+	public EAttribute getRangeSelector_End() {
+		return (EAttribute)rangeSelectorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -909,15 +908,15 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		createEAttribute(loopOperationEClass, LOOP_OPERATION__INCREMENT_BLOCK_CONTROL_QUBITS);
 		createEAttribute(loopOperationEClass, LOOP_OPERATION__INCREMENT_BY);
 
-		indexEClass = createEClass(INDEX);
-		createEReference(indexEClass, INDEX__REGISTER);
+		selectorEClass = createEClass(SELECTOR);
+		createEReference(selectorEClass, SELECTOR__REGISTER);
 
-		indexIntEClass = createEClass(INDEX_INT);
-		createEAttribute(indexIntEClass, INDEX_INT__INDEX);
+		elementSelectorEClass = createEClass(ELEMENT_SELECTOR);
+		createEAttribute(elementSelectorEClass, ELEMENT_SELECTOR__INDEX);
 
-		indexRangeEClass = createEClass(INDEX_RANGE);
-		createEAttribute(indexRangeEClass, INDEX_RANGE__BEGIN);
-		createEAttribute(indexRangeEClass, INDEX_RANGE__END);
+		rangeSelectorEClass = createEClass(RANGE_SELECTOR);
+		createEAttribute(rangeSelectorEClass, RANGE_SELECTOR__BEGIN);
+		createEAttribute(rangeSelectorEClass, RANGE_SELECTOR__END);
 
 		operationEClass = createEClass(OPERATION);
 		createEReference(operationEClass, OPERATION__QUBO);
@@ -973,8 +972,8 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		compositeQuantumGateEClass.getESuperTypes().add(this.getAbstractCompositeGate());
 		abstractCompositeGateEClass.getESuperTypes().add(this.getAbstractQuantumGate());
 		loopOperationEClass.getESuperTypes().add(this.getAbstractCompositeGate());
-		indexIntEClass.getESuperTypes().add(this.getIndex());
-		indexRangeEClass.getESuperTypes().add(this.getIndex());
+		elementSelectorEClass.getESuperTypes().add(this.getSelector());
+		rangeSelectorEClass.getESuperTypes().add(this.getSelector());
 		registerEClass.getESuperTypes().add(this.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
@@ -1002,16 +1001,16 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEClass(quantumOperationEClass, QuantumOperation.class, "QuantumOperation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuantumOperation_ClassicControl(), this.getClassicControl(), null, "classicControl", null, 0, 1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuantumOperation_Operations(), this.getOperation(), null, "operations", null, 1, -1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantumOperation_TargetQubits(), this.getIndex(), null, "targetQubits", null, 1, -1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuantumOperation_TargetQubits(), this.getSelector(), null, "targetQubits", null, 1, -1, QuantumOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(abstractQuantumGateEClass, AbstractQuantumGate.class, "AbstractQuantumGate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAbstractQuantumGate_ControlQubits(), this.getIndex(), null, "controlQubits", null, 0, -1, AbstractQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractQuantumGate_ControlQubits(), this.getSelector(), null, "controlQubits", null, 0, -1, AbstractQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAbstractQuantumGate_InverseForm(), ecorePackage.getEBooleanObject(), "inverseForm", "false", 0, 1, AbstractQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statePreparationEClass, StatePreparation.class, "StatePreparation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(measurementEClass, Measurement.class, "Measurement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMeasurement_ClassicBits(), this.getIndex(), null, "classicBits", null, 1, -1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMeasurement_ClassicBits(), this.getSelector(), null, "classicBits", null, 1, -1, Measurement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementaryQuantumGateEClass, ElementaryQuantumGate.class, "ElementaryQuantumGate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getElementaryQuantumGate_AngleParameter(), this.getAngleParameter(), null, "angleParameter", null, 0, 1, ElementaryQuantumGate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1028,13 +1027,13 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 
 		initEClass(loopOperationEClass, LoopOperation.class, "LoopOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLoopOperation_Iterations(), ecorePackage.getEInt(), "iterations", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoopOperation_FixedControlQubits(), this.getIndex(), null, "fixedControlQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoopOperation_FixedTargetQubits(), this.getIndex(), null, "fixedTargetQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoopOperation_FixedControlQubits(), this.getSelector(), null, "fixedControlQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoopOperation_FixedTargetQubits(), this.getSelector(), null, "fixedTargetQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLoopOperation_Loop(), theQuopePackage.getConcreteLoopOperation(), null, "loop", null, 1, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_IncrementControlQubits(), ecorePackage.getEBooleanObject(), "incrementControlQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_IncrementTargetQubits(), ecorePackage.getEBooleanObject(), "incrementTargetQubits", "true", 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoopOperation_LoopTargetQubits(), this.getIndex(), null, "loopTargetQubits", null, 1, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLoopOperation_LoopControlQubits(), this.getIndex(), null, "loopControlQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoopOperation_LoopTargetQubits(), this.getSelector(), null, "loopTargetQubits", null, 1, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLoopOperation_LoopControlQubits(), this.getSelector(), null, "loopControlQubits", null, 0, -1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_TargetQubitsBlockSize(), ecorePackage.getEIntegerObject(), "targetQubitsBlockSize", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_ControlQubitsBlockSize(), ecorePackage.getEIntegerObject(), "controlQubitsBlockSize", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_ControlQubitsIterationType(), this.getITERATION_TYPE(), "controlQubitsIterationType", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1043,15 +1042,15 @@ public class QucircuitPackageImpl extends EPackageImpl implements QucircuitPacka
 		initEAttribute(getLoopOperation_IncrementBlockControlQubits(), ecorePackage.getEBooleanObject(), "incrementBlockControlQubits", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLoopOperation_IncrementBy(), ecorePackage.getEIntegerObject(), "incrementBy", null, 0, 1, LoopOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(indexEClass, Index.class, "Index", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIndex_Register(), this.getRegister(), null, "register", null, 0, 1, Index.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(selectorEClass, Selector.class, "Selector", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSelector_Register(), this.getRegister(), null, "register", null, 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(indexIntEClass, IndexInt.class, "IndexInt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIndexInt_Index(), ecorePackage.getEIntegerObject(), "index", null, 0, 1, IndexInt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(elementSelectorEClass, ElementSelector.class, "ElementSelector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElementSelector_Index(), ecorePackage.getEIntegerObject(), "index", null, 0, 1, ElementSelector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(indexRangeEClass, IndexRange.class, "IndexRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIndexRange_Begin(), ecorePackage.getEIntegerObject(), "begin", null, 0, 1, IndexRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIndexRange_End(), ecorePackage.getEIntegerObject(), "end", null, 0, 1, IndexRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(rangeSelectorEClass, RangeSelector.class, "RangeSelector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRangeSelector_Begin(), ecorePackage.getEIntegerObject(), "begin", null, 0, 1, RangeSelector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRangeSelector_End(), ecorePackage.getEIntegerObject(), "end", null, 0, 1, RangeSelector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperation_Qubo(), theQuboPackage.getQubo(), null, "qubo", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

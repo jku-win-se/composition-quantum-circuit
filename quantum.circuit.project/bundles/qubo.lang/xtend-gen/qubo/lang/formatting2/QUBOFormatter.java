@@ -21,18 +21,18 @@ public class QUBOFormatter extends AbstractFormatter2 {
   @Inject
   @Extension
   private QUBOGrammarAccess _qUBOGrammarAccess;
-  
+
   protected void _format(final Qubo qubo, @Extension final IFormattableDocument document) {
     document.<Matrix>format(qubo.getMatrix());
   }
-  
+
   protected void _format(final Matrix matrix, @Extension final IFormattableDocument document) {
     EList<Row> _rows = matrix.getRows();
     for (final Row row : _rows) {
       document.<Row>format(row);
     }
   }
-  
+
   public void format(final Object qubo, final IFormattableDocument document) {
     if (qubo instanceof XtextResource) {
       _format((XtextResource)qubo, document);

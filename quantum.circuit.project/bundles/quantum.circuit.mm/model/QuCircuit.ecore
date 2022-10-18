@@ -35,19 +35,19 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="operations" lowerBound="1"
         upperBound="-1" eType="#//Operation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetQubits" lowerBound="1"
-        upperBound="-1" eType="#//Index" containment="true"/>
+        upperBound="-1" eType="#//Selector" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractQuantumGate" abstract="true"
       eSuperTypes="#//QuantumOperation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="controlQubits" upperBound="-1"
-        eType="#//Index" containment="true"/>
+        eType="#//Selector" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inverseForm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatePreparation" eSuperTypes="#//QuantumOperation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Measurement" eSuperTypes="#//QuantumOperation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="classicBits" lowerBound="1"
-        upperBound="-1" eType="#//Index" containment="true"/>
+        upperBound="-1" eType="#//Selector" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementaryQuantumGate" eSuperTypes="#//AbstractQuantumGate">
     <eStructuralFeatures xsi:type="ecore:EReference" name="angleParameter" eType="#//AngleParameter"
@@ -67,9 +67,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="LoopOperation" eSuperTypes="#//AbstractCompositeGate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="iterations" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedControlQubits" upperBound="-1"
-        eType="#//Index" containment="true"/>
+        eType="#//Selector" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixedTargetQubits" upperBound="-1"
-        eType="#//Index" containment="true"/>
+        eType="#//Selector" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loop" lowerBound="1" eType="ecore:EClass ../../quantum.operation.library.mm/model/QuantumOpe.ecore#//ConcreteLoopOperation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="incrementControlQubits"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
@@ -78,9 +78,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loopTargetQubits" lowerBound="1"
-        upperBound="-1" eType="#//Index" containment="true"/>
+        upperBound="-1" eType="#//Selector" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loopControlQubits" upperBound="-1"
-        eType="#//Index" containment="true"/>
+        eType="#//Selector" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetQubitsBlockSize"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlQubitsBlockSize"
@@ -100,13 +100,13 @@
     <eLiterals name="SHIFT" value="1"/>
     <eLiterals name="CHANGE_BLOCK" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Index" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Selector" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="register" eType="#//Register"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IndexInt" eSuperTypes="#//Index">
+  <eClassifiers xsi:type="ecore:EClass" name="ElementSelector" eSuperTypes="#//Selector">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IndexRange" eSuperTypes="#//Index">
+  <eClassifiers xsi:type="ecore:EClass" name="RangeSelector" eSuperTypes="#//Selector">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="begin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>

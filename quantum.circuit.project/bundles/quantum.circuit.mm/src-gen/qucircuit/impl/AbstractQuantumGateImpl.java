@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import qucircuit.AbstractQuantumGate;
-import qucircuit.Index;
 import qucircuit.QucircuitPackage;
+import qucircuit.Selector;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Index> controlQubits;
+	protected EList<Selector> controlQubits;
 
 	/**
 	 * The default value of the '{@link #getInverseForm() <em>Inverse Form</em>}' attribute.
@@ -90,9 +90,9 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Index> getControlQubits() {
+	public EList<Selector> getControlQubits() {
 		if (controlQubits == null) {
-			controlQubits = new EObjectContainmentEList<Index>(Index.class, this, QucircuitPackage.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS);
+			controlQubits = new EObjectContainmentEList<Selector>(Selector.class, this, QucircuitPackage.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS);
 		}
 		return controlQubits;
 	}
@@ -159,7 +159,7 @@ public abstract class AbstractQuantumGateImpl extends QuantumOperationImpl imple
 		switch (featureID) {
 			case QucircuitPackage.ABSTRACT_QUANTUM_GATE__CONTROL_QUBITS:
 				getControlQubits().clear();
-				getControlQubits().addAll((Collection<? extends Index>)newValue);
+				getControlQubits().addAll((Collection<? extends Selector>)newValue);
 				return;
 			case QucircuitPackage.ABSTRACT_QUANTUM_GATE__INVERSE_FORM:
 				setInverseForm((Boolean)newValue);

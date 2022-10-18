@@ -325,49 +325,49 @@ public class QucircuitItemProviderAdapterFactory extends QucircuitAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qucircuit.IndexInt} instances.
+	 * This keeps track of the one adapter used for all {@link qucircuit.ElementSelector} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IndexIntItemProvider indexIntItemProvider;
+	protected ElementSelectorItemProvider elementSelectorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qucircuit.IndexInt}.
+	 * This creates an adapter for a {@link qucircuit.ElementSelector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIndexIntAdapter() {
-		if (indexIntItemProvider == null) {
-			indexIntItemProvider = new IndexIntItemProvider(this);
+	public Adapter createElementSelectorAdapter() {
+		if (elementSelectorItemProvider == null) {
+			elementSelectorItemProvider = new ElementSelectorItemProvider(this);
 		}
 
-		return indexIntItemProvider;
+		return elementSelectorItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link qucircuit.IndexRange} instances.
+	 * This keeps track of the one adapter used for all {@link qucircuit.RangeSelector} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IndexRangeItemProvider indexRangeItemProvider;
+	protected RangeSelectorItemProvider rangeSelectorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link qucircuit.IndexRange}.
+	 * This creates an adapter for a {@link qucircuit.RangeSelector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIndexRangeAdapter() {
-		if (indexRangeItemProvider == null) {
-			indexRangeItemProvider = new IndexRangeItemProvider(this);
+	public Adapter createRangeSelectorAdapter() {
+		if (rangeSelectorItemProvider == null) {
+			rangeSelectorItemProvider = new RangeSelectorItemProvider(this);
 		}
 
-		return indexRangeItemProvider;
+		return rangeSelectorItemProvider;
 	}
 
 	/**
@@ -503,8 +503,8 @@ public class QucircuitItemProviderAdapterFactory extends QucircuitAdapterFactory
 		if (compositeQuantumGateItemProvider != null) compositeQuantumGateItemProvider.dispose();
 		if (angleParameterItemProvider != null) angleParameterItemProvider.dispose();
 		if (loopOperationItemProvider != null) loopOperationItemProvider.dispose();
-		if (indexIntItemProvider != null) indexIntItemProvider.dispose();
-		if (indexRangeItemProvider != null) indexRangeItemProvider.dispose();
+		if (elementSelectorItemProvider != null) elementSelectorItemProvider.dispose();
+		if (rangeSelectorItemProvider != null) rangeSelectorItemProvider.dispose();
 		if (operationItemProvider != null) operationItemProvider.dispose();
 	}
 

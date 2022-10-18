@@ -61,7 +61,7 @@ public interface LoopOperation extends AbstractCompositeGate {
 
 	/**
 	 * Returns the value of the '<em><b>Fixed Control Qubits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Index}.
+	 * The list contents are of type {@link qucircuit.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fixed Control Qubits</em>' containment reference list.
@@ -69,11 +69,11 @@ public interface LoopOperation extends AbstractCompositeGate {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Index> getFixedControlQubits();
+	EList<Selector> getFixedControlQubits();
 
 	/**
 	 * Returns the value of the '<em><b>Fixed Target Qubits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Index}.
+	 * The list contents are of type {@link qucircuit.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fixed Target Qubits</em>' containment reference list.
@@ -81,7 +81,7 @@ public interface LoopOperation extends AbstractCompositeGate {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Index> getFixedTargetQubits();
+	EList<Selector> getFixedTargetQubits();
 
 	/**
 	 * Returns the value of the '<em><b>Loop</b></em>' reference.
@@ -153,7 +153,7 @@ public interface LoopOperation extends AbstractCompositeGate {
 
 	/**
 	 * Returns the value of the '<em><b>Loop Target Qubits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Index}.
+	 * The list contents are of type {@link qucircuit.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Loop Target Qubits</em>' containment reference list.
@@ -161,11 +161,11 @@ public interface LoopOperation extends AbstractCompositeGate {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Index> getLoopTargetQubits();
+	EList<Selector> getLoopTargetQubits();
 
 	/**
 	 * Returns the value of the '<em><b>Loop Control Qubits</b></em>' containment reference list.
-	 * The list contents are of type {@link qucircuit.Index}.
+	 * The list contents are of type {@link qucircuit.Selector}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Loop Control Qubits</em>' containment reference list.
@@ -173,7 +173,7 @@ public interface LoopOperation extends AbstractCompositeGate {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Index> getLoopControlQubits();
+	EList<Selector> getLoopControlQubits();
 
 	/**
 	 * Returns the value of the '<em><b>Target Qubits Block Size</b></em>' attribute.
