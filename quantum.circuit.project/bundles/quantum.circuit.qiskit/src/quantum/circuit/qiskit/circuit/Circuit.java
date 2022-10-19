@@ -18,10 +18,10 @@ import qucircuit.QuantumRegister;
 public class Circuit implements QiskitCircuit {
 
 	@Override
-	public String generateCode(QuantumCircuit qucircuit) {
-		var quantumCircuitDef = new StringBuilder().append(qucircuit.getName() + " = QuantumCircuit(");		
+	public String generateCode(QuantumCircuit quCircuit, QuantumCircuitMetadata quCircuitMetadata) {
+		var quantumCircuitDef = new StringBuilder().append(quCircuit.getName() + " = QuantumCircuit(");		
 		var quantumRegisters = new StringBuilder();
-		for (QuantumRegister qr : qucircuit.getQuantumRegisters()) {
+		for (QuantumRegister qr : quCircuit.getQuantumRegisters()) {
 			quantumRegisters
 				.append(qr.getName())
 				.append("=QuantumRegister(" + qr.getNumberOfQubits() + ")")
@@ -30,7 +30,7 @@ public class Circuit implements QiskitCircuit {
 		}
 		
 		var classicRegisters = new StringBuilder();
-		for (ClassicRegister cr : qucircuit.getClassicRegisters()) {
+		for (ClassicRegister cr : quCircuit.getClassicRegisters()) {
 			classicRegisters
 				.append(cr.getName())
 				.append("=QuantumRegister(" + cr.getNumberOfBits() + ")")
@@ -42,22 +42,23 @@ public class Circuit implements QiskitCircuit {
 		quantumCircuitDef. append(")");
 		
 		//Include the necessary libraries
-		var objectQuantumOperations = new GenerateLibrary().generateCode(qucircuit); 
+		var objectQuantumOperations = new GenerateLibrary().generateCode(quCircuit,quCircuitMetadata); 
 		var quantumOperation = new StringBuilder();
 		
-		for (Layer l : qucircuit.getLayers()) {
+		for (Layer l : quCircuit.getLayers()) {
 			for (QuantumOperation quOpe : l.getQuantumOperations()) {
-				//Target Qubits
-				quantumOperation.append("target_qubits =" + QiskitCodeGenerationUtils.indexes(quOpe.getTargetQubits())).append("\n");
 				//Append Operation
 				if (quOpe instanceof ElementaryQuantumGate elementaryGate) {
-					quantumOperation.append(new ElementaryGateGeneration().generateCode(qucircuit, elementaryGate));
+					//Target Qubits
+					quantumOperation.append("target_qubits = " + QiskitCodeGenerationUtils.indexesQuantumRegister(quOpe.getTargetQubits(), 
+							quCircuitMetadata.getQuantumRegisterIndexes())).append("\n");
+					quantumOperation.append(new ElementaryGateGeneration().generateCode(quCircuit, elementaryGate));
 				}
 				else if (quOpe instanceof Measurement measurement) {
-					quantumOperation.append(new MeasurementGeneration().generateCode(qucircuit, measurement));
+					quantumOperation.append(new MeasurementGeneration().generateCode(quCircuit, measurement));
 				}
 				else if (quOpe instanceof LoopOperation loopOperation) {
-					quantumOperation.append(new LoopGeneration().generateCode(qucircuit, loopOperation));
+					quantumOperation.append(new LoopGeneration().generateCode(quCircuit, loopOperation));
 				}
 			}		
 			

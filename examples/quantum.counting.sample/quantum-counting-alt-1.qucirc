@@ -1,17 +1,17 @@
 QuantumCircuit QuantumCounting{
 	QuantumRegister qr {NumberOfQubits 4}
 	QuantumRegister qr1 {NumberOfQubits 4}
-	ClassicRegister cr {NumberOfBits 3}
+	ClassicRegister cr {NumberOfBits 4}
 	Layer L1 {
 		ElementaryQuantumGate e1 {
 			operation Hadamard
 			targetQubits [(qr,0-3),(qr1,0-3)] 
 		}
-	}
-	Layer L2 {
+	} 
+	Layer L2 { 
 		Loop loop1 {
 			operations (Grover)
-			targetQubits [(qr,0-3),(qr1,0-3)]
+			targetQubits [(qr1,0-3),(qr,0-3)]
 			loop Power2Loop	
 			loopTargetQubits [(qr1,0-3)]
 			loopControlQubits [(0-3)]

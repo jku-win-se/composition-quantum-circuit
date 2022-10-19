@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import org.eclipse.emf.common.util.ECollections;
 
 import quantum.circuit.qiskit.api.QiskitCircuit;
+import quantum.circuit.qiskit.circuit.QuantumCircuitMetadata;
 import qucircuit.CompositeQuantumGate;
 import qucircuit.ElementaryQuantumGate;
 import qucircuit.LoopOperation;
@@ -23,7 +24,7 @@ public class GenerateLibrary implements QiskitCircuit{
 	public static final String MEASUREMENT_IMPORT_LIBRARY = "m_gate=Measurements.MeasurementGate()";
 		
 	@Override
-	public String generateCode(QuantumCircuit qucircuit) {
+	public String generateCode(QuantumCircuit qucircuit, QuantumCircuitMetadata quCircuitMetadata) {
 		var librariesBuilder = new StringBuilder().append("\n");
 		librariesBuilder.append("#Create objects for quantum operations").append("\n");
 		var listOperations = qucircuit.getLayers().stream()

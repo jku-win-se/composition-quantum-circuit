@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.resource.ResourceSet
 import quantum.operation.definition.api.utils.QuantumOperationUtils
 import java.util.Collections
+import quantum.circuit.qiskit.circuit.QuantumCircuitMetadata
 
 /**
  * Generates code from your model files on save.
@@ -33,8 +34,12 @@ class QuCircuitGenerator extends AbstractGenerator {
 		
 		val String resourceName = resource.URI.trimFileExtension.lastSegment;
 		val EObject rootEObject = resource.contents.get(0);
+				
+		val quCircuit = rootEObject as QuantumCircuit;				
 		
-		val quCircuit = rootEObject as QuantumCircuit;					
+		val quCircuitMetadata = new QuantumCircuitMetadata(quCircuit);
+		quCircuitMetadata.generateMetadata();
+			
 		fsa.generateFile('/' + QiskitCodeGenerationUtils.QISKIT_FOLDER_NAME + '-'+ resourceName +'/Composite_Gates.' + QiskitCodeGenerationUtils.PYTHON_FILE_EXTENSION,
 				new CompositeGatesUtils().generateLibraryFile(quCircuit)
 		);
@@ -51,7 +56,7 @@ class QuCircuitGenerator extends AbstractGenerator {
 		);
 			
 		fsa.generateFile('/' + QiskitCodeGenerationUtils.QISKIT_FOLDER_NAME + '-'+ resourceName + '/main-' + resourceName + "." + QiskitCodeGenerationUtils.PYTHON_FILE_EXTENSION, 
-			new Circuit().generateCode(quCircuit)
+			new Circuit().generateCode(quCircuit,quCircuitMetadata)
 		);		
 	}	
 }

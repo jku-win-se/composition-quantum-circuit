@@ -9,6 +9,7 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import quantum.circuit.qiskit.circuit.Circuit;
+import quantum.circuit.qiskit.circuit.QuantumCircuitMetadata;
 import quantum.circuit.qiskit.library.CompositeGatesUtils;
 import quantum.circuit.qiskit.library.ElementaryGateUtils;
 import quantum.circuit.qiskit.library.LoopOperationsUtils;
@@ -28,6 +29,8 @@ public class QuCircuitGenerator extends AbstractGenerator {
     final String resourceName = resource.getURI().trimFileExtension().lastSegment();
     final EObject rootEObject = resource.getContents().get(0);
     final QuantumCircuit quCircuit = ((QuantumCircuit) rootEObject);
+    final QuantumCircuitMetadata quCircuitMetadata = new QuantumCircuitMetadata(quCircuit);
+    quCircuitMetadata.generateMetadata();
     fsa.generateFile(((((("/" + QiskitCodeGenerationUtils.QISKIT_FOLDER_NAME) + "-") + resourceName) + "/Composite_Gates.") + QiskitCodeGenerationUtils.PYTHON_FILE_EXTENSION), 
       new CompositeGatesUtils().generateLibraryFile(quCircuit));
     fsa.generateFile(((((("/" + QiskitCodeGenerationUtils.QISKIT_FOLDER_NAME) + "-") + resourceName) + "/Elementary_Gates.") + QiskitCodeGenerationUtils.PYTHON_FILE_EXTENSION), 
@@ -37,6 +40,6 @@ public class QuCircuitGenerator extends AbstractGenerator {
     fsa.generateFile(((((("/" + QiskitCodeGenerationUtils.QISKIT_FOLDER_NAME) + "-") + resourceName) + "/Loop_Operations.") + QiskitCodeGenerationUtils.PYTHON_FILE_EXTENSION), 
       new LoopOperationsUtils().generateLibraryFile(quCircuit));
     fsa.generateFile(((((((("/" + QiskitCodeGenerationUtils.QISKIT_FOLDER_NAME) + "-") + resourceName) + "/main-") + resourceName) + ".") + QiskitCodeGenerationUtils.PYTHON_FILE_EXTENSION), 
-      new Circuit().generateCode(quCircuit));
+      new Circuit().generateCode(quCircuit, quCircuitMetadata));
   }
 }

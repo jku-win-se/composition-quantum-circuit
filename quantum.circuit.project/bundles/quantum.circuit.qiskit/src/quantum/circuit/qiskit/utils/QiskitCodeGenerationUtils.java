@@ -1,6 +1,7 @@
 package quantum.circuit.qiskit.utils;
 
 import java.util.Collection;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.ECollections;
@@ -9,12 +10,10 @@ import org.eclipse.emf.common.util.EList;
 import qucircuit.CompositeQuantumGate;
 import qucircuit.ElementSelector;
 import qucircuit.Selector;
-import qucircuit.ElementSelector;
 import qucircuit.RangeSelector;
 import qucircuit.Operation;
 import qucircuit.QuantumCircuit;
-import qucircuit.RangeSelector;
-import qucircuit.Selector;
+import qucircuit.QuantumRegister;
 
 public class QiskitCodeGenerationUtils {
 	
@@ -25,6 +24,7 @@ public class QiskitCodeGenerationUtils {
 	//TODO define file names
 	public static String COMPOSITE_GATE = "Composite_Gates";
 	
+	@Deprecated
 	public static String indexes(EList<Selector> indexes) {
 		var rangeOfValues = new StringBuilder().append("[");
 		for (Selector index : indexes) {
@@ -41,6 +41,32 @@ public class QiskitCodeGenerationUtils {
 		rangeOfValues.deleteCharAt(rangeOfValues.length() - 1);
 		return rangeOfValues.append("]").toString();
 	}
+	
+	/*
+	 * Method to create target Qubits indexes
+	 */
+	public static String indexesQuantumRegister(EList<Selector> indexes, 
+			Map<QuantumRegister,Integer> registerIndexes) {
+		var rangeOfValues = new StringBuilder().append("[");
+		for (Selector index : indexes) {
+			if (index instanceof ElementSelector indexObject) {
+				rangeOfValues.append(indexObject.getIndex() + 
+						registerIndexes.get(index.getRegister())).append(",");
+			}
+			else if (index instanceof RangeSelector indexRangeObject) {
+				for (int i = indexRangeObject.getBegin(); i <= indexRangeObject.getEnd(); i++) {
+					rangeOfValues.append(i + registerIndexes.get(index.getRegister())).append(",");				
+				}
+			}
+		}
+		//Delete the last comma
+		rangeOfValues.deleteCharAt(rangeOfValues.length() - 1);
+		return rangeOfValues.append("]").toString();
+	}	
+	
+	/*
+	 * Method to create target Classical Bits indexes
+	 */
 	
 	public static Collection<Operation> listOfCompositeConcreteOperations(QuantumCircuit quCircuit) {
 		 return quCircuit.getLayers().stream()
