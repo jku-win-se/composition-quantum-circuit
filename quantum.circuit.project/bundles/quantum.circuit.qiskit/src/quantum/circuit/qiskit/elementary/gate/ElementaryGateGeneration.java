@@ -12,9 +12,10 @@ public class ElementaryGateGeneration implements QiskitElementaryGate {
 	public String generateCode(QuantumCircuit qucircuit, ElementaryQuantumGate elementaryGate) {
 		var elementaryGateGeneration = new StringBuilder();
 		String gateName = null;
-		if (elementaryGate.getName().equals(Hadamard.class.getSimpleName()))
+		var operation = elementaryGate.getOperations().get(0).getOperation();
+		if (operation.getName().equals(Hadamard.class.getSimpleName()))
 			gateName = "hadamard";
-		if (elementaryGate.getName().equals(Swap.class.getSimpleName()))
+		if (operation.getName().equals(Swap.class.getSimpleName()))
 			gateName = "swap";
 		elementaryGateGeneration.append(qucircuit.getName() + ".append(e_gate." + gateName +"(target_qubits), target_qubits)").append("\n");
 		return elementaryGateGeneration.toString();
