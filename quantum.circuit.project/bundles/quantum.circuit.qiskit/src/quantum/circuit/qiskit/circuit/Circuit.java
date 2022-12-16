@@ -7,6 +7,7 @@ import quantum.circuit.qiskit.loop.LoopGeneration;
 import quantum.circuit.qiskit.measurement.MeasurementGeneration;
 import quantum.circuit.qiskit.utils.QiskitCodeGenerationUtils;
 import qucircuit.ClassicRegister;
+import qucircuit.CompositeQuantumGate;
 import qucircuit.ElementaryQuantumGate;
 import qucircuit.Layer;
 import qucircuit.LoopOperation;
@@ -33,7 +34,7 @@ public class Circuit implements QiskitCircuit {
 		for (ClassicRegister cr : quCircuit.getClassicRegisters()) {
 			classicRegisters
 				.append(cr.getName())
-				.append("=QuantumRegister(" + cr.getNumberOfBits() + ")")
+				.append("=ClassicalRegister(" + cr.getNumberOfBits() + ")")
 				.append("\n");
 			quantumCircuitDef.append(cr.getName() + ",");
 		}	
@@ -46,12 +47,20 @@ public class Circuit implements QiskitCircuit {
 		var quantumOperation = new StringBuilder();
 		
 		for (Layer l : quCircuit.getLayers()) {
+			// Place Layer name to make debugging easier
+			quantumOperation.append("\n")
+							.append("# Layer " + l.getName())
+							.append("\n");
+			
 			for (QuantumOperation quOpe : l.getQuantumOperations()) {
 				//Append Operation
+				
+				// every QuantumOperation has target_qubits!
+				var target_qubits = QiskitCodeGenerationUtils.indexesQuantumRegister(quOpe.getTargetQubits(), quCircuitMetadata.getQuantumRegisterIndexes());
+				quantumOperation.append("target_qubits = " + target_qubits)
+								.append("\n");
+				
 				if (quOpe instanceof ElementaryQuantumGate elementaryGate) {
-					//Target Qubits
-					quantumOperation.append("target_qubits = " + QiskitCodeGenerationUtils.indexesQuantumRegister(quOpe.getTargetQubits(), 
-							quCircuitMetadata.getQuantumRegisterIndexes())).append("\n");
 					quantumOperation.append(new ElementaryGateGeneration().generateCode(quCircuit, elementaryGate));
 				}
 				else if (quOpe instanceof Measurement measurement) {

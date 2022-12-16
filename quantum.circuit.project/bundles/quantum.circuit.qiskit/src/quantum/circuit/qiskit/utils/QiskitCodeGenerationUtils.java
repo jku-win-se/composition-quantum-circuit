@@ -55,7 +55,7 @@ public class QiskitCodeGenerationUtils {
 			}
 			else if (index instanceof RangeSelector indexRangeObject) {
 				for (int i = indexRangeObject.getBegin(); i <= indexRangeObject.getEnd(); i++) {
-					rangeOfValues.append(i + registerIndexes.get(index.getRegister())).append(",");				
+					rangeOfValues.append(i + registerIndexes.getOrDefault(index.getRegister(), 0)).append(",");				
 				}
 			}
 		}

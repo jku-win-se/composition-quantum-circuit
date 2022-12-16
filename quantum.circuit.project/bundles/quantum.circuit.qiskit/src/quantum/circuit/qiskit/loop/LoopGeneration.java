@@ -1,6 +1,7 @@
 package quantum.circuit.qiskit.loop;
 
 import quantum.circuit.qiskit.api.QiskitLoopOperation;
+import quantum.circuit.qiskit.circuit.QuantumCircuitMetadata;
 import quantum.circuit.qiskit.utils.QiskitCodeGenerationUtils;
 import quantum.operation.contribution.compositequantumgate.QFTElement;
 import quantum.operation.contribution.elementaryquantumgate.Swap;
@@ -15,10 +16,14 @@ public class LoopGeneration implements QiskitLoopOperation {
 	@Override
 	public String generateCode(QuantumCircuit qucircuit, LoopOperation loopOperation) {
 		StringBuilder quantumOperation = new StringBuilder();
+		
+		var quCircuitMetadata = new QuantumCircuitMetadata(qucircuit);
+		quCircuitMetadata.generateMetadata();
+		
 		//Loop target Qubits
-		quantumOperation .append("loop_tqubits=" + QiskitCodeGenerationUtils.indexes(loopOperation.getLoopTargetQubits())).append("\n");
+		quantumOperation.append("loop_tqubits=" + QiskitCodeGenerationUtils.indexesQuantumRegister(loopOperation.getLoopTargetQubits(), quCircuitMetadata.getQuantumRegisterIndexes())).append("\n");
 		if (!loopOperation.getLoopControlQubits().isEmpty())
-			quantumOperation.append("loop_cqubits=" + QiskitCodeGenerationUtils.indexes(loopOperation.getLoopControlQubits())).append("\n");
+			quantumOperation.append("loop_cqubits=" + QiskitCodeGenerationUtils.indexesQuantumRegister(loopOperation.getLoopControlQubits(), quCircuitMetadata.getQuantumRegisterIndexes())).append("\n");
 		if (loopOperation.getLoop().getName().equals(Power2Loop.class.getSimpleName())) {
 			quantumOperation.append(qucircuit.getName() + ".append(l_gate.Power_2_loop(c_gate.grover4,loop_target_qubits,loop_control_qubits, increment_t=True), target_qubits)").append("\n");
 		}
