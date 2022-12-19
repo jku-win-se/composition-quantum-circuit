@@ -6,6 +6,8 @@ import quantum.circuit.qiskit.library.GenerateLibrary;
 import quantum.circuit.qiskit.loop.LoopGeneration;
 import quantum.circuit.qiskit.measurement.MeasurementGeneration;
 import quantum.circuit.qiskit.utils.QiskitCodeGenerationUtils;
+import quantum.operation.contribution.compositequantumgate.QFT;
+import quantum.operation.contribution.elementaryquantumgate.Swap;
 import qucircuit.ClassicRegister;
 import qucircuit.CompositeQuantumGate;
 import qucircuit.ElementaryQuantumGate;
@@ -68,6 +70,21 @@ public class Circuit implements QiskitCircuit {
 				}
 				else if (quOpe instanceof LoopOperation loopOperation) {
 					quantumOperation.append(new LoopGeneration().generateCode(quCircuit, loopOperation));
+				}
+				else if (quOpe instanceof CompositeQuantumGate compQuantumGate) {
+					// QuantumCounting.append(c_gate.qft(target_qubits, inverse=True), target_qubits) #inverse=True is given as parameter in qucirc-file
+					
+					if (compQuantumGate.getOperations().get(0).getOperation().getName().equals(QFT.class.getSimpleName())) {
+						quantumOperation.append(quCircuit.getName() + ".append(")
+										// NOTE: This is wrong! CompositeQuantumGate should be a composite, but I'm not sure how it looks like in details...
+										.append("c_gate.qft(target_qubits, inverse="+compQuantumGate.getInverseForm().toString()+")")
+										.append(", target_qubits)")
+										.append("\n");	
+					} else {
+						quantumOperation.append("# Operation "+ compQuantumGate.getOperations().get(0).getOperation().getName()+ " not supported yet in CompositeQuantumGates")
+										.append("\n");
+					}
+					
 				}
 			}		
 			

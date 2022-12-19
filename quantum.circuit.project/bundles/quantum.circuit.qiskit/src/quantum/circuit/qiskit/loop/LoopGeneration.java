@@ -1,5 +1,7 @@
 package quantum.circuit.qiskit.loop;
 
+import java.util.ArrayList;
+
 import quantum.circuit.qiskit.api.QiskitLoopOperation;
 import quantum.circuit.qiskit.circuit.QuantumCircuitMetadata;
 import quantum.circuit.qiskit.utils.QiskitCodeGenerationUtils;
@@ -9,7 +11,9 @@ import quantum.operation.contribution.loops.GeneralLoop;
 import quantum.operation.contribution.loops.Power2Loop;
 import quantum.operation.contribution.loops.StaticLoop;
 import qucircuit.LoopOperation;
+import qucircuit.Operation;
 import qucircuit.QuantumCircuit;
+import qucircuit.QuantumOperation;
 
 public class LoopGeneration implements QiskitLoopOperation {
 	
@@ -37,8 +41,31 @@ public class LoopGeneration implements QiskitLoopOperation {
 			quantumOperation.append(qucircuit.getName() + ".append(loopGate, target_qubits) #append LoopOperation to Circuit").append("\n");
 		}
 		else if (loopOperation.getLoop().getName().equals(StaticLoop.class.getSimpleName())) {
-			quantumOperation.append("sl_gate=l_gate.simple_loop(" + loopOperation.getIterations() + ", [c_gate.cost_unitary_fixed(), c_gate.mixer_unitary(qc.num_qubits)],loopTargetQubits)" ).append("\n");
-			quantumOperation.append("qc.append(sl_gate,target_qubits)").append("\n");						
+			quantumOperation.append("sl_gate=l_gate.simple_loop(" + loopOperation.getIterations()+ ", [");
+			
+			var operations = new ArrayList<String>();
+			for(var ope : loopOperation.getOperations()) {
+				if(ope.getOperation().getName().equals("CostUnitary")) {
+					var matrixStringBuilder = new StringBuilder();
+					matrixStringBuilder.append("c_gate.cost_unitary([");
+					for(var row : ope.getQubo().getMatrix().getRows()) {
+						matrixStringBuilder.append("[");
+						for (var col : row.getColumns()) {
+							matrixStringBuilder.append(col.getValue()).append(", ");
+						}
+						matrixStringBuilder.append("], ");
+					}
+					matrixStringBuilder.append("]");
+					operations.add(matrixStringBuilder.toString());
+				} else if (ope.getOperation().getName().equals("MixerUnitaryQAOA")) {
+					operations.add("c_gate.mixer_unitary("+qucircuit.getName()+".num_qubits)");
+				}
+			}
+			quantumOperation.append(String.join(",", operations)); // add comma-separated list to operation
+//			quantumOperation.append("c_gate.cost_unitary_fixed(), c_gate.mixer_unitary("+qucircuit.getName()+".num_qubits)");
+			quantumOperation.append("], loopTargetQubits)" )
+							.append("\n");
+			quantumOperation.append(qucircuit.getName() + ".append(sl_gate,target_qubits)").append("\n");						
 		}
 		return quantumOperation.toString();
 	}
