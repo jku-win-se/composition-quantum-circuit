@@ -39,6 +39,9 @@
   <operations xsi:type="quope:ConcreteQuantumOperation" name="CostUnitary" paletteIconPath="" styleIconPath="">
     <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
   </operations>
+  <operations xsi:type="quope:ConcreteQuantumOperation" name="QFT" paletteIconPath="" styleIconPath="">
+    <type href="http://www.eclipse.org/QuCircuit#//CompositeQuantumGate"/>
+  </operations>
   <operations xsi:type="quope:ConcreteQuantumOperation" name="Reset">
     <type href="http://www.eclipse.org/QuCircuit#//StatePreparation"/>
   </operations>

@@ -6,18 +6,18 @@ QuantumCircuit QuantumCounting{
 		ElementaryQuantumGate e1 {
 			operation Hadamard
 			targetQubits [(qr,0-3),(qr1,0-3)] 
-		}
+		} 
 	} 
-	Layer L2 { 
-		Loop loop1 {
+	Layer L2 {  
+		Loop loop1 { 
 			operations (Grover)
-			targetQubits [(qr1,0-3),(qr,0-3)]
+			targetQubits [(qr,0-3),(qr1,0-3)]
 			loop Power2Loop	
 			loopTargetQubits [(qr1,0-3)]
 			loopControlQubits [(0-3)]
 		}
-	}	
-	Layer L3 {
+	}
+	Layer L3 { 
 		Loop loop2 {
 			incrementControlQubits
 			targetQubitsBlockSize 1
@@ -30,7 +30,7 @@ QuantumCircuit QuantumCounting{
 			loopTargetQubits [(0-1)]
 			loopControlQubits [(2-3)]
 		}
-	}
+	} 
 	Layer L4 {
 		Loop loop3 {
 			incrementBlockTargetQubits

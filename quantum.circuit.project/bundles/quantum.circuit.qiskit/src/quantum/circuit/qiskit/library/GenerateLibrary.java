@@ -25,7 +25,7 @@ public class GenerateLibrary implements QiskitCircuit{
 		
 	@Override
 	public String generateCode(QuantumCircuit qucircuit, QuantumCircuitMetadata quCircuitMetadata) {
-		var librariesBuilder = new StringBuilder().append("\n");
+		var librariesBuilder = new StringBuilder().append("\n\n");
 		librariesBuilder.append("#Create objects for quantum operations").append("\n");
 		var listOperations = qucircuit.getLayers().stream()
 								.map(l -> l.getQuantumOperations())

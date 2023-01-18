@@ -14,8 +14,8 @@ public class MeasurementGeneration implements QiskitMeasurement{
 		quCircuitMetadata.generateMetadata();
 		
 		var measurementOperation = new StringBuilder();
-		measurementOperation.append("cbits=" + QiskitCodeGenerationUtils.indexesQuantumRegister(measurement.getClassicBits(), quCircuitMetadata.getQuantumRegisterIndexes())).append("\n");
-		measurementOperation.append(qucircuit.getName() + ".append(m_gate.measurement(target_qubits,cbits), target_qubits, cbits)").append("\n");
+		measurementOperation.append("cbits = " + QiskitCodeGenerationUtils.indexesQuantumRegister(measurement.getClassicBits(), quCircuitMetadata.getQuantumRegisterIndexes())).append("\n");
+		measurementOperation.append(qucircuit.getName() + ".append(m_gate.measurement(target_qubits, cbits), target_qubits, cbits)").append("\n");
 		return measurementOperation.toString();
 	}
 	

@@ -69,7 +69,6 @@ ElementaryQuantumGate returns ElementaryQuantumGate:
 	
 AngleParameter returns AngleParameter:
 	{AngleParameter}
-	'AngleParameter'
 	'{'
 		('theta' theta=EDoubleObject)?
 		('phi' phi=EDoubleObject)?

@@ -6,20 +6,28 @@
          name="Elementary Quantum Gate"
          point="quantum.operation">
       <ElementaryQuantumGate
-            Name="Hadamard"
-            class="quantum.operation.contribution.elementaryquantumgate.Hadamard">
+            Name="RX"
+            class="quantum.operation.contribution.elementaryquantumgate.RX">
+      </ElementaryQuantumGate>
+      <ElementaryQuantumGate
+            Name="RY"
+            class="quantum.operation.contribution.elementaryquantumgate.RY">
       </ElementaryQuantumGate>
       <ElementaryQuantumGate
             Name="RZ"
             class="quantum.operation.contribution.elementaryquantumgate.RZ">
       </ElementaryQuantumGate>
-       <ElementaryQuantumGate
-            Name="CNOT"
-            class="quantum.operation.contribution.elementaryquantumgate.CNOT">
+      <ElementaryQuantumGate
+            Name="Hadamard"
+            class="quantum.operation.contribution.elementaryquantumgate.Hadamard">
       </ElementaryQuantumGate>
       <ElementaryQuantumGate
             Name="PauliX"
             class="quantum.operation.contribution.elementaryquantumgate.PauliX">
+      </ElementaryQuantumGate>
+      <ElementaryQuantumGate
+            Name="PauliY"
+            class="quantum.operation.contribution.elementaryquantumgate.PauliY">
       </ElementaryQuantumGate>
       <ElementaryQuantumGate
             Name="PauliZ"
@@ -28,6 +36,10 @@
       <ElementaryQuantumGate
             Name="Swap"
             class="quantum.operation.contribution.elementaryquantumgate.Swap">
+      </ElementaryQuantumGate>
+      <ElementaryQuantumGate
+            Name="P"
+            class="quantum.operation.contribution.elementaryquantumgate.P">
       </ElementaryQuantumGate>
    </extension>
    <extension

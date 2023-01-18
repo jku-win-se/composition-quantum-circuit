@@ -1,6 +1,9 @@
 package quantum.circuit.qiskit.circuit;
 
+import java.util.stream.Collectors;
+
 import quantum.circuit.qiskit.api.QiskitCircuit;
+import quantum.circuit.qiskit.composite.gate.CompositeGateGeneration;
 import quantum.circuit.qiskit.elementary.gate.ElementaryGateGeneration;
 import quantum.circuit.qiskit.library.GenerateLibrary;
 import quantum.circuit.qiskit.loop.LoopGeneration;
@@ -22,95 +25,69 @@ public class Circuit implements QiskitCircuit {
 
 	@Override
 	public String generateCode(QuantumCircuit quCircuit, QuantumCircuitMetadata quCircuitMetadata) {
-		var quantumCircuitDef = new StringBuilder().append(quCircuit.getName() + " = QuantumCircuit(");		
+		var quantumCircuitDef = new StringBuilder().append(quCircuit.getName() + " = QuantumCircuit(");
 		var quantumRegisters = new StringBuilder();
+
 		for (QuantumRegister qr : quCircuit.getQuantumRegisters()) {
-			quantumRegisters
-				.append(qr.getName())
-				.append("=QuantumRegister(" + qr.getNumberOfQubits() + ")")
-				.append("\n");
+			quantumRegisters.append(qr.getName()).append(" = QuantumRegister(" + qr.getNumberOfQubits() + ")")
+					.append("\n");
 			quantumCircuitDef.append(qr.getName() + ",");
 		}
-		
+
 		var classicRegisters = new StringBuilder();
 		for (ClassicRegister cr : quCircuit.getClassicRegisters()) {
-			classicRegisters
-				.append(cr.getName())
-				.append("=ClassicalRegister(" + cr.getNumberOfBits() + ")")
-				.append("\n");
+			classicRegisters.append(cr.getName()).append(" = ClassicalRegister(" + cr.getNumberOfBits() + ")")
+					.append("\n");
 			quantumCircuitDef.append(cr.getName() + ",");
-		}	
-		//Delete the last comma
+		}
+		// Delete the last comma
 		quantumCircuitDef.deleteCharAt(quantumCircuitDef.length() - 1);
-		quantumCircuitDef. append(")");
-		
-		//Include the necessary libraries
-		var objectQuantumOperations = new GenerateLibrary().generateCode(quCircuit,quCircuitMetadata); 
+		quantumCircuitDef.append(")");
+
+		// Include the necessary libraries
+		var objectQuantumOperations = new GenerateLibrary().generateCode(quCircuit, quCircuitMetadata);
 		var quantumOperation = new StringBuilder();
-		
+
 		for (Layer l : quCircuit.getLayers()) {
 			// Place Layer name to make debugging easier
-			quantumOperation.append("\n")
-							.append("# Layer " + l.getName())
-							.append("\n");
-			
+			quantumOperation.append("\n").append("# Layer " + l.getName()).append("\n");
+
 			for (QuantumOperation quOpe : l.getQuantumOperations()) {
-				//Append Operation
-				
+				// Append Operation
+
 				// every QuantumOperation has target_qubits!
-				var target_qubits = QiskitCodeGenerationUtils.indexesQuantumRegister(quOpe.getTargetQubits(), quCircuitMetadata.getQuantumRegisterIndexes());
-				quantumOperation.append("target_qubits = " + target_qubits)
-								.append("\n");
-				
+				var target_qubits = QiskitCodeGenerationUtils.indexesQuantumRegister(quOpe.getTargetQubits(),
+						quCircuitMetadata.getQuantumRegisterIndexes());
+				quantumOperation.append("target_qubits = " + target_qubits).append("\n");
+
 				if (quOpe instanceof ElementaryQuantumGate elementaryGate) {
 					quantumOperation.append(new ElementaryGateGeneration().generateCode(quCircuit, elementaryGate));
-				}
-				else if (quOpe instanceof Measurement measurement) {
+				} else if (quOpe instanceof Measurement measurement) {
 					quantumOperation.append(new MeasurementGeneration().generateCode(quCircuit, measurement));
-				}
-				else if (quOpe instanceof LoopOperation loopOperation) {
+				} else if (quOpe instanceof LoopOperation loopOperation) {
 					quantumOperation.append(new LoopGeneration().generateCode(quCircuit, loopOperation));
+				} else if (quOpe instanceof CompositeQuantumGate compQuantumGate) {
+					quantumOperation.append(new CompositeGateGeneration().generateCode(quCircuit, compQuantumGate));
 				}
-				else if (quOpe instanceof CompositeQuantumGate compQuantumGate) {
-					// QuantumCounting.append(c_gate.qft(target_qubits, inverse=True), target_qubits) #inverse=True is given as parameter in qucirc-file
-					
-					if (compQuantumGate.getOperations().get(0).getOperation().getName().equals(QFT.class.getSimpleName())) {
-						quantumOperation.append(quCircuit.getName() + ".append(")
-										// NOTE: This is wrong! CompositeQuantumGate should be a composite, but I'm not sure how it looks like in details...
-										.append("c_gate.qft(target_qubits, inverse="+compQuantumGate.getInverseForm().toString()+")")
-										.append(", target_qubits)")
-										.append("\n");	
-					} else {
-						quantumOperation.append("# Operation "+ compQuantumGate.getOperations().get(0).getOperation().getName()+ " not supported yet in CompositeQuantumGates")
-										.append("\n");
-					}
-					
-				}
-			}		
-			
-		}		
-		
+			}
+
+		}
+
 		return """
 				from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
 				from qiskit.circuit import Gate
 				import numpy as np
-				#Import Library 			
+
+				#Import Library
 				import Composite_Gates
 				import Loop_Operations
 				import Measurements
 				import Elementary_Gates
-				#Create empty Quantum Circuit				
-				""" 
-				+ quantumRegisters.toString()
-				+ classicRegisters.toString()
-				+ quantumCircuitDef.toString()
-				+ objectQuantumOperations
-				+ quantumOperation.toString()
-				;
-	}
 
-	
-	
-	
+
+				#Create empty Quantum Circuit
+				""" + quantumRegisters.toString() + classicRegisters.toString() + quantumCircuitDef.toString()
+				+ objectQuantumOperations + quantumOperation.toString();
+	}
 
 }
