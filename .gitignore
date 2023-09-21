@@ -2,10 +2,10 @@
 *.class
 
 # Xtend generated code
-/xtend-gen
+xtend-gen/
 
 # Test bin
-/test-bin
+test-bin/
 
-# Xtend bin
-/bin
+# Bin Folder
+bin/
