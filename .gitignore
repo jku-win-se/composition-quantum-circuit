@@ -3,3 +3,9 @@
 
 # Xtend generated code
 /xtend-gen
+
+# Test bin
+/test-bin
+
+# Xtend bin
+/bin
