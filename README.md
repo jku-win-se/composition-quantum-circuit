@@ -1,12 +1,12 @@
 # Composition-based Quantum Circuit Design (CoQuaDe) 
 
-This repository contains the meta-models for Composition of Quantum Circuits
+This repository contains the meta-models for the Composition of Quantum Circuits
   - Quantum Circuit Meta-model: bundles\quantum.circuit.mm\model\QuCircuit.ecore
   - Library Meta-model: bundles\quantum.operation.library.mm\model\quantumOpe.ecore
 
-In adittion, we put an example of a design of the Grover-search algorithm:
-  - Grover-search: samples\grover.composed.sample\grover-composed.qucircuit
-  - Library of quantum operations: samples\grover.composed.sample\quantum-blocks\quantumBlocks.quantumope
+In addition, we put two examples of implemented Quantum Circuits including the generated code in:
+  - Quantum Counting: examples/quantum.counting.sample/
+  - QAOA: qaoa.sample/
 
 Instructions
 
