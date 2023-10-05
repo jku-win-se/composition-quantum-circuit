@@ -1,9 +1,5 @@
 package quantum.operation.definition.api;
 
-import org.eclipse.emf.ecore.EClass;
-
-import qucircuit.QucircuitPackage;
-
 public class AbstractLoopOperation implements ILoopOperationLibrary{
 
 	@Override

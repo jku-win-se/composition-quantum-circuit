@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQuCircuitParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'NONE'", "'SHIFT'", "'CHANGE_BLOCK'", "'QuantumCircuit'", "'{'", "'}'", "'QuantumRegister'", "'NumberOfQubits'", "'ClassicRegister'", "'NumberOfBits'", "'Layer'", "','", "'StatePreparation'", "'operation'", "'targetQubits'", "'['", "']'", "'ElementaryQuantumGate'", "'('", "')'", "'controlQubits'", "'angleParameter'", "'AngleParameter'", "'theta'", "'phi'", "'lambda'", "'Measurement'", "'classicBits'", "'CompositeQuantumGate'", "'Loop'", "'loop'", "'loopTargetQubits'", "'iterations'", "'targetQubitsBlockSize'", "'controlQubitsBlockSize'", "'controlQubitsIterationType'", "'targetQubitsIterationType'", "'incrementBy'", "'operations'", "'fixedControlQubits'", "'fixedTargetQubits'", "'loopControlQubits'", "'-'", "'.'", "'inverseForm'", "'incrementBlockTargetQubits'", "'incrementBlockControlQubits'", "'incrementTargetQubits'", "'incrementControlQubits'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'NONE'", "'SHIFT'", "'CHANGE_BLOCK'", "'QuantumCircuit'", "'{'", "'}'", "'QuantumRegister'", "'NumberOfQubits'", "'('", "')'", "'ClassicRegister'", "'NumberOfBits'", "'Layer'", "','", "'StatePreparation'", "'operation'", "'targetQubits'", "'['", "']'", "'ElementaryQuantumGate'", "'controlQubits'", "'angleParameter'", "'theta'", "'phi'", "'lambda'", "'Measurement'", "'classicBits'", "'CompositeQuantumGate'", "'Loop'", "'loop'", "'loopTargetQubits'", "'iterations'", "'targetQubitsBlockSize'", "'controlQubitsBlockSize'", "'controlQubitsIterationType'", "'targetQubitsIterationType'", "'incrementBy'", "'operations'", "'fixedControlQubits'", "'fixedTargetQubits'", "'loopControlQubits'", "'-'", "'.'", "'inverseForm'", "'incrementBlockTargetQubits'", "'incrementBlockControlQubits'", "'incrementTargetQubits'", "'incrementControlQubits'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -44,7 +44,6 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     public static final int T__53=53;
     public static final int T__54=54;
     public static final int T__60=60;
-    public static final int T__61=61;
     public static final int RULE_ID=5;
     public static final int T__26=26;
     public static final int T__27=27;
@@ -273,12 +272,89 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "ruleQuantumRegister"
 
 
+    // $ANTLR start "entryRuleSimplifiedQuantumRegister"
+    // InternalQuCircuit.g:103:1: entryRuleSimplifiedQuantumRegister : ruleSimplifiedQuantumRegister EOF ;
+    public final void entryRuleSimplifiedQuantumRegister() throws RecognitionException {
+        try {
+            // InternalQuCircuit.g:104:1: ( ruleSimplifiedQuantumRegister EOF )
+            // InternalQuCircuit.g:105:1: ruleSimplifiedQuantumRegister EOF
+            {
+             before(grammarAccess.getSimplifiedQuantumRegisterRule()); 
+            pushFollow(FOLLOW_1);
+            ruleSimplifiedQuantumRegister();
+
+            state._fsp--;
+
+             after(grammarAccess.getSimplifiedQuantumRegisterRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleSimplifiedQuantumRegister"
+
+
+    // $ANTLR start "ruleSimplifiedQuantumRegister"
+    // InternalQuCircuit.g:112:1: ruleSimplifiedQuantumRegister : ( ( rule__SimplifiedQuantumRegister__Group__0 ) ) ;
+    public final void ruleSimplifiedQuantumRegister() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:116:2: ( ( ( rule__SimplifiedQuantumRegister__Group__0 ) ) )
+            // InternalQuCircuit.g:117:2: ( ( rule__SimplifiedQuantumRegister__Group__0 ) )
+            {
+            // InternalQuCircuit.g:117:2: ( ( rule__SimplifiedQuantumRegister__Group__0 ) )
+            // InternalQuCircuit.g:118:3: ( rule__SimplifiedQuantumRegister__Group__0 )
+            {
+             before(grammarAccess.getSimplifiedQuantumRegisterAccess().getGroup()); 
+            // InternalQuCircuit.g:119:3: ( rule__SimplifiedQuantumRegister__Group__0 )
+            // InternalQuCircuit.g:119:4: rule__SimplifiedQuantumRegister__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__SimplifiedQuantumRegister__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSimplifiedQuantumRegisterAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleSimplifiedQuantumRegister"
+
+
     // $ANTLR start "entryRuleClassicRegister"
-    // InternalQuCircuit.g:103:1: entryRuleClassicRegister : ruleClassicRegister EOF ;
+    // InternalQuCircuit.g:128:1: entryRuleClassicRegister : ruleClassicRegister EOF ;
     public final void entryRuleClassicRegister() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:104:1: ( ruleClassicRegister EOF )
-            // InternalQuCircuit.g:105:1: ruleClassicRegister EOF
+            // InternalQuCircuit.g:129:1: ( ruleClassicRegister EOF )
+            // InternalQuCircuit.g:130:1: ruleClassicRegister EOF
             {
              before(grammarAccess.getClassicRegisterRule()); 
             pushFollow(FOLLOW_1);
@@ -304,21 +380,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleClassicRegister"
-    // InternalQuCircuit.g:112:1: ruleClassicRegister : ( ( rule__ClassicRegister__Group__0 ) ) ;
+    // InternalQuCircuit.g:137:1: ruleClassicRegister : ( ( rule__ClassicRegister__Group__0 ) ) ;
     public final void ruleClassicRegister() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:116:2: ( ( ( rule__ClassicRegister__Group__0 ) ) )
-            // InternalQuCircuit.g:117:2: ( ( rule__ClassicRegister__Group__0 ) )
+            // InternalQuCircuit.g:141:2: ( ( ( rule__ClassicRegister__Group__0 ) ) )
+            // InternalQuCircuit.g:142:2: ( ( rule__ClassicRegister__Group__0 ) )
             {
-            // InternalQuCircuit.g:117:2: ( ( rule__ClassicRegister__Group__0 ) )
-            // InternalQuCircuit.g:118:3: ( rule__ClassicRegister__Group__0 )
+            // InternalQuCircuit.g:142:2: ( ( rule__ClassicRegister__Group__0 ) )
+            // InternalQuCircuit.g:143:3: ( rule__ClassicRegister__Group__0 )
             {
              before(grammarAccess.getClassicRegisterAccess().getGroup()); 
-            // InternalQuCircuit.g:119:3: ( rule__ClassicRegister__Group__0 )
-            // InternalQuCircuit.g:119:4: rule__ClassicRegister__Group__0
+            // InternalQuCircuit.g:144:3: ( rule__ClassicRegister__Group__0 )
+            // InternalQuCircuit.g:144:4: rule__ClassicRegister__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__ClassicRegister__Group__0();
@@ -351,11 +427,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleLayer"
-    // InternalQuCircuit.g:128:1: entryRuleLayer : ruleLayer EOF ;
+    // InternalQuCircuit.g:153:1: entryRuleLayer : ruleLayer EOF ;
     public final void entryRuleLayer() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:129:1: ( ruleLayer EOF )
-            // InternalQuCircuit.g:130:1: ruleLayer EOF
+            // InternalQuCircuit.g:154:1: ( ruleLayer EOF )
+            // InternalQuCircuit.g:155:1: ruleLayer EOF
             {
              before(grammarAccess.getLayerRule()); 
             pushFollow(FOLLOW_1);
@@ -381,21 +457,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleLayer"
-    // InternalQuCircuit.g:137:1: ruleLayer : ( ( rule__Layer__Group__0 ) ) ;
+    // InternalQuCircuit.g:162:1: ruleLayer : ( ( rule__Layer__Group__0 ) ) ;
     public final void ruleLayer() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:141:2: ( ( ( rule__Layer__Group__0 ) ) )
-            // InternalQuCircuit.g:142:2: ( ( rule__Layer__Group__0 ) )
+            // InternalQuCircuit.g:166:2: ( ( ( rule__Layer__Group__0 ) ) )
+            // InternalQuCircuit.g:167:2: ( ( rule__Layer__Group__0 ) )
             {
-            // InternalQuCircuit.g:142:2: ( ( rule__Layer__Group__0 ) )
-            // InternalQuCircuit.g:143:3: ( rule__Layer__Group__0 )
+            // InternalQuCircuit.g:167:2: ( ( rule__Layer__Group__0 ) )
+            // InternalQuCircuit.g:168:3: ( rule__Layer__Group__0 )
             {
              before(grammarAccess.getLayerAccess().getGroup()); 
-            // InternalQuCircuit.g:144:3: ( rule__Layer__Group__0 )
-            // InternalQuCircuit.g:144:4: rule__Layer__Group__0
+            // InternalQuCircuit.g:169:3: ( rule__Layer__Group__0 )
+            // InternalQuCircuit.g:169:4: rule__Layer__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Layer__Group__0();
@@ -428,11 +504,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleQuantumOperation"
-    // InternalQuCircuit.g:153:1: entryRuleQuantumOperation : ruleQuantumOperation EOF ;
+    // InternalQuCircuit.g:178:1: entryRuleQuantumOperation : ruleQuantumOperation EOF ;
     public final void entryRuleQuantumOperation() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:154:1: ( ruleQuantumOperation EOF )
-            // InternalQuCircuit.g:155:1: ruleQuantumOperation EOF
+            // InternalQuCircuit.g:179:1: ( ruleQuantumOperation EOF )
+            // InternalQuCircuit.g:180:1: ruleQuantumOperation EOF
             {
              before(grammarAccess.getQuantumOperationRule()); 
             pushFollow(FOLLOW_1);
@@ -458,21 +534,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleQuantumOperation"
-    // InternalQuCircuit.g:162:1: ruleQuantumOperation : ( ( rule__QuantumOperation__Alternatives ) ) ;
+    // InternalQuCircuit.g:187:1: ruleQuantumOperation : ( ( rule__QuantumOperation__Alternatives ) ) ;
     public final void ruleQuantumOperation() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:166:2: ( ( ( rule__QuantumOperation__Alternatives ) ) )
-            // InternalQuCircuit.g:167:2: ( ( rule__QuantumOperation__Alternatives ) )
+            // InternalQuCircuit.g:191:2: ( ( ( rule__QuantumOperation__Alternatives ) ) )
+            // InternalQuCircuit.g:192:2: ( ( rule__QuantumOperation__Alternatives ) )
             {
-            // InternalQuCircuit.g:167:2: ( ( rule__QuantumOperation__Alternatives ) )
-            // InternalQuCircuit.g:168:3: ( rule__QuantumOperation__Alternatives )
+            // InternalQuCircuit.g:192:2: ( ( rule__QuantumOperation__Alternatives ) )
+            // InternalQuCircuit.g:193:3: ( rule__QuantumOperation__Alternatives )
             {
              before(grammarAccess.getQuantumOperationAccess().getAlternatives()); 
-            // InternalQuCircuit.g:169:3: ( rule__QuantumOperation__Alternatives )
-            // InternalQuCircuit.g:169:4: rule__QuantumOperation__Alternatives
+            // InternalQuCircuit.g:194:3: ( rule__QuantumOperation__Alternatives )
+            // InternalQuCircuit.g:194:4: rule__QuantumOperation__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__QuantumOperation__Alternatives();
@@ -505,11 +581,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleStatePreparation"
-    // InternalQuCircuit.g:178:1: entryRuleStatePreparation : ruleStatePreparation EOF ;
+    // InternalQuCircuit.g:203:1: entryRuleStatePreparation : ruleStatePreparation EOF ;
     public final void entryRuleStatePreparation() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:179:1: ( ruleStatePreparation EOF )
-            // InternalQuCircuit.g:180:1: ruleStatePreparation EOF
+            // InternalQuCircuit.g:204:1: ( ruleStatePreparation EOF )
+            // InternalQuCircuit.g:205:1: ruleStatePreparation EOF
             {
              before(grammarAccess.getStatePreparationRule()); 
             pushFollow(FOLLOW_1);
@@ -535,21 +611,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleStatePreparation"
-    // InternalQuCircuit.g:187:1: ruleStatePreparation : ( ( rule__StatePreparation__Group__0 ) ) ;
+    // InternalQuCircuit.g:212:1: ruleStatePreparation : ( ( rule__StatePreparation__Group__0 ) ) ;
     public final void ruleStatePreparation() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:191:2: ( ( ( rule__StatePreparation__Group__0 ) ) )
-            // InternalQuCircuit.g:192:2: ( ( rule__StatePreparation__Group__0 ) )
+            // InternalQuCircuit.g:216:2: ( ( ( rule__StatePreparation__Group__0 ) ) )
+            // InternalQuCircuit.g:217:2: ( ( rule__StatePreparation__Group__0 ) )
             {
-            // InternalQuCircuit.g:192:2: ( ( rule__StatePreparation__Group__0 ) )
-            // InternalQuCircuit.g:193:3: ( rule__StatePreparation__Group__0 )
+            // InternalQuCircuit.g:217:2: ( ( rule__StatePreparation__Group__0 ) )
+            // InternalQuCircuit.g:218:3: ( rule__StatePreparation__Group__0 )
             {
              before(grammarAccess.getStatePreparationAccess().getGroup()); 
-            // InternalQuCircuit.g:194:3: ( rule__StatePreparation__Group__0 )
-            // InternalQuCircuit.g:194:4: rule__StatePreparation__Group__0
+            // InternalQuCircuit.g:219:3: ( rule__StatePreparation__Group__0 )
+            // InternalQuCircuit.g:219:4: rule__StatePreparation__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__Group__0();
@@ -582,11 +658,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleElementaryQuantumGate"
-    // InternalQuCircuit.g:203:1: entryRuleElementaryQuantumGate : ruleElementaryQuantumGate EOF ;
+    // InternalQuCircuit.g:228:1: entryRuleElementaryQuantumGate : ruleElementaryQuantumGate EOF ;
     public final void entryRuleElementaryQuantumGate() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:204:1: ( ruleElementaryQuantumGate EOF )
-            // InternalQuCircuit.g:205:1: ruleElementaryQuantumGate EOF
+            // InternalQuCircuit.g:229:1: ( ruleElementaryQuantumGate EOF )
+            // InternalQuCircuit.g:230:1: ruleElementaryQuantumGate EOF
             {
              before(grammarAccess.getElementaryQuantumGateRule()); 
             pushFollow(FOLLOW_1);
@@ -612,21 +688,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleElementaryQuantumGate"
-    // InternalQuCircuit.g:212:1: ruleElementaryQuantumGate : ( ( rule__ElementaryQuantumGate__Group__0 ) ) ;
+    // InternalQuCircuit.g:237:1: ruleElementaryQuantumGate : ( ( rule__ElementaryQuantumGate__Group__0 ) ) ;
     public final void ruleElementaryQuantumGate() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:216:2: ( ( ( rule__ElementaryQuantumGate__Group__0 ) ) )
-            // InternalQuCircuit.g:217:2: ( ( rule__ElementaryQuantumGate__Group__0 ) )
+            // InternalQuCircuit.g:241:2: ( ( ( rule__ElementaryQuantumGate__Group__0 ) ) )
+            // InternalQuCircuit.g:242:2: ( ( rule__ElementaryQuantumGate__Group__0 ) )
             {
-            // InternalQuCircuit.g:217:2: ( ( rule__ElementaryQuantumGate__Group__0 ) )
-            // InternalQuCircuit.g:218:3: ( rule__ElementaryQuantumGate__Group__0 )
+            // InternalQuCircuit.g:242:2: ( ( rule__ElementaryQuantumGate__Group__0 ) )
+            // InternalQuCircuit.g:243:3: ( rule__ElementaryQuantumGate__Group__0 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup()); 
-            // InternalQuCircuit.g:219:3: ( rule__ElementaryQuantumGate__Group__0 )
-            // InternalQuCircuit.g:219:4: rule__ElementaryQuantumGate__Group__0
+            // InternalQuCircuit.g:244:3: ( rule__ElementaryQuantumGate__Group__0 )
+            // InternalQuCircuit.g:244:4: rule__ElementaryQuantumGate__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__Group__0();
@@ -659,11 +735,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleAngleParameter"
-    // InternalQuCircuit.g:228:1: entryRuleAngleParameter : ruleAngleParameter EOF ;
+    // InternalQuCircuit.g:253:1: entryRuleAngleParameter : ruleAngleParameter EOF ;
     public final void entryRuleAngleParameter() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:229:1: ( ruleAngleParameter EOF )
-            // InternalQuCircuit.g:230:1: ruleAngleParameter EOF
+            // InternalQuCircuit.g:254:1: ( ruleAngleParameter EOF )
+            // InternalQuCircuit.g:255:1: ruleAngleParameter EOF
             {
              before(grammarAccess.getAngleParameterRule()); 
             pushFollow(FOLLOW_1);
@@ -689,21 +765,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleAngleParameter"
-    // InternalQuCircuit.g:237:1: ruleAngleParameter : ( ( rule__AngleParameter__Group__0 ) ) ;
+    // InternalQuCircuit.g:262:1: ruleAngleParameter : ( ( rule__AngleParameter__Group__0 ) ) ;
     public final void ruleAngleParameter() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:241:2: ( ( ( rule__AngleParameter__Group__0 ) ) )
-            // InternalQuCircuit.g:242:2: ( ( rule__AngleParameter__Group__0 ) )
+            // InternalQuCircuit.g:266:2: ( ( ( rule__AngleParameter__Group__0 ) ) )
+            // InternalQuCircuit.g:267:2: ( ( rule__AngleParameter__Group__0 ) )
             {
-            // InternalQuCircuit.g:242:2: ( ( rule__AngleParameter__Group__0 ) )
-            // InternalQuCircuit.g:243:3: ( rule__AngleParameter__Group__0 )
+            // InternalQuCircuit.g:267:2: ( ( rule__AngleParameter__Group__0 ) )
+            // InternalQuCircuit.g:268:3: ( rule__AngleParameter__Group__0 )
             {
              before(grammarAccess.getAngleParameterAccess().getGroup()); 
-            // InternalQuCircuit.g:244:3: ( rule__AngleParameter__Group__0 )
-            // InternalQuCircuit.g:244:4: rule__AngleParameter__Group__0
+            // InternalQuCircuit.g:269:3: ( rule__AngleParameter__Group__0 )
+            // InternalQuCircuit.g:269:4: rule__AngleParameter__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__AngleParameter__Group__0();
@@ -736,11 +812,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleMeasurement"
-    // InternalQuCircuit.g:253:1: entryRuleMeasurement : ruleMeasurement EOF ;
+    // InternalQuCircuit.g:278:1: entryRuleMeasurement : ruleMeasurement EOF ;
     public final void entryRuleMeasurement() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:254:1: ( ruleMeasurement EOF )
-            // InternalQuCircuit.g:255:1: ruleMeasurement EOF
+            // InternalQuCircuit.g:279:1: ( ruleMeasurement EOF )
+            // InternalQuCircuit.g:280:1: ruleMeasurement EOF
             {
              before(grammarAccess.getMeasurementRule()); 
             pushFollow(FOLLOW_1);
@@ -766,21 +842,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleMeasurement"
-    // InternalQuCircuit.g:262:1: ruleMeasurement : ( ( rule__Measurement__Group__0 ) ) ;
+    // InternalQuCircuit.g:287:1: ruleMeasurement : ( ( rule__Measurement__Group__0 ) ) ;
     public final void ruleMeasurement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:266:2: ( ( ( rule__Measurement__Group__0 ) ) )
-            // InternalQuCircuit.g:267:2: ( ( rule__Measurement__Group__0 ) )
+            // InternalQuCircuit.g:291:2: ( ( ( rule__Measurement__Group__0 ) ) )
+            // InternalQuCircuit.g:292:2: ( ( rule__Measurement__Group__0 ) )
             {
-            // InternalQuCircuit.g:267:2: ( ( rule__Measurement__Group__0 ) )
-            // InternalQuCircuit.g:268:3: ( rule__Measurement__Group__0 )
+            // InternalQuCircuit.g:292:2: ( ( rule__Measurement__Group__0 ) )
+            // InternalQuCircuit.g:293:3: ( rule__Measurement__Group__0 )
             {
              before(grammarAccess.getMeasurementAccess().getGroup()); 
-            // InternalQuCircuit.g:269:3: ( rule__Measurement__Group__0 )
-            // InternalQuCircuit.g:269:4: rule__Measurement__Group__0
+            // InternalQuCircuit.g:294:3: ( rule__Measurement__Group__0 )
+            // InternalQuCircuit.g:294:4: rule__Measurement__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__Group__0();
@@ -813,11 +889,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleCompositeQuantumGate"
-    // InternalQuCircuit.g:278:1: entryRuleCompositeQuantumGate : ruleCompositeQuantumGate EOF ;
+    // InternalQuCircuit.g:303:1: entryRuleCompositeQuantumGate : ruleCompositeQuantumGate EOF ;
     public final void entryRuleCompositeQuantumGate() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:279:1: ( ruleCompositeQuantumGate EOF )
-            // InternalQuCircuit.g:280:1: ruleCompositeQuantumGate EOF
+            // InternalQuCircuit.g:304:1: ( ruleCompositeQuantumGate EOF )
+            // InternalQuCircuit.g:305:1: ruleCompositeQuantumGate EOF
             {
              before(grammarAccess.getCompositeQuantumGateRule()); 
             pushFollow(FOLLOW_1);
@@ -843,21 +919,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleCompositeQuantumGate"
-    // InternalQuCircuit.g:287:1: ruleCompositeQuantumGate : ( ( rule__CompositeQuantumGate__Group__0 ) ) ;
+    // InternalQuCircuit.g:312:1: ruleCompositeQuantumGate : ( ( rule__CompositeQuantumGate__Group__0 ) ) ;
     public final void ruleCompositeQuantumGate() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:291:2: ( ( ( rule__CompositeQuantumGate__Group__0 ) ) )
-            // InternalQuCircuit.g:292:2: ( ( rule__CompositeQuantumGate__Group__0 ) )
+            // InternalQuCircuit.g:316:2: ( ( ( rule__CompositeQuantumGate__Group__0 ) ) )
+            // InternalQuCircuit.g:317:2: ( ( rule__CompositeQuantumGate__Group__0 ) )
             {
-            // InternalQuCircuit.g:292:2: ( ( rule__CompositeQuantumGate__Group__0 ) )
-            // InternalQuCircuit.g:293:3: ( rule__CompositeQuantumGate__Group__0 )
+            // InternalQuCircuit.g:317:2: ( ( rule__CompositeQuantumGate__Group__0 ) )
+            // InternalQuCircuit.g:318:3: ( rule__CompositeQuantumGate__Group__0 )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup()); 
-            // InternalQuCircuit.g:294:3: ( rule__CompositeQuantumGate__Group__0 )
-            // InternalQuCircuit.g:294:4: rule__CompositeQuantumGate__Group__0
+            // InternalQuCircuit.g:319:3: ( rule__CompositeQuantumGate__Group__0 )
+            // InternalQuCircuit.g:319:4: rule__CompositeQuantumGate__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__Group__0();
@@ -890,11 +966,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleLoop"
-    // InternalQuCircuit.g:303:1: entryRuleLoop : ruleLoop EOF ;
+    // InternalQuCircuit.g:328:1: entryRuleLoop : ruleLoop EOF ;
     public final void entryRuleLoop() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:304:1: ( ruleLoop EOF )
-            // InternalQuCircuit.g:305:1: ruleLoop EOF
+            // InternalQuCircuit.g:329:1: ( ruleLoop EOF )
+            // InternalQuCircuit.g:330:1: ruleLoop EOF
             {
              before(grammarAccess.getLoopRule()); 
             pushFollow(FOLLOW_1);
@@ -920,21 +996,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleLoop"
-    // InternalQuCircuit.g:312:1: ruleLoop : ( ( rule__Loop__Group__0 ) ) ;
+    // InternalQuCircuit.g:337:1: ruleLoop : ( ( rule__Loop__Group__0 ) ) ;
     public final void ruleLoop() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:316:2: ( ( ( rule__Loop__Group__0 ) ) )
-            // InternalQuCircuit.g:317:2: ( ( rule__Loop__Group__0 ) )
+            // InternalQuCircuit.g:341:2: ( ( ( rule__Loop__Group__0 ) ) )
+            // InternalQuCircuit.g:342:2: ( ( rule__Loop__Group__0 ) )
             {
-            // InternalQuCircuit.g:317:2: ( ( rule__Loop__Group__0 ) )
-            // InternalQuCircuit.g:318:3: ( rule__Loop__Group__0 )
+            // InternalQuCircuit.g:342:2: ( ( rule__Loop__Group__0 ) )
+            // InternalQuCircuit.g:343:3: ( rule__Loop__Group__0 )
             {
              before(grammarAccess.getLoopAccess().getGroup()); 
-            // InternalQuCircuit.g:319:3: ( rule__Loop__Group__0 )
-            // InternalQuCircuit.g:319:4: rule__Loop__Group__0
+            // InternalQuCircuit.g:344:3: ( rule__Loop__Group__0 )
+            // InternalQuCircuit.g:344:4: rule__Loop__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group__0();
@@ -967,11 +1043,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleOperation"
-    // InternalQuCircuit.g:328:1: entryRuleOperation : ruleOperation EOF ;
+    // InternalQuCircuit.g:353:1: entryRuleOperation : ruleOperation EOF ;
     public final void entryRuleOperation() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:329:1: ( ruleOperation EOF )
-            // InternalQuCircuit.g:330:1: ruleOperation EOF
+            // InternalQuCircuit.g:354:1: ( ruleOperation EOF )
+            // InternalQuCircuit.g:355:1: ruleOperation EOF
             {
              before(grammarAccess.getOperationRule()); 
             pushFollow(FOLLOW_1);
@@ -997,21 +1073,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleOperation"
-    // InternalQuCircuit.g:337:1: ruleOperation : ( ( rule__Operation__Group__0 ) ) ;
+    // InternalQuCircuit.g:362:1: ruleOperation : ( ( rule__Operation__Group__0 ) ) ;
     public final void ruleOperation() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:341:2: ( ( ( rule__Operation__Group__0 ) ) )
-            // InternalQuCircuit.g:342:2: ( ( rule__Operation__Group__0 ) )
+            // InternalQuCircuit.g:366:2: ( ( ( rule__Operation__Group__0 ) ) )
+            // InternalQuCircuit.g:367:2: ( ( rule__Operation__Group__0 ) )
             {
-            // InternalQuCircuit.g:342:2: ( ( rule__Operation__Group__0 ) )
-            // InternalQuCircuit.g:343:3: ( rule__Operation__Group__0 )
+            // InternalQuCircuit.g:367:2: ( ( rule__Operation__Group__0 ) )
+            // InternalQuCircuit.g:368:3: ( rule__Operation__Group__0 )
             {
              before(grammarAccess.getOperationAccess().getGroup()); 
-            // InternalQuCircuit.g:344:3: ( rule__Operation__Group__0 )
-            // InternalQuCircuit.g:344:4: rule__Operation__Group__0
+            // InternalQuCircuit.g:369:3: ( rule__Operation__Group__0 )
+            // InternalQuCircuit.g:369:4: rule__Operation__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__Operation__Group__0();
@@ -1044,11 +1120,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleSelector"
-    // InternalQuCircuit.g:353:1: entryRuleSelector : ruleSelector EOF ;
+    // InternalQuCircuit.g:378:1: entryRuleSelector : ruleSelector EOF ;
     public final void entryRuleSelector() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:354:1: ( ruleSelector EOF )
-            // InternalQuCircuit.g:355:1: ruleSelector EOF
+            // InternalQuCircuit.g:379:1: ( ruleSelector EOF )
+            // InternalQuCircuit.g:380:1: ruleSelector EOF
             {
              before(grammarAccess.getSelectorRule()); 
             pushFollow(FOLLOW_1);
@@ -1074,21 +1150,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleSelector"
-    // InternalQuCircuit.g:362:1: ruleSelector : ( ( rule__Selector__Alternatives ) ) ;
+    // InternalQuCircuit.g:387:1: ruleSelector : ( ( rule__Selector__Alternatives ) ) ;
     public final void ruleSelector() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:366:2: ( ( ( rule__Selector__Alternatives ) ) )
-            // InternalQuCircuit.g:367:2: ( ( rule__Selector__Alternatives ) )
+            // InternalQuCircuit.g:391:2: ( ( ( rule__Selector__Alternatives ) ) )
+            // InternalQuCircuit.g:392:2: ( ( rule__Selector__Alternatives ) )
             {
-            // InternalQuCircuit.g:367:2: ( ( rule__Selector__Alternatives ) )
-            // InternalQuCircuit.g:368:3: ( rule__Selector__Alternatives )
+            // InternalQuCircuit.g:392:2: ( ( rule__Selector__Alternatives ) )
+            // InternalQuCircuit.g:393:3: ( rule__Selector__Alternatives )
             {
              before(grammarAccess.getSelectorAccess().getAlternatives()); 
-            // InternalQuCircuit.g:369:3: ( rule__Selector__Alternatives )
-            // InternalQuCircuit.g:369:4: rule__Selector__Alternatives
+            // InternalQuCircuit.g:394:3: ( rule__Selector__Alternatives )
+            // InternalQuCircuit.g:394:4: rule__Selector__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Selector__Alternatives();
@@ -1121,11 +1197,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleElementSelector"
-    // InternalQuCircuit.g:378:1: entryRuleElementSelector : ruleElementSelector EOF ;
+    // InternalQuCircuit.g:403:1: entryRuleElementSelector : ruleElementSelector EOF ;
     public final void entryRuleElementSelector() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:379:1: ( ruleElementSelector EOF )
-            // InternalQuCircuit.g:380:1: ruleElementSelector EOF
+            // InternalQuCircuit.g:404:1: ( ruleElementSelector EOF )
+            // InternalQuCircuit.g:405:1: ruleElementSelector EOF
             {
              before(grammarAccess.getElementSelectorRule()); 
             pushFollow(FOLLOW_1);
@@ -1151,21 +1227,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleElementSelector"
-    // InternalQuCircuit.g:387:1: ruleElementSelector : ( ( rule__ElementSelector__Group__0 ) ) ;
+    // InternalQuCircuit.g:412:1: ruleElementSelector : ( ( rule__ElementSelector__Group__0 ) ) ;
     public final void ruleElementSelector() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:391:2: ( ( ( rule__ElementSelector__Group__0 ) ) )
-            // InternalQuCircuit.g:392:2: ( ( rule__ElementSelector__Group__0 ) )
+            // InternalQuCircuit.g:416:2: ( ( ( rule__ElementSelector__Group__0 ) ) )
+            // InternalQuCircuit.g:417:2: ( ( rule__ElementSelector__Group__0 ) )
             {
-            // InternalQuCircuit.g:392:2: ( ( rule__ElementSelector__Group__0 ) )
-            // InternalQuCircuit.g:393:3: ( rule__ElementSelector__Group__0 )
+            // InternalQuCircuit.g:417:2: ( ( rule__ElementSelector__Group__0 ) )
+            // InternalQuCircuit.g:418:3: ( rule__ElementSelector__Group__0 )
             {
              before(grammarAccess.getElementSelectorAccess().getGroup()); 
-            // InternalQuCircuit.g:394:3: ( rule__ElementSelector__Group__0 )
-            // InternalQuCircuit.g:394:4: rule__ElementSelector__Group__0
+            // InternalQuCircuit.g:419:3: ( rule__ElementSelector__Group__0 )
+            // InternalQuCircuit.g:419:4: rule__ElementSelector__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__ElementSelector__Group__0();
@@ -1198,11 +1274,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleRangeSelector"
-    // InternalQuCircuit.g:403:1: entryRuleRangeSelector : ruleRangeSelector EOF ;
+    // InternalQuCircuit.g:428:1: entryRuleRangeSelector : ruleRangeSelector EOF ;
     public final void entryRuleRangeSelector() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:404:1: ( ruleRangeSelector EOF )
-            // InternalQuCircuit.g:405:1: ruleRangeSelector EOF
+            // InternalQuCircuit.g:429:1: ( ruleRangeSelector EOF )
+            // InternalQuCircuit.g:430:1: ruleRangeSelector EOF
             {
              before(grammarAccess.getRangeSelectorRule()); 
             pushFollow(FOLLOW_1);
@@ -1228,21 +1304,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleRangeSelector"
-    // InternalQuCircuit.g:412:1: ruleRangeSelector : ( ( rule__RangeSelector__Group__0 ) ) ;
+    // InternalQuCircuit.g:437:1: ruleRangeSelector : ( ( rule__RangeSelector__Group__0 ) ) ;
     public final void ruleRangeSelector() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:416:2: ( ( ( rule__RangeSelector__Group__0 ) ) )
-            // InternalQuCircuit.g:417:2: ( ( rule__RangeSelector__Group__0 ) )
+            // InternalQuCircuit.g:441:2: ( ( ( rule__RangeSelector__Group__0 ) ) )
+            // InternalQuCircuit.g:442:2: ( ( rule__RangeSelector__Group__0 ) )
             {
-            // InternalQuCircuit.g:417:2: ( ( rule__RangeSelector__Group__0 ) )
-            // InternalQuCircuit.g:418:3: ( rule__RangeSelector__Group__0 )
+            // InternalQuCircuit.g:442:2: ( ( rule__RangeSelector__Group__0 ) )
+            // InternalQuCircuit.g:443:3: ( rule__RangeSelector__Group__0 )
             {
              before(grammarAccess.getRangeSelectorAccess().getGroup()); 
-            // InternalQuCircuit.g:419:3: ( rule__RangeSelector__Group__0 )
-            // InternalQuCircuit.g:419:4: rule__RangeSelector__Group__0
+            // InternalQuCircuit.g:444:3: ( rule__RangeSelector__Group__0 )
+            // InternalQuCircuit.g:444:4: rule__RangeSelector__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__RangeSelector__Group__0();
@@ -1275,11 +1351,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalQuCircuit.g:428:1: entryRuleEString : ruleEString EOF ;
+    // InternalQuCircuit.g:453:1: entryRuleEString : ruleEString EOF ;
     public final void entryRuleEString() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:429:1: ( ruleEString EOF )
-            // InternalQuCircuit.g:430:1: ruleEString EOF
+            // InternalQuCircuit.g:454:1: ( ruleEString EOF )
+            // InternalQuCircuit.g:455:1: ruleEString EOF
             {
              before(grammarAccess.getEStringRule()); 
             pushFollow(FOLLOW_1);
@@ -1305,21 +1381,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleEString"
-    // InternalQuCircuit.g:437:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
+    // InternalQuCircuit.g:462:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
     public final void ruleEString() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:441:2: ( ( ( rule__EString__Alternatives ) ) )
-            // InternalQuCircuit.g:442:2: ( ( rule__EString__Alternatives ) )
+            // InternalQuCircuit.g:466:2: ( ( ( rule__EString__Alternatives ) ) )
+            // InternalQuCircuit.g:467:2: ( ( rule__EString__Alternatives ) )
             {
-            // InternalQuCircuit.g:442:2: ( ( rule__EString__Alternatives ) )
-            // InternalQuCircuit.g:443:3: ( rule__EString__Alternatives )
+            // InternalQuCircuit.g:467:2: ( ( rule__EString__Alternatives ) )
+            // InternalQuCircuit.g:468:3: ( rule__EString__Alternatives )
             {
              before(grammarAccess.getEStringAccess().getAlternatives()); 
-            // InternalQuCircuit.g:444:3: ( rule__EString__Alternatives )
-            // InternalQuCircuit.g:444:4: rule__EString__Alternatives
+            // InternalQuCircuit.g:469:3: ( rule__EString__Alternatives )
+            // InternalQuCircuit.g:469:4: rule__EString__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__EString__Alternatives();
@@ -1352,11 +1428,11 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "entryRuleEDoubleObject"
-    // InternalQuCircuit.g:453:1: entryRuleEDoubleObject : ruleEDoubleObject EOF ;
+    // InternalQuCircuit.g:478:1: entryRuleEDoubleObject : ruleEDoubleObject EOF ;
     public final void entryRuleEDoubleObject() throws RecognitionException {
         try {
-            // InternalQuCircuit.g:454:1: ( ruleEDoubleObject EOF )
-            // InternalQuCircuit.g:455:1: ruleEDoubleObject EOF
+            // InternalQuCircuit.g:479:1: ( ruleEDoubleObject EOF )
+            // InternalQuCircuit.g:480:1: ruleEDoubleObject EOF
             {
              before(grammarAccess.getEDoubleObjectRule()); 
             pushFollow(FOLLOW_1);
@@ -1382,21 +1458,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleEDoubleObject"
-    // InternalQuCircuit.g:462:1: ruleEDoubleObject : ( ( rule__EDoubleObject__Group__0 ) ) ;
+    // InternalQuCircuit.g:487:1: ruleEDoubleObject : ( ( rule__EDoubleObject__Group__0 ) ) ;
     public final void ruleEDoubleObject() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:466:2: ( ( ( rule__EDoubleObject__Group__0 ) ) )
-            // InternalQuCircuit.g:467:2: ( ( rule__EDoubleObject__Group__0 ) )
+            // InternalQuCircuit.g:491:2: ( ( ( rule__EDoubleObject__Group__0 ) ) )
+            // InternalQuCircuit.g:492:2: ( ( rule__EDoubleObject__Group__0 ) )
             {
-            // InternalQuCircuit.g:467:2: ( ( rule__EDoubleObject__Group__0 ) )
-            // InternalQuCircuit.g:468:3: ( rule__EDoubleObject__Group__0 )
+            // InternalQuCircuit.g:492:2: ( ( rule__EDoubleObject__Group__0 ) )
+            // InternalQuCircuit.g:493:3: ( rule__EDoubleObject__Group__0 )
             {
              before(grammarAccess.getEDoubleObjectAccess().getGroup()); 
-            // InternalQuCircuit.g:469:3: ( rule__EDoubleObject__Group__0 )
-            // InternalQuCircuit.g:469:4: rule__EDoubleObject__Group__0
+            // InternalQuCircuit.g:494:3: ( rule__EDoubleObject__Group__0 )
+            // InternalQuCircuit.g:494:4: rule__EDoubleObject__Group__0
             {
             pushFollow(FOLLOW_2);
             rule__EDoubleObject__Group__0();
@@ -1429,21 +1505,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "ruleITERATION_TYPE"
-    // InternalQuCircuit.g:478:1: ruleITERATION_TYPE : ( ( rule__ITERATION_TYPE__Alternatives ) ) ;
+    // InternalQuCircuit.g:503:1: ruleITERATION_TYPE : ( ( rule__ITERATION_TYPE__Alternatives ) ) ;
     public final void ruleITERATION_TYPE() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:482:1: ( ( ( rule__ITERATION_TYPE__Alternatives ) ) )
-            // InternalQuCircuit.g:483:2: ( ( rule__ITERATION_TYPE__Alternatives ) )
+            // InternalQuCircuit.g:507:1: ( ( ( rule__ITERATION_TYPE__Alternatives ) ) )
+            // InternalQuCircuit.g:508:2: ( ( rule__ITERATION_TYPE__Alternatives ) )
             {
-            // InternalQuCircuit.g:483:2: ( ( rule__ITERATION_TYPE__Alternatives ) )
-            // InternalQuCircuit.g:484:3: ( rule__ITERATION_TYPE__Alternatives )
+            // InternalQuCircuit.g:508:2: ( ( rule__ITERATION_TYPE__Alternatives ) )
+            // InternalQuCircuit.g:509:3: ( rule__ITERATION_TYPE__Alternatives )
             {
              before(grammarAccess.getITERATION_TYPEAccess().getAlternatives()); 
-            // InternalQuCircuit.g:485:3: ( rule__ITERATION_TYPE__Alternatives )
-            // InternalQuCircuit.g:485:4: rule__ITERATION_TYPE__Alternatives
+            // InternalQuCircuit.g:510:3: ( rule__ITERATION_TYPE__Alternatives )
+            // InternalQuCircuit.g:510:4: rule__ITERATION_TYPE__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__ITERATION_TYPE__Alternatives();
@@ -1476,36 +1552,36 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumOperation__Alternatives"
-    // InternalQuCircuit.g:493:1: rule__QuantumOperation__Alternatives : ( ( ruleStatePreparation ) | ( ruleElementaryQuantumGate ) | ( ruleMeasurement ) | ( ruleCompositeQuantumGate ) | ( ruleLoop ) );
+    // InternalQuCircuit.g:518:1: rule__QuantumOperation__Alternatives : ( ( ruleStatePreparation ) | ( ruleElementaryQuantumGate ) | ( ruleMeasurement ) | ( ruleCompositeQuantumGate ) | ( ruleLoop ) );
     public final void rule__QuantumOperation__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:497:1: ( ( ruleStatePreparation ) | ( ruleElementaryQuantumGate ) | ( ruleMeasurement ) | ( ruleCompositeQuantumGate ) | ( ruleLoop ) )
+            // InternalQuCircuit.g:522:1: ( ( ruleStatePreparation ) | ( ruleElementaryQuantumGate ) | ( ruleMeasurement ) | ( ruleCompositeQuantumGate ) | ( ruleLoop ) )
             int alt1=5;
             switch ( input.LA(1) ) {
-            case 25:
+            case 27:
                 {
                 alt1=1;
                 }
                 break;
-            case 30:
+            case 32:
                 {
                 alt1=2;
                 }
                 break;
-            case 39:
+            case 38:
                 {
                 alt1=3;
                 }
                 break;
-            case 41:
+            case 40:
                 {
                 alt1=4;
                 }
                 break;
-            case 42:
+            case 41:
                 {
                 alt1=5;
                 }
@@ -1519,10 +1595,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
             switch (alt1) {
                 case 1 :
-                    // InternalQuCircuit.g:498:2: ( ruleStatePreparation )
+                    // InternalQuCircuit.g:523:2: ( ruleStatePreparation )
                     {
-                    // InternalQuCircuit.g:498:2: ( ruleStatePreparation )
-                    // InternalQuCircuit.g:499:3: ruleStatePreparation
+                    // InternalQuCircuit.g:523:2: ( ruleStatePreparation )
+                    // InternalQuCircuit.g:524:3: ruleStatePreparation
                     {
                      before(grammarAccess.getQuantumOperationAccess().getStatePreparationParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
@@ -1538,10 +1614,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalQuCircuit.g:504:2: ( ruleElementaryQuantumGate )
+                    // InternalQuCircuit.g:529:2: ( ruleElementaryQuantumGate )
                     {
-                    // InternalQuCircuit.g:504:2: ( ruleElementaryQuantumGate )
-                    // InternalQuCircuit.g:505:3: ruleElementaryQuantumGate
+                    // InternalQuCircuit.g:529:2: ( ruleElementaryQuantumGate )
+                    // InternalQuCircuit.g:530:3: ruleElementaryQuantumGate
                     {
                      before(grammarAccess.getQuantumOperationAccess().getElementaryQuantumGateParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
@@ -1557,10 +1633,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 3 :
-                    // InternalQuCircuit.g:510:2: ( ruleMeasurement )
+                    // InternalQuCircuit.g:535:2: ( ruleMeasurement )
                     {
-                    // InternalQuCircuit.g:510:2: ( ruleMeasurement )
-                    // InternalQuCircuit.g:511:3: ruleMeasurement
+                    // InternalQuCircuit.g:535:2: ( ruleMeasurement )
+                    // InternalQuCircuit.g:536:3: ruleMeasurement
                     {
                      before(grammarAccess.getQuantumOperationAccess().getMeasurementParserRuleCall_2()); 
                     pushFollow(FOLLOW_2);
@@ -1576,10 +1652,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 4 :
-                    // InternalQuCircuit.g:516:2: ( ruleCompositeQuantumGate )
+                    // InternalQuCircuit.g:541:2: ( ruleCompositeQuantumGate )
                     {
-                    // InternalQuCircuit.g:516:2: ( ruleCompositeQuantumGate )
-                    // InternalQuCircuit.g:517:3: ruleCompositeQuantumGate
+                    // InternalQuCircuit.g:541:2: ( ruleCompositeQuantumGate )
+                    // InternalQuCircuit.g:542:3: ruleCompositeQuantumGate
                     {
                      before(grammarAccess.getQuantumOperationAccess().getCompositeQuantumGateParserRuleCall_3()); 
                     pushFollow(FOLLOW_2);
@@ -1595,10 +1671,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 5 :
-                    // InternalQuCircuit.g:522:2: ( ruleLoop )
+                    // InternalQuCircuit.g:547:2: ( ruleLoop )
                     {
-                    // InternalQuCircuit.g:522:2: ( ruleLoop )
-                    // InternalQuCircuit.g:523:3: ruleLoop
+                    // InternalQuCircuit.g:547:2: ( ruleLoop )
+                    // InternalQuCircuit.g:548:3: ruleLoop
                     {
                      before(grammarAccess.getQuantumOperationAccess().getLoopParserRuleCall_4()); 
                     pushFollow(FOLLOW_2);
@@ -1631,29 +1707,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Selector__Alternatives"
-    // InternalQuCircuit.g:532:1: rule__Selector__Alternatives : ( ( ruleElementSelector ) | ( ruleRangeSelector ) );
+    // InternalQuCircuit.g:557:1: rule__Selector__Alternatives : ( ( ruleElementSelector ) | ( ruleRangeSelector ) );
     public final void rule__Selector__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:536:1: ( ( ruleElementSelector ) | ( ruleRangeSelector ) )
+            // InternalQuCircuit.g:561:1: ( ( ruleElementSelector ) | ( ruleRangeSelector ) )
             int alt2=2;
             switch ( input.LA(1) ) {
             case RULE_STRING:
                 {
                 int LA2_1 = input.LA(2);
 
-                if ( (LA2_1==24) ) {
+                if ( (LA2_1==26) ) {
                     int LA2_4 = input.LA(3);
 
                     if ( (LA2_4==RULE_INT) ) {
                         int LA2_3 = input.LA(4);
 
-                        if ( (LA2_3==55) ) {
+                        if ( (LA2_3==54) ) {
                             alt2=2;
                         }
-                        else if ( (LA2_3==EOF||LA2_3==24||LA2_3==29||LA2_3==32) ) {
+                        else if ( (LA2_3==EOF||LA2_3==22||LA2_3==26||LA2_3==31) ) {
                             alt2=1;
                         }
                         else {
@@ -1682,16 +1758,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                 {
                 int LA2_2 = input.LA(2);
 
-                if ( (LA2_2==24) ) {
+                if ( (LA2_2==26) ) {
                     int LA2_4 = input.LA(3);
 
                     if ( (LA2_4==RULE_INT) ) {
                         int LA2_3 = input.LA(4);
 
-                        if ( (LA2_3==55) ) {
+                        if ( (LA2_3==54) ) {
                             alt2=2;
                         }
-                        else if ( (LA2_3==EOF||LA2_3==24||LA2_3==29||LA2_3==32) ) {
+                        else if ( (LA2_3==EOF||LA2_3==22||LA2_3==26||LA2_3==31) ) {
                             alt2=1;
                         }
                         else {
@@ -1720,10 +1796,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                 {
                 int LA2_3 = input.LA(2);
 
-                if ( (LA2_3==55) ) {
+                if ( (LA2_3==54) ) {
                     alt2=2;
                 }
-                else if ( (LA2_3==EOF||LA2_3==24||LA2_3==29||LA2_3==32) ) {
+                else if ( (LA2_3==EOF||LA2_3==22||LA2_3==26||LA2_3==31) ) {
                     alt2=1;
                 }
                 else {
@@ -1743,10 +1819,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
             switch (alt2) {
                 case 1 :
-                    // InternalQuCircuit.g:537:2: ( ruleElementSelector )
+                    // InternalQuCircuit.g:562:2: ( ruleElementSelector )
                     {
-                    // InternalQuCircuit.g:537:2: ( ruleElementSelector )
-                    // InternalQuCircuit.g:538:3: ruleElementSelector
+                    // InternalQuCircuit.g:562:2: ( ruleElementSelector )
+                    // InternalQuCircuit.g:563:3: ruleElementSelector
                     {
                      before(grammarAccess.getSelectorAccess().getElementSelectorParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
@@ -1762,10 +1838,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalQuCircuit.g:543:2: ( ruleRangeSelector )
+                    // InternalQuCircuit.g:568:2: ( ruleRangeSelector )
                     {
-                    // InternalQuCircuit.g:543:2: ( ruleRangeSelector )
-                    // InternalQuCircuit.g:544:3: ruleRangeSelector
+                    // InternalQuCircuit.g:568:2: ( ruleRangeSelector )
+                    // InternalQuCircuit.g:569:3: ruleRangeSelector
                     {
                      before(grammarAccess.getSelectorAccess().getRangeSelectorParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
@@ -1798,13 +1874,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EString__Alternatives"
-    // InternalQuCircuit.g:553:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
+    // InternalQuCircuit.g:578:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
     public final void rule__EString__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:557:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            // InternalQuCircuit.g:582:1: ( ( RULE_STRING ) | ( RULE_ID ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1822,10 +1898,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             }
             switch (alt3) {
                 case 1 :
-                    // InternalQuCircuit.g:558:2: ( RULE_STRING )
+                    // InternalQuCircuit.g:583:2: ( RULE_STRING )
                     {
-                    // InternalQuCircuit.g:558:2: ( RULE_STRING )
-                    // InternalQuCircuit.g:559:3: RULE_STRING
+                    // InternalQuCircuit.g:583:2: ( RULE_STRING )
+                    // InternalQuCircuit.g:584:3: RULE_STRING
                     {
                      before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
                     match(input,RULE_STRING,FOLLOW_2); 
@@ -1837,10 +1913,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalQuCircuit.g:564:2: ( RULE_ID )
+                    // InternalQuCircuit.g:589:2: ( RULE_ID )
                     {
-                    // InternalQuCircuit.g:564:2: ( RULE_ID )
-                    // InternalQuCircuit.g:565:3: RULE_ID
+                    // InternalQuCircuit.g:589:2: ( RULE_ID )
+                    // InternalQuCircuit.g:590:3: RULE_ID
                     {
                      before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
                     match(input,RULE_ID,FOLLOW_2); 
@@ -1869,13 +1945,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Alternatives_4_0"
-    // InternalQuCircuit.g:574:1: rule__EDoubleObject__Alternatives_4_0 : ( ( 'E' ) | ( 'e' ) );
+    // InternalQuCircuit.g:599:1: rule__EDoubleObject__Alternatives_4_0 : ( ( 'E' ) | ( 'e' ) );
     public final void rule__EDoubleObject__Alternatives_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:578:1: ( ( 'E' ) | ( 'e' ) )
+            // InternalQuCircuit.g:603:1: ( ( 'E' ) | ( 'e' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -1893,10 +1969,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             }
             switch (alt4) {
                 case 1 :
-                    // InternalQuCircuit.g:579:2: ( 'E' )
+                    // InternalQuCircuit.g:604:2: ( 'E' )
                     {
-                    // InternalQuCircuit.g:579:2: ( 'E' )
-                    // InternalQuCircuit.g:580:3: 'E'
+                    // InternalQuCircuit.g:604:2: ( 'E' )
+                    // InternalQuCircuit.g:605:3: 'E'
                     {
                      before(grammarAccess.getEDoubleObjectAccess().getEKeyword_4_0_0()); 
                     match(input,11,FOLLOW_2); 
@@ -1908,10 +1984,10 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalQuCircuit.g:585:2: ( 'e' )
+                    // InternalQuCircuit.g:610:2: ( 'e' )
                     {
-                    // InternalQuCircuit.g:585:2: ( 'e' )
-                    // InternalQuCircuit.g:586:3: 'e'
+                    // InternalQuCircuit.g:610:2: ( 'e' )
+                    // InternalQuCircuit.g:611:3: 'e'
                     {
                      before(grammarAccess.getEDoubleObjectAccess().getEKeyword_4_0_1()); 
                     match(input,12,FOLLOW_2); 
@@ -1940,13 +2016,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ITERATION_TYPE__Alternatives"
-    // InternalQuCircuit.g:595:1: rule__ITERATION_TYPE__Alternatives : ( ( ( 'NONE' ) ) | ( ( 'SHIFT' ) ) | ( ( 'CHANGE_BLOCK' ) ) );
+    // InternalQuCircuit.g:620:1: rule__ITERATION_TYPE__Alternatives : ( ( ( 'NONE' ) ) | ( ( 'SHIFT' ) ) | ( ( 'CHANGE_BLOCK' ) ) );
     public final void rule__ITERATION_TYPE__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:599:1: ( ( ( 'NONE' ) ) | ( ( 'SHIFT' ) ) | ( ( 'CHANGE_BLOCK' ) ) )
+            // InternalQuCircuit.g:624:1: ( ( ( 'NONE' ) ) | ( ( 'SHIFT' ) ) | ( ( 'CHANGE_BLOCK' ) ) )
             int alt5=3;
             switch ( input.LA(1) ) {
             case 13:
@@ -1973,14 +2049,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
             switch (alt5) {
                 case 1 :
-                    // InternalQuCircuit.g:600:2: ( ( 'NONE' ) )
+                    // InternalQuCircuit.g:625:2: ( ( 'NONE' ) )
                     {
-                    // InternalQuCircuit.g:600:2: ( ( 'NONE' ) )
-                    // InternalQuCircuit.g:601:3: ( 'NONE' )
+                    // InternalQuCircuit.g:625:2: ( ( 'NONE' ) )
+                    // InternalQuCircuit.g:626:3: ( 'NONE' )
                     {
                      before(grammarAccess.getITERATION_TYPEAccess().getNONEEnumLiteralDeclaration_0()); 
-                    // InternalQuCircuit.g:602:3: ( 'NONE' )
-                    // InternalQuCircuit.g:602:4: 'NONE'
+                    // InternalQuCircuit.g:627:3: ( 'NONE' )
+                    // InternalQuCircuit.g:627:4: 'NONE'
                     {
                     match(input,13,FOLLOW_2); 
 
@@ -1994,14 +2070,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 2 :
-                    // InternalQuCircuit.g:606:2: ( ( 'SHIFT' ) )
+                    // InternalQuCircuit.g:631:2: ( ( 'SHIFT' ) )
                     {
-                    // InternalQuCircuit.g:606:2: ( ( 'SHIFT' ) )
-                    // InternalQuCircuit.g:607:3: ( 'SHIFT' )
+                    // InternalQuCircuit.g:631:2: ( ( 'SHIFT' ) )
+                    // InternalQuCircuit.g:632:3: ( 'SHIFT' )
                     {
                      before(grammarAccess.getITERATION_TYPEAccess().getSHIFTEnumLiteralDeclaration_1()); 
-                    // InternalQuCircuit.g:608:3: ( 'SHIFT' )
-                    // InternalQuCircuit.g:608:4: 'SHIFT'
+                    // InternalQuCircuit.g:633:3: ( 'SHIFT' )
+                    // InternalQuCircuit.g:633:4: 'SHIFT'
                     {
                     match(input,14,FOLLOW_2); 
 
@@ -2015,14 +2091,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
                     }
                     break;
                 case 3 :
-                    // InternalQuCircuit.g:612:2: ( ( 'CHANGE_BLOCK' ) )
+                    // InternalQuCircuit.g:637:2: ( ( 'CHANGE_BLOCK' ) )
                     {
-                    // InternalQuCircuit.g:612:2: ( ( 'CHANGE_BLOCK' ) )
-                    // InternalQuCircuit.g:613:3: ( 'CHANGE_BLOCK' )
+                    // InternalQuCircuit.g:637:2: ( ( 'CHANGE_BLOCK' ) )
+                    // InternalQuCircuit.g:638:3: ( 'CHANGE_BLOCK' )
                     {
                      before(grammarAccess.getITERATION_TYPEAccess().getCHANGE_BLOCKEnumLiteralDeclaration_2()); 
-                    // InternalQuCircuit.g:614:3: ( 'CHANGE_BLOCK' )
-                    // InternalQuCircuit.g:614:4: 'CHANGE_BLOCK'
+                    // InternalQuCircuit.g:639:3: ( 'CHANGE_BLOCK' )
+                    // InternalQuCircuit.g:639:4: 'CHANGE_BLOCK'
                     {
                     match(input,15,FOLLOW_2); 
 
@@ -2053,14 +2129,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__0"
-    // InternalQuCircuit.g:622:1: rule__QuantumCircuit__Group__0 : rule__QuantumCircuit__Group__0__Impl rule__QuantumCircuit__Group__1 ;
+    // InternalQuCircuit.g:647:1: rule__QuantumCircuit__Group__0 : rule__QuantumCircuit__Group__0__Impl rule__QuantumCircuit__Group__1 ;
     public final void rule__QuantumCircuit__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:626:1: ( rule__QuantumCircuit__Group__0__Impl rule__QuantumCircuit__Group__1 )
-            // InternalQuCircuit.g:627:2: rule__QuantumCircuit__Group__0__Impl rule__QuantumCircuit__Group__1
+            // InternalQuCircuit.g:651:1: ( rule__QuantumCircuit__Group__0__Impl rule__QuantumCircuit__Group__1 )
+            // InternalQuCircuit.g:652:2: rule__QuantumCircuit__Group__0__Impl rule__QuantumCircuit__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__QuantumCircuit__Group__0__Impl();
@@ -2091,17 +2167,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__0__Impl"
-    // InternalQuCircuit.g:634:1: rule__QuantumCircuit__Group__0__Impl : ( 'QuantumCircuit' ) ;
+    // InternalQuCircuit.g:659:1: rule__QuantumCircuit__Group__0__Impl : ( 'QuantumCircuit' ) ;
     public final void rule__QuantumCircuit__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:638:1: ( ( 'QuantumCircuit' ) )
-            // InternalQuCircuit.g:639:1: ( 'QuantumCircuit' )
+            // InternalQuCircuit.g:663:1: ( ( 'QuantumCircuit' ) )
+            // InternalQuCircuit.g:664:1: ( 'QuantumCircuit' )
             {
-            // InternalQuCircuit.g:639:1: ( 'QuantumCircuit' )
-            // InternalQuCircuit.g:640:2: 'QuantumCircuit'
+            // InternalQuCircuit.g:664:1: ( 'QuantumCircuit' )
+            // InternalQuCircuit.g:665:2: 'QuantumCircuit'
             {
              before(grammarAccess.getQuantumCircuitAccess().getQuantumCircuitKeyword_0()); 
             match(input,16,FOLLOW_2); 
@@ -2128,14 +2204,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__1"
-    // InternalQuCircuit.g:649:1: rule__QuantumCircuit__Group__1 : rule__QuantumCircuit__Group__1__Impl rule__QuantumCircuit__Group__2 ;
+    // InternalQuCircuit.g:674:1: rule__QuantumCircuit__Group__1 : rule__QuantumCircuit__Group__1__Impl rule__QuantumCircuit__Group__2 ;
     public final void rule__QuantumCircuit__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:653:1: ( rule__QuantumCircuit__Group__1__Impl rule__QuantumCircuit__Group__2 )
-            // InternalQuCircuit.g:654:2: rule__QuantumCircuit__Group__1__Impl rule__QuantumCircuit__Group__2
+            // InternalQuCircuit.g:678:1: ( rule__QuantumCircuit__Group__1__Impl rule__QuantumCircuit__Group__2 )
+            // InternalQuCircuit.g:679:2: rule__QuantumCircuit__Group__1__Impl rule__QuantumCircuit__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__QuantumCircuit__Group__1__Impl();
@@ -2166,21 +2242,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__1__Impl"
-    // InternalQuCircuit.g:661:1: rule__QuantumCircuit__Group__1__Impl : ( ( rule__QuantumCircuit__NameAssignment_1 ) ) ;
+    // InternalQuCircuit.g:686:1: rule__QuantumCircuit__Group__1__Impl : ( ( rule__QuantumCircuit__NameAssignment_1 ) ) ;
     public final void rule__QuantumCircuit__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:665:1: ( ( ( rule__QuantumCircuit__NameAssignment_1 ) ) )
-            // InternalQuCircuit.g:666:1: ( ( rule__QuantumCircuit__NameAssignment_1 ) )
+            // InternalQuCircuit.g:690:1: ( ( ( rule__QuantumCircuit__NameAssignment_1 ) ) )
+            // InternalQuCircuit.g:691:1: ( ( rule__QuantumCircuit__NameAssignment_1 ) )
             {
-            // InternalQuCircuit.g:666:1: ( ( rule__QuantumCircuit__NameAssignment_1 ) )
-            // InternalQuCircuit.g:667:2: ( rule__QuantumCircuit__NameAssignment_1 )
+            // InternalQuCircuit.g:691:1: ( ( rule__QuantumCircuit__NameAssignment_1 ) )
+            // InternalQuCircuit.g:692:2: ( rule__QuantumCircuit__NameAssignment_1 )
             {
              before(grammarAccess.getQuantumCircuitAccess().getNameAssignment_1()); 
-            // InternalQuCircuit.g:668:2: ( rule__QuantumCircuit__NameAssignment_1 )
-            // InternalQuCircuit.g:668:3: rule__QuantumCircuit__NameAssignment_1
+            // InternalQuCircuit.g:693:2: ( rule__QuantumCircuit__NameAssignment_1 )
+            // InternalQuCircuit.g:693:3: rule__QuantumCircuit__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__QuantumCircuit__NameAssignment_1();
@@ -2213,16 +2289,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__2"
-    // InternalQuCircuit.g:676:1: rule__QuantumCircuit__Group__2 : rule__QuantumCircuit__Group__2__Impl rule__QuantumCircuit__Group__3 ;
+    // InternalQuCircuit.g:701:1: rule__QuantumCircuit__Group__2 : rule__QuantumCircuit__Group__2__Impl rule__QuantumCircuit__Group__3 ;
     public final void rule__QuantumCircuit__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:680:1: ( rule__QuantumCircuit__Group__2__Impl rule__QuantumCircuit__Group__3 )
-            // InternalQuCircuit.g:681:2: rule__QuantumCircuit__Group__2__Impl rule__QuantumCircuit__Group__3
+            // InternalQuCircuit.g:705:1: ( rule__QuantumCircuit__Group__2__Impl rule__QuantumCircuit__Group__3 )
+            // InternalQuCircuit.g:706:2: rule__QuantumCircuit__Group__2__Impl rule__QuantumCircuit__Group__3
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_4);
             rule__QuantumCircuit__Group__2__Impl();
 
             state._fsp--;
@@ -2251,21 +2327,42 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__2__Impl"
-    // InternalQuCircuit.g:688:1: rule__QuantumCircuit__Group__2__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:713:1: rule__QuantumCircuit__Group__2__Impl : ( ( rule__QuantumCircuit__QuantumRegistersAssignment_2 )? ) ;
     public final void rule__QuantumCircuit__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:692:1: ( ( '{' ) )
-            // InternalQuCircuit.g:693:1: ( '{' )
+            // InternalQuCircuit.g:717:1: ( ( ( rule__QuantumCircuit__QuantumRegistersAssignment_2 )? ) )
+            // InternalQuCircuit.g:718:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_2 )? )
             {
-            // InternalQuCircuit.g:693:1: ( '{' )
-            // InternalQuCircuit.g:694:2: '{'
+            // InternalQuCircuit.g:718:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_2 )? )
+            // InternalQuCircuit.g:719:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_2 )?
             {
-             before(grammarAccess.getQuantumCircuitAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,17,FOLLOW_2); 
-             after(grammarAccess.getQuantumCircuitAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_2()); 
+            // InternalQuCircuit.g:720:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_2 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
+
+            if ( (LA6_0==21) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // InternalQuCircuit.g:720:3: rule__QuantumCircuit__QuantumRegistersAssignment_2
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__QuantumCircuit__QuantumRegistersAssignment_2();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_2()); 
 
             }
 
@@ -2288,16 +2385,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__3"
-    // InternalQuCircuit.g:703:1: rule__QuantumCircuit__Group__3 : rule__QuantumCircuit__Group__3__Impl rule__QuantumCircuit__Group__4 ;
+    // InternalQuCircuit.g:728:1: rule__QuantumCircuit__Group__3 : rule__QuantumCircuit__Group__3__Impl rule__QuantumCircuit__Group__4 ;
     public final void rule__QuantumCircuit__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:707:1: ( rule__QuantumCircuit__Group__3__Impl rule__QuantumCircuit__Group__4 )
-            // InternalQuCircuit.g:708:2: rule__QuantumCircuit__Group__3__Impl rule__QuantumCircuit__Group__4
+            // InternalQuCircuit.g:732:1: ( rule__QuantumCircuit__Group__3__Impl rule__QuantumCircuit__Group__4 )
+            // InternalQuCircuit.g:733:2: rule__QuantumCircuit__Group__3__Impl rule__QuantumCircuit__Group__4
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_5);
             rule__QuantumCircuit__Group__3__Impl();
 
             state._fsp--;
@@ -2326,31 +2423,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__3__Impl"
-    // InternalQuCircuit.g:715:1: rule__QuantumCircuit__Group__3__Impl : ( ( rule__QuantumCircuit__QuantumRegistersAssignment_3 ) ) ;
+    // InternalQuCircuit.g:740:1: rule__QuantumCircuit__Group__3__Impl : ( '{' ) ;
     public final void rule__QuantumCircuit__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:719:1: ( ( ( rule__QuantumCircuit__QuantumRegistersAssignment_3 ) ) )
-            // InternalQuCircuit.g:720:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_3 ) )
+            // InternalQuCircuit.g:744:1: ( ( '{' ) )
+            // InternalQuCircuit.g:745:1: ( '{' )
             {
-            // InternalQuCircuit.g:720:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_3 ) )
-            // InternalQuCircuit.g:721:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_3 )
+            // InternalQuCircuit.g:745:1: ( '{' )
+            // InternalQuCircuit.g:746:2: '{'
             {
-             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_3()); 
-            // InternalQuCircuit.g:722:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_3 )
-            // InternalQuCircuit.g:722:3: rule__QuantumCircuit__QuantumRegistersAssignment_3
-            {
-            pushFollow(FOLLOW_2);
-            rule__QuantumCircuit__QuantumRegistersAssignment_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_3()); 
+             before(grammarAccess.getQuantumCircuitAccess().getLeftCurlyBracketKeyword_3()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getQuantumCircuitAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
 
@@ -2373,16 +2460,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__4"
-    // InternalQuCircuit.g:730:1: rule__QuantumCircuit__Group__4 : rule__QuantumCircuit__Group__4__Impl rule__QuantumCircuit__Group__5 ;
+    // InternalQuCircuit.g:755:1: rule__QuantumCircuit__Group__4 : rule__QuantumCircuit__Group__4__Impl rule__QuantumCircuit__Group__5 ;
     public final void rule__QuantumCircuit__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:734:1: ( rule__QuantumCircuit__Group__4__Impl rule__QuantumCircuit__Group__5 )
-            // InternalQuCircuit.g:735:2: rule__QuantumCircuit__Group__4__Impl rule__QuantumCircuit__Group__5
+            // InternalQuCircuit.g:759:1: ( rule__QuantumCircuit__Group__4__Impl rule__QuantumCircuit__Group__5 )
+            // InternalQuCircuit.g:760:2: rule__QuantumCircuit__Group__4__Impl rule__QuantumCircuit__Group__5
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_5);
             rule__QuantumCircuit__Group__4__Impl();
 
             state._fsp--;
@@ -2411,49 +2498,42 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__4__Impl"
-    // InternalQuCircuit.g:742:1: rule__QuantumCircuit__Group__4__Impl : ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4 )* ) ;
+    // InternalQuCircuit.g:767:1: rule__QuantumCircuit__Group__4__Impl : ( ( rule__QuantumCircuit__Group_4__0 )? ) ;
     public final void rule__QuantumCircuit__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:746:1: ( ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4 )* ) )
-            // InternalQuCircuit.g:747:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4 )* )
+            // InternalQuCircuit.g:771:1: ( ( ( rule__QuantumCircuit__Group_4__0 )? ) )
+            // InternalQuCircuit.g:772:1: ( ( rule__QuantumCircuit__Group_4__0 )? )
             {
-            // InternalQuCircuit.g:747:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4 )* )
-            // InternalQuCircuit.g:748:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_4 )*
+            // InternalQuCircuit.g:772:1: ( ( rule__QuantumCircuit__Group_4__0 )? )
+            // InternalQuCircuit.g:773:2: ( rule__QuantumCircuit__Group_4__0 )?
             {
-             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_4()); 
-            // InternalQuCircuit.g:749:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_4 )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+             before(grammarAccess.getQuantumCircuitAccess().getGroup_4()); 
+            // InternalQuCircuit.g:774:2: ( rule__QuantumCircuit__Group_4__0 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-                if ( (LA6_0==19) ) {
-                    alt6=1;
-                }
+            if ( (LA7_0==19) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // InternalQuCircuit.g:774:3: rule__QuantumCircuit__Group_4__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__QuantumCircuit__Group_4__0();
 
-
-                switch (alt6) {
-            	case 1 :
-            	    // InternalQuCircuit.g:749:3: rule__QuantumCircuit__QuantumRegistersAssignment_4
-            	    {
-            	    pushFollow(FOLLOW_7);
-            	    rule__QuantumCircuit__QuantumRegistersAssignment_4();
-
-            	    state._fsp--;
+                    state._fsp--;
 
 
-            	    }
-            	    break;
+                    }
+                    break;
 
-            	default :
-            	    break loop6;
-                }
-            } while (true);
+            }
 
-             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_4()); 
+             after(grammarAccess.getQuantumCircuitAccess().getGroup_4()); 
 
             }
 
@@ -2476,16 +2556,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__5"
-    // InternalQuCircuit.g:757:1: rule__QuantumCircuit__Group__5 : rule__QuantumCircuit__Group__5__Impl rule__QuantumCircuit__Group__6 ;
+    // InternalQuCircuit.g:782:1: rule__QuantumCircuit__Group__5 : rule__QuantumCircuit__Group__5__Impl rule__QuantumCircuit__Group__6 ;
     public final void rule__QuantumCircuit__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:761:1: ( rule__QuantumCircuit__Group__5__Impl rule__QuantumCircuit__Group__6 )
-            // InternalQuCircuit.g:762:2: rule__QuantumCircuit__Group__5__Impl rule__QuantumCircuit__Group__6
+            // InternalQuCircuit.g:786:1: ( rule__QuantumCircuit__Group__5__Impl rule__QuantumCircuit__Group__6 )
+            // InternalQuCircuit.g:787:2: rule__QuantumCircuit__Group__5__Impl rule__QuantumCircuit__Group__6
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_5);
             rule__QuantumCircuit__Group__5__Impl();
 
             state._fsp--;
@@ -2514,35 +2594,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__5__Impl"
-    // InternalQuCircuit.g:769:1: rule__QuantumCircuit__Group__5__Impl : ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* ) ;
+    // InternalQuCircuit.g:794:1: rule__QuantumCircuit__Group__5__Impl : ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* ) ;
     public final void rule__QuantumCircuit__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:773:1: ( ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* ) )
-            // InternalQuCircuit.g:774:1: ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* )
+            // InternalQuCircuit.g:798:1: ( ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* ) )
+            // InternalQuCircuit.g:799:1: ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* )
             {
-            // InternalQuCircuit.g:774:1: ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* )
-            // InternalQuCircuit.g:775:2: ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )*
+            // InternalQuCircuit.g:799:1: ( ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )* )
+            // InternalQuCircuit.g:800:2: ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )*
             {
              before(grammarAccess.getQuantumCircuitAccess().getClassicRegistersAssignment_5()); 
-            // InternalQuCircuit.g:776:2: ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )*
-            loop7:
+            // InternalQuCircuit.g:801:2: ( rule__QuantumCircuit__ClassicRegistersAssignment_5 )*
+            loop8:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA7_0==21) ) {
-                    alt7=1;
+                if ( (LA8_0==23) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt8) {
             	case 1 :
-            	    // InternalQuCircuit.g:776:3: rule__QuantumCircuit__ClassicRegistersAssignment_5
+            	    // InternalQuCircuit.g:801:3: rule__QuantumCircuit__ClassicRegistersAssignment_5
             	    {
-            	    pushFollow(FOLLOW_8);
+            	    pushFollow(FOLLOW_6);
             	    rule__QuantumCircuit__ClassicRegistersAssignment_5();
 
             	    state._fsp--;
@@ -2552,7 +2632,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop8;
                 }
             } while (true);
 
@@ -2579,16 +2659,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__6"
-    // InternalQuCircuit.g:784:1: rule__QuantumCircuit__Group__6 : rule__QuantumCircuit__Group__6__Impl rule__QuantumCircuit__Group__7 ;
+    // InternalQuCircuit.g:809:1: rule__QuantumCircuit__Group__6 : rule__QuantumCircuit__Group__6__Impl rule__QuantumCircuit__Group__7 ;
     public final void rule__QuantumCircuit__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:788:1: ( rule__QuantumCircuit__Group__6__Impl rule__QuantumCircuit__Group__7 )
-            // InternalQuCircuit.g:789:2: rule__QuantumCircuit__Group__6__Impl rule__QuantumCircuit__Group__7
+            // InternalQuCircuit.g:813:1: ( rule__QuantumCircuit__Group__6__Impl rule__QuantumCircuit__Group__7 )
+            // InternalQuCircuit.g:814:2: rule__QuantumCircuit__Group__6__Impl rule__QuantumCircuit__Group__7
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_7);
             rule__QuantumCircuit__Group__6__Impl();
 
             state._fsp--;
@@ -2617,21 +2697,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__6__Impl"
-    // InternalQuCircuit.g:796:1: rule__QuantumCircuit__Group__6__Impl : ( ( rule__QuantumCircuit__LayersAssignment_6 ) ) ;
+    // InternalQuCircuit.g:821:1: rule__QuantumCircuit__Group__6__Impl : ( ( rule__QuantumCircuit__LayersAssignment_6 ) ) ;
     public final void rule__QuantumCircuit__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:800:1: ( ( ( rule__QuantumCircuit__LayersAssignment_6 ) ) )
-            // InternalQuCircuit.g:801:1: ( ( rule__QuantumCircuit__LayersAssignment_6 ) )
+            // InternalQuCircuit.g:825:1: ( ( ( rule__QuantumCircuit__LayersAssignment_6 ) ) )
+            // InternalQuCircuit.g:826:1: ( ( rule__QuantumCircuit__LayersAssignment_6 ) )
             {
-            // InternalQuCircuit.g:801:1: ( ( rule__QuantumCircuit__LayersAssignment_6 ) )
-            // InternalQuCircuit.g:802:2: ( rule__QuantumCircuit__LayersAssignment_6 )
+            // InternalQuCircuit.g:826:1: ( ( rule__QuantumCircuit__LayersAssignment_6 ) )
+            // InternalQuCircuit.g:827:2: ( rule__QuantumCircuit__LayersAssignment_6 )
             {
              before(grammarAccess.getQuantumCircuitAccess().getLayersAssignment_6()); 
-            // InternalQuCircuit.g:803:2: ( rule__QuantumCircuit__LayersAssignment_6 )
-            // InternalQuCircuit.g:803:3: rule__QuantumCircuit__LayersAssignment_6
+            // InternalQuCircuit.g:828:2: ( rule__QuantumCircuit__LayersAssignment_6 )
+            // InternalQuCircuit.g:828:3: rule__QuantumCircuit__LayersAssignment_6
             {
             pushFollow(FOLLOW_2);
             rule__QuantumCircuit__LayersAssignment_6();
@@ -2664,16 +2744,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__7"
-    // InternalQuCircuit.g:811:1: rule__QuantumCircuit__Group__7 : rule__QuantumCircuit__Group__7__Impl rule__QuantumCircuit__Group__8 ;
+    // InternalQuCircuit.g:836:1: rule__QuantumCircuit__Group__7 : rule__QuantumCircuit__Group__7__Impl rule__QuantumCircuit__Group__8 ;
     public final void rule__QuantumCircuit__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:815:1: ( rule__QuantumCircuit__Group__7__Impl rule__QuantumCircuit__Group__8 )
-            // InternalQuCircuit.g:816:2: rule__QuantumCircuit__Group__7__Impl rule__QuantumCircuit__Group__8
+            // InternalQuCircuit.g:840:1: ( rule__QuantumCircuit__Group__7__Impl rule__QuantumCircuit__Group__8 )
+            // InternalQuCircuit.g:841:2: rule__QuantumCircuit__Group__7__Impl rule__QuantumCircuit__Group__8
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_7);
             rule__QuantumCircuit__Group__7__Impl();
 
             state._fsp--;
@@ -2702,35 +2782,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__7__Impl"
-    // InternalQuCircuit.g:823:1: rule__QuantumCircuit__Group__7__Impl : ( ( rule__QuantumCircuit__LayersAssignment_7 )* ) ;
+    // InternalQuCircuit.g:848:1: rule__QuantumCircuit__Group__7__Impl : ( ( rule__QuantumCircuit__LayersAssignment_7 )* ) ;
     public final void rule__QuantumCircuit__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:827:1: ( ( ( rule__QuantumCircuit__LayersAssignment_7 )* ) )
-            // InternalQuCircuit.g:828:1: ( ( rule__QuantumCircuit__LayersAssignment_7 )* )
+            // InternalQuCircuit.g:852:1: ( ( ( rule__QuantumCircuit__LayersAssignment_7 )* ) )
+            // InternalQuCircuit.g:853:1: ( ( rule__QuantumCircuit__LayersAssignment_7 )* )
             {
-            // InternalQuCircuit.g:828:1: ( ( rule__QuantumCircuit__LayersAssignment_7 )* )
-            // InternalQuCircuit.g:829:2: ( rule__QuantumCircuit__LayersAssignment_7 )*
+            // InternalQuCircuit.g:853:1: ( ( rule__QuantumCircuit__LayersAssignment_7 )* )
+            // InternalQuCircuit.g:854:2: ( rule__QuantumCircuit__LayersAssignment_7 )*
             {
              before(grammarAccess.getQuantumCircuitAccess().getLayersAssignment_7()); 
-            // InternalQuCircuit.g:830:2: ( rule__QuantumCircuit__LayersAssignment_7 )*
-            loop8:
+            // InternalQuCircuit.g:855:2: ( rule__QuantumCircuit__LayersAssignment_7 )*
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA8_0==23) ) {
-                    alt8=1;
+                if ( (LA9_0==25) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
-            	    // InternalQuCircuit.g:830:3: rule__QuantumCircuit__LayersAssignment_7
+            	    // InternalQuCircuit.g:855:3: rule__QuantumCircuit__LayersAssignment_7
             	    {
-            	    pushFollow(FOLLOW_10);
+            	    pushFollow(FOLLOW_8);
             	    rule__QuantumCircuit__LayersAssignment_7();
 
             	    state._fsp--;
@@ -2740,7 +2820,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop9;
                 }
             } while (true);
 
@@ -2767,14 +2847,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__8"
-    // InternalQuCircuit.g:838:1: rule__QuantumCircuit__Group__8 : rule__QuantumCircuit__Group__8__Impl ;
+    // InternalQuCircuit.g:863:1: rule__QuantumCircuit__Group__8 : rule__QuantumCircuit__Group__8__Impl ;
     public final void rule__QuantumCircuit__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:842:1: ( rule__QuantumCircuit__Group__8__Impl )
-            // InternalQuCircuit.g:843:2: rule__QuantumCircuit__Group__8__Impl
+            // InternalQuCircuit.g:867:1: ( rule__QuantumCircuit__Group__8__Impl )
+            // InternalQuCircuit.g:868:2: rule__QuantumCircuit__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__QuantumCircuit__Group__8__Impl();
@@ -2800,17 +2880,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__Group__8__Impl"
-    // InternalQuCircuit.g:849:1: rule__QuantumCircuit__Group__8__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:874:1: rule__QuantumCircuit__Group__8__Impl : ( '}' ) ;
     public final void rule__QuantumCircuit__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:853:1: ( ( '}' ) )
-            // InternalQuCircuit.g:854:1: ( '}' )
+            // InternalQuCircuit.g:878:1: ( ( '}' ) )
+            // InternalQuCircuit.g:879:1: ( '}' )
             {
-            // InternalQuCircuit.g:854:1: ( '}' )
-            // InternalQuCircuit.g:855:2: '}'
+            // InternalQuCircuit.g:879:1: ( '}' )
+            // InternalQuCircuit.g:880:2: '}'
             {
              before(grammarAccess.getQuantumCircuitAccess().getRightCurlyBracketKeyword_8()); 
             match(input,18,FOLLOW_2); 
@@ -2836,17 +2916,200 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__QuantumCircuit__Group__8__Impl"
 
 
+    // $ANTLR start "rule__QuantumCircuit__Group_4__0"
+    // InternalQuCircuit.g:890:1: rule__QuantumCircuit__Group_4__0 : rule__QuantumCircuit__Group_4__0__Impl rule__QuantumCircuit__Group_4__1 ;
+    public final void rule__QuantumCircuit__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:894:1: ( rule__QuantumCircuit__Group_4__0__Impl rule__QuantumCircuit__Group_4__1 )
+            // InternalQuCircuit.g:895:2: rule__QuantumCircuit__Group_4__0__Impl rule__QuantumCircuit__Group_4__1
+            {
+            pushFollow(FOLLOW_9);
+            rule__QuantumCircuit__Group_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__QuantumCircuit__Group_4__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__QuantumCircuit__Group_4__0"
+
+
+    // $ANTLR start "rule__QuantumCircuit__Group_4__0__Impl"
+    // InternalQuCircuit.g:902:1: rule__QuantumCircuit__Group_4__0__Impl : ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_0 ) ) ;
+    public final void rule__QuantumCircuit__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:906:1: ( ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_0 ) ) )
+            // InternalQuCircuit.g:907:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_0 ) )
+            {
+            // InternalQuCircuit.g:907:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_0 ) )
+            // InternalQuCircuit.g:908:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_4_0 )
+            {
+             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_4_0()); 
+            // InternalQuCircuit.g:909:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_4_0 )
+            // InternalQuCircuit.g:909:3: rule__QuantumCircuit__QuantumRegistersAssignment_4_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__QuantumCircuit__QuantumRegistersAssignment_4_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__QuantumCircuit__Group_4__0__Impl"
+
+
+    // $ANTLR start "rule__QuantumCircuit__Group_4__1"
+    // InternalQuCircuit.g:917:1: rule__QuantumCircuit__Group_4__1 : rule__QuantumCircuit__Group_4__1__Impl ;
+    public final void rule__QuantumCircuit__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:921:1: ( rule__QuantumCircuit__Group_4__1__Impl )
+            // InternalQuCircuit.g:922:2: rule__QuantumCircuit__Group_4__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__QuantumCircuit__Group_4__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__QuantumCircuit__Group_4__1"
+
+
+    // $ANTLR start "rule__QuantumCircuit__Group_4__1__Impl"
+    // InternalQuCircuit.g:928:1: rule__QuantumCircuit__Group_4__1__Impl : ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_1 )* ) ;
+    public final void rule__QuantumCircuit__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:932:1: ( ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_1 )* ) )
+            // InternalQuCircuit.g:933:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_1 )* )
+            {
+            // InternalQuCircuit.g:933:1: ( ( rule__QuantumCircuit__QuantumRegistersAssignment_4_1 )* )
+            // InternalQuCircuit.g:934:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_4_1 )*
+            {
+             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_4_1()); 
+            // InternalQuCircuit.g:935:2: ( rule__QuantumCircuit__QuantumRegistersAssignment_4_1 )*
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0==19) ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // InternalQuCircuit.g:935:3: rule__QuantumCircuit__QuantumRegistersAssignment_4_1
+            	    {
+            	    pushFollow(FOLLOW_10);
+            	    rule__QuantumCircuit__QuantumRegistersAssignment_4_1();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop10;
+                }
+            } while (true);
+
+             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersAssignment_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__QuantumCircuit__Group_4__1__Impl"
+
+
     // $ANTLR start "rule__QuantumRegister__Group__0"
-    // InternalQuCircuit.g:865:1: rule__QuantumRegister__Group__0 : rule__QuantumRegister__Group__0__Impl rule__QuantumRegister__Group__1 ;
+    // InternalQuCircuit.g:944:1: rule__QuantumRegister__Group__0 : rule__QuantumRegister__Group__0__Impl rule__QuantumRegister__Group__1 ;
     public final void rule__QuantumRegister__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:869:1: ( rule__QuantumRegister__Group__0__Impl rule__QuantumRegister__Group__1 )
-            // InternalQuCircuit.g:870:2: rule__QuantumRegister__Group__0__Impl rule__QuantumRegister__Group__1
+            // InternalQuCircuit.g:948:1: ( rule__QuantumRegister__Group__0__Impl rule__QuantumRegister__Group__1 )
+            // InternalQuCircuit.g:949:2: rule__QuantumRegister__Group__0__Impl rule__QuantumRegister__Group__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_9);
             rule__QuantumRegister__Group__0__Impl();
 
             state._fsp--;
@@ -2875,21 +3138,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__0__Impl"
-    // InternalQuCircuit.g:877:1: rule__QuantumRegister__Group__0__Impl : ( () ) ;
+    // InternalQuCircuit.g:956:1: rule__QuantumRegister__Group__0__Impl : ( () ) ;
     public final void rule__QuantumRegister__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:881:1: ( ( () ) )
-            // InternalQuCircuit.g:882:1: ( () )
+            // InternalQuCircuit.g:960:1: ( ( () ) )
+            // InternalQuCircuit.g:961:1: ( () )
             {
-            // InternalQuCircuit.g:882:1: ( () )
-            // InternalQuCircuit.g:883:2: ()
+            // InternalQuCircuit.g:961:1: ( () )
+            // InternalQuCircuit.g:962:2: ()
             {
              before(grammarAccess.getQuantumRegisterAccess().getQuantumRegisterAction_0()); 
-            // InternalQuCircuit.g:884:2: ()
-            // InternalQuCircuit.g:884:3: 
+            // InternalQuCircuit.g:963:2: ()
+            // InternalQuCircuit.g:963:3: 
             {
             }
 
@@ -2912,14 +3175,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__1"
-    // InternalQuCircuit.g:892:1: rule__QuantumRegister__Group__1 : rule__QuantumRegister__Group__1__Impl rule__QuantumRegister__Group__2 ;
+    // InternalQuCircuit.g:971:1: rule__QuantumRegister__Group__1 : rule__QuantumRegister__Group__1__Impl rule__QuantumRegister__Group__2 ;
     public final void rule__QuantumRegister__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:896:1: ( rule__QuantumRegister__Group__1__Impl rule__QuantumRegister__Group__2 )
-            // InternalQuCircuit.g:897:2: rule__QuantumRegister__Group__1__Impl rule__QuantumRegister__Group__2
+            // InternalQuCircuit.g:975:1: ( rule__QuantumRegister__Group__1__Impl rule__QuantumRegister__Group__2 )
+            // InternalQuCircuit.g:976:2: rule__QuantumRegister__Group__1__Impl rule__QuantumRegister__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__QuantumRegister__Group__1__Impl();
@@ -2950,17 +3213,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__1__Impl"
-    // InternalQuCircuit.g:904:1: rule__QuantumRegister__Group__1__Impl : ( 'QuantumRegister' ) ;
+    // InternalQuCircuit.g:983:1: rule__QuantumRegister__Group__1__Impl : ( 'QuantumRegister' ) ;
     public final void rule__QuantumRegister__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:908:1: ( ( 'QuantumRegister' ) )
-            // InternalQuCircuit.g:909:1: ( 'QuantumRegister' )
+            // InternalQuCircuit.g:987:1: ( ( 'QuantumRegister' ) )
+            // InternalQuCircuit.g:988:1: ( 'QuantumRegister' )
             {
-            // InternalQuCircuit.g:909:1: ( 'QuantumRegister' )
-            // InternalQuCircuit.g:910:2: 'QuantumRegister'
+            // InternalQuCircuit.g:988:1: ( 'QuantumRegister' )
+            // InternalQuCircuit.g:989:2: 'QuantumRegister'
             {
              before(grammarAccess.getQuantumRegisterAccess().getQuantumRegisterKeyword_1()); 
             match(input,19,FOLLOW_2); 
@@ -2987,16 +3250,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__2"
-    // InternalQuCircuit.g:919:1: rule__QuantumRegister__Group__2 : rule__QuantumRegister__Group__2__Impl rule__QuantumRegister__Group__3 ;
+    // InternalQuCircuit.g:998:1: rule__QuantumRegister__Group__2 : rule__QuantumRegister__Group__2__Impl rule__QuantumRegister__Group__3 ;
     public final void rule__QuantumRegister__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:923:1: ( rule__QuantumRegister__Group__2__Impl rule__QuantumRegister__Group__3 )
-            // InternalQuCircuit.g:924:2: rule__QuantumRegister__Group__2__Impl rule__QuantumRegister__Group__3
+            // InternalQuCircuit.g:1002:1: ( rule__QuantumRegister__Group__2__Impl rule__QuantumRegister__Group__3 )
+            // InternalQuCircuit.g:1003:2: rule__QuantumRegister__Group__2__Impl rule__QuantumRegister__Group__3
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__QuantumRegister__Group__2__Impl();
 
             state._fsp--;
@@ -3025,21 +3288,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__2__Impl"
-    // InternalQuCircuit.g:931:1: rule__QuantumRegister__Group__2__Impl : ( ( rule__QuantumRegister__NameAssignment_2 ) ) ;
+    // InternalQuCircuit.g:1010:1: rule__QuantumRegister__Group__2__Impl : ( ( rule__QuantumRegister__NameAssignment_2 ) ) ;
     public final void rule__QuantumRegister__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:935:1: ( ( ( rule__QuantumRegister__NameAssignment_2 ) ) )
-            // InternalQuCircuit.g:936:1: ( ( rule__QuantumRegister__NameAssignment_2 ) )
+            // InternalQuCircuit.g:1014:1: ( ( ( rule__QuantumRegister__NameAssignment_2 ) ) )
+            // InternalQuCircuit.g:1015:1: ( ( rule__QuantumRegister__NameAssignment_2 ) )
             {
-            // InternalQuCircuit.g:936:1: ( ( rule__QuantumRegister__NameAssignment_2 ) )
-            // InternalQuCircuit.g:937:2: ( rule__QuantumRegister__NameAssignment_2 )
+            // InternalQuCircuit.g:1015:1: ( ( rule__QuantumRegister__NameAssignment_2 ) )
+            // InternalQuCircuit.g:1016:2: ( rule__QuantumRegister__NameAssignment_2 )
             {
              before(grammarAccess.getQuantumRegisterAccess().getNameAssignment_2()); 
-            // InternalQuCircuit.g:938:2: ( rule__QuantumRegister__NameAssignment_2 )
-            // InternalQuCircuit.g:938:3: rule__QuantumRegister__NameAssignment_2
+            // InternalQuCircuit.g:1017:2: ( rule__QuantumRegister__NameAssignment_2 )
+            // InternalQuCircuit.g:1017:3: rule__QuantumRegister__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__QuantumRegister__NameAssignment_2();
@@ -3072,16 +3335,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__3"
-    // InternalQuCircuit.g:946:1: rule__QuantumRegister__Group__3 : rule__QuantumRegister__Group__3__Impl rule__QuantumRegister__Group__4 ;
+    // InternalQuCircuit.g:1025:1: rule__QuantumRegister__Group__3 : rule__QuantumRegister__Group__3__Impl rule__QuantumRegister__Group__4 ;
     public final void rule__QuantumRegister__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:950:1: ( rule__QuantumRegister__Group__3__Impl rule__QuantumRegister__Group__4 )
-            // InternalQuCircuit.g:951:2: rule__QuantumRegister__Group__3__Impl rule__QuantumRegister__Group__4
+            // InternalQuCircuit.g:1029:1: ( rule__QuantumRegister__Group__3__Impl rule__QuantumRegister__Group__4 )
+            // InternalQuCircuit.g:1030:2: rule__QuantumRegister__Group__3__Impl rule__QuantumRegister__Group__4
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__QuantumRegister__Group__3__Impl();
 
             state._fsp--;
@@ -3110,17 +3373,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__3__Impl"
-    // InternalQuCircuit.g:958:1: rule__QuantumRegister__Group__3__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:1037:1: rule__QuantumRegister__Group__3__Impl : ( '{' ) ;
     public final void rule__QuantumRegister__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:962:1: ( ( '{' ) )
-            // InternalQuCircuit.g:963:1: ( '{' )
+            // InternalQuCircuit.g:1041:1: ( ( '{' ) )
+            // InternalQuCircuit.g:1042:1: ( '{' )
             {
-            // InternalQuCircuit.g:963:1: ( '{' )
-            // InternalQuCircuit.g:964:2: '{'
+            // InternalQuCircuit.g:1042:1: ( '{' )
+            // InternalQuCircuit.g:1043:2: '{'
             {
              before(grammarAccess.getQuantumRegisterAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,17,FOLLOW_2); 
@@ -3147,16 +3410,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__4"
-    // InternalQuCircuit.g:973:1: rule__QuantumRegister__Group__4 : rule__QuantumRegister__Group__4__Impl rule__QuantumRegister__Group__5 ;
+    // InternalQuCircuit.g:1052:1: rule__QuantumRegister__Group__4 : rule__QuantumRegister__Group__4__Impl rule__QuantumRegister__Group__5 ;
     public final void rule__QuantumRegister__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:977:1: ( rule__QuantumRegister__Group__4__Impl rule__QuantumRegister__Group__5 )
-            // InternalQuCircuit.g:978:2: rule__QuantumRegister__Group__4__Impl rule__QuantumRegister__Group__5
+            // InternalQuCircuit.g:1056:1: ( rule__QuantumRegister__Group__4__Impl rule__QuantumRegister__Group__5 )
+            // InternalQuCircuit.g:1057:2: rule__QuantumRegister__Group__4__Impl rule__QuantumRegister__Group__5
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__QuantumRegister__Group__4__Impl();
 
             state._fsp--;
@@ -3185,29 +3448,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__4__Impl"
-    // InternalQuCircuit.g:985:1: rule__QuantumRegister__Group__4__Impl : ( ( rule__QuantumRegister__Group_4__0 )? ) ;
+    // InternalQuCircuit.g:1064:1: rule__QuantumRegister__Group__4__Impl : ( ( rule__QuantumRegister__Group_4__0 )? ) ;
     public final void rule__QuantumRegister__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:989:1: ( ( ( rule__QuantumRegister__Group_4__0 )? ) )
-            // InternalQuCircuit.g:990:1: ( ( rule__QuantumRegister__Group_4__0 )? )
+            // InternalQuCircuit.g:1068:1: ( ( ( rule__QuantumRegister__Group_4__0 )? ) )
+            // InternalQuCircuit.g:1069:1: ( ( rule__QuantumRegister__Group_4__0 )? )
             {
-            // InternalQuCircuit.g:990:1: ( ( rule__QuantumRegister__Group_4__0 )? )
-            // InternalQuCircuit.g:991:2: ( rule__QuantumRegister__Group_4__0 )?
+            // InternalQuCircuit.g:1069:1: ( ( rule__QuantumRegister__Group_4__0 )? )
+            // InternalQuCircuit.g:1070:2: ( rule__QuantumRegister__Group_4__0 )?
             {
              before(grammarAccess.getQuantumRegisterAccess().getGroup_4()); 
-            // InternalQuCircuit.g:992:2: ( rule__QuantumRegister__Group_4__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalQuCircuit.g:1071:2: ( rule__QuantumRegister__Group_4__0 )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA9_0==20) ) {
-                alt9=1;
+            if ( (LA11_0==20) ) {
+                alt11=1;
             }
-            switch (alt9) {
+            switch (alt11) {
                 case 1 :
-                    // InternalQuCircuit.g:992:3: rule__QuantumRegister__Group_4__0
+                    // InternalQuCircuit.g:1071:3: rule__QuantumRegister__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__QuantumRegister__Group_4__0();
@@ -3243,14 +3506,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__5"
-    // InternalQuCircuit.g:1000:1: rule__QuantumRegister__Group__5 : rule__QuantumRegister__Group__5__Impl ;
+    // InternalQuCircuit.g:1079:1: rule__QuantumRegister__Group__5 : rule__QuantumRegister__Group__5__Impl ;
     public final void rule__QuantumRegister__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1004:1: ( rule__QuantumRegister__Group__5__Impl )
-            // InternalQuCircuit.g:1005:2: rule__QuantumRegister__Group__5__Impl
+            // InternalQuCircuit.g:1083:1: ( rule__QuantumRegister__Group__5__Impl )
+            // InternalQuCircuit.g:1084:2: rule__QuantumRegister__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__QuantumRegister__Group__5__Impl();
@@ -3276,17 +3539,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group__5__Impl"
-    // InternalQuCircuit.g:1011:1: rule__QuantumRegister__Group__5__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:1090:1: rule__QuantumRegister__Group__5__Impl : ( '}' ) ;
     public final void rule__QuantumRegister__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1015:1: ( ( '}' ) )
-            // InternalQuCircuit.g:1016:1: ( '}' )
+            // InternalQuCircuit.g:1094:1: ( ( '}' ) )
+            // InternalQuCircuit.g:1095:1: ( '}' )
             {
-            // InternalQuCircuit.g:1016:1: ( '}' )
-            // InternalQuCircuit.g:1017:2: '}'
+            // InternalQuCircuit.g:1095:1: ( '}' )
+            // InternalQuCircuit.g:1096:2: '}'
             {
              before(grammarAccess.getQuantumRegisterAccess().getRightCurlyBracketKeyword_5()); 
             match(input,18,FOLLOW_2); 
@@ -3313,16 +3576,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group_4__0"
-    // InternalQuCircuit.g:1027:1: rule__QuantumRegister__Group_4__0 : rule__QuantumRegister__Group_4__0__Impl rule__QuantumRegister__Group_4__1 ;
+    // InternalQuCircuit.g:1106:1: rule__QuantumRegister__Group_4__0 : rule__QuantumRegister__Group_4__0__Impl rule__QuantumRegister__Group_4__1 ;
     public final void rule__QuantumRegister__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1031:1: ( rule__QuantumRegister__Group_4__0__Impl rule__QuantumRegister__Group_4__1 )
-            // InternalQuCircuit.g:1032:2: rule__QuantumRegister__Group_4__0__Impl rule__QuantumRegister__Group_4__1
+            // InternalQuCircuit.g:1110:1: ( rule__QuantumRegister__Group_4__0__Impl rule__QuantumRegister__Group_4__1 )
+            // InternalQuCircuit.g:1111:2: rule__QuantumRegister__Group_4__0__Impl rule__QuantumRegister__Group_4__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__QuantumRegister__Group_4__0__Impl();
 
             state._fsp--;
@@ -3351,17 +3614,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group_4__0__Impl"
-    // InternalQuCircuit.g:1039:1: rule__QuantumRegister__Group_4__0__Impl : ( 'NumberOfQubits' ) ;
+    // InternalQuCircuit.g:1118:1: rule__QuantumRegister__Group_4__0__Impl : ( 'NumberOfQubits' ) ;
     public final void rule__QuantumRegister__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1043:1: ( ( 'NumberOfQubits' ) )
-            // InternalQuCircuit.g:1044:1: ( 'NumberOfQubits' )
+            // InternalQuCircuit.g:1122:1: ( ( 'NumberOfQubits' ) )
+            // InternalQuCircuit.g:1123:1: ( 'NumberOfQubits' )
             {
-            // InternalQuCircuit.g:1044:1: ( 'NumberOfQubits' )
-            // InternalQuCircuit.g:1045:2: 'NumberOfQubits'
+            // InternalQuCircuit.g:1123:1: ( 'NumberOfQubits' )
+            // InternalQuCircuit.g:1124:2: 'NumberOfQubits'
             {
              before(grammarAccess.getQuantumRegisterAccess().getNumberOfQubitsKeyword_4_0()); 
             match(input,20,FOLLOW_2); 
@@ -3388,14 +3651,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group_4__1"
-    // InternalQuCircuit.g:1054:1: rule__QuantumRegister__Group_4__1 : rule__QuantumRegister__Group_4__1__Impl ;
+    // InternalQuCircuit.g:1133:1: rule__QuantumRegister__Group_4__1 : rule__QuantumRegister__Group_4__1__Impl ;
     public final void rule__QuantumRegister__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1058:1: ( rule__QuantumRegister__Group_4__1__Impl )
-            // InternalQuCircuit.g:1059:2: rule__QuantumRegister__Group_4__1__Impl
+            // InternalQuCircuit.g:1137:1: ( rule__QuantumRegister__Group_4__1__Impl )
+            // InternalQuCircuit.g:1138:2: rule__QuantumRegister__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__QuantumRegister__Group_4__1__Impl();
@@ -3421,21 +3684,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__Group_4__1__Impl"
-    // InternalQuCircuit.g:1065:1: rule__QuantumRegister__Group_4__1__Impl : ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) ) ;
+    // InternalQuCircuit.g:1144:1: rule__QuantumRegister__Group_4__1__Impl : ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) ) ;
     public final void rule__QuantumRegister__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1069:1: ( ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) ) )
-            // InternalQuCircuit.g:1070:1: ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) )
+            // InternalQuCircuit.g:1148:1: ( ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) ) )
+            // InternalQuCircuit.g:1149:1: ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) )
             {
-            // InternalQuCircuit.g:1070:1: ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) )
-            // InternalQuCircuit.g:1071:2: ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 )
+            // InternalQuCircuit.g:1149:1: ( ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 ) )
+            // InternalQuCircuit.g:1150:2: ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 )
             {
              before(grammarAccess.getQuantumRegisterAccess().getNumberOfQubitsAssignment_4_1()); 
-            // InternalQuCircuit.g:1072:2: ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 )
-            // InternalQuCircuit.g:1072:3: rule__QuantumRegister__NumberOfQubitsAssignment_4_1
+            // InternalQuCircuit.g:1151:2: ( rule__QuantumRegister__NumberOfQubitsAssignment_4_1 )
+            // InternalQuCircuit.g:1151:3: rule__QuantumRegister__NumberOfQubitsAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__QuantumRegister__NumberOfQubitsAssignment_4_1();
@@ -3467,17 +3730,322 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__QuantumRegister__Group_4__1__Impl"
 
 
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__0"
+    // InternalQuCircuit.g:1160:1: rule__SimplifiedQuantumRegister__Group__0 : rule__SimplifiedQuantumRegister__Group__0__Impl rule__SimplifiedQuantumRegister__Group__1 ;
+    public final void rule__SimplifiedQuantumRegister__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1164:1: ( rule__SimplifiedQuantumRegister__Group__0__Impl rule__SimplifiedQuantumRegister__Group__1 )
+            // InternalQuCircuit.g:1165:2: rule__SimplifiedQuantumRegister__Group__0__Impl rule__SimplifiedQuantumRegister__Group__1
+            {
+            pushFollow(FOLLOW_14);
+            rule__SimplifiedQuantumRegister__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SimplifiedQuantumRegister__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__0"
+
+
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__0__Impl"
+    // InternalQuCircuit.g:1172:1: rule__SimplifiedQuantumRegister__Group__0__Impl : ( () ) ;
+    public final void rule__SimplifiedQuantumRegister__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1176:1: ( ( () ) )
+            // InternalQuCircuit.g:1177:1: ( () )
+            {
+            // InternalQuCircuit.g:1177:1: ( () )
+            // InternalQuCircuit.g:1178:2: ()
+            {
+             before(grammarAccess.getSimplifiedQuantumRegisterAccess().getQuantumRegisterAction_0()); 
+            // InternalQuCircuit.g:1179:2: ()
+            // InternalQuCircuit.g:1179:3: 
+            {
+            }
+
+             after(grammarAccess.getSimplifiedQuantumRegisterAccess().getQuantumRegisterAction_0()); 
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__0__Impl"
+
+
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__1"
+    // InternalQuCircuit.g:1187:1: rule__SimplifiedQuantumRegister__Group__1 : rule__SimplifiedQuantumRegister__Group__1__Impl rule__SimplifiedQuantumRegister__Group__2 ;
+    public final void rule__SimplifiedQuantumRegister__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1191:1: ( rule__SimplifiedQuantumRegister__Group__1__Impl rule__SimplifiedQuantumRegister__Group__2 )
+            // InternalQuCircuit.g:1192:2: rule__SimplifiedQuantumRegister__Group__1__Impl rule__SimplifiedQuantumRegister__Group__2
+            {
+            pushFollow(FOLLOW_13);
+            rule__SimplifiedQuantumRegister__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SimplifiedQuantumRegister__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__1"
+
+
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__1__Impl"
+    // InternalQuCircuit.g:1199:1: rule__SimplifiedQuantumRegister__Group__1__Impl : ( '(' ) ;
+    public final void rule__SimplifiedQuantumRegister__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1203:1: ( ( '(' ) )
+            // InternalQuCircuit.g:1204:1: ( '(' )
+            {
+            // InternalQuCircuit.g:1204:1: ( '(' )
+            // InternalQuCircuit.g:1205:2: '('
+            {
+             before(grammarAccess.getSimplifiedQuantumRegisterAccess().getLeftParenthesisKeyword_1()); 
+            match(input,21,FOLLOW_2); 
+             after(grammarAccess.getSimplifiedQuantumRegisterAccess().getLeftParenthesisKeyword_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__1__Impl"
+
+
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__2"
+    // InternalQuCircuit.g:1214:1: rule__SimplifiedQuantumRegister__Group__2 : rule__SimplifiedQuantumRegister__Group__2__Impl rule__SimplifiedQuantumRegister__Group__3 ;
+    public final void rule__SimplifiedQuantumRegister__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1218:1: ( rule__SimplifiedQuantumRegister__Group__2__Impl rule__SimplifiedQuantumRegister__Group__3 )
+            // InternalQuCircuit.g:1219:2: rule__SimplifiedQuantumRegister__Group__2__Impl rule__SimplifiedQuantumRegister__Group__3
+            {
+            pushFollow(FOLLOW_15);
+            rule__SimplifiedQuantumRegister__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__SimplifiedQuantumRegister__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__2"
+
+
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__2__Impl"
+    // InternalQuCircuit.g:1226:1: rule__SimplifiedQuantumRegister__Group__2__Impl : ( ( rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2 ) ) ;
+    public final void rule__SimplifiedQuantumRegister__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1230:1: ( ( ( rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2 ) ) )
+            // InternalQuCircuit.g:1231:1: ( ( rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2 ) )
+            {
+            // InternalQuCircuit.g:1231:1: ( ( rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2 ) )
+            // InternalQuCircuit.g:1232:2: ( rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2 )
+            {
+             before(grammarAccess.getSimplifiedQuantumRegisterAccess().getNumberOfQubitsAssignment_2()); 
+            // InternalQuCircuit.g:1233:2: ( rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2 )
+            // InternalQuCircuit.g:1233:3: rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSimplifiedQuantumRegisterAccess().getNumberOfQubitsAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__2__Impl"
+
+
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__3"
+    // InternalQuCircuit.g:1241:1: rule__SimplifiedQuantumRegister__Group__3 : rule__SimplifiedQuantumRegister__Group__3__Impl ;
+    public final void rule__SimplifiedQuantumRegister__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1245:1: ( rule__SimplifiedQuantumRegister__Group__3__Impl )
+            // InternalQuCircuit.g:1246:2: rule__SimplifiedQuantumRegister__Group__3__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__SimplifiedQuantumRegister__Group__3__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__3"
+
+
+    // $ANTLR start "rule__SimplifiedQuantumRegister__Group__3__Impl"
+    // InternalQuCircuit.g:1252:1: rule__SimplifiedQuantumRegister__Group__3__Impl : ( ')' ) ;
+    public final void rule__SimplifiedQuantumRegister__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:1256:1: ( ( ')' ) )
+            // InternalQuCircuit.g:1257:1: ( ')' )
+            {
+            // InternalQuCircuit.g:1257:1: ( ')' )
+            // InternalQuCircuit.g:1258:2: ')'
+            {
+             before(grammarAccess.getSimplifiedQuantumRegisterAccess().getRightParenthesisKeyword_3()); 
+            match(input,22,FOLLOW_2); 
+             after(grammarAccess.getSimplifiedQuantumRegisterAccess().getRightParenthesisKeyword_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__Group__3__Impl"
+
+
     // $ANTLR start "rule__ClassicRegister__Group__0"
-    // InternalQuCircuit.g:1081:1: rule__ClassicRegister__Group__0 : rule__ClassicRegister__Group__0__Impl rule__ClassicRegister__Group__1 ;
+    // InternalQuCircuit.g:1268:1: rule__ClassicRegister__Group__0 : rule__ClassicRegister__Group__0__Impl rule__ClassicRegister__Group__1 ;
     public final void rule__ClassicRegister__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1085:1: ( rule__ClassicRegister__Group__0__Impl rule__ClassicRegister__Group__1 )
-            // InternalQuCircuit.g:1086:2: rule__ClassicRegister__Group__0__Impl rule__ClassicRegister__Group__1
+            // InternalQuCircuit.g:1272:1: ( rule__ClassicRegister__Group__0__Impl rule__ClassicRegister__Group__1 )
+            // InternalQuCircuit.g:1273:2: rule__ClassicRegister__Group__0__Impl rule__ClassicRegister__Group__1
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_16);
             rule__ClassicRegister__Group__0__Impl();
 
             state._fsp--;
@@ -3506,21 +4074,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__0__Impl"
-    // InternalQuCircuit.g:1093:1: rule__ClassicRegister__Group__0__Impl : ( () ) ;
+    // InternalQuCircuit.g:1280:1: rule__ClassicRegister__Group__0__Impl : ( () ) ;
     public final void rule__ClassicRegister__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1097:1: ( ( () ) )
-            // InternalQuCircuit.g:1098:1: ( () )
+            // InternalQuCircuit.g:1284:1: ( ( () ) )
+            // InternalQuCircuit.g:1285:1: ( () )
             {
-            // InternalQuCircuit.g:1098:1: ( () )
-            // InternalQuCircuit.g:1099:2: ()
+            // InternalQuCircuit.g:1285:1: ( () )
+            // InternalQuCircuit.g:1286:2: ()
             {
              before(grammarAccess.getClassicRegisterAccess().getClassicRegisterAction_0()); 
-            // InternalQuCircuit.g:1100:2: ()
-            // InternalQuCircuit.g:1100:3: 
+            // InternalQuCircuit.g:1287:2: ()
+            // InternalQuCircuit.g:1287:3: 
             {
             }
 
@@ -3543,14 +4111,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__1"
-    // InternalQuCircuit.g:1108:1: rule__ClassicRegister__Group__1 : rule__ClassicRegister__Group__1__Impl rule__ClassicRegister__Group__2 ;
+    // InternalQuCircuit.g:1295:1: rule__ClassicRegister__Group__1 : rule__ClassicRegister__Group__1__Impl rule__ClassicRegister__Group__2 ;
     public final void rule__ClassicRegister__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1112:1: ( rule__ClassicRegister__Group__1__Impl rule__ClassicRegister__Group__2 )
-            // InternalQuCircuit.g:1113:2: rule__ClassicRegister__Group__1__Impl rule__ClassicRegister__Group__2
+            // InternalQuCircuit.g:1299:1: ( rule__ClassicRegister__Group__1__Impl rule__ClassicRegister__Group__2 )
+            // InternalQuCircuit.g:1300:2: rule__ClassicRegister__Group__1__Impl rule__ClassicRegister__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__ClassicRegister__Group__1__Impl();
@@ -3581,20 +4149,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__1__Impl"
-    // InternalQuCircuit.g:1120:1: rule__ClassicRegister__Group__1__Impl : ( 'ClassicRegister' ) ;
+    // InternalQuCircuit.g:1307:1: rule__ClassicRegister__Group__1__Impl : ( 'ClassicRegister' ) ;
     public final void rule__ClassicRegister__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1124:1: ( ( 'ClassicRegister' ) )
-            // InternalQuCircuit.g:1125:1: ( 'ClassicRegister' )
+            // InternalQuCircuit.g:1311:1: ( ( 'ClassicRegister' ) )
+            // InternalQuCircuit.g:1312:1: ( 'ClassicRegister' )
             {
-            // InternalQuCircuit.g:1125:1: ( 'ClassicRegister' )
-            // InternalQuCircuit.g:1126:2: 'ClassicRegister'
+            // InternalQuCircuit.g:1312:1: ( 'ClassicRegister' )
+            // InternalQuCircuit.g:1313:2: 'ClassicRegister'
             {
              before(grammarAccess.getClassicRegisterAccess().getClassicRegisterKeyword_1()); 
-            match(input,21,FOLLOW_2); 
+            match(input,23,FOLLOW_2); 
              after(grammarAccess.getClassicRegisterAccess().getClassicRegisterKeyword_1()); 
 
             }
@@ -3618,16 +4186,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__2"
-    // InternalQuCircuit.g:1135:1: rule__ClassicRegister__Group__2 : rule__ClassicRegister__Group__2__Impl rule__ClassicRegister__Group__3 ;
+    // InternalQuCircuit.g:1322:1: rule__ClassicRegister__Group__2 : rule__ClassicRegister__Group__2__Impl rule__ClassicRegister__Group__3 ;
     public final void rule__ClassicRegister__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1139:1: ( rule__ClassicRegister__Group__2__Impl rule__ClassicRegister__Group__3 )
-            // InternalQuCircuit.g:1140:2: rule__ClassicRegister__Group__2__Impl rule__ClassicRegister__Group__3
+            // InternalQuCircuit.g:1326:1: ( rule__ClassicRegister__Group__2__Impl rule__ClassicRegister__Group__3 )
+            // InternalQuCircuit.g:1327:2: rule__ClassicRegister__Group__2__Impl rule__ClassicRegister__Group__3
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__ClassicRegister__Group__2__Impl();
 
             state._fsp--;
@@ -3656,21 +4224,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__2__Impl"
-    // InternalQuCircuit.g:1147:1: rule__ClassicRegister__Group__2__Impl : ( ( rule__ClassicRegister__NameAssignment_2 ) ) ;
+    // InternalQuCircuit.g:1334:1: rule__ClassicRegister__Group__2__Impl : ( ( rule__ClassicRegister__NameAssignment_2 ) ) ;
     public final void rule__ClassicRegister__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1151:1: ( ( ( rule__ClassicRegister__NameAssignment_2 ) ) )
-            // InternalQuCircuit.g:1152:1: ( ( rule__ClassicRegister__NameAssignment_2 ) )
+            // InternalQuCircuit.g:1338:1: ( ( ( rule__ClassicRegister__NameAssignment_2 ) ) )
+            // InternalQuCircuit.g:1339:1: ( ( rule__ClassicRegister__NameAssignment_2 ) )
             {
-            // InternalQuCircuit.g:1152:1: ( ( rule__ClassicRegister__NameAssignment_2 ) )
-            // InternalQuCircuit.g:1153:2: ( rule__ClassicRegister__NameAssignment_2 )
+            // InternalQuCircuit.g:1339:1: ( ( rule__ClassicRegister__NameAssignment_2 ) )
+            // InternalQuCircuit.g:1340:2: ( rule__ClassicRegister__NameAssignment_2 )
             {
              before(grammarAccess.getClassicRegisterAccess().getNameAssignment_2()); 
-            // InternalQuCircuit.g:1154:2: ( rule__ClassicRegister__NameAssignment_2 )
-            // InternalQuCircuit.g:1154:3: rule__ClassicRegister__NameAssignment_2
+            // InternalQuCircuit.g:1341:2: ( rule__ClassicRegister__NameAssignment_2 )
+            // InternalQuCircuit.g:1341:3: rule__ClassicRegister__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ClassicRegister__NameAssignment_2();
@@ -3703,16 +4271,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__3"
-    // InternalQuCircuit.g:1162:1: rule__ClassicRegister__Group__3 : rule__ClassicRegister__Group__3__Impl rule__ClassicRegister__Group__4 ;
+    // InternalQuCircuit.g:1349:1: rule__ClassicRegister__Group__3 : rule__ClassicRegister__Group__3__Impl rule__ClassicRegister__Group__4 ;
     public final void rule__ClassicRegister__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1166:1: ( rule__ClassicRegister__Group__3__Impl rule__ClassicRegister__Group__4 )
-            // InternalQuCircuit.g:1167:2: rule__ClassicRegister__Group__3__Impl rule__ClassicRegister__Group__4
+            // InternalQuCircuit.g:1353:1: ( rule__ClassicRegister__Group__3__Impl rule__ClassicRegister__Group__4 )
+            // InternalQuCircuit.g:1354:2: rule__ClassicRegister__Group__3__Impl rule__ClassicRegister__Group__4
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_17);
             rule__ClassicRegister__Group__3__Impl();
 
             state._fsp--;
@@ -3741,17 +4309,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__3__Impl"
-    // InternalQuCircuit.g:1174:1: rule__ClassicRegister__Group__3__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:1361:1: rule__ClassicRegister__Group__3__Impl : ( '{' ) ;
     public final void rule__ClassicRegister__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1178:1: ( ( '{' ) )
-            // InternalQuCircuit.g:1179:1: ( '{' )
+            // InternalQuCircuit.g:1365:1: ( ( '{' ) )
+            // InternalQuCircuit.g:1366:1: ( '{' )
             {
-            // InternalQuCircuit.g:1179:1: ( '{' )
-            // InternalQuCircuit.g:1180:2: '{'
+            // InternalQuCircuit.g:1366:1: ( '{' )
+            // InternalQuCircuit.g:1367:2: '{'
             {
              before(grammarAccess.getClassicRegisterAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,17,FOLLOW_2); 
@@ -3778,16 +4346,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__4"
-    // InternalQuCircuit.g:1189:1: rule__ClassicRegister__Group__4 : rule__ClassicRegister__Group__4__Impl rule__ClassicRegister__Group__5 ;
+    // InternalQuCircuit.g:1376:1: rule__ClassicRegister__Group__4 : rule__ClassicRegister__Group__4__Impl rule__ClassicRegister__Group__5 ;
     public final void rule__ClassicRegister__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1193:1: ( rule__ClassicRegister__Group__4__Impl rule__ClassicRegister__Group__5 )
-            // InternalQuCircuit.g:1194:2: rule__ClassicRegister__Group__4__Impl rule__ClassicRegister__Group__5
+            // InternalQuCircuit.g:1380:1: ( rule__ClassicRegister__Group__4__Impl rule__ClassicRegister__Group__5 )
+            // InternalQuCircuit.g:1381:2: rule__ClassicRegister__Group__4__Impl rule__ClassicRegister__Group__5
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_17);
             rule__ClassicRegister__Group__4__Impl();
 
             state._fsp--;
@@ -3816,29 +4384,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__4__Impl"
-    // InternalQuCircuit.g:1201:1: rule__ClassicRegister__Group__4__Impl : ( ( rule__ClassicRegister__Group_4__0 )? ) ;
+    // InternalQuCircuit.g:1388:1: rule__ClassicRegister__Group__4__Impl : ( ( rule__ClassicRegister__Group_4__0 )? ) ;
     public final void rule__ClassicRegister__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1205:1: ( ( ( rule__ClassicRegister__Group_4__0 )? ) )
-            // InternalQuCircuit.g:1206:1: ( ( rule__ClassicRegister__Group_4__0 )? )
+            // InternalQuCircuit.g:1392:1: ( ( ( rule__ClassicRegister__Group_4__0 )? ) )
+            // InternalQuCircuit.g:1393:1: ( ( rule__ClassicRegister__Group_4__0 )? )
             {
-            // InternalQuCircuit.g:1206:1: ( ( rule__ClassicRegister__Group_4__0 )? )
-            // InternalQuCircuit.g:1207:2: ( rule__ClassicRegister__Group_4__0 )?
+            // InternalQuCircuit.g:1393:1: ( ( rule__ClassicRegister__Group_4__0 )? )
+            // InternalQuCircuit.g:1394:2: ( rule__ClassicRegister__Group_4__0 )?
             {
              before(grammarAccess.getClassicRegisterAccess().getGroup_4()); 
-            // InternalQuCircuit.g:1208:2: ( rule__ClassicRegister__Group_4__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalQuCircuit.g:1395:2: ( rule__ClassicRegister__Group_4__0 )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA10_0==22) ) {
-                alt10=1;
+            if ( (LA12_0==24) ) {
+                alt12=1;
             }
-            switch (alt10) {
+            switch (alt12) {
                 case 1 :
-                    // InternalQuCircuit.g:1208:3: rule__ClassicRegister__Group_4__0
+                    // InternalQuCircuit.g:1395:3: rule__ClassicRegister__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ClassicRegister__Group_4__0();
@@ -3874,14 +4442,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__5"
-    // InternalQuCircuit.g:1216:1: rule__ClassicRegister__Group__5 : rule__ClassicRegister__Group__5__Impl ;
+    // InternalQuCircuit.g:1403:1: rule__ClassicRegister__Group__5 : rule__ClassicRegister__Group__5__Impl ;
     public final void rule__ClassicRegister__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1220:1: ( rule__ClassicRegister__Group__5__Impl )
-            // InternalQuCircuit.g:1221:2: rule__ClassicRegister__Group__5__Impl
+            // InternalQuCircuit.g:1407:1: ( rule__ClassicRegister__Group__5__Impl )
+            // InternalQuCircuit.g:1408:2: rule__ClassicRegister__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ClassicRegister__Group__5__Impl();
@@ -3907,17 +4475,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group__5__Impl"
-    // InternalQuCircuit.g:1227:1: rule__ClassicRegister__Group__5__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:1414:1: rule__ClassicRegister__Group__5__Impl : ( '}' ) ;
     public final void rule__ClassicRegister__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1231:1: ( ( '}' ) )
-            // InternalQuCircuit.g:1232:1: ( '}' )
+            // InternalQuCircuit.g:1418:1: ( ( '}' ) )
+            // InternalQuCircuit.g:1419:1: ( '}' )
             {
-            // InternalQuCircuit.g:1232:1: ( '}' )
-            // InternalQuCircuit.g:1233:2: '}'
+            // InternalQuCircuit.g:1419:1: ( '}' )
+            // InternalQuCircuit.g:1420:2: '}'
             {
              before(grammarAccess.getClassicRegisterAccess().getRightCurlyBracketKeyword_5()); 
             match(input,18,FOLLOW_2); 
@@ -3944,16 +4512,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group_4__0"
-    // InternalQuCircuit.g:1243:1: rule__ClassicRegister__Group_4__0 : rule__ClassicRegister__Group_4__0__Impl rule__ClassicRegister__Group_4__1 ;
+    // InternalQuCircuit.g:1430:1: rule__ClassicRegister__Group_4__0 : rule__ClassicRegister__Group_4__0__Impl rule__ClassicRegister__Group_4__1 ;
     public final void rule__ClassicRegister__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1247:1: ( rule__ClassicRegister__Group_4__0__Impl rule__ClassicRegister__Group_4__1 )
-            // InternalQuCircuit.g:1248:2: rule__ClassicRegister__Group_4__0__Impl rule__ClassicRegister__Group_4__1
+            // InternalQuCircuit.g:1434:1: ( rule__ClassicRegister__Group_4__0__Impl rule__ClassicRegister__Group_4__1 )
+            // InternalQuCircuit.g:1435:2: rule__ClassicRegister__Group_4__0__Impl rule__ClassicRegister__Group_4__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__ClassicRegister__Group_4__0__Impl();
 
             state._fsp--;
@@ -3982,20 +4550,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group_4__0__Impl"
-    // InternalQuCircuit.g:1255:1: rule__ClassicRegister__Group_4__0__Impl : ( 'NumberOfBits' ) ;
+    // InternalQuCircuit.g:1442:1: rule__ClassicRegister__Group_4__0__Impl : ( 'NumberOfBits' ) ;
     public final void rule__ClassicRegister__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1259:1: ( ( 'NumberOfBits' ) )
-            // InternalQuCircuit.g:1260:1: ( 'NumberOfBits' )
+            // InternalQuCircuit.g:1446:1: ( ( 'NumberOfBits' ) )
+            // InternalQuCircuit.g:1447:1: ( 'NumberOfBits' )
             {
-            // InternalQuCircuit.g:1260:1: ( 'NumberOfBits' )
-            // InternalQuCircuit.g:1261:2: 'NumberOfBits'
+            // InternalQuCircuit.g:1447:1: ( 'NumberOfBits' )
+            // InternalQuCircuit.g:1448:2: 'NumberOfBits'
             {
              before(grammarAccess.getClassicRegisterAccess().getNumberOfBitsKeyword_4_0()); 
-            match(input,22,FOLLOW_2); 
+            match(input,24,FOLLOW_2); 
              after(grammarAccess.getClassicRegisterAccess().getNumberOfBitsKeyword_4_0()); 
 
             }
@@ -4019,14 +4587,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group_4__1"
-    // InternalQuCircuit.g:1270:1: rule__ClassicRegister__Group_4__1 : rule__ClassicRegister__Group_4__1__Impl ;
+    // InternalQuCircuit.g:1457:1: rule__ClassicRegister__Group_4__1 : rule__ClassicRegister__Group_4__1__Impl ;
     public final void rule__ClassicRegister__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1274:1: ( rule__ClassicRegister__Group_4__1__Impl )
-            // InternalQuCircuit.g:1275:2: rule__ClassicRegister__Group_4__1__Impl
+            // InternalQuCircuit.g:1461:1: ( rule__ClassicRegister__Group_4__1__Impl )
+            // InternalQuCircuit.g:1462:2: rule__ClassicRegister__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ClassicRegister__Group_4__1__Impl();
@@ -4052,21 +4620,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__Group_4__1__Impl"
-    // InternalQuCircuit.g:1281:1: rule__ClassicRegister__Group_4__1__Impl : ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) ) ;
+    // InternalQuCircuit.g:1468:1: rule__ClassicRegister__Group_4__1__Impl : ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) ) ;
     public final void rule__ClassicRegister__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1285:1: ( ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) ) )
-            // InternalQuCircuit.g:1286:1: ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) )
+            // InternalQuCircuit.g:1472:1: ( ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) ) )
+            // InternalQuCircuit.g:1473:1: ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) )
             {
-            // InternalQuCircuit.g:1286:1: ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) )
-            // InternalQuCircuit.g:1287:2: ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 )
+            // InternalQuCircuit.g:1473:1: ( ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 ) )
+            // InternalQuCircuit.g:1474:2: ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 )
             {
              before(grammarAccess.getClassicRegisterAccess().getNumberOfBitsAssignment_4_1()); 
-            // InternalQuCircuit.g:1288:2: ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 )
-            // InternalQuCircuit.g:1288:3: rule__ClassicRegister__NumberOfBitsAssignment_4_1
+            // InternalQuCircuit.g:1475:2: ( rule__ClassicRegister__NumberOfBitsAssignment_4_1 )
+            // InternalQuCircuit.g:1475:3: rule__ClassicRegister__NumberOfBitsAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__ClassicRegister__NumberOfBitsAssignment_4_1();
@@ -4099,16 +4667,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__0"
-    // InternalQuCircuit.g:1297:1: rule__Layer__Group__0 : rule__Layer__Group__0__Impl rule__Layer__Group__1 ;
+    // InternalQuCircuit.g:1484:1: rule__Layer__Group__0 : rule__Layer__Group__0__Impl rule__Layer__Group__1 ;
     public final void rule__Layer__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1301:1: ( rule__Layer__Group__0__Impl rule__Layer__Group__1 )
-            // InternalQuCircuit.g:1302:2: rule__Layer__Group__0__Impl rule__Layer__Group__1
+            // InternalQuCircuit.g:1488:1: ( rule__Layer__Group__0__Impl rule__Layer__Group__1 )
+            // InternalQuCircuit.g:1489:2: rule__Layer__Group__0__Impl rule__Layer__Group__1
             {
-            pushFollow(FOLLOW_6);
+            pushFollow(FOLLOW_5);
             rule__Layer__Group__0__Impl();
 
             state._fsp--;
@@ -4137,21 +4705,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__0__Impl"
-    // InternalQuCircuit.g:1309:1: rule__Layer__Group__0__Impl : ( () ) ;
+    // InternalQuCircuit.g:1496:1: rule__Layer__Group__0__Impl : ( () ) ;
     public final void rule__Layer__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1313:1: ( ( () ) )
-            // InternalQuCircuit.g:1314:1: ( () )
+            // InternalQuCircuit.g:1500:1: ( ( () ) )
+            // InternalQuCircuit.g:1501:1: ( () )
             {
-            // InternalQuCircuit.g:1314:1: ( () )
-            // InternalQuCircuit.g:1315:2: ()
+            // InternalQuCircuit.g:1501:1: ( () )
+            // InternalQuCircuit.g:1502:2: ()
             {
              before(grammarAccess.getLayerAccess().getLayerAction_0()); 
-            // InternalQuCircuit.g:1316:2: ()
-            // InternalQuCircuit.g:1316:3: 
+            // InternalQuCircuit.g:1503:2: ()
+            // InternalQuCircuit.g:1503:3: 
             {
             }
 
@@ -4174,14 +4742,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__1"
-    // InternalQuCircuit.g:1324:1: rule__Layer__Group__1 : rule__Layer__Group__1__Impl rule__Layer__Group__2 ;
+    // InternalQuCircuit.g:1511:1: rule__Layer__Group__1 : rule__Layer__Group__1__Impl rule__Layer__Group__2 ;
     public final void rule__Layer__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1328:1: ( rule__Layer__Group__1__Impl rule__Layer__Group__2 )
-            // InternalQuCircuit.g:1329:2: rule__Layer__Group__1__Impl rule__Layer__Group__2
+            // InternalQuCircuit.g:1515:1: ( rule__Layer__Group__1__Impl rule__Layer__Group__2 )
+            // InternalQuCircuit.g:1516:2: rule__Layer__Group__1__Impl rule__Layer__Group__2
             {
             pushFollow(FOLLOW_3);
             rule__Layer__Group__1__Impl();
@@ -4212,20 +4780,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__1__Impl"
-    // InternalQuCircuit.g:1336:1: rule__Layer__Group__1__Impl : ( 'Layer' ) ;
+    // InternalQuCircuit.g:1523:1: rule__Layer__Group__1__Impl : ( 'Layer' ) ;
     public final void rule__Layer__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1340:1: ( ( 'Layer' ) )
-            // InternalQuCircuit.g:1341:1: ( 'Layer' )
+            // InternalQuCircuit.g:1527:1: ( ( 'Layer' ) )
+            // InternalQuCircuit.g:1528:1: ( 'Layer' )
             {
-            // InternalQuCircuit.g:1341:1: ( 'Layer' )
-            // InternalQuCircuit.g:1342:2: 'Layer'
+            // InternalQuCircuit.g:1528:1: ( 'Layer' )
+            // InternalQuCircuit.g:1529:2: 'Layer'
             {
              before(grammarAccess.getLayerAccess().getLayerKeyword_1()); 
-            match(input,23,FOLLOW_2); 
+            match(input,25,FOLLOW_2); 
              after(grammarAccess.getLayerAccess().getLayerKeyword_1()); 
 
             }
@@ -4249,16 +4817,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__2"
-    // InternalQuCircuit.g:1351:1: rule__Layer__Group__2 : rule__Layer__Group__2__Impl rule__Layer__Group__3 ;
+    // InternalQuCircuit.g:1538:1: rule__Layer__Group__2 : rule__Layer__Group__2__Impl rule__Layer__Group__3 ;
     public final void rule__Layer__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1355:1: ( rule__Layer__Group__2__Impl rule__Layer__Group__3 )
-            // InternalQuCircuit.g:1356:2: rule__Layer__Group__2__Impl rule__Layer__Group__3
+            // InternalQuCircuit.g:1542:1: ( rule__Layer__Group__2__Impl rule__Layer__Group__3 )
+            // InternalQuCircuit.g:1543:2: rule__Layer__Group__2__Impl rule__Layer__Group__3
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__Layer__Group__2__Impl();
 
             state._fsp--;
@@ -4287,21 +4855,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__2__Impl"
-    // InternalQuCircuit.g:1363:1: rule__Layer__Group__2__Impl : ( ( rule__Layer__NameAssignment_2 ) ) ;
+    // InternalQuCircuit.g:1550:1: rule__Layer__Group__2__Impl : ( ( rule__Layer__NameAssignment_2 ) ) ;
     public final void rule__Layer__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1367:1: ( ( ( rule__Layer__NameAssignment_2 ) ) )
-            // InternalQuCircuit.g:1368:1: ( ( rule__Layer__NameAssignment_2 ) )
+            // InternalQuCircuit.g:1554:1: ( ( ( rule__Layer__NameAssignment_2 ) ) )
+            // InternalQuCircuit.g:1555:1: ( ( rule__Layer__NameAssignment_2 ) )
             {
-            // InternalQuCircuit.g:1368:1: ( ( rule__Layer__NameAssignment_2 ) )
-            // InternalQuCircuit.g:1369:2: ( rule__Layer__NameAssignment_2 )
+            // InternalQuCircuit.g:1555:1: ( ( rule__Layer__NameAssignment_2 ) )
+            // InternalQuCircuit.g:1556:2: ( rule__Layer__NameAssignment_2 )
             {
              before(grammarAccess.getLayerAccess().getNameAssignment_2()); 
-            // InternalQuCircuit.g:1370:2: ( rule__Layer__NameAssignment_2 )
-            // InternalQuCircuit.g:1370:3: rule__Layer__NameAssignment_2
+            // InternalQuCircuit.g:1557:2: ( rule__Layer__NameAssignment_2 )
+            // InternalQuCircuit.g:1557:3: rule__Layer__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Layer__NameAssignment_2();
@@ -4334,16 +4902,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__3"
-    // InternalQuCircuit.g:1378:1: rule__Layer__Group__3 : rule__Layer__Group__3__Impl rule__Layer__Group__4 ;
+    // InternalQuCircuit.g:1565:1: rule__Layer__Group__3 : rule__Layer__Group__3__Impl rule__Layer__Group__4 ;
     public final void rule__Layer__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1382:1: ( rule__Layer__Group__3__Impl rule__Layer__Group__4 )
-            // InternalQuCircuit.g:1383:2: rule__Layer__Group__3__Impl rule__Layer__Group__4
+            // InternalQuCircuit.g:1569:1: ( rule__Layer__Group__3__Impl rule__Layer__Group__4 )
+            // InternalQuCircuit.g:1570:2: rule__Layer__Group__3__Impl rule__Layer__Group__4
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_18);
             rule__Layer__Group__3__Impl();
 
             state._fsp--;
@@ -4372,17 +4940,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__3__Impl"
-    // InternalQuCircuit.g:1390:1: rule__Layer__Group__3__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:1577:1: rule__Layer__Group__3__Impl : ( '{' ) ;
     public final void rule__Layer__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1394:1: ( ( '{' ) )
-            // InternalQuCircuit.g:1395:1: ( '{' )
+            // InternalQuCircuit.g:1581:1: ( ( '{' ) )
+            // InternalQuCircuit.g:1582:1: ( '{' )
             {
-            // InternalQuCircuit.g:1395:1: ( '{' )
-            // InternalQuCircuit.g:1396:2: '{'
+            // InternalQuCircuit.g:1582:1: ( '{' )
+            // InternalQuCircuit.g:1583:2: '{'
             {
              before(grammarAccess.getLayerAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,17,FOLLOW_2); 
@@ -4409,16 +4977,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__4"
-    // InternalQuCircuit.g:1405:1: rule__Layer__Group__4 : rule__Layer__Group__4__Impl rule__Layer__Group__5 ;
+    // InternalQuCircuit.g:1592:1: rule__Layer__Group__4 : rule__Layer__Group__4__Impl rule__Layer__Group__5 ;
     public final void rule__Layer__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1409:1: ( rule__Layer__Group__4__Impl rule__Layer__Group__5 )
-            // InternalQuCircuit.g:1410:2: rule__Layer__Group__4__Impl rule__Layer__Group__5
+            // InternalQuCircuit.g:1596:1: ( rule__Layer__Group__4__Impl rule__Layer__Group__5 )
+            // InternalQuCircuit.g:1597:2: rule__Layer__Group__4__Impl rule__Layer__Group__5
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_19);
             rule__Layer__Group__4__Impl();
 
             state._fsp--;
@@ -4447,21 +5015,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__4__Impl"
-    // InternalQuCircuit.g:1417:1: rule__Layer__Group__4__Impl : ( ( rule__Layer__QuantumOperationsAssignment_4 ) ) ;
+    // InternalQuCircuit.g:1604:1: rule__Layer__Group__4__Impl : ( ( rule__Layer__QuantumOperationsAssignment_4 ) ) ;
     public final void rule__Layer__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1421:1: ( ( ( rule__Layer__QuantumOperationsAssignment_4 ) ) )
-            // InternalQuCircuit.g:1422:1: ( ( rule__Layer__QuantumOperationsAssignment_4 ) )
+            // InternalQuCircuit.g:1608:1: ( ( ( rule__Layer__QuantumOperationsAssignment_4 ) ) )
+            // InternalQuCircuit.g:1609:1: ( ( rule__Layer__QuantumOperationsAssignment_4 ) )
             {
-            // InternalQuCircuit.g:1422:1: ( ( rule__Layer__QuantumOperationsAssignment_4 ) )
-            // InternalQuCircuit.g:1423:2: ( rule__Layer__QuantumOperationsAssignment_4 )
+            // InternalQuCircuit.g:1609:1: ( ( rule__Layer__QuantumOperationsAssignment_4 ) )
+            // InternalQuCircuit.g:1610:2: ( rule__Layer__QuantumOperationsAssignment_4 )
             {
              before(grammarAccess.getLayerAccess().getQuantumOperationsAssignment_4()); 
-            // InternalQuCircuit.g:1424:2: ( rule__Layer__QuantumOperationsAssignment_4 )
-            // InternalQuCircuit.g:1424:3: rule__Layer__QuantumOperationsAssignment_4
+            // InternalQuCircuit.g:1611:2: ( rule__Layer__QuantumOperationsAssignment_4 )
+            // InternalQuCircuit.g:1611:3: rule__Layer__QuantumOperationsAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Layer__QuantumOperationsAssignment_4();
@@ -4494,16 +5062,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__5"
-    // InternalQuCircuit.g:1432:1: rule__Layer__Group__5 : rule__Layer__Group__5__Impl rule__Layer__Group__6 ;
+    // InternalQuCircuit.g:1619:1: rule__Layer__Group__5 : rule__Layer__Group__5__Impl rule__Layer__Group__6 ;
     public final void rule__Layer__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1436:1: ( rule__Layer__Group__5__Impl rule__Layer__Group__6 )
-            // InternalQuCircuit.g:1437:2: rule__Layer__Group__5__Impl rule__Layer__Group__6
+            // InternalQuCircuit.g:1623:1: ( rule__Layer__Group__5__Impl rule__Layer__Group__6 )
+            // InternalQuCircuit.g:1624:2: rule__Layer__Group__5__Impl rule__Layer__Group__6
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_19);
             rule__Layer__Group__5__Impl();
 
             state._fsp--;
@@ -4532,35 +5100,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__5__Impl"
-    // InternalQuCircuit.g:1444:1: rule__Layer__Group__5__Impl : ( ( rule__Layer__Group_5__0 )* ) ;
+    // InternalQuCircuit.g:1631:1: rule__Layer__Group__5__Impl : ( ( rule__Layer__Group_5__0 )* ) ;
     public final void rule__Layer__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1448:1: ( ( ( rule__Layer__Group_5__0 )* ) )
-            // InternalQuCircuit.g:1449:1: ( ( rule__Layer__Group_5__0 )* )
+            // InternalQuCircuit.g:1635:1: ( ( ( rule__Layer__Group_5__0 )* ) )
+            // InternalQuCircuit.g:1636:1: ( ( rule__Layer__Group_5__0 )* )
             {
-            // InternalQuCircuit.g:1449:1: ( ( rule__Layer__Group_5__0 )* )
-            // InternalQuCircuit.g:1450:2: ( rule__Layer__Group_5__0 )*
+            // InternalQuCircuit.g:1636:1: ( ( rule__Layer__Group_5__0 )* )
+            // InternalQuCircuit.g:1637:2: ( rule__Layer__Group_5__0 )*
             {
              before(grammarAccess.getLayerAccess().getGroup_5()); 
-            // InternalQuCircuit.g:1451:2: ( rule__Layer__Group_5__0 )*
-            loop11:
+            // InternalQuCircuit.g:1638:2: ( rule__Layer__Group_5__0 )*
+            loop13:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA11_0==24) ) {
-                    alt11=1;
+                if ( (LA13_0==26) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt13) {
             	case 1 :
-            	    // InternalQuCircuit.g:1451:3: rule__Layer__Group_5__0
+            	    // InternalQuCircuit.g:1638:3: rule__Layer__Group_5__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Layer__Group_5__0();
 
             	    state._fsp--;
@@ -4570,7 +5138,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop13;
                 }
             } while (true);
 
@@ -4597,14 +5165,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__6"
-    // InternalQuCircuit.g:1459:1: rule__Layer__Group__6 : rule__Layer__Group__6__Impl ;
+    // InternalQuCircuit.g:1646:1: rule__Layer__Group__6 : rule__Layer__Group__6__Impl ;
     public final void rule__Layer__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1463:1: ( rule__Layer__Group__6__Impl )
-            // InternalQuCircuit.g:1464:2: rule__Layer__Group__6__Impl
+            // InternalQuCircuit.g:1650:1: ( rule__Layer__Group__6__Impl )
+            // InternalQuCircuit.g:1651:2: rule__Layer__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Layer__Group__6__Impl();
@@ -4630,17 +5198,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__6__Impl"
-    // InternalQuCircuit.g:1470:1: rule__Layer__Group__6__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:1657:1: rule__Layer__Group__6__Impl : ( '}' ) ;
     public final void rule__Layer__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1474:1: ( ( '}' ) )
-            // InternalQuCircuit.g:1475:1: ( '}' )
+            // InternalQuCircuit.g:1661:1: ( ( '}' ) )
+            // InternalQuCircuit.g:1662:1: ( '}' )
             {
-            // InternalQuCircuit.g:1475:1: ( '}' )
-            // InternalQuCircuit.g:1476:2: '}'
+            // InternalQuCircuit.g:1662:1: ( '}' )
+            // InternalQuCircuit.g:1663:2: '}'
             {
              before(grammarAccess.getLayerAccess().getRightCurlyBracketKeyword_6()); 
             match(input,18,FOLLOW_2); 
@@ -4667,16 +5235,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group_5__0"
-    // InternalQuCircuit.g:1486:1: rule__Layer__Group_5__0 : rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1 ;
+    // InternalQuCircuit.g:1673:1: rule__Layer__Group_5__0 : rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1 ;
     public final void rule__Layer__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1490:1: ( rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1 )
-            // InternalQuCircuit.g:1491:2: rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1
+            // InternalQuCircuit.g:1677:1: ( rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1 )
+            // InternalQuCircuit.g:1678:2: rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_18);
             rule__Layer__Group_5__0__Impl();
 
             state._fsp--;
@@ -4705,20 +5273,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group_5__0__Impl"
-    // InternalQuCircuit.g:1498:1: rule__Layer__Group_5__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:1685:1: rule__Layer__Group_5__0__Impl : ( ',' ) ;
     public final void rule__Layer__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1502:1: ( ( ',' ) )
-            // InternalQuCircuit.g:1503:1: ( ',' )
+            // InternalQuCircuit.g:1689:1: ( ( ',' ) )
+            // InternalQuCircuit.g:1690:1: ( ',' )
             {
-            // InternalQuCircuit.g:1503:1: ( ',' )
-            // InternalQuCircuit.g:1504:2: ','
+            // InternalQuCircuit.g:1690:1: ( ',' )
+            // InternalQuCircuit.g:1691:2: ','
             {
              before(grammarAccess.getLayerAccess().getCommaKeyword_5_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLayerAccess().getCommaKeyword_5_0()); 
 
             }
@@ -4742,14 +5310,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group_5__1"
-    // InternalQuCircuit.g:1513:1: rule__Layer__Group_5__1 : rule__Layer__Group_5__1__Impl ;
+    // InternalQuCircuit.g:1700:1: rule__Layer__Group_5__1 : rule__Layer__Group_5__1__Impl ;
     public final void rule__Layer__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1517:1: ( rule__Layer__Group_5__1__Impl )
-            // InternalQuCircuit.g:1518:2: rule__Layer__Group_5__1__Impl
+            // InternalQuCircuit.g:1704:1: ( rule__Layer__Group_5__1__Impl )
+            // InternalQuCircuit.g:1705:2: rule__Layer__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Layer__Group_5__1__Impl();
@@ -4775,21 +5343,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group_5__1__Impl"
-    // InternalQuCircuit.g:1524:1: rule__Layer__Group_5__1__Impl : ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) ) ;
+    // InternalQuCircuit.g:1711:1: rule__Layer__Group_5__1__Impl : ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) ) ;
     public final void rule__Layer__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1528:1: ( ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) ) )
-            // InternalQuCircuit.g:1529:1: ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) )
+            // InternalQuCircuit.g:1715:1: ( ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) ) )
+            // InternalQuCircuit.g:1716:1: ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) )
             {
-            // InternalQuCircuit.g:1529:1: ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) )
-            // InternalQuCircuit.g:1530:2: ( rule__Layer__QuantumOperationsAssignment_5_1 )
+            // InternalQuCircuit.g:1716:1: ( ( rule__Layer__QuantumOperationsAssignment_5_1 ) )
+            // InternalQuCircuit.g:1717:2: ( rule__Layer__QuantumOperationsAssignment_5_1 )
             {
              before(grammarAccess.getLayerAccess().getQuantumOperationsAssignment_5_1()); 
-            // InternalQuCircuit.g:1531:2: ( rule__Layer__QuantumOperationsAssignment_5_1 )
-            // InternalQuCircuit.g:1531:3: rule__Layer__QuantumOperationsAssignment_5_1
+            // InternalQuCircuit.g:1718:2: ( rule__Layer__QuantumOperationsAssignment_5_1 )
+            // InternalQuCircuit.g:1718:3: rule__Layer__QuantumOperationsAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__Layer__QuantumOperationsAssignment_5_1();
@@ -4822,14 +5390,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__0"
-    // InternalQuCircuit.g:1540:1: rule__StatePreparation__Group__0 : rule__StatePreparation__Group__0__Impl rule__StatePreparation__Group__1 ;
+    // InternalQuCircuit.g:1727:1: rule__StatePreparation__Group__0 : rule__StatePreparation__Group__0__Impl rule__StatePreparation__Group__1 ;
     public final void rule__StatePreparation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1544:1: ( rule__StatePreparation__Group__0__Impl rule__StatePreparation__Group__1 )
-            // InternalQuCircuit.g:1545:2: rule__StatePreparation__Group__0__Impl rule__StatePreparation__Group__1
+            // InternalQuCircuit.g:1731:1: ( rule__StatePreparation__Group__0__Impl rule__StatePreparation__Group__1 )
+            // InternalQuCircuit.g:1732:2: rule__StatePreparation__Group__0__Impl rule__StatePreparation__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__StatePreparation__Group__0__Impl();
@@ -4860,20 +5428,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__0__Impl"
-    // InternalQuCircuit.g:1552:1: rule__StatePreparation__Group__0__Impl : ( 'StatePreparation' ) ;
+    // InternalQuCircuit.g:1739:1: rule__StatePreparation__Group__0__Impl : ( 'StatePreparation' ) ;
     public final void rule__StatePreparation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1556:1: ( ( 'StatePreparation' ) )
-            // InternalQuCircuit.g:1557:1: ( 'StatePreparation' )
+            // InternalQuCircuit.g:1743:1: ( ( 'StatePreparation' ) )
+            // InternalQuCircuit.g:1744:1: ( 'StatePreparation' )
             {
-            // InternalQuCircuit.g:1557:1: ( 'StatePreparation' )
-            // InternalQuCircuit.g:1558:2: 'StatePreparation'
+            // InternalQuCircuit.g:1744:1: ( 'StatePreparation' )
+            // InternalQuCircuit.g:1745:2: 'StatePreparation'
             {
              before(grammarAccess.getStatePreparationAccess().getStatePreparationKeyword_0()); 
-            match(input,25,FOLLOW_2); 
+            match(input,27,FOLLOW_2); 
              after(grammarAccess.getStatePreparationAccess().getStatePreparationKeyword_0()); 
 
             }
@@ -4897,16 +5465,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__1"
-    // InternalQuCircuit.g:1567:1: rule__StatePreparation__Group__1 : rule__StatePreparation__Group__1__Impl rule__StatePreparation__Group__2 ;
+    // InternalQuCircuit.g:1754:1: rule__StatePreparation__Group__1 : rule__StatePreparation__Group__1__Impl rule__StatePreparation__Group__2 ;
     public final void rule__StatePreparation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1571:1: ( rule__StatePreparation__Group__1__Impl rule__StatePreparation__Group__2 )
-            // InternalQuCircuit.g:1572:2: rule__StatePreparation__Group__1__Impl rule__StatePreparation__Group__2
+            // InternalQuCircuit.g:1758:1: ( rule__StatePreparation__Group__1__Impl rule__StatePreparation__Group__2 )
+            // InternalQuCircuit.g:1759:2: rule__StatePreparation__Group__1__Impl rule__StatePreparation__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__StatePreparation__Group__1__Impl();
 
             state._fsp--;
@@ -4935,21 +5503,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__1__Impl"
-    // InternalQuCircuit.g:1579:1: rule__StatePreparation__Group__1__Impl : ( ( rule__StatePreparation__NameAssignment_1 ) ) ;
+    // InternalQuCircuit.g:1766:1: rule__StatePreparation__Group__1__Impl : ( ( rule__StatePreparation__NameAssignment_1 ) ) ;
     public final void rule__StatePreparation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1583:1: ( ( ( rule__StatePreparation__NameAssignment_1 ) ) )
-            // InternalQuCircuit.g:1584:1: ( ( rule__StatePreparation__NameAssignment_1 ) )
+            // InternalQuCircuit.g:1770:1: ( ( ( rule__StatePreparation__NameAssignment_1 ) ) )
+            // InternalQuCircuit.g:1771:1: ( ( rule__StatePreparation__NameAssignment_1 ) )
             {
-            // InternalQuCircuit.g:1584:1: ( ( rule__StatePreparation__NameAssignment_1 ) )
-            // InternalQuCircuit.g:1585:2: ( rule__StatePreparation__NameAssignment_1 )
+            // InternalQuCircuit.g:1771:1: ( ( rule__StatePreparation__NameAssignment_1 ) )
+            // InternalQuCircuit.g:1772:2: ( rule__StatePreparation__NameAssignment_1 )
             {
              before(grammarAccess.getStatePreparationAccess().getNameAssignment_1()); 
-            // InternalQuCircuit.g:1586:2: ( rule__StatePreparation__NameAssignment_1 )
-            // InternalQuCircuit.g:1586:3: rule__StatePreparation__NameAssignment_1
+            // InternalQuCircuit.g:1773:2: ( rule__StatePreparation__NameAssignment_1 )
+            // InternalQuCircuit.g:1773:3: rule__StatePreparation__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__NameAssignment_1();
@@ -4982,16 +5550,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__2"
-    // InternalQuCircuit.g:1594:1: rule__StatePreparation__Group__2 : rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3 ;
+    // InternalQuCircuit.g:1781:1: rule__StatePreparation__Group__2 : rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3 ;
     public final void rule__StatePreparation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1598:1: ( rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3 )
-            // InternalQuCircuit.g:1599:2: rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3
+            // InternalQuCircuit.g:1785:1: ( rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3 )
+            // InternalQuCircuit.g:1786:2: rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_21);
             rule__StatePreparation__Group__2__Impl();
 
             state._fsp--;
@@ -5020,17 +5588,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__2__Impl"
-    // InternalQuCircuit.g:1606:1: rule__StatePreparation__Group__2__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:1793:1: rule__StatePreparation__Group__2__Impl : ( '{' ) ;
     public final void rule__StatePreparation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1610:1: ( ( '{' ) )
-            // InternalQuCircuit.g:1611:1: ( '{' )
+            // InternalQuCircuit.g:1797:1: ( ( '{' ) )
+            // InternalQuCircuit.g:1798:1: ( '{' )
             {
-            // InternalQuCircuit.g:1611:1: ( '{' )
-            // InternalQuCircuit.g:1612:2: '{'
+            // InternalQuCircuit.g:1798:1: ( '{' )
+            // InternalQuCircuit.g:1799:2: '{'
             {
              before(grammarAccess.getStatePreparationAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,17,FOLLOW_2); 
@@ -5057,14 +5625,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__3"
-    // InternalQuCircuit.g:1621:1: rule__StatePreparation__Group__3 : rule__StatePreparation__Group__3__Impl rule__StatePreparation__Group__4 ;
+    // InternalQuCircuit.g:1808:1: rule__StatePreparation__Group__3 : rule__StatePreparation__Group__3__Impl rule__StatePreparation__Group__4 ;
     public final void rule__StatePreparation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1625:1: ( rule__StatePreparation__Group__3__Impl rule__StatePreparation__Group__4 )
-            // InternalQuCircuit.g:1626:2: rule__StatePreparation__Group__3__Impl rule__StatePreparation__Group__4
+            // InternalQuCircuit.g:1812:1: ( rule__StatePreparation__Group__3__Impl rule__StatePreparation__Group__4 )
+            // InternalQuCircuit.g:1813:2: rule__StatePreparation__Group__3__Impl rule__StatePreparation__Group__4
             {
             pushFollow(FOLLOW_3);
             rule__StatePreparation__Group__3__Impl();
@@ -5095,20 +5663,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__3__Impl"
-    // InternalQuCircuit.g:1633:1: rule__StatePreparation__Group__3__Impl : ( 'operation' ) ;
+    // InternalQuCircuit.g:1820:1: rule__StatePreparation__Group__3__Impl : ( 'operation' ) ;
     public final void rule__StatePreparation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1637:1: ( ( 'operation' ) )
-            // InternalQuCircuit.g:1638:1: ( 'operation' )
+            // InternalQuCircuit.g:1824:1: ( ( 'operation' ) )
+            // InternalQuCircuit.g:1825:1: ( 'operation' )
             {
-            // InternalQuCircuit.g:1638:1: ( 'operation' )
-            // InternalQuCircuit.g:1639:2: 'operation'
+            // InternalQuCircuit.g:1825:1: ( 'operation' )
+            // InternalQuCircuit.g:1826:2: 'operation'
             {
              before(grammarAccess.getStatePreparationAccess().getOperationKeyword_3()); 
-            match(input,26,FOLLOW_2); 
+            match(input,28,FOLLOW_2); 
              after(grammarAccess.getStatePreparationAccess().getOperationKeyword_3()); 
 
             }
@@ -5132,16 +5700,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__4"
-    // InternalQuCircuit.g:1648:1: rule__StatePreparation__Group__4 : rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5 ;
+    // InternalQuCircuit.g:1835:1: rule__StatePreparation__Group__4 : rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5 ;
     public final void rule__StatePreparation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1652:1: ( rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5 )
-            // InternalQuCircuit.g:1653:2: rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5
+            // InternalQuCircuit.g:1839:1: ( rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5 )
+            // InternalQuCircuit.g:1840:2: rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_22);
             rule__StatePreparation__Group__4__Impl();
 
             state._fsp--;
@@ -5170,21 +5738,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__4__Impl"
-    // InternalQuCircuit.g:1660:1: rule__StatePreparation__Group__4__Impl : ( ( rule__StatePreparation__OperationsAssignment_4 ) ) ;
+    // InternalQuCircuit.g:1847:1: rule__StatePreparation__Group__4__Impl : ( ( rule__StatePreparation__OperationsAssignment_4 ) ) ;
     public final void rule__StatePreparation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1664:1: ( ( ( rule__StatePreparation__OperationsAssignment_4 ) ) )
-            // InternalQuCircuit.g:1665:1: ( ( rule__StatePreparation__OperationsAssignment_4 ) )
+            // InternalQuCircuit.g:1851:1: ( ( ( rule__StatePreparation__OperationsAssignment_4 ) ) )
+            // InternalQuCircuit.g:1852:1: ( ( rule__StatePreparation__OperationsAssignment_4 ) )
             {
-            // InternalQuCircuit.g:1665:1: ( ( rule__StatePreparation__OperationsAssignment_4 ) )
-            // InternalQuCircuit.g:1666:2: ( rule__StatePreparation__OperationsAssignment_4 )
+            // InternalQuCircuit.g:1852:1: ( ( rule__StatePreparation__OperationsAssignment_4 ) )
+            // InternalQuCircuit.g:1853:2: ( rule__StatePreparation__OperationsAssignment_4 )
             {
              before(grammarAccess.getStatePreparationAccess().getOperationsAssignment_4()); 
-            // InternalQuCircuit.g:1667:2: ( rule__StatePreparation__OperationsAssignment_4 )
-            // InternalQuCircuit.g:1667:3: rule__StatePreparation__OperationsAssignment_4
+            // InternalQuCircuit.g:1854:2: ( rule__StatePreparation__OperationsAssignment_4 )
+            // InternalQuCircuit.g:1854:3: rule__StatePreparation__OperationsAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__OperationsAssignment_4();
@@ -5217,16 +5785,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__5"
-    // InternalQuCircuit.g:1675:1: rule__StatePreparation__Group__5 : rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6 ;
+    // InternalQuCircuit.g:1862:1: rule__StatePreparation__Group__5 : rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6 ;
     public final void rule__StatePreparation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1679:1: ( rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6 )
-            // InternalQuCircuit.g:1680:2: rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6
+            // InternalQuCircuit.g:1866:1: ( rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6 )
+            // InternalQuCircuit.g:1867:2: rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_22);
             rule__StatePreparation__Group__5__Impl();
 
             state._fsp--;
@@ -5255,35 +5823,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__5__Impl"
-    // InternalQuCircuit.g:1687:1: rule__StatePreparation__Group__5__Impl : ( ( rule__StatePreparation__Group_5__0 )* ) ;
+    // InternalQuCircuit.g:1874:1: rule__StatePreparation__Group__5__Impl : ( ( rule__StatePreparation__Group_5__0 )* ) ;
     public final void rule__StatePreparation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1691:1: ( ( ( rule__StatePreparation__Group_5__0 )* ) )
-            // InternalQuCircuit.g:1692:1: ( ( rule__StatePreparation__Group_5__0 )* )
+            // InternalQuCircuit.g:1878:1: ( ( ( rule__StatePreparation__Group_5__0 )* ) )
+            // InternalQuCircuit.g:1879:1: ( ( rule__StatePreparation__Group_5__0 )* )
             {
-            // InternalQuCircuit.g:1692:1: ( ( rule__StatePreparation__Group_5__0 )* )
-            // InternalQuCircuit.g:1693:2: ( rule__StatePreparation__Group_5__0 )*
+            // InternalQuCircuit.g:1879:1: ( ( rule__StatePreparation__Group_5__0 )* )
+            // InternalQuCircuit.g:1880:2: ( rule__StatePreparation__Group_5__0 )*
             {
              before(grammarAccess.getStatePreparationAccess().getGroup_5()); 
-            // InternalQuCircuit.g:1694:2: ( rule__StatePreparation__Group_5__0 )*
-            loop12:
+            // InternalQuCircuit.g:1881:2: ( rule__StatePreparation__Group_5__0 )*
+            loop14:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA12_0==24) ) {
-                    alt12=1;
+                if ( (LA14_0==26) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt14) {
             	case 1 :
-            	    // InternalQuCircuit.g:1694:3: rule__StatePreparation__Group_5__0
+            	    // InternalQuCircuit.g:1881:3: rule__StatePreparation__Group_5__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__StatePreparation__Group_5__0();
 
             	    state._fsp--;
@@ -5293,7 +5861,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop14;
                 }
             } while (true);
 
@@ -5320,16 +5888,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__6"
-    // InternalQuCircuit.g:1702:1: rule__StatePreparation__Group__6 : rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7 ;
+    // InternalQuCircuit.g:1889:1: rule__StatePreparation__Group__6 : rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7 ;
     public final void rule__StatePreparation__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1706:1: ( rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7 )
-            // InternalQuCircuit.g:1707:2: rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7
+            // InternalQuCircuit.g:1893:1: ( rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7 )
+            // InternalQuCircuit.g:1894:2: rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__StatePreparation__Group__6__Impl();
 
             state._fsp--;
@@ -5358,20 +5926,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__6__Impl"
-    // InternalQuCircuit.g:1714:1: rule__StatePreparation__Group__6__Impl : ( 'targetQubits' ) ;
+    // InternalQuCircuit.g:1901:1: rule__StatePreparation__Group__6__Impl : ( 'targetQubits' ) ;
     public final void rule__StatePreparation__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1718:1: ( ( 'targetQubits' ) )
-            // InternalQuCircuit.g:1719:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:1905:1: ( ( 'targetQubits' ) )
+            // InternalQuCircuit.g:1906:1: ( 'targetQubits' )
             {
-            // InternalQuCircuit.g:1719:1: ( 'targetQubits' )
-            // InternalQuCircuit.g:1720:2: 'targetQubits'
+            // InternalQuCircuit.g:1906:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:1907:2: 'targetQubits'
             {
              before(grammarAccess.getStatePreparationAccess().getTargetQubitsKeyword_6()); 
-            match(input,27,FOLLOW_2); 
+            match(input,29,FOLLOW_2); 
              after(grammarAccess.getStatePreparationAccess().getTargetQubitsKeyword_6()); 
 
             }
@@ -5395,16 +5963,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__7"
-    // InternalQuCircuit.g:1729:1: rule__StatePreparation__Group__7 : rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8 ;
+    // InternalQuCircuit.g:1916:1: rule__StatePreparation__Group__7 : rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8 ;
     public final void rule__StatePreparation__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1733:1: ( rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8 )
-            // InternalQuCircuit.g:1734:2: rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8
+            // InternalQuCircuit.g:1920:1: ( rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8 )
+            // InternalQuCircuit.g:1921:2: rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__StatePreparation__Group__7__Impl();
 
             state._fsp--;
@@ -5433,20 +6001,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__7__Impl"
-    // InternalQuCircuit.g:1741:1: rule__StatePreparation__Group__7__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:1928:1: rule__StatePreparation__Group__7__Impl : ( '[' ) ;
     public final void rule__StatePreparation__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1745:1: ( ( '[' ) )
-            // InternalQuCircuit.g:1746:1: ( '[' )
+            // InternalQuCircuit.g:1932:1: ( ( '[' ) )
+            // InternalQuCircuit.g:1933:1: ( '[' )
             {
-            // InternalQuCircuit.g:1746:1: ( '[' )
-            // InternalQuCircuit.g:1747:2: '['
+            // InternalQuCircuit.g:1933:1: ( '[' )
+            // InternalQuCircuit.g:1934:2: '['
             {
              before(grammarAccess.getStatePreparationAccess().getLeftSquareBracketKeyword_7()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getStatePreparationAccess().getLeftSquareBracketKeyword_7()); 
 
             }
@@ -5470,16 +6038,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__8"
-    // InternalQuCircuit.g:1756:1: rule__StatePreparation__Group__8 : rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9 ;
+    // InternalQuCircuit.g:1943:1: rule__StatePreparation__Group__8 : rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9 ;
     public final void rule__StatePreparation__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1760:1: ( rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9 )
-            // InternalQuCircuit.g:1761:2: rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9
+            // InternalQuCircuit.g:1947:1: ( rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9 )
+            // InternalQuCircuit.g:1948:2: rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__StatePreparation__Group__8__Impl();
 
             state._fsp--;
@@ -5508,21 +6076,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__8__Impl"
-    // InternalQuCircuit.g:1768:1: rule__StatePreparation__Group__8__Impl : ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) ) ;
+    // InternalQuCircuit.g:1955:1: rule__StatePreparation__Group__8__Impl : ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) ) ;
     public final void rule__StatePreparation__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1772:1: ( ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) ) )
-            // InternalQuCircuit.g:1773:1: ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) )
+            // InternalQuCircuit.g:1959:1: ( ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) ) )
+            // InternalQuCircuit.g:1960:1: ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) )
             {
-            // InternalQuCircuit.g:1773:1: ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) )
-            // InternalQuCircuit.g:1774:2: ( rule__StatePreparation__TargetQubitsAssignment_8 )
+            // InternalQuCircuit.g:1960:1: ( ( rule__StatePreparation__TargetQubitsAssignment_8 ) )
+            // InternalQuCircuit.g:1961:2: ( rule__StatePreparation__TargetQubitsAssignment_8 )
             {
              before(grammarAccess.getStatePreparationAccess().getTargetQubitsAssignment_8()); 
-            // InternalQuCircuit.g:1775:2: ( rule__StatePreparation__TargetQubitsAssignment_8 )
-            // InternalQuCircuit.g:1775:3: rule__StatePreparation__TargetQubitsAssignment_8
+            // InternalQuCircuit.g:1962:2: ( rule__StatePreparation__TargetQubitsAssignment_8 )
+            // InternalQuCircuit.g:1962:3: rule__StatePreparation__TargetQubitsAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__TargetQubitsAssignment_8();
@@ -5555,16 +6123,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__9"
-    // InternalQuCircuit.g:1783:1: rule__StatePreparation__Group__9 : rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10 ;
+    // InternalQuCircuit.g:1970:1: rule__StatePreparation__Group__9 : rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10 ;
     public final void rule__StatePreparation__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1787:1: ( rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10 )
-            // InternalQuCircuit.g:1788:2: rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10
+            // InternalQuCircuit.g:1974:1: ( rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10 )
+            // InternalQuCircuit.g:1975:2: rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__StatePreparation__Group__9__Impl();
 
             state._fsp--;
@@ -5593,35 +6161,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__9__Impl"
-    // InternalQuCircuit.g:1795:1: rule__StatePreparation__Group__9__Impl : ( ( rule__StatePreparation__Group_9__0 )* ) ;
+    // InternalQuCircuit.g:1982:1: rule__StatePreparation__Group__9__Impl : ( ( rule__StatePreparation__Group_9__0 )* ) ;
     public final void rule__StatePreparation__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1799:1: ( ( ( rule__StatePreparation__Group_9__0 )* ) )
-            // InternalQuCircuit.g:1800:1: ( ( rule__StatePreparation__Group_9__0 )* )
+            // InternalQuCircuit.g:1986:1: ( ( ( rule__StatePreparation__Group_9__0 )* ) )
+            // InternalQuCircuit.g:1987:1: ( ( rule__StatePreparation__Group_9__0 )* )
             {
-            // InternalQuCircuit.g:1800:1: ( ( rule__StatePreparation__Group_9__0 )* )
-            // InternalQuCircuit.g:1801:2: ( rule__StatePreparation__Group_9__0 )*
+            // InternalQuCircuit.g:1987:1: ( ( rule__StatePreparation__Group_9__0 )* )
+            // InternalQuCircuit.g:1988:2: ( rule__StatePreparation__Group_9__0 )*
             {
              before(grammarAccess.getStatePreparationAccess().getGroup_9()); 
-            // InternalQuCircuit.g:1802:2: ( rule__StatePreparation__Group_9__0 )*
-            loop13:
+            // InternalQuCircuit.g:1989:2: ( rule__StatePreparation__Group_9__0 )*
+            loop15:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA13_0==24) ) {
-                    alt13=1;
+                if ( (LA15_0==26) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt15) {
             	case 1 :
-            	    // InternalQuCircuit.g:1802:3: rule__StatePreparation__Group_9__0
+            	    // InternalQuCircuit.g:1989:3: rule__StatePreparation__Group_9__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__StatePreparation__Group_9__0();
 
             	    state._fsp--;
@@ -5631,7 +6199,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop15;
                 }
             } while (true);
 
@@ -5658,16 +6226,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__10"
-    // InternalQuCircuit.g:1810:1: rule__StatePreparation__Group__10 : rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11 ;
+    // InternalQuCircuit.g:1997:1: rule__StatePreparation__Group__10 : rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11 ;
     public final void rule__StatePreparation__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1814:1: ( rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11 )
-            // InternalQuCircuit.g:1815:2: rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11
+            // InternalQuCircuit.g:2001:1: ( rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11 )
+            // InternalQuCircuit.g:2002:2: rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_26);
             rule__StatePreparation__Group__10__Impl();
 
             state._fsp--;
@@ -5696,20 +6264,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__10__Impl"
-    // InternalQuCircuit.g:1822:1: rule__StatePreparation__Group__10__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:2009:1: rule__StatePreparation__Group__10__Impl : ( ']' ) ;
     public final void rule__StatePreparation__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1826:1: ( ( ']' ) )
-            // InternalQuCircuit.g:1827:1: ( ']' )
+            // InternalQuCircuit.g:2013:1: ( ( ']' ) )
+            // InternalQuCircuit.g:2014:1: ( ']' )
             {
-            // InternalQuCircuit.g:1827:1: ( ']' )
-            // InternalQuCircuit.g:1828:2: ']'
+            // InternalQuCircuit.g:2014:1: ( ']' )
+            // InternalQuCircuit.g:2015:2: ']'
             {
              before(grammarAccess.getStatePreparationAccess().getRightSquareBracketKeyword_10()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getStatePreparationAccess().getRightSquareBracketKeyword_10()); 
 
             }
@@ -5733,14 +6301,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__11"
-    // InternalQuCircuit.g:1837:1: rule__StatePreparation__Group__11 : rule__StatePreparation__Group__11__Impl ;
+    // InternalQuCircuit.g:2024:1: rule__StatePreparation__Group__11 : rule__StatePreparation__Group__11__Impl ;
     public final void rule__StatePreparation__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1841:1: ( rule__StatePreparation__Group__11__Impl )
-            // InternalQuCircuit.g:1842:2: rule__StatePreparation__Group__11__Impl
+            // InternalQuCircuit.g:2028:1: ( rule__StatePreparation__Group__11__Impl )
+            // InternalQuCircuit.g:2029:2: rule__StatePreparation__Group__11__Impl
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__Group__11__Impl();
@@ -5766,17 +6334,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group__11__Impl"
-    // InternalQuCircuit.g:1848:1: rule__StatePreparation__Group__11__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:2035:1: rule__StatePreparation__Group__11__Impl : ( '}' ) ;
     public final void rule__StatePreparation__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1852:1: ( ( '}' ) )
-            // InternalQuCircuit.g:1853:1: ( '}' )
+            // InternalQuCircuit.g:2039:1: ( ( '}' ) )
+            // InternalQuCircuit.g:2040:1: ( '}' )
             {
-            // InternalQuCircuit.g:1853:1: ( '}' )
-            // InternalQuCircuit.g:1854:2: '}'
+            // InternalQuCircuit.g:2040:1: ( '}' )
+            // InternalQuCircuit.g:2041:2: '}'
             {
              before(grammarAccess.getStatePreparationAccess().getRightCurlyBracketKeyword_11()); 
             match(input,18,FOLLOW_2); 
@@ -5803,14 +6371,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_5__0"
-    // InternalQuCircuit.g:1864:1: rule__StatePreparation__Group_5__0 : rule__StatePreparation__Group_5__0__Impl rule__StatePreparation__Group_5__1 ;
+    // InternalQuCircuit.g:2051:1: rule__StatePreparation__Group_5__0 : rule__StatePreparation__Group_5__0__Impl rule__StatePreparation__Group_5__1 ;
     public final void rule__StatePreparation__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1868:1: ( rule__StatePreparation__Group_5__0__Impl rule__StatePreparation__Group_5__1 )
-            // InternalQuCircuit.g:1869:2: rule__StatePreparation__Group_5__0__Impl rule__StatePreparation__Group_5__1
+            // InternalQuCircuit.g:2055:1: ( rule__StatePreparation__Group_5__0__Impl rule__StatePreparation__Group_5__1 )
+            // InternalQuCircuit.g:2056:2: rule__StatePreparation__Group_5__0__Impl rule__StatePreparation__Group_5__1
             {
             pushFollow(FOLLOW_3);
             rule__StatePreparation__Group_5__0__Impl();
@@ -5841,20 +6409,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_5__0__Impl"
-    // InternalQuCircuit.g:1876:1: rule__StatePreparation__Group_5__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:2063:1: rule__StatePreparation__Group_5__0__Impl : ( ',' ) ;
     public final void rule__StatePreparation__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1880:1: ( ( ',' ) )
-            // InternalQuCircuit.g:1881:1: ( ',' )
+            // InternalQuCircuit.g:2067:1: ( ( ',' ) )
+            // InternalQuCircuit.g:2068:1: ( ',' )
             {
-            // InternalQuCircuit.g:1881:1: ( ',' )
-            // InternalQuCircuit.g:1882:2: ','
+            // InternalQuCircuit.g:2068:1: ( ',' )
+            // InternalQuCircuit.g:2069:2: ','
             {
              before(grammarAccess.getStatePreparationAccess().getCommaKeyword_5_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getStatePreparationAccess().getCommaKeyword_5_0()); 
 
             }
@@ -5878,14 +6446,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_5__1"
-    // InternalQuCircuit.g:1891:1: rule__StatePreparation__Group_5__1 : rule__StatePreparation__Group_5__1__Impl ;
+    // InternalQuCircuit.g:2078:1: rule__StatePreparation__Group_5__1 : rule__StatePreparation__Group_5__1__Impl ;
     public final void rule__StatePreparation__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1895:1: ( rule__StatePreparation__Group_5__1__Impl )
-            // InternalQuCircuit.g:1896:2: rule__StatePreparation__Group_5__1__Impl
+            // InternalQuCircuit.g:2082:1: ( rule__StatePreparation__Group_5__1__Impl )
+            // InternalQuCircuit.g:2083:2: rule__StatePreparation__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__Group_5__1__Impl();
@@ -5911,21 +6479,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_5__1__Impl"
-    // InternalQuCircuit.g:1902:1: rule__StatePreparation__Group_5__1__Impl : ( ( rule__StatePreparation__OperationsAssignment_5_1 ) ) ;
+    // InternalQuCircuit.g:2089:1: rule__StatePreparation__Group_5__1__Impl : ( ( rule__StatePreparation__OperationsAssignment_5_1 ) ) ;
     public final void rule__StatePreparation__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1906:1: ( ( ( rule__StatePreparation__OperationsAssignment_5_1 ) ) )
-            // InternalQuCircuit.g:1907:1: ( ( rule__StatePreparation__OperationsAssignment_5_1 ) )
+            // InternalQuCircuit.g:2093:1: ( ( ( rule__StatePreparation__OperationsAssignment_5_1 ) ) )
+            // InternalQuCircuit.g:2094:1: ( ( rule__StatePreparation__OperationsAssignment_5_1 ) )
             {
-            // InternalQuCircuit.g:1907:1: ( ( rule__StatePreparation__OperationsAssignment_5_1 ) )
-            // InternalQuCircuit.g:1908:2: ( rule__StatePreparation__OperationsAssignment_5_1 )
+            // InternalQuCircuit.g:2094:1: ( ( rule__StatePreparation__OperationsAssignment_5_1 ) )
+            // InternalQuCircuit.g:2095:2: ( rule__StatePreparation__OperationsAssignment_5_1 )
             {
              before(grammarAccess.getStatePreparationAccess().getOperationsAssignment_5_1()); 
-            // InternalQuCircuit.g:1909:2: ( rule__StatePreparation__OperationsAssignment_5_1 )
-            // InternalQuCircuit.g:1909:3: rule__StatePreparation__OperationsAssignment_5_1
+            // InternalQuCircuit.g:2096:2: ( rule__StatePreparation__OperationsAssignment_5_1 )
+            // InternalQuCircuit.g:2096:3: rule__StatePreparation__OperationsAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__OperationsAssignment_5_1();
@@ -5958,16 +6526,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_9__0"
-    // InternalQuCircuit.g:1918:1: rule__StatePreparation__Group_9__0 : rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1 ;
+    // InternalQuCircuit.g:2105:1: rule__StatePreparation__Group_9__0 : rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1 ;
     public final void rule__StatePreparation__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1922:1: ( rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1 )
-            // InternalQuCircuit.g:1923:2: rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1
+            // InternalQuCircuit.g:2109:1: ( rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1 )
+            // InternalQuCircuit.g:2110:2: rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__StatePreparation__Group_9__0__Impl();
 
             state._fsp--;
@@ -5996,20 +6564,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_9__0__Impl"
-    // InternalQuCircuit.g:1930:1: rule__StatePreparation__Group_9__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:2117:1: rule__StatePreparation__Group_9__0__Impl : ( ',' ) ;
     public final void rule__StatePreparation__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1934:1: ( ( ',' ) )
-            // InternalQuCircuit.g:1935:1: ( ',' )
+            // InternalQuCircuit.g:2121:1: ( ( ',' ) )
+            // InternalQuCircuit.g:2122:1: ( ',' )
             {
-            // InternalQuCircuit.g:1935:1: ( ',' )
-            // InternalQuCircuit.g:1936:2: ','
+            // InternalQuCircuit.g:2122:1: ( ',' )
+            // InternalQuCircuit.g:2123:2: ','
             {
              before(grammarAccess.getStatePreparationAccess().getCommaKeyword_9_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getStatePreparationAccess().getCommaKeyword_9_0()); 
 
             }
@@ -6033,14 +6601,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_9__1"
-    // InternalQuCircuit.g:1945:1: rule__StatePreparation__Group_9__1 : rule__StatePreparation__Group_9__1__Impl ;
+    // InternalQuCircuit.g:2132:1: rule__StatePreparation__Group_9__1 : rule__StatePreparation__Group_9__1__Impl ;
     public final void rule__StatePreparation__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1949:1: ( rule__StatePreparation__Group_9__1__Impl )
-            // InternalQuCircuit.g:1950:2: rule__StatePreparation__Group_9__1__Impl
+            // InternalQuCircuit.g:2136:1: ( rule__StatePreparation__Group_9__1__Impl )
+            // InternalQuCircuit.g:2137:2: rule__StatePreparation__Group_9__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__Group_9__1__Impl();
@@ -6066,21 +6634,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__Group_9__1__Impl"
-    // InternalQuCircuit.g:1956:1: rule__StatePreparation__Group_9__1__Impl : ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) ) ;
+    // InternalQuCircuit.g:2143:1: rule__StatePreparation__Group_9__1__Impl : ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) ) ;
     public final void rule__StatePreparation__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1960:1: ( ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) ) )
-            // InternalQuCircuit.g:1961:1: ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) )
+            // InternalQuCircuit.g:2147:1: ( ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) ) )
+            // InternalQuCircuit.g:2148:1: ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) )
             {
-            // InternalQuCircuit.g:1961:1: ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) )
-            // InternalQuCircuit.g:1962:2: ( rule__StatePreparation__TargetQubitsAssignment_9_1 )
+            // InternalQuCircuit.g:2148:1: ( ( rule__StatePreparation__TargetQubitsAssignment_9_1 ) )
+            // InternalQuCircuit.g:2149:2: ( rule__StatePreparation__TargetQubitsAssignment_9_1 )
             {
              before(grammarAccess.getStatePreparationAccess().getTargetQubitsAssignment_9_1()); 
-            // InternalQuCircuit.g:1963:2: ( rule__StatePreparation__TargetQubitsAssignment_9_1 )
-            // InternalQuCircuit.g:1963:3: rule__StatePreparation__TargetQubitsAssignment_9_1
+            // InternalQuCircuit.g:2150:2: ( rule__StatePreparation__TargetQubitsAssignment_9_1 )
+            // InternalQuCircuit.g:2150:3: rule__StatePreparation__TargetQubitsAssignment_9_1
             {
             pushFollow(FOLLOW_2);
             rule__StatePreparation__TargetQubitsAssignment_9_1();
@@ -6113,16 +6681,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__0"
-    // InternalQuCircuit.g:1972:1: rule__ElementaryQuantumGate__Group__0 : rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1 ;
+    // InternalQuCircuit.g:2159:1: rule__ElementaryQuantumGate__Group__0 : rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1 ;
     public final void rule__ElementaryQuantumGate__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1976:1: ( rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1 )
-            // InternalQuCircuit.g:1977:2: rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1
+            // InternalQuCircuit.g:2163:1: ( rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1 )
+            // InternalQuCircuit.g:2164:2: rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_27);
             rule__ElementaryQuantumGate__Group__0__Impl();
 
             state._fsp--;
@@ -6151,20 +6719,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__0__Impl"
-    // InternalQuCircuit.g:1984:1: rule__ElementaryQuantumGate__Group__0__Impl : ( 'ElementaryQuantumGate' ) ;
+    // InternalQuCircuit.g:2171:1: rule__ElementaryQuantumGate__Group__0__Impl : ( 'ElementaryQuantumGate' ) ;
     public final void rule__ElementaryQuantumGate__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1988:1: ( ( 'ElementaryQuantumGate' ) )
-            // InternalQuCircuit.g:1989:1: ( 'ElementaryQuantumGate' )
+            // InternalQuCircuit.g:2175:1: ( ( 'ElementaryQuantumGate' ) )
+            // InternalQuCircuit.g:2176:1: ( 'ElementaryQuantumGate' )
             {
-            // InternalQuCircuit.g:1989:1: ( 'ElementaryQuantumGate' )
-            // InternalQuCircuit.g:1990:2: 'ElementaryQuantumGate'
+            // InternalQuCircuit.g:2176:1: ( 'ElementaryQuantumGate' )
+            // InternalQuCircuit.g:2177:2: 'ElementaryQuantumGate'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getElementaryQuantumGateKeyword_0()); 
-            match(input,30,FOLLOW_2); 
+            match(input,32,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getElementaryQuantumGateKeyword_0()); 
 
             }
@@ -6188,16 +6756,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__1"
-    // InternalQuCircuit.g:1999:1: rule__ElementaryQuantumGate__Group__1 : rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2 ;
+    // InternalQuCircuit.g:2186:1: rule__ElementaryQuantumGate__Group__1 : rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2 ;
     public final void rule__ElementaryQuantumGate__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2003:1: ( rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2 )
-            // InternalQuCircuit.g:2004:2: rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2
+            // InternalQuCircuit.g:2190:1: ( rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2 )
+            // InternalQuCircuit.g:2191:2: rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_27);
             rule__ElementaryQuantumGate__Group__1__Impl();
 
             state._fsp--;
@@ -6226,29 +6794,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__1__Impl"
-    // InternalQuCircuit.g:2011:1: rule__ElementaryQuantumGate__Group__1__Impl : ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? ) ;
+    // InternalQuCircuit.g:2198:1: rule__ElementaryQuantumGate__Group__1__Impl : ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? ) ;
     public final void rule__ElementaryQuantumGate__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2015:1: ( ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? ) )
-            // InternalQuCircuit.g:2016:1: ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? )
+            // InternalQuCircuit.g:2202:1: ( ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? ) )
+            // InternalQuCircuit.g:2203:1: ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? )
             {
-            // InternalQuCircuit.g:2016:1: ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? )
-            // InternalQuCircuit.g:2017:2: ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )?
+            // InternalQuCircuit.g:2203:1: ( ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )? )
+            // InternalQuCircuit.g:2204:2: ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )?
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getInverseFormAssignment_1()); 
-            // InternalQuCircuit.g:2018:2: ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // InternalQuCircuit.g:2205:2: ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA14_0==57) ) {
-                alt14=1;
+            if ( (LA16_0==56) ) {
+                alt16=1;
             }
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
-                    // InternalQuCircuit.g:2018:3: rule__ElementaryQuantumGate__InverseFormAssignment_1
+                    // InternalQuCircuit.g:2205:3: rule__ElementaryQuantumGate__InverseFormAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__ElementaryQuantumGate__InverseFormAssignment_1();
@@ -6284,16 +6852,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__2"
-    // InternalQuCircuit.g:2026:1: rule__ElementaryQuantumGate__Group__2 : rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3 ;
+    // InternalQuCircuit.g:2213:1: rule__ElementaryQuantumGate__Group__2 : rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3 ;
     public final void rule__ElementaryQuantumGate__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2030:1: ( rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3 )
-            // InternalQuCircuit.g:2031:2: rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3
+            // InternalQuCircuit.g:2217:1: ( rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3 )
+            // InternalQuCircuit.g:2218:2: rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__ElementaryQuantumGate__Group__2__Impl();
 
             state._fsp--;
@@ -6322,21 +6890,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__2__Impl"
-    // InternalQuCircuit.g:2038:1: rule__ElementaryQuantumGate__Group__2__Impl : ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) ) ;
+    // InternalQuCircuit.g:2225:1: rule__ElementaryQuantumGate__Group__2__Impl : ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) ) ;
     public final void rule__ElementaryQuantumGate__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2042:1: ( ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) ) )
-            // InternalQuCircuit.g:2043:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) )
+            // InternalQuCircuit.g:2229:1: ( ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) ) )
+            // InternalQuCircuit.g:2230:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) )
             {
-            // InternalQuCircuit.g:2043:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) )
-            // InternalQuCircuit.g:2044:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )
+            // InternalQuCircuit.g:2230:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) )
+            // InternalQuCircuit.g:2231:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getNameAssignment_2()); 
-            // InternalQuCircuit.g:2045:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )
-            // InternalQuCircuit.g:2045:3: rule__ElementaryQuantumGate__NameAssignment_2
+            // InternalQuCircuit.g:2232:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )
+            // InternalQuCircuit.g:2232:3: rule__ElementaryQuantumGate__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__NameAssignment_2();
@@ -6369,16 +6937,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__3"
-    // InternalQuCircuit.g:2053:1: rule__ElementaryQuantumGate__Group__3 : rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4 ;
+    // InternalQuCircuit.g:2240:1: rule__ElementaryQuantumGate__Group__3 : rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4 ;
     public final void rule__ElementaryQuantumGate__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2057:1: ( rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4 )
-            // InternalQuCircuit.g:2058:2: rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4
+            // InternalQuCircuit.g:2244:1: ( rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4 )
+            // InternalQuCircuit.g:2245:2: rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_28);
             rule__ElementaryQuantumGate__Group__3__Impl();
 
             state._fsp--;
@@ -6407,17 +6975,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__3__Impl"
-    // InternalQuCircuit.g:2065:1: rule__ElementaryQuantumGate__Group__3__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:2252:1: rule__ElementaryQuantumGate__Group__3__Impl : ( '{' ) ;
     public final void rule__ElementaryQuantumGate__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2069:1: ( ( '{' ) )
-            // InternalQuCircuit.g:2070:1: ( '{' )
+            // InternalQuCircuit.g:2256:1: ( ( '{' ) )
+            // InternalQuCircuit.g:2257:1: ( '{' )
             {
-            // InternalQuCircuit.g:2070:1: ( '{' )
-            // InternalQuCircuit.g:2071:2: '{'
+            // InternalQuCircuit.g:2257:1: ( '{' )
+            // InternalQuCircuit.g:2258:2: '{'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,17,FOLLOW_2); 
@@ -6444,16 +7012,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__4"
-    // InternalQuCircuit.g:2080:1: rule__ElementaryQuantumGate__Group__4 : rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5 ;
+    // InternalQuCircuit.g:2267:1: rule__ElementaryQuantumGate__Group__4 : rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5 ;
     public final void rule__ElementaryQuantumGate__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2084:1: ( rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5 )
-            // InternalQuCircuit.g:2085:2: rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5
+            // InternalQuCircuit.g:2271:1: ( rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5 )
+            // InternalQuCircuit.g:2272:2: rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_28);
             rule__ElementaryQuantumGate__Group__4__Impl();
 
             state._fsp--;
@@ -6482,29 +7050,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__4__Impl"
-    // InternalQuCircuit.g:2092:1: rule__ElementaryQuantumGate__Group__4__Impl : ( ( rule__ElementaryQuantumGate__Group_4__0 )? ) ;
+    // InternalQuCircuit.g:2279:1: rule__ElementaryQuantumGate__Group__4__Impl : ( ( rule__ElementaryQuantumGate__Group_4__0 )? ) ;
     public final void rule__ElementaryQuantumGate__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2096:1: ( ( ( rule__ElementaryQuantumGate__Group_4__0 )? ) )
-            // InternalQuCircuit.g:2097:1: ( ( rule__ElementaryQuantumGate__Group_4__0 )? )
+            // InternalQuCircuit.g:2283:1: ( ( ( rule__ElementaryQuantumGate__Group_4__0 )? ) )
+            // InternalQuCircuit.g:2284:1: ( ( rule__ElementaryQuantumGate__Group_4__0 )? )
             {
-            // InternalQuCircuit.g:2097:1: ( ( rule__ElementaryQuantumGate__Group_4__0 )? )
-            // InternalQuCircuit.g:2098:2: ( rule__ElementaryQuantumGate__Group_4__0 )?
+            // InternalQuCircuit.g:2284:1: ( ( rule__ElementaryQuantumGate__Group_4__0 )? )
+            // InternalQuCircuit.g:2285:2: ( rule__ElementaryQuantumGate__Group_4__0 )?
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_4()); 
-            // InternalQuCircuit.g:2099:2: ( rule__ElementaryQuantumGate__Group_4__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // InternalQuCircuit.g:2286:2: ( rule__ElementaryQuantumGate__Group_4__0 )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA15_0==26) ) {
-                alt15=1;
+            if ( (LA17_0==28) ) {
+                alt17=1;
             }
-            switch (alt15) {
+            switch (alt17) {
                 case 1 :
-                    // InternalQuCircuit.g:2099:3: rule__ElementaryQuantumGate__Group_4__0
+                    // InternalQuCircuit.g:2286:3: rule__ElementaryQuantumGate__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ElementaryQuantumGate__Group_4__0();
@@ -6540,16 +7108,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__5"
-    // InternalQuCircuit.g:2107:1: rule__ElementaryQuantumGate__Group__5 : rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6 ;
+    // InternalQuCircuit.g:2294:1: rule__ElementaryQuantumGate__Group__5 : rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6 ;
     public final void rule__ElementaryQuantumGate__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2111:1: ( rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6 )
-            // InternalQuCircuit.g:2112:2: rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6
+            // InternalQuCircuit.g:2298:1: ( rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6 )
+            // InternalQuCircuit.g:2299:2: rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__ElementaryQuantumGate__Group__5__Impl();
 
             state._fsp--;
@@ -6578,20 +7146,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__5__Impl"
-    // InternalQuCircuit.g:2119:1: rule__ElementaryQuantumGate__Group__5__Impl : ( 'targetQubits' ) ;
+    // InternalQuCircuit.g:2306:1: rule__ElementaryQuantumGate__Group__5__Impl : ( 'targetQubits' ) ;
     public final void rule__ElementaryQuantumGate__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2123:1: ( ( 'targetQubits' ) )
-            // InternalQuCircuit.g:2124:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:2310:1: ( ( 'targetQubits' ) )
+            // InternalQuCircuit.g:2311:1: ( 'targetQubits' )
             {
-            // InternalQuCircuit.g:2124:1: ( 'targetQubits' )
-            // InternalQuCircuit.g:2125:2: 'targetQubits'
+            // InternalQuCircuit.g:2311:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:2312:2: 'targetQubits'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsKeyword_5()); 
-            match(input,27,FOLLOW_2); 
+            match(input,29,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsKeyword_5()); 
 
             }
@@ -6615,16 +7183,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__6"
-    // InternalQuCircuit.g:2134:1: rule__ElementaryQuantumGate__Group__6 : rule__ElementaryQuantumGate__Group__6__Impl rule__ElementaryQuantumGate__Group__7 ;
+    // InternalQuCircuit.g:2321:1: rule__ElementaryQuantumGate__Group__6 : rule__ElementaryQuantumGate__Group__6__Impl rule__ElementaryQuantumGate__Group__7 ;
     public final void rule__ElementaryQuantumGate__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2138:1: ( rule__ElementaryQuantumGate__Group__6__Impl rule__ElementaryQuantumGate__Group__7 )
-            // InternalQuCircuit.g:2139:2: rule__ElementaryQuantumGate__Group__6__Impl rule__ElementaryQuantumGate__Group__7
+            // InternalQuCircuit.g:2325:1: ( rule__ElementaryQuantumGate__Group__6__Impl rule__ElementaryQuantumGate__Group__7 )
+            // InternalQuCircuit.g:2326:2: rule__ElementaryQuantumGate__Group__6__Impl rule__ElementaryQuantumGate__Group__7
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__ElementaryQuantumGate__Group__6__Impl();
 
             state._fsp--;
@@ -6653,20 +7221,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__6__Impl"
-    // InternalQuCircuit.g:2146:1: rule__ElementaryQuantumGate__Group__6__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:2333:1: rule__ElementaryQuantumGate__Group__6__Impl : ( '[' ) ;
     public final void rule__ElementaryQuantumGate__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2150:1: ( ( '[' ) )
-            // InternalQuCircuit.g:2151:1: ( '[' )
+            // InternalQuCircuit.g:2337:1: ( ( '[' ) )
+            // InternalQuCircuit.g:2338:1: ( '[' )
             {
-            // InternalQuCircuit.g:2151:1: ( '[' )
-            // InternalQuCircuit.g:2152:2: '['
+            // InternalQuCircuit.g:2338:1: ( '[' )
+            // InternalQuCircuit.g:2339:2: '['
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getLeftSquareBracketKeyword_6()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getLeftSquareBracketKeyword_6()); 
 
             }
@@ -6690,16 +7258,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__7"
-    // InternalQuCircuit.g:2161:1: rule__ElementaryQuantumGate__Group__7 : rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8 ;
+    // InternalQuCircuit.g:2348:1: rule__ElementaryQuantumGate__Group__7 : rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8 ;
     public final void rule__ElementaryQuantumGate__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2165:1: ( rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8 )
-            // InternalQuCircuit.g:2166:2: rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8
+            // InternalQuCircuit.g:2352:1: ( rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8 )
+            // InternalQuCircuit.g:2353:2: rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__ElementaryQuantumGate__Group__7__Impl();
 
             state._fsp--;
@@ -6728,20 +7296,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__7__Impl"
-    // InternalQuCircuit.g:2173:1: rule__ElementaryQuantumGate__Group__7__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:2360:1: rule__ElementaryQuantumGate__Group__7__Impl : ( '(' ) ;
     public final void rule__ElementaryQuantumGate__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2177:1: ( ( '(' ) )
-            // InternalQuCircuit.g:2178:1: ( '(' )
+            // InternalQuCircuit.g:2364:1: ( ( '(' ) )
+            // InternalQuCircuit.g:2365:1: ( '(' )
             {
-            // InternalQuCircuit.g:2178:1: ( '(' )
-            // InternalQuCircuit.g:2179:2: '('
+            // InternalQuCircuit.g:2365:1: ( '(' )
+            // InternalQuCircuit.g:2366:2: '('
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getLeftParenthesisKeyword_7()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getLeftParenthesisKeyword_7()); 
 
             }
@@ -6765,16 +7333,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__8"
-    // InternalQuCircuit.g:2188:1: rule__ElementaryQuantumGate__Group__8 : rule__ElementaryQuantumGate__Group__8__Impl rule__ElementaryQuantumGate__Group__9 ;
+    // InternalQuCircuit.g:2375:1: rule__ElementaryQuantumGate__Group__8 : rule__ElementaryQuantumGate__Group__8__Impl rule__ElementaryQuantumGate__Group__9 ;
     public final void rule__ElementaryQuantumGate__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2192:1: ( rule__ElementaryQuantumGate__Group__8__Impl rule__ElementaryQuantumGate__Group__9 )
-            // InternalQuCircuit.g:2193:2: rule__ElementaryQuantumGate__Group__8__Impl rule__ElementaryQuantumGate__Group__9
+            // InternalQuCircuit.g:2379:1: ( rule__ElementaryQuantumGate__Group__8__Impl rule__ElementaryQuantumGate__Group__9 )
+            // InternalQuCircuit.g:2380:2: rule__ElementaryQuantumGate__Group__8__Impl rule__ElementaryQuantumGate__Group__9
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__ElementaryQuantumGate__Group__8__Impl();
 
             state._fsp--;
@@ -6803,21 +7371,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__8__Impl"
-    // InternalQuCircuit.g:2200:1: rule__ElementaryQuantumGate__Group__8__Impl : ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) ) ;
+    // InternalQuCircuit.g:2387:1: rule__ElementaryQuantumGate__Group__8__Impl : ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) ) ;
     public final void rule__ElementaryQuantumGate__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2204:1: ( ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) ) )
-            // InternalQuCircuit.g:2205:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) )
+            // InternalQuCircuit.g:2391:1: ( ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) ) )
+            // InternalQuCircuit.g:2392:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) )
             {
-            // InternalQuCircuit.g:2205:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) )
-            // InternalQuCircuit.g:2206:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 )
+            // InternalQuCircuit.g:2392:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 ) )
+            // InternalQuCircuit.g:2393:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsAssignment_8()); 
-            // InternalQuCircuit.g:2207:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 )
-            // InternalQuCircuit.g:2207:3: rule__ElementaryQuantumGate__TargetQubitsAssignment_8
+            // InternalQuCircuit.g:2394:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_8 )
+            // InternalQuCircuit.g:2394:3: rule__ElementaryQuantumGate__TargetQubitsAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__TargetQubitsAssignment_8();
@@ -6850,16 +7418,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__9"
-    // InternalQuCircuit.g:2215:1: rule__ElementaryQuantumGate__Group__9 : rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10 ;
+    // InternalQuCircuit.g:2402:1: rule__ElementaryQuantumGate__Group__9 : rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10 ;
     public final void rule__ElementaryQuantumGate__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2219:1: ( rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10 )
-            // InternalQuCircuit.g:2220:2: rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10
+            // InternalQuCircuit.g:2406:1: ( rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10 )
+            // InternalQuCircuit.g:2407:2: rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group__9__Impl();
 
             state._fsp--;
@@ -6888,20 +7456,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__9__Impl"
-    // InternalQuCircuit.g:2227:1: rule__ElementaryQuantumGate__Group__9__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:2414:1: rule__ElementaryQuantumGate__Group__9__Impl : ( ')' ) ;
     public final void rule__ElementaryQuantumGate__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2231:1: ( ( ')' ) )
-            // InternalQuCircuit.g:2232:1: ( ')' )
+            // InternalQuCircuit.g:2418:1: ( ( ')' ) )
+            // InternalQuCircuit.g:2419:1: ( ')' )
             {
-            // InternalQuCircuit.g:2232:1: ( ')' )
-            // InternalQuCircuit.g:2233:2: ')'
+            // InternalQuCircuit.g:2419:1: ( ')' )
+            // InternalQuCircuit.g:2420:2: ')'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getRightParenthesisKeyword_9()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getRightParenthesisKeyword_9()); 
 
             }
@@ -6925,16 +7493,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__10"
-    // InternalQuCircuit.g:2242:1: rule__ElementaryQuantumGate__Group__10 : rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11 ;
+    // InternalQuCircuit.g:2429:1: rule__ElementaryQuantumGate__Group__10 : rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11 ;
     public final void rule__ElementaryQuantumGate__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2246:1: ( rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11 )
-            // InternalQuCircuit.g:2247:2: rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11
+            // InternalQuCircuit.g:2433:1: ( rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11 )
+            // InternalQuCircuit.g:2434:2: rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group__10__Impl();
 
             state._fsp--;
@@ -6963,35 +7531,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__10__Impl"
-    // InternalQuCircuit.g:2254:1: rule__ElementaryQuantumGate__Group__10__Impl : ( ( rule__ElementaryQuantumGate__Group_10__0 )* ) ;
+    // InternalQuCircuit.g:2441:1: rule__ElementaryQuantumGate__Group__10__Impl : ( ( rule__ElementaryQuantumGate__Group_10__0 )* ) ;
     public final void rule__ElementaryQuantumGate__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2258:1: ( ( ( rule__ElementaryQuantumGate__Group_10__0 )* ) )
-            // InternalQuCircuit.g:2259:1: ( ( rule__ElementaryQuantumGate__Group_10__0 )* )
+            // InternalQuCircuit.g:2445:1: ( ( ( rule__ElementaryQuantumGate__Group_10__0 )* ) )
+            // InternalQuCircuit.g:2446:1: ( ( rule__ElementaryQuantumGate__Group_10__0 )* )
             {
-            // InternalQuCircuit.g:2259:1: ( ( rule__ElementaryQuantumGate__Group_10__0 )* )
-            // InternalQuCircuit.g:2260:2: ( rule__ElementaryQuantumGate__Group_10__0 )*
+            // InternalQuCircuit.g:2446:1: ( ( rule__ElementaryQuantumGate__Group_10__0 )* )
+            // InternalQuCircuit.g:2447:2: ( rule__ElementaryQuantumGate__Group_10__0 )*
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_10()); 
-            // InternalQuCircuit.g:2261:2: ( rule__ElementaryQuantumGate__Group_10__0 )*
-            loop16:
+            // InternalQuCircuit.g:2448:2: ( rule__ElementaryQuantumGate__Group_10__0 )*
+            loop18:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA16_0==24) ) {
-                    alt16=1;
+                if ( (LA18_0==26) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt18) {
             	case 1 :
-            	    // InternalQuCircuit.g:2261:3: rule__ElementaryQuantumGate__Group_10__0
+            	    // InternalQuCircuit.g:2448:3: rule__ElementaryQuantumGate__Group_10__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__ElementaryQuantumGate__Group_10__0();
 
             	    state._fsp--;
@@ -7001,7 +7569,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop18;
                 }
             } while (true);
 
@@ -7028,16 +7596,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__11"
-    // InternalQuCircuit.g:2269:1: rule__ElementaryQuantumGate__Group__11 : rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12 ;
+    // InternalQuCircuit.g:2456:1: rule__ElementaryQuantumGate__Group__11 : rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12 ;
     public final void rule__ElementaryQuantumGate__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2273:1: ( rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12 )
-            // InternalQuCircuit.g:2274:2: rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12
+            // InternalQuCircuit.g:2460:1: ( rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12 )
+            // InternalQuCircuit.g:2461:2: rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__ElementaryQuantumGate__Group__11__Impl();
 
             state._fsp--;
@@ -7066,20 +7634,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__11__Impl"
-    // InternalQuCircuit.g:2281:1: rule__ElementaryQuantumGate__Group__11__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:2468:1: rule__ElementaryQuantumGate__Group__11__Impl : ( ']' ) ;
     public final void rule__ElementaryQuantumGate__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2285:1: ( ( ']' ) )
-            // InternalQuCircuit.g:2286:1: ( ']' )
+            // InternalQuCircuit.g:2472:1: ( ( ']' ) )
+            // InternalQuCircuit.g:2473:1: ( ']' )
             {
-            // InternalQuCircuit.g:2286:1: ( ']' )
-            // InternalQuCircuit.g:2287:2: ']'
+            // InternalQuCircuit.g:2473:1: ( ']' )
+            // InternalQuCircuit.g:2474:2: ']'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getRightSquareBracketKeyword_11()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getRightSquareBracketKeyword_11()); 
 
             }
@@ -7103,16 +7671,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__12"
-    // InternalQuCircuit.g:2296:1: rule__ElementaryQuantumGate__Group__12 : rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13 ;
+    // InternalQuCircuit.g:2483:1: rule__ElementaryQuantumGate__Group__12 : rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13 ;
     public final void rule__ElementaryQuantumGate__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2300:1: ( rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13 )
-            // InternalQuCircuit.g:2301:2: rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13
+            // InternalQuCircuit.g:2487:1: ( rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13 )
+            // InternalQuCircuit.g:2488:2: rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__ElementaryQuantumGate__Group__12__Impl();
 
             state._fsp--;
@@ -7141,35 +7709,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__12__Impl"
-    // InternalQuCircuit.g:2308:1: rule__ElementaryQuantumGate__Group__12__Impl : ( ( rule__ElementaryQuantumGate__Group_12__0 )* ) ;
+    // InternalQuCircuit.g:2495:1: rule__ElementaryQuantumGate__Group__12__Impl : ( ( rule__ElementaryQuantumGate__Group_12__0 )* ) ;
     public final void rule__ElementaryQuantumGate__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2312:1: ( ( ( rule__ElementaryQuantumGate__Group_12__0 )* ) )
-            // InternalQuCircuit.g:2313:1: ( ( rule__ElementaryQuantumGate__Group_12__0 )* )
+            // InternalQuCircuit.g:2499:1: ( ( ( rule__ElementaryQuantumGate__Group_12__0 )* ) )
+            // InternalQuCircuit.g:2500:1: ( ( rule__ElementaryQuantumGate__Group_12__0 )* )
             {
-            // InternalQuCircuit.g:2313:1: ( ( rule__ElementaryQuantumGate__Group_12__0 )* )
-            // InternalQuCircuit.g:2314:2: ( rule__ElementaryQuantumGate__Group_12__0 )*
+            // InternalQuCircuit.g:2500:1: ( ( rule__ElementaryQuantumGate__Group_12__0 )* )
+            // InternalQuCircuit.g:2501:2: ( rule__ElementaryQuantumGate__Group_12__0 )*
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_12()); 
-            // InternalQuCircuit.g:2315:2: ( rule__ElementaryQuantumGate__Group_12__0 )*
-            loop17:
+            // InternalQuCircuit.g:2502:2: ( rule__ElementaryQuantumGate__Group_12__0 )*
+            loop19:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA17_0==33) ) {
-                    alt17=1;
+                if ( (LA19_0==33) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt19) {
             	case 1 :
-            	    // InternalQuCircuit.g:2315:3: rule__ElementaryQuantumGate__Group_12__0
+            	    // InternalQuCircuit.g:2502:3: rule__ElementaryQuantumGate__Group_12__0
             	    {
-            	    pushFollow(FOLLOW_29);
+            	    pushFollow(FOLLOW_30);
             	    rule__ElementaryQuantumGate__Group_12__0();
 
             	    state._fsp--;
@@ -7179,7 +7747,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop19;
                 }
             } while (true);
 
@@ -7206,16 +7774,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__13"
-    // InternalQuCircuit.g:2323:1: rule__ElementaryQuantumGate__Group__13 : rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14 ;
+    // InternalQuCircuit.g:2510:1: rule__ElementaryQuantumGate__Group__13 : rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14 ;
     public final void rule__ElementaryQuantumGate__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2327:1: ( rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14 )
-            // InternalQuCircuit.g:2328:2: rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14
+            // InternalQuCircuit.g:2514:1: ( rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14 )
+            // InternalQuCircuit.g:2515:2: rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__ElementaryQuantumGate__Group__13__Impl();
 
             state._fsp--;
@@ -7244,29 +7812,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__13__Impl"
-    // InternalQuCircuit.g:2335:1: rule__ElementaryQuantumGate__Group__13__Impl : ( ( rule__ElementaryQuantumGate__Group_13__0 )? ) ;
+    // InternalQuCircuit.g:2522:1: rule__ElementaryQuantumGate__Group__13__Impl : ( ( rule__ElementaryQuantumGate__Group_13__0 )? ) ;
     public final void rule__ElementaryQuantumGate__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2339:1: ( ( ( rule__ElementaryQuantumGate__Group_13__0 )? ) )
-            // InternalQuCircuit.g:2340:1: ( ( rule__ElementaryQuantumGate__Group_13__0 )? )
+            // InternalQuCircuit.g:2526:1: ( ( ( rule__ElementaryQuantumGate__Group_13__0 )? ) )
+            // InternalQuCircuit.g:2527:1: ( ( rule__ElementaryQuantumGate__Group_13__0 )? )
             {
-            // InternalQuCircuit.g:2340:1: ( ( rule__ElementaryQuantumGate__Group_13__0 )? )
-            // InternalQuCircuit.g:2341:2: ( rule__ElementaryQuantumGate__Group_13__0 )?
+            // InternalQuCircuit.g:2527:1: ( ( rule__ElementaryQuantumGate__Group_13__0 )? )
+            // InternalQuCircuit.g:2528:2: ( rule__ElementaryQuantumGate__Group_13__0 )?
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_13()); 
-            // InternalQuCircuit.g:2342:2: ( rule__ElementaryQuantumGate__Group_13__0 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalQuCircuit.g:2529:2: ( rule__ElementaryQuantumGate__Group_13__0 )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA18_0==34) ) {
-                alt18=1;
+            if ( (LA20_0==34) ) {
+                alt20=1;
             }
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
-                    // InternalQuCircuit.g:2342:3: rule__ElementaryQuantumGate__Group_13__0
+                    // InternalQuCircuit.g:2529:3: rule__ElementaryQuantumGate__Group_13__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ElementaryQuantumGate__Group_13__0();
@@ -7302,14 +7870,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__14"
-    // InternalQuCircuit.g:2350:1: rule__ElementaryQuantumGate__Group__14 : rule__ElementaryQuantumGate__Group__14__Impl ;
+    // InternalQuCircuit.g:2537:1: rule__ElementaryQuantumGate__Group__14 : rule__ElementaryQuantumGate__Group__14__Impl ;
     public final void rule__ElementaryQuantumGate__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2354:1: ( rule__ElementaryQuantumGate__Group__14__Impl )
-            // InternalQuCircuit.g:2355:2: rule__ElementaryQuantumGate__Group__14__Impl
+            // InternalQuCircuit.g:2541:1: ( rule__ElementaryQuantumGate__Group__14__Impl )
+            // InternalQuCircuit.g:2542:2: rule__ElementaryQuantumGate__Group__14__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__Group__14__Impl();
@@ -7335,17 +7903,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__14__Impl"
-    // InternalQuCircuit.g:2361:1: rule__ElementaryQuantumGate__Group__14__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:2548:1: rule__ElementaryQuantumGate__Group__14__Impl : ( '}' ) ;
     public final void rule__ElementaryQuantumGate__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2365:1: ( ( '}' ) )
-            // InternalQuCircuit.g:2366:1: ( '}' )
+            // InternalQuCircuit.g:2552:1: ( ( '}' ) )
+            // InternalQuCircuit.g:2553:1: ( '}' )
             {
-            // InternalQuCircuit.g:2366:1: ( '}' )
-            // InternalQuCircuit.g:2367:2: '}'
+            // InternalQuCircuit.g:2553:1: ( '}' )
+            // InternalQuCircuit.g:2554:2: '}'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getRightCurlyBracketKeyword_14()); 
             match(input,18,FOLLOW_2); 
@@ -7372,14 +7940,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_4__0"
-    // InternalQuCircuit.g:2377:1: rule__ElementaryQuantumGate__Group_4__0 : rule__ElementaryQuantumGate__Group_4__0__Impl rule__ElementaryQuantumGate__Group_4__1 ;
+    // InternalQuCircuit.g:2564:1: rule__ElementaryQuantumGate__Group_4__0 : rule__ElementaryQuantumGate__Group_4__0__Impl rule__ElementaryQuantumGate__Group_4__1 ;
     public final void rule__ElementaryQuantumGate__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2381:1: ( rule__ElementaryQuantumGate__Group_4__0__Impl rule__ElementaryQuantumGate__Group_4__1 )
-            // InternalQuCircuit.g:2382:2: rule__ElementaryQuantumGate__Group_4__0__Impl rule__ElementaryQuantumGate__Group_4__1
+            // InternalQuCircuit.g:2568:1: ( rule__ElementaryQuantumGate__Group_4__0__Impl rule__ElementaryQuantumGate__Group_4__1 )
+            // InternalQuCircuit.g:2569:2: rule__ElementaryQuantumGate__Group_4__0__Impl rule__ElementaryQuantumGate__Group_4__1
             {
             pushFollow(FOLLOW_3);
             rule__ElementaryQuantumGate__Group_4__0__Impl();
@@ -7410,20 +7978,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_4__0__Impl"
-    // InternalQuCircuit.g:2389:1: rule__ElementaryQuantumGate__Group_4__0__Impl : ( 'operation' ) ;
+    // InternalQuCircuit.g:2576:1: rule__ElementaryQuantumGate__Group_4__0__Impl : ( 'operation' ) ;
     public final void rule__ElementaryQuantumGate__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2393:1: ( ( 'operation' ) )
-            // InternalQuCircuit.g:2394:1: ( 'operation' )
+            // InternalQuCircuit.g:2580:1: ( ( 'operation' ) )
+            // InternalQuCircuit.g:2581:1: ( 'operation' )
             {
-            // InternalQuCircuit.g:2394:1: ( 'operation' )
-            // InternalQuCircuit.g:2395:2: 'operation'
+            // InternalQuCircuit.g:2581:1: ( 'operation' )
+            // InternalQuCircuit.g:2582:2: 'operation'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getOperationKeyword_4_0()); 
-            match(input,26,FOLLOW_2); 
+            match(input,28,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getOperationKeyword_4_0()); 
 
             }
@@ -7447,14 +8015,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_4__1"
-    // InternalQuCircuit.g:2404:1: rule__ElementaryQuantumGate__Group_4__1 : rule__ElementaryQuantumGate__Group_4__1__Impl ;
+    // InternalQuCircuit.g:2591:1: rule__ElementaryQuantumGate__Group_4__1 : rule__ElementaryQuantumGate__Group_4__1__Impl ;
     public final void rule__ElementaryQuantumGate__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2408:1: ( rule__ElementaryQuantumGate__Group_4__1__Impl )
-            // InternalQuCircuit.g:2409:2: rule__ElementaryQuantumGate__Group_4__1__Impl
+            // InternalQuCircuit.g:2595:1: ( rule__ElementaryQuantumGate__Group_4__1__Impl )
+            // InternalQuCircuit.g:2596:2: rule__ElementaryQuantumGate__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__Group_4__1__Impl();
@@ -7480,21 +8048,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_4__1__Impl"
-    // InternalQuCircuit.g:2415:1: rule__ElementaryQuantumGate__Group_4__1__Impl : ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) ) ;
+    // InternalQuCircuit.g:2602:1: rule__ElementaryQuantumGate__Group_4__1__Impl : ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) ) ;
     public final void rule__ElementaryQuantumGate__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2419:1: ( ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) ) )
-            // InternalQuCircuit.g:2420:1: ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) )
+            // InternalQuCircuit.g:2606:1: ( ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) ) )
+            // InternalQuCircuit.g:2607:1: ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) )
             {
-            // InternalQuCircuit.g:2420:1: ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) )
-            // InternalQuCircuit.g:2421:2: ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 )
+            // InternalQuCircuit.g:2607:1: ( ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 ) )
+            // InternalQuCircuit.g:2608:2: ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getOperationsAssignment_4_1()); 
-            // InternalQuCircuit.g:2422:2: ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 )
-            // InternalQuCircuit.g:2422:3: rule__ElementaryQuantumGate__OperationsAssignment_4_1
+            // InternalQuCircuit.g:2609:2: ( rule__ElementaryQuantumGate__OperationsAssignment_4_1 )
+            // InternalQuCircuit.g:2609:3: rule__ElementaryQuantumGate__OperationsAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__OperationsAssignment_4_1();
@@ -7527,16 +8095,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__0"
-    // InternalQuCircuit.g:2431:1: rule__ElementaryQuantumGate__Group_10__0 : rule__ElementaryQuantumGate__Group_10__0__Impl rule__ElementaryQuantumGate__Group_10__1 ;
+    // InternalQuCircuit.g:2618:1: rule__ElementaryQuantumGate__Group_10__0 : rule__ElementaryQuantumGate__Group_10__0__Impl rule__ElementaryQuantumGate__Group_10__1 ;
     public final void rule__ElementaryQuantumGate__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2435:1: ( rule__ElementaryQuantumGate__Group_10__0__Impl rule__ElementaryQuantumGate__Group_10__1 )
-            // InternalQuCircuit.g:2436:2: rule__ElementaryQuantumGate__Group_10__0__Impl rule__ElementaryQuantumGate__Group_10__1
+            // InternalQuCircuit.g:2622:1: ( rule__ElementaryQuantumGate__Group_10__0__Impl rule__ElementaryQuantumGate__Group_10__1 )
+            // InternalQuCircuit.g:2623:2: rule__ElementaryQuantumGate__Group_10__0__Impl rule__ElementaryQuantumGate__Group_10__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__ElementaryQuantumGate__Group_10__0__Impl();
 
             state._fsp--;
@@ -7565,20 +8133,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__0__Impl"
-    // InternalQuCircuit.g:2443:1: rule__ElementaryQuantumGate__Group_10__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:2630:1: rule__ElementaryQuantumGate__Group_10__0__Impl : ( ',' ) ;
     public final void rule__ElementaryQuantumGate__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2447:1: ( ( ',' ) )
-            // InternalQuCircuit.g:2448:1: ( ',' )
+            // InternalQuCircuit.g:2634:1: ( ( ',' ) )
+            // InternalQuCircuit.g:2635:1: ( ',' )
             {
-            // InternalQuCircuit.g:2448:1: ( ',' )
-            // InternalQuCircuit.g:2449:2: ','
+            // InternalQuCircuit.g:2635:1: ( ',' )
+            // InternalQuCircuit.g:2636:2: ','
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getCommaKeyword_10_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getCommaKeyword_10_0()); 
 
             }
@@ -7602,16 +8170,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__1"
-    // InternalQuCircuit.g:2458:1: rule__ElementaryQuantumGate__Group_10__1 : rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2 ;
+    // InternalQuCircuit.g:2645:1: rule__ElementaryQuantumGate__Group_10__1 : rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2 ;
     public final void rule__ElementaryQuantumGate__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2462:1: ( rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2 )
-            // InternalQuCircuit.g:2463:2: rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2
+            // InternalQuCircuit.g:2649:1: ( rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2 )
+            // InternalQuCircuit.g:2650:2: rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__ElementaryQuantumGate__Group_10__1__Impl();
 
             state._fsp--;
@@ -7640,20 +8208,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__1__Impl"
-    // InternalQuCircuit.g:2470:1: rule__ElementaryQuantumGate__Group_10__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:2657:1: rule__ElementaryQuantumGate__Group_10__1__Impl : ( '(' ) ;
     public final void rule__ElementaryQuantumGate__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2474:1: ( ( '(' ) )
-            // InternalQuCircuit.g:2475:1: ( '(' )
+            // InternalQuCircuit.g:2661:1: ( ( '(' ) )
+            // InternalQuCircuit.g:2662:1: ( '(' )
             {
-            // InternalQuCircuit.g:2475:1: ( '(' )
-            // InternalQuCircuit.g:2476:2: '('
+            // InternalQuCircuit.g:2662:1: ( '(' )
+            // InternalQuCircuit.g:2663:2: '('
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getLeftParenthesisKeyword_10_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getLeftParenthesisKeyword_10_1()); 
 
             }
@@ -7677,16 +8245,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__2"
-    // InternalQuCircuit.g:2485:1: rule__ElementaryQuantumGate__Group_10__2 : rule__ElementaryQuantumGate__Group_10__2__Impl rule__ElementaryQuantumGate__Group_10__3 ;
+    // InternalQuCircuit.g:2672:1: rule__ElementaryQuantumGate__Group_10__2 : rule__ElementaryQuantumGate__Group_10__2__Impl rule__ElementaryQuantumGate__Group_10__3 ;
     public final void rule__ElementaryQuantumGate__Group_10__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2489:1: ( rule__ElementaryQuantumGate__Group_10__2__Impl rule__ElementaryQuantumGate__Group_10__3 )
-            // InternalQuCircuit.g:2490:2: rule__ElementaryQuantumGate__Group_10__2__Impl rule__ElementaryQuantumGate__Group_10__3
+            // InternalQuCircuit.g:2676:1: ( rule__ElementaryQuantumGate__Group_10__2__Impl rule__ElementaryQuantumGate__Group_10__3 )
+            // InternalQuCircuit.g:2677:2: rule__ElementaryQuantumGate__Group_10__2__Impl rule__ElementaryQuantumGate__Group_10__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__ElementaryQuantumGate__Group_10__2__Impl();
 
             state._fsp--;
@@ -7715,21 +8283,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__2__Impl"
-    // InternalQuCircuit.g:2497:1: rule__ElementaryQuantumGate__Group_10__2__Impl : ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) ) ;
+    // InternalQuCircuit.g:2684:1: rule__ElementaryQuantumGate__Group_10__2__Impl : ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) ) ;
     public final void rule__ElementaryQuantumGate__Group_10__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2501:1: ( ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) ) )
-            // InternalQuCircuit.g:2502:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) )
+            // InternalQuCircuit.g:2688:1: ( ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) ) )
+            // InternalQuCircuit.g:2689:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) )
             {
-            // InternalQuCircuit.g:2502:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) )
-            // InternalQuCircuit.g:2503:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 )
+            // InternalQuCircuit.g:2689:1: ( ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 ) )
+            // InternalQuCircuit.g:2690:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsAssignment_10_2()); 
-            // InternalQuCircuit.g:2504:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 )
-            // InternalQuCircuit.g:2504:3: rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2
+            // InternalQuCircuit.g:2691:2: ( rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 )
+            // InternalQuCircuit.g:2691:3: rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2();
@@ -7762,14 +8330,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__3"
-    // InternalQuCircuit.g:2512:1: rule__ElementaryQuantumGate__Group_10__3 : rule__ElementaryQuantumGate__Group_10__3__Impl ;
+    // InternalQuCircuit.g:2699:1: rule__ElementaryQuantumGate__Group_10__3 : rule__ElementaryQuantumGate__Group_10__3__Impl ;
     public final void rule__ElementaryQuantumGate__Group_10__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2516:1: ( rule__ElementaryQuantumGate__Group_10__3__Impl )
-            // InternalQuCircuit.g:2517:2: rule__ElementaryQuantumGate__Group_10__3__Impl
+            // InternalQuCircuit.g:2703:1: ( rule__ElementaryQuantumGate__Group_10__3__Impl )
+            // InternalQuCircuit.g:2704:2: rule__ElementaryQuantumGate__Group_10__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__Group_10__3__Impl();
@@ -7795,20 +8363,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_10__3__Impl"
-    // InternalQuCircuit.g:2523:1: rule__ElementaryQuantumGate__Group_10__3__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:2710:1: rule__ElementaryQuantumGate__Group_10__3__Impl : ( ')' ) ;
     public final void rule__ElementaryQuantumGate__Group_10__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2527:1: ( ( ')' ) )
-            // InternalQuCircuit.g:2528:1: ( ')' )
+            // InternalQuCircuit.g:2714:1: ( ( ')' ) )
+            // InternalQuCircuit.g:2715:1: ( ')' )
             {
-            // InternalQuCircuit.g:2528:1: ( ')' )
-            // InternalQuCircuit.g:2529:2: ')'
+            // InternalQuCircuit.g:2715:1: ( ')' )
+            // InternalQuCircuit.g:2716:2: ')'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getRightParenthesisKeyword_10_3()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getRightParenthesisKeyword_10_3()); 
 
             }
@@ -7832,16 +8400,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__0"
-    // InternalQuCircuit.g:2539:1: rule__ElementaryQuantumGate__Group_12__0 : rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1 ;
+    // InternalQuCircuit.g:2726:1: rule__ElementaryQuantumGate__Group_12__0 : rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1 ;
     public final void rule__ElementaryQuantumGate__Group_12__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2543:1: ( rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1 )
-            // InternalQuCircuit.g:2544:2: rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1
+            // InternalQuCircuit.g:2730:1: ( rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1 )
+            // InternalQuCircuit.g:2731:2: rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__ElementaryQuantumGate__Group_12__0__Impl();
 
             state._fsp--;
@@ -7870,17 +8438,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__0__Impl"
-    // InternalQuCircuit.g:2551:1: rule__ElementaryQuantumGate__Group_12__0__Impl : ( 'controlQubits' ) ;
+    // InternalQuCircuit.g:2738:1: rule__ElementaryQuantumGate__Group_12__0__Impl : ( 'controlQubits' ) ;
     public final void rule__ElementaryQuantumGate__Group_12__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2555:1: ( ( 'controlQubits' ) )
-            // InternalQuCircuit.g:2556:1: ( 'controlQubits' )
+            // InternalQuCircuit.g:2742:1: ( ( 'controlQubits' ) )
+            // InternalQuCircuit.g:2743:1: ( 'controlQubits' )
             {
-            // InternalQuCircuit.g:2556:1: ( 'controlQubits' )
-            // InternalQuCircuit.g:2557:2: 'controlQubits'
+            // InternalQuCircuit.g:2743:1: ( 'controlQubits' )
+            // InternalQuCircuit.g:2744:2: 'controlQubits'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsKeyword_12_0()); 
             match(input,33,FOLLOW_2); 
@@ -7907,16 +8475,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__1"
-    // InternalQuCircuit.g:2566:1: rule__ElementaryQuantumGate__Group_12__1 : rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2 ;
+    // InternalQuCircuit.g:2753:1: rule__ElementaryQuantumGate__Group_12__1 : rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2 ;
     public final void rule__ElementaryQuantumGate__Group_12__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2570:1: ( rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2 )
-            // InternalQuCircuit.g:2571:2: rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2
+            // InternalQuCircuit.g:2757:1: ( rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2 )
+            // InternalQuCircuit.g:2758:2: rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__ElementaryQuantumGate__Group_12__1__Impl();
 
             state._fsp--;
@@ -7945,20 +8513,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__1__Impl"
-    // InternalQuCircuit.g:2578:1: rule__ElementaryQuantumGate__Group_12__1__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:2765:1: rule__ElementaryQuantumGate__Group_12__1__Impl : ( '[' ) ;
     public final void rule__ElementaryQuantumGate__Group_12__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2582:1: ( ( '[' ) )
-            // InternalQuCircuit.g:2583:1: ( '[' )
+            // InternalQuCircuit.g:2769:1: ( ( '[' ) )
+            // InternalQuCircuit.g:2770:1: ( '[' )
             {
-            // InternalQuCircuit.g:2583:1: ( '[' )
-            // InternalQuCircuit.g:2584:2: '['
+            // InternalQuCircuit.g:2770:1: ( '[' )
+            // InternalQuCircuit.g:2771:2: '['
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getLeftSquareBracketKeyword_12_1()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getLeftSquareBracketKeyword_12_1()); 
 
             }
@@ -7982,16 +8550,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__2"
-    // InternalQuCircuit.g:2593:1: rule__ElementaryQuantumGate__Group_12__2 : rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3 ;
+    // InternalQuCircuit.g:2780:1: rule__ElementaryQuantumGate__Group_12__2 : rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3 ;
     public final void rule__ElementaryQuantumGate__Group_12__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2597:1: ( rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3 )
-            // InternalQuCircuit.g:2598:2: rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3
+            // InternalQuCircuit.g:2784:1: ( rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3 )
+            // InternalQuCircuit.g:2785:2: rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group_12__2__Impl();
 
             state._fsp--;
@@ -8020,21 +8588,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__2__Impl"
-    // InternalQuCircuit.g:2605:1: rule__ElementaryQuantumGate__Group_12__2__Impl : ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) ) ;
+    // InternalQuCircuit.g:2792:1: rule__ElementaryQuantumGate__Group_12__2__Impl : ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) ) ;
     public final void rule__ElementaryQuantumGate__Group_12__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2609:1: ( ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) ) )
-            // InternalQuCircuit.g:2610:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) )
+            // InternalQuCircuit.g:2796:1: ( ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) ) )
+            // InternalQuCircuit.g:2797:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) )
             {
-            // InternalQuCircuit.g:2610:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) )
-            // InternalQuCircuit.g:2611:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 )
+            // InternalQuCircuit.g:2797:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 ) )
+            // InternalQuCircuit.g:2798:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsAssignment_12_2()); 
-            // InternalQuCircuit.g:2612:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 )
-            // InternalQuCircuit.g:2612:3: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2
+            // InternalQuCircuit.g:2799:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 )
+            // InternalQuCircuit.g:2799:3: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2();
@@ -8067,16 +8635,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__3"
-    // InternalQuCircuit.g:2620:1: rule__ElementaryQuantumGate__Group_12__3 : rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4 ;
+    // InternalQuCircuit.g:2807:1: rule__ElementaryQuantumGate__Group_12__3 : rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4 ;
     public final void rule__ElementaryQuantumGate__Group_12__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2624:1: ( rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4 )
-            // InternalQuCircuit.g:2625:2: rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4
+            // InternalQuCircuit.g:2811:1: ( rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4 )
+            // InternalQuCircuit.g:2812:2: rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group_12__3__Impl();
 
             state._fsp--;
@@ -8105,35 +8673,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__3__Impl"
-    // InternalQuCircuit.g:2632:1: rule__ElementaryQuantumGate__Group_12__3__Impl : ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* ) ;
+    // InternalQuCircuit.g:2819:1: rule__ElementaryQuantumGate__Group_12__3__Impl : ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* ) ;
     public final void rule__ElementaryQuantumGate__Group_12__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2636:1: ( ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* ) )
-            // InternalQuCircuit.g:2637:1: ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* )
+            // InternalQuCircuit.g:2823:1: ( ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* ) )
+            // InternalQuCircuit.g:2824:1: ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* )
             {
-            // InternalQuCircuit.g:2637:1: ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* )
-            // InternalQuCircuit.g:2638:2: ( rule__ElementaryQuantumGate__Group_12_3__0 )*
+            // InternalQuCircuit.g:2824:1: ( ( rule__ElementaryQuantumGate__Group_12_3__0 )* )
+            // InternalQuCircuit.g:2825:2: ( rule__ElementaryQuantumGate__Group_12_3__0 )*
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_12_3()); 
-            // InternalQuCircuit.g:2639:2: ( rule__ElementaryQuantumGate__Group_12_3__0 )*
-            loop19:
+            // InternalQuCircuit.g:2826:2: ( rule__ElementaryQuantumGate__Group_12_3__0 )*
+            loop21:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA19_0==24) ) {
-                    alt19=1;
+                if ( (LA21_0==26) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt21) {
             	case 1 :
-            	    // InternalQuCircuit.g:2639:3: rule__ElementaryQuantumGate__Group_12_3__0
+            	    // InternalQuCircuit.g:2826:3: rule__ElementaryQuantumGate__Group_12_3__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__ElementaryQuantumGate__Group_12_3__0();
 
             	    state._fsp--;
@@ -8143,7 +8711,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop21;
                 }
             } while (true);
 
@@ -8170,14 +8738,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__4"
-    // InternalQuCircuit.g:2647:1: rule__ElementaryQuantumGate__Group_12__4 : rule__ElementaryQuantumGate__Group_12__4__Impl ;
+    // InternalQuCircuit.g:2834:1: rule__ElementaryQuantumGate__Group_12__4 : rule__ElementaryQuantumGate__Group_12__4__Impl ;
     public final void rule__ElementaryQuantumGate__Group_12__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2651:1: ( rule__ElementaryQuantumGate__Group_12__4__Impl )
-            // InternalQuCircuit.g:2652:2: rule__ElementaryQuantumGate__Group_12__4__Impl
+            // InternalQuCircuit.g:2838:1: ( rule__ElementaryQuantumGate__Group_12__4__Impl )
+            // InternalQuCircuit.g:2839:2: rule__ElementaryQuantumGate__Group_12__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__Group_12__4__Impl();
@@ -8203,20 +8771,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12__4__Impl"
-    // InternalQuCircuit.g:2658:1: rule__ElementaryQuantumGate__Group_12__4__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:2845:1: rule__ElementaryQuantumGate__Group_12__4__Impl : ( ']' ) ;
     public final void rule__ElementaryQuantumGate__Group_12__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2662:1: ( ( ']' ) )
-            // InternalQuCircuit.g:2663:1: ( ']' )
+            // InternalQuCircuit.g:2849:1: ( ( ']' ) )
+            // InternalQuCircuit.g:2850:1: ( ']' )
             {
-            // InternalQuCircuit.g:2663:1: ( ']' )
-            // InternalQuCircuit.g:2664:2: ']'
+            // InternalQuCircuit.g:2850:1: ( ']' )
+            // InternalQuCircuit.g:2851:2: ']'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getRightSquareBracketKeyword_12_4()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getRightSquareBracketKeyword_12_4()); 
 
             }
@@ -8240,16 +8808,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12_3__0"
-    // InternalQuCircuit.g:2674:1: rule__ElementaryQuantumGate__Group_12_3__0 : rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1 ;
+    // InternalQuCircuit.g:2861:1: rule__ElementaryQuantumGate__Group_12_3__0 : rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1 ;
     public final void rule__ElementaryQuantumGate__Group_12_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2678:1: ( rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1 )
-            // InternalQuCircuit.g:2679:2: rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1
+            // InternalQuCircuit.g:2865:1: ( rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1 )
+            // InternalQuCircuit.g:2866:2: rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__ElementaryQuantumGate__Group_12_3__0__Impl();
 
             state._fsp--;
@@ -8278,20 +8846,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12_3__0__Impl"
-    // InternalQuCircuit.g:2686:1: rule__ElementaryQuantumGate__Group_12_3__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:2873:1: rule__ElementaryQuantumGate__Group_12_3__0__Impl : ( ',' ) ;
     public final void rule__ElementaryQuantumGate__Group_12_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2690:1: ( ( ',' ) )
-            // InternalQuCircuit.g:2691:1: ( ',' )
+            // InternalQuCircuit.g:2877:1: ( ( ',' ) )
+            // InternalQuCircuit.g:2878:1: ( ',' )
             {
-            // InternalQuCircuit.g:2691:1: ( ',' )
-            // InternalQuCircuit.g:2692:2: ','
+            // InternalQuCircuit.g:2878:1: ( ',' )
+            // InternalQuCircuit.g:2879:2: ','
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getCommaKeyword_12_3_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getCommaKeyword_12_3_0()); 
 
             }
@@ -8315,14 +8883,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12_3__1"
-    // InternalQuCircuit.g:2701:1: rule__ElementaryQuantumGate__Group_12_3__1 : rule__ElementaryQuantumGate__Group_12_3__1__Impl ;
+    // InternalQuCircuit.g:2888:1: rule__ElementaryQuantumGate__Group_12_3__1 : rule__ElementaryQuantumGate__Group_12_3__1__Impl ;
     public final void rule__ElementaryQuantumGate__Group_12_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2705:1: ( rule__ElementaryQuantumGate__Group_12_3__1__Impl )
-            // InternalQuCircuit.g:2706:2: rule__ElementaryQuantumGate__Group_12_3__1__Impl
+            // InternalQuCircuit.g:2892:1: ( rule__ElementaryQuantumGate__Group_12_3__1__Impl )
+            // InternalQuCircuit.g:2893:2: rule__ElementaryQuantumGate__Group_12_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__Group_12_3__1__Impl();
@@ -8348,21 +8916,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_12_3__1__Impl"
-    // InternalQuCircuit.g:2712:1: rule__ElementaryQuantumGate__Group_12_3__1__Impl : ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) ) ;
+    // InternalQuCircuit.g:2899:1: rule__ElementaryQuantumGate__Group_12_3__1__Impl : ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) ) ;
     public final void rule__ElementaryQuantumGate__Group_12_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2716:1: ( ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) ) )
-            // InternalQuCircuit.g:2717:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) )
+            // InternalQuCircuit.g:2903:1: ( ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) ) )
+            // InternalQuCircuit.g:2904:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) )
             {
-            // InternalQuCircuit.g:2717:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) )
-            // InternalQuCircuit.g:2718:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 )
+            // InternalQuCircuit.g:2904:1: ( ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 ) )
+            // InternalQuCircuit.g:2905:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsAssignment_12_3_1()); 
-            // InternalQuCircuit.g:2719:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 )
-            // InternalQuCircuit.g:2719:3: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1
+            // InternalQuCircuit.g:2906:2: ( rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 )
+            // InternalQuCircuit.g:2906:3: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1();
@@ -8395,16 +8963,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_13__0"
-    // InternalQuCircuit.g:2728:1: rule__ElementaryQuantumGate__Group_13__0 : rule__ElementaryQuantumGate__Group_13__0__Impl rule__ElementaryQuantumGate__Group_13__1 ;
+    // InternalQuCircuit.g:2915:1: rule__ElementaryQuantumGate__Group_13__0 : rule__ElementaryQuantumGate__Group_13__0__Impl rule__ElementaryQuantumGate__Group_13__1 ;
     public final void rule__ElementaryQuantumGate__Group_13__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2732:1: ( rule__ElementaryQuantumGate__Group_13__0__Impl rule__ElementaryQuantumGate__Group_13__1 )
-            // InternalQuCircuit.g:2733:2: rule__ElementaryQuantumGate__Group_13__0__Impl rule__ElementaryQuantumGate__Group_13__1
+            // InternalQuCircuit.g:2919:1: ( rule__ElementaryQuantumGate__Group_13__0__Impl rule__ElementaryQuantumGate__Group_13__1 )
+            // InternalQuCircuit.g:2920:2: rule__ElementaryQuantumGate__Group_13__0__Impl rule__ElementaryQuantumGate__Group_13__1
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_11);
             rule__ElementaryQuantumGate__Group_13__0__Impl();
 
             state._fsp--;
@@ -8433,17 +9001,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_13__0__Impl"
-    // InternalQuCircuit.g:2740:1: rule__ElementaryQuantumGate__Group_13__0__Impl : ( 'angleParameter' ) ;
+    // InternalQuCircuit.g:2927:1: rule__ElementaryQuantumGate__Group_13__0__Impl : ( 'angleParameter' ) ;
     public final void rule__ElementaryQuantumGate__Group_13__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2744:1: ( ( 'angleParameter' ) )
-            // InternalQuCircuit.g:2745:1: ( 'angleParameter' )
+            // InternalQuCircuit.g:2931:1: ( ( 'angleParameter' ) )
+            // InternalQuCircuit.g:2932:1: ( 'angleParameter' )
             {
-            // InternalQuCircuit.g:2745:1: ( 'angleParameter' )
-            // InternalQuCircuit.g:2746:2: 'angleParameter'
+            // InternalQuCircuit.g:2932:1: ( 'angleParameter' )
+            // InternalQuCircuit.g:2933:2: 'angleParameter'
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getAngleParameterKeyword_13_0()); 
             match(input,34,FOLLOW_2); 
@@ -8470,14 +9038,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_13__1"
-    // InternalQuCircuit.g:2755:1: rule__ElementaryQuantumGate__Group_13__1 : rule__ElementaryQuantumGate__Group_13__1__Impl ;
+    // InternalQuCircuit.g:2942:1: rule__ElementaryQuantumGate__Group_13__1 : rule__ElementaryQuantumGate__Group_13__1__Impl ;
     public final void rule__ElementaryQuantumGate__Group_13__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2759:1: ( rule__ElementaryQuantumGate__Group_13__1__Impl )
-            // InternalQuCircuit.g:2760:2: rule__ElementaryQuantumGate__Group_13__1__Impl
+            // InternalQuCircuit.g:2946:1: ( rule__ElementaryQuantumGate__Group_13__1__Impl )
+            // InternalQuCircuit.g:2947:2: rule__ElementaryQuantumGate__Group_13__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__Group_13__1__Impl();
@@ -8503,21 +9071,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group_13__1__Impl"
-    // InternalQuCircuit.g:2766:1: rule__ElementaryQuantumGate__Group_13__1__Impl : ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) ) ;
+    // InternalQuCircuit.g:2953:1: rule__ElementaryQuantumGate__Group_13__1__Impl : ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) ) ;
     public final void rule__ElementaryQuantumGate__Group_13__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2770:1: ( ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) ) )
-            // InternalQuCircuit.g:2771:1: ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) )
+            // InternalQuCircuit.g:2957:1: ( ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) ) )
+            // InternalQuCircuit.g:2958:1: ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) )
             {
-            // InternalQuCircuit.g:2771:1: ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) )
-            // InternalQuCircuit.g:2772:2: ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 )
+            // InternalQuCircuit.g:2958:1: ( ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 ) )
+            // InternalQuCircuit.g:2959:2: ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getAngleParameterAssignment_13_1()); 
-            // InternalQuCircuit.g:2773:2: ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 )
-            // InternalQuCircuit.g:2773:3: rule__ElementaryQuantumGate__AngleParameterAssignment_13_1
+            // InternalQuCircuit.g:2960:2: ( rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 )
+            // InternalQuCircuit.g:2960:3: rule__ElementaryQuantumGate__AngleParameterAssignment_13_1
             {
             pushFollow(FOLLOW_2);
             rule__ElementaryQuantumGate__AngleParameterAssignment_13_1();
@@ -8550,16 +9118,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__0"
-    // InternalQuCircuit.g:2782:1: rule__AngleParameter__Group__0 : rule__AngleParameter__Group__0__Impl rule__AngleParameter__Group__1 ;
+    // InternalQuCircuit.g:2969:1: rule__AngleParameter__Group__0 : rule__AngleParameter__Group__0__Impl rule__AngleParameter__Group__1 ;
     public final void rule__AngleParameter__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2786:1: ( rule__AngleParameter__Group__0__Impl rule__AngleParameter__Group__1 )
-            // InternalQuCircuit.g:2787:2: rule__AngleParameter__Group__0__Impl rule__AngleParameter__Group__1
+            // InternalQuCircuit.g:2973:1: ( rule__AngleParameter__Group__0__Impl rule__AngleParameter__Group__1 )
+            // InternalQuCircuit.g:2974:2: rule__AngleParameter__Group__0__Impl rule__AngleParameter__Group__1
             {
-            pushFollow(FOLLOW_30);
+            pushFollow(FOLLOW_11);
             rule__AngleParameter__Group__0__Impl();
 
             state._fsp--;
@@ -8588,21 +9156,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__0__Impl"
-    // InternalQuCircuit.g:2794:1: rule__AngleParameter__Group__0__Impl : ( () ) ;
+    // InternalQuCircuit.g:2981:1: rule__AngleParameter__Group__0__Impl : ( () ) ;
     public final void rule__AngleParameter__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2798:1: ( ( () ) )
-            // InternalQuCircuit.g:2799:1: ( () )
+            // InternalQuCircuit.g:2985:1: ( ( () ) )
+            // InternalQuCircuit.g:2986:1: ( () )
             {
-            // InternalQuCircuit.g:2799:1: ( () )
-            // InternalQuCircuit.g:2800:2: ()
+            // InternalQuCircuit.g:2986:1: ( () )
+            // InternalQuCircuit.g:2987:2: ()
             {
              before(grammarAccess.getAngleParameterAccess().getAngleParameterAction_0()); 
-            // InternalQuCircuit.g:2801:2: ()
-            // InternalQuCircuit.g:2801:3: 
+            // InternalQuCircuit.g:2988:2: ()
+            // InternalQuCircuit.g:2988:3: 
             {
             }
 
@@ -8625,16 +9193,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__1"
-    // InternalQuCircuit.g:2809:1: rule__AngleParameter__Group__1 : rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2 ;
+    // InternalQuCircuit.g:2996:1: rule__AngleParameter__Group__1 : rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2 ;
     public final void rule__AngleParameter__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2813:1: ( rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2 )
-            // InternalQuCircuit.g:2814:2: rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2
+            // InternalQuCircuit.g:3000:1: ( rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2 )
+            // InternalQuCircuit.g:3001:2: rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_31);
             rule__AngleParameter__Group__1__Impl();
 
             state._fsp--;
@@ -8663,21 +9231,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__1__Impl"
-    // InternalQuCircuit.g:2821:1: rule__AngleParameter__Group__1__Impl : ( 'AngleParameter' ) ;
+    // InternalQuCircuit.g:3008:1: rule__AngleParameter__Group__1__Impl : ( '{' ) ;
     public final void rule__AngleParameter__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2825:1: ( ( 'AngleParameter' ) )
-            // InternalQuCircuit.g:2826:1: ( 'AngleParameter' )
+            // InternalQuCircuit.g:3012:1: ( ( '{' ) )
+            // InternalQuCircuit.g:3013:1: ( '{' )
             {
-            // InternalQuCircuit.g:2826:1: ( 'AngleParameter' )
-            // InternalQuCircuit.g:2827:2: 'AngleParameter'
+            // InternalQuCircuit.g:3013:1: ( '{' )
+            // InternalQuCircuit.g:3014:2: '{'
             {
-             before(grammarAccess.getAngleParameterAccess().getAngleParameterKeyword_1()); 
-            match(input,35,FOLLOW_2); 
-             after(grammarAccess.getAngleParameterAccess().getAngleParameterKeyword_1()); 
+             before(grammarAccess.getAngleParameterAccess().getLeftCurlyBracketKeyword_1()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getAngleParameterAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
 
@@ -8700,14 +9268,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__2"
-    // InternalQuCircuit.g:2836:1: rule__AngleParameter__Group__2 : rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3 ;
+    // InternalQuCircuit.g:3023:1: rule__AngleParameter__Group__2 : rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3 ;
     public final void rule__AngleParameter__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2840:1: ( rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3 )
-            // InternalQuCircuit.g:2841:2: rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3
+            // InternalQuCircuit.g:3027:1: ( rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3 )
+            // InternalQuCircuit.g:3028:2: rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3
             {
             pushFollow(FOLLOW_31);
             rule__AngleParameter__Group__2__Impl();
@@ -8738,21 +9306,42 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__2__Impl"
-    // InternalQuCircuit.g:2848:1: rule__AngleParameter__Group__2__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:3035:1: rule__AngleParameter__Group__2__Impl : ( ( rule__AngleParameter__Group_2__0 )? ) ;
     public final void rule__AngleParameter__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2852:1: ( ( '{' ) )
-            // InternalQuCircuit.g:2853:1: ( '{' )
+            // InternalQuCircuit.g:3039:1: ( ( ( rule__AngleParameter__Group_2__0 )? ) )
+            // InternalQuCircuit.g:3040:1: ( ( rule__AngleParameter__Group_2__0 )? )
             {
-            // InternalQuCircuit.g:2853:1: ( '{' )
-            // InternalQuCircuit.g:2854:2: '{'
+            // InternalQuCircuit.g:3040:1: ( ( rule__AngleParameter__Group_2__0 )? )
+            // InternalQuCircuit.g:3041:2: ( rule__AngleParameter__Group_2__0 )?
             {
-             before(grammarAccess.getAngleParameterAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,17,FOLLOW_2); 
-             after(grammarAccess.getAngleParameterAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getAngleParameterAccess().getGroup_2()); 
+            // InternalQuCircuit.g:3042:2: ( rule__AngleParameter__Group_2__0 )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
+
+            if ( (LA22_0==35) ) {
+                alt22=1;
+            }
+            switch (alt22) {
+                case 1 :
+                    // InternalQuCircuit.g:3042:3: rule__AngleParameter__Group_2__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__AngleParameter__Group_2__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getAngleParameterAccess().getGroup_2()); 
 
             }
 
@@ -8775,14 +9364,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__3"
-    // InternalQuCircuit.g:2863:1: rule__AngleParameter__Group__3 : rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4 ;
+    // InternalQuCircuit.g:3050:1: rule__AngleParameter__Group__3 : rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4 ;
     public final void rule__AngleParameter__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2867:1: ( rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4 )
-            // InternalQuCircuit.g:2868:2: rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4
+            // InternalQuCircuit.g:3054:1: ( rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4 )
+            // InternalQuCircuit.g:3055:2: rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4
             {
             pushFollow(FOLLOW_31);
             rule__AngleParameter__Group__3__Impl();
@@ -8813,29 +9402,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__3__Impl"
-    // InternalQuCircuit.g:2875:1: rule__AngleParameter__Group__3__Impl : ( ( rule__AngleParameter__Group_3__0 )? ) ;
+    // InternalQuCircuit.g:3062:1: rule__AngleParameter__Group__3__Impl : ( ( rule__AngleParameter__Group_3__0 )? ) ;
     public final void rule__AngleParameter__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2879:1: ( ( ( rule__AngleParameter__Group_3__0 )? ) )
-            // InternalQuCircuit.g:2880:1: ( ( rule__AngleParameter__Group_3__0 )? )
+            // InternalQuCircuit.g:3066:1: ( ( ( rule__AngleParameter__Group_3__0 )? ) )
+            // InternalQuCircuit.g:3067:1: ( ( rule__AngleParameter__Group_3__0 )? )
             {
-            // InternalQuCircuit.g:2880:1: ( ( rule__AngleParameter__Group_3__0 )? )
-            // InternalQuCircuit.g:2881:2: ( rule__AngleParameter__Group_3__0 )?
+            // InternalQuCircuit.g:3067:1: ( ( rule__AngleParameter__Group_3__0 )? )
+            // InternalQuCircuit.g:3068:2: ( rule__AngleParameter__Group_3__0 )?
             {
              before(grammarAccess.getAngleParameterAccess().getGroup_3()); 
-            // InternalQuCircuit.g:2882:2: ( rule__AngleParameter__Group_3__0 )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // InternalQuCircuit.g:3069:2: ( rule__AngleParameter__Group_3__0 )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA20_0==36) ) {
-                alt20=1;
+            if ( (LA23_0==36) ) {
+                alt23=1;
             }
-            switch (alt20) {
+            switch (alt23) {
                 case 1 :
-                    // InternalQuCircuit.g:2882:3: rule__AngleParameter__Group_3__0
+                    // InternalQuCircuit.g:3069:3: rule__AngleParameter__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__AngleParameter__Group_3__0();
@@ -8871,14 +9460,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__4"
-    // InternalQuCircuit.g:2890:1: rule__AngleParameter__Group__4 : rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5 ;
+    // InternalQuCircuit.g:3077:1: rule__AngleParameter__Group__4 : rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5 ;
     public final void rule__AngleParameter__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2894:1: ( rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5 )
-            // InternalQuCircuit.g:2895:2: rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5
+            // InternalQuCircuit.g:3081:1: ( rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5 )
+            // InternalQuCircuit.g:3082:2: rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5
             {
             pushFollow(FOLLOW_31);
             rule__AngleParameter__Group__4__Impl();
@@ -8909,29 +9498,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__4__Impl"
-    // InternalQuCircuit.g:2902:1: rule__AngleParameter__Group__4__Impl : ( ( rule__AngleParameter__Group_4__0 )? ) ;
+    // InternalQuCircuit.g:3089:1: rule__AngleParameter__Group__4__Impl : ( ( rule__AngleParameter__Group_4__0 )? ) ;
     public final void rule__AngleParameter__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2906:1: ( ( ( rule__AngleParameter__Group_4__0 )? ) )
-            // InternalQuCircuit.g:2907:1: ( ( rule__AngleParameter__Group_4__0 )? )
+            // InternalQuCircuit.g:3093:1: ( ( ( rule__AngleParameter__Group_4__0 )? ) )
+            // InternalQuCircuit.g:3094:1: ( ( rule__AngleParameter__Group_4__0 )? )
             {
-            // InternalQuCircuit.g:2907:1: ( ( rule__AngleParameter__Group_4__0 )? )
-            // InternalQuCircuit.g:2908:2: ( rule__AngleParameter__Group_4__0 )?
+            // InternalQuCircuit.g:3094:1: ( ( rule__AngleParameter__Group_4__0 )? )
+            // InternalQuCircuit.g:3095:2: ( rule__AngleParameter__Group_4__0 )?
             {
              before(grammarAccess.getAngleParameterAccess().getGroup_4()); 
-            // InternalQuCircuit.g:2909:2: ( rule__AngleParameter__Group_4__0 )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalQuCircuit.g:3096:2: ( rule__AngleParameter__Group_4__0 )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA21_0==37) ) {
-                alt21=1;
+            if ( (LA24_0==37) ) {
+                alt24=1;
             }
-            switch (alt21) {
+            switch (alt24) {
                 case 1 :
-                    // InternalQuCircuit.g:2909:3: rule__AngleParameter__Group_4__0
+                    // InternalQuCircuit.g:3096:3: rule__AngleParameter__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__AngleParameter__Group_4__0();
@@ -8967,22 +9556,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__5"
-    // InternalQuCircuit.g:2917:1: rule__AngleParameter__Group__5 : rule__AngleParameter__Group__5__Impl rule__AngleParameter__Group__6 ;
+    // InternalQuCircuit.g:3104:1: rule__AngleParameter__Group__5 : rule__AngleParameter__Group__5__Impl ;
     public final void rule__AngleParameter__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2921:1: ( rule__AngleParameter__Group__5__Impl rule__AngleParameter__Group__6 )
-            // InternalQuCircuit.g:2922:2: rule__AngleParameter__Group__5__Impl rule__AngleParameter__Group__6
+            // InternalQuCircuit.g:3108:1: ( rule__AngleParameter__Group__5__Impl )
+            // InternalQuCircuit.g:3109:2: rule__AngleParameter__Group__5__Impl
             {
-            pushFollow(FOLLOW_31);
-            rule__AngleParameter__Group__5__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__AngleParameter__Group__6();
+            rule__AngleParameter__Group__5__Impl();
 
             state._fsp--;
 
@@ -9005,42 +9589,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group__5__Impl"
-    // InternalQuCircuit.g:2929:1: rule__AngleParameter__Group__5__Impl : ( ( rule__AngleParameter__Group_5__0 )? ) ;
+    // InternalQuCircuit.g:3115:1: rule__AngleParameter__Group__5__Impl : ( '}' ) ;
     public final void rule__AngleParameter__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2933:1: ( ( ( rule__AngleParameter__Group_5__0 )? ) )
-            // InternalQuCircuit.g:2934:1: ( ( rule__AngleParameter__Group_5__0 )? )
+            // InternalQuCircuit.g:3119:1: ( ( '}' ) )
+            // InternalQuCircuit.g:3120:1: ( '}' )
             {
-            // InternalQuCircuit.g:2934:1: ( ( rule__AngleParameter__Group_5__0 )? )
-            // InternalQuCircuit.g:2935:2: ( rule__AngleParameter__Group_5__0 )?
+            // InternalQuCircuit.g:3120:1: ( '}' )
+            // InternalQuCircuit.g:3121:2: '}'
             {
-             before(grammarAccess.getAngleParameterAccess().getGroup_5()); 
-            // InternalQuCircuit.g:2936:2: ( rule__AngleParameter__Group_5__0 )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
-
-            if ( (LA22_0==38) ) {
-                alt22=1;
-            }
-            switch (alt22) {
-                case 1 :
-                    // InternalQuCircuit.g:2936:3: rule__AngleParameter__Group_5__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__AngleParameter__Group_5__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getAngleParameterAccess().getGroup_5()); 
+             before(grammarAccess.getAngleParameterAccess().getRightCurlyBracketKeyword_5()); 
+            match(input,18,FOLLOW_2); 
+             after(grammarAccess.getAngleParameterAccess().getRightCurlyBracketKeyword_5()); 
 
             }
 
@@ -9062,18 +9625,23 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__AngleParameter__Group__5__Impl"
 
 
-    // $ANTLR start "rule__AngleParameter__Group__6"
-    // InternalQuCircuit.g:2944:1: rule__AngleParameter__Group__6 : rule__AngleParameter__Group__6__Impl ;
-    public final void rule__AngleParameter__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__AngleParameter__Group_2__0"
+    // InternalQuCircuit.g:3131:1: rule__AngleParameter__Group_2__0 : rule__AngleParameter__Group_2__0__Impl rule__AngleParameter__Group_2__1 ;
+    public final void rule__AngleParameter__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2948:1: ( rule__AngleParameter__Group__6__Impl )
-            // InternalQuCircuit.g:2949:2: rule__AngleParameter__Group__6__Impl
+            // InternalQuCircuit.g:3135:1: ( rule__AngleParameter__Group_2__0__Impl rule__AngleParameter__Group_2__1 )
+            // InternalQuCircuit.g:3136:2: rule__AngleParameter__Group_2__0__Impl rule__AngleParameter__Group_2__1
             {
+            pushFollow(FOLLOW_32);
+            rule__AngleParameter__Group_2__0__Impl();
+
+            state._fsp--;
+
             pushFollow(FOLLOW_2);
-            rule__AngleParameter__Group__6__Impl();
+            rule__AngleParameter__Group_2__1();
 
             state._fsp--;
 
@@ -9092,25 +9660,25 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__AngleParameter__Group__6"
+    // $ANTLR end "rule__AngleParameter__Group_2__0"
 
 
-    // $ANTLR start "rule__AngleParameter__Group__6__Impl"
-    // InternalQuCircuit.g:2955:1: rule__AngleParameter__Group__6__Impl : ( '}' ) ;
-    public final void rule__AngleParameter__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__AngleParameter__Group_2__0__Impl"
+    // InternalQuCircuit.g:3143:1: rule__AngleParameter__Group_2__0__Impl : ( 'theta' ) ;
+    public final void rule__AngleParameter__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2959:1: ( ( '}' ) )
-            // InternalQuCircuit.g:2960:1: ( '}' )
+            // InternalQuCircuit.g:3147:1: ( ( 'theta' ) )
+            // InternalQuCircuit.g:3148:1: ( 'theta' )
             {
-            // InternalQuCircuit.g:2960:1: ( '}' )
-            // InternalQuCircuit.g:2961:2: '}'
+            // InternalQuCircuit.g:3148:1: ( 'theta' )
+            // InternalQuCircuit.g:3149:2: 'theta'
             {
-             before(grammarAccess.getAngleParameterAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getAngleParameterAccess().getRightCurlyBracketKeyword_6()); 
+             before(grammarAccess.getAngleParameterAccess().getThetaKeyword_2_0()); 
+            match(input,35,FOLLOW_2); 
+             after(grammarAccess.getAngleParameterAccess().getThetaKeyword_2_0()); 
 
             }
 
@@ -9129,18 +9697,98 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__AngleParameter__Group__6__Impl"
+    // $ANTLR end "rule__AngleParameter__Group_2__0__Impl"
+
+
+    // $ANTLR start "rule__AngleParameter__Group_2__1"
+    // InternalQuCircuit.g:3158:1: rule__AngleParameter__Group_2__1 : rule__AngleParameter__Group_2__1__Impl ;
+    public final void rule__AngleParameter__Group_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:3162:1: ( rule__AngleParameter__Group_2__1__Impl )
+            // InternalQuCircuit.g:3163:2: rule__AngleParameter__Group_2__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__AngleParameter__Group_2__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AngleParameter__Group_2__1"
+
+
+    // $ANTLR start "rule__AngleParameter__Group_2__1__Impl"
+    // InternalQuCircuit.g:3169:1: rule__AngleParameter__Group_2__1__Impl : ( ( rule__AngleParameter__ThetaAssignment_2_1 ) ) ;
+    public final void rule__AngleParameter__Group_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:3173:1: ( ( ( rule__AngleParameter__ThetaAssignment_2_1 ) ) )
+            // InternalQuCircuit.g:3174:1: ( ( rule__AngleParameter__ThetaAssignment_2_1 ) )
+            {
+            // InternalQuCircuit.g:3174:1: ( ( rule__AngleParameter__ThetaAssignment_2_1 ) )
+            // InternalQuCircuit.g:3175:2: ( rule__AngleParameter__ThetaAssignment_2_1 )
+            {
+             before(grammarAccess.getAngleParameterAccess().getThetaAssignment_2_1()); 
+            // InternalQuCircuit.g:3176:2: ( rule__AngleParameter__ThetaAssignment_2_1 )
+            // InternalQuCircuit.g:3176:3: rule__AngleParameter__ThetaAssignment_2_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__AngleParameter__ThetaAssignment_2_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAngleParameterAccess().getThetaAssignment_2_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AngleParameter__Group_2__1__Impl"
 
 
     // $ANTLR start "rule__AngleParameter__Group_3__0"
-    // InternalQuCircuit.g:2971:1: rule__AngleParameter__Group_3__0 : rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1 ;
+    // InternalQuCircuit.g:3185:1: rule__AngleParameter__Group_3__0 : rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1 ;
     public final void rule__AngleParameter__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2975:1: ( rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1 )
-            // InternalQuCircuit.g:2976:2: rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1
+            // InternalQuCircuit.g:3189:1: ( rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1 )
+            // InternalQuCircuit.g:3190:2: rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1
             {
             pushFollow(FOLLOW_32);
             rule__AngleParameter__Group_3__0__Impl();
@@ -9171,21 +9819,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group_3__0__Impl"
-    // InternalQuCircuit.g:2983:1: rule__AngleParameter__Group_3__0__Impl : ( 'theta' ) ;
+    // InternalQuCircuit.g:3197:1: rule__AngleParameter__Group_3__0__Impl : ( 'phi' ) ;
     public final void rule__AngleParameter__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2987:1: ( ( 'theta' ) )
-            // InternalQuCircuit.g:2988:1: ( 'theta' )
+            // InternalQuCircuit.g:3201:1: ( ( 'phi' ) )
+            // InternalQuCircuit.g:3202:1: ( 'phi' )
             {
-            // InternalQuCircuit.g:2988:1: ( 'theta' )
-            // InternalQuCircuit.g:2989:2: 'theta'
+            // InternalQuCircuit.g:3202:1: ( 'phi' )
+            // InternalQuCircuit.g:3203:2: 'phi'
             {
-             before(grammarAccess.getAngleParameterAccess().getThetaKeyword_3_0()); 
+             before(grammarAccess.getAngleParameterAccess().getPhiKeyword_3_0()); 
             match(input,36,FOLLOW_2); 
-             after(grammarAccess.getAngleParameterAccess().getThetaKeyword_3_0()); 
+             after(grammarAccess.getAngleParameterAccess().getPhiKeyword_3_0()); 
 
             }
 
@@ -9208,14 +9856,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group_3__1"
-    // InternalQuCircuit.g:2998:1: rule__AngleParameter__Group_3__1 : rule__AngleParameter__Group_3__1__Impl ;
+    // InternalQuCircuit.g:3212:1: rule__AngleParameter__Group_3__1 : rule__AngleParameter__Group_3__1__Impl ;
     public final void rule__AngleParameter__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3002:1: ( rule__AngleParameter__Group_3__1__Impl )
-            // InternalQuCircuit.g:3003:2: rule__AngleParameter__Group_3__1__Impl
+            // InternalQuCircuit.g:3216:1: ( rule__AngleParameter__Group_3__1__Impl )
+            // InternalQuCircuit.g:3217:2: rule__AngleParameter__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AngleParameter__Group_3__1__Impl();
@@ -9241,31 +9889,31 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group_3__1__Impl"
-    // InternalQuCircuit.g:3009:1: rule__AngleParameter__Group_3__1__Impl : ( ( rule__AngleParameter__ThetaAssignment_3_1 ) ) ;
+    // InternalQuCircuit.g:3223:1: rule__AngleParameter__Group_3__1__Impl : ( ( rule__AngleParameter__PhiAssignment_3_1 ) ) ;
     public final void rule__AngleParameter__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3013:1: ( ( ( rule__AngleParameter__ThetaAssignment_3_1 ) ) )
-            // InternalQuCircuit.g:3014:1: ( ( rule__AngleParameter__ThetaAssignment_3_1 ) )
+            // InternalQuCircuit.g:3227:1: ( ( ( rule__AngleParameter__PhiAssignment_3_1 ) ) )
+            // InternalQuCircuit.g:3228:1: ( ( rule__AngleParameter__PhiAssignment_3_1 ) )
             {
-            // InternalQuCircuit.g:3014:1: ( ( rule__AngleParameter__ThetaAssignment_3_1 ) )
-            // InternalQuCircuit.g:3015:2: ( rule__AngleParameter__ThetaAssignment_3_1 )
+            // InternalQuCircuit.g:3228:1: ( ( rule__AngleParameter__PhiAssignment_3_1 ) )
+            // InternalQuCircuit.g:3229:2: ( rule__AngleParameter__PhiAssignment_3_1 )
             {
-             before(grammarAccess.getAngleParameterAccess().getThetaAssignment_3_1()); 
-            // InternalQuCircuit.g:3016:2: ( rule__AngleParameter__ThetaAssignment_3_1 )
-            // InternalQuCircuit.g:3016:3: rule__AngleParameter__ThetaAssignment_3_1
+             before(grammarAccess.getAngleParameterAccess().getPhiAssignment_3_1()); 
+            // InternalQuCircuit.g:3230:2: ( rule__AngleParameter__PhiAssignment_3_1 )
+            // InternalQuCircuit.g:3230:3: rule__AngleParameter__PhiAssignment_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__AngleParameter__ThetaAssignment_3_1();
+            rule__AngleParameter__PhiAssignment_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getAngleParameterAccess().getThetaAssignment_3_1()); 
+             after(grammarAccess.getAngleParameterAccess().getPhiAssignment_3_1()); 
 
             }
 
@@ -9288,14 +9936,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group_4__0"
-    // InternalQuCircuit.g:3025:1: rule__AngleParameter__Group_4__0 : rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1 ;
+    // InternalQuCircuit.g:3239:1: rule__AngleParameter__Group_4__0 : rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1 ;
     public final void rule__AngleParameter__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3029:1: ( rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1 )
-            // InternalQuCircuit.g:3030:2: rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1
+            // InternalQuCircuit.g:3243:1: ( rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1 )
+            // InternalQuCircuit.g:3244:2: rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1
             {
             pushFollow(FOLLOW_32);
             rule__AngleParameter__Group_4__0__Impl();
@@ -9326,21 +9974,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group_4__0__Impl"
-    // InternalQuCircuit.g:3037:1: rule__AngleParameter__Group_4__0__Impl : ( 'phi' ) ;
+    // InternalQuCircuit.g:3251:1: rule__AngleParameter__Group_4__0__Impl : ( 'lambda' ) ;
     public final void rule__AngleParameter__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3041:1: ( ( 'phi' ) )
-            // InternalQuCircuit.g:3042:1: ( 'phi' )
+            // InternalQuCircuit.g:3255:1: ( ( 'lambda' ) )
+            // InternalQuCircuit.g:3256:1: ( 'lambda' )
             {
-            // InternalQuCircuit.g:3042:1: ( 'phi' )
-            // InternalQuCircuit.g:3043:2: 'phi'
+            // InternalQuCircuit.g:3256:1: ( 'lambda' )
+            // InternalQuCircuit.g:3257:2: 'lambda'
             {
-             before(grammarAccess.getAngleParameterAccess().getPhiKeyword_4_0()); 
+             before(grammarAccess.getAngleParameterAccess().getLambdaKeyword_4_0()); 
             match(input,37,FOLLOW_2); 
-             after(grammarAccess.getAngleParameterAccess().getPhiKeyword_4_0()); 
+             after(grammarAccess.getAngleParameterAccess().getLambdaKeyword_4_0()); 
 
             }
 
@@ -9363,14 +10011,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group_4__1"
-    // InternalQuCircuit.g:3052:1: rule__AngleParameter__Group_4__1 : rule__AngleParameter__Group_4__1__Impl ;
+    // InternalQuCircuit.g:3266:1: rule__AngleParameter__Group_4__1 : rule__AngleParameter__Group_4__1__Impl ;
     public final void rule__AngleParameter__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3056:1: ( rule__AngleParameter__Group_4__1__Impl )
-            // InternalQuCircuit.g:3057:2: rule__AngleParameter__Group_4__1__Impl
+            // InternalQuCircuit.g:3270:1: ( rule__AngleParameter__Group_4__1__Impl )
+            // InternalQuCircuit.g:3271:2: rule__AngleParameter__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AngleParameter__Group_4__1__Impl();
@@ -9396,31 +10044,31 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__AngleParameter__Group_4__1__Impl"
-    // InternalQuCircuit.g:3063:1: rule__AngleParameter__Group_4__1__Impl : ( ( rule__AngleParameter__PhiAssignment_4_1 ) ) ;
+    // InternalQuCircuit.g:3277:1: rule__AngleParameter__Group_4__1__Impl : ( ( rule__AngleParameter__LambdaAssignment_4_1 ) ) ;
     public final void rule__AngleParameter__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3067:1: ( ( ( rule__AngleParameter__PhiAssignment_4_1 ) ) )
-            // InternalQuCircuit.g:3068:1: ( ( rule__AngleParameter__PhiAssignment_4_1 ) )
+            // InternalQuCircuit.g:3281:1: ( ( ( rule__AngleParameter__LambdaAssignment_4_1 ) ) )
+            // InternalQuCircuit.g:3282:1: ( ( rule__AngleParameter__LambdaAssignment_4_1 ) )
             {
-            // InternalQuCircuit.g:3068:1: ( ( rule__AngleParameter__PhiAssignment_4_1 ) )
-            // InternalQuCircuit.g:3069:2: ( rule__AngleParameter__PhiAssignment_4_1 )
+            // InternalQuCircuit.g:3282:1: ( ( rule__AngleParameter__LambdaAssignment_4_1 ) )
+            // InternalQuCircuit.g:3283:2: ( rule__AngleParameter__LambdaAssignment_4_1 )
             {
-             before(grammarAccess.getAngleParameterAccess().getPhiAssignment_4_1()); 
-            // InternalQuCircuit.g:3070:2: ( rule__AngleParameter__PhiAssignment_4_1 )
-            // InternalQuCircuit.g:3070:3: rule__AngleParameter__PhiAssignment_4_1
+             before(grammarAccess.getAngleParameterAccess().getLambdaAssignment_4_1()); 
+            // InternalQuCircuit.g:3284:2: ( rule__AngleParameter__LambdaAssignment_4_1 )
+            // InternalQuCircuit.g:3284:3: rule__AngleParameter__LambdaAssignment_4_1
             {
             pushFollow(FOLLOW_2);
-            rule__AngleParameter__PhiAssignment_4_1();
+            rule__AngleParameter__LambdaAssignment_4_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getAngleParameterAccess().getPhiAssignment_4_1()); 
+             after(grammarAccess.getAngleParameterAccess().getLambdaAssignment_4_1()); 
 
             }
 
@@ -9442,170 +10090,15 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__AngleParameter__Group_4__1__Impl"
 
 
-    // $ANTLR start "rule__AngleParameter__Group_5__0"
-    // InternalQuCircuit.g:3079:1: rule__AngleParameter__Group_5__0 : rule__AngleParameter__Group_5__0__Impl rule__AngleParameter__Group_5__1 ;
-    public final void rule__AngleParameter__Group_5__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQuCircuit.g:3083:1: ( rule__AngleParameter__Group_5__0__Impl rule__AngleParameter__Group_5__1 )
-            // InternalQuCircuit.g:3084:2: rule__AngleParameter__Group_5__0__Impl rule__AngleParameter__Group_5__1
-            {
-            pushFollow(FOLLOW_32);
-            rule__AngleParameter__Group_5__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__AngleParameter__Group_5__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AngleParameter__Group_5__0"
-
-
-    // $ANTLR start "rule__AngleParameter__Group_5__0__Impl"
-    // InternalQuCircuit.g:3091:1: rule__AngleParameter__Group_5__0__Impl : ( 'lambda' ) ;
-    public final void rule__AngleParameter__Group_5__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQuCircuit.g:3095:1: ( ( 'lambda' ) )
-            // InternalQuCircuit.g:3096:1: ( 'lambda' )
-            {
-            // InternalQuCircuit.g:3096:1: ( 'lambda' )
-            // InternalQuCircuit.g:3097:2: 'lambda'
-            {
-             before(grammarAccess.getAngleParameterAccess().getLambdaKeyword_5_0()); 
-            match(input,38,FOLLOW_2); 
-             after(grammarAccess.getAngleParameterAccess().getLambdaKeyword_5_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AngleParameter__Group_5__0__Impl"
-
-
-    // $ANTLR start "rule__AngleParameter__Group_5__1"
-    // InternalQuCircuit.g:3106:1: rule__AngleParameter__Group_5__1 : rule__AngleParameter__Group_5__1__Impl ;
-    public final void rule__AngleParameter__Group_5__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQuCircuit.g:3110:1: ( rule__AngleParameter__Group_5__1__Impl )
-            // InternalQuCircuit.g:3111:2: rule__AngleParameter__Group_5__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__AngleParameter__Group_5__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AngleParameter__Group_5__1"
-
-
-    // $ANTLR start "rule__AngleParameter__Group_5__1__Impl"
-    // InternalQuCircuit.g:3117:1: rule__AngleParameter__Group_5__1__Impl : ( ( rule__AngleParameter__LambdaAssignment_5_1 ) ) ;
-    public final void rule__AngleParameter__Group_5__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalQuCircuit.g:3121:1: ( ( ( rule__AngleParameter__LambdaAssignment_5_1 ) ) )
-            // InternalQuCircuit.g:3122:1: ( ( rule__AngleParameter__LambdaAssignment_5_1 ) )
-            {
-            // InternalQuCircuit.g:3122:1: ( ( rule__AngleParameter__LambdaAssignment_5_1 ) )
-            // InternalQuCircuit.g:3123:2: ( rule__AngleParameter__LambdaAssignment_5_1 )
-            {
-             before(grammarAccess.getAngleParameterAccess().getLambdaAssignment_5_1()); 
-            // InternalQuCircuit.g:3124:2: ( rule__AngleParameter__LambdaAssignment_5_1 )
-            // InternalQuCircuit.g:3124:3: rule__AngleParameter__LambdaAssignment_5_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__AngleParameter__LambdaAssignment_5_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getAngleParameterAccess().getLambdaAssignment_5_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__AngleParameter__Group_5__1__Impl"
-
-
     // $ANTLR start "rule__Measurement__Group__0"
-    // InternalQuCircuit.g:3133:1: rule__Measurement__Group__0 : rule__Measurement__Group__0__Impl rule__Measurement__Group__1 ;
+    // InternalQuCircuit.g:3293:1: rule__Measurement__Group__0 : rule__Measurement__Group__0__Impl rule__Measurement__Group__1 ;
     public final void rule__Measurement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3137:1: ( rule__Measurement__Group__0__Impl rule__Measurement__Group__1 )
-            // InternalQuCircuit.g:3138:2: rule__Measurement__Group__0__Impl rule__Measurement__Group__1
+            // InternalQuCircuit.g:3297:1: ( rule__Measurement__Group__0__Impl rule__Measurement__Group__1 )
+            // InternalQuCircuit.g:3298:2: rule__Measurement__Group__0__Impl rule__Measurement__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Measurement__Group__0__Impl();
@@ -9636,20 +10129,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__0__Impl"
-    // InternalQuCircuit.g:3145:1: rule__Measurement__Group__0__Impl : ( 'Measurement' ) ;
+    // InternalQuCircuit.g:3305:1: rule__Measurement__Group__0__Impl : ( 'Measurement' ) ;
     public final void rule__Measurement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3149:1: ( ( 'Measurement' ) )
-            // InternalQuCircuit.g:3150:1: ( 'Measurement' )
+            // InternalQuCircuit.g:3309:1: ( ( 'Measurement' ) )
+            // InternalQuCircuit.g:3310:1: ( 'Measurement' )
             {
-            // InternalQuCircuit.g:3150:1: ( 'Measurement' )
-            // InternalQuCircuit.g:3151:2: 'Measurement'
+            // InternalQuCircuit.g:3310:1: ( 'Measurement' )
+            // InternalQuCircuit.g:3311:2: 'Measurement'
             {
              before(grammarAccess.getMeasurementAccess().getMeasurementKeyword_0()); 
-            match(input,39,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getMeasurementKeyword_0()); 
 
             }
@@ -9673,16 +10166,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__1"
-    // InternalQuCircuit.g:3160:1: rule__Measurement__Group__1 : rule__Measurement__Group__1__Impl rule__Measurement__Group__2 ;
+    // InternalQuCircuit.g:3320:1: rule__Measurement__Group__1 : rule__Measurement__Group__1__Impl rule__Measurement__Group__2 ;
     public final void rule__Measurement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3164:1: ( rule__Measurement__Group__1__Impl rule__Measurement__Group__2 )
-            // InternalQuCircuit.g:3165:2: rule__Measurement__Group__1__Impl rule__Measurement__Group__2
+            // InternalQuCircuit.g:3324:1: ( rule__Measurement__Group__1__Impl rule__Measurement__Group__2 )
+            // InternalQuCircuit.g:3325:2: rule__Measurement__Group__1__Impl rule__Measurement__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__Measurement__Group__1__Impl();
 
             state._fsp--;
@@ -9711,21 +10204,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__1__Impl"
-    // InternalQuCircuit.g:3172:1: rule__Measurement__Group__1__Impl : ( ( rule__Measurement__NameAssignment_1 ) ) ;
+    // InternalQuCircuit.g:3332:1: rule__Measurement__Group__1__Impl : ( ( rule__Measurement__NameAssignment_1 ) ) ;
     public final void rule__Measurement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3176:1: ( ( ( rule__Measurement__NameAssignment_1 ) ) )
-            // InternalQuCircuit.g:3177:1: ( ( rule__Measurement__NameAssignment_1 ) )
+            // InternalQuCircuit.g:3336:1: ( ( ( rule__Measurement__NameAssignment_1 ) ) )
+            // InternalQuCircuit.g:3337:1: ( ( rule__Measurement__NameAssignment_1 ) )
             {
-            // InternalQuCircuit.g:3177:1: ( ( rule__Measurement__NameAssignment_1 ) )
-            // InternalQuCircuit.g:3178:2: ( rule__Measurement__NameAssignment_1 )
+            // InternalQuCircuit.g:3337:1: ( ( rule__Measurement__NameAssignment_1 ) )
+            // InternalQuCircuit.g:3338:2: ( rule__Measurement__NameAssignment_1 )
             {
              before(grammarAccess.getMeasurementAccess().getNameAssignment_1()); 
-            // InternalQuCircuit.g:3179:2: ( rule__Measurement__NameAssignment_1 )
-            // InternalQuCircuit.g:3179:3: rule__Measurement__NameAssignment_1
+            // InternalQuCircuit.g:3339:2: ( rule__Measurement__NameAssignment_1 )
+            // InternalQuCircuit.g:3339:3: rule__Measurement__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__NameAssignment_1();
@@ -9758,16 +10251,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__2"
-    // InternalQuCircuit.g:3187:1: rule__Measurement__Group__2 : rule__Measurement__Group__2__Impl rule__Measurement__Group__3 ;
+    // InternalQuCircuit.g:3347:1: rule__Measurement__Group__2 : rule__Measurement__Group__2__Impl rule__Measurement__Group__3 ;
     public final void rule__Measurement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3191:1: ( rule__Measurement__Group__2__Impl rule__Measurement__Group__3 )
-            // InternalQuCircuit.g:3192:2: rule__Measurement__Group__2__Impl rule__Measurement__Group__3
+            // InternalQuCircuit.g:3351:1: ( rule__Measurement__Group__2__Impl rule__Measurement__Group__3 )
+            // InternalQuCircuit.g:3352:2: rule__Measurement__Group__2__Impl rule__Measurement__Group__3
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_28);
             rule__Measurement__Group__2__Impl();
 
             state._fsp--;
@@ -9796,17 +10289,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__2__Impl"
-    // InternalQuCircuit.g:3199:1: rule__Measurement__Group__2__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:3359:1: rule__Measurement__Group__2__Impl : ( '{' ) ;
     public final void rule__Measurement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3203:1: ( ( '{' ) )
-            // InternalQuCircuit.g:3204:1: ( '{' )
+            // InternalQuCircuit.g:3363:1: ( ( '{' ) )
+            // InternalQuCircuit.g:3364:1: ( '{' )
             {
-            // InternalQuCircuit.g:3204:1: ( '{' )
-            // InternalQuCircuit.g:3205:2: '{'
+            // InternalQuCircuit.g:3364:1: ( '{' )
+            // InternalQuCircuit.g:3365:2: '{'
             {
              before(grammarAccess.getMeasurementAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,17,FOLLOW_2); 
@@ -9833,16 +10326,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__3"
-    // InternalQuCircuit.g:3214:1: rule__Measurement__Group__3 : rule__Measurement__Group__3__Impl rule__Measurement__Group__4 ;
+    // InternalQuCircuit.g:3374:1: rule__Measurement__Group__3 : rule__Measurement__Group__3__Impl rule__Measurement__Group__4 ;
     public final void rule__Measurement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3218:1: ( rule__Measurement__Group__3__Impl rule__Measurement__Group__4 )
-            // InternalQuCircuit.g:3219:2: rule__Measurement__Group__3__Impl rule__Measurement__Group__4
+            // InternalQuCircuit.g:3378:1: ( rule__Measurement__Group__3__Impl rule__Measurement__Group__4 )
+            // InternalQuCircuit.g:3379:2: rule__Measurement__Group__3__Impl rule__Measurement__Group__4
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_28);
             rule__Measurement__Group__3__Impl();
 
             state._fsp--;
@@ -9871,29 +10364,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__3__Impl"
-    // InternalQuCircuit.g:3226:1: rule__Measurement__Group__3__Impl : ( ( rule__Measurement__Group_3__0 )? ) ;
+    // InternalQuCircuit.g:3386:1: rule__Measurement__Group__3__Impl : ( ( rule__Measurement__Group_3__0 )? ) ;
     public final void rule__Measurement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3230:1: ( ( ( rule__Measurement__Group_3__0 )? ) )
-            // InternalQuCircuit.g:3231:1: ( ( rule__Measurement__Group_3__0 )? )
+            // InternalQuCircuit.g:3390:1: ( ( ( rule__Measurement__Group_3__0 )? ) )
+            // InternalQuCircuit.g:3391:1: ( ( rule__Measurement__Group_3__0 )? )
             {
-            // InternalQuCircuit.g:3231:1: ( ( rule__Measurement__Group_3__0 )? )
-            // InternalQuCircuit.g:3232:2: ( rule__Measurement__Group_3__0 )?
+            // InternalQuCircuit.g:3391:1: ( ( rule__Measurement__Group_3__0 )? )
+            // InternalQuCircuit.g:3392:2: ( rule__Measurement__Group_3__0 )?
             {
              before(grammarAccess.getMeasurementAccess().getGroup_3()); 
-            // InternalQuCircuit.g:3233:2: ( rule__Measurement__Group_3__0 )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // InternalQuCircuit.g:3393:2: ( rule__Measurement__Group_3__0 )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA23_0==26) ) {
-                alt23=1;
+            if ( (LA25_0==28) ) {
+                alt25=1;
             }
-            switch (alt23) {
+            switch (alt25) {
                 case 1 :
-                    // InternalQuCircuit.g:3233:3: rule__Measurement__Group_3__0
+                    // InternalQuCircuit.g:3393:3: rule__Measurement__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Measurement__Group_3__0();
@@ -9929,16 +10422,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__4"
-    // InternalQuCircuit.g:3241:1: rule__Measurement__Group__4 : rule__Measurement__Group__4__Impl rule__Measurement__Group__5 ;
+    // InternalQuCircuit.g:3401:1: rule__Measurement__Group__4 : rule__Measurement__Group__4__Impl rule__Measurement__Group__5 ;
     public final void rule__Measurement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3245:1: ( rule__Measurement__Group__4__Impl rule__Measurement__Group__5 )
-            // InternalQuCircuit.g:3246:2: rule__Measurement__Group__4__Impl rule__Measurement__Group__5
+            // InternalQuCircuit.g:3405:1: ( rule__Measurement__Group__4__Impl rule__Measurement__Group__5 )
+            // InternalQuCircuit.g:3406:2: rule__Measurement__Group__4__Impl rule__Measurement__Group__5
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Measurement__Group__4__Impl();
 
             state._fsp--;
@@ -9967,20 +10460,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__4__Impl"
-    // InternalQuCircuit.g:3253:1: rule__Measurement__Group__4__Impl : ( 'targetQubits' ) ;
+    // InternalQuCircuit.g:3413:1: rule__Measurement__Group__4__Impl : ( 'targetQubits' ) ;
     public final void rule__Measurement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3257:1: ( ( 'targetQubits' ) )
-            // InternalQuCircuit.g:3258:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:3417:1: ( ( 'targetQubits' ) )
+            // InternalQuCircuit.g:3418:1: ( 'targetQubits' )
             {
-            // InternalQuCircuit.g:3258:1: ( 'targetQubits' )
-            // InternalQuCircuit.g:3259:2: 'targetQubits'
+            // InternalQuCircuit.g:3418:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:3419:2: 'targetQubits'
             {
              before(grammarAccess.getMeasurementAccess().getTargetQubitsKeyword_4()); 
-            match(input,27,FOLLOW_2); 
+            match(input,29,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getTargetQubitsKeyword_4()); 
 
             }
@@ -10004,16 +10497,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__5"
-    // InternalQuCircuit.g:3268:1: rule__Measurement__Group__5 : rule__Measurement__Group__5__Impl rule__Measurement__Group__6 ;
+    // InternalQuCircuit.g:3428:1: rule__Measurement__Group__5 : rule__Measurement__Group__5__Impl rule__Measurement__Group__6 ;
     public final void rule__Measurement__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3272:1: ( rule__Measurement__Group__5__Impl rule__Measurement__Group__6 )
-            // InternalQuCircuit.g:3273:2: rule__Measurement__Group__5__Impl rule__Measurement__Group__6
+            // InternalQuCircuit.g:3432:1: ( rule__Measurement__Group__5__Impl rule__Measurement__Group__6 )
+            // InternalQuCircuit.g:3433:2: rule__Measurement__Group__5__Impl rule__Measurement__Group__6
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Measurement__Group__5__Impl();
 
             state._fsp--;
@@ -10042,20 +10535,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__5__Impl"
-    // InternalQuCircuit.g:3280:1: rule__Measurement__Group__5__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:3440:1: rule__Measurement__Group__5__Impl : ( '[' ) ;
     public final void rule__Measurement__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3284:1: ( ( '[' ) )
-            // InternalQuCircuit.g:3285:1: ( '[' )
+            // InternalQuCircuit.g:3444:1: ( ( '[' ) )
+            // InternalQuCircuit.g:3445:1: ( '[' )
             {
-            // InternalQuCircuit.g:3285:1: ( '[' )
-            // InternalQuCircuit.g:3286:2: '['
+            // InternalQuCircuit.g:3445:1: ( '[' )
+            // InternalQuCircuit.g:3446:2: '['
             {
              before(grammarAccess.getMeasurementAccess().getLeftSquareBracketKeyword_5()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getLeftSquareBracketKeyword_5()); 
 
             }
@@ -10079,16 +10572,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__6"
-    // InternalQuCircuit.g:3295:1: rule__Measurement__Group__6 : rule__Measurement__Group__6__Impl rule__Measurement__Group__7 ;
+    // InternalQuCircuit.g:3455:1: rule__Measurement__Group__6 : rule__Measurement__Group__6__Impl rule__Measurement__Group__7 ;
     public final void rule__Measurement__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3299:1: ( rule__Measurement__Group__6__Impl rule__Measurement__Group__7 )
-            // InternalQuCircuit.g:3300:2: rule__Measurement__Group__6__Impl rule__Measurement__Group__7
+            // InternalQuCircuit.g:3459:1: ( rule__Measurement__Group__6__Impl rule__Measurement__Group__7 )
+            // InternalQuCircuit.g:3460:2: rule__Measurement__Group__6__Impl rule__Measurement__Group__7
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Measurement__Group__6__Impl();
 
             state._fsp--;
@@ -10117,20 +10610,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__6__Impl"
-    // InternalQuCircuit.g:3307:1: rule__Measurement__Group__6__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:3467:1: rule__Measurement__Group__6__Impl : ( '(' ) ;
     public final void rule__Measurement__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3311:1: ( ( '(' ) )
-            // InternalQuCircuit.g:3312:1: ( '(' )
+            // InternalQuCircuit.g:3471:1: ( ( '(' ) )
+            // InternalQuCircuit.g:3472:1: ( '(' )
             {
-            // InternalQuCircuit.g:3312:1: ( '(' )
-            // InternalQuCircuit.g:3313:2: '('
+            // InternalQuCircuit.g:3472:1: ( '(' )
+            // InternalQuCircuit.g:3473:2: '('
             {
              before(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_6()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_6()); 
 
             }
@@ -10154,16 +10647,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__7"
-    // InternalQuCircuit.g:3322:1: rule__Measurement__Group__7 : rule__Measurement__Group__7__Impl rule__Measurement__Group__8 ;
+    // InternalQuCircuit.g:3482:1: rule__Measurement__Group__7 : rule__Measurement__Group__7__Impl rule__Measurement__Group__8 ;
     public final void rule__Measurement__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3326:1: ( rule__Measurement__Group__7__Impl rule__Measurement__Group__8 )
-            // InternalQuCircuit.g:3327:2: rule__Measurement__Group__7__Impl rule__Measurement__Group__8
+            // InternalQuCircuit.g:3486:1: ( rule__Measurement__Group__7__Impl rule__Measurement__Group__8 )
+            // InternalQuCircuit.g:3487:2: rule__Measurement__Group__7__Impl rule__Measurement__Group__8
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Measurement__Group__7__Impl();
 
             state._fsp--;
@@ -10192,21 +10685,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__7__Impl"
-    // InternalQuCircuit.g:3334:1: rule__Measurement__Group__7__Impl : ( ( rule__Measurement__TargetQubitsAssignment_7 ) ) ;
+    // InternalQuCircuit.g:3494:1: rule__Measurement__Group__7__Impl : ( ( rule__Measurement__TargetQubitsAssignment_7 ) ) ;
     public final void rule__Measurement__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3338:1: ( ( ( rule__Measurement__TargetQubitsAssignment_7 ) ) )
-            // InternalQuCircuit.g:3339:1: ( ( rule__Measurement__TargetQubitsAssignment_7 ) )
+            // InternalQuCircuit.g:3498:1: ( ( ( rule__Measurement__TargetQubitsAssignment_7 ) ) )
+            // InternalQuCircuit.g:3499:1: ( ( rule__Measurement__TargetQubitsAssignment_7 ) )
             {
-            // InternalQuCircuit.g:3339:1: ( ( rule__Measurement__TargetQubitsAssignment_7 ) )
-            // InternalQuCircuit.g:3340:2: ( rule__Measurement__TargetQubitsAssignment_7 )
+            // InternalQuCircuit.g:3499:1: ( ( rule__Measurement__TargetQubitsAssignment_7 ) )
+            // InternalQuCircuit.g:3500:2: ( rule__Measurement__TargetQubitsAssignment_7 )
             {
              before(grammarAccess.getMeasurementAccess().getTargetQubitsAssignment_7()); 
-            // InternalQuCircuit.g:3341:2: ( rule__Measurement__TargetQubitsAssignment_7 )
-            // InternalQuCircuit.g:3341:3: rule__Measurement__TargetQubitsAssignment_7
+            // InternalQuCircuit.g:3501:2: ( rule__Measurement__TargetQubitsAssignment_7 )
+            // InternalQuCircuit.g:3501:3: rule__Measurement__TargetQubitsAssignment_7
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__TargetQubitsAssignment_7();
@@ -10239,16 +10732,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__8"
-    // InternalQuCircuit.g:3349:1: rule__Measurement__Group__8 : rule__Measurement__Group__8__Impl rule__Measurement__Group__9 ;
+    // InternalQuCircuit.g:3509:1: rule__Measurement__Group__8 : rule__Measurement__Group__8__Impl rule__Measurement__Group__9 ;
     public final void rule__Measurement__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3353:1: ( rule__Measurement__Group__8__Impl rule__Measurement__Group__9 )
-            // InternalQuCircuit.g:3354:2: rule__Measurement__Group__8__Impl rule__Measurement__Group__9
+            // InternalQuCircuit.g:3513:1: ( rule__Measurement__Group__8__Impl rule__Measurement__Group__9 )
+            // InternalQuCircuit.g:3514:2: rule__Measurement__Group__8__Impl rule__Measurement__Group__9
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group__8__Impl();
 
             state._fsp--;
@@ -10277,20 +10770,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__8__Impl"
-    // InternalQuCircuit.g:3361:1: rule__Measurement__Group__8__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:3521:1: rule__Measurement__Group__8__Impl : ( ')' ) ;
     public final void rule__Measurement__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3365:1: ( ( ')' ) )
-            // InternalQuCircuit.g:3366:1: ( ')' )
+            // InternalQuCircuit.g:3525:1: ( ( ')' ) )
+            // InternalQuCircuit.g:3526:1: ( ')' )
             {
-            // InternalQuCircuit.g:3366:1: ( ')' )
-            // InternalQuCircuit.g:3367:2: ')'
+            // InternalQuCircuit.g:3526:1: ( ')' )
+            // InternalQuCircuit.g:3527:2: ')'
             {
              before(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_8()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_8()); 
 
             }
@@ -10314,16 +10807,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__9"
-    // InternalQuCircuit.g:3376:1: rule__Measurement__Group__9 : rule__Measurement__Group__9__Impl rule__Measurement__Group__10 ;
+    // InternalQuCircuit.g:3536:1: rule__Measurement__Group__9 : rule__Measurement__Group__9__Impl rule__Measurement__Group__10 ;
     public final void rule__Measurement__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3380:1: ( rule__Measurement__Group__9__Impl rule__Measurement__Group__10 )
-            // InternalQuCircuit.g:3381:2: rule__Measurement__Group__9__Impl rule__Measurement__Group__10
+            // InternalQuCircuit.g:3540:1: ( rule__Measurement__Group__9__Impl rule__Measurement__Group__10 )
+            // InternalQuCircuit.g:3541:2: rule__Measurement__Group__9__Impl rule__Measurement__Group__10
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group__9__Impl();
 
             state._fsp--;
@@ -10352,35 +10845,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__9__Impl"
-    // InternalQuCircuit.g:3388:1: rule__Measurement__Group__9__Impl : ( ( rule__Measurement__Group_9__0 )* ) ;
+    // InternalQuCircuit.g:3548:1: rule__Measurement__Group__9__Impl : ( ( rule__Measurement__Group_9__0 )* ) ;
     public final void rule__Measurement__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3392:1: ( ( ( rule__Measurement__Group_9__0 )* ) )
-            // InternalQuCircuit.g:3393:1: ( ( rule__Measurement__Group_9__0 )* )
+            // InternalQuCircuit.g:3552:1: ( ( ( rule__Measurement__Group_9__0 )* ) )
+            // InternalQuCircuit.g:3553:1: ( ( rule__Measurement__Group_9__0 )* )
             {
-            // InternalQuCircuit.g:3393:1: ( ( rule__Measurement__Group_9__0 )* )
-            // InternalQuCircuit.g:3394:2: ( rule__Measurement__Group_9__0 )*
+            // InternalQuCircuit.g:3553:1: ( ( rule__Measurement__Group_9__0 )* )
+            // InternalQuCircuit.g:3554:2: ( rule__Measurement__Group_9__0 )*
             {
              before(grammarAccess.getMeasurementAccess().getGroup_9()); 
-            // InternalQuCircuit.g:3395:2: ( rule__Measurement__Group_9__0 )*
-            loop24:
+            // InternalQuCircuit.g:3555:2: ( rule__Measurement__Group_9__0 )*
+            loop26:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( (LA24_0==24) ) {
-                    alt24=1;
+                if ( (LA26_0==26) ) {
+                    alt26=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt26) {
             	case 1 :
-            	    // InternalQuCircuit.g:3395:3: rule__Measurement__Group_9__0
+            	    // InternalQuCircuit.g:3555:3: rule__Measurement__Group_9__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Measurement__Group_9__0();
 
             	    state._fsp--;
@@ -10390,7 +10883,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop26;
                 }
             } while (true);
 
@@ -10417,14 +10910,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__10"
-    // InternalQuCircuit.g:3403:1: rule__Measurement__Group__10 : rule__Measurement__Group__10__Impl rule__Measurement__Group__11 ;
+    // InternalQuCircuit.g:3563:1: rule__Measurement__Group__10 : rule__Measurement__Group__10__Impl rule__Measurement__Group__11 ;
     public final void rule__Measurement__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3407:1: ( rule__Measurement__Group__10__Impl rule__Measurement__Group__11 )
-            // InternalQuCircuit.g:3408:2: rule__Measurement__Group__10__Impl rule__Measurement__Group__11
+            // InternalQuCircuit.g:3567:1: ( rule__Measurement__Group__10__Impl rule__Measurement__Group__11 )
+            // InternalQuCircuit.g:3568:2: rule__Measurement__Group__10__Impl rule__Measurement__Group__11
             {
             pushFollow(FOLLOW_33);
             rule__Measurement__Group__10__Impl();
@@ -10455,20 +10948,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__10__Impl"
-    // InternalQuCircuit.g:3415:1: rule__Measurement__Group__10__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:3575:1: rule__Measurement__Group__10__Impl : ( ']' ) ;
     public final void rule__Measurement__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3419:1: ( ( ']' ) )
-            // InternalQuCircuit.g:3420:1: ( ']' )
+            // InternalQuCircuit.g:3579:1: ( ( ']' ) )
+            // InternalQuCircuit.g:3580:1: ( ']' )
             {
-            // InternalQuCircuit.g:3420:1: ( ']' )
-            // InternalQuCircuit.g:3421:2: ']'
+            // InternalQuCircuit.g:3580:1: ( ']' )
+            // InternalQuCircuit.g:3581:2: ']'
             {
              before(grammarAccess.getMeasurementAccess().getRightSquareBracketKeyword_10()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getRightSquareBracketKeyword_10()); 
 
             }
@@ -10492,16 +10985,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__11"
-    // InternalQuCircuit.g:3430:1: rule__Measurement__Group__11 : rule__Measurement__Group__11__Impl rule__Measurement__Group__12 ;
+    // InternalQuCircuit.g:3590:1: rule__Measurement__Group__11 : rule__Measurement__Group__11__Impl rule__Measurement__Group__12 ;
     public final void rule__Measurement__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3434:1: ( rule__Measurement__Group__11__Impl rule__Measurement__Group__12 )
-            // InternalQuCircuit.g:3435:2: rule__Measurement__Group__11__Impl rule__Measurement__Group__12
+            // InternalQuCircuit.g:3594:1: ( rule__Measurement__Group__11__Impl rule__Measurement__Group__12 )
+            // InternalQuCircuit.g:3595:2: rule__Measurement__Group__11__Impl rule__Measurement__Group__12
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Measurement__Group__11__Impl();
 
             state._fsp--;
@@ -10530,20 +11023,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__11__Impl"
-    // InternalQuCircuit.g:3442:1: rule__Measurement__Group__11__Impl : ( 'classicBits' ) ;
+    // InternalQuCircuit.g:3602:1: rule__Measurement__Group__11__Impl : ( 'classicBits' ) ;
     public final void rule__Measurement__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3446:1: ( ( 'classicBits' ) )
-            // InternalQuCircuit.g:3447:1: ( 'classicBits' )
+            // InternalQuCircuit.g:3606:1: ( ( 'classicBits' ) )
+            // InternalQuCircuit.g:3607:1: ( 'classicBits' )
             {
-            // InternalQuCircuit.g:3447:1: ( 'classicBits' )
-            // InternalQuCircuit.g:3448:2: 'classicBits'
+            // InternalQuCircuit.g:3607:1: ( 'classicBits' )
+            // InternalQuCircuit.g:3608:2: 'classicBits'
             {
              before(grammarAccess.getMeasurementAccess().getClassicBitsKeyword_11()); 
-            match(input,40,FOLLOW_2); 
+            match(input,39,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getClassicBitsKeyword_11()); 
 
             }
@@ -10567,16 +11060,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__12"
-    // InternalQuCircuit.g:3457:1: rule__Measurement__Group__12 : rule__Measurement__Group__12__Impl rule__Measurement__Group__13 ;
+    // InternalQuCircuit.g:3617:1: rule__Measurement__Group__12 : rule__Measurement__Group__12__Impl rule__Measurement__Group__13 ;
     public final void rule__Measurement__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3461:1: ( rule__Measurement__Group__12__Impl rule__Measurement__Group__13 )
-            // InternalQuCircuit.g:3462:2: rule__Measurement__Group__12__Impl rule__Measurement__Group__13
+            // InternalQuCircuit.g:3621:1: ( rule__Measurement__Group__12__Impl rule__Measurement__Group__13 )
+            // InternalQuCircuit.g:3622:2: rule__Measurement__Group__12__Impl rule__Measurement__Group__13
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Measurement__Group__12__Impl();
 
             state._fsp--;
@@ -10605,20 +11098,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__12__Impl"
-    // InternalQuCircuit.g:3469:1: rule__Measurement__Group__12__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:3629:1: rule__Measurement__Group__12__Impl : ( '[' ) ;
     public final void rule__Measurement__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3473:1: ( ( '[' ) )
-            // InternalQuCircuit.g:3474:1: ( '[' )
+            // InternalQuCircuit.g:3633:1: ( ( '[' ) )
+            // InternalQuCircuit.g:3634:1: ( '[' )
             {
-            // InternalQuCircuit.g:3474:1: ( '[' )
-            // InternalQuCircuit.g:3475:2: '['
+            // InternalQuCircuit.g:3634:1: ( '[' )
+            // InternalQuCircuit.g:3635:2: '['
             {
              before(grammarAccess.getMeasurementAccess().getLeftSquareBracketKeyword_12()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getLeftSquareBracketKeyword_12()); 
 
             }
@@ -10642,16 +11135,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__13"
-    // InternalQuCircuit.g:3484:1: rule__Measurement__Group__13 : rule__Measurement__Group__13__Impl rule__Measurement__Group__14 ;
+    // InternalQuCircuit.g:3644:1: rule__Measurement__Group__13 : rule__Measurement__Group__13__Impl rule__Measurement__Group__14 ;
     public final void rule__Measurement__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3488:1: ( rule__Measurement__Group__13__Impl rule__Measurement__Group__14 )
-            // InternalQuCircuit.g:3489:2: rule__Measurement__Group__13__Impl rule__Measurement__Group__14
+            // InternalQuCircuit.g:3648:1: ( rule__Measurement__Group__13__Impl rule__Measurement__Group__14 )
+            // InternalQuCircuit.g:3649:2: rule__Measurement__Group__13__Impl rule__Measurement__Group__14
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Measurement__Group__13__Impl();
 
             state._fsp--;
@@ -10680,20 +11173,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__13__Impl"
-    // InternalQuCircuit.g:3496:1: rule__Measurement__Group__13__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:3656:1: rule__Measurement__Group__13__Impl : ( '(' ) ;
     public final void rule__Measurement__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3500:1: ( ( '(' ) )
-            // InternalQuCircuit.g:3501:1: ( '(' )
+            // InternalQuCircuit.g:3660:1: ( ( '(' ) )
+            // InternalQuCircuit.g:3661:1: ( '(' )
             {
-            // InternalQuCircuit.g:3501:1: ( '(' )
-            // InternalQuCircuit.g:3502:2: '('
+            // InternalQuCircuit.g:3661:1: ( '(' )
+            // InternalQuCircuit.g:3662:2: '('
             {
              before(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_13()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_13()); 
 
             }
@@ -10717,16 +11210,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__14"
-    // InternalQuCircuit.g:3511:1: rule__Measurement__Group__14 : rule__Measurement__Group__14__Impl rule__Measurement__Group__15 ;
+    // InternalQuCircuit.g:3671:1: rule__Measurement__Group__14 : rule__Measurement__Group__14__Impl rule__Measurement__Group__15 ;
     public final void rule__Measurement__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3515:1: ( rule__Measurement__Group__14__Impl rule__Measurement__Group__15 )
-            // InternalQuCircuit.g:3516:2: rule__Measurement__Group__14__Impl rule__Measurement__Group__15
+            // InternalQuCircuit.g:3675:1: ( rule__Measurement__Group__14__Impl rule__Measurement__Group__15 )
+            // InternalQuCircuit.g:3676:2: rule__Measurement__Group__14__Impl rule__Measurement__Group__15
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Measurement__Group__14__Impl();
 
             state._fsp--;
@@ -10755,21 +11248,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__14__Impl"
-    // InternalQuCircuit.g:3523:1: rule__Measurement__Group__14__Impl : ( ( rule__Measurement__ClassicBitsAssignment_14 ) ) ;
+    // InternalQuCircuit.g:3683:1: rule__Measurement__Group__14__Impl : ( ( rule__Measurement__ClassicBitsAssignment_14 ) ) ;
     public final void rule__Measurement__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3527:1: ( ( ( rule__Measurement__ClassicBitsAssignment_14 ) ) )
-            // InternalQuCircuit.g:3528:1: ( ( rule__Measurement__ClassicBitsAssignment_14 ) )
+            // InternalQuCircuit.g:3687:1: ( ( ( rule__Measurement__ClassicBitsAssignment_14 ) ) )
+            // InternalQuCircuit.g:3688:1: ( ( rule__Measurement__ClassicBitsAssignment_14 ) )
             {
-            // InternalQuCircuit.g:3528:1: ( ( rule__Measurement__ClassicBitsAssignment_14 ) )
-            // InternalQuCircuit.g:3529:2: ( rule__Measurement__ClassicBitsAssignment_14 )
+            // InternalQuCircuit.g:3688:1: ( ( rule__Measurement__ClassicBitsAssignment_14 ) )
+            // InternalQuCircuit.g:3689:2: ( rule__Measurement__ClassicBitsAssignment_14 )
             {
              before(grammarAccess.getMeasurementAccess().getClassicBitsAssignment_14()); 
-            // InternalQuCircuit.g:3530:2: ( rule__Measurement__ClassicBitsAssignment_14 )
-            // InternalQuCircuit.g:3530:3: rule__Measurement__ClassicBitsAssignment_14
+            // InternalQuCircuit.g:3690:2: ( rule__Measurement__ClassicBitsAssignment_14 )
+            // InternalQuCircuit.g:3690:3: rule__Measurement__ClassicBitsAssignment_14
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__ClassicBitsAssignment_14();
@@ -10802,16 +11295,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__15"
-    // InternalQuCircuit.g:3538:1: rule__Measurement__Group__15 : rule__Measurement__Group__15__Impl rule__Measurement__Group__16 ;
+    // InternalQuCircuit.g:3698:1: rule__Measurement__Group__15 : rule__Measurement__Group__15__Impl rule__Measurement__Group__16 ;
     public final void rule__Measurement__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3542:1: ( rule__Measurement__Group__15__Impl rule__Measurement__Group__16 )
-            // InternalQuCircuit.g:3543:2: rule__Measurement__Group__15__Impl rule__Measurement__Group__16
+            // InternalQuCircuit.g:3702:1: ( rule__Measurement__Group__15__Impl rule__Measurement__Group__16 )
+            // InternalQuCircuit.g:3703:2: rule__Measurement__Group__15__Impl rule__Measurement__Group__16
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group__15__Impl();
 
             state._fsp--;
@@ -10840,20 +11333,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__15__Impl"
-    // InternalQuCircuit.g:3550:1: rule__Measurement__Group__15__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:3710:1: rule__Measurement__Group__15__Impl : ( ')' ) ;
     public final void rule__Measurement__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3554:1: ( ( ')' ) )
-            // InternalQuCircuit.g:3555:1: ( ')' )
+            // InternalQuCircuit.g:3714:1: ( ( ')' ) )
+            // InternalQuCircuit.g:3715:1: ( ')' )
             {
-            // InternalQuCircuit.g:3555:1: ( ')' )
-            // InternalQuCircuit.g:3556:2: ')'
+            // InternalQuCircuit.g:3715:1: ( ')' )
+            // InternalQuCircuit.g:3716:2: ')'
             {
              before(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_15()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_15()); 
 
             }
@@ -10877,16 +11370,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__16"
-    // InternalQuCircuit.g:3565:1: rule__Measurement__Group__16 : rule__Measurement__Group__16__Impl rule__Measurement__Group__17 ;
+    // InternalQuCircuit.g:3725:1: rule__Measurement__Group__16 : rule__Measurement__Group__16__Impl rule__Measurement__Group__17 ;
     public final void rule__Measurement__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3569:1: ( rule__Measurement__Group__16__Impl rule__Measurement__Group__17 )
-            // InternalQuCircuit.g:3570:2: rule__Measurement__Group__16__Impl rule__Measurement__Group__17
+            // InternalQuCircuit.g:3729:1: ( rule__Measurement__Group__16__Impl rule__Measurement__Group__17 )
+            // InternalQuCircuit.g:3730:2: rule__Measurement__Group__16__Impl rule__Measurement__Group__17
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group__16__Impl();
 
             state._fsp--;
@@ -10915,35 +11408,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__16__Impl"
-    // InternalQuCircuit.g:3577:1: rule__Measurement__Group__16__Impl : ( ( rule__Measurement__Group_16__0 )* ) ;
+    // InternalQuCircuit.g:3737:1: rule__Measurement__Group__16__Impl : ( ( rule__Measurement__Group_16__0 )* ) ;
     public final void rule__Measurement__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3581:1: ( ( ( rule__Measurement__Group_16__0 )* ) )
-            // InternalQuCircuit.g:3582:1: ( ( rule__Measurement__Group_16__0 )* )
+            // InternalQuCircuit.g:3741:1: ( ( ( rule__Measurement__Group_16__0 )* ) )
+            // InternalQuCircuit.g:3742:1: ( ( rule__Measurement__Group_16__0 )* )
             {
-            // InternalQuCircuit.g:3582:1: ( ( rule__Measurement__Group_16__0 )* )
-            // InternalQuCircuit.g:3583:2: ( rule__Measurement__Group_16__0 )*
+            // InternalQuCircuit.g:3742:1: ( ( rule__Measurement__Group_16__0 )* )
+            // InternalQuCircuit.g:3743:2: ( rule__Measurement__Group_16__0 )*
             {
              before(grammarAccess.getMeasurementAccess().getGroup_16()); 
-            // InternalQuCircuit.g:3584:2: ( rule__Measurement__Group_16__0 )*
-            loop25:
+            // InternalQuCircuit.g:3744:2: ( rule__Measurement__Group_16__0 )*
+            loop27:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA25_0==24) ) {
-                    alt25=1;
+                if ( (LA27_0==26) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt27) {
             	case 1 :
-            	    // InternalQuCircuit.g:3584:3: rule__Measurement__Group_16__0
+            	    // InternalQuCircuit.g:3744:3: rule__Measurement__Group_16__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Measurement__Group_16__0();
 
             	    state._fsp--;
@@ -10953,7 +11446,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop27;
                 }
             } while (true);
 
@@ -10980,16 +11473,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__17"
-    // InternalQuCircuit.g:3592:1: rule__Measurement__Group__17 : rule__Measurement__Group__17__Impl rule__Measurement__Group__18 ;
+    // InternalQuCircuit.g:3752:1: rule__Measurement__Group__17 : rule__Measurement__Group__17__Impl rule__Measurement__Group__18 ;
     public final void rule__Measurement__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3596:1: ( rule__Measurement__Group__17__Impl rule__Measurement__Group__18 )
-            // InternalQuCircuit.g:3597:2: rule__Measurement__Group__17__Impl rule__Measurement__Group__18
+            // InternalQuCircuit.g:3756:1: ( rule__Measurement__Group__17__Impl rule__Measurement__Group__18 )
+            // InternalQuCircuit.g:3757:2: rule__Measurement__Group__17__Impl rule__Measurement__Group__18
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_26);
             rule__Measurement__Group__17__Impl();
 
             state._fsp--;
@@ -11018,20 +11511,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__17__Impl"
-    // InternalQuCircuit.g:3604:1: rule__Measurement__Group__17__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:3764:1: rule__Measurement__Group__17__Impl : ( ']' ) ;
     public final void rule__Measurement__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3608:1: ( ( ']' ) )
-            // InternalQuCircuit.g:3609:1: ( ']' )
+            // InternalQuCircuit.g:3768:1: ( ( ']' ) )
+            // InternalQuCircuit.g:3769:1: ( ']' )
             {
-            // InternalQuCircuit.g:3609:1: ( ']' )
-            // InternalQuCircuit.g:3610:2: ']'
+            // InternalQuCircuit.g:3769:1: ( ']' )
+            // InternalQuCircuit.g:3770:2: ']'
             {
              before(grammarAccess.getMeasurementAccess().getRightSquareBracketKeyword_17()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getRightSquareBracketKeyword_17()); 
 
             }
@@ -11055,14 +11548,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__18"
-    // InternalQuCircuit.g:3619:1: rule__Measurement__Group__18 : rule__Measurement__Group__18__Impl ;
+    // InternalQuCircuit.g:3779:1: rule__Measurement__Group__18 : rule__Measurement__Group__18__Impl ;
     public final void rule__Measurement__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3623:1: ( rule__Measurement__Group__18__Impl )
-            // InternalQuCircuit.g:3624:2: rule__Measurement__Group__18__Impl
+            // InternalQuCircuit.g:3783:1: ( rule__Measurement__Group__18__Impl )
+            // InternalQuCircuit.g:3784:2: rule__Measurement__Group__18__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__Group__18__Impl();
@@ -11088,17 +11581,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__18__Impl"
-    // InternalQuCircuit.g:3630:1: rule__Measurement__Group__18__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:3790:1: rule__Measurement__Group__18__Impl : ( '}' ) ;
     public final void rule__Measurement__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3634:1: ( ( '}' ) )
-            // InternalQuCircuit.g:3635:1: ( '}' )
+            // InternalQuCircuit.g:3794:1: ( ( '}' ) )
+            // InternalQuCircuit.g:3795:1: ( '}' )
             {
-            // InternalQuCircuit.g:3635:1: ( '}' )
-            // InternalQuCircuit.g:3636:2: '}'
+            // InternalQuCircuit.g:3795:1: ( '}' )
+            // InternalQuCircuit.g:3796:2: '}'
             {
              before(grammarAccess.getMeasurementAccess().getRightCurlyBracketKeyword_18()); 
             match(input,18,FOLLOW_2); 
@@ -11125,14 +11618,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_3__0"
-    // InternalQuCircuit.g:3646:1: rule__Measurement__Group_3__0 : rule__Measurement__Group_3__0__Impl rule__Measurement__Group_3__1 ;
+    // InternalQuCircuit.g:3806:1: rule__Measurement__Group_3__0 : rule__Measurement__Group_3__0__Impl rule__Measurement__Group_3__1 ;
     public final void rule__Measurement__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3650:1: ( rule__Measurement__Group_3__0__Impl rule__Measurement__Group_3__1 )
-            // InternalQuCircuit.g:3651:2: rule__Measurement__Group_3__0__Impl rule__Measurement__Group_3__1
+            // InternalQuCircuit.g:3810:1: ( rule__Measurement__Group_3__0__Impl rule__Measurement__Group_3__1 )
+            // InternalQuCircuit.g:3811:2: rule__Measurement__Group_3__0__Impl rule__Measurement__Group_3__1
             {
             pushFollow(FOLLOW_3);
             rule__Measurement__Group_3__0__Impl();
@@ -11163,20 +11656,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_3__0__Impl"
-    // InternalQuCircuit.g:3658:1: rule__Measurement__Group_3__0__Impl : ( 'operation' ) ;
+    // InternalQuCircuit.g:3818:1: rule__Measurement__Group_3__0__Impl : ( 'operation' ) ;
     public final void rule__Measurement__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3662:1: ( ( 'operation' ) )
-            // InternalQuCircuit.g:3663:1: ( 'operation' )
+            // InternalQuCircuit.g:3822:1: ( ( 'operation' ) )
+            // InternalQuCircuit.g:3823:1: ( 'operation' )
             {
-            // InternalQuCircuit.g:3663:1: ( 'operation' )
-            // InternalQuCircuit.g:3664:2: 'operation'
+            // InternalQuCircuit.g:3823:1: ( 'operation' )
+            // InternalQuCircuit.g:3824:2: 'operation'
             {
              before(grammarAccess.getMeasurementAccess().getOperationKeyword_3_0()); 
-            match(input,26,FOLLOW_2); 
+            match(input,28,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getOperationKeyword_3_0()); 
 
             }
@@ -11200,14 +11693,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_3__1"
-    // InternalQuCircuit.g:3673:1: rule__Measurement__Group_3__1 : rule__Measurement__Group_3__1__Impl ;
+    // InternalQuCircuit.g:3833:1: rule__Measurement__Group_3__1 : rule__Measurement__Group_3__1__Impl ;
     public final void rule__Measurement__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3677:1: ( rule__Measurement__Group_3__1__Impl )
-            // InternalQuCircuit.g:3678:2: rule__Measurement__Group_3__1__Impl
+            // InternalQuCircuit.g:3837:1: ( rule__Measurement__Group_3__1__Impl )
+            // InternalQuCircuit.g:3838:2: rule__Measurement__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__Group_3__1__Impl();
@@ -11233,21 +11726,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_3__1__Impl"
-    // InternalQuCircuit.g:3684:1: rule__Measurement__Group_3__1__Impl : ( ( rule__Measurement__OperationsAssignment_3_1 ) ) ;
+    // InternalQuCircuit.g:3844:1: rule__Measurement__Group_3__1__Impl : ( ( rule__Measurement__OperationsAssignment_3_1 ) ) ;
     public final void rule__Measurement__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3688:1: ( ( ( rule__Measurement__OperationsAssignment_3_1 ) ) )
-            // InternalQuCircuit.g:3689:1: ( ( rule__Measurement__OperationsAssignment_3_1 ) )
+            // InternalQuCircuit.g:3848:1: ( ( ( rule__Measurement__OperationsAssignment_3_1 ) ) )
+            // InternalQuCircuit.g:3849:1: ( ( rule__Measurement__OperationsAssignment_3_1 ) )
             {
-            // InternalQuCircuit.g:3689:1: ( ( rule__Measurement__OperationsAssignment_3_1 ) )
-            // InternalQuCircuit.g:3690:2: ( rule__Measurement__OperationsAssignment_3_1 )
+            // InternalQuCircuit.g:3849:1: ( ( rule__Measurement__OperationsAssignment_3_1 ) )
+            // InternalQuCircuit.g:3850:2: ( rule__Measurement__OperationsAssignment_3_1 )
             {
              before(grammarAccess.getMeasurementAccess().getOperationsAssignment_3_1()); 
-            // InternalQuCircuit.g:3691:2: ( rule__Measurement__OperationsAssignment_3_1 )
-            // InternalQuCircuit.g:3691:3: rule__Measurement__OperationsAssignment_3_1
+            // InternalQuCircuit.g:3851:2: ( rule__Measurement__OperationsAssignment_3_1 )
+            // InternalQuCircuit.g:3851:3: rule__Measurement__OperationsAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__OperationsAssignment_3_1();
@@ -11280,16 +11773,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__0"
-    // InternalQuCircuit.g:3700:1: rule__Measurement__Group_9__0 : rule__Measurement__Group_9__0__Impl rule__Measurement__Group_9__1 ;
+    // InternalQuCircuit.g:3860:1: rule__Measurement__Group_9__0 : rule__Measurement__Group_9__0__Impl rule__Measurement__Group_9__1 ;
     public final void rule__Measurement__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3704:1: ( rule__Measurement__Group_9__0__Impl rule__Measurement__Group_9__1 )
-            // InternalQuCircuit.g:3705:2: rule__Measurement__Group_9__0__Impl rule__Measurement__Group_9__1
+            // InternalQuCircuit.g:3864:1: ( rule__Measurement__Group_9__0__Impl rule__Measurement__Group_9__1 )
+            // InternalQuCircuit.g:3865:2: rule__Measurement__Group_9__0__Impl rule__Measurement__Group_9__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Measurement__Group_9__0__Impl();
 
             state._fsp--;
@@ -11318,20 +11811,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__0__Impl"
-    // InternalQuCircuit.g:3712:1: rule__Measurement__Group_9__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:3872:1: rule__Measurement__Group_9__0__Impl : ( ',' ) ;
     public final void rule__Measurement__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3716:1: ( ( ',' ) )
-            // InternalQuCircuit.g:3717:1: ( ',' )
+            // InternalQuCircuit.g:3876:1: ( ( ',' ) )
+            // InternalQuCircuit.g:3877:1: ( ',' )
             {
-            // InternalQuCircuit.g:3717:1: ( ',' )
-            // InternalQuCircuit.g:3718:2: ','
+            // InternalQuCircuit.g:3877:1: ( ',' )
+            // InternalQuCircuit.g:3878:2: ','
             {
              before(grammarAccess.getMeasurementAccess().getCommaKeyword_9_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getCommaKeyword_9_0()); 
 
             }
@@ -11355,16 +11848,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__1"
-    // InternalQuCircuit.g:3727:1: rule__Measurement__Group_9__1 : rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2 ;
+    // InternalQuCircuit.g:3887:1: rule__Measurement__Group_9__1 : rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2 ;
     public final void rule__Measurement__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3731:1: ( rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2 )
-            // InternalQuCircuit.g:3732:2: rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2
+            // InternalQuCircuit.g:3891:1: ( rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2 )
+            // InternalQuCircuit.g:3892:2: rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Measurement__Group_9__1__Impl();
 
             state._fsp--;
@@ -11393,20 +11886,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__1__Impl"
-    // InternalQuCircuit.g:3739:1: rule__Measurement__Group_9__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:3899:1: rule__Measurement__Group_9__1__Impl : ( '(' ) ;
     public final void rule__Measurement__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3743:1: ( ( '(' ) )
-            // InternalQuCircuit.g:3744:1: ( '(' )
+            // InternalQuCircuit.g:3903:1: ( ( '(' ) )
+            // InternalQuCircuit.g:3904:1: ( '(' )
             {
-            // InternalQuCircuit.g:3744:1: ( '(' )
-            // InternalQuCircuit.g:3745:2: '('
+            // InternalQuCircuit.g:3904:1: ( '(' )
+            // InternalQuCircuit.g:3905:2: '('
             {
              before(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_9_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_9_1()); 
 
             }
@@ -11430,16 +11923,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__2"
-    // InternalQuCircuit.g:3754:1: rule__Measurement__Group_9__2 : rule__Measurement__Group_9__2__Impl rule__Measurement__Group_9__3 ;
+    // InternalQuCircuit.g:3914:1: rule__Measurement__Group_9__2 : rule__Measurement__Group_9__2__Impl rule__Measurement__Group_9__3 ;
     public final void rule__Measurement__Group_9__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3758:1: ( rule__Measurement__Group_9__2__Impl rule__Measurement__Group_9__3 )
-            // InternalQuCircuit.g:3759:2: rule__Measurement__Group_9__2__Impl rule__Measurement__Group_9__3
+            // InternalQuCircuit.g:3918:1: ( rule__Measurement__Group_9__2__Impl rule__Measurement__Group_9__3 )
+            // InternalQuCircuit.g:3919:2: rule__Measurement__Group_9__2__Impl rule__Measurement__Group_9__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Measurement__Group_9__2__Impl();
 
             state._fsp--;
@@ -11468,21 +11961,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__2__Impl"
-    // InternalQuCircuit.g:3766:1: rule__Measurement__Group_9__2__Impl : ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) ) ;
+    // InternalQuCircuit.g:3926:1: rule__Measurement__Group_9__2__Impl : ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) ) ;
     public final void rule__Measurement__Group_9__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3770:1: ( ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) ) )
-            // InternalQuCircuit.g:3771:1: ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) )
+            // InternalQuCircuit.g:3930:1: ( ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) ) )
+            // InternalQuCircuit.g:3931:1: ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) )
             {
-            // InternalQuCircuit.g:3771:1: ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) )
-            // InternalQuCircuit.g:3772:2: ( rule__Measurement__TargetQubitsAssignment_9_2 )
+            // InternalQuCircuit.g:3931:1: ( ( rule__Measurement__TargetQubitsAssignment_9_2 ) )
+            // InternalQuCircuit.g:3932:2: ( rule__Measurement__TargetQubitsAssignment_9_2 )
             {
              before(grammarAccess.getMeasurementAccess().getTargetQubitsAssignment_9_2()); 
-            // InternalQuCircuit.g:3773:2: ( rule__Measurement__TargetQubitsAssignment_9_2 )
-            // InternalQuCircuit.g:3773:3: rule__Measurement__TargetQubitsAssignment_9_2
+            // InternalQuCircuit.g:3933:2: ( rule__Measurement__TargetQubitsAssignment_9_2 )
+            // InternalQuCircuit.g:3933:3: rule__Measurement__TargetQubitsAssignment_9_2
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__TargetQubitsAssignment_9_2();
@@ -11515,14 +12008,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__3"
-    // InternalQuCircuit.g:3781:1: rule__Measurement__Group_9__3 : rule__Measurement__Group_9__3__Impl ;
+    // InternalQuCircuit.g:3941:1: rule__Measurement__Group_9__3 : rule__Measurement__Group_9__3__Impl ;
     public final void rule__Measurement__Group_9__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3785:1: ( rule__Measurement__Group_9__3__Impl )
-            // InternalQuCircuit.g:3786:2: rule__Measurement__Group_9__3__Impl
+            // InternalQuCircuit.g:3945:1: ( rule__Measurement__Group_9__3__Impl )
+            // InternalQuCircuit.g:3946:2: rule__Measurement__Group_9__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__Group_9__3__Impl();
@@ -11548,20 +12041,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_9__3__Impl"
-    // InternalQuCircuit.g:3792:1: rule__Measurement__Group_9__3__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:3952:1: rule__Measurement__Group_9__3__Impl : ( ')' ) ;
     public final void rule__Measurement__Group_9__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3796:1: ( ( ')' ) )
-            // InternalQuCircuit.g:3797:1: ( ')' )
+            // InternalQuCircuit.g:3956:1: ( ( ')' ) )
+            // InternalQuCircuit.g:3957:1: ( ')' )
             {
-            // InternalQuCircuit.g:3797:1: ( ')' )
-            // InternalQuCircuit.g:3798:2: ')'
+            // InternalQuCircuit.g:3957:1: ( ')' )
+            // InternalQuCircuit.g:3958:2: ')'
             {
              before(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_9_3()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_9_3()); 
 
             }
@@ -11585,16 +12078,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__0"
-    // InternalQuCircuit.g:3808:1: rule__Measurement__Group_16__0 : rule__Measurement__Group_16__0__Impl rule__Measurement__Group_16__1 ;
+    // InternalQuCircuit.g:3968:1: rule__Measurement__Group_16__0 : rule__Measurement__Group_16__0__Impl rule__Measurement__Group_16__1 ;
     public final void rule__Measurement__Group_16__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3812:1: ( rule__Measurement__Group_16__0__Impl rule__Measurement__Group_16__1 )
-            // InternalQuCircuit.g:3813:2: rule__Measurement__Group_16__0__Impl rule__Measurement__Group_16__1
+            // InternalQuCircuit.g:3972:1: ( rule__Measurement__Group_16__0__Impl rule__Measurement__Group_16__1 )
+            // InternalQuCircuit.g:3973:2: rule__Measurement__Group_16__0__Impl rule__Measurement__Group_16__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Measurement__Group_16__0__Impl();
 
             state._fsp--;
@@ -11623,20 +12116,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__0__Impl"
-    // InternalQuCircuit.g:3820:1: rule__Measurement__Group_16__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:3980:1: rule__Measurement__Group_16__0__Impl : ( ',' ) ;
     public final void rule__Measurement__Group_16__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3824:1: ( ( ',' ) )
-            // InternalQuCircuit.g:3825:1: ( ',' )
+            // InternalQuCircuit.g:3984:1: ( ( ',' ) )
+            // InternalQuCircuit.g:3985:1: ( ',' )
             {
-            // InternalQuCircuit.g:3825:1: ( ',' )
-            // InternalQuCircuit.g:3826:2: ','
+            // InternalQuCircuit.g:3985:1: ( ',' )
+            // InternalQuCircuit.g:3986:2: ','
             {
              before(grammarAccess.getMeasurementAccess().getCommaKeyword_16_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getCommaKeyword_16_0()); 
 
             }
@@ -11660,16 +12153,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__1"
-    // InternalQuCircuit.g:3835:1: rule__Measurement__Group_16__1 : rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2 ;
+    // InternalQuCircuit.g:3995:1: rule__Measurement__Group_16__1 : rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2 ;
     public final void rule__Measurement__Group_16__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3839:1: ( rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2 )
-            // InternalQuCircuit.g:3840:2: rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2
+            // InternalQuCircuit.g:3999:1: ( rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2 )
+            // InternalQuCircuit.g:4000:2: rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Measurement__Group_16__1__Impl();
 
             state._fsp--;
@@ -11698,20 +12191,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__1__Impl"
-    // InternalQuCircuit.g:3847:1: rule__Measurement__Group_16__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:4007:1: rule__Measurement__Group_16__1__Impl : ( '(' ) ;
     public final void rule__Measurement__Group_16__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3851:1: ( ( '(' ) )
-            // InternalQuCircuit.g:3852:1: ( '(' )
+            // InternalQuCircuit.g:4011:1: ( ( '(' ) )
+            // InternalQuCircuit.g:4012:1: ( '(' )
             {
-            // InternalQuCircuit.g:3852:1: ( '(' )
-            // InternalQuCircuit.g:3853:2: '('
+            // InternalQuCircuit.g:4012:1: ( '(' )
+            // InternalQuCircuit.g:4013:2: '('
             {
              before(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_16_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getLeftParenthesisKeyword_16_1()); 
 
             }
@@ -11735,16 +12228,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__2"
-    // InternalQuCircuit.g:3862:1: rule__Measurement__Group_16__2 : rule__Measurement__Group_16__2__Impl rule__Measurement__Group_16__3 ;
+    // InternalQuCircuit.g:4022:1: rule__Measurement__Group_16__2 : rule__Measurement__Group_16__2__Impl rule__Measurement__Group_16__3 ;
     public final void rule__Measurement__Group_16__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3866:1: ( rule__Measurement__Group_16__2__Impl rule__Measurement__Group_16__3 )
-            // InternalQuCircuit.g:3867:2: rule__Measurement__Group_16__2__Impl rule__Measurement__Group_16__3
+            // InternalQuCircuit.g:4026:1: ( rule__Measurement__Group_16__2__Impl rule__Measurement__Group_16__3 )
+            // InternalQuCircuit.g:4027:2: rule__Measurement__Group_16__2__Impl rule__Measurement__Group_16__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Measurement__Group_16__2__Impl();
 
             state._fsp--;
@@ -11773,21 +12266,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__2__Impl"
-    // InternalQuCircuit.g:3874:1: rule__Measurement__Group_16__2__Impl : ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) ) ;
+    // InternalQuCircuit.g:4034:1: rule__Measurement__Group_16__2__Impl : ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) ) ;
     public final void rule__Measurement__Group_16__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3878:1: ( ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) ) )
-            // InternalQuCircuit.g:3879:1: ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) )
+            // InternalQuCircuit.g:4038:1: ( ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) ) )
+            // InternalQuCircuit.g:4039:1: ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) )
             {
-            // InternalQuCircuit.g:3879:1: ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) )
-            // InternalQuCircuit.g:3880:2: ( rule__Measurement__ClassicBitsAssignment_16_2 )
+            // InternalQuCircuit.g:4039:1: ( ( rule__Measurement__ClassicBitsAssignment_16_2 ) )
+            // InternalQuCircuit.g:4040:2: ( rule__Measurement__ClassicBitsAssignment_16_2 )
             {
              before(grammarAccess.getMeasurementAccess().getClassicBitsAssignment_16_2()); 
-            // InternalQuCircuit.g:3881:2: ( rule__Measurement__ClassicBitsAssignment_16_2 )
-            // InternalQuCircuit.g:3881:3: rule__Measurement__ClassicBitsAssignment_16_2
+            // InternalQuCircuit.g:4041:2: ( rule__Measurement__ClassicBitsAssignment_16_2 )
+            // InternalQuCircuit.g:4041:3: rule__Measurement__ClassicBitsAssignment_16_2
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__ClassicBitsAssignment_16_2();
@@ -11820,14 +12313,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__3"
-    // InternalQuCircuit.g:3889:1: rule__Measurement__Group_16__3 : rule__Measurement__Group_16__3__Impl ;
+    // InternalQuCircuit.g:4049:1: rule__Measurement__Group_16__3 : rule__Measurement__Group_16__3__Impl ;
     public final void rule__Measurement__Group_16__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3893:1: ( rule__Measurement__Group_16__3__Impl )
-            // InternalQuCircuit.g:3894:2: rule__Measurement__Group_16__3__Impl
+            // InternalQuCircuit.g:4053:1: ( rule__Measurement__Group_16__3__Impl )
+            // InternalQuCircuit.g:4054:2: rule__Measurement__Group_16__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Measurement__Group_16__3__Impl();
@@ -11853,20 +12346,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group_16__3__Impl"
-    // InternalQuCircuit.g:3900:1: rule__Measurement__Group_16__3__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:4060:1: rule__Measurement__Group_16__3__Impl : ( ')' ) ;
     public final void rule__Measurement__Group_16__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3904:1: ( ( ')' ) )
-            // InternalQuCircuit.g:3905:1: ( ')' )
+            // InternalQuCircuit.g:4064:1: ( ( ')' ) )
+            // InternalQuCircuit.g:4065:1: ( ')' )
             {
-            // InternalQuCircuit.g:3905:1: ( ')' )
-            // InternalQuCircuit.g:3906:2: ')'
+            // InternalQuCircuit.g:4065:1: ( ')' )
+            // InternalQuCircuit.g:4066:2: ')'
             {
              before(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_16_3()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getMeasurementAccess().getRightParenthesisKeyword_16_3()); 
 
             }
@@ -11890,14 +12383,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__0"
-    // InternalQuCircuit.g:3916:1: rule__CompositeQuantumGate__Group__0 : rule__CompositeQuantumGate__Group__0__Impl rule__CompositeQuantumGate__Group__1 ;
+    // InternalQuCircuit.g:4076:1: rule__CompositeQuantumGate__Group__0 : rule__CompositeQuantumGate__Group__0__Impl rule__CompositeQuantumGate__Group__1 ;
     public final void rule__CompositeQuantumGate__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3920:1: ( rule__CompositeQuantumGate__Group__0__Impl rule__CompositeQuantumGate__Group__1 )
-            // InternalQuCircuit.g:3921:2: rule__CompositeQuantumGate__Group__0__Impl rule__CompositeQuantumGate__Group__1
+            // InternalQuCircuit.g:4080:1: ( rule__CompositeQuantumGate__Group__0__Impl rule__CompositeQuantumGate__Group__1 )
+            // InternalQuCircuit.g:4081:2: rule__CompositeQuantumGate__Group__0__Impl rule__CompositeQuantumGate__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__CompositeQuantumGate__Group__0__Impl();
@@ -11928,20 +12421,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__0__Impl"
-    // InternalQuCircuit.g:3928:1: rule__CompositeQuantumGate__Group__0__Impl : ( 'CompositeQuantumGate' ) ;
+    // InternalQuCircuit.g:4088:1: rule__CompositeQuantumGate__Group__0__Impl : ( 'CompositeQuantumGate' ) ;
     public final void rule__CompositeQuantumGate__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3932:1: ( ( 'CompositeQuantumGate' ) )
-            // InternalQuCircuit.g:3933:1: ( 'CompositeQuantumGate' )
+            // InternalQuCircuit.g:4092:1: ( ( 'CompositeQuantumGate' ) )
+            // InternalQuCircuit.g:4093:1: ( 'CompositeQuantumGate' )
             {
-            // InternalQuCircuit.g:3933:1: ( 'CompositeQuantumGate' )
-            // InternalQuCircuit.g:3934:2: 'CompositeQuantumGate'
+            // InternalQuCircuit.g:4093:1: ( 'CompositeQuantumGate' )
+            // InternalQuCircuit.g:4094:2: 'CompositeQuantumGate'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getCompositeQuantumGateKeyword_0()); 
-            match(input,41,FOLLOW_2); 
+            match(input,40,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getCompositeQuantumGateKeyword_0()); 
 
             }
@@ -11965,16 +12458,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__1"
-    // InternalQuCircuit.g:3943:1: rule__CompositeQuantumGate__Group__1 : rule__CompositeQuantumGate__Group__1__Impl rule__CompositeQuantumGate__Group__2 ;
+    // InternalQuCircuit.g:4103:1: rule__CompositeQuantumGate__Group__1 : rule__CompositeQuantumGate__Group__1__Impl rule__CompositeQuantumGate__Group__2 ;
     public final void rule__CompositeQuantumGate__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3947:1: ( rule__CompositeQuantumGate__Group__1__Impl rule__CompositeQuantumGate__Group__2 )
-            // InternalQuCircuit.g:3948:2: rule__CompositeQuantumGate__Group__1__Impl rule__CompositeQuantumGate__Group__2
+            // InternalQuCircuit.g:4107:1: ( rule__CompositeQuantumGate__Group__1__Impl rule__CompositeQuantumGate__Group__2 )
+            // InternalQuCircuit.g:4108:2: rule__CompositeQuantumGate__Group__1__Impl rule__CompositeQuantumGate__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__CompositeQuantumGate__Group__1__Impl();
 
             state._fsp--;
@@ -12003,21 +12496,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__1__Impl"
-    // InternalQuCircuit.g:3955:1: rule__CompositeQuantumGate__Group__1__Impl : ( ( rule__CompositeQuantumGate__NameAssignment_1 ) ) ;
+    // InternalQuCircuit.g:4115:1: rule__CompositeQuantumGate__Group__1__Impl : ( ( rule__CompositeQuantumGate__NameAssignment_1 ) ) ;
     public final void rule__CompositeQuantumGate__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3959:1: ( ( ( rule__CompositeQuantumGate__NameAssignment_1 ) ) )
-            // InternalQuCircuit.g:3960:1: ( ( rule__CompositeQuantumGate__NameAssignment_1 ) )
+            // InternalQuCircuit.g:4119:1: ( ( ( rule__CompositeQuantumGate__NameAssignment_1 ) ) )
+            // InternalQuCircuit.g:4120:1: ( ( rule__CompositeQuantumGate__NameAssignment_1 ) )
             {
-            // InternalQuCircuit.g:3960:1: ( ( rule__CompositeQuantumGate__NameAssignment_1 ) )
-            // InternalQuCircuit.g:3961:2: ( rule__CompositeQuantumGate__NameAssignment_1 )
+            // InternalQuCircuit.g:4120:1: ( ( rule__CompositeQuantumGate__NameAssignment_1 ) )
+            // InternalQuCircuit.g:4121:2: ( rule__CompositeQuantumGate__NameAssignment_1 )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getNameAssignment_1()); 
-            // InternalQuCircuit.g:3962:2: ( rule__CompositeQuantumGate__NameAssignment_1 )
-            // InternalQuCircuit.g:3962:3: rule__CompositeQuantumGate__NameAssignment_1
+            // InternalQuCircuit.g:4122:2: ( rule__CompositeQuantumGate__NameAssignment_1 )
+            // InternalQuCircuit.g:4122:3: rule__CompositeQuantumGate__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__NameAssignment_1();
@@ -12050,14 +12543,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__2"
-    // InternalQuCircuit.g:3970:1: rule__CompositeQuantumGate__Group__2 : rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3 ;
+    // InternalQuCircuit.g:4130:1: rule__CompositeQuantumGate__Group__2 : rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3 ;
     public final void rule__CompositeQuantumGate__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3974:1: ( rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3 )
-            // InternalQuCircuit.g:3975:2: rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3
+            // InternalQuCircuit.g:4134:1: ( rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3 )
+            // InternalQuCircuit.g:4135:2: rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3
             {
             pushFollow(FOLLOW_34);
             rule__CompositeQuantumGate__Group__2__Impl();
@@ -12088,17 +12581,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__2__Impl"
-    // InternalQuCircuit.g:3982:1: rule__CompositeQuantumGate__Group__2__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:4142:1: rule__CompositeQuantumGate__Group__2__Impl : ( '{' ) ;
     public final void rule__CompositeQuantumGate__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3986:1: ( ( '{' ) )
-            // InternalQuCircuit.g:3987:1: ( '{' )
+            // InternalQuCircuit.g:4146:1: ( ( '{' ) )
+            // InternalQuCircuit.g:4147:1: ( '{' )
             {
-            // InternalQuCircuit.g:3987:1: ( '{' )
-            // InternalQuCircuit.g:3988:2: '{'
+            // InternalQuCircuit.g:4147:1: ( '{' )
+            // InternalQuCircuit.g:4148:2: '{'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,17,FOLLOW_2); 
@@ -12125,14 +12618,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__3"
-    // InternalQuCircuit.g:3997:1: rule__CompositeQuantumGate__Group__3 : rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4 ;
+    // InternalQuCircuit.g:4157:1: rule__CompositeQuantumGate__Group__3 : rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4 ;
     public final void rule__CompositeQuantumGate__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4001:1: ( rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4 )
-            // InternalQuCircuit.g:4002:2: rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4
+            // InternalQuCircuit.g:4161:1: ( rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4 )
+            // InternalQuCircuit.g:4162:2: rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4
             {
             pushFollow(FOLLOW_34);
             rule__CompositeQuantumGate__Group__3__Impl();
@@ -12163,29 +12656,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__3__Impl"
-    // InternalQuCircuit.g:4009:1: rule__CompositeQuantumGate__Group__3__Impl : ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? ) ;
+    // InternalQuCircuit.g:4169:1: rule__CompositeQuantumGate__Group__3__Impl : ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? ) ;
     public final void rule__CompositeQuantumGate__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4013:1: ( ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? ) )
-            // InternalQuCircuit.g:4014:1: ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? )
+            // InternalQuCircuit.g:4173:1: ( ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? ) )
+            // InternalQuCircuit.g:4174:1: ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? )
             {
-            // InternalQuCircuit.g:4014:1: ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? )
-            // InternalQuCircuit.g:4015:2: ( rule__CompositeQuantumGate__InverseFormAssignment_3 )?
+            // InternalQuCircuit.g:4174:1: ( ( rule__CompositeQuantumGate__InverseFormAssignment_3 )? )
+            // InternalQuCircuit.g:4175:2: ( rule__CompositeQuantumGate__InverseFormAssignment_3 )?
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getInverseFormAssignment_3()); 
-            // InternalQuCircuit.g:4016:2: ( rule__CompositeQuantumGate__InverseFormAssignment_3 )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // InternalQuCircuit.g:4176:2: ( rule__CompositeQuantumGate__InverseFormAssignment_3 )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA26_0==57) ) {
-                alt26=1;
+            if ( (LA28_0==56) ) {
+                alt28=1;
             }
-            switch (alt26) {
+            switch (alt28) {
                 case 1 :
-                    // InternalQuCircuit.g:4016:3: rule__CompositeQuantumGate__InverseFormAssignment_3
+                    // InternalQuCircuit.g:4176:3: rule__CompositeQuantumGate__InverseFormAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__CompositeQuantumGate__InverseFormAssignment_3();
@@ -12221,14 +12714,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__4"
-    // InternalQuCircuit.g:4024:1: rule__CompositeQuantumGate__Group__4 : rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5 ;
+    // InternalQuCircuit.g:4184:1: rule__CompositeQuantumGate__Group__4 : rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5 ;
     public final void rule__CompositeQuantumGate__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4028:1: ( rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5 )
-            // InternalQuCircuit.g:4029:2: rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5
+            // InternalQuCircuit.g:4188:1: ( rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5 )
+            // InternalQuCircuit.g:4189:2: rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5
             {
             pushFollow(FOLLOW_34);
             rule__CompositeQuantumGate__Group__4__Impl();
@@ -12259,29 +12752,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__4__Impl"
-    // InternalQuCircuit.g:4036:1: rule__CompositeQuantumGate__Group__4__Impl : ( ( rule__CompositeQuantumGate__Group_4__0 )? ) ;
+    // InternalQuCircuit.g:4196:1: rule__CompositeQuantumGate__Group__4__Impl : ( ( rule__CompositeQuantumGate__Group_4__0 )? ) ;
     public final void rule__CompositeQuantumGate__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4040:1: ( ( ( rule__CompositeQuantumGate__Group_4__0 )? ) )
-            // InternalQuCircuit.g:4041:1: ( ( rule__CompositeQuantumGate__Group_4__0 )? )
+            // InternalQuCircuit.g:4200:1: ( ( ( rule__CompositeQuantumGate__Group_4__0 )? ) )
+            // InternalQuCircuit.g:4201:1: ( ( rule__CompositeQuantumGate__Group_4__0 )? )
             {
-            // InternalQuCircuit.g:4041:1: ( ( rule__CompositeQuantumGate__Group_4__0 )? )
-            // InternalQuCircuit.g:4042:2: ( rule__CompositeQuantumGate__Group_4__0 )?
+            // InternalQuCircuit.g:4201:1: ( ( rule__CompositeQuantumGate__Group_4__0 )? )
+            // InternalQuCircuit.g:4202:2: ( rule__CompositeQuantumGate__Group_4__0 )?
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_4()); 
-            // InternalQuCircuit.g:4043:2: ( rule__CompositeQuantumGate__Group_4__0 )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // InternalQuCircuit.g:4203:2: ( rule__CompositeQuantumGate__Group_4__0 )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA27_0==26) ) {
-                alt27=1;
+            if ( (LA29_0==28) ) {
+                alt29=1;
             }
-            switch (alt27) {
+            switch (alt29) {
                 case 1 :
-                    // InternalQuCircuit.g:4043:3: rule__CompositeQuantumGate__Group_4__0
+                    // InternalQuCircuit.g:4203:3: rule__CompositeQuantumGate__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__CompositeQuantumGate__Group_4__0();
@@ -12317,16 +12810,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__5"
-    // InternalQuCircuit.g:4051:1: rule__CompositeQuantumGate__Group__5 : rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6 ;
+    // InternalQuCircuit.g:4211:1: rule__CompositeQuantumGate__Group__5 : rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6 ;
     public final void rule__CompositeQuantumGate__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4055:1: ( rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6 )
-            // InternalQuCircuit.g:4056:2: rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6
+            // InternalQuCircuit.g:4215:1: ( rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6 )
+            // InternalQuCircuit.g:4216:2: rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__CompositeQuantumGate__Group__5__Impl();
 
             state._fsp--;
@@ -12355,20 +12848,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__5__Impl"
-    // InternalQuCircuit.g:4063:1: rule__CompositeQuantumGate__Group__5__Impl : ( 'targetQubits' ) ;
+    // InternalQuCircuit.g:4223:1: rule__CompositeQuantumGate__Group__5__Impl : ( 'targetQubits' ) ;
     public final void rule__CompositeQuantumGate__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4067:1: ( ( 'targetQubits' ) )
-            // InternalQuCircuit.g:4068:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:4227:1: ( ( 'targetQubits' ) )
+            // InternalQuCircuit.g:4228:1: ( 'targetQubits' )
             {
-            // InternalQuCircuit.g:4068:1: ( 'targetQubits' )
-            // InternalQuCircuit.g:4069:2: 'targetQubits'
+            // InternalQuCircuit.g:4228:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:4229:2: 'targetQubits'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsKeyword_5()); 
-            match(input,27,FOLLOW_2); 
+            match(input,29,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsKeyword_5()); 
 
             }
@@ -12392,16 +12885,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__6"
-    // InternalQuCircuit.g:4078:1: rule__CompositeQuantumGate__Group__6 : rule__CompositeQuantumGate__Group__6__Impl rule__CompositeQuantumGate__Group__7 ;
+    // InternalQuCircuit.g:4238:1: rule__CompositeQuantumGate__Group__6 : rule__CompositeQuantumGate__Group__6__Impl rule__CompositeQuantumGate__Group__7 ;
     public final void rule__CompositeQuantumGate__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4082:1: ( rule__CompositeQuantumGate__Group__6__Impl rule__CompositeQuantumGate__Group__7 )
-            // InternalQuCircuit.g:4083:2: rule__CompositeQuantumGate__Group__6__Impl rule__CompositeQuantumGate__Group__7
+            // InternalQuCircuit.g:4242:1: ( rule__CompositeQuantumGate__Group__6__Impl rule__CompositeQuantumGate__Group__7 )
+            // InternalQuCircuit.g:4243:2: rule__CompositeQuantumGate__Group__6__Impl rule__CompositeQuantumGate__Group__7
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__CompositeQuantumGate__Group__6__Impl();
 
             state._fsp--;
@@ -12430,20 +12923,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__6__Impl"
-    // InternalQuCircuit.g:4090:1: rule__CompositeQuantumGate__Group__6__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:4250:1: rule__CompositeQuantumGate__Group__6__Impl : ( '[' ) ;
     public final void rule__CompositeQuantumGate__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4094:1: ( ( '[' ) )
-            // InternalQuCircuit.g:4095:1: ( '[' )
+            // InternalQuCircuit.g:4254:1: ( ( '[' ) )
+            // InternalQuCircuit.g:4255:1: ( '[' )
             {
-            // InternalQuCircuit.g:4095:1: ( '[' )
-            // InternalQuCircuit.g:4096:2: '['
+            // InternalQuCircuit.g:4255:1: ( '[' )
+            // InternalQuCircuit.g:4256:2: '['
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getLeftSquareBracketKeyword_6()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getLeftSquareBracketKeyword_6()); 
 
             }
@@ -12467,16 +12960,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__7"
-    // InternalQuCircuit.g:4105:1: rule__CompositeQuantumGate__Group__7 : rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8 ;
+    // InternalQuCircuit.g:4265:1: rule__CompositeQuantumGate__Group__7 : rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8 ;
     public final void rule__CompositeQuantumGate__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4109:1: ( rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8 )
-            // InternalQuCircuit.g:4110:2: rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8
+            // InternalQuCircuit.g:4269:1: ( rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8 )
+            // InternalQuCircuit.g:4270:2: rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__CompositeQuantumGate__Group__7__Impl();
 
             state._fsp--;
@@ -12505,20 +12998,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__7__Impl"
-    // InternalQuCircuit.g:4117:1: rule__CompositeQuantumGate__Group__7__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:4277:1: rule__CompositeQuantumGate__Group__7__Impl : ( '(' ) ;
     public final void rule__CompositeQuantumGate__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4121:1: ( ( '(' ) )
-            // InternalQuCircuit.g:4122:1: ( '(' )
+            // InternalQuCircuit.g:4281:1: ( ( '(' ) )
+            // InternalQuCircuit.g:4282:1: ( '(' )
             {
-            // InternalQuCircuit.g:4122:1: ( '(' )
-            // InternalQuCircuit.g:4123:2: '('
+            // InternalQuCircuit.g:4282:1: ( '(' )
+            // InternalQuCircuit.g:4283:2: '('
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getLeftParenthesisKeyword_7()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getLeftParenthesisKeyword_7()); 
 
             }
@@ -12542,16 +13035,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__8"
-    // InternalQuCircuit.g:4132:1: rule__CompositeQuantumGate__Group__8 : rule__CompositeQuantumGate__Group__8__Impl rule__CompositeQuantumGate__Group__9 ;
+    // InternalQuCircuit.g:4292:1: rule__CompositeQuantumGate__Group__8 : rule__CompositeQuantumGate__Group__8__Impl rule__CompositeQuantumGate__Group__9 ;
     public final void rule__CompositeQuantumGate__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4136:1: ( rule__CompositeQuantumGate__Group__8__Impl rule__CompositeQuantumGate__Group__9 )
-            // InternalQuCircuit.g:4137:2: rule__CompositeQuantumGate__Group__8__Impl rule__CompositeQuantumGate__Group__9
+            // InternalQuCircuit.g:4296:1: ( rule__CompositeQuantumGate__Group__8__Impl rule__CompositeQuantumGate__Group__9 )
+            // InternalQuCircuit.g:4297:2: rule__CompositeQuantumGate__Group__8__Impl rule__CompositeQuantumGate__Group__9
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__CompositeQuantumGate__Group__8__Impl();
 
             state._fsp--;
@@ -12580,21 +13073,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__8__Impl"
-    // InternalQuCircuit.g:4144:1: rule__CompositeQuantumGate__Group__8__Impl : ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) ) ;
+    // InternalQuCircuit.g:4304:1: rule__CompositeQuantumGate__Group__8__Impl : ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) ) ;
     public final void rule__CompositeQuantumGate__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4148:1: ( ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) ) )
-            // InternalQuCircuit.g:4149:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) )
+            // InternalQuCircuit.g:4308:1: ( ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) ) )
+            // InternalQuCircuit.g:4309:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) )
             {
-            // InternalQuCircuit.g:4149:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) )
-            // InternalQuCircuit.g:4150:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 )
+            // InternalQuCircuit.g:4309:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 ) )
+            // InternalQuCircuit.g:4310:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsAssignment_8()); 
-            // InternalQuCircuit.g:4151:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 )
-            // InternalQuCircuit.g:4151:3: rule__CompositeQuantumGate__TargetQubitsAssignment_8
+            // InternalQuCircuit.g:4311:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_8 )
+            // InternalQuCircuit.g:4311:3: rule__CompositeQuantumGate__TargetQubitsAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__TargetQubitsAssignment_8();
@@ -12627,16 +13120,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__9"
-    // InternalQuCircuit.g:4159:1: rule__CompositeQuantumGate__Group__9 : rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10 ;
+    // InternalQuCircuit.g:4319:1: rule__CompositeQuantumGate__Group__9 : rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10 ;
     public final void rule__CompositeQuantumGate__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4163:1: ( rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10 )
-            // InternalQuCircuit.g:4164:2: rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10
+            // InternalQuCircuit.g:4323:1: ( rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10 )
+            // InternalQuCircuit.g:4324:2: rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group__9__Impl();
 
             state._fsp--;
@@ -12665,20 +13158,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__9__Impl"
-    // InternalQuCircuit.g:4171:1: rule__CompositeQuantumGate__Group__9__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:4331:1: rule__CompositeQuantumGate__Group__9__Impl : ( ')' ) ;
     public final void rule__CompositeQuantumGate__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4175:1: ( ( ')' ) )
-            // InternalQuCircuit.g:4176:1: ( ')' )
+            // InternalQuCircuit.g:4335:1: ( ( ')' ) )
+            // InternalQuCircuit.g:4336:1: ( ')' )
             {
-            // InternalQuCircuit.g:4176:1: ( ')' )
-            // InternalQuCircuit.g:4177:2: ')'
+            // InternalQuCircuit.g:4336:1: ( ')' )
+            // InternalQuCircuit.g:4337:2: ')'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getRightParenthesisKeyword_9()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getRightParenthesisKeyword_9()); 
 
             }
@@ -12702,16 +13195,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__10"
-    // InternalQuCircuit.g:4186:1: rule__CompositeQuantumGate__Group__10 : rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11 ;
+    // InternalQuCircuit.g:4346:1: rule__CompositeQuantumGate__Group__10 : rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11 ;
     public final void rule__CompositeQuantumGate__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4190:1: ( rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11 )
-            // InternalQuCircuit.g:4191:2: rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11
+            // InternalQuCircuit.g:4350:1: ( rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11 )
+            // InternalQuCircuit.g:4351:2: rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group__10__Impl();
 
             state._fsp--;
@@ -12740,35 +13233,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__10__Impl"
-    // InternalQuCircuit.g:4198:1: rule__CompositeQuantumGate__Group__10__Impl : ( ( rule__CompositeQuantumGate__Group_10__0 )* ) ;
+    // InternalQuCircuit.g:4358:1: rule__CompositeQuantumGate__Group__10__Impl : ( ( rule__CompositeQuantumGate__Group_10__0 )* ) ;
     public final void rule__CompositeQuantumGate__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4202:1: ( ( ( rule__CompositeQuantumGate__Group_10__0 )* ) )
-            // InternalQuCircuit.g:4203:1: ( ( rule__CompositeQuantumGate__Group_10__0 )* )
+            // InternalQuCircuit.g:4362:1: ( ( ( rule__CompositeQuantumGate__Group_10__0 )* ) )
+            // InternalQuCircuit.g:4363:1: ( ( rule__CompositeQuantumGate__Group_10__0 )* )
             {
-            // InternalQuCircuit.g:4203:1: ( ( rule__CompositeQuantumGate__Group_10__0 )* )
-            // InternalQuCircuit.g:4204:2: ( rule__CompositeQuantumGate__Group_10__0 )*
+            // InternalQuCircuit.g:4363:1: ( ( rule__CompositeQuantumGate__Group_10__0 )* )
+            // InternalQuCircuit.g:4364:2: ( rule__CompositeQuantumGate__Group_10__0 )*
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_10()); 
-            // InternalQuCircuit.g:4205:2: ( rule__CompositeQuantumGate__Group_10__0 )*
-            loop28:
+            // InternalQuCircuit.g:4365:2: ( rule__CompositeQuantumGate__Group_10__0 )*
+            loop30:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA28_0==24) ) {
-                    alt28=1;
+                if ( (LA30_0==26) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt30) {
             	case 1 :
-            	    // InternalQuCircuit.g:4205:3: rule__CompositeQuantumGate__Group_10__0
+            	    // InternalQuCircuit.g:4365:3: rule__CompositeQuantumGate__Group_10__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__CompositeQuantumGate__Group_10__0();
 
             	    state._fsp--;
@@ -12778,7 +13271,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop30;
                 }
             } while (true);
 
@@ -12805,14 +13298,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__11"
-    // InternalQuCircuit.g:4213:1: rule__CompositeQuantumGate__Group__11 : rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12 ;
+    // InternalQuCircuit.g:4373:1: rule__CompositeQuantumGate__Group__11 : rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12 ;
     public final void rule__CompositeQuantumGate__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4217:1: ( rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12 )
-            // InternalQuCircuit.g:4218:2: rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12
+            // InternalQuCircuit.g:4377:1: ( rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12 )
+            // InternalQuCircuit.g:4378:2: rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12
             {
             pushFollow(FOLLOW_35);
             rule__CompositeQuantumGate__Group__11__Impl();
@@ -12843,20 +13336,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__11__Impl"
-    // InternalQuCircuit.g:4225:1: rule__CompositeQuantumGate__Group__11__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:4385:1: rule__CompositeQuantumGate__Group__11__Impl : ( ']' ) ;
     public final void rule__CompositeQuantumGate__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4229:1: ( ( ']' ) )
-            // InternalQuCircuit.g:4230:1: ( ']' )
+            // InternalQuCircuit.g:4389:1: ( ( ']' ) )
+            // InternalQuCircuit.g:4390:1: ( ']' )
             {
-            // InternalQuCircuit.g:4230:1: ( ']' )
-            // InternalQuCircuit.g:4231:2: ']'
+            // InternalQuCircuit.g:4390:1: ( ']' )
+            // InternalQuCircuit.g:4391:2: ']'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getRightSquareBracketKeyword_11()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getRightSquareBracketKeyword_11()); 
 
             }
@@ -12880,14 +13373,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__12"
-    // InternalQuCircuit.g:4240:1: rule__CompositeQuantumGate__Group__12 : rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13 ;
+    // InternalQuCircuit.g:4400:1: rule__CompositeQuantumGate__Group__12 : rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13 ;
     public final void rule__CompositeQuantumGate__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4244:1: ( rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13 )
-            // InternalQuCircuit.g:4245:2: rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13
+            // InternalQuCircuit.g:4404:1: ( rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13 )
+            // InternalQuCircuit.g:4405:2: rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13
             {
             pushFollow(FOLLOW_35);
             rule__CompositeQuantumGate__Group__12__Impl();
@@ -12918,29 +13411,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__12__Impl"
-    // InternalQuCircuit.g:4252:1: rule__CompositeQuantumGate__Group__12__Impl : ( ( rule__CompositeQuantumGate__Group_12__0 )? ) ;
+    // InternalQuCircuit.g:4412:1: rule__CompositeQuantumGate__Group__12__Impl : ( ( rule__CompositeQuantumGate__Group_12__0 )? ) ;
     public final void rule__CompositeQuantumGate__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4256:1: ( ( ( rule__CompositeQuantumGate__Group_12__0 )? ) )
-            // InternalQuCircuit.g:4257:1: ( ( rule__CompositeQuantumGate__Group_12__0 )? )
+            // InternalQuCircuit.g:4416:1: ( ( ( rule__CompositeQuantumGate__Group_12__0 )? ) )
+            // InternalQuCircuit.g:4417:1: ( ( rule__CompositeQuantumGate__Group_12__0 )? )
             {
-            // InternalQuCircuit.g:4257:1: ( ( rule__CompositeQuantumGate__Group_12__0 )? )
-            // InternalQuCircuit.g:4258:2: ( rule__CompositeQuantumGate__Group_12__0 )?
+            // InternalQuCircuit.g:4417:1: ( ( rule__CompositeQuantumGate__Group_12__0 )? )
+            // InternalQuCircuit.g:4418:2: ( rule__CompositeQuantumGate__Group_12__0 )?
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_12()); 
-            // InternalQuCircuit.g:4259:2: ( rule__CompositeQuantumGate__Group_12__0 )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // InternalQuCircuit.g:4419:2: ( rule__CompositeQuantumGate__Group_12__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA29_0==33) ) {
-                alt29=1;
+            if ( (LA31_0==33) ) {
+                alt31=1;
             }
-            switch (alt29) {
+            switch (alt31) {
                 case 1 :
-                    // InternalQuCircuit.g:4259:3: rule__CompositeQuantumGate__Group_12__0
+                    // InternalQuCircuit.g:4419:3: rule__CompositeQuantumGate__Group_12__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__CompositeQuantumGate__Group_12__0();
@@ -12976,14 +13469,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__13"
-    // InternalQuCircuit.g:4267:1: rule__CompositeQuantumGate__Group__13 : rule__CompositeQuantumGate__Group__13__Impl ;
+    // InternalQuCircuit.g:4427:1: rule__CompositeQuantumGate__Group__13 : rule__CompositeQuantumGate__Group__13__Impl ;
     public final void rule__CompositeQuantumGate__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4271:1: ( rule__CompositeQuantumGate__Group__13__Impl )
-            // InternalQuCircuit.g:4272:2: rule__CompositeQuantumGate__Group__13__Impl
+            // InternalQuCircuit.g:4431:1: ( rule__CompositeQuantumGate__Group__13__Impl )
+            // InternalQuCircuit.g:4432:2: rule__CompositeQuantumGate__Group__13__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__Group__13__Impl();
@@ -13009,17 +13502,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group__13__Impl"
-    // InternalQuCircuit.g:4278:1: rule__CompositeQuantumGate__Group__13__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:4438:1: rule__CompositeQuantumGate__Group__13__Impl : ( '}' ) ;
     public final void rule__CompositeQuantumGate__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4282:1: ( ( '}' ) )
-            // InternalQuCircuit.g:4283:1: ( '}' )
+            // InternalQuCircuit.g:4442:1: ( ( '}' ) )
+            // InternalQuCircuit.g:4443:1: ( '}' )
             {
-            // InternalQuCircuit.g:4283:1: ( '}' )
-            // InternalQuCircuit.g:4284:2: '}'
+            // InternalQuCircuit.g:4443:1: ( '}' )
+            // InternalQuCircuit.g:4444:2: '}'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getRightCurlyBracketKeyword_13()); 
             match(input,18,FOLLOW_2); 
@@ -13046,14 +13539,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_4__0"
-    // InternalQuCircuit.g:4294:1: rule__CompositeQuantumGate__Group_4__0 : rule__CompositeQuantumGate__Group_4__0__Impl rule__CompositeQuantumGate__Group_4__1 ;
+    // InternalQuCircuit.g:4454:1: rule__CompositeQuantumGate__Group_4__0 : rule__CompositeQuantumGate__Group_4__0__Impl rule__CompositeQuantumGate__Group_4__1 ;
     public final void rule__CompositeQuantumGate__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4298:1: ( rule__CompositeQuantumGate__Group_4__0__Impl rule__CompositeQuantumGate__Group_4__1 )
-            // InternalQuCircuit.g:4299:2: rule__CompositeQuantumGate__Group_4__0__Impl rule__CompositeQuantumGate__Group_4__1
+            // InternalQuCircuit.g:4458:1: ( rule__CompositeQuantumGate__Group_4__0__Impl rule__CompositeQuantumGate__Group_4__1 )
+            // InternalQuCircuit.g:4459:2: rule__CompositeQuantumGate__Group_4__0__Impl rule__CompositeQuantumGate__Group_4__1
             {
             pushFollow(FOLLOW_3);
             rule__CompositeQuantumGate__Group_4__0__Impl();
@@ -13084,20 +13577,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_4__0__Impl"
-    // InternalQuCircuit.g:4306:1: rule__CompositeQuantumGate__Group_4__0__Impl : ( 'operation' ) ;
+    // InternalQuCircuit.g:4466:1: rule__CompositeQuantumGate__Group_4__0__Impl : ( 'operation' ) ;
     public final void rule__CompositeQuantumGate__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4310:1: ( ( 'operation' ) )
-            // InternalQuCircuit.g:4311:1: ( 'operation' )
+            // InternalQuCircuit.g:4470:1: ( ( 'operation' ) )
+            // InternalQuCircuit.g:4471:1: ( 'operation' )
             {
-            // InternalQuCircuit.g:4311:1: ( 'operation' )
-            // InternalQuCircuit.g:4312:2: 'operation'
+            // InternalQuCircuit.g:4471:1: ( 'operation' )
+            // InternalQuCircuit.g:4472:2: 'operation'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getOperationKeyword_4_0()); 
-            match(input,26,FOLLOW_2); 
+            match(input,28,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getOperationKeyword_4_0()); 
 
             }
@@ -13121,14 +13614,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_4__1"
-    // InternalQuCircuit.g:4321:1: rule__CompositeQuantumGate__Group_4__1 : rule__CompositeQuantumGate__Group_4__1__Impl ;
+    // InternalQuCircuit.g:4481:1: rule__CompositeQuantumGate__Group_4__1 : rule__CompositeQuantumGate__Group_4__1__Impl ;
     public final void rule__CompositeQuantumGate__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4325:1: ( rule__CompositeQuantumGate__Group_4__1__Impl )
-            // InternalQuCircuit.g:4326:2: rule__CompositeQuantumGate__Group_4__1__Impl
+            // InternalQuCircuit.g:4485:1: ( rule__CompositeQuantumGate__Group_4__1__Impl )
+            // InternalQuCircuit.g:4486:2: rule__CompositeQuantumGate__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__Group_4__1__Impl();
@@ -13154,21 +13647,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_4__1__Impl"
-    // InternalQuCircuit.g:4332:1: rule__CompositeQuantumGate__Group_4__1__Impl : ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) ) ;
+    // InternalQuCircuit.g:4492:1: rule__CompositeQuantumGate__Group_4__1__Impl : ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) ) ;
     public final void rule__CompositeQuantumGate__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4336:1: ( ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) ) )
-            // InternalQuCircuit.g:4337:1: ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) )
+            // InternalQuCircuit.g:4496:1: ( ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) ) )
+            // InternalQuCircuit.g:4497:1: ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) )
             {
-            // InternalQuCircuit.g:4337:1: ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) )
-            // InternalQuCircuit.g:4338:2: ( rule__CompositeQuantumGate__OperationsAssignment_4_1 )
+            // InternalQuCircuit.g:4497:1: ( ( rule__CompositeQuantumGate__OperationsAssignment_4_1 ) )
+            // InternalQuCircuit.g:4498:2: ( rule__CompositeQuantumGate__OperationsAssignment_4_1 )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getOperationsAssignment_4_1()); 
-            // InternalQuCircuit.g:4339:2: ( rule__CompositeQuantumGate__OperationsAssignment_4_1 )
-            // InternalQuCircuit.g:4339:3: rule__CompositeQuantumGate__OperationsAssignment_4_1
+            // InternalQuCircuit.g:4499:2: ( rule__CompositeQuantumGate__OperationsAssignment_4_1 )
+            // InternalQuCircuit.g:4499:3: rule__CompositeQuantumGate__OperationsAssignment_4_1
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__OperationsAssignment_4_1();
@@ -13201,16 +13694,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__0"
-    // InternalQuCircuit.g:4348:1: rule__CompositeQuantumGate__Group_10__0 : rule__CompositeQuantumGate__Group_10__0__Impl rule__CompositeQuantumGate__Group_10__1 ;
+    // InternalQuCircuit.g:4508:1: rule__CompositeQuantumGate__Group_10__0 : rule__CompositeQuantumGate__Group_10__0__Impl rule__CompositeQuantumGate__Group_10__1 ;
     public final void rule__CompositeQuantumGate__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4352:1: ( rule__CompositeQuantumGate__Group_10__0__Impl rule__CompositeQuantumGate__Group_10__1 )
-            // InternalQuCircuit.g:4353:2: rule__CompositeQuantumGate__Group_10__0__Impl rule__CompositeQuantumGate__Group_10__1
+            // InternalQuCircuit.g:4512:1: ( rule__CompositeQuantumGate__Group_10__0__Impl rule__CompositeQuantumGate__Group_10__1 )
+            // InternalQuCircuit.g:4513:2: rule__CompositeQuantumGate__Group_10__0__Impl rule__CompositeQuantumGate__Group_10__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__CompositeQuantumGate__Group_10__0__Impl();
 
             state._fsp--;
@@ -13239,20 +13732,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__0__Impl"
-    // InternalQuCircuit.g:4360:1: rule__CompositeQuantumGate__Group_10__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:4520:1: rule__CompositeQuantumGate__Group_10__0__Impl : ( ',' ) ;
     public final void rule__CompositeQuantumGate__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4364:1: ( ( ',' ) )
-            // InternalQuCircuit.g:4365:1: ( ',' )
+            // InternalQuCircuit.g:4524:1: ( ( ',' ) )
+            // InternalQuCircuit.g:4525:1: ( ',' )
             {
-            // InternalQuCircuit.g:4365:1: ( ',' )
-            // InternalQuCircuit.g:4366:2: ','
+            // InternalQuCircuit.g:4525:1: ( ',' )
+            // InternalQuCircuit.g:4526:2: ','
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getCommaKeyword_10_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getCommaKeyword_10_0()); 
 
             }
@@ -13276,16 +13769,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__1"
-    // InternalQuCircuit.g:4375:1: rule__CompositeQuantumGate__Group_10__1 : rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2 ;
+    // InternalQuCircuit.g:4535:1: rule__CompositeQuantumGate__Group_10__1 : rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2 ;
     public final void rule__CompositeQuantumGate__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4379:1: ( rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2 )
-            // InternalQuCircuit.g:4380:2: rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2
+            // InternalQuCircuit.g:4539:1: ( rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2 )
+            // InternalQuCircuit.g:4540:2: rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__CompositeQuantumGate__Group_10__1__Impl();
 
             state._fsp--;
@@ -13314,20 +13807,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__1__Impl"
-    // InternalQuCircuit.g:4387:1: rule__CompositeQuantumGate__Group_10__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:4547:1: rule__CompositeQuantumGate__Group_10__1__Impl : ( '(' ) ;
     public final void rule__CompositeQuantumGate__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4391:1: ( ( '(' ) )
-            // InternalQuCircuit.g:4392:1: ( '(' )
+            // InternalQuCircuit.g:4551:1: ( ( '(' ) )
+            // InternalQuCircuit.g:4552:1: ( '(' )
             {
-            // InternalQuCircuit.g:4392:1: ( '(' )
-            // InternalQuCircuit.g:4393:2: '('
+            // InternalQuCircuit.g:4552:1: ( '(' )
+            // InternalQuCircuit.g:4553:2: '('
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getLeftParenthesisKeyword_10_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getLeftParenthesisKeyword_10_1()); 
 
             }
@@ -13351,16 +13844,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__2"
-    // InternalQuCircuit.g:4402:1: rule__CompositeQuantumGate__Group_10__2 : rule__CompositeQuantumGate__Group_10__2__Impl rule__CompositeQuantumGate__Group_10__3 ;
+    // InternalQuCircuit.g:4562:1: rule__CompositeQuantumGate__Group_10__2 : rule__CompositeQuantumGate__Group_10__2__Impl rule__CompositeQuantumGate__Group_10__3 ;
     public final void rule__CompositeQuantumGate__Group_10__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4406:1: ( rule__CompositeQuantumGate__Group_10__2__Impl rule__CompositeQuantumGate__Group_10__3 )
-            // InternalQuCircuit.g:4407:2: rule__CompositeQuantumGate__Group_10__2__Impl rule__CompositeQuantumGate__Group_10__3
+            // InternalQuCircuit.g:4566:1: ( rule__CompositeQuantumGate__Group_10__2__Impl rule__CompositeQuantumGate__Group_10__3 )
+            // InternalQuCircuit.g:4567:2: rule__CompositeQuantumGate__Group_10__2__Impl rule__CompositeQuantumGate__Group_10__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__CompositeQuantumGate__Group_10__2__Impl();
 
             state._fsp--;
@@ -13389,21 +13882,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__2__Impl"
-    // InternalQuCircuit.g:4414:1: rule__CompositeQuantumGate__Group_10__2__Impl : ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) ) ;
+    // InternalQuCircuit.g:4574:1: rule__CompositeQuantumGate__Group_10__2__Impl : ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) ) ;
     public final void rule__CompositeQuantumGate__Group_10__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4418:1: ( ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) ) )
-            // InternalQuCircuit.g:4419:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) )
+            // InternalQuCircuit.g:4578:1: ( ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) ) )
+            // InternalQuCircuit.g:4579:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) )
             {
-            // InternalQuCircuit.g:4419:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) )
-            // InternalQuCircuit.g:4420:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 )
+            // InternalQuCircuit.g:4579:1: ( ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 ) )
+            // InternalQuCircuit.g:4580:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsAssignment_10_2()); 
-            // InternalQuCircuit.g:4421:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 )
-            // InternalQuCircuit.g:4421:3: rule__CompositeQuantumGate__TargetQubitsAssignment_10_2
+            // InternalQuCircuit.g:4581:2: ( rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 )
+            // InternalQuCircuit.g:4581:3: rule__CompositeQuantumGate__TargetQubitsAssignment_10_2
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__TargetQubitsAssignment_10_2();
@@ -13436,14 +13929,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__3"
-    // InternalQuCircuit.g:4429:1: rule__CompositeQuantumGate__Group_10__3 : rule__CompositeQuantumGate__Group_10__3__Impl ;
+    // InternalQuCircuit.g:4589:1: rule__CompositeQuantumGate__Group_10__3 : rule__CompositeQuantumGate__Group_10__3__Impl ;
     public final void rule__CompositeQuantumGate__Group_10__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4433:1: ( rule__CompositeQuantumGate__Group_10__3__Impl )
-            // InternalQuCircuit.g:4434:2: rule__CompositeQuantumGate__Group_10__3__Impl
+            // InternalQuCircuit.g:4593:1: ( rule__CompositeQuantumGate__Group_10__3__Impl )
+            // InternalQuCircuit.g:4594:2: rule__CompositeQuantumGate__Group_10__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__Group_10__3__Impl();
@@ -13469,20 +13962,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_10__3__Impl"
-    // InternalQuCircuit.g:4440:1: rule__CompositeQuantumGate__Group_10__3__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:4600:1: rule__CompositeQuantumGate__Group_10__3__Impl : ( ')' ) ;
     public final void rule__CompositeQuantumGate__Group_10__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4444:1: ( ( ')' ) )
-            // InternalQuCircuit.g:4445:1: ( ')' )
+            // InternalQuCircuit.g:4604:1: ( ( ')' ) )
+            // InternalQuCircuit.g:4605:1: ( ')' )
             {
-            // InternalQuCircuit.g:4445:1: ( ')' )
-            // InternalQuCircuit.g:4446:2: ')'
+            // InternalQuCircuit.g:4605:1: ( ')' )
+            // InternalQuCircuit.g:4606:2: ')'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getRightParenthesisKeyword_10_3()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getRightParenthesisKeyword_10_3()); 
 
             }
@@ -13506,16 +13999,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__0"
-    // InternalQuCircuit.g:4456:1: rule__CompositeQuantumGate__Group_12__0 : rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1 ;
+    // InternalQuCircuit.g:4616:1: rule__CompositeQuantumGate__Group_12__0 : rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1 ;
     public final void rule__CompositeQuantumGate__Group_12__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4460:1: ( rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1 )
-            // InternalQuCircuit.g:4461:2: rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1
+            // InternalQuCircuit.g:4620:1: ( rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1 )
+            // InternalQuCircuit.g:4621:2: rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__CompositeQuantumGate__Group_12__0__Impl();
 
             state._fsp--;
@@ -13544,17 +14037,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__0__Impl"
-    // InternalQuCircuit.g:4468:1: rule__CompositeQuantumGate__Group_12__0__Impl : ( 'controlQubits' ) ;
+    // InternalQuCircuit.g:4628:1: rule__CompositeQuantumGate__Group_12__0__Impl : ( 'controlQubits' ) ;
     public final void rule__CompositeQuantumGate__Group_12__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4472:1: ( ( 'controlQubits' ) )
-            // InternalQuCircuit.g:4473:1: ( 'controlQubits' )
+            // InternalQuCircuit.g:4632:1: ( ( 'controlQubits' ) )
+            // InternalQuCircuit.g:4633:1: ( 'controlQubits' )
             {
-            // InternalQuCircuit.g:4473:1: ( 'controlQubits' )
-            // InternalQuCircuit.g:4474:2: 'controlQubits'
+            // InternalQuCircuit.g:4633:1: ( 'controlQubits' )
+            // InternalQuCircuit.g:4634:2: 'controlQubits'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsKeyword_12_0()); 
             match(input,33,FOLLOW_2); 
@@ -13581,16 +14074,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__1"
-    // InternalQuCircuit.g:4483:1: rule__CompositeQuantumGate__Group_12__1 : rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2 ;
+    // InternalQuCircuit.g:4643:1: rule__CompositeQuantumGate__Group_12__1 : rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2 ;
     public final void rule__CompositeQuantumGate__Group_12__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4487:1: ( rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2 )
-            // InternalQuCircuit.g:4488:2: rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2
+            // InternalQuCircuit.g:4647:1: ( rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2 )
+            // InternalQuCircuit.g:4648:2: rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__CompositeQuantumGate__Group_12__1__Impl();
 
             state._fsp--;
@@ -13619,20 +14112,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__1__Impl"
-    // InternalQuCircuit.g:4495:1: rule__CompositeQuantumGate__Group_12__1__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:4655:1: rule__CompositeQuantumGate__Group_12__1__Impl : ( '[' ) ;
     public final void rule__CompositeQuantumGate__Group_12__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4499:1: ( ( '[' ) )
-            // InternalQuCircuit.g:4500:1: ( '[' )
+            // InternalQuCircuit.g:4659:1: ( ( '[' ) )
+            // InternalQuCircuit.g:4660:1: ( '[' )
             {
-            // InternalQuCircuit.g:4500:1: ( '[' )
-            // InternalQuCircuit.g:4501:2: '['
+            // InternalQuCircuit.g:4660:1: ( '[' )
+            // InternalQuCircuit.g:4661:2: '['
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getLeftSquareBracketKeyword_12_1()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getLeftSquareBracketKeyword_12_1()); 
 
             }
@@ -13656,16 +14149,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__2"
-    // InternalQuCircuit.g:4510:1: rule__CompositeQuantumGate__Group_12__2 : rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3 ;
+    // InternalQuCircuit.g:4670:1: rule__CompositeQuantumGate__Group_12__2 : rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3 ;
     public final void rule__CompositeQuantumGate__Group_12__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4514:1: ( rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3 )
-            // InternalQuCircuit.g:4515:2: rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3
+            // InternalQuCircuit.g:4674:1: ( rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3 )
+            // InternalQuCircuit.g:4675:2: rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group_12__2__Impl();
 
             state._fsp--;
@@ -13694,21 +14187,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__2__Impl"
-    // InternalQuCircuit.g:4522:1: rule__CompositeQuantumGate__Group_12__2__Impl : ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) ) ;
+    // InternalQuCircuit.g:4682:1: rule__CompositeQuantumGate__Group_12__2__Impl : ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) ) ;
     public final void rule__CompositeQuantumGate__Group_12__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4526:1: ( ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) ) )
-            // InternalQuCircuit.g:4527:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) )
+            // InternalQuCircuit.g:4686:1: ( ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) ) )
+            // InternalQuCircuit.g:4687:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) )
             {
-            // InternalQuCircuit.g:4527:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) )
-            // InternalQuCircuit.g:4528:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 )
+            // InternalQuCircuit.g:4687:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 ) )
+            // InternalQuCircuit.g:4688:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsAssignment_12_2()); 
-            // InternalQuCircuit.g:4529:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 )
-            // InternalQuCircuit.g:4529:3: rule__CompositeQuantumGate__ControlQubitsAssignment_12_2
+            // InternalQuCircuit.g:4689:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 )
+            // InternalQuCircuit.g:4689:3: rule__CompositeQuantumGate__ControlQubitsAssignment_12_2
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__ControlQubitsAssignment_12_2();
@@ -13741,16 +14234,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__3"
-    // InternalQuCircuit.g:4537:1: rule__CompositeQuantumGate__Group_12__3 : rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4 ;
+    // InternalQuCircuit.g:4697:1: rule__CompositeQuantumGate__Group_12__3 : rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4 ;
     public final void rule__CompositeQuantumGate__Group_12__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4541:1: ( rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4 )
-            // InternalQuCircuit.g:4542:2: rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4
+            // InternalQuCircuit.g:4701:1: ( rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4 )
+            // InternalQuCircuit.g:4702:2: rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group_12__3__Impl();
 
             state._fsp--;
@@ -13779,35 +14272,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__3__Impl"
-    // InternalQuCircuit.g:4549:1: rule__CompositeQuantumGate__Group_12__3__Impl : ( ( rule__CompositeQuantumGate__Group_12_3__0 )* ) ;
+    // InternalQuCircuit.g:4709:1: rule__CompositeQuantumGate__Group_12__3__Impl : ( ( rule__CompositeQuantumGate__Group_12_3__0 )* ) ;
     public final void rule__CompositeQuantumGate__Group_12__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4553:1: ( ( ( rule__CompositeQuantumGate__Group_12_3__0 )* ) )
-            // InternalQuCircuit.g:4554:1: ( ( rule__CompositeQuantumGate__Group_12_3__0 )* )
+            // InternalQuCircuit.g:4713:1: ( ( ( rule__CompositeQuantumGate__Group_12_3__0 )* ) )
+            // InternalQuCircuit.g:4714:1: ( ( rule__CompositeQuantumGate__Group_12_3__0 )* )
             {
-            // InternalQuCircuit.g:4554:1: ( ( rule__CompositeQuantumGate__Group_12_3__0 )* )
-            // InternalQuCircuit.g:4555:2: ( rule__CompositeQuantumGate__Group_12_3__0 )*
+            // InternalQuCircuit.g:4714:1: ( ( rule__CompositeQuantumGate__Group_12_3__0 )* )
+            // InternalQuCircuit.g:4715:2: ( rule__CompositeQuantumGate__Group_12_3__0 )*
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_12_3()); 
-            // InternalQuCircuit.g:4556:2: ( rule__CompositeQuantumGate__Group_12_3__0 )*
-            loop30:
+            // InternalQuCircuit.g:4716:2: ( rule__CompositeQuantumGate__Group_12_3__0 )*
+            loop32:
             do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( (LA30_0==24) ) {
-                    alt30=1;
+                if ( (LA32_0==26) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt30) {
+                switch (alt32) {
             	case 1 :
-            	    // InternalQuCircuit.g:4556:3: rule__CompositeQuantumGate__Group_12_3__0
+            	    // InternalQuCircuit.g:4716:3: rule__CompositeQuantumGate__Group_12_3__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__CompositeQuantumGate__Group_12_3__0();
 
             	    state._fsp--;
@@ -13817,7 +14310,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop32;
                 }
             } while (true);
 
@@ -13844,14 +14337,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__4"
-    // InternalQuCircuit.g:4564:1: rule__CompositeQuantumGate__Group_12__4 : rule__CompositeQuantumGate__Group_12__4__Impl ;
+    // InternalQuCircuit.g:4724:1: rule__CompositeQuantumGate__Group_12__4 : rule__CompositeQuantumGate__Group_12__4__Impl ;
     public final void rule__CompositeQuantumGate__Group_12__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4568:1: ( rule__CompositeQuantumGate__Group_12__4__Impl )
-            // InternalQuCircuit.g:4569:2: rule__CompositeQuantumGate__Group_12__4__Impl
+            // InternalQuCircuit.g:4728:1: ( rule__CompositeQuantumGate__Group_12__4__Impl )
+            // InternalQuCircuit.g:4729:2: rule__CompositeQuantumGate__Group_12__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__Group_12__4__Impl();
@@ -13877,20 +14370,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12__4__Impl"
-    // InternalQuCircuit.g:4575:1: rule__CompositeQuantumGate__Group_12__4__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:4735:1: rule__CompositeQuantumGate__Group_12__4__Impl : ( ']' ) ;
     public final void rule__CompositeQuantumGate__Group_12__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4579:1: ( ( ']' ) )
-            // InternalQuCircuit.g:4580:1: ( ']' )
+            // InternalQuCircuit.g:4739:1: ( ( ']' ) )
+            // InternalQuCircuit.g:4740:1: ( ']' )
             {
-            // InternalQuCircuit.g:4580:1: ( ']' )
-            // InternalQuCircuit.g:4581:2: ']'
+            // InternalQuCircuit.g:4740:1: ( ']' )
+            // InternalQuCircuit.g:4741:2: ']'
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getRightSquareBracketKeyword_12_4()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getRightSquareBracketKeyword_12_4()); 
 
             }
@@ -13914,16 +14407,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12_3__0"
-    // InternalQuCircuit.g:4591:1: rule__CompositeQuantumGate__Group_12_3__0 : rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1 ;
+    // InternalQuCircuit.g:4751:1: rule__CompositeQuantumGate__Group_12_3__0 : rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1 ;
     public final void rule__CompositeQuantumGate__Group_12_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4595:1: ( rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1 )
-            // InternalQuCircuit.g:4596:2: rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1
+            // InternalQuCircuit.g:4755:1: ( rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1 )
+            // InternalQuCircuit.g:4756:2: rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__CompositeQuantumGate__Group_12_3__0__Impl();
 
             state._fsp--;
@@ -13952,20 +14445,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12_3__0__Impl"
-    // InternalQuCircuit.g:4603:1: rule__CompositeQuantumGate__Group_12_3__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:4763:1: rule__CompositeQuantumGate__Group_12_3__0__Impl : ( ',' ) ;
     public final void rule__CompositeQuantumGate__Group_12_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4607:1: ( ( ',' ) )
-            // InternalQuCircuit.g:4608:1: ( ',' )
+            // InternalQuCircuit.g:4767:1: ( ( ',' ) )
+            // InternalQuCircuit.g:4768:1: ( ',' )
             {
-            // InternalQuCircuit.g:4608:1: ( ',' )
-            // InternalQuCircuit.g:4609:2: ','
+            // InternalQuCircuit.g:4768:1: ( ',' )
+            // InternalQuCircuit.g:4769:2: ','
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getCommaKeyword_12_3_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getCommaKeyword_12_3_0()); 
 
             }
@@ -13989,14 +14482,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12_3__1"
-    // InternalQuCircuit.g:4618:1: rule__CompositeQuantumGate__Group_12_3__1 : rule__CompositeQuantumGate__Group_12_3__1__Impl ;
+    // InternalQuCircuit.g:4778:1: rule__CompositeQuantumGate__Group_12_3__1 : rule__CompositeQuantumGate__Group_12_3__1__Impl ;
     public final void rule__CompositeQuantumGate__Group_12_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4622:1: ( rule__CompositeQuantumGate__Group_12_3__1__Impl )
-            // InternalQuCircuit.g:4623:2: rule__CompositeQuantumGate__Group_12_3__1__Impl
+            // InternalQuCircuit.g:4782:1: ( rule__CompositeQuantumGate__Group_12_3__1__Impl )
+            // InternalQuCircuit.g:4783:2: rule__CompositeQuantumGate__Group_12_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__Group_12_3__1__Impl();
@@ -14022,21 +14515,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__Group_12_3__1__Impl"
-    // InternalQuCircuit.g:4629:1: rule__CompositeQuantumGate__Group_12_3__1__Impl : ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) ) ;
+    // InternalQuCircuit.g:4789:1: rule__CompositeQuantumGate__Group_12_3__1__Impl : ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) ) ;
     public final void rule__CompositeQuantumGate__Group_12_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4633:1: ( ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) ) )
-            // InternalQuCircuit.g:4634:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) )
+            // InternalQuCircuit.g:4793:1: ( ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) ) )
+            // InternalQuCircuit.g:4794:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) )
             {
-            // InternalQuCircuit.g:4634:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) )
-            // InternalQuCircuit.g:4635:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 )
+            // InternalQuCircuit.g:4794:1: ( ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 ) )
+            // InternalQuCircuit.g:4795:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsAssignment_12_3_1()); 
-            // InternalQuCircuit.g:4636:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 )
-            // InternalQuCircuit.g:4636:3: rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1
+            // InternalQuCircuit.g:4796:2: ( rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 )
+            // InternalQuCircuit.g:4796:3: rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1
             {
             pushFollow(FOLLOW_2);
             rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1();
@@ -14069,14 +14562,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__0"
-    // InternalQuCircuit.g:4645:1: rule__Loop__Group__0 : rule__Loop__Group__0__Impl rule__Loop__Group__1 ;
+    // InternalQuCircuit.g:4805:1: rule__Loop__Group__0 : rule__Loop__Group__0__Impl rule__Loop__Group__1 ;
     public final void rule__Loop__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4649:1: ( rule__Loop__Group__0__Impl rule__Loop__Group__1 )
-            // InternalQuCircuit.g:4650:2: rule__Loop__Group__0__Impl rule__Loop__Group__1
+            // InternalQuCircuit.g:4809:1: ( rule__Loop__Group__0__Impl rule__Loop__Group__1 )
+            // InternalQuCircuit.g:4810:2: rule__Loop__Group__0__Impl rule__Loop__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Loop__Group__0__Impl();
@@ -14107,20 +14600,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__0__Impl"
-    // InternalQuCircuit.g:4657:1: rule__Loop__Group__0__Impl : ( 'Loop' ) ;
+    // InternalQuCircuit.g:4817:1: rule__Loop__Group__0__Impl : ( 'Loop' ) ;
     public final void rule__Loop__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4661:1: ( ( 'Loop' ) )
-            // InternalQuCircuit.g:4662:1: ( 'Loop' )
+            // InternalQuCircuit.g:4821:1: ( ( 'Loop' ) )
+            // InternalQuCircuit.g:4822:1: ( 'Loop' )
             {
-            // InternalQuCircuit.g:4662:1: ( 'Loop' )
-            // InternalQuCircuit.g:4663:2: 'Loop'
+            // InternalQuCircuit.g:4822:1: ( 'Loop' )
+            // InternalQuCircuit.g:4823:2: 'Loop'
             {
              before(grammarAccess.getLoopAccess().getLoopKeyword_0()); 
-            match(input,42,FOLLOW_2); 
+            match(input,41,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLoopKeyword_0()); 
 
             }
@@ -14144,16 +14637,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__1"
-    // InternalQuCircuit.g:4672:1: rule__Loop__Group__1 : rule__Loop__Group__1__Impl rule__Loop__Group__2 ;
+    // InternalQuCircuit.g:4832:1: rule__Loop__Group__1 : rule__Loop__Group__1__Impl rule__Loop__Group__2 ;
     public final void rule__Loop__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4676:1: ( rule__Loop__Group__1__Impl rule__Loop__Group__2 )
-            // InternalQuCircuit.g:4677:2: rule__Loop__Group__1__Impl rule__Loop__Group__2
+            // InternalQuCircuit.g:4836:1: ( rule__Loop__Group__1__Impl rule__Loop__Group__2 )
+            // InternalQuCircuit.g:4837:2: rule__Loop__Group__1__Impl rule__Loop__Group__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_11);
             rule__Loop__Group__1__Impl();
 
             state._fsp--;
@@ -14182,21 +14675,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__1__Impl"
-    // InternalQuCircuit.g:4684:1: rule__Loop__Group__1__Impl : ( ( rule__Loop__NameAssignment_1 ) ) ;
+    // InternalQuCircuit.g:4844:1: rule__Loop__Group__1__Impl : ( ( rule__Loop__NameAssignment_1 ) ) ;
     public final void rule__Loop__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4688:1: ( ( ( rule__Loop__NameAssignment_1 ) ) )
-            // InternalQuCircuit.g:4689:1: ( ( rule__Loop__NameAssignment_1 ) )
+            // InternalQuCircuit.g:4848:1: ( ( ( rule__Loop__NameAssignment_1 ) ) )
+            // InternalQuCircuit.g:4849:1: ( ( rule__Loop__NameAssignment_1 ) )
             {
-            // InternalQuCircuit.g:4689:1: ( ( rule__Loop__NameAssignment_1 ) )
-            // InternalQuCircuit.g:4690:2: ( rule__Loop__NameAssignment_1 )
+            // InternalQuCircuit.g:4849:1: ( ( rule__Loop__NameAssignment_1 ) )
+            // InternalQuCircuit.g:4850:2: ( rule__Loop__NameAssignment_1 )
             {
              before(grammarAccess.getLoopAccess().getNameAssignment_1()); 
-            // InternalQuCircuit.g:4691:2: ( rule__Loop__NameAssignment_1 )
-            // InternalQuCircuit.g:4691:3: rule__Loop__NameAssignment_1
+            // InternalQuCircuit.g:4851:2: ( rule__Loop__NameAssignment_1 )
+            // InternalQuCircuit.g:4851:3: rule__Loop__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__NameAssignment_1();
@@ -14229,14 +14722,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__2"
-    // InternalQuCircuit.g:4699:1: rule__Loop__Group__2 : rule__Loop__Group__2__Impl rule__Loop__Group__3 ;
+    // InternalQuCircuit.g:4859:1: rule__Loop__Group__2 : rule__Loop__Group__2__Impl rule__Loop__Group__3 ;
     public final void rule__Loop__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4703:1: ( rule__Loop__Group__2__Impl rule__Loop__Group__3 )
-            // InternalQuCircuit.g:4704:2: rule__Loop__Group__2__Impl rule__Loop__Group__3
+            // InternalQuCircuit.g:4863:1: ( rule__Loop__Group__2__Impl rule__Loop__Group__3 )
+            // InternalQuCircuit.g:4864:2: rule__Loop__Group__2__Impl rule__Loop__Group__3
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__2__Impl();
@@ -14267,17 +14760,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__2__Impl"
-    // InternalQuCircuit.g:4711:1: rule__Loop__Group__2__Impl : ( '{' ) ;
+    // InternalQuCircuit.g:4871:1: rule__Loop__Group__2__Impl : ( '{' ) ;
     public final void rule__Loop__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4715:1: ( ( '{' ) )
-            // InternalQuCircuit.g:4716:1: ( '{' )
+            // InternalQuCircuit.g:4875:1: ( ( '{' ) )
+            // InternalQuCircuit.g:4876:1: ( '{' )
             {
-            // InternalQuCircuit.g:4716:1: ( '{' )
-            // InternalQuCircuit.g:4717:2: '{'
+            // InternalQuCircuit.g:4876:1: ( '{' )
+            // InternalQuCircuit.g:4877:2: '{'
             {
              before(grammarAccess.getLoopAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,17,FOLLOW_2); 
@@ -14304,14 +14797,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__3"
-    // InternalQuCircuit.g:4726:1: rule__Loop__Group__3 : rule__Loop__Group__3__Impl rule__Loop__Group__4 ;
+    // InternalQuCircuit.g:4886:1: rule__Loop__Group__3 : rule__Loop__Group__3__Impl rule__Loop__Group__4 ;
     public final void rule__Loop__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4730:1: ( rule__Loop__Group__3__Impl rule__Loop__Group__4 )
-            // InternalQuCircuit.g:4731:2: rule__Loop__Group__3__Impl rule__Loop__Group__4
+            // InternalQuCircuit.g:4890:1: ( rule__Loop__Group__3__Impl rule__Loop__Group__4 )
+            // InternalQuCircuit.g:4891:2: rule__Loop__Group__3__Impl rule__Loop__Group__4
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__3__Impl();
@@ -14342,29 +14835,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__3__Impl"
-    // InternalQuCircuit.g:4738:1: rule__Loop__Group__3__Impl : ( ( rule__Loop__InverseFormAssignment_3 )? ) ;
+    // InternalQuCircuit.g:4898:1: rule__Loop__Group__3__Impl : ( ( rule__Loop__InverseFormAssignment_3 )? ) ;
     public final void rule__Loop__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4742:1: ( ( ( rule__Loop__InverseFormAssignment_3 )? ) )
-            // InternalQuCircuit.g:4743:1: ( ( rule__Loop__InverseFormAssignment_3 )? )
+            // InternalQuCircuit.g:4902:1: ( ( ( rule__Loop__InverseFormAssignment_3 )? ) )
+            // InternalQuCircuit.g:4903:1: ( ( rule__Loop__InverseFormAssignment_3 )? )
             {
-            // InternalQuCircuit.g:4743:1: ( ( rule__Loop__InverseFormAssignment_3 )? )
-            // InternalQuCircuit.g:4744:2: ( rule__Loop__InverseFormAssignment_3 )?
+            // InternalQuCircuit.g:4903:1: ( ( rule__Loop__InverseFormAssignment_3 )? )
+            // InternalQuCircuit.g:4904:2: ( rule__Loop__InverseFormAssignment_3 )?
             {
              before(grammarAccess.getLoopAccess().getInverseFormAssignment_3()); 
-            // InternalQuCircuit.g:4745:2: ( rule__Loop__InverseFormAssignment_3 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // InternalQuCircuit.g:4905:2: ( rule__Loop__InverseFormAssignment_3 )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA31_0==57) ) {
-                alt31=1;
+            if ( (LA33_0==56) ) {
+                alt33=1;
             }
-            switch (alt31) {
+            switch (alt33) {
                 case 1 :
-                    // InternalQuCircuit.g:4745:3: rule__Loop__InverseFormAssignment_3
+                    // InternalQuCircuit.g:4905:3: rule__Loop__InverseFormAssignment_3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__InverseFormAssignment_3();
@@ -14400,14 +14893,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__4"
-    // InternalQuCircuit.g:4753:1: rule__Loop__Group__4 : rule__Loop__Group__4__Impl rule__Loop__Group__5 ;
+    // InternalQuCircuit.g:4913:1: rule__Loop__Group__4 : rule__Loop__Group__4__Impl rule__Loop__Group__5 ;
     public final void rule__Loop__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4757:1: ( rule__Loop__Group__4__Impl rule__Loop__Group__5 )
-            // InternalQuCircuit.g:4758:2: rule__Loop__Group__4__Impl rule__Loop__Group__5
+            // InternalQuCircuit.g:4917:1: ( rule__Loop__Group__4__Impl rule__Loop__Group__5 )
+            // InternalQuCircuit.g:4918:2: rule__Loop__Group__4__Impl rule__Loop__Group__5
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__4__Impl();
@@ -14438,29 +14931,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__4__Impl"
-    // InternalQuCircuit.g:4765:1: rule__Loop__Group__4__Impl : ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? ) ;
+    // InternalQuCircuit.g:4925:1: rule__Loop__Group__4__Impl : ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? ) ;
     public final void rule__Loop__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4769:1: ( ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? ) )
-            // InternalQuCircuit.g:4770:1: ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? )
+            // InternalQuCircuit.g:4929:1: ( ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? ) )
+            // InternalQuCircuit.g:4930:1: ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? )
             {
-            // InternalQuCircuit.g:4770:1: ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? )
-            // InternalQuCircuit.g:4771:2: ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )?
+            // InternalQuCircuit.g:4930:1: ( ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )? )
+            // InternalQuCircuit.g:4931:2: ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )?
             {
              before(grammarAccess.getLoopAccess().getIncrementBlockTargetQubitsAssignment_4()); 
-            // InternalQuCircuit.g:4772:2: ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // InternalQuCircuit.g:4932:2: ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA32_0==58) ) {
-                alt32=1;
+            if ( (LA34_0==57) ) {
+                alt34=1;
             }
-            switch (alt32) {
+            switch (alt34) {
                 case 1 :
-                    // InternalQuCircuit.g:4772:3: rule__Loop__IncrementBlockTargetQubitsAssignment_4
+                    // InternalQuCircuit.g:4932:3: rule__Loop__IncrementBlockTargetQubitsAssignment_4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__IncrementBlockTargetQubitsAssignment_4();
@@ -14496,14 +14989,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__5"
-    // InternalQuCircuit.g:4780:1: rule__Loop__Group__5 : rule__Loop__Group__5__Impl rule__Loop__Group__6 ;
+    // InternalQuCircuit.g:4940:1: rule__Loop__Group__5 : rule__Loop__Group__5__Impl rule__Loop__Group__6 ;
     public final void rule__Loop__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4784:1: ( rule__Loop__Group__5__Impl rule__Loop__Group__6 )
-            // InternalQuCircuit.g:4785:2: rule__Loop__Group__5__Impl rule__Loop__Group__6
+            // InternalQuCircuit.g:4944:1: ( rule__Loop__Group__5__Impl rule__Loop__Group__6 )
+            // InternalQuCircuit.g:4945:2: rule__Loop__Group__5__Impl rule__Loop__Group__6
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__5__Impl();
@@ -14534,29 +15027,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__5__Impl"
-    // InternalQuCircuit.g:4792:1: rule__Loop__Group__5__Impl : ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? ) ;
+    // InternalQuCircuit.g:4952:1: rule__Loop__Group__5__Impl : ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? ) ;
     public final void rule__Loop__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4796:1: ( ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? ) )
-            // InternalQuCircuit.g:4797:1: ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? )
+            // InternalQuCircuit.g:4956:1: ( ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? ) )
+            // InternalQuCircuit.g:4957:1: ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? )
             {
-            // InternalQuCircuit.g:4797:1: ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? )
-            // InternalQuCircuit.g:4798:2: ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )?
+            // InternalQuCircuit.g:4957:1: ( ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )? )
+            // InternalQuCircuit.g:4958:2: ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )?
             {
              before(grammarAccess.getLoopAccess().getIncrementBlockControlQubitsAssignment_5()); 
-            // InternalQuCircuit.g:4799:2: ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // InternalQuCircuit.g:4959:2: ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA33_0==59) ) {
-                alt33=1;
+            if ( (LA35_0==58) ) {
+                alt35=1;
             }
-            switch (alt33) {
+            switch (alt35) {
                 case 1 :
-                    // InternalQuCircuit.g:4799:3: rule__Loop__IncrementBlockControlQubitsAssignment_5
+                    // InternalQuCircuit.g:4959:3: rule__Loop__IncrementBlockControlQubitsAssignment_5
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__IncrementBlockControlQubitsAssignment_5();
@@ -14592,14 +15085,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__6"
-    // InternalQuCircuit.g:4807:1: rule__Loop__Group__6 : rule__Loop__Group__6__Impl rule__Loop__Group__7 ;
+    // InternalQuCircuit.g:4967:1: rule__Loop__Group__6 : rule__Loop__Group__6__Impl rule__Loop__Group__7 ;
     public final void rule__Loop__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4811:1: ( rule__Loop__Group__6__Impl rule__Loop__Group__7 )
-            // InternalQuCircuit.g:4812:2: rule__Loop__Group__6__Impl rule__Loop__Group__7
+            // InternalQuCircuit.g:4971:1: ( rule__Loop__Group__6__Impl rule__Loop__Group__7 )
+            // InternalQuCircuit.g:4972:2: rule__Loop__Group__6__Impl rule__Loop__Group__7
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__6__Impl();
@@ -14630,29 +15123,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__6__Impl"
-    // InternalQuCircuit.g:4819:1: rule__Loop__Group__6__Impl : ( ( rule__Loop__Group_6__0 )? ) ;
+    // InternalQuCircuit.g:4979:1: rule__Loop__Group__6__Impl : ( ( rule__Loop__Group_6__0 )? ) ;
     public final void rule__Loop__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4823:1: ( ( ( rule__Loop__Group_6__0 )? ) )
-            // InternalQuCircuit.g:4824:1: ( ( rule__Loop__Group_6__0 )? )
+            // InternalQuCircuit.g:4983:1: ( ( ( rule__Loop__Group_6__0 )? ) )
+            // InternalQuCircuit.g:4984:1: ( ( rule__Loop__Group_6__0 )? )
             {
-            // InternalQuCircuit.g:4824:1: ( ( rule__Loop__Group_6__0 )? )
-            // InternalQuCircuit.g:4825:2: ( rule__Loop__Group_6__0 )?
+            // InternalQuCircuit.g:4984:1: ( ( rule__Loop__Group_6__0 )? )
+            // InternalQuCircuit.g:4985:2: ( rule__Loop__Group_6__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_6()); 
-            // InternalQuCircuit.g:4826:2: ( rule__Loop__Group_6__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalQuCircuit.g:4986:2: ( rule__Loop__Group_6__0 )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA34_0==45) ) {
-                alt34=1;
+            if ( (LA36_0==44) ) {
+                alt36=1;
             }
-            switch (alt34) {
+            switch (alt36) {
                 case 1 :
-                    // InternalQuCircuit.g:4826:3: rule__Loop__Group_6__0
+                    // InternalQuCircuit.g:4986:3: rule__Loop__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_6__0();
@@ -14688,14 +15181,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__7"
-    // InternalQuCircuit.g:4834:1: rule__Loop__Group__7 : rule__Loop__Group__7__Impl rule__Loop__Group__8 ;
+    // InternalQuCircuit.g:4994:1: rule__Loop__Group__7 : rule__Loop__Group__7__Impl rule__Loop__Group__8 ;
     public final void rule__Loop__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4838:1: ( rule__Loop__Group__7__Impl rule__Loop__Group__8 )
-            // InternalQuCircuit.g:4839:2: rule__Loop__Group__7__Impl rule__Loop__Group__8
+            // InternalQuCircuit.g:4998:1: ( rule__Loop__Group__7__Impl rule__Loop__Group__8 )
+            // InternalQuCircuit.g:4999:2: rule__Loop__Group__7__Impl rule__Loop__Group__8
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__7__Impl();
@@ -14726,29 +15219,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__7__Impl"
-    // InternalQuCircuit.g:4846:1: rule__Loop__Group__7__Impl : ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? ) ;
+    // InternalQuCircuit.g:5006:1: rule__Loop__Group__7__Impl : ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? ) ;
     public final void rule__Loop__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4850:1: ( ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? ) )
-            // InternalQuCircuit.g:4851:1: ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? )
+            // InternalQuCircuit.g:5010:1: ( ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? ) )
+            // InternalQuCircuit.g:5011:1: ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? )
             {
-            // InternalQuCircuit.g:4851:1: ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? )
-            // InternalQuCircuit.g:4852:2: ( rule__Loop__IncrementTargetQubitsAssignment_7 )?
+            // InternalQuCircuit.g:5011:1: ( ( rule__Loop__IncrementTargetQubitsAssignment_7 )? )
+            // InternalQuCircuit.g:5012:2: ( rule__Loop__IncrementTargetQubitsAssignment_7 )?
             {
              before(grammarAccess.getLoopAccess().getIncrementTargetQubitsAssignment_7()); 
-            // InternalQuCircuit.g:4853:2: ( rule__Loop__IncrementTargetQubitsAssignment_7 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // InternalQuCircuit.g:5013:2: ( rule__Loop__IncrementTargetQubitsAssignment_7 )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA35_0==60) ) {
-                alt35=1;
+            if ( (LA37_0==59) ) {
+                alt37=1;
             }
-            switch (alt35) {
+            switch (alt37) {
                 case 1 :
-                    // InternalQuCircuit.g:4853:3: rule__Loop__IncrementTargetQubitsAssignment_7
+                    // InternalQuCircuit.g:5013:3: rule__Loop__IncrementTargetQubitsAssignment_7
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__IncrementTargetQubitsAssignment_7();
@@ -14784,14 +15277,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__8"
-    // InternalQuCircuit.g:4861:1: rule__Loop__Group__8 : rule__Loop__Group__8__Impl rule__Loop__Group__9 ;
+    // InternalQuCircuit.g:5021:1: rule__Loop__Group__8 : rule__Loop__Group__8__Impl rule__Loop__Group__9 ;
     public final void rule__Loop__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4865:1: ( rule__Loop__Group__8__Impl rule__Loop__Group__9 )
-            // InternalQuCircuit.g:4866:2: rule__Loop__Group__8__Impl rule__Loop__Group__9
+            // InternalQuCircuit.g:5025:1: ( rule__Loop__Group__8__Impl rule__Loop__Group__9 )
+            // InternalQuCircuit.g:5026:2: rule__Loop__Group__8__Impl rule__Loop__Group__9
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__8__Impl();
@@ -14822,29 +15315,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__8__Impl"
-    // InternalQuCircuit.g:4873:1: rule__Loop__Group__8__Impl : ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? ) ;
+    // InternalQuCircuit.g:5033:1: rule__Loop__Group__8__Impl : ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? ) ;
     public final void rule__Loop__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4877:1: ( ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? ) )
-            // InternalQuCircuit.g:4878:1: ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? )
+            // InternalQuCircuit.g:5037:1: ( ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? ) )
+            // InternalQuCircuit.g:5038:1: ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? )
             {
-            // InternalQuCircuit.g:4878:1: ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? )
-            // InternalQuCircuit.g:4879:2: ( rule__Loop__IncrementControlQubitsAssignment_8 )?
+            // InternalQuCircuit.g:5038:1: ( ( rule__Loop__IncrementControlQubitsAssignment_8 )? )
+            // InternalQuCircuit.g:5039:2: ( rule__Loop__IncrementControlQubitsAssignment_8 )?
             {
              before(grammarAccess.getLoopAccess().getIncrementControlQubitsAssignment_8()); 
-            // InternalQuCircuit.g:4880:2: ( rule__Loop__IncrementControlQubitsAssignment_8 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // InternalQuCircuit.g:5040:2: ( rule__Loop__IncrementControlQubitsAssignment_8 )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA36_0==61) ) {
-                alt36=1;
+            if ( (LA38_0==60) ) {
+                alt38=1;
             }
-            switch (alt36) {
+            switch (alt38) {
                 case 1 :
-                    // InternalQuCircuit.g:4880:3: rule__Loop__IncrementControlQubitsAssignment_8
+                    // InternalQuCircuit.g:5040:3: rule__Loop__IncrementControlQubitsAssignment_8
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__IncrementControlQubitsAssignment_8();
@@ -14880,14 +15373,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__9"
-    // InternalQuCircuit.g:4888:1: rule__Loop__Group__9 : rule__Loop__Group__9__Impl rule__Loop__Group__10 ;
+    // InternalQuCircuit.g:5048:1: rule__Loop__Group__9 : rule__Loop__Group__9__Impl rule__Loop__Group__10 ;
     public final void rule__Loop__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4892:1: ( rule__Loop__Group__9__Impl rule__Loop__Group__10 )
-            // InternalQuCircuit.g:4893:2: rule__Loop__Group__9__Impl rule__Loop__Group__10
+            // InternalQuCircuit.g:5052:1: ( rule__Loop__Group__9__Impl rule__Loop__Group__10 )
+            // InternalQuCircuit.g:5053:2: rule__Loop__Group__9__Impl rule__Loop__Group__10
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__9__Impl();
@@ -14918,29 +15411,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__9__Impl"
-    // InternalQuCircuit.g:4900:1: rule__Loop__Group__9__Impl : ( ( rule__Loop__Group_9__0 )? ) ;
+    // InternalQuCircuit.g:5060:1: rule__Loop__Group__9__Impl : ( ( rule__Loop__Group_9__0 )? ) ;
     public final void rule__Loop__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4904:1: ( ( ( rule__Loop__Group_9__0 )? ) )
-            // InternalQuCircuit.g:4905:1: ( ( rule__Loop__Group_9__0 )? )
+            // InternalQuCircuit.g:5064:1: ( ( ( rule__Loop__Group_9__0 )? ) )
+            // InternalQuCircuit.g:5065:1: ( ( rule__Loop__Group_9__0 )? )
             {
-            // InternalQuCircuit.g:4905:1: ( ( rule__Loop__Group_9__0 )? )
-            // InternalQuCircuit.g:4906:2: ( rule__Loop__Group_9__0 )?
+            // InternalQuCircuit.g:5065:1: ( ( rule__Loop__Group_9__0 )? )
+            // InternalQuCircuit.g:5066:2: ( rule__Loop__Group_9__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_9()); 
-            // InternalQuCircuit.g:4907:2: ( rule__Loop__Group_9__0 )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // InternalQuCircuit.g:5067:2: ( rule__Loop__Group_9__0 )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA37_0==46) ) {
-                alt37=1;
+            if ( (LA39_0==45) ) {
+                alt39=1;
             }
-            switch (alt37) {
+            switch (alt39) {
                 case 1 :
-                    // InternalQuCircuit.g:4907:3: rule__Loop__Group_9__0
+                    // InternalQuCircuit.g:5067:3: rule__Loop__Group_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_9__0();
@@ -14976,14 +15469,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__10"
-    // InternalQuCircuit.g:4915:1: rule__Loop__Group__10 : rule__Loop__Group__10__Impl rule__Loop__Group__11 ;
+    // InternalQuCircuit.g:5075:1: rule__Loop__Group__10 : rule__Loop__Group__10__Impl rule__Loop__Group__11 ;
     public final void rule__Loop__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4919:1: ( rule__Loop__Group__10__Impl rule__Loop__Group__11 )
-            // InternalQuCircuit.g:4920:2: rule__Loop__Group__10__Impl rule__Loop__Group__11
+            // InternalQuCircuit.g:5079:1: ( rule__Loop__Group__10__Impl rule__Loop__Group__11 )
+            // InternalQuCircuit.g:5080:2: rule__Loop__Group__10__Impl rule__Loop__Group__11
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__10__Impl();
@@ -15014,29 +15507,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__10__Impl"
-    // InternalQuCircuit.g:4927:1: rule__Loop__Group__10__Impl : ( ( rule__Loop__Group_10__0 )? ) ;
+    // InternalQuCircuit.g:5087:1: rule__Loop__Group__10__Impl : ( ( rule__Loop__Group_10__0 )? ) ;
     public final void rule__Loop__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4931:1: ( ( ( rule__Loop__Group_10__0 )? ) )
-            // InternalQuCircuit.g:4932:1: ( ( rule__Loop__Group_10__0 )? )
+            // InternalQuCircuit.g:5091:1: ( ( ( rule__Loop__Group_10__0 )? ) )
+            // InternalQuCircuit.g:5092:1: ( ( rule__Loop__Group_10__0 )? )
             {
-            // InternalQuCircuit.g:4932:1: ( ( rule__Loop__Group_10__0 )? )
-            // InternalQuCircuit.g:4933:2: ( rule__Loop__Group_10__0 )?
+            // InternalQuCircuit.g:5092:1: ( ( rule__Loop__Group_10__0 )? )
+            // InternalQuCircuit.g:5093:2: ( rule__Loop__Group_10__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_10()); 
-            // InternalQuCircuit.g:4934:2: ( rule__Loop__Group_10__0 )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            // InternalQuCircuit.g:5094:2: ( rule__Loop__Group_10__0 )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA38_0==47) ) {
-                alt38=1;
+            if ( (LA40_0==46) ) {
+                alt40=1;
             }
-            switch (alt38) {
+            switch (alt40) {
                 case 1 :
-                    // InternalQuCircuit.g:4934:3: rule__Loop__Group_10__0
+                    // InternalQuCircuit.g:5094:3: rule__Loop__Group_10__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_10__0();
@@ -15072,14 +15565,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__11"
-    // InternalQuCircuit.g:4942:1: rule__Loop__Group__11 : rule__Loop__Group__11__Impl rule__Loop__Group__12 ;
+    // InternalQuCircuit.g:5102:1: rule__Loop__Group__11 : rule__Loop__Group__11__Impl rule__Loop__Group__12 ;
     public final void rule__Loop__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4946:1: ( rule__Loop__Group__11__Impl rule__Loop__Group__12 )
-            // InternalQuCircuit.g:4947:2: rule__Loop__Group__11__Impl rule__Loop__Group__12
+            // InternalQuCircuit.g:5106:1: ( rule__Loop__Group__11__Impl rule__Loop__Group__12 )
+            // InternalQuCircuit.g:5107:2: rule__Loop__Group__11__Impl rule__Loop__Group__12
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__11__Impl();
@@ -15110,29 +15603,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__11__Impl"
-    // InternalQuCircuit.g:4954:1: rule__Loop__Group__11__Impl : ( ( rule__Loop__Group_11__0 )? ) ;
+    // InternalQuCircuit.g:5114:1: rule__Loop__Group__11__Impl : ( ( rule__Loop__Group_11__0 )? ) ;
     public final void rule__Loop__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4958:1: ( ( ( rule__Loop__Group_11__0 )? ) )
-            // InternalQuCircuit.g:4959:1: ( ( rule__Loop__Group_11__0 )? )
+            // InternalQuCircuit.g:5118:1: ( ( ( rule__Loop__Group_11__0 )? ) )
+            // InternalQuCircuit.g:5119:1: ( ( rule__Loop__Group_11__0 )? )
             {
-            // InternalQuCircuit.g:4959:1: ( ( rule__Loop__Group_11__0 )? )
-            // InternalQuCircuit.g:4960:2: ( rule__Loop__Group_11__0 )?
+            // InternalQuCircuit.g:5119:1: ( ( rule__Loop__Group_11__0 )? )
+            // InternalQuCircuit.g:5120:2: ( rule__Loop__Group_11__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_11()); 
-            // InternalQuCircuit.g:4961:2: ( rule__Loop__Group_11__0 )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // InternalQuCircuit.g:5121:2: ( rule__Loop__Group_11__0 )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA39_0==48) ) {
-                alt39=1;
+            if ( (LA41_0==47) ) {
+                alt41=1;
             }
-            switch (alt39) {
+            switch (alt41) {
                 case 1 :
-                    // InternalQuCircuit.g:4961:3: rule__Loop__Group_11__0
+                    // InternalQuCircuit.g:5121:3: rule__Loop__Group_11__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_11__0();
@@ -15168,14 +15661,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__12"
-    // InternalQuCircuit.g:4969:1: rule__Loop__Group__12 : rule__Loop__Group__12__Impl rule__Loop__Group__13 ;
+    // InternalQuCircuit.g:5129:1: rule__Loop__Group__12 : rule__Loop__Group__12__Impl rule__Loop__Group__13 ;
     public final void rule__Loop__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4973:1: ( rule__Loop__Group__12__Impl rule__Loop__Group__13 )
-            // InternalQuCircuit.g:4974:2: rule__Loop__Group__12__Impl rule__Loop__Group__13
+            // InternalQuCircuit.g:5133:1: ( rule__Loop__Group__12__Impl rule__Loop__Group__13 )
+            // InternalQuCircuit.g:5134:2: rule__Loop__Group__12__Impl rule__Loop__Group__13
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__12__Impl();
@@ -15206,29 +15699,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__12__Impl"
-    // InternalQuCircuit.g:4981:1: rule__Loop__Group__12__Impl : ( ( rule__Loop__Group_12__0 )? ) ;
+    // InternalQuCircuit.g:5141:1: rule__Loop__Group__12__Impl : ( ( rule__Loop__Group_12__0 )? ) ;
     public final void rule__Loop__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4985:1: ( ( ( rule__Loop__Group_12__0 )? ) )
-            // InternalQuCircuit.g:4986:1: ( ( rule__Loop__Group_12__0 )? )
+            // InternalQuCircuit.g:5145:1: ( ( ( rule__Loop__Group_12__0 )? ) )
+            // InternalQuCircuit.g:5146:1: ( ( rule__Loop__Group_12__0 )? )
             {
-            // InternalQuCircuit.g:4986:1: ( ( rule__Loop__Group_12__0 )? )
-            // InternalQuCircuit.g:4987:2: ( rule__Loop__Group_12__0 )?
+            // InternalQuCircuit.g:5146:1: ( ( rule__Loop__Group_12__0 )? )
+            // InternalQuCircuit.g:5147:2: ( rule__Loop__Group_12__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_12()); 
-            // InternalQuCircuit.g:4988:2: ( rule__Loop__Group_12__0 )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // InternalQuCircuit.g:5148:2: ( rule__Loop__Group_12__0 )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA40_0==49) ) {
-                alt40=1;
+            if ( (LA42_0==48) ) {
+                alt42=1;
             }
-            switch (alt40) {
+            switch (alt42) {
                 case 1 :
-                    // InternalQuCircuit.g:4988:3: rule__Loop__Group_12__0
+                    // InternalQuCircuit.g:5148:3: rule__Loop__Group_12__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_12__0();
@@ -15264,14 +15757,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__13"
-    // InternalQuCircuit.g:4996:1: rule__Loop__Group__13 : rule__Loop__Group__13__Impl rule__Loop__Group__14 ;
+    // InternalQuCircuit.g:5156:1: rule__Loop__Group__13 : rule__Loop__Group__13__Impl rule__Loop__Group__14 ;
     public final void rule__Loop__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5000:1: ( rule__Loop__Group__13__Impl rule__Loop__Group__14 )
-            // InternalQuCircuit.g:5001:2: rule__Loop__Group__13__Impl rule__Loop__Group__14
+            // InternalQuCircuit.g:5160:1: ( rule__Loop__Group__13__Impl rule__Loop__Group__14 )
+            // InternalQuCircuit.g:5161:2: rule__Loop__Group__13__Impl rule__Loop__Group__14
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__13__Impl();
@@ -15302,29 +15795,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__13__Impl"
-    // InternalQuCircuit.g:5008:1: rule__Loop__Group__13__Impl : ( ( rule__Loop__Group_13__0 )? ) ;
+    // InternalQuCircuit.g:5168:1: rule__Loop__Group__13__Impl : ( ( rule__Loop__Group_13__0 )? ) ;
     public final void rule__Loop__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5012:1: ( ( ( rule__Loop__Group_13__0 )? ) )
-            // InternalQuCircuit.g:5013:1: ( ( rule__Loop__Group_13__0 )? )
+            // InternalQuCircuit.g:5172:1: ( ( ( rule__Loop__Group_13__0 )? ) )
+            // InternalQuCircuit.g:5173:1: ( ( rule__Loop__Group_13__0 )? )
             {
-            // InternalQuCircuit.g:5013:1: ( ( rule__Loop__Group_13__0 )? )
-            // InternalQuCircuit.g:5014:2: ( rule__Loop__Group_13__0 )?
+            // InternalQuCircuit.g:5173:1: ( ( rule__Loop__Group_13__0 )? )
+            // InternalQuCircuit.g:5174:2: ( rule__Loop__Group_13__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_13()); 
-            // InternalQuCircuit.g:5015:2: ( rule__Loop__Group_13__0 )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            // InternalQuCircuit.g:5175:2: ( rule__Loop__Group_13__0 )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA41_0==50) ) {
-                alt41=1;
+            if ( (LA43_0==49) ) {
+                alt43=1;
             }
-            switch (alt41) {
+            switch (alt43) {
                 case 1 :
-                    // InternalQuCircuit.g:5015:3: rule__Loop__Group_13__0
+                    // InternalQuCircuit.g:5175:3: rule__Loop__Group_13__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_13__0();
@@ -15360,14 +15853,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__14"
-    // InternalQuCircuit.g:5023:1: rule__Loop__Group__14 : rule__Loop__Group__14__Impl rule__Loop__Group__15 ;
+    // InternalQuCircuit.g:5183:1: rule__Loop__Group__14 : rule__Loop__Group__14__Impl rule__Loop__Group__15 ;
     public final void rule__Loop__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5027:1: ( rule__Loop__Group__14__Impl rule__Loop__Group__15 )
-            // InternalQuCircuit.g:5028:2: rule__Loop__Group__14__Impl rule__Loop__Group__15
+            // InternalQuCircuit.g:5187:1: ( rule__Loop__Group__14__Impl rule__Loop__Group__15 )
+            // InternalQuCircuit.g:5188:2: rule__Loop__Group__14__Impl rule__Loop__Group__15
             {
             pushFollow(FOLLOW_36);
             rule__Loop__Group__14__Impl();
@@ -15398,29 +15891,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__14__Impl"
-    // InternalQuCircuit.g:5035:1: rule__Loop__Group__14__Impl : ( ( rule__Loop__Group_14__0 )? ) ;
+    // InternalQuCircuit.g:5195:1: rule__Loop__Group__14__Impl : ( ( rule__Loop__Group_14__0 )? ) ;
     public final void rule__Loop__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5039:1: ( ( ( rule__Loop__Group_14__0 )? ) )
-            // InternalQuCircuit.g:5040:1: ( ( rule__Loop__Group_14__0 )? )
+            // InternalQuCircuit.g:5199:1: ( ( ( rule__Loop__Group_14__0 )? ) )
+            // InternalQuCircuit.g:5200:1: ( ( rule__Loop__Group_14__0 )? )
             {
-            // InternalQuCircuit.g:5040:1: ( ( rule__Loop__Group_14__0 )? )
-            // InternalQuCircuit.g:5041:2: ( rule__Loop__Group_14__0 )?
+            // InternalQuCircuit.g:5200:1: ( ( rule__Loop__Group_14__0 )? )
+            // InternalQuCircuit.g:5201:2: ( rule__Loop__Group_14__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_14()); 
-            // InternalQuCircuit.g:5042:2: ( rule__Loop__Group_14__0 )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // InternalQuCircuit.g:5202:2: ( rule__Loop__Group_14__0 )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA42_0==51) ) {
-                alt42=1;
+            if ( (LA44_0==50) ) {
+                alt44=1;
             }
-            switch (alt42) {
+            switch (alt44) {
                 case 1 :
-                    // InternalQuCircuit.g:5042:3: rule__Loop__Group_14__0
+                    // InternalQuCircuit.g:5202:3: rule__Loop__Group_14__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_14__0();
@@ -15456,16 +15949,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__15"
-    // InternalQuCircuit.g:5050:1: rule__Loop__Group__15 : rule__Loop__Group__15__Impl rule__Loop__Group__16 ;
+    // InternalQuCircuit.g:5210:1: rule__Loop__Group__15 : rule__Loop__Group__15__Impl rule__Loop__Group__16 ;
     public final void rule__Loop__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5054:1: ( rule__Loop__Group__15__Impl rule__Loop__Group__16 )
-            // InternalQuCircuit.g:5055:2: rule__Loop__Group__15__Impl rule__Loop__Group__16
+            // InternalQuCircuit.g:5214:1: ( rule__Loop__Group__15__Impl rule__Loop__Group__16 )
+            // InternalQuCircuit.g:5215:2: rule__Loop__Group__15__Impl rule__Loop__Group__16
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Loop__Group__15__Impl();
 
             state._fsp--;
@@ -15494,20 +15987,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__15__Impl"
-    // InternalQuCircuit.g:5062:1: rule__Loop__Group__15__Impl : ( 'targetQubits' ) ;
+    // InternalQuCircuit.g:5222:1: rule__Loop__Group__15__Impl : ( 'targetQubits' ) ;
     public final void rule__Loop__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5066:1: ( ( 'targetQubits' ) )
-            // InternalQuCircuit.g:5067:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:5226:1: ( ( 'targetQubits' ) )
+            // InternalQuCircuit.g:5227:1: ( 'targetQubits' )
             {
-            // InternalQuCircuit.g:5067:1: ( 'targetQubits' )
-            // InternalQuCircuit.g:5068:2: 'targetQubits'
+            // InternalQuCircuit.g:5227:1: ( 'targetQubits' )
+            // InternalQuCircuit.g:5228:2: 'targetQubits'
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsKeyword_15()); 
-            match(input,27,FOLLOW_2); 
+            match(input,29,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getTargetQubitsKeyword_15()); 
 
             }
@@ -15531,16 +16024,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__16"
-    // InternalQuCircuit.g:5077:1: rule__Loop__Group__16 : rule__Loop__Group__16__Impl rule__Loop__Group__17 ;
+    // InternalQuCircuit.g:5237:1: rule__Loop__Group__16 : rule__Loop__Group__16__Impl rule__Loop__Group__17 ;
     public final void rule__Loop__Group__16() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5081:1: ( rule__Loop__Group__16__Impl rule__Loop__Group__17 )
-            // InternalQuCircuit.g:5082:2: rule__Loop__Group__16__Impl rule__Loop__Group__17
+            // InternalQuCircuit.g:5241:1: ( rule__Loop__Group__16__Impl rule__Loop__Group__17 )
+            // InternalQuCircuit.g:5242:2: rule__Loop__Group__16__Impl rule__Loop__Group__17
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Loop__Group__16__Impl();
 
             state._fsp--;
@@ -15569,20 +16062,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__16__Impl"
-    // InternalQuCircuit.g:5089:1: rule__Loop__Group__16__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:5249:1: rule__Loop__Group__16__Impl : ( '[' ) ;
     public final void rule__Loop__Group__16__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5093:1: ( ( '[' ) )
-            // InternalQuCircuit.g:5094:1: ( '[' )
+            // InternalQuCircuit.g:5253:1: ( ( '[' ) )
+            // InternalQuCircuit.g:5254:1: ( '[' )
             {
-            // InternalQuCircuit.g:5094:1: ( '[' )
-            // InternalQuCircuit.g:5095:2: '['
+            // InternalQuCircuit.g:5254:1: ( '[' )
+            // InternalQuCircuit.g:5255:2: '['
             {
              before(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_16()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_16()); 
 
             }
@@ -15606,16 +16099,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__17"
-    // InternalQuCircuit.g:5104:1: rule__Loop__Group__17 : rule__Loop__Group__17__Impl rule__Loop__Group__18 ;
+    // InternalQuCircuit.g:5264:1: rule__Loop__Group__17 : rule__Loop__Group__17__Impl rule__Loop__Group__18 ;
     public final void rule__Loop__Group__17() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5108:1: ( rule__Loop__Group__17__Impl rule__Loop__Group__18 )
-            // InternalQuCircuit.g:5109:2: rule__Loop__Group__17__Impl rule__Loop__Group__18
+            // InternalQuCircuit.g:5268:1: ( rule__Loop__Group__17__Impl rule__Loop__Group__18 )
+            // InternalQuCircuit.g:5269:2: rule__Loop__Group__17__Impl rule__Loop__Group__18
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group__17__Impl();
 
             state._fsp--;
@@ -15644,20 +16137,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__17__Impl"
-    // InternalQuCircuit.g:5116:1: rule__Loop__Group__17__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:5276:1: rule__Loop__Group__17__Impl : ( '(' ) ;
     public final void rule__Loop__Group__17__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5120:1: ( ( '(' ) )
-            // InternalQuCircuit.g:5121:1: ( '(' )
+            // InternalQuCircuit.g:5280:1: ( ( '(' ) )
+            // InternalQuCircuit.g:5281:1: ( '(' )
             {
-            // InternalQuCircuit.g:5121:1: ( '(' )
-            // InternalQuCircuit.g:5122:2: '('
+            // InternalQuCircuit.g:5281:1: ( '(' )
+            // InternalQuCircuit.g:5282:2: '('
             {
              before(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_17()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_17()); 
 
             }
@@ -15681,16 +16174,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__18"
-    // InternalQuCircuit.g:5131:1: rule__Loop__Group__18 : rule__Loop__Group__18__Impl rule__Loop__Group__19 ;
+    // InternalQuCircuit.g:5291:1: rule__Loop__Group__18 : rule__Loop__Group__18__Impl rule__Loop__Group__19 ;
     public final void rule__Loop__Group__18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5135:1: ( rule__Loop__Group__18__Impl rule__Loop__Group__19 )
-            // InternalQuCircuit.g:5136:2: rule__Loop__Group__18__Impl rule__Loop__Group__19
+            // InternalQuCircuit.g:5295:1: ( rule__Loop__Group__18__Impl rule__Loop__Group__19 )
+            // InternalQuCircuit.g:5296:2: rule__Loop__Group__18__Impl rule__Loop__Group__19
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Loop__Group__18__Impl();
 
             state._fsp--;
@@ -15719,21 +16212,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__18__Impl"
-    // InternalQuCircuit.g:5143:1: rule__Loop__Group__18__Impl : ( ( rule__Loop__TargetQubitsAssignment_18 ) ) ;
+    // InternalQuCircuit.g:5303:1: rule__Loop__Group__18__Impl : ( ( rule__Loop__TargetQubitsAssignment_18 ) ) ;
     public final void rule__Loop__Group__18__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5147:1: ( ( ( rule__Loop__TargetQubitsAssignment_18 ) ) )
-            // InternalQuCircuit.g:5148:1: ( ( rule__Loop__TargetQubitsAssignment_18 ) )
+            // InternalQuCircuit.g:5307:1: ( ( ( rule__Loop__TargetQubitsAssignment_18 ) ) )
+            // InternalQuCircuit.g:5308:1: ( ( rule__Loop__TargetQubitsAssignment_18 ) )
             {
-            // InternalQuCircuit.g:5148:1: ( ( rule__Loop__TargetQubitsAssignment_18 ) )
-            // InternalQuCircuit.g:5149:2: ( rule__Loop__TargetQubitsAssignment_18 )
+            // InternalQuCircuit.g:5308:1: ( ( rule__Loop__TargetQubitsAssignment_18 ) )
+            // InternalQuCircuit.g:5309:2: ( rule__Loop__TargetQubitsAssignment_18 )
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsAssignment_18()); 
-            // InternalQuCircuit.g:5150:2: ( rule__Loop__TargetQubitsAssignment_18 )
-            // InternalQuCircuit.g:5150:3: rule__Loop__TargetQubitsAssignment_18
+            // InternalQuCircuit.g:5310:2: ( rule__Loop__TargetQubitsAssignment_18 )
+            // InternalQuCircuit.g:5310:3: rule__Loop__TargetQubitsAssignment_18
             {
             pushFollow(FOLLOW_2);
             rule__Loop__TargetQubitsAssignment_18();
@@ -15766,16 +16259,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__19"
-    // InternalQuCircuit.g:5158:1: rule__Loop__Group__19 : rule__Loop__Group__19__Impl rule__Loop__Group__20 ;
+    // InternalQuCircuit.g:5318:1: rule__Loop__Group__19 : rule__Loop__Group__19__Impl rule__Loop__Group__20 ;
     public final void rule__Loop__Group__19() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5162:1: ( rule__Loop__Group__19__Impl rule__Loop__Group__20 )
-            // InternalQuCircuit.g:5163:2: rule__Loop__Group__19__Impl rule__Loop__Group__20
+            // InternalQuCircuit.g:5322:1: ( rule__Loop__Group__19__Impl rule__Loop__Group__20 )
+            // InternalQuCircuit.g:5323:2: rule__Loop__Group__19__Impl rule__Loop__Group__20
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group__19__Impl();
 
             state._fsp--;
@@ -15804,20 +16297,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__19__Impl"
-    // InternalQuCircuit.g:5170:1: rule__Loop__Group__19__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:5330:1: rule__Loop__Group__19__Impl : ( ')' ) ;
     public final void rule__Loop__Group__19__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5174:1: ( ( ')' ) )
-            // InternalQuCircuit.g:5175:1: ( ')' )
+            // InternalQuCircuit.g:5334:1: ( ( ')' ) )
+            // InternalQuCircuit.g:5335:1: ( ')' )
             {
-            // InternalQuCircuit.g:5175:1: ( ')' )
-            // InternalQuCircuit.g:5176:2: ')'
+            // InternalQuCircuit.g:5335:1: ( ')' )
+            // InternalQuCircuit.g:5336:2: ')'
             {
              before(grammarAccess.getLoopAccess().getRightParenthesisKeyword_19()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightParenthesisKeyword_19()); 
 
             }
@@ -15841,16 +16334,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__20"
-    // InternalQuCircuit.g:5185:1: rule__Loop__Group__20 : rule__Loop__Group__20__Impl rule__Loop__Group__21 ;
+    // InternalQuCircuit.g:5345:1: rule__Loop__Group__20 : rule__Loop__Group__20__Impl rule__Loop__Group__21 ;
     public final void rule__Loop__Group__20() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5189:1: ( rule__Loop__Group__20__Impl rule__Loop__Group__21 )
-            // InternalQuCircuit.g:5190:2: rule__Loop__Group__20__Impl rule__Loop__Group__21
+            // InternalQuCircuit.g:5349:1: ( rule__Loop__Group__20__Impl rule__Loop__Group__21 )
+            // InternalQuCircuit.g:5350:2: rule__Loop__Group__20__Impl rule__Loop__Group__21
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group__20__Impl();
 
             state._fsp--;
@@ -15879,35 +16372,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__20__Impl"
-    // InternalQuCircuit.g:5197:1: rule__Loop__Group__20__Impl : ( ( rule__Loop__Group_20__0 )* ) ;
+    // InternalQuCircuit.g:5357:1: rule__Loop__Group__20__Impl : ( ( rule__Loop__Group_20__0 )* ) ;
     public final void rule__Loop__Group__20__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5201:1: ( ( ( rule__Loop__Group_20__0 )* ) )
-            // InternalQuCircuit.g:5202:1: ( ( rule__Loop__Group_20__0 )* )
+            // InternalQuCircuit.g:5361:1: ( ( ( rule__Loop__Group_20__0 )* ) )
+            // InternalQuCircuit.g:5362:1: ( ( rule__Loop__Group_20__0 )* )
             {
-            // InternalQuCircuit.g:5202:1: ( ( rule__Loop__Group_20__0 )* )
-            // InternalQuCircuit.g:5203:2: ( rule__Loop__Group_20__0 )*
+            // InternalQuCircuit.g:5362:1: ( ( rule__Loop__Group_20__0 )* )
+            // InternalQuCircuit.g:5363:2: ( rule__Loop__Group_20__0 )*
             {
              before(grammarAccess.getLoopAccess().getGroup_20()); 
-            // InternalQuCircuit.g:5204:2: ( rule__Loop__Group_20__0 )*
-            loop43:
+            // InternalQuCircuit.g:5364:2: ( rule__Loop__Group_20__0 )*
+            loop45:
             do {
-                int alt43=2;
-                int LA43_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( (LA43_0==24) ) {
-                    alt43=1;
+                if ( (LA45_0==26) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt43) {
+                switch (alt45) {
             	case 1 :
-            	    // InternalQuCircuit.g:5204:3: rule__Loop__Group_20__0
+            	    // InternalQuCircuit.g:5364:3: rule__Loop__Group_20__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Loop__Group_20__0();
 
             	    state._fsp--;
@@ -15917,7 +16410,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop43;
+            	    break loop45;
                 }
             } while (true);
 
@@ -15944,14 +16437,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__21"
-    // InternalQuCircuit.g:5212:1: rule__Loop__Group__21 : rule__Loop__Group__21__Impl rule__Loop__Group__22 ;
+    // InternalQuCircuit.g:5372:1: rule__Loop__Group__21 : rule__Loop__Group__21__Impl rule__Loop__Group__22 ;
     public final void rule__Loop__Group__21() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5216:1: ( rule__Loop__Group__21__Impl rule__Loop__Group__22 )
-            // InternalQuCircuit.g:5217:2: rule__Loop__Group__21__Impl rule__Loop__Group__22
+            // InternalQuCircuit.g:5376:1: ( rule__Loop__Group__21__Impl rule__Loop__Group__22 )
+            // InternalQuCircuit.g:5377:2: rule__Loop__Group__21__Impl rule__Loop__Group__22
             {
             pushFollow(FOLLOW_37);
             rule__Loop__Group__21__Impl();
@@ -15982,20 +16475,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__21__Impl"
-    // InternalQuCircuit.g:5224:1: rule__Loop__Group__21__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:5384:1: rule__Loop__Group__21__Impl : ( ']' ) ;
     public final void rule__Loop__Group__21__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5228:1: ( ( ']' ) )
-            // InternalQuCircuit.g:5229:1: ( ']' )
+            // InternalQuCircuit.g:5388:1: ( ( ']' ) )
+            // InternalQuCircuit.g:5389:1: ( ']' )
             {
-            // InternalQuCircuit.g:5229:1: ( ']' )
-            // InternalQuCircuit.g:5230:2: ']'
+            // InternalQuCircuit.g:5389:1: ( ']' )
+            // InternalQuCircuit.g:5390:2: ']'
             {
              before(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_21()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_21()); 
 
             }
@@ -16019,14 +16512,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__22"
-    // InternalQuCircuit.g:5239:1: rule__Loop__Group__22 : rule__Loop__Group__22__Impl rule__Loop__Group__23 ;
+    // InternalQuCircuit.g:5399:1: rule__Loop__Group__22 : rule__Loop__Group__22__Impl rule__Loop__Group__23 ;
     public final void rule__Loop__Group__22() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5243:1: ( rule__Loop__Group__22__Impl rule__Loop__Group__23 )
-            // InternalQuCircuit.g:5244:2: rule__Loop__Group__22__Impl rule__Loop__Group__23
+            // InternalQuCircuit.g:5403:1: ( rule__Loop__Group__22__Impl rule__Loop__Group__23 )
+            // InternalQuCircuit.g:5404:2: rule__Loop__Group__22__Impl rule__Loop__Group__23
             {
             pushFollow(FOLLOW_37);
             rule__Loop__Group__22__Impl();
@@ -16057,29 +16550,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__22__Impl"
-    // InternalQuCircuit.g:5251:1: rule__Loop__Group__22__Impl : ( ( rule__Loop__Group_22__0 )? ) ;
+    // InternalQuCircuit.g:5411:1: rule__Loop__Group__22__Impl : ( ( rule__Loop__Group_22__0 )? ) ;
     public final void rule__Loop__Group__22__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5255:1: ( ( ( rule__Loop__Group_22__0 )? ) )
-            // InternalQuCircuit.g:5256:1: ( ( rule__Loop__Group_22__0 )? )
+            // InternalQuCircuit.g:5415:1: ( ( ( rule__Loop__Group_22__0 )? ) )
+            // InternalQuCircuit.g:5416:1: ( ( rule__Loop__Group_22__0 )? )
             {
-            // InternalQuCircuit.g:5256:1: ( ( rule__Loop__Group_22__0 )? )
-            // InternalQuCircuit.g:5257:2: ( rule__Loop__Group_22__0 )?
+            // InternalQuCircuit.g:5416:1: ( ( rule__Loop__Group_22__0 )? )
+            // InternalQuCircuit.g:5417:2: ( rule__Loop__Group_22__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_22()); 
-            // InternalQuCircuit.g:5258:2: ( rule__Loop__Group_22__0 )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // InternalQuCircuit.g:5418:2: ( rule__Loop__Group_22__0 )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA44_0==33) ) {
-                alt44=1;
+            if ( (LA46_0==33) ) {
+                alt46=1;
             }
-            switch (alt44) {
+            switch (alt46) {
                 case 1 :
-                    // InternalQuCircuit.g:5258:3: rule__Loop__Group_22__0
+                    // InternalQuCircuit.g:5418:3: rule__Loop__Group_22__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_22__0();
@@ -16115,14 +16608,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__23"
-    // InternalQuCircuit.g:5266:1: rule__Loop__Group__23 : rule__Loop__Group__23__Impl rule__Loop__Group__24 ;
+    // InternalQuCircuit.g:5426:1: rule__Loop__Group__23 : rule__Loop__Group__23__Impl rule__Loop__Group__24 ;
     public final void rule__Loop__Group__23() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5270:1: ( rule__Loop__Group__23__Impl rule__Loop__Group__24 )
-            // InternalQuCircuit.g:5271:2: rule__Loop__Group__23__Impl rule__Loop__Group__24
+            // InternalQuCircuit.g:5430:1: ( rule__Loop__Group__23__Impl rule__Loop__Group__24 )
+            // InternalQuCircuit.g:5431:2: rule__Loop__Group__23__Impl rule__Loop__Group__24
             {
             pushFollow(FOLLOW_37);
             rule__Loop__Group__23__Impl();
@@ -16153,29 +16646,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__23__Impl"
-    // InternalQuCircuit.g:5278:1: rule__Loop__Group__23__Impl : ( ( rule__Loop__Group_23__0 )? ) ;
+    // InternalQuCircuit.g:5438:1: rule__Loop__Group__23__Impl : ( ( rule__Loop__Group_23__0 )? ) ;
     public final void rule__Loop__Group__23__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5282:1: ( ( ( rule__Loop__Group_23__0 )? ) )
-            // InternalQuCircuit.g:5283:1: ( ( rule__Loop__Group_23__0 )? )
+            // InternalQuCircuit.g:5442:1: ( ( ( rule__Loop__Group_23__0 )? ) )
+            // InternalQuCircuit.g:5443:1: ( ( rule__Loop__Group_23__0 )? )
             {
-            // InternalQuCircuit.g:5283:1: ( ( rule__Loop__Group_23__0 )? )
-            // InternalQuCircuit.g:5284:2: ( rule__Loop__Group_23__0 )?
+            // InternalQuCircuit.g:5443:1: ( ( rule__Loop__Group_23__0 )? )
+            // InternalQuCircuit.g:5444:2: ( rule__Loop__Group_23__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_23()); 
-            // InternalQuCircuit.g:5285:2: ( rule__Loop__Group_23__0 )?
-            int alt45=2;
-            int LA45_0 = input.LA(1);
+            // InternalQuCircuit.g:5445:2: ( rule__Loop__Group_23__0 )?
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA45_0==52) ) {
-                alt45=1;
+            if ( (LA47_0==51) ) {
+                alt47=1;
             }
-            switch (alt45) {
+            switch (alt47) {
                 case 1 :
-                    // InternalQuCircuit.g:5285:3: rule__Loop__Group_23__0
+                    // InternalQuCircuit.g:5445:3: rule__Loop__Group_23__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_23__0();
@@ -16211,14 +16704,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__24"
-    // InternalQuCircuit.g:5293:1: rule__Loop__Group__24 : rule__Loop__Group__24__Impl rule__Loop__Group__25 ;
+    // InternalQuCircuit.g:5453:1: rule__Loop__Group__24 : rule__Loop__Group__24__Impl rule__Loop__Group__25 ;
     public final void rule__Loop__Group__24() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5297:1: ( rule__Loop__Group__24__Impl rule__Loop__Group__25 )
-            // InternalQuCircuit.g:5298:2: rule__Loop__Group__24__Impl rule__Loop__Group__25
+            // InternalQuCircuit.g:5457:1: ( rule__Loop__Group__24__Impl rule__Loop__Group__25 )
+            // InternalQuCircuit.g:5458:2: rule__Loop__Group__24__Impl rule__Loop__Group__25
             {
             pushFollow(FOLLOW_37);
             rule__Loop__Group__24__Impl();
@@ -16249,29 +16742,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__24__Impl"
-    // InternalQuCircuit.g:5305:1: rule__Loop__Group__24__Impl : ( ( rule__Loop__Group_24__0 )? ) ;
+    // InternalQuCircuit.g:5465:1: rule__Loop__Group__24__Impl : ( ( rule__Loop__Group_24__0 )? ) ;
     public final void rule__Loop__Group__24__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5309:1: ( ( ( rule__Loop__Group_24__0 )? ) )
-            // InternalQuCircuit.g:5310:1: ( ( rule__Loop__Group_24__0 )? )
+            // InternalQuCircuit.g:5469:1: ( ( ( rule__Loop__Group_24__0 )? ) )
+            // InternalQuCircuit.g:5470:1: ( ( rule__Loop__Group_24__0 )? )
             {
-            // InternalQuCircuit.g:5310:1: ( ( rule__Loop__Group_24__0 )? )
-            // InternalQuCircuit.g:5311:2: ( rule__Loop__Group_24__0 )?
+            // InternalQuCircuit.g:5470:1: ( ( rule__Loop__Group_24__0 )? )
+            // InternalQuCircuit.g:5471:2: ( rule__Loop__Group_24__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_24()); 
-            // InternalQuCircuit.g:5312:2: ( rule__Loop__Group_24__0 )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // InternalQuCircuit.g:5472:2: ( rule__Loop__Group_24__0 )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA46_0==53) ) {
-                alt46=1;
+            if ( (LA48_0==52) ) {
+                alt48=1;
             }
-            switch (alt46) {
+            switch (alt48) {
                 case 1 :
-                    // InternalQuCircuit.g:5312:3: rule__Loop__Group_24__0
+                    // InternalQuCircuit.g:5472:3: rule__Loop__Group_24__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_24__0();
@@ -16307,14 +16800,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__25"
-    // InternalQuCircuit.g:5320:1: rule__Loop__Group__25 : rule__Loop__Group__25__Impl rule__Loop__Group__26 ;
+    // InternalQuCircuit.g:5480:1: rule__Loop__Group__25 : rule__Loop__Group__25__Impl rule__Loop__Group__26 ;
     public final void rule__Loop__Group__25() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5324:1: ( rule__Loop__Group__25__Impl rule__Loop__Group__26 )
-            // InternalQuCircuit.g:5325:2: rule__Loop__Group__25__Impl rule__Loop__Group__26
+            // InternalQuCircuit.g:5484:1: ( rule__Loop__Group__25__Impl rule__Loop__Group__26 )
+            // InternalQuCircuit.g:5485:2: rule__Loop__Group__25__Impl rule__Loop__Group__26
             {
             pushFollow(FOLLOW_3);
             rule__Loop__Group__25__Impl();
@@ -16345,20 +16838,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__25__Impl"
-    // InternalQuCircuit.g:5332:1: rule__Loop__Group__25__Impl : ( 'loop' ) ;
+    // InternalQuCircuit.g:5492:1: rule__Loop__Group__25__Impl : ( 'loop' ) ;
     public final void rule__Loop__Group__25__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5336:1: ( ( 'loop' ) )
-            // InternalQuCircuit.g:5337:1: ( 'loop' )
+            // InternalQuCircuit.g:5496:1: ( ( 'loop' ) )
+            // InternalQuCircuit.g:5497:1: ( 'loop' )
             {
-            // InternalQuCircuit.g:5337:1: ( 'loop' )
-            // InternalQuCircuit.g:5338:2: 'loop'
+            // InternalQuCircuit.g:5497:1: ( 'loop' )
+            // InternalQuCircuit.g:5498:2: 'loop'
             {
              before(grammarAccess.getLoopAccess().getLoopKeyword_25()); 
-            match(input,43,FOLLOW_2); 
+            match(input,42,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLoopKeyword_25()); 
 
             }
@@ -16382,14 +16875,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__26"
-    // InternalQuCircuit.g:5347:1: rule__Loop__Group__26 : rule__Loop__Group__26__Impl rule__Loop__Group__27 ;
+    // InternalQuCircuit.g:5507:1: rule__Loop__Group__26 : rule__Loop__Group__26__Impl rule__Loop__Group__27 ;
     public final void rule__Loop__Group__26() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5351:1: ( rule__Loop__Group__26__Impl rule__Loop__Group__27 )
-            // InternalQuCircuit.g:5352:2: rule__Loop__Group__26__Impl rule__Loop__Group__27
+            // InternalQuCircuit.g:5511:1: ( rule__Loop__Group__26__Impl rule__Loop__Group__27 )
+            // InternalQuCircuit.g:5512:2: rule__Loop__Group__26__Impl rule__Loop__Group__27
             {
             pushFollow(FOLLOW_38);
             rule__Loop__Group__26__Impl();
@@ -16420,21 +16913,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__26__Impl"
-    // InternalQuCircuit.g:5359:1: rule__Loop__Group__26__Impl : ( ( rule__Loop__LoopAssignment_26 ) ) ;
+    // InternalQuCircuit.g:5519:1: rule__Loop__Group__26__Impl : ( ( rule__Loop__LoopAssignment_26 ) ) ;
     public final void rule__Loop__Group__26__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5363:1: ( ( ( rule__Loop__LoopAssignment_26 ) ) )
-            // InternalQuCircuit.g:5364:1: ( ( rule__Loop__LoopAssignment_26 ) )
+            // InternalQuCircuit.g:5523:1: ( ( ( rule__Loop__LoopAssignment_26 ) ) )
+            // InternalQuCircuit.g:5524:1: ( ( rule__Loop__LoopAssignment_26 ) )
             {
-            // InternalQuCircuit.g:5364:1: ( ( rule__Loop__LoopAssignment_26 ) )
-            // InternalQuCircuit.g:5365:2: ( rule__Loop__LoopAssignment_26 )
+            // InternalQuCircuit.g:5524:1: ( ( rule__Loop__LoopAssignment_26 ) )
+            // InternalQuCircuit.g:5525:2: ( rule__Loop__LoopAssignment_26 )
             {
              before(grammarAccess.getLoopAccess().getLoopAssignment_26()); 
-            // InternalQuCircuit.g:5366:2: ( rule__Loop__LoopAssignment_26 )
-            // InternalQuCircuit.g:5366:3: rule__Loop__LoopAssignment_26
+            // InternalQuCircuit.g:5526:2: ( rule__Loop__LoopAssignment_26 )
+            // InternalQuCircuit.g:5526:3: rule__Loop__LoopAssignment_26
             {
             pushFollow(FOLLOW_2);
             rule__Loop__LoopAssignment_26();
@@ -16467,16 +16960,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__27"
-    // InternalQuCircuit.g:5374:1: rule__Loop__Group__27 : rule__Loop__Group__27__Impl rule__Loop__Group__28 ;
+    // InternalQuCircuit.g:5534:1: rule__Loop__Group__27 : rule__Loop__Group__27__Impl rule__Loop__Group__28 ;
     public final void rule__Loop__Group__27() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5378:1: ( rule__Loop__Group__27__Impl rule__Loop__Group__28 )
-            // InternalQuCircuit.g:5379:2: rule__Loop__Group__27__Impl rule__Loop__Group__28
+            // InternalQuCircuit.g:5538:1: ( rule__Loop__Group__27__Impl rule__Loop__Group__28 )
+            // InternalQuCircuit.g:5539:2: rule__Loop__Group__27__Impl rule__Loop__Group__28
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Loop__Group__27__Impl();
 
             state._fsp--;
@@ -16505,20 +16998,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__27__Impl"
-    // InternalQuCircuit.g:5386:1: rule__Loop__Group__27__Impl : ( 'loopTargetQubits' ) ;
+    // InternalQuCircuit.g:5546:1: rule__Loop__Group__27__Impl : ( 'loopTargetQubits' ) ;
     public final void rule__Loop__Group__27__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5390:1: ( ( 'loopTargetQubits' ) )
-            // InternalQuCircuit.g:5391:1: ( 'loopTargetQubits' )
+            // InternalQuCircuit.g:5550:1: ( ( 'loopTargetQubits' ) )
+            // InternalQuCircuit.g:5551:1: ( 'loopTargetQubits' )
             {
-            // InternalQuCircuit.g:5391:1: ( 'loopTargetQubits' )
-            // InternalQuCircuit.g:5392:2: 'loopTargetQubits'
+            // InternalQuCircuit.g:5551:1: ( 'loopTargetQubits' )
+            // InternalQuCircuit.g:5552:2: 'loopTargetQubits'
             {
              before(grammarAccess.getLoopAccess().getLoopTargetQubitsKeyword_27()); 
-            match(input,44,FOLLOW_2); 
+            match(input,43,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLoopTargetQubitsKeyword_27()); 
 
             }
@@ -16542,16 +17035,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__28"
-    // InternalQuCircuit.g:5401:1: rule__Loop__Group__28 : rule__Loop__Group__28__Impl rule__Loop__Group__29 ;
+    // InternalQuCircuit.g:5561:1: rule__Loop__Group__28 : rule__Loop__Group__28__Impl rule__Loop__Group__29 ;
     public final void rule__Loop__Group__28() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5405:1: ( rule__Loop__Group__28__Impl rule__Loop__Group__29 )
-            // InternalQuCircuit.g:5406:2: rule__Loop__Group__28__Impl rule__Loop__Group__29
+            // InternalQuCircuit.g:5565:1: ( rule__Loop__Group__28__Impl rule__Loop__Group__29 )
+            // InternalQuCircuit.g:5566:2: rule__Loop__Group__28__Impl rule__Loop__Group__29
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Loop__Group__28__Impl();
 
             state._fsp--;
@@ -16580,20 +17073,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__28__Impl"
-    // InternalQuCircuit.g:5413:1: rule__Loop__Group__28__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:5573:1: rule__Loop__Group__28__Impl : ( '[' ) ;
     public final void rule__Loop__Group__28__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5417:1: ( ( '[' ) )
-            // InternalQuCircuit.g:5418:1: ( '[' )
+            // InternalQuCircuit.g:5577:1: ( ( '[' ) )
+            // InternalQuCircuit.g:5578:1: ( '[' )
             {
-            // InternalQuCircuit.g:5418:1: ( '[' )
-            // InternalQuCircuit.g:5419:2: '['
+            // InternalQuCircuit.g:5578:1: ( '[' )
+            // InternalQuCircuit.g:5579:2: '['
             {
              before(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_28()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_28()); 
 
             }
@@ -16617,16 +17110,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__29"
-    // InternalQuCircuit.g:5428:1: rule__Loop__Group__29 : rule__Loop__Group__29__Impl rule__Loop__Group__30 ;
+    // InternalQuCircuit.g:5588:1: rule__Loop__Group__29 : rule__Loop__Group__29__Impl rule__Loop__Group__30 ;
     public final void rule__Loop__Group__29() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5432:1: ( rule__Loop__Group__29__Impl rule__Loop__Group__30 )
-            // InternalQuCircuit.g:5433:2: rule__Loop__Group__29__Impl rule__Loop__Group__30
+            // InternalQuCircuit.g:5592:1: ( rule__Loop__Group__29__Impl rule__Loop__Group__30 )
+            // InternalQuCircuit.g:5593:2: rule__Loop__Group__29__Impl rule__Loop__Group__30
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group__29__Impl();
 
             state._fsp--;
@@ -16655,20 +17148,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__29__Impl"
-    // InternalQuCircuit.g:5440:1: rule__Loop__Group__29__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:5600:1: rule__Loop__Group__29__Impl : ( '(' ) ;
     public final void rule__Loop__Group__29__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5444:1: ( ( '(' ) )
-            // InternalQuCircuit.g:5445:1: ( '(' )
+            // InternalQuCircuit.g:5604:1: ( ( '(' ) )
+            // InternalQuCircuit.g:5605:1: ( '(' )
             {
-            // InternalQuCircuit.g:5445:1: ( '(' )
-            // InternalQuCircuit.g:5446:2: '('
+            // InternalQuCircuit.g:5605:1: ( '(' )
+            // InternalQuCircuit.g:5606:2: '('
             {
              before(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_29()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_29()); 
 
             }
@@ -16692,16 +17185,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__30"
-    // InternalQuCircuit.g:5455:1: rule__Loop__Group__30 : rule__Loop__Group__30__Impl rule__Loop__Group__31 ;
+    // InternalQuCircuit.g:5615:1: rule__Loop__Group__30 : rule__Loop__Group__30__Impl rule__Loop__Group__31 ;
     public final void rule__Loop__Group__30() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5459:1: ( rule__Loop__Group__30__Impl rule__Loop__Group__31 )
-            // InternalQuCircuit.g:5460:2: rule__Loop__Group__30__Impl rule__Loop__Group__31
+            // InternalQuCircuit.g:5619:1: ( rule__Loop__Group__30__Impl rule__Loop__Group__31 )
+            // InternalQuCircuit.g:5620:2: rule__Loop__Group__30__Impl rule__Loop__Group__31
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Loop__Group__30__Impl();
 
             state._fsp--;
@@ -16730,21 +17223,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__30__Impl"
-    // InternalQuCircuit.g:5467:1: rule__Loop__Group__30__Impl : ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) ) ;
+    // InternalQuCircuit.g:5627:1: rule__Loop__Group__30__Impl : ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) ) ;
     public final void rule__Loop__Group__30__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5471:1: ( ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) ) )
-            // InternalQuCircuit.g:5472:1: ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) )
+            // InternalQuCircuit.g:5631:1: ( ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) ) )
+            // InternalQuCircuit.g:5632:1: ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) )
             {
-            // InternalQuCircuit.g:5472:1: ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) )
-            // InternalQuCircuit.g:5473:2: ( rule__Loop__LoopTargetQubitsAssignment_30 )
+            // InternalQuCircuit.g:5632:1: ( ( rule__Loop__LoopTargetQubitsAssignment_30 ) )
+            // InternalQuCircuit.g:5633:2: ( rule__Loop__LoopTargetQubitsAssignment_30 )
             {
              before(grammarAccess.getLoopAccess().getLoopTargetQubitsAssignment_30()); 
-            // InternalQuCircuit.g:5474:2: ( rule__Loop__LoopTargetQubitsAssignment_30 )
-            // InternalQuCircuit.g:5474:3: rule__Loop__LoopTargetQubitsAssignment_30
+            // InternalQuCircuit.g:5634:2: ( rule__Loop__LoopTargetQubitsAssignment_30 )
+            // InternalQuCircuit.g:5634:3: rule__Loop__LoopTargetQubitsAssignment_30
             {
             pushFollow(FOLLOW_2);
             rule__Loop__LoopTargetQubitsAssignment_30();
@@ -16777,16 +17270,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__31"
-    // InternalQuCircuit.g:5482:1: rule__Loop__Group__31 : rule__Loop__Group__31__Impl rule__Loop__Group__32 ;
+    // InternalQuCircuit.g:5642:1: rule__Loop__Group__31 : rule__Loop__Group__31__Impl rule__Loop__Group__32 ;
     public final void rule__Loop__Group__31() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5486:1: ( rule__Loop__Group__31__Impl rule__Loop__Group__32 )
-            // InternalQuCircuit.g:5487:2: rule__Loop__Group__31__Impl rule__Loop__Group__32
+            // InternalQuCircuit.g:5646:1: ( rule__Loop__Group__31__Impl rule__Loop__Group__32 )
+            // InternalQuCircuit.g:5647:2: rule__Loop__Group__31__Impl rule__Loop__Group__32
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group__31__Impl();
 
             state._fsp--;
@@ -16815,20 +17308,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__31__Impl"
-    // InternalQuCircuit.g:5494:1: rule__Loop__Group__31__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:5654:1: rule__Loop__Group__31__Impl : ( ')' ) ;
     public final void rule__Loop__Group__31__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5498:1: ( ( ')' ) )
-            // InternalQuCircuit.g:5499:1: ( ')' )
+            // InternalQuCircuit.g:5658:1: ( ( ')' ) )
+            // InternalQuCircuit.g:5659:1: ( ')' )
             {
-            // InternalQuCircuit.g:5499:1: ( ')' )
-            // InternalQuCircuit.g:5500:2: ')'
+            // InternalQuCircuit.g:5659:1: ( ')' )
+            // InternalQuCircuit.g:5660:2: ')'
             {
              before(grammarAccess.getLoopAccess().getRightParenthesisKeyword_31()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightParenthesisKeyword_31()); 
 
             }
@@ -16852,16 +17345,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__32"
-    // InternalQuCircuit.g:5509:1: rule__Loop__Group__32 : rule__Loop__Group__32__Impl rule__Loop__Group__33 ;
+    // InternalQuCircuit.g:5669:1: rule__Loop__Group__32 : rule__Loop__Group__32__Impl rule__Loop__Group__33 ;
     public final void rule__Loop__Group__32() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5513:1: ( rule__Loop__Group__32__Impl rule__Loop__Group__33 )
-            // InternalQuCircuit.g:5514:2: rule__Loop__Group__32__Impl rule__Loop__Group__33
+            // InternalQuCircuit.g:5673:1: ( rule__Loop__Group__32__Impl rule__Loop__Group__33 )
+            // InternalQuCircuit.g:5674:2: rule__Loop__Group__32__Impl rule__Loop__Group__33
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group__32__Impl();
 
             state._fsp--;
@@ -16890,35 +17383,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__32__Impl"
-    // InternalQuCircuit.g:5521:1: rule__Loop__Group__32__Impl : ( ( rule__Loop__Group_32__0 )* ) ;
+    // InternalQuCircuit.g:5681:1: rule__Loop__Group__32__Impl : ( ( rule__Loop__Group_32__0 )* ) ;
     public final void rule__Loop__Group__32__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5525:1: ( ( ( rule__Loop__Group_32__0 )* ) )
-            // InternalQuCircuit.g:5526:1: ( ( rule__Loop__Group_32__0 )* )
+            // InternalQuCircuit.g:5685:1: ( ( ( rule__Loop__Group_32__0 )* ) )
+            // InternalQuCircuit.g:5686:1: ( ( rule__Loop__Group_32__0 )* )
             {
-            // InternalQuCircuit.g:5526:1: ( ( rule__Loop__Group_32__0 )* )
-            // InternalQuCircuit.g:5527:2: ( rule__Loop__Group_32__0 )*
+            // InternalQuCircuit.g:5686:1: ( ( rule__Loop__Group_32__0 )* )
+            // InternalQuCircuit.g:5687:2: ( rule__Loop__Group_32__0 )*
             {
              before(grammarAccess.getLoopAccess().getGroup_32()); 
-            // InternalQuCircuit.g:5528:2: ( rule__Loop__Group_32__0 )*
-            loop47:
+            // InternalQuCircuit.g:5688:2: ( rule__Loop__Group_32__0 )*
+            loop49:
             do {
-                int alt47=2;
-                int LA47_0 = input.LA(1);
+                int alt49=2;
+                int LA49_0 = input.LA(1);
 
-                if ( (LA47_0==24) ) {
-                    alt47=1;
+                if ( (LA49_0==26) ) {
+                    alt49=1;
                 }
 
 
-                switch (alt47) {
+                switch (alt49) {
             	case 1 :
-            	    // InternalQuCircuit.g:5528:3: rule__Loop__Group_32__0
+            	    // InternalQuCircuit.g:5688:3: rule__Loop__Group_32__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Loop__Group_32__0();
 
             	    state._fsp--;
@@ -16928,7 +17421,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop47;
+            	    break loop49;
                 }
             } while (true);
 
@@ -16955,14 +17448,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__33"
-    // InternalQuCircuit.g:5536:1: rule__Loop__Group__33 : rule__Loop__Group__33__Impl rule__Loop__Group__34 ;
+    // InternalQuCircuit.g:5696:1: rule__Loop__Group__33 : rule__Loop__Group__33__Impl rule__Loop__Group__34 ;
     public final void rule__Loop__Group__33() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5540:1: ( rule__Loop__Group__33__Impl rule__Loop__Group__34 )
-            // InternalQuCircuit.g:5541:2: rule__Loop__Group__33__Impl rule__Loop__Group__34
+            // InternalQuCircuit.g:5700:1: ( rule__Loop__Group__33__Impl rule__Loop__Group__34 )
+            // InternalQuCircuit.g:5701:2: rule__Loop__Group__33__Impl rule__Loop__Group__34
             {
             pushFollow(FOLLOW_39);
             rule__Loop__Group__33__Impl();
@@ -16993,20 +17486,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__33__Impl"
-    // InternalQuCircuit.g:5548:1: rule__Loop__Group__33__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:5708:1: rule__Loop__Group__33__Impl : ( ']' ) ;
     public final void rule__Loop__Group__33__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5552:1: ( ( ']' ) )
-            // InternalQuCircuit.g:5553:1: ( ']' )
+            // InternalQuCircuit.g:5712:1: ( ( ']' ) )
+            // InternalQuCircuit.g:5713:1: ( ']' )
             {
-            // InternalQuCircuit.g:5553:1: ( ']' )
-            // InternalQuCircuit.g:5554:2: ']'
+            // InternalQuCircuit.g:5713:1: ( ']' )
+            // InternalQuCircuit.g:5714:2: ']'
             {
              before(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_33()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_33()); 
 
             }
@@ -17030,14 +17523,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__34"
-    // InternalQuCircuit.g:5563:1: rule__Loop__Group__34 : rule__Loop__Group__34__Impl rule__Loop__Group__35 ;
+    // InternalQuCircuit.g:5723:1: rule__Loop__Group__34 : rule__Loop__Group__34__Impl rule__Loop__Group__35 ;
     public final void rule__Loop__Group__34() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5567:1: ( rule__Loop__Group__34__Impl rule__Loop__Group__35 )
-            // InternalQuCircuit.g:5568:2: rule__Loop__Group__34__Impl rule__Loop__Group__35
+            // InternalQuCircuit.g:5727:1: ( rule__Loop__Group__34__Impl rule__Loop__Group__35 )
+            // InternalQuCircuit.g:5728:2: rule__Loop__Group__34__Impl rule__Loop__Group__35
             {
             pushFollow(FOLLOW_39);
             rule__Loop__Group__34__Impl();
@@ -17068,29 +17561,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__34__Impl"
-    // InternalQuCircuit.g:5575:1: rule__Loop__Group__34__Impl : ( ( rule__Loop__Group_34__0 )? ) ;
+    // InternalQuCircuit.g:5735:1: rule__Loop__Group__34__Impl : ( ( rule__Loop__Group_34__0 )? ) ;
     public final void rule__Loop__Group__34__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5579:1: ( ( ( rule__Loop__Group_34__0 )? ) )
-            // InternalQuCircuit.g:5580:1: ( ( rule__Loop__Group_34__0 )? )
+            // InternalQuCircuit.g:5739:1: ( ( ( rule__Loop__Group_34__0 )? ) )
+            // InternalQuCircuit.g:5740:1: ( ( rule__Loop__Group_34__0 )? )
             {
-            // InternalQuCircuit.g:5580:1: ( ( rule__Loop__Group_34__0 )? )
-            // InternalQuCircuit.g:5581:2: ( rule__Loop__Group_34__0 )?
+            // InternalQuCircuit.g:5740:1: ( ( rule__Loop__Group_34__0 )? )
+            // InternalQuCircuit.g:5741:2: ( rule__Loop__Group_34__0 )?
             {
              before(grammarAccess.getLoopAccess().getGroup_34()); 
-            // InternalQuCircuit.g:5582:2: ( rule__Loop__Group_34__0 )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // InternalQuCircuit.g:5742:2: ( rule__Loop__Group_34__0 )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA48_0==54) ) {
-                alt48=1;
+            if ( (LA50_0==53) ) {
+                alt50=1;
             }
-            switch (alt48) {
+            switch (alt50) {
                 case 1 :
-                    // InternalQuCircuit.g:5582:3: rule__Loop__Group_34__0
+                    // InternalQuCircuit.g:5742:3: rule__Loop__Group_34__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Loop__Group_34__0();
@@ -17126,14 +17619,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__35"
-    // InternalQuCircuit.g:5590:1: rule__Loop__Group__35 : rule__Loop__Group__35__Impl ;
+    // InternalQuCircuit.g:5750:1: rule__Loop__Group__35 : rule__Loop__Group__35__Impl ;
     public final void rule__Loop__Group__35() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5594:1: ( rule__Loop__Group__35__Impl )
-            // InternalQuCircuit.g:5595:2: rule__Loop__Group__35__Impl
+            // InternalQuCircuit.g:5754:1: ( rule__Loop__Group__35__Impl )
+            // InternalQuCircuit.g:5755:2: rule__Loop__Group__35__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group__35__Impl();
@@ -17159,17 +17652,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__35__Impl"
-    // InternalQuCircuit.g:5601:1: rule__Loop__Group__35__Impl : ( '}' ) ;
+    // InternalQuCircuit.g:5761:1: rule__Loop__Group__35__Impl : ( '}' ) ;
     public final void rule__Loop__Group__35__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5605:1: ( ( '}' ) )
-            // InternalQuCircuit.g:5606:1: ( '}' )
+            // InternalQuCircuit.g:5765:1: ( ( '}' ) )
+            // InternalQuCircuit.g:5766:1: ( '}' )
             {
-            // InternalQuCircuit.g:5606:1: ( '}' )
-            // InternalQuCircuit.g:5607:2: '}'
+            // InternalQuCircuit.g:5766:1: ( '}' )
+            // InternalQuCircuit.g:5767:2: '}'
             {
              before(grammarAccess.getLoopAccess().getRightCurlyBracketKeyword_35()); 
             match(input,18,FOLLOW_2); 
@@ -17196,16 +17689,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_6__0"
-    // InternalQuCircuit.g:5617:1: rule__Loop__Group_6__0 : rule__Loop__Group_6__0__Impl rule__Loop__Group_6__1 ;
+    // InternalQuCircuit.g:5777:1: rule__Loop__Group_6__0 : rule__Loop__Group_6__0__Impl rule__Loop__Group_6__1 ;
     public final void rule__Loop__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5621:1: ( rule__Loop__Group_6__0__Impl rule__Loop__Group_6__1 )
-            // InternalQuCircuit.g:5622:2: rule__Loop__Group_6__0__Impl rule__Loop__Group_6__1
+            // InternalQuCircuit.g:5781:1: ( rule__Loop__Group_6__0__Impl rule__Loop__Group_6__1 )
+            // InternalQuCircuit.g:5782:2: rule__Loop__Group_6__0__Impl rule__Loop__Group_6__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__Loop__Group_6__0__Impl();
 
             state._fsp--;
@@ -17234,20 +17727,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_6__0__Impl"
-    // InternalQuCircuit.g:5629:1: rule__Loop__Group_6__0__Impl : ( 'iterations' ) ;
+    // InternalQuCircuit.g:5789:1: rule__Loop__Group_6__0__Impl : ( 'iterations' ) ;
     public final void rule__Loop__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5633:1: ( ( 'iterations' ) )
-            // InternalQuCircuit.g:5634:1: ( 'iterations' )
+            // InternalQuCircuit.g:5793:1: ( ( 'iterations' ) )
+            // InternalQuCircuit.g:5794:1: ( 'iterations' )
             {
-            // InternalQuCircuit.g:5634:1: ( 'iterations' )
-            // InternalQuCircuit.g:5635:2: 'iterations'
+            // InternalQuCircuit.g:5794:1: ( 'iterations' )
+            // InternalQuCircuit.g:5795:2: 'iterations'
             {
              before(grammarAccess.getLoopAccess().getIterationsKeyword_6_0()); 
-            match(input,45,FOLLOW_2); 
+            match(input,44,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getIterationsKeyword_6_0()); 
 
             }
@@ -17271,14 +17764,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_6__1"
-    // InternalQuCircuit.g:5644:1: rule__Loop__Group_6__1 : rule__Loop__Group_6__1__Impl ;
+    // InternalQuCircuit.g:5804:1: rule__Loop__Group_6__1 : rule__Loop__Group_6__1__Impl ;
     public final void rule__Loop__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5648:1: ( rule__Loop__Group_6__1__Impl )
-            // InternalQuCircuit.g:5649:2: rule__Loop__Group_6__1__Impl
+            // InternalQuCircuit.g:5808:1: ( rule__Loop__Group_6__1__Impl )
+            // InternalQuCircuit.g:5809:2: rule__Loop__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_6__1__Impl();
@@ -17304,21 +17797,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_6__1__Impl"
-    // InternalQuCircuit.g:5655:1: rule__Loop__Group_6__1__Impl : ( ( rule__Loop__IterationsAssignment_6_1 ) ) ;
+    // InternalQuCircuit.g:5815:1: rule__Loop__Group_6__1__Impl : ( ( rule__Loop__IterationsAssignment_6_1 ) ) ;
     public final void rule__Loop__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5659:1: ( ( ( rule__Loop__IterationsAssignment_6_1 ) ) )
-            // InternalQuCircuit.g:5660:1: ( ( rule__Loop__IterationsAssignment_6_1 ) )
+            // InternalQuCircuit.g:5819:1: ( ( ( rule__Loop__IterationsAssignment_6_1 ) ) )
+            // InternalQuCircuit.g:5820:1: ( ( rule__Loop__IterationsAssignment_6_1 ) )
             {
-            // InternalQuCircuit.g:5660:1: ( ( rule__Loop__IterationsAssignment_6_1 ) )
-            // InternalQuCircuit.g:5661:2: ( rule__Loop__IterationsAssignment_6_1 )
+            // InternalQuCircuit.g:5820:1: ( ( rule__Loop__IterationsAssignment_6_1 ) )
+            // InternalQuCircuit.g:5821:2: ( rule__Loop__IterationsAssignment_6_1 )
             {
              before(grammarAccess.getLoopAccess().getIterationsAssignment_6_1()); 
-            // InternalQuCircuit.g:5662:2: ( rule__Loop__IterationsAssignment_6_1 )
-            // InternalQuCircuit.g:5662:3: rule__Loop__IterationsAssignment_6_1
+            // InternalQuCircuit.g:5822:2: ( rule__Loop__IterationsAssignment_6_1 )
+            // InternalQuCircuit.g:5822:3: rule__Loop__IterationsAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__IterationsAssignment_6_1();
@@ -17351,16 +17844,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_9__0"
-    // InternalQuCircuit.g:5671:1: rule__Loop__Group_9__0 : rule__Loop__Group_9__0__Impl rule__Loop__Group_9__1 ;
+    // InternalQuCircuit.g:5831:1: rule__Loop__Group_9__0 : rule__Loop__Group_9__0__Impl rule__Loop__Group_9__1 ;
     public final void rule__Loop__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5675:1: ( rule__Loop__Group_9__0__Impl rule__Loop__Group_9__1 )
-            // InternalQuCircuit.g:5676:2: rule__Loop__Group_9__0__Impl rule__Loop__Group_9__1
+            // InternalQuCircuit.g:5835:1: ( rule__Loop__Group_9__0__Impl rule__Loop__Group_9__1 )
+            // InternalQuCircuit.g:5836:2: rule__Loop__Group_9__0__Impl rule__Loop__Group_9__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__Loop__Group_9__0__Impl();
 
             state._fsp--;
@@ -17389,20 +17882,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_9__0__Impl"
-    // InternalQuCircuit.g:5683:1: rule__Loop__Group_9__0__Impl : ( 'targetQubitsBlockSize' ) ;
+    // InternalQuCircuit.g:5843:1: rule__Loop__Group_9__0__Impl : ( 'targetQubitsBlockSize' ) ;
     public final void rule__Loop__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5687:1: ( ( 'targetQubitsBlockSize' ) )
-            // InternalQuCircuit.g:5688:1: ( 'targetQubitsBlockSize' )
+            // InternalQuCircuit.g:5847:1: ( ( 'targetQubitsBlockSize' ) )
+            // InternalQuCircuit.g:5848:1: ( 'targetQubitsBlockSize' )
             {
-            // InternalQuCircuit.g:5688:1: ( 'targetQubitsBlockSize' )
-            // InternalQuCircuit.g:5689:2: 'targetQubitsBlockSize'
+            // InternalQuCircuit.g:5848:1: ( 'targetQubitsBlockSize' )
+            // InternalQuCircuit.g:5849:2: 'targetQubitsBlockSize'
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsBlockSizeKeyword_9_0()); 
-            match(input,46,FOLLOW_2); 
+            match(input,45,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getTargetQubitsBlockSizeKeyword_9_0()); 
 
             }
@@ -17426,14 +17919,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_9__1"
-    // InternalQuCircuit.g:5698:1: rule__Loop__Group_9__1 : rule__Loop__Group_9__1__Impl ;
+    // InternalQuCircuit.g:5858:1: rule__Loop__Group_9__1 : rule__Loop__Group_9__1__Impl ;
     public final void rule__Loop__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5702:1: ( rule__Loop__Group_9__1__Impl )
-            // InternalQuCircuit.g:5703:2: rule__Loop__Group_9__1__Impl
+            // InternalQuCircuit.g:5862:1: ( rule__Loop__Group_9__1__Impl )
+            // InternalQuCircuit.g:5863:2: rule__Loop__Group_9__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_9__1__Impl();
@@ -17459,21 +17952,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_9__1__Impl"
-    // InternalQuCircuit.g:5709:1: rule__Loop__Group_9__1__Impl : ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) ) ;
+    // InternalQuCircuit.g:5869:1: rule__Loop__Group_9__1__Impl : ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) ) ;
     public final void rule__Loop__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5713:1: ( ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) ) )
-            // InternalQuCircuit.g:5714:1: ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) )
+            // InternalQuCircuit.g:5873:1: ( ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) ) )
+            // InternalQuCircuit.g:5874:1: ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) )
             {
-            // InternalQuCircuit.g:5714:1: ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) )
-            // InternalQuCircuit.g:5715:2: ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 )
+            // InternalQuCircuit.g:5874:1: ( ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 ) )
+            // InternalQuCircuit.g:5875:2: ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 )
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsBlockSizeAssignment_9_1()); 
-            // InternalQuCircuit.g:5716:2: ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 )
-            // InternalQuCircuit.g:5716:3: rule__Loop__TargetQubitsBlockSizeAssignment_9_1
+            // InternalQuCircuit.g:5876:2: ( rule__Loop__TargetQubitsBlockSizeAssignment_9_1 )
+            // InternalQuCircuit.g:5876:3: rule__Loop__TargetQubitsBlockSizeAssignment_9_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__TargetQubitsBlockSizeAssignment_9_1();
@@ -17506,16 +17999,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_10__0"
-    // InternalQuCircuit.g:5725:1: rule__Loop__Group_10__0 : rule__Loop__Group_10__0__Impl rule__Loop__Group_10__1 ;
+    // InternalQuCircuit.g:5885:1: rule__Loop__Group_10__0 : rule__Loop__Group_10__0__Impl rule__Loop__Group_10__1 ;
     public final void rule__Loop__Group_10__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5729:1: ( rule__Loop__Group_10__0__Impl rule__Loop__Group_10__1 )
-            // InternalQuCircuit.g:5730:2: rule__Loop__Group_10__0__Impl rule__Loop__Group_10__1
+            // InternalQuCircuit.g:5889:1: ( rule__Loop__Group_10__0__Impl rule__Loop__Group_10__1 )
+            // InternalQuCircuit.g:5890:2: rule__Loop__Group_10__0__Impl rule__Loop__Group_10__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__Loop__Group_10__0__Impl();
 
             state._fsp--;
@@ -17544,20 +18037,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_10__0__Impl"
-    // InternalQuCircuit.g:5737:1: rule__Loop__Group_10__0__Impl : ( 'controlQubitsBlockSize' ) ;
+    // InternalQuCircuit.g:5897:1: rule__Loop__Group_10__0__Impl : ( 'controlQubitsBlockSize' ) ;
     public final void rule__Loop__Group_10__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5741:1: ( ( 'controlQubitsBlockSize' ) )
-            // InternalQuCircuit.g:5742:1: ( 'controlQubitsBlockSize' )
+            // InternalQuCircuit.g:5901:1: ( ( 'controlQubitsBlockSize' ) )
+            // InternalQuCircuit.g:5902:1: ( 'controlQubitsBlockSize' )
             {
-            // InternalQuCircuit.g:5742:1: ( 'controlQubitsBlockSize' )
-            // InternalQuCircuit.g:5743:2: 'controlQubitsBlockSize'
+            // InternalQuCircuit.g:5902:1: ( 'controlQubitsBlockSize' )
+            // InternalQuCircuit.g:5903:2: 'controlQubitsBlockSize'
             {
              before(grammarAccess.getLoopAccess().getControlQubitsBlockSizeKeyword_10_0()); 
-            match(input,47,FOLLOW_2); 
+            match(input,46,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getControlQubitsBlockSizeKeyword_10_0()); 
 
             }
@@ -17581,14 +18074,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_10__1"
-    // InternalQuCircuit.g:5752:1: rule__Loop__Group_10__1 : rule__Loop__Group_10__1__Impl ;
+    // InternalQuCircuit.g:5912:1: rule__Loop__Group_10__1 : rule__Loop__Group_10__1__Impl ;
     public final void rule__Loop__Group_10__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5756:1: ( rule__Loop__Group_10__1__Impl )
-            // InternalQuCircuit.g:5757:2: rule__Loop__Group_10__1__Impl
+            // InternalQuCircuit.g:5916:1: ( rule__Loop__Group_10__1__Impl )
+            // InternalQuCircuit.g:5917:2: rule__Loop__Group_10__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_10__1__Impl();
@@ -17614,21 +18107,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_10__1__Impl"
-    // InternalQuCircuit.g:5763:1: rule__Loop__Group_10__1__Impl : ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) ) ;
+    // InternalQuCircuit.g:5923:1: rule__Loop__Group_10__1__Impl : ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) ) ;
     public final void rule__Loop__Group_10__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5767:1: ( ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) ) )
-            // InternalQuCircuit.g:5768:1: ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) )
+            // InternalQuCircuit.g:5927:1: ( ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) ) )
+            // InternalQuCircuit.g:5928:1: ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) )
             {
-            // InternalQuCircuit.g:5768:1: ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) )
-            // InternalQuCircuit.g:5769:2: ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 )
+            // InternalQuCircuit.g:5928:1: ( ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 ) )
+            // InternalQuCircuit.g:5929:2: ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 )
             {
              before(grammarAccess.getLoopAccess().getControlQubitsBlockSizeAssignment_10_1()); 
-            // InternalQuCircuit.g:5770:2: ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 )
-            // InternalQuCircuit.g:5770:3: rule__Loop__ControlQubitsBlockSizeAssignment_10_1
+            // InternalQuCircuit.g:5930:2: ( rule__Loop__ControlQubitsBlockSizeAssignment_10_1 )
+            // InternalQuCircuit.g:5930:3: rule__Loop__ControlQubitsBlockSizeAssignment_10_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__ControlQubitsBlockSizeAssignment_10_1();
@@ -17661,14 +18154,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_11__0"
-    // InternalQuCircuit.g:5779:1: rule__Loop__Group_11__0 : rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1 ;
+    // InternalQuCircuit.g:5939:1: rule__Loop__Group_11__0 : rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1 ;
     public final void rule__Loop__Group_11__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5783:1: ( rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1 )
-            // InternalQuCircuit.g:5784:2: rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1
+            // InternalQuCircuit.g:5943:1: ( rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1 )
+            // InternalQuCircuit.g:5944:2: rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1
             {
             pushFollow(FOLLOW_40);
             rule__Loop__Group_11__0__Impl();
@@ -17699,20 +18192,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_11__0__Impl"
-    // InternalQuCircuit.g:5791:1: rule__Loop__Group_11__0__Impl : ( 'controlQubitsIterationType' ) ;
+    // InternalQuCircuit.g:5951:1: rule__Loop__Group_11__0__Impl : ( 'controlQubitsIterationType' ) ;
     public final void rule__Loop__Group_11__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5795:1: ( ( 'controlQubitsIterationType' ) )
-            // InternalQuCircuit.g:5796:1: ( 'controlQubitsIterationType' )
+            // InternalQuCircuit.g:5955:1: ( ( 'controlQubitsIterationType' ) )
+            // InternalQuCircuit.g:5956:1: ( 'controlQubitsIterationType' )
             {
-            // InternalQuCircuit.g:5796:1: ( 'controlQubitsIterationType' )
-            // InternalQuCircuit.g:5797:2: 'controlQubitsIterationType'
+            // InternalQuCircuit.g:5956:1: ( 'controlQubitsIterationType' )
+            // InternalQuCircuit.g:5957:2: 'controlQubitsIterationType'
             {
              before(grammarAccess.getLoopAccess().getControlQubitsIterationTypeKeyword_11_0()); 
-            match(input,48,FOLLOW_2); 
+            match(input,47,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getControlQubitsIterationTypeKeyword_11_0()); 
 
             }
@@ -17736,14 +18229,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_11__1"
-    // InternalQuCircuit.g:5806:1: rule__Loop__Group_11__1 : rule__Loop__Group_11__1__Impl ;
+    // InternalQuCircuit.g:5966:1: rule__Loop__Group_11__1 : rule__Loop__Group_11__1__Impl ;
     public final void rule__Loop__Group_11__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5810:1: ( rule__Loop__Group_11__1__Impl )
-            // InternalQuCircuit.g:5811:2: rule__Loop__Group_11__1__Impl
+            // InternalQuCircuit.g:5970:1: ( rule__Loop__Group_11__1__Impl )
+            // InternalQuCircuit.g:5971:2: rule__Loop__Group_11__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_11__1__Impl();
@@ -17769,21 +18262,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_11__1__Impl"
-    // InternalQuCircuit.g:5817:1: rule__Loop__Group_11__1__Impl : ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) ) ;
+    // InternalQuCircuit.g:5977:1: rule__Loop__Group_11__1__Impl : ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) ) ;
     public final void rule__Loop__Group_11__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5821:1: ( ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) ) )
-            // InternalQuCircuit.g:5822:1: ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) )
+            // InternalQuCircuit.g:5981:1: ( ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) ) )
+            // InternalQuCircuit.g:5982:1: ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) )
             {
-            // InternalQuCircuit.g:5822:1: ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) )
-            // InternalQuCircuit.g:5823:2: ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 )
+            // InternalQuCircuit.g:5982:1: ( ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 ) )
+            // InternalQuCircuit.g:5983:2: ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 )
             {
              before(grammarAccess.getLoopAccess().getControlQubitsIterationTypeAssignment_11_1()); 
-            // InternalQuCircuit.g:5824:2: ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 )
-            // InternalQuCircuit.g:5824:3: rule__Loop__ControlQubitsIterationTypeAssignment_11_1
+            // InternalQuCircuit.g:5984:2: ( rule__Loop__ControlQubitsIterationTypeAssignment_11_1 )
+            // InternalQuCircuit.g:5984:3: rule__Loop__ControlQubitsIterationTypeAssignment_11_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__ControlQubitsIterationTypeAssignment_11_1();
@@ -17816,14 +18309,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_12__0"
-    // InternalQuCircuit.g:5833:1: rule__Loop__Group_12__0 : rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1 ;
+    // InternalQuCircuit.g:5993:1: rule__Loop__Group_12__0 : rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1 ;
     public final void rule__Loop__Group_12__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5837:1: ( rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1 )
-            // InternalQuCircuit.g:5838:2: rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1
+            // InternalQuCircuit.g:5997:1: ( rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1 )
+            // InternalQuCircuit.g:5998:2: rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1
             {
             pushFollow(FOLLOW_40);
             rule__Loop__Group_12__0__Impl();
@@ -17854,20 +18347,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_12__0__Impl"
-    // InternalQuCircuit.g:5845:1: rule__Loop__Group_12__0__Impl : ( 'targetQubitsIterationType' ) ;
+    // InternalQuCircuit.g:6005:1: rule__Loop__Group_12__0__Impl : ( 'targetQubitsIterationType' ) ;
     public final void rule__Loop__Group_12__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5849:1: ( ( 'targetQubitsIterationType' ) )
-            // InternalQuCircuit.g:5850:1: ( 'targetQubitsIterationType' )
+            // InternalQuCircuit.g:6009:1: ( ( 'targetQubitsIterationType' ) )
+            // InternalQuCircuit.g:6010:1: ( 'targetQubitsIterationType' )
             {
-            // InternalQuCircuit.g:5850:1: ( 'targetQubitsIterationType' )
-            // InternalQuCircuit.g:5851:2: 'targetQubitsIterationType'
+            // InternalQuCircuit.g:6010:1: ( 'targetQubitsIterationType' )
+            // InternalQuCircuit.g:6011:2: 'targetQubitsIterationType'
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsIterationTypeKeyword_12_0()); 
-            match(input,49,FOLLOW_2); 
+            match(input,48,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getTargetQubitsIterationTypeKeyword_12_0()); 
 
             }
@@ -17891,14 +18384,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_12__1"
-    // InternalQuCircuit.g:5860:1: rule__Loop__Group_12__1 : rule__Loop__Group_12__1__Impl ;
+    // InternalQuCircuit.g:6020:1: rule__Loop__Group_12__1 : rule__Loop__Group_12__1__Impl ;
     public final void rule__Loop__Group_12__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5864:1: ( rule__Loop__Group_12__1__Impl )
-            // InternalQuCircuit.g:5865:2: rule__Loop__Group_12__1__Impl
+            // InternalQuCircuit.g:6024:1: ( rule__Loop__Group_12__1__Impl )
+            // InternalQuCircuit.g:6025:2: rule__Loop__Group_12__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_12__1__Impl();
@@ -17924,21 +18417,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_12__1__Impl"
-    // InternalQuCircuit.g:5871:1: rule__Loop__Group_12__1__Impl : ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) ) ;
+    // InternalQuCircuit.g:6031:1: rule__Loop__Group_12__1__Impl : ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) ) ;
     public final void rule__Loop__Group_12__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5875:1: ( ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) ) )
-            // InternalQuCircuit.g:5876:1: ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) )
+            // InternalQuCircuit.g:6035:1: ( ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) ) )
+            // InternalQuCircuit.g:6036:1: ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) )
             {
-            // InternalQuCircuit.g:5876:1: ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) )
-            // InternalQuCircuit.g:5877:2: ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 )
+            // InternalQuCircuit.g:6036:1: ( ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 ) )
+            // InternalQuCircuit.g:6037:2: ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 )
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsIterationTypeAssignment_12_1()); 
-            // InternalQuCircuit.g:5878:2: ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 )
-            // InternalQuCircuit.g:5878:3: rule__Loop__TargetQubitsIterationTypeAssignment_12_1
+            // InternalQuCircuit.g:6038:2: ( rule__Loop__TargetQubitsIterationTypeAssignment_12_1 )
+            // InternalQuCircuit.g:6038:3: rule__Loop__TargetQubitsIterationTypeAssignment_12_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__TargetQubitsIterationTypeAssignment_12_1();
@@ -17971,16 +18464,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_13__0"
-    // InternalQuCircuit.g:5887:1: rule__Loop__Group_13__0 : rule__Loop__Group_13__0__Impl rule__Loop__Group_13__1 ;
+    // InternalQuCircuit.g:6047:1: rule__Loop__Group_13__0 : rule__Loop__Group_13__0__Impl rule__Loop__Group_13__1 ;
     public final void rule__Loop__Group_13__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5891:1: ( rule__Loop__Group_13__0__Impl rule__Loop__Group_13__1 )
-            // InternalQuCircuit.g:5892:2: rule__Loop__Group_13__0__Impl rule__Loop__Group_13__1
+            // InternalQuCircuit.g:6051:1: ( rule__Loop__Group_13__0__Impl rule__Loop__Group_13__1 )
+            // InternalQuCircuit.g:6052:2: rule__Loop__Group_13__0__Impl rule__Loop__Group_13__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__Loop__Group_13__0__Impl();
 
             state._fsp--;
@@ -18009,20 +18502,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_13__0__Impl"
-    // InternalQuCircuit.g:5899:1: rule__Loop__Group_13__0__Impl : ( 'incrementBy' ) ;
+    // InternalQuCircuit.g:6059:1: rule__Loop__Group_13__0__Impl : ( 'incrementBy' ) ;
     public final void rule__Loop__Group_13__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5903:1: ( ( 'incrementBy' ) )
-            // InternalQuCircuit.g:5904:1: ( 'incrementBy' )
+            // InternalQuCircuit.g:6063:1: ( ( 'incrementBy' ) )
+            // InternalQuCircuit.g:6064:1: ( 'incrementBy' )
             {
-            // InternalQuCircuit.g:5904:1: ( 'incrementBy' )
-            // InternalQuCircuit.g:5905:2: 'incrementBy'
+            // InternalQuCircuit.g:6064:1: ( 'incrementBy' )
+            // InternalQuCircuit.g:6065:2: 'incrementBy'
             {
              before(grammarAccess.getLoopAccess().getIncrementByKeyword_13_0()); 
-            match(input,50,FOLLOW_2); 
+            match(input,49,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getIncrementByKeyword_13_0()); 
 
             }
@@ -18046,14 +18539,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_13__1"
-    // InternalQuCircuit.g:5914:1: rule__Loop__Group_13__1 : rule__Loop__Group_13__1__Impl ;
+    // InternalQuCircuit.g:6074:1: rule__Loop__Group_13__1 : rule__Loop__Group_13__1__Impl ;
     public final void rule__Loop__Group_13__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5918:1: ( rule__Loop__Group_13__1__Impl )
-            // InternalQuCircuit.g:5919:2: rule__Loop__Group_13__1__Impl
+            // InternalQuCircuit.g:6078:1: ( rule__Loop__Group_13__1__Impl )
+            // InternalQuCircuit.g:6079:2: rule__Loop__Group_13__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_13__1__Impl();
@@ -18079,21 +18572,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_13__1__Impl"
-    // InternalQuCircuit.g:5925:1: rule__Loop__Group_13__1__Impl : ( ( rule__Loop__IncrementByAssignment_13_1 ) ) ;
+    // InternalQuCircuit.g:6085:1: rule__Loop__Group_13__1__Impl : ( ( rule__Loop__IncrementByAssignment_13_1 ) ) ;
     public final void rule__Loop__Group_13__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5929:1: ( ( ( rule__Loop__IncrementByAssignment_13_1 ) ) )
-            // InternalQuCircuit.g:5930:1: ( ( rule__Loop__IncrementByAssignment_13_1 ) )
+            // InternalQuCircuit.g:6089:1: ( ( ( rule__Loop__IncrementByAssignment_13_1 ) ) )
+            // InternalQuCircuit.g:6090:1: ( ( rule__Loop__IncrementByAssignment_13_1 ) )
             {
-            // InternalQuCircuit.g:5930:1: ( ( rule__Loop__IncrementByAssignment_13_1 ) )
-            // InternalQuCircuit.g:5931:2: ( rule__Loop__IncrementByAssignment_13_1 )
+            // InternalQuCircuit.g:6090:1: ( ( rule__Loop__IncrementByAssignment_13_1 ) )
+            // InternalQuCircuit.g:6091:2: ( rule__Loop__IncrementByAssignment_13_1 )
             {
              before(grammarAccess.getLoopAccess().getIncrementByAssignment_13_1()); 
-            // InternalQuCircuit.g:5932:2: ( rule__Loop__IncrementByAssignment_13_1 )
-            // InternalQuCircuit.g:5932:3: rule__Loop__IncrementByAssignment_13_1
+            // InternalQuCircuit.g:6092:2: ( rule__Loop__IncrementByAssignment_13_1 )
+            // InternalQuCircuit.g:6092:3: rule__Loop__IncrementByAssignment_13_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__IncrementByAssignment_13_1();
@@ -18126,16 +18619,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__0"
-    // InternalQuCircuit.g:5941:1: rule__Loop__Group_14__0 : rule__Loop__Group_14__0__Impl rule__Loop__Group_14__1 ;
+    // InternalQuCircuit.g:6101:1: rule__Loop__Group_14__0 : rule__Loop__Group_14__0__Impl rule__Loop__Group_14__1 ;
     public final void rule__Loop__Group_14__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5945:1: ( rule__Loop__Group_14__0__Impl rule__Loop__Group_14__1 )
-            // InternalQuCircuit.g:5946:2: rule__Loop__Group_14__0__Impl rule__Loop__Group_14__1
+            // InternalQuCircuit.g:6105:1: ( rule__Loop__Group_14__0__Impl rule__Loop__Group_14__1 )
+            // InternalQuCircuit.g:6106:2: rule__Loop__Group_14__0__Impl rule__Loop__Group_14__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Loop__Group_14__0__Impl();
 
             state._fsp--;
@@ -18164,20 +18657,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__0__Impl"
-    // InternalQuCircuit.g:5953:1: rule__Loop__Group_14__0__Impl : ( 'operations' ) ;
+    // InternalQuCircuit.g:6113:1: rule__Loop__Group_14__0__Impl : ( 'operations' ) ;
     public final void rule__Loop__Group_14__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5957:1: ( ( 'operations' ) )
-            // InternalQuCircuit.g:5958:1: ( 'operations' )
+            // InternalQuCircuit.g:6117:1: ( ( 'operations' ) )
+            // InternalQuCircuit.g:6118:1: ( 'operations' )
             {
-            // InternalQuCircuit.g:5958:1: ( 'operations' )
-            // InternalQuCircuit.g:5959:2: 'operations'
+            // InternalQuCircuit.g:6118:1: ( 'operations' )
+            // InternalQuCircuit.g:6119:2: 'operations'
             {
              before(grammarAccess.getLoopAccess().getOperationsKeyword_14_0()); 
-            match(input,51,FOLLOW_2); 
+            match(input,50,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getOperationsKeyword_14_0()); 
 
             }
@@ -18201,14 +18694,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__1"
-    // InternalQuCircuit.g:5968:1: rule__Loop__Group_14__1 : rule__Loop__Group_14__1__Impl rule__Loop__Group_14__2 ;
+    // InternalQuCircuit.g:6128:1: rule__Loop__Group_14__1 : rule__Loop__Group_14__1__Impl rule__Loop__Group_14__2 ;
     public final void rule__Loop__Group_14__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5972:1: ( rule__Loop__Group_14__1__Impl rule__Loop__Group_14__2 )
-            // InternalQuCircuit.g:5973:2: rule__Loop__Group_14__1__Impl rule__Loop__Group_14__2
+            // InternalQuCircuit.g:6132:1: ( rule__Loop__Group_14__1__Impl rule__Loop__Group_14__2 )
+            // InternalQuCircuit.g:6133:2: rule__Loop__Group_14__1__Impl rule__Loop__Group_14__2
             {
             pushFollow(FOLLOW_3);
             rule__Loop__Group_14__1__Impl();
@@ -18239,20 +18732,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__1__Impl"
-    // InternalQuCircuit.g:5980:1: rule__Loop__Group_14__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:6140:1: rule__Loop__Group_14__1__Impl : ( '(' ) ;
     public final void rule__Loop__Group_14__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5984:1: ( ( '(' ) )
-            // InternalQuCircuit.g:5985:1: ( '(' )
+            // InternalQuCircuit.g:6144:1: ( ( '(' ) )
+            // InternalQuCircuit.g:6145:1: ( '(' )
             {
-            // InternalQuCircuit.g:5985:1: ( '(' )
-            // InternalQuCircuit.g:5986:2: '('
+            // InternalQuCircuit.g:6145:1: ( '(' )
+            // InternalQuCircuit.g:6146:2: '('
             {
              before(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_14_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_14_1()); 
 
             }
@@ -18276,14 +18769,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__2"
-    // InternalQuCircuit.g:5995:1: rule__Loop__Group_14__2 : rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3 ;
+    // InternalQuCircuit.g:6155:1: rule__Loop__Group_14__2 : rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3 ;
     public final void rule__Loop__Group_14__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:5999:1: ( rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3 )
-            // InternalQuCircuit.g:6000:2: rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3
+            // InternalQuCircuit.g:6159:1: ( rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3 )
+            // InternalQuCircuit.g:6160:2: rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3
             {
             pushFollow(FOLLOW_41);
             rule__Loop__Group_14__2__Impl();
@@ -18314,21 +18807,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__2__Impl"
-    // InternalQuCircuit.g:6007:1: rule__Loop__Group_14__2__Impl : ( ( rule__Loop__OperationsAssignment_14_2 ) ) ;
+    // InternalQuCircuit.g:6167:1: rule__Loop__Group_14__2__Impl : ( ( rule__Loop__OperationsAssignment_14_2 ) ) ;
     public final void rule__Loop__Group_14__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6011:1: ( ( ( rule__Loop__OperationsAssignment_14_2 ) ) )
-            // InternalQuCircuit.g:6012:1: ( ( rule__Loop__OperationsAssignment_14_2 ) )
+            // InternalQuCircuit.g:6171:1: ( ( ( rule__Loop__OperationsAssignment_14_2 ) ) )
+            // InternalQuCircuit.g:6172:1: ( ( rule__Loop__OperationsAssignment_14_2 ) )
             {
-            // InternalQuCircuit.g:6012:1: ( ( rule__Loop__OperationsAssignment_14_2 ) )
-            // InternalQuCircuit.g:6013:2: ( rule__Loop__OperationsAssignment_14_2 )
+            // InternalQuCircuit.g:6172:1: ( ( rule__Loop__OperationsAssignment_14_2 ) )
+            // InternalQuCircuit.g:6173:2: ( rule__Loop__OperationsAssignment_14_2 )
             {
              before(grammarAccess.getLoopAccess().getOperationsAssignment_14_2()); 
-            // InternalQuCircuit.g:6014:2: ( rule__Loop__OperationsAssignment_14_2 )
-            // InternalQuCircuit.g:6014:3: rule__Loop__OperationsAssignment_14_2
+            // InternalQuCircuit.g:6174:2: ( rule__Loop__OperationsAssignment_14_2 )
+            // InternalQuCircuit.g:6174:3: rule__Loop__OperationsAssignment_14_2
             {
             pushFollow(FOLLOW_2);
             rule__Loop__OperationsAssignment_14_2();
@@ -18361,14 +18854,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__3"
-    // InternalQuCircuit.g:6022:1: rule__Loop__Group_14__3 : rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4 ;
+    // InternalQuCircuit.g:6182:1: rule__Loop__Group_14__3 : rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4 ;
     public final void rule__Loop__Group_14__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6026:1: ( rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4 )
-            // InternalQuCircuit.g:6027:2: rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4
+            // InternalQuCircuit.g:6186:1: ( rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4 )
+            // InternalQuCircuit.g:6187:2: rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4
             {
             pushFollow(FOLLOW_41);
             rule__Loop__Group_14__3__Impl();
@@ -18399,35 +18892,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__3__Impl"
-    // InternalQuCircuit.g:6034:1: rule__Loop__Group_14__3__Impl : ( ( rule__Loop__Group_14_3__0 )* ) ;
+    // InternalQuCircuit.g:6194:1: rule__Loop__Group_14__3__Impl : ( ( rule__Loop__Group_14_3__0 )* ) ;
     public final void rule__Loop__Group_14__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6038:1: ( ( ( rule__Loop__Group_14_3__0 )* ) )
-            // InternalQuCircuit.g:6039:1: ( ( rule__Loop__Group_14_3__0 )* )
+            // InternalQuCircuit.g:6198:1: ( ( ( rule__Loop__Group_14_3__0 )* ) )
+            // InternalQuCircuit.g:6199:1: ( ( rule__Loop__Group_14_3__0 )* )
             {
-            // InternalQuCircuit.g:6039:1: ( ( rule__Loop__Group_14_3__0 )* )
-            // InternalQuCircuit.g:6040:2: ( rule__Loop__Group_14_3__0 )*
+            // InternalQuCircuit.g:6199:1: ( ( rule__Loop__Group_14_3__0 )* )
+            // InternalQuCircuit.g:6200:2: ( rule__Loop__Group_14_3__0 )*
             {
              before(grammarAccess.getLoopAccess().getGroup_14_3()); 
-            // InternalQuCircuit.g:6041:2: ( rule__Loop__Group_14_3__0 )*
-            loop49:
+            // InternalQuCircuit.g:6201:2: ( rule__Loop__Group_14_3__0 )*
+            loop51:
             do {
-                int alt49=2;
-                int LA49_0 = input.LA(1);
+                int alt51=2;
+                int LA51_0 = input.LA(1);
 
-                if ( (LA49_0==24) ) {
-                    alt49=1;
+                if ( (LA51_0==26) ) {
+                    alt51=1;
                 }
 
 
-                switch (alt49) {
+                switch (alt51) {
             	case 1 :
-            	    // InternalQuCircuit.g:6041:3: rule__Loop__Group_14_3__0
+            	    // InternalQuCircuit.g:6201:3: rule__Loop__Group_14_3__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Loop__Group_14_3__0();
 
             	    state._fsp--;
@@ -18437,7 +18930,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop49;
+            	    break loop51;
                 }
             } while (true);
 
@@ -18464,14 +18957,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__4"
-    // InternalQuCircuit.g:6049:1: rule__Loop__Group_14__4 : rule__Loop__Group_14__4__Impl ;
+    // InternalQuCircuit.g:6209:1: rule__Loop__Group_14__4 : rule__Loop__Group_14__4__Impl ;
     public final void rule__Loop__Group_14__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6053:1: ( rule__Loop__Group_14__4__Impl )
-            // InternalQuCircuit.g:6054:2: rule__Loop__Group_14__4__Impl
+            // InternalQuCircuit.g:6213:1: ( rule__Loop__Group_14__4__Impl )
+            // InternalQuCircuit.g:6214:2: rule__Loop__Group_14__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_14__4__Impl();
@@ -18497,20 +18990,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14__4__Impl"
-    // InternalQuCircuit.g:6060:1: rule__Loop__Group_14__4__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:6220:1: rule__Loop__Group_14__4__Impl : ( ')' ) ;
     public final void rule__Loop__Group_14__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6064:1: ( ( ')' ) )
-            // InternalQuCircuit.g:6065:1: ( ')' )
+            // InternalQuCircuit.g:6224:1: ( ( ')' ) )
+            // InternalQuCircuit.g:6225:1: ( ')' )
             {
-            // InternalQuCircuit.g:6065:1: ( ')' )
-            // InternalQuCircuit.g:6066:2: ')'
+            // InternalQuCircuit.g:6225:1: ( ')' )
+            // InternalQuCircuit.g:6226:2: ')'
             {
              before(grammarAccess.getLoopAccess().getRightParenthesisKeyword_14_4()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightParenthesisKeyword_14_4()); 
 
             }
@@ -18534,14 +19027,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14_3__0"
-    // InternalQuCircuit.g:6076:1: rule__Loop__Group_14_3__0 : rule__Loop__Group_14_3__0__Impl rule__Loop__Group_14_3__1 ;
+    // InternalQuCircuit.g:6236:1: rule__Loop__Group_14_3__0 : rule__Loop__Group_14_3__0__Impl rule__Loop__Group_14_3__1 ;
     public final void rule__Loop__Group_14_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6080:1: ( rule__Loop__Group_14_3__0__Impl rule__Loop__Group_14_3__1 )
-            // InternalQuCircuit.g:6081:2: rule__Loop__Group_14_3__0__Impl rule__Loop__Group_14_3__1
+            // InternalQuCircuit.g:6240:1: ( rule__Loop__Group_14_3__0__Impl rule__Loop__Group_14_3__1 )
+            // InternalQuCircuit.g:6241:2: rule__Loop__Group_14_3__0__Impl rule__Loop__Group_14_3__1
             {
             pushFollow(FOLLOW_3);
             rule__Loop__Group_14_3__0__Impl();
@@ -18572,20 +19065,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14_3__0__Impl"
-    // InternalQuCircuit.g:6088:1: rule__Loop__Group_14_3__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:6248:1: rule__Loop__Group_14_3__0__Impl : ( ',' ) ;
     public final void rule__Loop__Group_14_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6092:1: ( ( ',' ) )
-            // InternalQuCircuit.g:6093:1: ( ',' )
+            // InternalQuCircuit.g:6252:1: ( ( ',' ) )
+            // InternalQuCircuit.g:6253:1: ( ',' )
             {
-            // InternalQuCircuit.g:6093:1: ( ',' )
-            // InternalQuCircuit.g:6094:2: ','
+            // InternalQuCircuit.g:6253:1: ( ',' )
+            // InternalQuCircuit.g:6254:2: ','
             {
              before(grammarAccess.getLoopAccess().getCommaKeyword_14_3_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getCommaKeyword_14_3_0()); 
 
             }
@@ -18609,14 +19102,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14_3__1"
-    // InternalQuCircuit.g:6103:1: rule__Loop__Group_14_3__1 : rule__Loop__Group_14_3__1__Impl ;
+    // InternalQuCircuit.g:6263:1: rule__Loop__Group_14_3__1 : rule__Loop__Group_14_3__1__Impl ;
     public final void rule__Loop__Group_14_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6107:1: ( rule__Loop__Group_14_3__1__Impl )
-            // InternalQuCircuit.g:6108:2: rule__Loop__Group_14_3__1__Impl
+            // InternalQuCircuit.g:6267:1: ( rule__Loop__Group_14_3__1__Impl )
+            // InternalQuCircuit.g:6268:2: rule__Loop__Group_14_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_14_3__1__Impl();
@@ -18642,21 +19135,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_14_3__1__Impl"
-    // InternalQuCircuit.g:6114:1: rule__Loop__Group_14_3__1__Impl : ( ( rule__Loop__OperationsAssignment_14_3_1 ) ) ;
+    // InternalQuCircuit.g:6274:1: rule__Loop__Group_14_3__1__Impl : ( ( rule__Loop__OperationsAssignment_14_3_1 ) ) ;
     public final void rule__Loop__Group_14_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6118:1: ( ( ( rule__Loop__OperationsAssignment_14_3_1 ) ) )
-            // InternalQuCircuit.g:6119:1: ( ( rule__Loop__OperationsAssignment_14_3_1 ) )
+            // InternalQuCircuit.g:6278:1: ( ( ( rule__Loop__OperationsAssignment_14_3_1 ) ) )
+            // InternalQuCircuit.g:6279:1: ( ( rule__Loop__OperationsAssignment_14_3_1 ) )
             {
-            // InternalQuCircuit.g:6119:1: ( ( rule__Loop__OperationsAssignment_14_3_1 ) )
-            // InternalQuCircuit.g:6120:2: ( rule__Loop__OperationsAssignment_14_3_1 )
+            // InternalQuCircuit.g:6279:1: ( ( rule__Loop__OperationsAssignment_14_3_1 ) )
+            // InternalQuCircuit.g:6280:2: ( rule__Loop__OperationsAssignment_14_3_1 )
             {
              before(grammarAccess.getLoopAccess().getOperationsAssignment_14_3_1()); 
-            // InternalQuCircuit.g:6121:2: ( rule__Loop__OperationsAssignment_14_3_1 )
-            // InternalQuCircuit.g:6121:3: rule__Loop__OperationsAssignment_14_3_1
+            // InternalQuCircuit.g:6281:2: ( rule__Loop__OperationsAssignment_14_3_1 )
+            // InternalQuCircuit.g:6281:3: rule__Loop__OperationsAssignment_14_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__OperationsAssignment_14_3_1();
@@ -18689,16 +19182,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__0"
-    // InternalQuCircuit.g:6130:1: rule__Loop__Group_20__0 : rule__Loop__Group_20__0__Impl rule__Loop__Group_20__1 ;
+    // InternalQuCircuit.g:6290:1: rule__Loop__Group_20__0 : rule__Loop__Group_20__0__Impl rule__Loop__Group_20__1 ;
     public final void rule__Loop__Group_20__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6134:1: ( rule__Loop__Group_20__0__Impl rule__Loop__Group_20__1 )
-            // InternalQuCircuit.g:6135:2: rule__Loop__Group_20__0__Impl rule__Loop__Group_20__1
+            // InternalQuCircuit.g:6294:1: ( rule__Loop__Group_20__0__Impl rule__Loop__Group_20__1 )
+            // InternalQuCircuit.g:6295:2: rule__Loop__Group_20__0__Impl rule__Loop__Group_20__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Loop__Group_20__0__Impl();
 
             state._fsp--;
@@ -18727,20 +19220,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__0__Impl"
-    // InternalQuCircuit.g:6142:1: rule__Loop__Group_20__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:6302:1: rule__Loop__Group_20__0__Impl : ( ',' ) ;
     public final void rule__Loop__Group_20__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6146:1: ( ( ',' ) )
-            // InternalQuCircuit.g:6147:1: ( ',' )
+            // InternalQuCircuit.g:6306:1: ( ( ',' ) )
+            // InternalQuCircuit.g:6307:1: ( ',' )
             {
-            // InternalQuCircuit.g:6147:1: ( ',' )
-            // InternalQuCircuit.g:6148:2: ','
+            // InternalQuCircuit.g:6307:1: ( ',' )
+            // InternalQuCircuit.g:6308:2: ','
             {
              before(grammarAccess.getLoopAccess().getCommaKeyword_20_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getCommaKeyword_20_0()); 
 
             }
@@ -18764,16 +19257,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__1"
-    // InternalQuCircuit.g:6157:1: rule__Loop__Group_20__1 : rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2 ;
+    // InternalQuCircuit.g:6317:1: rule__Loop__Group_20__1 : rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2 ;
     public final void rule__Loop__Group_20__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6161:1: ( rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2 )
-            // InternalQuCircuit.g:6162:2: rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2
+            // InternalQuCircuit.g:6321:1: ( rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2 )
+            // InternalQuCircuit.g:6322:2: rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_20__1__Impl();
 
             state._fsp--;
@@ -18802,20 +19295,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__1__Impl"
-    // InternalQuCircuit.g:6169:1: rule__Loop__Group_20__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:6329:1: rule__Loop__Group_20__1__Impl : ( '(' ) ;
     public final void rule__Loop__Group_20__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6173:1: ( ( '(' ) )
-            // InternalQuCircuit.g:6174:1: ( '(' )
+            // InternalQuCircuit.g:6333:1: ( ( '(' ) )
+            // InternalQuCircuit.g:6334:1: ( '(' )
             {
-            // InternalQuCircuit.g:6174:1: ( '(' )
-            // InternalQuCircuit.g:6175:2: '('
+            // InternalQuCircuit.g:6334:1: ( '(' )
+            // InternalQuCircuit.g:6335:2: '('
             {
              before(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_20_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_20_1()); 
 
             }
@@ -18839,16 +19332,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__2"
-    // InternalQuCircuit.g:6184:1: rule__Loop__Group_20__2 : rule__Loop__Group_20__2__Impl rule__Loop__Group_20__3 ;
+    // InternalQuCircuit.g:6344:1: rule__Loop__Group_20__2 : rule__Loop__Group_20__2__Impl rule__Loop__Group_20__3 ;
     public final void rule__Loop__Group_20__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6188:1: ( rule__Loop__Group_20__2__Impl rule__Loop__Group_20__3 )
-            // InternalQuCircuit.g:6189:2: rule__Loop__Group_20__2__Impl rule__Loop__Group_20__3
+            // InternalQuCircuit.g:6348:1: ( rule__Loop__Group_20__2__Impl rule__Loop__Group_20__3 )
+            // InternalQuCircuit.g:6349:2: rule__Loop__Group_20__2__Impl rule__Loop__Group_20__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Loop__Group_20__2__Impl();
 
             state._fsp--;
@@ -18877,21 +19370,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__2__Impl"
-    // InternalQuCircuit.g:6196:1: rule__Loop__Group_20__2__Impl : ( ( rule__Loop__TargetQubitsAssignment_20_2 ) ) ;
+    // InternalQuCircuit.g:6356:1: rule__Loop__Group_20__2__Impl : ( ( rule__Loop__TargetQubitsAssignment_20_2 ) ) ;
     public final void rule__Loop__Group_20__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6200:1: ( ( ( rule__Loop__TargetQubitsAssignment_20_2 ) ) )
-            // InternalQuCircuit.g:6201:1: ( ( rule__Loop__TargetQubitsAssignment_20_2 ) )
+            // InternalQuCircuit.g:6360:1: ( ( ( rule__Loop__TargetQubitsAssignment_20_2 ) ) )
+            // InternalQuCircuit.g:6361:1: ( ( rule__Loop__TargetQubitsAssignment_20_2 ) )
             {
-            // InternalQuCircuit.g:6201:1: ( ( rule__Loop__TargetQubitsAssignment_20_2 ) )
-            // InternalQuCircuit.g:6202:2: ( rule__Loop__TargetQubitsAssignment_20_2 )
+            // InternalQuCircuit.g:6361:1: ( ( rule__Loop__TargetQubitsAssignment_20_2 ) )
+            // InternalQuCircuit.g:6362:2: ( rule__Loop__TargetQubitsAssignment_20_2 )
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsAssignment_20_2()); 
-            // InternalQuCircuit.g:6203:2: ( rule__Loop__TargetQubitsAssignment_20_2 )
-            // InternalQuCircuit.g:6203:3: rule__Loop__TargetQubitsAssignment_20_2
+            // InternalQuCircuit.g:6363:2: ( rule__Loop__TargetQubitsAssignment_20_2 )
+            // InternalQuCircuit.g:6363:3: rule__Loop__TargetQubitsAssignment_20_2
             {
             pushFollow(FOLLOW_2);
             rule__Loop__TargetQubitsAssignment_20_2();
@@ -18924,14 +19417,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__3"
-    // InternalQuCircuit.g:6211:1: rule__Loop__Group_20__3 : rule__Loop__Group_20__3__Impl ;
+    // InternalQuCircuit.g:6371:1: rule__Loop__Group_20__3 : rule__Loop__Group_20__3__Impl ;
     public final void rule__Loop__Group_20__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6215:1: ( rule__Loop__Group_20__3__Impl )
-            // InternalQuCircuit.g:6216:2: rule__Loop__Group_20__3__Impl
+            // InternalQuCircuit.g:6375:1: ( rule__Loop__Group_20__3__Impl )
+            // InternalQuCircuit.g:6376:2: rule__Loop__Group_20__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_20__3__Impl();
@@ -18957,20 +19450,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_20__3__Impl"
-    // InternalQuCircuit.g:6222:1: rule__Loop__Group_20__3__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:6382:1: rule__Loop__Group_20__3__Impl : ( ')' ) ;
     public final void rule__Loop__Group_20__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6226:1: ( ( ')' ) )
-            // InternalQuCircuit.g:6227:1: ( ')' )
+            // InternalQuCircuit.g:6386:1: ( ( ')' ) )
+            // InternalQuCircuit.g:6387:1: ( ')' )
             {
-            // InternalQuCircuit.g:6227:1: ( ')' )
-            // InternalQuCircuit.g:6228:2: ')'
+            // InternalQuCircuit.g:6387:1: ( ')' )
+            // InternalQuCircuit.g:6388:2: ')'
             {
              before(grammarAccess.getLoopAccess().getRightParenthesisKeyword_20_3()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightParenthesisKeyword_20_3()); 
 
             }
@@ -18994,16 +19487,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__0"
-    // InternalQuCircuit.g:6238:1: rule__Loop__Group_22__0 : rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1 ;
+    // InternalQuCircuit.g:6398:1: rule__Loop__Group_22__0 : rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1 ;
     public final void rule__Loop__Group_22__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6242:1: ( rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1 )
-            // InternalQuCircuit.g:6243:2: rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1
+            // InternalQuCircuit.g:6402:1: ( rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1 )
+            // InternalQuCircuit.g:6403:2: rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Loop__Group_22__0__Impl();
 
             state._fsp--;
@@ -19032,17 +19525,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__0__Impl"
-    // InternalQuCircuit.g:6250:1: rule__Loop__Group_22__0__Impl : ( 'controlQubits' ) ;
+    // InternalQuCircuit.g:6410:1: rule__Loop__Group_22__0__Impl : ( 'controlQubits' ) ;
     public final void rule__Loop__Group_22__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6254:1: ( ( 'controlQubits' ) )
-            // InternalQuCircuit.g:6255:1: ( 'controlQubits' )
+            // InternalQuCircuit.g:6414:1: ( ( 'controlQubits' ) )
+            // InternalQuCircuit.g:6415:1: ( 'controlQubits' )
             {
-            // InternalQuCircuit.g:6255:1: ( 'controlQubits' )
-            // InternalQuCircuit.g:6256:2: 'controlQubits'
+            // InternalQuCircuit.g:6415:1: ( 'controlQubits' )
+            // InternalQuCircuit.g:6416:2: 'controlQubits'
             {
              before(grammarAccess.getLoopAccess().getControlQubitsKeyword_22_0()); 
             match(input,33,FOLLOW_2); 
@@ -19069,16 +19562,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__1"
-    // InternalQuCircuit.g:6265:1: rule__Loop__Group_22__1 : rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2 ;
+    // InternalQuCircuit.g:6425:1: rule__Loop__Group_22__1 : rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2 ;
     public final void rule__Loop__Group_22__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6269:1: ( rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2 )
-            // InternalQuCircuit.g:6270:2: rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2
+            // InternalQuCircuit.g:6429:1: ( rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2 )
+            // InternalQuCircuit.g:6430:2: rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_22__1__Impl();
 
             state._fsp--;
@@ -19107,20 +19600,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__1__Impl"
-    // InternalQuCircuit.g:6277:1: rule__Loop__Group_22__1__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:6437:1: rule__Loop__Group_22__1__Impl : ( '[' ) ;
     public final void rule__Loop__Group_22__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6281:1: ( ( '[' ) )
-            // InternalQuCircuit.g:6282:1: ( '[' )
+            // InternalQuCircuit.g:6441:1: ( ( '[' ) )
+            // InternalQuCircuit.g:6442:1: ( '[' )
             {
-            // InternalQuCircuit.g:6282:1: ( '[' )
-            // InternalQuCircuit.g:6283:2: '['
+            // InternalQuCircuit.g:6442:1: ( '[' )
+            // InternalQuCircuit.g:6443:2: '['
             {
              before(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_22_1()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_22_1()); 
 
             }
@@ -19144,16 +19637,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__2"
-    // InternalQuCircuit.g:6292:1: rule__Loop__Group_22__2 : rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3 ;
+    // InternalQuCircuit.g:6452:1: rule__Loop__Group_22__2 : rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3 ;
     public final void rule__Loop__Group_22__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6296:1: ( rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3 )
-            // InternalQuCircuit.g:6297:2: rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3
+            // InternalQuCircuit.g:6456:1: ( rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3 )
+            // InternalQuCircuit.g:6457:2: rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_22__2__Impl();
 
             state._fsp--;
@@ -19182,21 +19675,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__2__Impl"
-    // InternalQuCircuit.g:6304:1: rule__Loop__Group_22__2__Impl : ( ( rule__Loop__ControlQubitsAssignment_22_2 ) ) ;
+    // InternalQuCircuit.g:6464:1: rule__Loop__Group_22__2__Impl : ( ( rule__Loop__ControlQubitsAssignment_22_2 ) ) ;
     public final void rule__Loop__Group_22__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6308:1: ( ( ( rule__Loop__ControlQubitsAssignment_22_2 ) ) )
-            // InternalQuCircuit.g:6309:1: ( ( rule__Loop__ControlQubitsAssignment_22_2 ) )
+            // InternalQuCircuit.g:6468:1: ( ( ( rule__Loop__ControlQubitsAssignment_22_2 ) ) )
+            // InternalQuCircuit.g:6469:1: ( ( rule__Loop__ControlQubitsAssignment_22_2 ) )
             {
-            // InternalQuCircuit.g:6309:1: ( ( rule__Loop__ControlQubitsAssignment_22_2 ) )
-            // InternalQuCircuit.g:6310:2: ( rule__Loop__ControlQubitsAssignment_22_2 )
+            // InternalQuCircuit.g:6469:1: ( ( rule__Loop__ControlQubitsAssignment_22_2 ) )
+            // InternalQuCircuit.g:6470:2: ( rule__Loop__ControlQubitsAssignment_22_2 )
             {
              before(grammarAccess.getLoopAccess().getControlQubitsAssignment_22_2()); 
-            // InternalQuCircuit.g:6311:2: ( rule__Loop__ControlQubitsAssignment_22_2 )
-            // InternalQuCircuit.g:6311:3: rule__Loop__ControlQubitsAssignment_22_2
+            // InternalQuCircuit.g:6471:2: ( rule__Loop__ControlQubitsAssignment_22_2 )
+            // InternalQuCircuit.g:6471:3: rule__Loop__ControlQubitsAssignment_22_2
             {
             pushFollow(FOLLOW_2);
             rule__Loop__ControlQubitsAssignment_22_2();
@@ -19229,16 +19722,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__3"
-    // InternalQuCircuit.g:6319:1: rule__Loop__Group_22__3 : rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4 ;
+    // InternalQuCircuit.g:6479:1: rule__Loop__Group_22__3 : rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4 ;
     public final void rule__Loop__Group_22__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6323:1: ( rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4 )
-            // InternalQuCircuit.g:6324:2: rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4
+            // InternalQuCircuit.g:6483:1: ( rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4 )
+            // InternalQuCircuit.g:6484:2: rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_22__3__Impl();
 
             state._fsp--;
@@ -19267,35 +19760,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__3__Impl"
-    // InternalQuCircuit.g:6331:1: rule__Loop__Group_22__3__Impl : ( ( rule__Loop__Group_22_3__0 )* ) ;
+    // InternalQuCircuit.g:6491:1: rule__Loop__Group_22__3__Impl : ( ( rule__Loop__Group_22_3__0 )* ) ;
     public final void rule__Loop__Group_22__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6335:1: ( ( ( rule__Loop__Group_22_3__0 )* ) )
-            // InternalQuCircuit.g:6336:1: ( ( rule__Loop__Group_22_3__0 )* )
+            // InternalQuCircuit.g:6495:1: ( ( ( rule__Loop__Group_22_3__0 )* ) )
+            // InternalQuCircuit.g:6496:1: ( ( rule__Loop__Group_22_3__0 )* )
             {
-            // InternalQuCircuit.g:6336:1: ( ( rule__Loop__Group_22_3__0 )* )
-            // InternalQuCircuit.g:6337:2: ( rule__Loop__Group_22_3__0 )*
+            // InternalQuCircuit.g:6496:1: ( ( rule__Loop__Group_22_3__0 )* )
+            // InternalQuCircuit.g:6497:2: ( rule__Loop__Group_22_3__0 )*
             {
              before(grammarAccess.getLoopAccess().getGroup_22_3()); 
-            // InternalQuCircuit.g:6338:2: ( rule__Loop__Group_22_3__0 )*
-            loop50:
+            // InternalQuCircuit.g:6498:2: ( rule__Loop__Group_22_3__0 )*
+            loop52:
             do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
+                int alt52=2;
+                int LA52_0 = input.LA(1);
 
-                if ( (LA50_0==24) ) {
-                    alt50=1;
+                if ( (LA52_0==26) ) {
+                    alt52=1;
                 }
 
 
-                switch (alt50) {
+                switch (alt52) {
             	case 1 :
-            	    // InternalQuCircuit.g:6338:3: rule__Loop__Group_22_3__0
+            	    // InternalQuCircuit.g:6498:3: rule__Loop__Group_22_3__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Loop__Group_22_3__0();
 
             	    state._fsp--;
@@ -19305,7 +19798,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop50;
+            	    break loop52;
                 }
             } while (true);
 
@@ -19332,14 +19825,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__4"
-    // InternalQuCircuit.g:6346:1: rule__Loop__Group_22__4 : rule__Loop__Group_22__4__Impl ;
+    // InternalQuCircuit.g:6506:1: rule__Loop__Group_22__4 : rule__Loop__Group_22__4__Impl ;
     public final void rule__Loop__Group_22__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6350:1: ( rule__Loop__Group_22__4__Impl )
-            // InternalQuCircuit.g:6351:2: rule__Loop__Group_22__4__Impl
+            // InternalQuCircuit.g:6510:1: ( rule__Loop__Group_22__4__Impl )
+            // InternalQuCircuit.g:6511:2: rule__Loop__Group_22__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_22__4__Impl();
@@ -19365,20 +19858,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22__4__Impl"
-    // InternalQuCircuit.g:6357:1: rule__Loop__Group_22__4__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:6517:1: rule__Loop__Group_22__4__Impl : ( ']' ) ;
     public final void rule__Loop__Group_22__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6361:1: ( ( ']' ) )
-            // InternalQuCircuit.g:6362:1: ( ']' )
+            // InternalQuCircuit.g:6521:1: ( ( ']' ) )
+            // InternalQuCircuit.g:6522:1: ( ']' )
             {
-            // InternalQuCircuit.g:6362:1: ( ']' )
-            // InternalQuCircuit.g:6363:2: ']'
+            // InternalQuCircuit.g:6522:1: ( ']' )
+            // InternalQuCircuit.g:6523:2: ']'
             {
              before(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_22_4()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_22_4()); 
 
             }
@@ -19402,16 +19895,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22_3__0"
-    // InternalQuCircuit.g:6373:1: rule__Loop__Group_22_3__0 : rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1 ;
+    // InternalQuCircuit.g:6533:1: rule__Loop__Group_22_3__0 : rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1 ;
     public final void rule__Loop__Group_22_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6377:1: ( rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1 )
-            // InternalQuCircuit.g:6378:2: rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1
+            // InternalQuCircuit.g:6537:1: ( rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1 )
+            // InternalQuCircuit.g:6538:2: rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_22_3__0__Impl();
 
             state._fsp--;
@@ -19440,20 +19933,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22_3__0__Impl"
-    // InternalQuCircuit.g:6385:1: rule__Loop__Group_22_3__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:6545:1: rule__Loop__Group_22_3__0__Impl : ( ',' ) ;
     public final void rule__Loop__Group_22_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6389:1: ( ( ',' ) )
-            // InternalQuCircuit.g:6390:1: ( ',' )
+            // InternalQuCircuit.g:6549:1: ( ( ',' ) )
+            // InternalQuCircuit.g:6550:1: ( ',' )
             {
-            // InternalQuCircuit.g:6390:1: ( ',' )
-            // InternalQuCircuit.g:6391:2: ','
+            // InternalQuCircuit.g:6550:1: ( ',' )
+            // InternalQuCircuit.g:6551:2: ','
             {
              before(grammarAccess.getLoopAccess().getCommaKeyword_22_3_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getCommaKeyword_22_3_0()); 
 
             }
@@ -19477,14 +19970,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22_3__1"
-    // InternalQuCircuit.g:6400:1: rule__Loop__Group_22_3__1 : rule__Loop__Group_22_3__1__Impl ;
+    // InternalQuCircuit.g:6560:1: rule__Loop__Group_22_3__1 : rule__Loop__Group_22_3__1__Impl ;
     public final void rule__Loop__Group_22_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6404:1: ( rule__Loop__Group_22_3__1__Impl )
-            // InternalQuCircuit.g:6405:2: rule__Loop__Group_22_3__1__Impl
+            // InternalQuCircuit.g:6564:1: ( rule__Loop__Group_22_3__1__Impl )
+            // InternalQuCircuit.g:6565:2: rule__Loop__Group_22_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_22_3__1__Impl();
@@ -19510,21 +20003,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_22_3__1__Impl"
-    // InternalQuCircuit.g:6411:1: rule__Loop__Group_22_3__1__Impl : ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) ) ;
+    // InternalQuCircuit.g:6571:1: rule__Loop__Group_22_3__1__Impl : ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) ) ;
     public final void rule__Loop__Group_22_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6415:1: ( ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) ) )
-            // InternalQuCircuit.g:6416:1: ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) )
+            // InternalQuCircuit.g:6575:1: ( ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) ) )
+            // InternalQuCircuit.g:6576:1: ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) )
             {
-            // InternalQuCircuit.g:6416:1: ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) )
-            // InternalQuCircuit.g:6417:2: ( rule__Loop__ControlQubitsAssignment_22_3_1 )
+            // InternalQuCircuit.g:6576:1: ( ( rule__Loop__ControlQubitsAssignment_22_3_1 ) )
+            // InternalQuCircuit.g:6577:2: ( rule__Loop__ControlQubitsAssignment_22_3_1 )
             {
              before(grammarAccess.getLoopAccess().getControlQubitsAssignment_22_3_1()); 
-            // InternalQuCircuit.g:6418:2: ( rule__Loop__ControlQubitsAssignment_22_3_1 )
-            // InternalQuCircuit.g:6418:3: rule__Loop__ControlQubitsAssignment_22_3_1
+            // InternalQuCircuit.g:6578:2: ( rule__Loop__ControlQubitsAssignment_22_3_1 )
+            // InternalQuCircuit.g:6578:3: rule__Loop__ControlQubitsAssignment_22_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__ControlQubitsAssignment_22_3_1();
@@ -19557,16 +20050,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__0"
-    // InternalQuCircuit.g:6427:1: rule__Loop__Group_23__0 : rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1 ;
+    // InternalQuCircuit.g:6587:1: rule__Loop__Group_23__0 : rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1 ;
     public final void rule__Loop__Group_23__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6431:1: ( rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1 )
-            // InternalQuCircuit.g:6432:2: rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1
+            // InternalQuCircuit.g:6591:1: ( rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1 )
+            // InternalQuCircuit.g:6592:2: rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Loop__Group_23__0__Impl();
 
             state._fsp--;
@@ -19595,20 +20088,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__0__Impl"
-    // InternalQuCircuit.g:6439:1: rule__Loop__Group_23__0__Impl : ( 'fixedControlQubits' ) ;
+    // InternalQuCircuit.g:6599:1: rule__Loop__Group_23__0__Impl : ( 'fixedControlQubits' ) ;
     public final void rule__Loop__Group_23__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6443:1: ( ( 'fixedControlQubits' ) )
-            // InternalQuCircuit.g:6444:1: ( 'fixedControlQubits' )
+            // InternalQuCircuit.g:6603:1: ( ( 'fixedControlQubits' ) )
+            // InternalQuCircuit.g:6604:1: ( 'fixedControlQubits' )
             {
-            // InternalQuCircuit.g:6444:1: ( 'fixedControlQubits' )
-            // InternalQuCircuit.g:6445:2: 'fixedControlQubits'
+            // InternalQuCircuit.g:6604:1: ( 'fixedControlQubits' )
+            // InternalQuCircuit.g:6605:2: 'fixedControlQubits'
             {
              before(grammarAccess.getLoopAccess().getFixedControlQubitsKeyword_23_0()); 
-            match(input,52,FOLLOW_2); 
+            match(input,51,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getFixedControlQubitsKeyword_23_0()); 
 
             }
@@ -19632,16 +20125,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__1"
-    // InternalQuCircuit.g:6454:1: rule__Loop__Group_23__1 : rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2 ;
+    // InternalQuCircuit.g:6614:1: rule__Loop__Group_23__1 : rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2 ;
     public final void rule__Loop__Group_23__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6458:1: ( rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2 )
-            // InternalQuCircuit.g:6459:2: rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2
+            // InternalQuCircuit.g:6618:1: ( rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2 )
+            // InternalQuCircuit.g:6619:2: rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_23__1__Impl();
 
             state._fsp--;
@@ -19670,20 +20163,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__1__Impl"
-    // InternalQuCircuit.g:6466:1: rule__Loop__Group_23__1__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:6626:1: rule__Loop__Group_23__1__Impl : ( '[' ) ;
     public final void rule__Loop__Group_23__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6470:1: ( ( '[' ) )
-            // InternalQuCircuit.g:6471:1: ( '[' )
+            // InternalQuCircuit.g:6630:1: ( ( '[' ) )
+            // InternalQuCircuit.g:6631:1: ( '[' )
             {
-            // InternalQuCircuit.g:6471:1: ( '[' )
-            // InternalQuCircuit.g:6472:2: '['
+            // InternalQuCircuit.g:6631:1: ( '[' )
+            // InternalQuCircuit.g:6632:2: '['
             {
              before(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_23_1()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_23_1()); 
 
             }
@@ -19707,16 +20200,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__2"
-    // InternalQuCircuit.g:6481:1: rule__Loop__Group_23__2 : rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3 ;
+    // InternalQuCircuit.g:6641:1: rule__Loop__Group_23__2 : rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3 ;
     public final void rule__Loop__Group_23__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6485:1: ( rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3 )
-            // InternalQuCircuit.g:6486:2: rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3
+            // InternalQuCircuit.g:6645:1: ( rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3 )
+            // InternalQuCircuit.g:6646:2: rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_23__2__Impl();
 
             state._fsp--;
@@ -19745,21 +20238,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__2__Impl"
-    // InternalQuCircuit.g:6493:1: rule__Loop__Group_23__2__Impl : ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) ) ;
+    // InternalQuCircuit.g:6653:1: rule__Loop__Group_23__2__Impl : ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) ) ;
     public final void rule__Loop__Group_23__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6497:1: ( ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) ) )
-            // InternalQuCircuit.g:6498:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) )
+            // InternalQuCircuit.g:6657:1: ( ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) ) )
+            // InternalQuCircuit.g:6658:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) )
             {
-            // InternalQuCircuit.g:6498:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) )
-            // InternalQuCircuit.g:6499:2: ( rule__Loop__FixedControlQubitsAssignment_23_2 )
+            // InternalQuCircuit.g:6658:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_2 ) )
+            // InternalQuCircuit.g:6659:2: ( rule__Loop__FixedControlQubitsAssignment_23_2 )
             {
              before(grammarAccess.getLoopAccess().getFixedControlQubitsAssignment_23_2()); 
-            // InternalQuCircuit.g:6500:2: ( rule__Loop__FixedControlQubitsAssignment_23_2 )
-            // InternalQuCircuit.g:6500:3: rule__Loop__FixedControlQubitsAssignment_23_2
+            // InternalQuCircuit.g:6660:2: ( rule__Loop__FixedControlQubitsAssignment_23_2 )
+            // InternalQuCircuit.g:6660:3: rule__Loop__FixedControlQubitsAssignment_23_2
             {
             pushFollow(FOLLOW_2);
             rule__Loop__FixedControlQubitsAssignment_23_2();
@@ -19792,16 +20285,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__3"
-    // InternalQuCircuit.g:6508:1: rule__Loop__Group_23__3 : rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4 ;
+    // InternalQuCircuit.g:6668:1: rule__Loop__Group_23__3 : rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4 ;
     public final void rule__Loop__Group_23__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6512:1: ( rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4 )
-            // InternalQuCircuit.g:6513:2: rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4
+            // InternalQuCircuit.g:6672:1: ( rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4 )
+            // InternalQuCircuit.g:6673:2: rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_23__3__Impl();
 
             state._fsp--;
@@ -19830,35 +20323,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__3__Impl"
-    // InternalQuCircuit.g:6520:1: rule__Loop__Group_23__3__Impl : ( ( rule__Loop__Group_23_3__0 )* ) ;
+    // InternalQuCircuit.g:6680:1: rule__Loop__Group_23__3__Impl : ( ( rule__Loop__Group_23_3__0 )* ) ;
     public final void rule__Loop__Group_23__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6524:1: ( ( ( rule__Loop__Group_23_3__0 )* ) )
-            // InternalQuCircuit.g:6525:1: ( ( rule__Loop__Group_23_3__0 )* )
+            // InternalQuCircuit.g:6684:1: ( ( ( rule__Loop__Group_23_3__0 )* ) )
+            // InternalQuCircuit.g:6685:1: ( ( rule__Loop__Group_23_3__0 )* )
             {
-            // InternalQuCircuit.g:6525:1: ( ( rule__Loop__Group_23_3__0 )* )
-            // InternalQuCircuit.g:6526:2: ( rule__Loop__Group_23_3__0 )*
+            // InternalQuCircuit.g:6685:1: ( ( rule__Loop__Group_23_3__0 )* )
+            // InternalQuCircuit.g:6686:2: ( rule__Loop__Group_23_3__0 )*
             {
              before(grammarAccess.getLoopAccess().getGroup_23_3()); 
-            // InternalQuCircuit.g:6527:2: ( rule__Loop__Group_23_3__0 )*
-            loop51:
+            // InternalQuCircuit.g:6687:2: ( rule__Loop__Group_23_3__0 )*
+            loop53:
             do {
-                int alt51=2;
-                int LA51_0 = input.LA(1);
+                int alt53=2;
+                int LA53_0 = input.LA(1);
 
-                if ( (LA51_0==24) ) {
-                    alt51=1;
+                if ( (LA53_0==26) ) {
+                    alt53=1;
                 }
 
 
-                switch (alt51) {
+                switch (alt53) {
             	case 1 :
-            	    // InternalQuCircuit.g:6527:3: rule__Loop__Group_23_3__0
+            	    // InternalQuCircuit.g:6687:3: rule__Loop__Group_23_3__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Loop__Group_23_3__0();
 
             	    state._fsp--;
@@ -19868,7 +20361,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop51;
+            	    break loop53;
                 }
             } while (true);
 
@@ -19895,14 +20388,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__4"
-    // InternalQuCircuit.g:6535:1: rule__Loop__Group_23__4 : rule__Loop__Group_23__4__Impl ;
+    // InternalQuCircuit.g:6695:1: rule__Loop__Group_23__4 : rule__Loop__Group_23__4__Impl ;
     public final void rule__Loop__Group_23__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6539:1: ( rule__Loop__Group_23__4__Impl )
-            // InternalQuCircuit.g:6540:2: rule__Loop__Group_23__4__Impl
+            // InternalQuCircuit.g:6699:1: ( rule__Loop__Group_23__4__Impl )
+            // InternalQuCircuit.g:6700:2: rule__Loop__Group_23__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_23__4__Impl();
@@ -19928,20 +20421,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23__4__Impl"
-    // InternalQuCircuit.g:6546:1: rule__Loop__Group_23__4__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:6706:1: rule__Loop__Group_23__4__Impl : ( ']' ) ;
     public final void rule__Loop__Group_23__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6550:1: ( ( ']' ) )
-            // InternalQuCircuit.g:6551:1: ( ']' )
+            // InternalQuCircuit.g:6710:1: ( ( ']' ) )
+            // InternalQuCircuit.g:6711:1: ( ']' )
             {
-            // InternalQuCircuit.g:6551:1: ( ']' )
-            // InternalQuCircuit.g:6552:2: ']'
+            // InternalQuCircuit.g:6711:1: ( ']' )
+            // InternalQuCircuit.g:6712:2: ']'
             {
              before(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_23_4()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_23_4()); 
 
             }
@@ -19965,16 +20458,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23_3__0"
-    // InternalQuCircuit.g:6562:1: rule__Loop__Group_23_3__0 : rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1 ;
+    // InternalQuCircuit.g:6722:1: rule__Loop__Group_23_3__0 : rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1 ;
     public final void rule__Loop__Group_23_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6566:1: ( rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1 )
-            // InternalQuCircuit.g:6567:2: rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1
+            // InternalQuCircuit.g:6726:1: ( rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1 )
+            // InternalQuCircuit.g:6727:2: rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_23_3__0__Impl();
 
             state._fsp--;
@@ -20003,20 +20496,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23_3__0__Impl"
-    // InternalQuCircuit.g:6574:1: rule__Loop__Group_23_3__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:6734:1: rule__Loop__Group_23_3__0__Impl : ( ',' ) ;
     public final void rule__Loop__Group_23_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6578:1: ( ( ',' ) )
-            // InternalQuCircuit.g:6579:1: ( ',' )
+            // InternalQuCircuit.g:6738:1: ( ( ',' ) )
+            // InternalQuCircuit.g:6739:1: ( ',' )
             {
-            // InternalQuCircuit.g:6579:1: ( ',' )
-            // InternalQuCircuit.g:6580:2: ','
+            // InternalQuCircuit.g:6739:1: ( ',' )
+            // InternalQuCircuit.g:6740:2: ','
             {
              before(grammarAccess.getLoopAccess().getCommaKeyword_23_3_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getCommaKeyword_23_3_0()); 
 
             }
@@ -20040,14 +20533,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23_3__1"
-    // InternalQuCircuit.g:6589:1: rule__Loop__Group_23_3__1 : rule__Loop__Group_23_3__1__Impl ;
+    // InternalQuCircuit.g:6749:1: rule__Loop__Group_23_3__1 : rule__Loop__Group_23_3__1__Impl ;
     public final void rule__Loop__Group_23_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6593:1: ( rule__Loop__Group_23_3__1__Impl )
-            // InternalQuCircuit.g:6594:2: rule__Loop__Group_23_3__1__Impl
+            // InternalQuCircuit.g:6753:1: ( rule__Loop__Group_23_3__1__Impl )
+            // InternalQuCircuit.g:6754:2: rule__Loop__Group_23_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_23_3__1__Impl();
@@ -20073,21 +20566,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_23_3__1__Impl"
-    // InternalQuCircuit.g:6600:1: rule__Loop__Group_23_3__1__Impl : ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) ) ;
+    // InternalQuCircuit.g:6760:1: rule__Loop__Group_23_3__1__Impl : ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) ) ;
     public final void rule__Loop__Group_23_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6604:1: ( ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) ) )
-            // InternalQuCircuit.g:6605:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) )
+            // InternalQuCircuit.g:6764:1: ( ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) ) )
+            // InternalQuCircuit.g:6765:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) )
             {
-            // InternalQuCircuit.g:6605:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) )
-            // InternalQuCircuit.g:6606:2: ( rule__Loop__FixedControlQubitsAssignment_23_3_1 )
+            // InternalQuCircuit.g:6765:1: ( ( rule__Loop__FixedControlQubitsAssignment_23_3_1 ) )
+            // InternalQuCircuit.g:6766:2: ( rule__Loop__FixedControlQubitsAssignment_23_3_1 )
             {
              before(grammarAccess.getLoopAccess().getFixedControlQubitsAssignment_23_3_1()); 
-            // InternalQuCircuit.g:6607:2: ( rule__Loop__FixedControlQubitsAssignment_23_3_1 )
-            // InternalQuCircuit.g:6607:3: rule__Loop__FixedControlQubitsAssignment_23_3_1
+            // InternalQuCircuit.g:6767:2: ( rule__Loop__FixedControlQubitsAssignment_23_3_1 )
+            // InternalQuCircuit.g:6767:3: rule__Loop__FixedControlQubitsAssignment_23_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__FixedControlQubitsAssignment_23_3_1();
@@ -20120,16 +20613,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__0"
-    // InternalQuCircuit.g:6616:1: rule__Loop__Group_24__0 : rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1 ;
+    // InternalQuCircuit.g:6776:1: rule__Loop__Group_24__0 : rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1 ;
     public final void rule__Loop__Group_24__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6620:1: ( rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1 )
-            // InternalQuCircuit.g:6621:2: rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1
+            // InternalQuCircuit.g:6780:1: ( rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1 )
+            // InternalQuCircuit.g:6781:2: rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Loop__Group_24__0__Impl();
 
             state._fsp--;
@@ -20158,20 +20651,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__0__Impl"
-    // InternalQuCircuit.g:6628:1: rule__Loop__Group_24__0__Impl : ( 'fixedTargetQubits' ) ;
+    // InternalQuCircuit.g:6788:1: rule__Loop__Group_24__0__Impl : ( 'fixedTargetQubits' ) ;
     public final void rule__Loop__Group_24__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6632:1: ( ( 'fixedTargetQubits' ) )
-            // InternalQuCircuit.g:6633:1: ( 'fixedTargetQubits' )
+            // InternalQuCircuit.g:6792:1: ( ( 'fixedTargetQubits' ) )
+            // InternalQuCircuit.g:6793:1: ( 'fixedTargetQubits' )
             {
-            // InternalQuCircuit.g:6633:1: ( 'fixedTargetQubits' )
-            // InternalQuCircuit.g:6634:2: 'fixedTargetQubits'
+            // InternalQuCircuit.g:6793:1: ( 'fixedTargetQubits' )
+            // InternalQuCircuit.g:6794:2: 'fixedTargetQubits'
             {
              before(grammarAccess.getLoopAccess().getFixedTargetQubitsKeyword_24_0()); 
-            match(input,53,FOLLOW_2); 
+            match(input,52,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getFixedTargetQubitsKeyword_24_0()); 
 
             }
@@ -20195,16 +20688,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__1"
-    // InternalQuCircuit.g:6643:1: rule__Loop__Group_24__1 : rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2 ;
+    // InternalQuCircuit.g:6803:1: rule__Loop__Group_24__1 : rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2 ;
     public final void rule__Loop__Group_24__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6647:1: ( rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2 )
-            // InternalQuCircuit.g:6648:2: rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2
+            // InternalQuCircuit.g:6807:1: ( rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2 )
+            // InternalQuCircuit.g:6808:2: rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_24__1__Impl();
 
             state._fsp--;
@@ -20233,20 +20726,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__1__Impl"
-    // InternalQuCircuit.g:6655:1: rule__Loop__Group_24__1__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:6815:1: rule__Loop__Group_24__1__Impl : ( '[' ) ;
     public final void rule__Loop__Group_24__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6659:1: ( ( '[' ) )
-            // InternalQuCircuit.g:6660:1: ( '[' )
+            // InternalQuCircuit.g:6819:1: ( ( '[' ) )
+            // InternalQuCircuit.g:6820:1: ( '[' )
             {
-            // InternalQuCircuit.g:6660:1: ( '[' )
-            // InternalQuCircuit.g:6661:2: '['
+            // InternalQuCircuit.g:6820:1: ( '[' )
+            // InternalQuCircuit.g:6821:2: '['
             {
              before(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_24_1()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_24_1()); 
 
             }
@@ -20270,16 +20763,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__2"
-    // InternalQuCircuit.g:6670:1: rule__Loop__Group_24__2 : rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3 ;
+    // InternalQuCircuit.g:6830:1: rule__Loop__Group_24__2 : rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3 ;
     public final void rule__Loop__Group_24__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6674:1: ( rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3 )
-            // InternalQuCircuit.g:6675:2: rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3
+            // InternalQuCircuit.g:6834:1: ( rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3 )
+            // InternalQuCircuit.g:6835:2: rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_24__2__Impl();
 
             state._fsp--;
@@ -20308,21 +20801,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__2__Impl"
-    // InternalQuCircuit.g:6682:1: rule__Loop__Group_24__2__Impl : ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) ) ;
+    // InternalQuCircuit.g:6842:1: rule__Loop__Group_24__2__Impl : ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) ) ;
     public final void rule__Loop__Group_24__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6686:1: ( ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) ) )
-            // InternalQuCircuit.g:6687:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) )
+            // InternalQuCircuit.g:6846:1: ( ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) ) )
+            // InternalQuCircuit.g:6847:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) )
             {
-            // InternalQuCircuit.g:6687:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) )
-            // InternalQuCircuit.g:6688:2: ( rule__Loop__FixedTargetQubitsAssignment_24_2 )
+            // InternalQuCircuit.g:6847:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_2 ) )
+            // InternalQuCircuit.g:6848:2: ( rule__Loop__FixedTargetQubitsAssignment_24_2 )
             {
              before(grammarAccess.getLoopAccess().getFixedTargetQubitsAssignment_24_2()); 
-            // InternalQuCircuit.g:6689:2: ( rule__Loop__FixedTargetQubitsAssignment_24_2 )
-            // InternalQuCircuit.g:6689:3: rule__Loop__FixedTargetQubitsAssignment_24_2
+            // InternalQuCircuit.g:6849:2: ( rule__Loop__FixedTargetQubitsAssignment_24_2 )
+            // InternalQuCircuit.g:6849:3: rule__Loop__FixedTargetQubitsAssignment_24_2
             {
             pushFollow(FOLLOW_2);
             rule__Loop__FixedTargetQubitsAssignment_24_2();
@@ -20355,16 +20848,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__3"
-    // InternalQuCircuit.g:6697:1: rule__Loop__Group_24__3 : rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4 ;
+    // InternalQuCircuit.g:6857:1: rule__Loop__Group_24__3 : rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4 ;
     public final void rule__Loop__Group_24__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6701:1: ( rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4 )
-            // InternalQuCircuit.g:6702:2: rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4
+            // InternalQuCircuit.g:6861:1: ( rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4 )
+            // InternalQuCircuit.g:6862:2: rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_24__3__Impl();
 
             state._fsp--;
@@ -20393,35 +20886,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__3__Impl"
-    // InternalQuCircuit.g:6709:1: rule__Loop__Group_24__3__Impl : ( ( rule__Loop__Group_24_3__0 )* ) ;
+    // InternalQuCircuit.g:6869:1: rule__Loop__Group_24__3__Impl : ( ( rule__Loop__Group_24_3__0 )* ) ;
     public final void rule__Loop__Group_24__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6713:1: ( ( ( rule__Loop__Group_24_3__0 )* ) )
-            // InternalQuCircuit.g:6714:1: ( ( rule__Loop__Group_24_3__0 )* )
+            // InternalQuCircuit.g:6873:1: ( ( ( rule__Loop__Group_24_3__0 )* ) )
+            // InternalQuCircuit.g:6874:1: ( ( rule__Loop__Group_24_3__0 )* )
             {
-            // InternalQuCircuit.g:6714:1: ( ( rule__Loop__Group_24_3__0 )* )
-            // InternalQuCircuit.g:6715:2: ( rule__Loop__Group_24_3__0 )*
+            // InternalQuCircuit.g:6874:1: ( ( rule__Loop__Group_24_3__0 )* )
+            // InternalQuCircuit.g:6875:2: ( rule__Loop__Group_24_3__0 )*
             {
              before(grammarAccess.getLoopAccess().getGroup_24_3()); 
-            // InternalQuCircuit.g:6716:2: ( rule__Loop__Group_24_3__0 )*
-            loop52:
+            // InternalQuCircuit.g:6876:2: ( rule__Loop__Group_24_3__0 )*
+            loop54:
             do {
-                int alt52=2;
-                int LA52_0 = input.LA(1);
+                int alt54=2;
+                int LA54_0 = input.LA(1);
 
-                if ( (LA52_0==24) ) {
-                    alt52=1;
+                if ( (LA54_0==26) ) {
+                    alt54=1;
                 }
 
 
-                switch (alt52) {
+                switch (alt54) {
             	case 1 :
-            	    // InternalQuCircuit.g:6716:3: rule__Loop__Group_24_3__0
+            	    // InternalQuCircuit.g:6876:3: rule__Loop__Group_24_3__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Loop__Group_24_3__0();
 
             	    state._fsp--;
@@ -20431,7 +20924,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop52;
+            	    break loop54;
                 }
             } while (true);
 
@@ -20458,14 +20951,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__4"
-    // InternalQuCircuit.g:6724:1: rule__Loop__Group_24__4 : rule__Loop__Group_24__4__Impl ;
+    // InternalQuCircuit.g:6884:1: rule__Loop__Group_24__4 : rule__Loop__Group_24__4__Impl ;
     public final void rule__Loop__Group_24__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6728:1: ( rule__Loop__Group_24__4__Impl )
-            // InternalQuCircuit.g:6729:2: rule__Loop__Group_24__4__Impl
+            // InternalQuCircuit.g:6888:1: ( rule__Loop__Group_24__4__Impl )
+            // InternalQuCircuit.g:6889:2: rule__Loop__Group_24__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_24__4__Impl();
@@ -20491,20 +20984,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24__4__Impl"
-    // InternalQuCircuit.g:6735:1: rule__Loop__Group_24__4__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:6895:1: rule__Loop__Group_24__4__Impl : ( ']' ) ;
     public final void rule__Loop__Group_24__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6739:1: ( ( ']' ) )
-            // InternalQuCircuit.g:6740:1: ( ']' )
+            // InternalQuCircuit.g:6899:1: ( ( ']' ) )
+            // InternalQuCircuit.g:6900:1: ( ']' )
             {
-            // InternalQuCircuit.g:6740:1: ( ']' )
-            // InternalQuCircuit.g:6741:2: ']'
+            // InternalQuCircuit.g:6900:1: ( ']' )
+            // InternalQuCircuit.g:6901:2: ']'
             {
              before(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_24_4()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_24_4()); 
 
             }
@@ -20528,16 +21021,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24_3__0"
-    // InternalQuCircuit.g:6751:1: rule__Loop__Group_24_3__0 : rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1 ;
+    // InternalQuCircuit.g:6911:1: rule__Loop__Group_24_3__0 : rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1 ;
     public final void rule__Loop__Group_24_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6755:1: ( rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1 )
-            // InternalQuCircuit.g:6756:2: rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1
+            // InternalQuCircuit.g:6915:1: ( rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1 )
+            // InternalQuCircuit.g:6916:2: rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_24_3__0__Impl();
 
             state._fsp--;
@@ -20566,20 +21059,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24_3__0__Impl"
-    // InternalQuCircuit.g:6763:1: rule__Loop__Group_24_3__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:6923:1: rule__Loop__Group_24_3__0__Impl : ( ',' ) ;
     public final void rule__Loop__Group_24_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6767:1: ( ( ',' ) )
-            // InternalQuCircuit.g:6768:1: ( ',' )
+            // InternalQuCircuit.g:6927:1: ( ( ',' ) )
+            // InternalQuCircuit.g:6928:1: ( ',' )
             {
-            // InternalQuCircuit.g:6768:1: ( ',' )
-            // InternalQuCircuit.g:6769:2: ','
+            // InternalQuCircuit.g:6928:1: ( ',' )
+            // InternalQuCircuit.g:6929:2: ','
             {
              before(grammarAccess.getLoopAccess().getCommaKeyword_24_3_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getCommaKeyword_24_3_0()); 
 
             }
@@ -20603,14 +21096,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24_3__1"
-    // InternalQuCircuit.g:6778:1: rule__Loop__Group_24_3__1 : rule__Loop__Group_24_3__1__Impl ;
+    // InternalQuCircuit.g:6938:1: rule__Loop__Group_24_3__1 : rule__Loop__Group_24_3__1__Impl ;
     public final void rule__Loop__Group_24_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6782:1: ( rule__Loop__Group_24_3__1__Impl )
-            // InternalQuCircuit.g:6783:2: rule__Loop__Group_24_3__1__Impl
+            // InternalQuCircuit.g:6942:1: ( rule__Loop__Group_24_3__1__Impl )
+            // InternalQuCircuit.g:6943:2: rule__Loop__Group_24_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_24_3__1__Impl();
@@ -20636,21 +21129,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_24_3__1__Impl"
-    // InternalQuCircuit.g:6789:1: rule__Loop__Group_24_3__1__Impl : ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) ) ;
+    // InternalQuCircuit.g:6949:1: rule__Loop__Group_24_3__1__Impl : ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) ) ;
     public final void rule__Loop__Group_24_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6793:1: ( ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) ) )
-            // InternalQuCircuit.g:6794:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) )
+            // InternalQuCircuit.g:6953:1: ( ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) ) )
+            // InternalQuCircuit.g:6954:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) )
             {
-            // InternalQuCircuit.g:6794:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) )
-            // InternalQuCircuit.g:6795:2: ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 )
+            // InternalQuCircuit.g:6954:1: ( ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 ) )
+            // InternalQuCircuit.g:6955:2: ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 )
             {
              before(grammarAccess.getLoopAccess().getFixedTargetQubitsAssignment_24_3_1()); 
-            // InternalQuCircuit.g:6796:2: ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 )
-            // InternalQuCircuit.g:6796:3: rule__Loop__FixedTargetQubitsAssignment_24_3_1
+            // InternalQuCircuit.g:6956:2: ( rule__Loop__FixedTargetQubitsAssignment_24_3_1 )
+            // InternalQuCircuit.g:6956:3: rule__Loop__FixedTargetQubitsAssignment_24_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Loop__FixedTargetQubitsAssignment_24_3_1();
@@ -20683,16 +21176,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__0"
-    // InternalQuCircuit.g:6805:1: rule__Loop__Group_32__0 : rule__Loop__Group_32__0__Impl rule__Loop__Group_32__1 ;
+    // InternalQuCircuit.g:6965:1: rule__Loop__Group_32__0 : rule__Loop__Group_32__0__Impl rule__Loop__Group_32__1 ;
     public final void rule__Loop__Group_32__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6809:1: ( rule__Loop__Group_32__0__Impl rule__Loop__Group_32__1 )
-            // InternalQuCircuit.g:6810:2: rule__Loop__Group_32__0__Impl rule__Loop__Group_32__1
+            // InternalQuCircuit.g:6969:1: ( rule__Loop__Group_32__0__Impl rule__Loop__Group_32__1 )
+            // InternalQuCircuit.g:6970:2: rule__Loop__Group_32__0__Impl rule__Loop__Group_32__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Loop__Group_32__0__Impl();
 
             state._fsp--;
@@ -20721,20 +21214,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__0__Impl"
-    // InternalQuCircuit.g:6817:1: rule__Loop__Group_32__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:6977:1: rule__Loop__Group_32__0__Impl : ( ',' ) ;
     public final void rule__Loop__Group_32__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6821:1: ( ( ',' ) )
-            // InternalQuCircuit.g:6822:1: ( ',' )
+            // InternalQuCircuit.g:6981:1: ( ( ',' ) )
+            // InternalQuCircuit.g:6982:1: ( ',' )
             {
-            // InternalQuCircuit.g:6822:1: ( ',' )
-            // InternalQuCircuit.g:6823:2: ','
+            // InternalQuCircuit.g:6982:1: ( ',' )
+            // InternalQuCircuit.g:6983:2: ','
             {
              before(grammarAccess.getLoopAccess().getCommaKeyword_32_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getCommaKeyword_32_0()); 
 
             }
@@ -20758,16 +21251,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__1"
-    // InternalQuCircuit.g:6832:1: rule__Loop__Group_32__1 : rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2 ;
+    // InternalQuCircuit.g:6992:1: rule__Loop__Group_32__1 : rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2 ;
     public final void rule__Loop__Group_32__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6836:1: ( rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2 )
-            // InternalQuCircuit.g:6837:2: rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2
+            // InternalQuCircuit.g:6996:1: ( rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2 )
+            // InternalQuCircuit.g:6997:2: rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_32__1__Impl();
 
             state._fsp--;
@@ -20796,20 +21289,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__1__Impl"
-    // InternalQuCircuit.g:6844:1: rule__Loop__Group_32__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:7004:1: rule__Loop__Group_32__1__Impl : ( '(' ) ;
     public final void rule__Loop__Group_32__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6848:1: ( ( '(' ) )
-            // InternalQuCircuit.g:6849:1: ( '(' )
+            // InternalQuCircuit.g:7008:1: ( ( '(' ) )
+            // InternalQuCircuit.g:7009:1: ( '(' )
             {
-            // InternalQuCircuit.g:6849:1: ( '(' )
-            // InternalQuCircuit.g:6850:2: '('
+            // InternalQuCircuit.g:7009:1: ( '(' )
+            // InternalQuCircuit.g:7010:2: '('
             {
              before(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_32_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_32_1()); 
 
             }
@@ -20833,16 +21326,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__2"
-    // InternalQuCircuit.g:6859:1: rule__Loop__Group_32__2 : rule__Loop__Group_32__2__Impl rule__Loop__Group_32__3 ;
+    // InternalQuCircuit.g:7019:1: rule__Loop__Group_32__2 : rule__Loop__Group_32__2__Impl rule__Loop__Group_32__3 ;
     public final void rule__Loop__Group_32__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6863:1: ( rule__Loop__Group_32__2__Impl rule__Loop__Group_32__3 )
-            // InternalQuCircuit.g:6864:2: rule__Loop__Group_32__2__Impl rule__Loop__Group_32__3
+            // InternalQuCircuit.g:7023:1: ( rule__Loop__Group_32__2__Impl rule__Loop__Group_32__3 )
+            // InternalQuCircuit.g:7024:2: rule__Loop__Group_32__2__Impl rule__Loop__Group_32__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Loop__Group_32__2__Impl();
 
             state._fsp--;
@@ -20871,21 +21364,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__2__Impl"
-    // InternalQuCircuit.g:6871:1: rule__Loop__Group_32__2__Impl : ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) ) ;
+    // InternalQuCircuit.g:7031:1: rule__Loop__Group_32__2__Impl : ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) ) ;
     public final void rule__Loop__Group_32__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6875:1: ( ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) ) )
-            // InternalQuCircuit.g:6876:1: ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) )
+            // InternalQuCircuit.g:7035:1: ( ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) ) )
+            // InternalQuCircuit.g:7036:1: ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) )
             {
-            // InternalQuCircuit.g:6876:1: ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) )
-            // InternalQuCircuit.g:6877:2: ( rule__Loop__LoopTargetQubitsAssignment_32_2 )
+            // InternalQuCircuit.g:7036:1: ( ( rule__Loop__LoopTargetQubitsAssignment_32_2 ) )
+            // InternalQuCircuit.g:7037:2: ( rule__Loop__LoopTargetQubitsAssignment_32_2 )
             {
              before(grammarAccess.getLoopAccess().getLoopTargetQubitsAssignment_32_2()); 
-            // InternalQuCircuit.g:6878:2: ( rule__Loop__LoopTargetQubitsAssignment_32_2 )
-            // InternalQuCircuit.g:6878:3: rule__Loop__LoopTargetQubitsAssignment_32_2
+            // InternalQuCircuit.g:7038:2: ( rule__Loop__LoopTargetQubitsAssignment_32_2 )
+            // InternalQuCircuit.g:7038:3: rule__Loop__LoopTargetQubitsAssignment_32_2
             {
             pushFollow(FOLLOW_2);
             rule__Loop__LoopTargetQubitsAssignment_32_2();
@@ -20918,14 +21411,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__3"
-    // InternalQuCircuit.g:6886:1: rule__Loop__Group_32__3 : rule__Loop__Group_32__3__Impl ;
+    // InternalQuCircuit.g:7046:1: rule__Loop__Group_32__3 : rule__Loop__Group_32__3__Impl ;
     public final void rule__Loop__Group_32__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6890:1: ( rule__Loop__Group_32__3__Impl )
-            // InternalQuCircuit.g:6891:2: rule__Loop__Group_32__3__Impl
+            // InternalQuCircuit.g:7050:1: ( rule__Loop__Group_32__3__Impl )
+            // InternalQuCircuit.g:7051:2: rule__Loop__Group_32__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_32__3__Impl();
@@ -20951,20 +21444,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_32__3__Impl"
-    // InternalQuCircuit.g:6897:1: rule__Loop__Group_32__3__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:7057:1: rule__Loop__Group_32__3__Impl : ( ')' ) ;
     public final void rule__Loop__Group_32__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6901:1: ( ( ')' ) )
-            // InternalQuCircuit.g:6902:1: ( ')' )
+            // InternalQuCircuit.g:7061:1: ( ( ')' ) )
+            // InternalQuCircuit.g:7062:1: ( ')' )
             {
-            // InternalQuCircuit.g:6902:1: ( ')' )
-            // InternalQuCircuit.g:6903:2: ')'
+            // InternalQuCircuit.g:7062:1: ( ')' )
+            // InternalQuCircuit.g:7063:2: ')'
             {
              before(grammarAccess.getLoopAccess().getRightParenthesisKeyword_32_3()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightParenthesisKeyword_32_3()); 
 
             }
@@ -20988,16 +21481,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__0"
-    // InternalQuCircuit.g:6913:1: rule__Loop__Group_34__0 : rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1 ;
+    // InternalQuCircuit.g:7073:1: rule__Loop__Group_34__0 : rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1 ;
     public final void rule__Loop__Group_34__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6917:1: ( rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1 )
-            // InternalQuCircuit.g:6918:2: rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1
+            // InternalQuCircuit.g:7077:1: ( rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1 )
+            // InternalQuCircuit.g:7078:2: rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_23);
             rule__Loop__Group_34__0__Impl();
 
             state._fsp--;
@@ -21026,20 +21519,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__0__Impl"
-    // InternalQuCircuit.g:6925:1: rule__Loop__Group_34__0__Impl : ( 'loopControlQubits' ) ;
+    // InternalQuCircuit.g:7085:1: rule__Loop__Group_34__0__Impl : ( 'loopControlQubits' ) ;
     public final void rule__Loop__Group_34__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6929:1: ( ( 'loopControlQubits' ) )
-            // InternalQuCircuit.g:6930:1: ( 'loopControlQubits' )
+            // InternalQuCircuit.g:7089:1: ( ( 'loopControlQubits' ) )
+            // InternalQuCircuit.g:7090:1: ( 'loopControlQubits' )
             {
-            // InternalQuCircuit.g:6930:1: ( 'loopControlQubits' )
-            // InternalQuCircuit.g:6931:2: 'loopControlQubits'
+            // InternalQuCircuit.g:7090:1: ( 'loopControlQubits' )
+            // InternalQuCircuit.g:7091:2: 'loopControlQubits'
             {
              before(grammarAccess.getLoopAccess().getLoopControlQubitsKeyword_34_0()); 
-            match(input,54,FOLLOW_2); 
+            match(input,53,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLoopControlQubitsKeyword_34_0()); 
 
             }
@@ -21063,16 +21556,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__1"
-    // InternalQuCircuit.g:6940:1: rule__Loop__Group_34__1 : rule__Loop__Group_34__1__Impl rule__Loop__Group_34__2 ;
+    // InternalQuCircuit.g:7100:1: rule__Loop__Group_34__1 : rule__Loop__Group_34__1__Impl rule__Loop__Group_34__2 ;
     public final void rule__Loop__Group_34__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6944:1: ( rule__Loop__Group_34__1__Impl rule__Loop__Group_34__2 )
-            // InternalQuCircuit.g:6945:2: rule__Loop__Group_34__1__Impl rule__Loop__Group_34__2
+            // InternalQuCircuit.g:7104:1: ( rule__Loop__Group_34__1__Impl rule__Loop__Group_34__2 )
+            // InternalQuCircuit.g:7105:2: rule__Loop__Group_34__1__Impl rule__Loop__Group_34__2
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Loop__Group_34__1__Impl();
 
             state._fsp--;
@@ -21101,20 +21594,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__1__Impl"
-    // InternalQuCircuit.g:6952:1: rule__Loop__Group_34__1__Impl : ( '[' ) ;
+    // InternalQuCircuit.g:7112:1: rule__Loop__Group_34__1__Impl : ( '[' ) ;
     public final void rule__Loop__Group_34__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6956:1: ( ( '[' ) )
-            // InternalQuCircuit.g:6957:1: ( '[' )
+            // InternalQuCircuit.g:7116:1: ( ( '[' ) )
+            // InternalQuCircuit.g:7117:1: ( '[' )
             {
-            // InternalQuCircuit.g:6957:1: ( '[' )
-            // InternalQuCircuit.g:6958:2: '['
+            // InternalQuCircuit.g:7117:1: ( '[' )
+            // InternalQuCircuit.g:7118:2: '['
             {
              before(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_34_1()); 
-            match(input,28,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftSquareBracketKeyword_34_1()); 
 
             }
@@ -21138,16 +21631,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__2"
-    // InternalQuCircuit.g:6967:1: rule__Loop__Group_34__2 : rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3 ;
+    // InternalQuCircuit.g:7127:1: rule__Loop__Group_34__2 : rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3 ;
     public final void rule__Loop__Group_34__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6971:1: ( rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3 )
-            // InternalQuCircuit.g:6972:2: rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3
+            // InternalQuCircuit.g:7131:1: ( rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3 )
+            // InternalQuCircuit.g:7132:2: rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_34__2__Impl();
 
             state._fsp--;
@@ -21176,20 +21669,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__2__Impl"
-    // InternalQuCircuit.g:6979:1: rule__Loop__Group_34__2__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:7139:1: rule__Loop__Group_34__2__Impl : ( '(' ) ;
     public final void rule__Loop__Group_34__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6983:1: ( ( '(' ) )
-            // InternalQuCircuit.g:6984:1: ( '(' )
+            // InternalQuCircuit.g:7143:1: ( ( '(' ) )
+            // InternalQuCircuit.g:7144:1: ( '(' )
             {
-            // InternalQuCircuit.g:6984:1: ( '(' )
-            // InternalQuCircuit.g:6985:2: '('
+            // InternalQuCircuit.g:7144:1: ( '(' )
+            // InternalQuCircuit.g:7145:2: '('
             {
              before(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_34_2()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_34_2()); 
 
             }
@@ -21213,16 +21706,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__3"
-    // InternalQuCircuit.g:6994:1: rule__Loop__Group_34__3 : rule__Loop__Group_34__3__Impl rule__Loop__Group_34__4 ;
+    // InternalQuCircuit.g:7154:1: rule__Loop__Group_34__3 : rule__Loop__Group_34__3__Impl rule__Loop__Group_34__4 ;
     public final void rule__Loop__Group_34__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:6998:1: ( rule__Loop__Group_34__3__Impl rule__Loop__Group_34__4 )
-            // InternalQuCircuit.g:6999:2: rule__Loop__Group_34__3__Impl rule__Loop__Group_34__4
+            // InternalQuCircuit.g:7158:1: ( rule__Loop__Group_34__3__Impl rule__Loop__Group_34__4 )
+            // InternalQuCircuit.g:7159:2: rule__Loop__Group_34__3__Impl rule__Loop__Group_34__4
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Loop__Group_34__3__Impl();
 
             state._fsp--;
@@ -21251,21 +21744,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__3__Impl"
-    // InternalQuCircuit.g:7006:1: rule__Loop__Group_34__3__Impl : ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) ) ;
+    // InternalQuCircuit.g:7166:1: rule__Loop__Group_34__3__Impl : ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) ) ;
     public final void rule__Loop__Group_34__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7010:1: ( ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) ) )
-            // InternalQuCircuit.g:7011:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) )
+            // InternalQuCircuit.g:7170:1: ( ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) ) )
+            // InternalQuCircuit.g:7171:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) )
             {
-            // InternalQuCircuit.g:7011:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) )
-            // InternalQuCircuit.g:7012:2: ( rule__Loop__LoopControlQubitsAssignment_34_3 )
+            // InternalQuCircuit.g:7171:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_3 ) )
+            // InternalQuCircuit.g:7172:2: ( rule__Loop__LoopControlQubitsAssignment_34_3 )
             {
              before(grammarAccess.getLoopAccess().getLoopControlQubitsAssignment_34_3()); 
-            // InternalQuCircuit.g:7013:2: ( rule__Loop__LoopControlQubitsAssignment_34_3 )
-            // InternalQuCircuit.g:7013:3: rule__Loop__LoopControlQubitsAssignment_34_3
+            // InternalQuCircuit.g:7173:2: ( rule__Loop__LoopControlQubitsAssignment_34_3 )
+            // InternalQuCircuit.g:7173:3: rule__Loop__LoopControlQubitsAssignment_34_3
             {
             pushFollow(FOLLOW_2);
             rule__Loop__LoopControlQubitsAssignment_34_3();
@@ -21298,16 +21791,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__4"
-    // InternalQuCircuit.g:7021:1: rule__Loop__Group_34__4 : rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5 ;
+    // InternalQuCircuit.g:7181:1: rule__Loop__Group_34__4 : rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5 ;
     public final void rule__Loop__Group_34__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7025:1: ( rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5 )
-            // InternalQuCircuit.g:7026:2: rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5
+            // InternalQuCircuit.g:7185:1: ( rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5 )
+            // InternalQuCircuit.g:7186:2: rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_34__4__Impl();
 
             state._fsp--;
@@ -21336,20 +21829,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__4__Impl"
-    // InternalQuCircuit.g:7033:1: rule__Loop__Group_34__4__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:7193:1: rule__Loop__Group_34__4__Impl : ( ')' ) ;
     public final void rule__Loop__Group_34__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7037:1: ( ( ')' ) )
-            // InternalQuCircuit.g:7038:1: ( ')' )
+            // InternalQuCircuit.g:7197:1: ( ( ')' ) )
+            // InternalQuCircuit.g:7198:1: ( ')' )
             {
-            // InternalQuCircuit.g:7038:1: ( ')' )
-            // InternalQuCircuit.g:7039:2: ')'
+            // InternalQuCircuit.g:7198:1: ( ')' )
+            // InternalQuCircuit.g:7199:2: ')'
             {
              before(grammarAccess.getLoopAccess().getRightParenthesisKeyword_34_4()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightParenthesisKeyword_34_4()); 
 
             }
@@ -21373,16 +21866,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__5"
-    // InternalQuCircuit.g:7048:1: rule__Loop__Group_34__5 : rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6 ;
+    // InternalQuCircuit.g:7208:1: rule__Loop__Group_34__5 : rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6 ;
     public final void rule__Loop__Group_34__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7052:1: ( rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6 )
-            // InternalQuCircuit.g:7053:2: rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6
+            // InternalQuCircuit.g:7212:1: ( rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6 )
+            // InternalQuCircuit.g:7213:2: rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_34__5__Impl();
 
             state._fsp--;
@@ -21411,35 +21904,35 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__5__Impl"
-    // InternalQuCircuit.g:7060:1: rule__Loop__Group_34__5__Impl : ( ( rule__Loop__Group_34_5__0 )* ) ;
+    // InternalQuCircuit.g:7220:1: rule__Loop__Group_34__5__Impl : ( ( rule__Loop__Group_34_5__0 )* ) ;
     public final void rule__Loop__Group_34__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7064:1: ( ( ( rule__Loop__Group_34_5__0 )* ) )
-            // InternalQuCircuit.g:7065:1: ( ( rule__Loop__Group_34_5__0 )* )
+            // InternalQuCircuit.g:7224:1: ( ( ( rule__Loop__Group_34_5__0 )* ) )
+            // InternalQuCircuit.g:7225:1: ( ( rule__Loop__Group_34_5__0 )* )
             {
-            // InternalQuCircuit.g:7065:1: ( ( rule__Loop__Group_34_5__0 )* )
-            // InternalQuCircuit.g:7066:2: ( rule__Loop__Group_34_5__0 )*
+            // InternalQuCircuit.g:7225:1: ( ( rule__Loop__Group_34_5__0 )* )
+            // InternalQuCircuit.g:7226:2: ( rule__Loop__Group_34_5__0 )*
             {
              before(grammarAccess.getLoopAccess().getGroup_34_5()); 
-            // InternalQuCircuit.g:7067:2: ( rule__Loop__Group_34_5__0 )*
-            loop53:
+            // InternalQuCircuit.g:7227:2: ( rule__Loop__Group_34_5__0 )*
+            loop55:
             do {
-                int alt53=2;
-                int LA53_0 = input.LA(1);
+                int alt55=2;
+                int LA55_0 = input.LA(1);
 
-                if ( (LA53_0==24) ) {
-                    alt53=1;
+                if ( (LA55_0==26) ) {
+                    alt55=1;
                 }
 
 
-                switch (alt53) {
+                switch (alt55) {
             	case 1 :
-            	    // InternalQuCircuit.g:7067:3: rule__Loop__Group_34_5__0
+            	    // InternalQuCircuit.g:7227:3: rule__Loop__Group_34_5__0
             	    {
-            	    pushFollow(FOLLOW_17);
+            	    pushFollow(FOLLOW_20);
             	    rule__Loop__Group_34_5__0();
 
             	    state._fsp--;
@@ -21449,7 +21942,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop53;
+            	    break loop55;
                 }
             } while (true);
 
@@ -21476,14 +21969,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__6"
-    // InternalQuCircuit.g:7075:1: rule__Loop__Group_34__6 : rule__Loop__Group_34__6__Impl ;
+    // InternalQuCircuit.g:7235:1: rule__Loop__Group_34__6 : rule__Loop__Group_34__6__Impl ;
     public final void rule__Loop__Group_34__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7079:1: ( rule__Loop__Group_34__6__Impl )
-            // InternalQuCircuit.g:7080:2: rule__Loop__Group_34__6__Impl
+            // InternalQuCircuit.g:7239:1: ( rule__Loop__Group_34__6__Impl )
+            // InternalQuCircuit.g:7240:2: rule__Loop__Group_34__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_34__6__Impl();
@@ -21509,20 +22002,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34__6__Impl"
-    // InternalQuCircuit.g:7086:1: rule__Loop__Group_34__6__Impl : ( ']' ) ;
+    // InternalQuCircuit.g:7246:1: rule__Loop__Group_34__6__Impl : ( ']' ) ;
     public final void rule__Loop__Group_34__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7090:1: ( ( ']' ) )
-            // InternalQuCircuit.g:7091:1: ( ']' )
+            // InternalQuCircuit.g:7250:1: ( ( ']' ) )
+            // InternalQuCircuit.g:7251:1: ( ']' )
             {
-            // InternalQuCircuit.g:7091:1: ( ']' )
-            // InternalQuCircuit.g:7092:2: ']'
+            // InternalQuCircuit.g:7251:1: ( ']' )
+            // InternalQuCircuit.g:7252:2: ']'
             {
              before(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_34_6()); 
-            match(input,29,FOLLOW_2); 
+            match(input,31,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightSquareBracketKeyword_34_6()); 
 
             }
@@ -21546,16 +22039,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__0"
-    // InternalQuCircuit.g:7102:1: rule__Loop__Group_34_5__0 : rule__Loop__Group_34_5__0__Impl rule__Loop__Group_34_5__1 ;
+    // InternalQuCircuit.g:7262:1: rule__Loop__Group_34_5__0 : rule__Loop__Group_34_5__0__Impl rule__Loop__Group_34_5__1 ;
     public final void rule__Loop__Group_34_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7106:1: ( rule__Loop__Group_34_5__0__Impl rule__Loop__Group_34_5__1 )
-            // InternalQuCircuit.g:7107:2: rule__Loop__Group_34_5__0__Impl rule__Loop__Group_34_5__1
+            // InternalQuCircuit.g:7266:1: ( rule__Loop__Group_34_5__0__Impl rule__Loop__Group_34_5__1 )
+            // InternalQuCircuit.g:7267:2: rule__Loop__Group_34_5__0__Impl rule__Loop__Group_34_5__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Loop__Group_34_5__0__Impl();
 
             state._fsp--;
@@ -21584,20 +22077,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__0__Impl"
-    // InternalQuCircuit.g:7114:1: rule__Loop__Group_34_5__0__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:7274:1: rule__Loop__Group_34_5__0__Impl : ( ',' ) ;
     public final void rule__Loop__Group_34_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7118:1: ( ( ',' ) )
-            // InternalQuCircuit.g:7119:1: ( ',' )
+            // InternalQuCircuit.g:7278:1: ( ( ',' ) )
+            // InternalQuCircuit.g:7279:1: ( ',' )
             {
-            // InternalQuCircuit.g:7119:1: ( ',' )
-            // InternalQuCircuit.g:7120:2: ','
+            // InternalQuCircuit.g:7279:1: ( ',' )
+            // InternalQuCircuit.g:7280:2: ','
             {
              before(grammarAccess.getLoopAccess().getCommaKeyword_34_5_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getCommaKeyword_34_5_0()); 
 
             }
@@ -21621,16 +22114,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__1"
-    // InternalQuCircuit.g:7129:1: rule__Loop__Group_34_5__1 : rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2 ;
+    // InternalQuCircuit.g:7289:1: rule__Loop__Group_34_5__1 : rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2 ;
     public final void rule__Loop__Group_34_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7133:1: ( rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2 )
-            // InternalQuCircuit.g:7134:2: rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2
+            // InternalQuCircuit.g:7293:1: ( rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2 )
+            // InternalQuCircuit.g:7294:2: rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_34_5__1__Impl();
 
             state._fsp--;
@@ -21659,20 +22152,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__1__Impl"
-    // InternalQuCircuit.g:7141:1: rule__Loop__Group_34_5__1__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:7301:1: rule__Loop__Group_34_5__1__Impl : ( '(' ) ;
     public final void rule__Loop__Group_34_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7145:1: ( ( '(' ) )
-            // InternalQuCircuit.g:7146:1: ( '(' )
+            // InternalQuCircuit.g:7305:1: ( ( '(' ) )
+            // InternalQuCircuit.g:7306:1: ( '(' )
             {
-            // InternalQuCircuit.g:7146:1: ( '(' )
-            // InternalQuCircuit.g:7147:2: '('
+            // InternalQuCircuit.g:7306:1: ( '(' )
+            // InternalQuCircuit.g:7307:2: '('
             {
              before(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_34_5_1()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getLeftParenthesisKeyword_34_5_1()); 
 
             }
@@ -21696,16 +22189,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__2"
-    // InternalQuCircuit.g:7156:1: rule__Loop__Group_34_5__2 : rule__Loop__Group_34_5__2__Impl rule__Loop__Group_34_5__3 ;
+    // InternalQuCircuit.g:7316:1: rule__Loop__Group_34_5__2 : rule__Loop__Group_34_5__2__Impl rule__Loop__Group_34_5__3 ;
     public final void rule__Loop__Group_34_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7160:1: ( rule__Loop__Group_34_5__2__Impl rule__Loop__Group_34_5__3 )
-            // InternalQuCircuit.g:7161:2: rule__Loop__Group_34_5__2__Impl rule__Loop__Group_34_5__3
+            // InternalQuCircuit.g:7320:1: ( rule__Loop__Group_34_5__2__Impl rule__Loop__Group_34_5__3 )
+            // InternalQuCircuit.g:7321:2: rule__Loop__Group_34_5__2__Impl rule__Loop__Group_34_5__3
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Loop__Group_34_5__2__Impl();
 
             state._fsp--;
@@ -21734,21 +22227,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__2__Impl"
-    // InternalQuCircuit.g:7168:1: rule__Loop__Group_34_5__2__Impl : ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) ) ;
+    // InternalQuCircuit.g:7328:1: rule__Loop__Group_34_5__2__Impl : ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) ) ;
     public final void rule__Loop__Group_34_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7172:1: ( ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) ) )
-            // InternalQuCircuit.g:7173:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) )
+            // InternalQuCircuit.g:7332:1: ( ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) ) )
+            // InternalQuCircuit.g:7333:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) )
             {
-            // InternalQuCircuit.g:7173:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) )
-            // InternalQuCircuit.g:7174:2: ( rule__Loop__LoopControlQubitsAssignment_34_5_2 )
+            // InternalQuCircuit.g:7333:1: ( ( rule__Loop__LoopControlQubitsAssignment_34_5_2 ) )
+            // InternalQuCircuit.g:7334:2: ( rule__Loop__LoopControlQubitsAssignment_34_5_2 )
             {
              before(grammarAccess.getLoopAccess().getLoopControlQubitsAssignment_34_5_2()); 
-            // InternalQuCircuit.g:7175:2: ( rule__Loop__LoopControlQubitsAssignment_34_5_2 )
-            // InternalQuCircuit.g:7175:3: rule__Loop__LoopControlQubitsAssignment_34_5_2
+            // InternalQuCircuit.g:7335:2: ( rule__Loop__LoopControlQubitsAssignment_34_5_2 )
+            // InternalQuCircuit.g:7335:3: rule__Loop__LoopControlQubitsAssignment_34_5_2
             {
             pushFollow(FOLLOW_2);
             rule__Loop__LoopControlQubitsAssignment_34_5_2();
@@ -21781,14 +22274,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__3"
-    // InternalQuCircuit.g:7183:1: rule__Loop__Group_34_5__3 : rule__Loop__Group_34_5__3__Impl ;
+    // InternalQuCircuit.g:7343:1: rule__Loop__Group_34_5__3 : rule__Loop__Group_34_5__3__Impl ;
     public final void rule__Loop__Group_34_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7187:1: ( rule__Loop__Group_34_5__3__Impl )
-            // InternalQuCircuit.g:7188:2: rule__Loop__Group_34_5__3__Impl
+            // InternalQuCircuit.g:7347:1: ( rule__Loop__Group_34_5__3__Impl )
+            // InternalQuCircuit.g:7348:2: rule__Loop__Group_34_5__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Loop__Group_34_5__3__Impl();
@@ -21814,20 +22307,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group_34_5__3__Impl"
-    // InternalQuCircuit.g:7194:1: rule__Loop__Group_34_5__3__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:7354:1: rule__Loop__Group_34_5__3__Impl : ( ')' ) ;
     public final void rule__Loop__Group_34_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7198:1: ( ( ')' ) )
-            // InternalQuCircuit.g:7199:1: ( ')' )
+            // InternalQuCircuit.g:7358:1: ( ( ')' ) )
+            // InternalQuCircuit.g:7359:1: ( ')' )
             {
-            // InternalQuCircuit.g:7199:1: ( ')' )
-            // InternalQuCircuit.g:7200:2: ')'
+            // InternalQuCircuit.g:7359:1: ( ')' )
+            // InternalQuCircuit.g:7360:2: ')'
             {
              before(grammarAccess.getLoopAccess().getRightParenthesisKeyword_34_5_3()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getRightParenthesisKeyword_34_5_3()); 
 
             }
@@ -21851,16 +22344,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group__0"
-    // InternalQuCircuit.g:7210:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
+    // InternalQuCircuit.g:7370:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
     public final void rule__Operation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7214:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
-            // InternalQuCircuit.g:7215:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
+            // InternalQuCircuit.g:7374:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
+            // InternalQuCircuit.g:7375:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_14);
             rule__Operation__Group__0__Impl();
 
             state._fsp--;
@@ -21889,21 +22382,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group__0__Impl"
-    // InternalQuCircuit.g:7222:1: rule__Operation__Group__0__Impl : ( ( rule__Operation__OperationAssignment_0 ) ) ;
+    // InternalQuCircuit.g:7382:1: rule__Operation__Group__0__Impl : ( ( rule__Operation__OperationAssignment_0 ) ) ;
     public final void rule__Operation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7226:1: ( ( ( rule__Operation__OperationAssignment_0 ) ) )
-            // InternalQuCircuit.g:7227:1: ( ( rule__Operation__OperationAssignment_0 ) )
+            // InternalQuCircuit.g:7386:1: ( ( ( rule__Operation__OperationAssignment_0 ) ) )
+            // InternalQuCircuit.g:7387:1: ( ( rule__Operation__OperationAssignment_0 ) )
             {
-            // InternalQuCircuit.g:7227:1: ( ( rule__Operation__OperationAssignment_0 ) )
-            // InternalQuCircuit.g:7228:2: ( rule__Operation__OperationAssignment_0 )
+            // InternalQuCircuit.g:7387:1: ( ( rule__Operation__OperationAssignment_0 ) )
+            // InternalQuCircuit.g:7388:2: ( rule__Operation__OperationAssignment_0 )
             {
              before(grammarAccess.getOperationAccess().getOperationAssignment_0()); 
-            // InternalQuCircuit.g:7229:2: ( rule__Operation__OperationAssignment_0 )
-            // InternalQuCircuit.g:7229:3: rule__Operation__OperationAssignment_0
+            // InternalQuCircuit.g:7389:2: ( rule__Operation__OperationAssignment_0 )
+            // InternalQuCircuit.g:7389:3: rule__Operation__OperationAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Operation__OperationAssignment_0();
@@ -21936,14 +22429,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group__1"
-    // InternalQuCircuit.g:7237:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl ;
+    // InternalQuCircuit.g:7397:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl ;
     public final void rule__Operation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7241:1: ( rule__Operation__Group__1__Impl )
-            // InternalQuCircuit.g:7242:2: rule__Operation__Group__1__Impl
+            // InternalQuCircuit.g:7401:1: ( rule__Operation__Group__1__Impl )
+            // InternalQuCircuit.g:7402:2: rule__Operation__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Operation__Group__1__Impl();
@@ -21969,29 +22462,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group__1__Impl"
-    // InternalQuCircuit.g:7248:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__Group_1__0 )? ) ;
+    // InternalQuCircuit.g:7408:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__Group_1__0 )? ) ;
     public final void rule__Operation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7252:1: ( ( ( rule__Operation__Group_1__0 )? ) )
-            // InternalQuCircuit.g:7253:1: ( ( rule__Operation__Group_1__0 )? )
+            // InternalQuCircuit.g:7412:1: ( ( ( rule__Operation__Group_1__0 )? ) )
+            // InternalQuCircuit.g:7413:1: ( ( rule__Operation__Group_1__0 )? )
             {
-            // InternalQuCircuit.g:7253:1: ( ( rule__Operation__Group_1__0 )? )
-            // InternalQuCircuit.g:7254:2: ( rule__Operation__Group_1__0 )?
+            // InternalQuCircuit.g:7413:1: ( ( rule__Operation__Group_1__0 )? )
+            // InternalQuCircuit.g:7414:2: ( rule__Operation__Group_1__0 )?
             {
              before(grammarAccess.getOperationAccess().getGroup_1()); 
-            // InternalQuCircuit.g:7255:2: ( rule__Operation__Group_1__0 )?
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // InternalQuCircuit.g:7415:2: ( rule__Operation__Group_1__0 )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
 
-            if ( (LA54_0==31) ) {
-                alt54=1;
+            if ( (LA56_0==21) ) {
+                alt56=1;
             }
-            switch (alt54) {
+            switch (alt56) {
                 case 1 :
-                    // InternalQuCircuit.g:7255:3: rule__Operation__Group_1__0
+                    // InternalQuCircuit.g:7415:3: rule__Operation__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Operation__Group_1__0();
@@ -22027,14 +22520,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group_1__0"
-    // InternalQuCircuit.g:7264:1: rule__Operation__Group_1__0 : rule__Operation__Group_1__0__Impl rule__Operation__Group_1__1 ;
+    // InternalQuCircuit.g:7424:1: rule__Operation__Group_1__0 : rule__Operation__Group_1__0__Impl rule__Operation__Group_1__1 ;
     public final void rule__Operation__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7268:1: ( rule__Operation__Group_1__0__Impl rule__Operation__Group_1__1 )
-            // InternalQuCircuit.g:7269:2: rule__Operation__Group_1__0__Impl rule__Operation__Group_1__1
+            // InternalQuCircuit.g:7428:1: ( rule__Operation__Group_1__0__Impl rule__Operation__Group_1__1 )
+            // InternalQuCircuit.g:7429:2: rule__Operation__Group_1__0__Impl rule__Operation__Group_1__1
             {
             pushFollow(FOLLOW_3);
             rule__Operation__Group_1__0__Impl();
@@ -22065,20 +22558,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group_1__0__Impl"
-    // InternalQuCircuit.g:7276:1: rule__Operation__Group_1__0__Impl : ( '(' ) ;
+    // InternalQuCircuit.g:7436:1: rule__Operation__Group_1__0__Impl : ( '(' ) ;
     public final void rule__Operation__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7280:1: ( ( '(' ) )
-            // InternalQuCircuit.g:7281:1: ( '(' )
+            // InternalQuCircuit.g:7440:1: ( ( '(' ) )
+            // InternalQuCircuit.g:7441:1: ( '(' )
             {
-            // InternalQuCircuit.g:7281:1: ( '(' )
-            // InternalQuCircuit.g:7282:2: '('
+            // InternalQuCircuit.g:7441:1: ( '(' )
+            // InternalQuCircuit.g:7442:2: '('
             {
              before(grammarAccess.getOperationAccess().getLeftParenthesisKeyword_1_0()); 
-            match(input,31,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getOperationAccess().getLeftParenthesisKeyword_1_0()); 
 
             }
@@ -22102,16 +22595,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group_1__1"
-    // InternalQuCircuit.g:7291:1: rule__Operation__Group_1__1 : rule__Operation__Group_1__1__Impl rule__Operation__Group_1__2 ;
+    // InternalQuCircuit.g:7451:1: rule__Operation__Group_1__1 : rule__Operation__Group_1__1__Impl rule__Operation__Group_1__2 ;
     public final void rule__Operation__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7295:1: ( rule__Operation__Group_1__1__Impl rule__Operation__Group_1__2 )
-            // InternalQuCircuit.g:7296:2: rule__Operation__Group_1__1__Impl rule__Operation__Group_1__2
+            // InternalQuCircuit.g:7455:1: ( rule__Operation__Group_1__1__Impl rule__Operation__Group_1__2 )
+            // InternalQuCircuit.g:7456:2: rule__Operation__Group_1__1__Impl rule__Operation__Group_1__2
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_15);
             rule__Operation__Group_1__1__Impl();
 
             state._fsp--;
@@ -22140,21 +22633,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group_1__1__Impl"
-    // InternalQuCircuit.g:7303:1: rule__Operation__Group_1__1__Impl : ( ( rule__Operation__QuboAssignment_1_1 ) ) ;
+    // InternalQuCircuit.g:7463:1: rule__Operation__Group_1__1__Impl : ( ( rule__Operation__QuboAssignment_1_1 ) ) ;
     public final void rule__Operation__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7307:1: ( ( ( rule__Operation__QuboAssignment_1_1 ) ) )
-            // InternalQuCircuit.g:7308:1: ( ( rule__Operation__QuboAssignment_1_1 ) )
+            // InternalQuCircuit.g:7467:1: ( ( ( rule__Operation__QuboAssignment_1_1 ) ) )
+            // InternalQuCircuit.g:7468:1: ( ( rule__Operation__QuboAssignment_1_1 ) )
             {
-            // InternalQuCircuit.g:7308:1: ( ( rule__Operation__QuboAssignment_1_1 ) )
-            // InternalQuCircuit.g:7309:2: ( rule__Operation__QuboAssignment_1_1 )
+            // InternalQuCircuit.g:7468:1: ( ( rule__Operation__QuboAssignment_1_1 ) )
+            // InternalQuCircuit.g:7469:2: ( rule__Operation__QuboAssignment_1_1 )
             {
              before(grammarAccess.getOperationAccess().getQuboAssignment_1_1()); 
-            // InternalQuCircuit.g:7310:2: ( rule__Operation__QuboAssignment_1_1 )
-            // InternalQuCircuit.g:7310:3: rule__Operation__QuboAssignment_1_1
+            // InternalQuCircuit.g:7470:2: ( rule__Operation__QuboAssignment_1_1 )
+            // InternalQuCircuit.g:7470:3: rule__Operation__QuboAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Operation__QuboAssignment_1_1();
@@ -22187,14 +22680,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group_1__2"
-    // InternalQuCircuit.g:7318:1: rule__Operation__Group_1__2 : rule__Operation__Group_1__2__Impl ;
+    // InternalQuCircuit.g:7478:1: rule__Operation__Group_1__2 : rule__Operation__Group_1__2__Impl ;
     public final void rule__Operation__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7322:1: ( rule__Operation__Group_1__2__Impl )
-            // InternalQuCircuit.g:7323:2: rule__Operation__Group_1__2__Impl
+            // InternalQuCircuit.g:7482:1: ( rule__Operation__Group_1__2__Impl )
+            // InternalQuCircuit.g:7483:2: rule__Operation__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Operation__Group_1__2__Impl();
@@ -22220,20 +22713,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__Group_1__2__Impl"
-    // InternalQuCircuit.g:7329:1: rule__Operation__Group_1__2__Impl : ( ')' ) ;
+    // InternalQuCircuit.g:7489:1: rule__Operation__Group_1__2__Impl : ( ')' ) ;
     public final void rule__Operation__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7333:1: ( ( ')' ) )
-            // InternalQuCircuit.g:7334:1: ( ')' )
+            // InternalQuCircuit.g:7493:1: ( ( ')' ) )
+            // InternalQuCircuit.g:7494:1: ( ')' )
             {
-            // InternalQuCircuit.g:7334:1: ( ')' )
-            // InternalQuCircuit.g:7335:2: ')'
+            // InternalQuCircuit.g:7494:1: ( ')' )
+            // InternalQuCircuit.g:7495:2: ')'
             {
              before(grammarAccess.getOperationAccess().getRightParenthesisKeyword_1_2()); 
-            match(input,32,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getOperationAccess().getRightParenthesisKeyword_1_2()); 
 
             }
@@ -22257,16 +22750,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group__0"
-    // InternalQuCircuit.g:7345:1: rule__ElementSelector__Group__0 : rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1 ;
+    // InternalQuCircuit.g:7505:1: rule__ElementSelector__Group__0 : rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1 ;
     public final void rule__ElementSelector__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7349:1: ( rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1 )
-            // InternalQuCircuit.g:7350:2: rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1
+            // InternalQuCircuit.g:7509:1: ( rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1 )
+            // InternalQuCircuit.g:7510:2: rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__ElementSelector__Group__0__Impl();
 
             state._fsp--;
@@ -22295,21 +22788,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group__0__Impl"
-    // InternalQuCircuit.g:7357:1: rule__ElementSelector__Group__0__Impl : ( () ) ;
+    // InternalQuCircuit.g:7517:1: rule__ElementSelector__Group__0__Impl : ( () ) ;
     public final void rule__ElementSelector__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7361:1: ( ( () ) )
-            // InternalQuCircuit.g:7362:1: ( () )
+            // InternalQuCircuit.g:7521:1: ( ( () ) )
+            // InternalQuCircuit.g:7522:1: ( () )
             {
-            // InternalQuCircuit.g:7362:1: ( () )
-            // InternalQuCircuit.g:7363:2: ()
+            // InternalQuCircuit.g:7522:1: ( () )
+            // InternalQuCircuit.g:7523:2: ()
             {
              before(grammarAccess.getElementSelectorAccess().getElementSelectorAction_0()); 
-            // InternalQuCircuit.g:7364:2: ()
-            // InternalQuCircuit.g:7364:3: 
+            // InternalQuCircuit.g:7524:2: ()
+            // InternalQuCircuit.g:7524:3: 
             {
             }
 
@@ -22332,16 +22825,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group__1"
-    // InternalQuCircuit.g:7372:1: rule__ElementSelector__Group__1 : rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2 ;
+    // InternalQuCircuit.g:7532:1: rule__ElementSelector__Group__1 : rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2 ;
     public final void rule__ElementSelector__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7376:1: ( rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2 )
-            // InternalQuCircuit.g:7377:2: rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2
+            // InternalQuCircuit.g:7536:1: ( rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2 )
+            // InternalQuCircuit.g:7537:2: rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__ElementSelector__Group__1__Impl();
 
             state._fsp--;
@@ -22370,29 +22863,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group__1__Impl"
-    // InternalQuCircuit.g:7384:1: rule__ElementSelector__Group__1__Impl : ( ( rule__ElementSelector__Group_1__0 )? ) ;
+    // InternalQuCircuit.g:7544:1: rule__ElementSelector__Group__1__Impl : ( ( rule__ElementSelector__Group_1__0 )? ) ;
     public final void rule__ElementSelector__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7388:1: ( ( ( rule__ElementSelector__Group_1__0 )? ) )
-            // InternalQuCircuit.g:7389:1: ( ( rule__ElementSelector__Group_1__0 )? )
+            // InternalQuCircuit.g:7548:1: ( ( ( rule__ElementSelector__Group_1__0 )? ) )
+            // InternalQuCircuit.g:7549:1: ( ( rule__ElementSelector__Group_1__0 )? )
             {
-            // InternalQuCircuit.g:7389:1: ( ( rule__ElementSelector__Group_1__0 )? )
-            // InternalQuCircuit.g:7390:2: ( rule__ElementSelector__Group_1__0 )?
+            // InternalQuCircuit.g:7549:1: ( ( rule__ElementSelector__Group_1__0 )? )
+            // InternalQuCircuit.g:7550:2: ( rule__ElementSelector__Group_1__0 )?
             {
              before(grammarAccess.getElementSelectorAccess().getGroup_1()); 
-            // InternalQuCircuit.g:7391:2: ( rule__ElementSelector__Group_1__0 )?
-            int alt55=2;
-            int LA55_0 = input.LA(1);
+            // InternalQuCircuit.g:7551:2: ( rule__ElementSelector__Group_1__0 )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( ((LA55_0>=RULE_STRING && LA55_0<=RULE_ID)) ) {
-                alt55=1;
+            if ( ((LA57_0>=RULE_STRING && LA57_0<=RULE_ID)) ) {
+                alt57=1;
             }
-            switch (alt55) {
+            switch (alt57) {
                 case 1 :
-                    // InternalQuCircuit.g:7391:3: rule__ElementSelector__Group_1__0
+                    // InternalQuCircuit.g:7551:3: rule__ElementSelector__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__ElementSelector__Group_1__0();
@@ -22428,14 +22921,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group__2"
-    // InternalQuCircuit.g:7399:1: rule__ElementSelector__Group__2 : rule__ElementSelector__Group__2__Impl ;
+    // InternalQuCircuit.g:7559:1: rule__ElementSelector__Group__2 : rule__ElementSelector__Group__2__Impl ;
     public final void rule__ElementSelector__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7403:1: ( rule__ElementSelector__Group__2__Impl )
-            // InternalQuCircuit.g:7404:2: rule__ElementSelector__Group__2__Impl
+            // InternalQuCircuit.g:7563:1: ( rule__ElementSelector__Group__2__Impl )
+            // InternalQuCircuit.g:7564:2: rule__ElementSelector__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementSelector__Group__2__Impl();
@@ -22461,21 +22954,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group__2__Impl"
-    // InternalQuCircuit.g:7410:1: rule__ElementSelector__Group__2__Impl : ( ( rule__ElementSelector__IndexAssignment_2 ) ) ;
+    // InternalQuCircuit.g:7570:1: rule__ElementSelector__Group__2__Impl : ( ( rule__ElementSelector__IndexAssignment_2 ) ) ;
     public final void rule__ElementSelector__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7414:1: ( ( ( rule__ElementSelector__IndexAssignment_2 ) ) )
-            // InternalQuCircuit.g:7415:1: ( ( rule__ElementSelector__IndexAssignment_2 ) )
+            // InternalQuCircuit.g:7574:1: ( ( ( rule__ElementSelector__IndexAssignment_2 ) ) )
+            // InternalQuCircuit.g:7575:1: ( ( rule__ElementSelector__IndexAssignment_2 ) )
             {
-            // InternalQuCircuit.g:7415:1: ( ( rule__ElementSelector__IndexAssignment_2 ) )
-            // InternalQuCircuit.g:7416:2: ( rule__ElementSelector__IndexAssignment_2 )
+            // InternalQuCircuit.g:7575:1: ( ( rule__ElementSelector__IndexAssignment_2 ) )
+            // InternalQuCircuit.g:7576:2: ( rule__ElementSelector__IndexAssignment_2 )
             {
              before(grammarAccess.getElementSelectorAccess().getIndexAssignment_2()); 
-            // InternalQuCircuit.g:7417:2: ( rule__ElementSelector__IndexAssignment_2 )
-            // InternalQuCircuit.g:7417:3: rule__ElementSelector__IndexAssignment_2
+            // InternalQuCircuit.g:7577:2: ( rule__ElementSelector__IndexAssignment_2 )
+            // InternalQuCircuit.g:7577:3: rule__ElementSelector__IndexAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ElementSelector__IndexAssignment_2();
@@ -22508,14 +23001,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group_1__0"
-    // InternalQuCircuit.g:7426:1: rule__ElementSelector__Group_1__0 : rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1 ;
+    // InternalQuCircuit.g:7586:1: rule__ElementSelector__Group_1__0 : rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1 ;
     public final void rule__ElementSelector__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7430:1: ( rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1 )
-            // InternalQuCircuit.g:7431:2: rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1
+            // InternalQuCircuit.g:7590:1: ( rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1 )
+            // InternalQuCircuit.g:7591:2: rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1
             {
             pushFollow(FOLLOW_42);
             rule__ElementSelector__Group_1__0__Impl();
@@ -22546,21 +23039,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group_1__0__Impl"
-    // InternalQuCircuit.g:7438:1: rule__ElementSelector__Group_1__0__Impl : ( ( rule__ElementSelector__RegisterAssignment_1_0 ) ) ;
+    // InternalQuCircuit.g:7598:1: rule__ElementSelector__Group_1__0__Impl : ( ( rule__ElementSelector__RegisterAssignment_1_0 ) ) ;
     public final void rule__ElementSelector__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7442:1: ( ( ( rule__ElementSelector__RegisterAssignment_1_0 ) ) )
-            // InternalQuCircuit.g:7443:1: ( ( rule__ElementSelector__RegisterAssignment_1_0 ) )
+            // InternalQuCircuit.g:7602:1: ( ( ( rule__ElementSelector__RegisterAssignment_1_0 ) ) )
+            // InternalQuCircuit.g:7603:1: ( ( rule__ElementSelector__RegisterAssignment_1_0 ) )
             {
-            // InternalQuCircuit.g:7443:1: ( ( rule__ElementSelector__RegisterAssignment_1_0 ) )
-            // InternalQuCircuit.g:7444:2: ( rule__ElementSelector__RegisterAssignment_1_0 )
+            // InternalQuCircuit.g:7603:1: ( ( rule__ElementSelector__RegisterAssignment_1_0 ) )
+            // InternalQuCircuit.g:7604:2: ( rule__ElementSelector__RegisterAssignment_1_0 )
             {
              before(grammarAccess.getElementSelectorAccess().getRegisterAssignment_1_0()); 
-            // InternalQuCircuit.g:7445:2: ( rule__ElementSelector__RegisterAssignment_1_0 )
-            // InternalQuCircuit.g:7445:3: rule__ElementSelector__RegisterAssignment_1_0
+            // InternalQuCircuit.g:7605:2: ( rule__ElementSelector__RegisterAssignment_1_0 )
+            // InternalQuCircuit.g:7605:3: rule__ElementSelector__RegisterAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__ElementSelector__RegisterAssignment_1_0();
@@ -22593,14 +23086,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group_1__1"
-    // InternalQuCircuit.g:7453:1: rule__ElementSelector__Group_1__1 : rule__ElementSelector__Group_1__1__Impl ;
+    // InternalQuCircuit.g:7613:1: rule__ElementSelector__Group_1__1 : rule__ElementSelector__Group_1__1__Impl ;
     public final void rule__ElementSelector__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7457:1: ( rule__ElementSelector__Group_1__1__Impl )
-            // InternalQuCircuit.g:7458:2: rule__ElementSelector__Group_1__1__Impl
+            // InternalQuCircuit.g:7617:1: ( rule__ElementSelector__Group_1__1__Impl )
+            // InternalQuCircuit.g:7618:2: rule__ElementSelector__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ElementSelector__Group_1__1__Impl();
@@ -22626,20 +23119,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__Group_1__1__Impl"
-    // InternalQuCircuit.g:7464:1: rule__ElementSelector__Group_1__1__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:7624:1: rule__ElementSelector__Group_1__1__Impl : ( ',' ) ;
     public final void rule__ElementSelector__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7468:1: ( ( ',' ) )
-            // InternalQuCircuit.g:7469:1: ( ',' )
+            // InternalQuCircuit.g:7628:1: ( ( ',' ) )
+            // InternalQuCircuit.g:7629:1: ( ',' )
             {
-            // InternalQuCircuit.g:7469:1: ( ',' )
-            // InternalQuCircuit.g:7470:2: ','
+            // InternalQuCircuit.g:7629:1: ( ',' )
+            // InternalQuCircuit.g:7630:2: ','
             {
              before(grammarAccess.getElementSelectorAccess().getCommaKeyword_1_1()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getElementSelectorAccess().getCommaKeyword_1_1()); 
 
             }
@@ -22663,16 +23156,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__0"
-    // InternalQuCircuit.g:7480:1: rule__RangeSelector__Group__0 : rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1 ;
+    // InternalQuCircuit.g:7640:1: rule__RangeSelector__Group__0 : rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1 ;
     public final void rule__RangeSelector__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7484:1: ( rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1 )
-            // InternalQuCircuit.g:7485:2: rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1
+            // InternalQuCircuit.g:7644:1: ( rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1 )
+            // InternalQuCircuit.g:7645:2: rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__RangeSelector__Group__0__Impl();
 
             state._fsp--;
@@ -22701,21 +23194,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__0__Impl"
-    // InternalQuCircuit.g:7492:1: rule__RangeSelector__Group__0__Impl : ( () ) ;
+    // InternalQuCircuit.g:7652:1: rule__RangeSelector__Group__0__Impl : ( () ) ;
     public final void rule__RangeSelector__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7496:1: ( ( () ) )
-            // InternalQuCircuit.g:7497:1: ( () )
+            // InternalQuCircuit.g:7656:1: ( ( () ) )
+            // InternalQuCircuit.g:7657:1: ( () )
             {
-            // InternalQuCircuit.g:7497:1: ( () )
-            // InternalQuCircuit.g:7498:2: ()
+            // InternalQuCircuit.g:7657:1: ( () )
+            // InternalQuCircuit.g:7658:2: ()
             {
              before(grammarAccess.getRangeSelectorAccess().getRangeSelectorAction_0()); 
-            // InternalQuCircuit.g:7499:2: ()
-            // InternalQuCircuit.g:7499:3: 
+            // InternalQuCircuit.g:7659:2: ()
+            // InternalQuCircuit.g:7659:3: 
             {
             }
 
@@ -22738,16 +23231,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__1"
-    // InternalQuCircuit.g:7507:1: rule__RangeSelector__Group__1 : rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2 ;
+    // InternalQuCircuit.g:7667:1: rule__RangeSelector__Group__1 : rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2 ;
     public final void rule__RangeSelector__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7511:1: ( rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2 )
-            // InternalQuCircuit.g:7512:2: rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2
+            // InternalQuCircuit.g:7671:1: ( rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2 )
+            // InternalQuCircuit.g:7672:2: rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_24);
             rule__RangeSelector__Group__1__Impl();
 
             state._fsp--;
@@ -22776,29 +23269,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__1__Impl"
-    // InternalQuCircuit.g:7519:1: rule__RangeSelector__Group__1__Impl : ( ( rule__RangeSelector__Group_1__0 )? ) ;
+    // InternalQuCircuit.g:7679:1: rule__RangeSelector__Group__1__Impl : ( ( rule__RangeSelector__Group_1__0 )? ) ;
     public final void rule__RangeSelector__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7523:1: ( ( ( rule__RangeSelector__Group_1__0 )? ) )
-            // InternalQuCircuit.g:7524:1: ( ( rule__RangeSelector__Group_1__0 )? )
+            // InternalQuCircuit.g:7683:1: ( ( ( rule__RangeSelector__Group_1__0 )? ) )
+            // InternalQuCircuit.g:7684:1: ( ( rule__RangeSelector__Group_1__0 )? )
             {
-            // InternalQuCircuit.g:7524:1: ( ( rule__RangeSelector__Group_1__0 )? )
-            // InternalQuCircuit.g:7525:2: ( rule__RangeSelector__Group_1__0 )?
+            // InternalQuCircuit.g:7684:1: ( ( rule__RangeSelector__Group_1__0 )? )
+            // InternalQuCircuit.g:7685:2: ( rule__RangeSelector__Group_1__0 )?
             {
              before(grammarAccess.getRangeSelectorAccess().getGroup_1()); 
-            // InternalQuCircuit.g:7526:2: ( rule__RangeSelector__Group_1__0 )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // InternalQuCircuit.g:7686:2: ( rule__RangeSelector__Group_1__0 )?
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( ((LA56_0>=RULE_STRING && LA56_0<=RULE_ID)) ) {
-                alt56=1;
+            if ( ((LA58_0>=RULE_STRING && LA58_0<=RULE_ID)) ) {
+                alt58=1;
             }
-            switch (alt56) {
+            switch (alt58) {
                 case 1 :
-                    // InternalQuCircuit.g:7526:3: rule__RangeSelector__Group_1__0
+                    // InternalQuCircuit.g:7686:3: rule__RangeSelector__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__RangeSelector__Group_1__0();
@@ -22834,14 +23327,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__2"
-    // InternalQuCircuit.g:7534:1: rule__RangeSelector__Group__2 : rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3 ;
+    // InternalQuCircuit.g:7694:1: rule__RangeSelector__Group__2 : rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3 ;
     public final void rule__RangeSelector__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7538:1: ( rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3 )
-            // InternalQuCircuit.g:7539:2: rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3
+            // InternalQuCircuit.g:7698:1: ( rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3 )
+            // InternalQuCircuit.g:7699:2: rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3
             {
             pushFollow(FOLLOW_43);
             rule__RangeSelector__Group__2__Impl();
@@ -22872,21 +23365,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__2__Impl"
-    // InternalQuCircuit.g:7546:1: rule__RangeSelector__Group__2__Impl : ( ( rule__RangeSelector__BeginAssignment_2 ) ) ;
+    // InternalQuCircuit.g:7706:1: rule__RangeSelector__Group__2__Impl : ( ( rule__RangeSelector__BeginAssignment_2 ) ) ;
     public final void rule__RangeSelector__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7550:1: ( ( ( rule__RangeSelector__BeginAssignment_2 ) ) )
-            // InternalQuCircuit.g:7551:1: ( ( rule__RangeSelector__BeginAssignment_2 ) )
+            // InternalQuCircuit.g:7710:1: ( ( ( rule__RangeSelector__BeginAssignment_2 ) ) )
+            // InternalQuCircuit.g:7711:1: ( ( rule__RangeSelector__BeginAssignment_2 ) )
             {
-            // InternalQuCircuit.g:7551:1: ( ( rule__RangeSelector__BeginAssignment_2 ) )
-            // InternalQuCircuit.g:7552:2: ( rule__RangeSelector__BeginAssignment_2 )
+            // InternalQuCircuit.g:7711:1: ( ( rule__RangeSelector__BeginAssignment_2 ) )
+            // InternalQuCircuit.g:7712:2: ( rule__RangeSelector__BeginAssignment_2 )
             {
              before(grammarAccess.getRangeSelectorAccess().getBeginAssignment_2()); 
-            // InternalQuCircuit.g:7553:2: ( rule__RangeSelector__BeginAssignment_2 )
-            // InternalQuCircuit.g:7553:3: rule__RangeSelector__BeginAssignment_2
+            // InternalQuCircuit.g:7713:2: ( rule__RangeSelector__BeginAssignment_2 )
+            // InternalQuCircuit.g:7713:3: rule__RangeSelector__BeginAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__RangeSelector__BeginAssignment_2();
@@ -22919,16 +23412,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__3"
-    // InternalQuCircuit.g:7561:1: rule__RangeSelector__Group__3 : rule__RangeSelector__Group__3__Impl rule__RangeSelector__Group__4 ;
+    // InternalQuCircuit.g:7721:1: rule__RangeSelector__Group__3 : rule__RangeSelector__Group__3__Impl rule__RangeSelector__Group__4 ;
     public final void rule__RangeSelector__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7565:1: ( rule__RangeSelector__Group__3__Impl rule__RangeSelector__Group__4 )
-            // InternalQuCircuit.g:7566:2: rule__RangeSelector__Group__3__Impl rule__RangeSelector__Group__4
+            // InternalQuCircuit.g:7725:1: ( rule__RangeSelector__Group__3__Impl rule__RangeSelector__Group__4 )
+            // InternalQuCircuit.g:7726:2: rule__RangeSelector__Group__3__Impl rule__RangeSelector__Group__4
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__RangeSelector__Group__3__Impl();
 
             state._fsp--;
@@ -22957,20 +23450,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__3__Impl"
-    // InternalQuCircuit.g:7573:1: rule__RangeSelector__Group__3__Impl : ( '-' ) ;
+    // InternalQuCircuit.g:7733:1: rule__RangeSelector__Group__3__Impl : ( '-' ) ;
     public final void rule__RangeSelector__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7577:1: ( ( '-' ) )
-            // InternalQuCircuit.g:7578:1: ( '-' )
+            // InternalQuCircuit.g:7737:1: ( ( '-' ) )
+            // InternalQuCircuit.g:7738:1: ( '-' )
             {
-            // InternalQuCircuit.g:7578:1: ( '-' )
-            // InternalQuCircuit.g:7579:2: '-'
+            // InternalQuCircuit.g:7738:1: ( '-' )
+            // InternalQuCircuit.g:7739:2: '-'
             {
              before(grammarAccess.getRangeSelectorAccess().getHyphenMinusKeyword_3()); 
-            match(input,55,FOLLOW_2); 
+            match(input,54,FOLLOW_2); 
              after(grammarAccess.getRangeSelectorAccess().getHyphenMinusKeyword_3()); 
 
             }
@@ -22994,14 +23487,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__4"
-    // InternalQuCircuit.g:7588:1: rule__RangeSelector__Group__4 : rule__RangeSelector__Group__4__Impl ;
+    // InternalQuCircuit.g:7748:1: rule__RangeSelector__Group__4 : rule__RangeSelector__Group__4__Impl ;
     public final void rule__RangeSelector__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7592:1: ( rule__RangeSelector__Group__4__Impl )
-            // InternalQuCircuit.g:7593:2: rule__RangeSelector__Group__4__Impl
+            // InternalQuCircuit.g:7752:1: ( rule__RangeSelector__Group__4__Impl )
+            // InternalQuCircuit.g:7753:2: rule__RangeSelector__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__RangeSelector__Group__4__Impl();
@@ -23027,21 +23520,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group__4__Impl"
-    // InternalQuCircuit.g:7599:1: rule__RangeSelector__Group__4__Impl : ( ( rule__RangeSelector__EndAssignment_4 ) ) ;
+    // InternalQuCircuit.g:7759:1: rule__RangeSelector__Group__4__Impl : ( ( rule__RangeSelector__EndAssignment_4 ) ) ;
     public final void rule__RangeSelector__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7603:1: ( ( ( rule__RangeSelector__EndAssignment_4 ) ) )
-            // InternalQuCircuit.g:7604:1: ( ( rule__RangeSelector__EndAssignment_4 ) )
+            // InternalQuCircuit.g:7763:1: ( ( ( rule__RangeSelector__EndAssignment_4 ) ) )
+            // InternalQuCircuit.g:7764:1: ( ( rule__RangeSelector__EndAssignment_4 ) )
             {
-            // InternalQuCircuit.g:7604:1: ( ( rule__RangeSelector__EndAssignment_4 ) )
-            // InternalQuCircuit.g:7605:2: ( rule__RangeSelector__EndAssignment_4 )
+            // InternalQuCircuit.g:7764:1: ( ( rule__RangeSelector__EndAssignment_4 ) )
+            // InternalQuCircuit.g:7765:2: ( rule__RangeSelector__EndAssignment_4 )
             {
              before(grammarAccess.getRangeSelectorAccess().getEndAssignment_4()); 
-            // InternalQuCircuit.g:7606:2: ( rule__RangeSelector__EndAssignment_4 )
-            // InternalQuCircuit.g:7606:3: rule__RangeSelector__EndAssignment_4
+            // InternalQuCircuit.g:7766:2: ( rule__RangeSelector__EndAssignment_4 )
+            // InternalQuCircuit.g:7766:3: rule__RangeSelector__EndAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__RangeSelector__EndAssignment_4();
@@ -23074,14 +23567,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group_1__0"
-    // InternalQuCircuit.g:7615:1: rule__RangeSelector__Group_1__0 : rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1 ;
+    // InternalQuCircuit.g:7775:1: rule__RangeSelector__Group_1__0 : rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1 ;
     public final void rule__RangeSelector__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7619:1: ( rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1 )
-            // InternalQuCircuit.g:7620:2: rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1
+            // InternalQuCircuit.g:7779:1: ( rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1 )
+            // InternalQuCircuit.g:7780:2: rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1
             {
             pushFollow(FOLLOW_42);
             rule__RangeSelector__Group_1__0__Impl();
@@ -23112,21 +23605,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group_1__0__Impl"
-    // InternalQuCircuit.g:7627:1: rule__RangeSelector__Group_1__0__Impl : ( ( rule__RangeSelector__RegisterAssignment_1_0 ) ) ;
+    // InternalQuCircuit.g:7787:1: rule__RangeSelector__Group_1__0__Impl : ( ( rule__RangeSelector__RegisterAssignment_1_0 ) ) ;
     public final void rule__RangeSelector__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7631:1: ( ( ( rule__RangeSelector__RegisterAssignment_1_0 ) ) )
-            // InternalQuCircuit.g:7632:1: ( ( rule__RangeSelector__RegisterAssignment_1_0 ) )
+            // InternalQuCircuit.g:7791:1: ( ( ( rule__RangeSelector__RegisterAssignment_1_0 ) ) )
+            // InternalQuCircuit.g:7792:1: ( ( rule__RangeSelector__RegisterAssignment_1_0 ) )
             {
-            // InternalQuCircuit.g:7632:1: ( ( rule__RangeSelector__RegisterAssignment_1_0 ) )
-            // InternalQuCircuit.g:7633:2: ( rule__RangeSelector__RegisterAssignment_1_0 )
+            // InternalQuCircuit.g:7792:1: ( ( rule__RangeSelector__RegisterAssignment_1_0 ) )
+            // InternalQuCircuit.g:7793:2: ( rule__RangeSelector__RegisterAssignment_1_0 )
             {
              before(grammarAccess.getRangeSelectorAccess().getRegisterAssignment_1_0()); 
-            // InternalQuCircuit.g:7634:2: ( rule__RangeSelector__RegisterAssignment_1_0 )
-            // InternalQuCircuit.g:7634:3: rule__RangeSelector__RegisterAssignment_1_0
+            // InternalQuCircuit.g:7794:2: ( rule__RangeSelector__RegisterAssignment_1_0 )
+            // InternalQuCircuit.g:7794:3: rule__RangeSelector__RegisterAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__RangeSelector__RegisterAssignment_1_0();
@@ -23159,14 +23652,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group_1__1"
-    // InternalQuCircuit.g:7642:1: rule__RangeSelector__Group_1__1 : rule__RangeSelector__Group_1__1__Impl ;
+    // InternalQuCircuit.g:7802:1: rule__RangeSelector__Group_1__1 : rule__RangeSelector__Group_1__1__Impl ;
     public final void rule__RangeSelector__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7646:1: ( rule__RangeSelector__Group_1__1__Impl )
-            // InternalQuCircuit.g:7647:2: rule__RangeSelector__Group_1__1__Impl
+            // InternalQuCircuit.g:7806:1: ( rule__RangeSelector__Group_1__1__Impl )
+            // InternalQuCircuit.g:7807:2: rule__RangeSelector__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__RangeSelector__Group_1__1__Impl();
@@ -23192,20 +23685,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__Group_1__1__Impl"
-    // InternalQuCircuit.g:7653:1: rule__RangeSelector__Group_1__1__Impl : ( ',' ) ;
+    // InternalQuCircuit.g:7813:1: rule__RangeSelector__Group_1__1__Impl : ( ',' ) ;
     public final void rule__RangeSelector__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7657:1: ( ( ',' ) )
-            // InternalQuCircuit.g:7658:1: ( ',' )
+            // InternalQuCircuit.g:7817:1: ( ( ',' ) )
+            // InternalQuCircuit.g:7818:1: ( ',' )
             {
-            // InternalQuCircuit.g:7658:1: ( ',' )
-            // InternalQuCircuit.g:7659:2: ','
+            // InternalQuCircuit.g:7818:1: ( ',' )
+            // InternalQuCircuit.g:7819:2: ','
             {
              before(grammarAccess.getRangeSelectorAccess().getCommaKeyword_1_1()); 
-            match(input,24,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getRangeSelectorAccess().getCommaKeyword_1_1()); 
 
             }
@@ -23229,14 +23722,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__0"
-    // InternalQuCircuit.g:7669:1: rule__EDoubleObject__Group__0 : rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1 ;
+    // InternalQuCircuit.g:7829:1: rule__EDoubleObject__Group__0 : rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1 ;
     public final void rule__EDoubleObject__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7673:1: ( rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1 )
-            // InternalQuCircuit.g:7674:2: rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1
+            // InternalQuCircuit.g:7833:1: ( rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1 )
+            // InternalQuCircuit.g:7834:2: rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1
             {
             pushFollow(FOLLOW_32);
             rule__EDoubleObject__Group__0__Impl();
@@ -23267,31 +23760,31 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__0__Impl"
-    // InternalQuCircuit.g:7681:1: rule__EDoubleObject__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalQuCircuit.g:7841:1: rule__EDoubleObject__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EDoubleObject__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7685:1: ( ( ( '-' )? ) )
-            // InternalQuCircuit.g:7686:1: ( ( '-' )? )
+            // InternalQuCircuit.g:7845:1: ( ( ( '-' )? ) )
+            // InternalQuCircuit.g:7846:1: ( ( '-' )? )
             {
-            // InternalQuCircuit.g:7686:1: ( ( '-' )? )
-            // InternalQuCircuit.g:7687:2: ( '-' )?
+            // InternalQuCircuit.g:7846:1: ( ( '-' )? )
+            // InternalQuCircuit.g:7847:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleObjectAccess().getHyphenMinusKeyword_0()); 
-            // InternalQuCircuit.g:7688:2: ( '-' )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            // InternalQuCircuit.g:7848:2: ( '-' )?
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            if ( (LA57_0==55) ) {
-                alt57=1;
+            if ( (LA59_0==54) ) {
+                alt59=1;
             }
-            switch (alt57) {
+            switch (alt59) {
                 case 1 :
-                    // InternalQuCircuit.g:7688:3: '-'
+                    // InternalQuCircuit.g:7848:3: '-'
                     {
-                    match(input,55,FOLLOW_2); 
+                    match(input,54,FOLLOW_2); 
 
                     }
                     break;
@@ -23321,14 +23814,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__1"
-    // InternalQuCircuit.g:7696:1: rule__EDoubleObject__Group__1 : rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2 ;
+    // InternalQuCircuit.g:7856:1: rule__EDoubleObject__Group__1 : rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2 ;
     public final void rule__EDoubleObject__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7700:1: ( rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2 )
-            // InternalQuCircuit.g:7701:2: rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2
+            // InternalQuCircuit.g:7860:1: ( rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2 )
+            // InternalQuCircuit.g:7861:2: rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2
             {
             pushFollow(FOLLOW_32);
             rule__EDoubleObject__Group__1__Impl();
@@ -23359,29 +23852,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__1__Impl"
-    // InternalQuCircuit.g:7708:1: rule__EDoubleObject__Group__1__Impl : ( ( RULE_INT )? ) ;
+    // InternalQuCircuit.g:7868:1: rule__EDoubleObject__Group__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__EDoubleObject__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7712:1: ( ( ( RULE_INT )? ) )
-            // InternalQuCircuit.g:7713:1: ( ( RULE_INT )? )
+            // InternalQuCircuit.g:7872:1: ( ( ( RULE_INT )? ) )
+            // InternalQuCircuit.g:7873:1: ( ( RULE_INT )? )
             {
-            // InternalQuCircuit.g:7713:1: ( ( RULE_INT )? )
-            // InternalQuCircuit.g:7714:2: ( RULE_INT )?
+            // InternalQuCircuit.g:7873:1: ( ( RULE_INT )? )
+            // InternalQuCircuit.g:7874:2: ( RULE_INT )?
             {
              before(grammarAccess.getEDoubleObjectAccess().getINTTerminalRuleCall_1()); 
-            // InternalQuCircuit.g:7715:2: ( RULE_INT )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            // InternalQuCircuit.g:7875:2: ( RULE_INT )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA58_0==RULE_INT) ) {
-                alt58=1;
+            if ( (LA60_0==RULE_INT) ) {
+                alt60=1;
             }
-            switch (alt58) {
+            switch (alt60) {
                 case 1 :
-                    // InternalQuCircuit.g:7715:3: RULE_INT
+                    // InternalQuCircuit.g:7875:3: RULE_INT
                     {
                     match(input,RULE_INT,FOLLOW_2); 
 
@@ -23413,16 +23906,16 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__2"
-    // InternalQuCircuit.g:7723:1: rule__EDoubleObject__Group__2 : rule__EDoubleObject__Group__2__Impl rule__EDoubleObject__Group__3 ;
+    // InternalQuCircuit.g:7883:1: rule__EDoubleObject__Group__2 : rule__EDoubleObject__Group__2__Impl rule__EDoubleObject__Group__3 ;
     public final void rule__EDoubleObject__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7727:1: ( rule__EDoubleObject__Group__2__Impl rule__EDoubleObject__Group__3 )
-            // InternalQuCircuit.g:7728:2: rule__EDoubleObject__Group__2__Impl rule__EDoubleObject__Group__3
+            // InternalQuCircuit.g:7887:1: ( rule__EDoubleObject__Group__2__Impl rule__EDoubleObject__Group__3 )
+            // InternalQuCircuit.g:7888:2: rule__EDoubleObject__Group__2__Impl rule__EDoubleObject__Group__3
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_13);
             rule__EDoubleObject__Group__2__Impl();
 
             state._fsp--;
@@ -23451,20 +23944,20 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__2__Impl"
-    // InternalQuCircuit.g:7735:1: rule__EDoubleObject__Group__2__Impl : ( '.' ) ;
+    // InternalQuCircuit.g:7895:1: rule__EDoubleObject__Group__2__Impl : ( '.' ) ;
     public final void rule__EDoubleObject__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7739:1: ( ( '.' ) )
-            // InternalQuCircuit.g:7740:1: ( '.' )
+            // InternalQuCircuit.g:7899:1: ( ( '.' ) )
+            // InternalQuCircuit.g:7900:1: ( '.' )
             {
-            // InternalQuCircuit.g:7740:1: ( '.' )
-            // InternalQuCircuit.g:7741:2: '.'
+            // InternalQuCircuit.g:7900:1: ( '.' )
+            // InternalQuCircuit.g:7901:2: '.'
             {
              before(grammarAccess.getEDoubleObjectAccess().getFullStopKeyword_2()); 
-            match(input,56,FOLLOW_2); 
+            match(input,55,FOLLOW_2); 
              after(grammarAccess.getEDoubleObjectAccess().getFullStopKeyword_2()); 
 
             }
@@ -23488,14 +23981,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__3"
-    // InternalQuCircuit.g:7750:1: rule__EDoubleObject__Group__3 : rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4 ;
+    // InternalQuCircuit.g:7910:1: rule__EDoubleObject__Group__3 : rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4 ;
     public final void rule__EDoubleObject__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7754:1: ( rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4 )
-            // InternalQuCircuit.g:7755:2: rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4
+            // InternalQuCircuit.g:7914:1: ( rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4 )
+            // InternalQuCircuit.g:7915:2: rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4
             {
             pushFollow(FOLLOW_44);
             rule__EDoubleObject__Group__3__Impl();
@@ -23526,17 +24019,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__3__Impl"
-    // InternalQuCircuit.g:7762:1: rule__EDoubleObject__Group__3__Impl : ( RULE_INT ) ;
+    // InternalQuCircuit.g:7922:1: rule__EDoubleObject__Group__3__Impl : ( RULE_INT ) ;
     public final void rule__EDoubleObject__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7766:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:7767:1: ( RULE_INT )
+            // InternalQuCircuit.g:7926:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:7927:1: ( RULE_INT )
             {
-            // InternalQuCircuit.g:7767:1: ( RULE_INT )
-            // InternalQuCircuit.g:7768:2: RULE_INT
+            // InternalQuCircuit.g:7927:1: ( RULE_INT )
+            // InternalQuCircuit.g:7928:2: RULE_INT
             {
              before(grammarAccess.getEDoubleObjectAccess().getINTTerminalRuleCall_3()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -23563,14 +24056,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__4"
-    // InternalQuCircuit.g:7777:1: rule__EDoubleObject__Group__4 : rule__EDoubleObject__Group__4__Impl ;
+    // InternalQuCircuit.g:7937:1: rule__EDoubleObject__Group__4 : rule__EDoubleObject__Group__4__Impl ;
     public final void rule__EDoubleObject__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7781:1: ( rule__EDoubleObject__Group__4__Impl )
-            // InternalQuCircuit.g:7782:2: rule__EDoubleObject__Group__4__Impl
+            // InternalQuCircuit.g:7941:1: ( rule__EDoubleObject__Group__4__Impl )
+            // InternalQuCircuit.g:7942:2: rule__EDoubleObject__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDoubleObject__Group__4__Impl();
@@ -23596,29 +24089,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group__4__Impl"
-    // InternalQuCircuit.g:7788:1: rule__EDoubleObject__Group__4__Impl : ( ( rule__EDoubleObject__Group_4__0 )? ) ;
+    // InternalQuCircuit.g:7948:1: rule__EDoubleObject__Group__4__Impl : ( ( rule__EDoubleObject__Group_4__0 )? ) ;
     public final void rule__EDoubleObject__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7792:1: ( ( ( rule__EDoubleObject__Group_4__0 )? ) )
-            // InternalQuCircuit.g:7793:1: ( ( rule__EDoubleObject__Group_4__0 )? )
+            // InternalQuCircuit.g:7952:1: ( ( ( rule__EDoubleObject__Group_4__0 )? ) )
+            // InternalQuCircuit.g:7953:1: ( ( rule__EDoubleObject__Group_4__0 )? )
             {
-            // InternalQuCircuit.g:7793:1: ( ( rule__EDoubleObject__Group_4__0 )? )
-            // InternalQuCircuit.g:7794:2: ( rule__EDoubleObject__Group_4__0 )?
+            // InternalQuCircuit.g:7953:1: ( ( rule__EDoubleObject__Group_4__0 )? )
+            // InternalQuCircuit.g:7954:2: ( rule__EDoubleObject__Group_4__0 )?
             {
              before(grammarAccess.getEDoubleObjectAccess().getGroup_4()); 
-            // InternalQuCircuit.g:7795:2: ( rule__EDoubleObject__Group_4__0 )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // InternalQuCircuit.g:7955:2: ( rule__EDoubleObject__Group_4__0 )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( ((LA59_0>=11 && LA59_0<=12)) ) {
-                alt59=1;
+            if ( ((LA61_0>=11 && LA61_0<=12)) ) {
+                alt61=1;
             }
-            switch (alt59) {
+            switch (alt61) {
                 case 1 :
-                    // InternalQuCircuit.g:7795:3: rule__EDoubleObject__Group_4__0
+                    // InternalQuCircuit.g:7955:3: rule__EDoubleObject__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__EDoubleObject__Group_4__0();
@@ -23654,14 +24147,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group_4__0"
-    // InternalQuCircuit.g:7804:1: rule__EDoubleObject__Group_4__0 : rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1 ;
+    // InternalQuCircuit.g:7964:1: rule__EDoubleObject__Group_4__0 : rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1 ;
     public final void rule__EDoubleObject__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7808:1: ( rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1 )
-            // InternalQuCircuit.g:7809:2: rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1
+            // InternalQuCircuit.g:7968:1: ( rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1 )
+            // InternalQuCircuit.g:7969:2: rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1
             {
             pushFollow(FOLLOW_45);
             rule__EDoubleObject__Group_4__0__Impl();
@@ -23692,21 +24185,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group_4__0__Impl"
-    // InternalQuCircuit.g:7816:1: rule__EDoubleObject__Group_4__0__Impl : ( ( rule__EDoubleObject__Alternatives_4_0 ) ) ;
+    // InternalQuCircuit.g:7976:1: rule__EDoubleObject__Group_4__0__Impl : ( ( rule__EDoubleObject__Alternatives_4_0 ) ) ;
     public final void rule__EDoubleObject__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7820:1: ( ( ( rule__EDoubleObject__Alternatives_4_0 ) ) )
-            // InternalQuCircuit.g:7821:1: ( ( rule__EDoubleObject__Alternatives_4_0 ) )
+            // InternalQuCircuit.g:7980:1: ( ( ( rule__EDoubleObject__Alternatives_4_0 ) ) )
+            // InternalQuCircuit.g:7981:1: ( ( rule__EDoubleObject__Alternatives_4_0 ) )
             {
-            // InternalQuCircuit.g:7821:1: ( ( rule__EDoubleObject__Alternatives_4_0 ) )
-            // InternalQuCircuit.g:7822:2: ( rule__EDoubleObject__Alternatives_4_0 )
+            // InternalQuCircuit.g:7981:1: ( ( rule__EDoubleObject__Alternatives_4_0 ) )
+            // InternalQuCircuit.g:7982:2: ( rule__EDoubleObject__Alternatives_4_0 )
             {
              before(grammarAccess.getEDoubleObjectAccess().getAlternatives_4_0()); 
-            // InternalQuCircuit.g:7823:2: ( rule__EDoubleObject__Alternatives_4_0 )
-            // InternalQuCircuit.g:7823:3: rule__EDoubleObject__Alternatives_4_0
+            // InternalQuCircuit.g:7983:2: ( rule__EDoubleObject__Alternatives_4_0 )
+            // InternalQuCircuit.g:7983:3: rule__EDoubleObject__Alternatives_4_0
             {
             pushFollow(FOLLOW_2);
             rule__EDoubleObject__Alternatives_4_0();
@@ -23739,14 +24232,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group_4__1"
-    // InternalQuCircuit.g:7831:1: rule__EDoubleObject__Group_4__1 : rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2 ;
+    // InternalQuCircuit.g:7991:1: rule__EDoubleObject__Group_4__1 : rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2 ;
     public final void rule__EDoubleObject__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7835:1: ( rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2 )
-            // InternalQuCircuit.g:7836:2: rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2
+            // InternalQuCircuit.g:7995:1: ( rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2 )
+            // InternalQuCircuit.g:7996:2: rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2
             {
             pushFollow(FOLLOW_45);
             rule__EDoubleObject__Group_4__1__Impl();
@@ -23777,31 +24270,31 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group_4__1__Impl"
-    // InternalQuCircuit.g:7843:1: rule__EDoubleObject__Group_4__1__Impl : ( ( '-' )? ) ;
+    // InternalQuCircuit.g:8003:1: rule__EDoubleObject__Group_4__1__Impl : ( ( '-' )? ) ;
     public final void rule__EDoubleObject__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7847:1: ( ( ( '-' )? ) )
-            // InternalQuCircuit.g:7848:1: ( ( '-' )? )
+            // InternalQuCircuit.g:8007:1: ( ( ( '-' )? ) )
+            // InternalQuCircuit.g:8008:1: ( ( '-' )? )
             {
-            // InternalQuCircuit.g:7848:1: ( ( '-' )? )
-            // InternalQuCircuit.g:7849:2: ( '-' )?
+            // InternalQuCircuit.g:8008:1: ( ( '-' )? )
+            // InternalQuCircuit.g:8009:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleObjectAccess().getHyphenMinusKeyword_4_1()); 
-            // InternalQuCircuit.g:7850:2: ( '-' )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // InternalQuCircuit.g:8010:2: ( '-' )?
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA60_0==55) ) {
-                alt60=1;
+            if ( (LA62_0==54) ) {
+                alt62=1;
             }
-            switch (alt60) {
+            switch (alt62) {
                 case 1 :
-                    // InternalQuCircuit.g:7850:3: '-'
+                    // InternalQuCircuit.g:8010:3: '-'
                     {
-                    match(input,55,FOLLOW_2); 
+                    match(input,54,FOLLOW_2); 
 
                     }
                     break;
@@ -23831,14 +24324,14 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group_4__2"
-    // InternalQuCircuit.g:7858:1: rule__EDoubleObject__Group_4__2 : rule__EDoubleObject__Group_4__2__Impl ;
+    // InternalQuCircuit.g:8018:1: rule__EDoubleObject__Group_4__2 : rule__EDoubleObject__Group_4__2__Impl ;
     public final void rule__EDoubleObject__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7862:1: ( rule__EDoubleObject__Group_4__2__Impl )
-            // InternalQuCircuit.g:7863:2: rule__EDoubleObject__Group_4__2__Impl
+            // InternalQuCircuit.g:8022:1: ( rule__EDoubleObject__Group_4__2__Impl )
+            // InternalQuCircuit.g:8023:2: rule__EDoubleObject__Group_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDoubleObject__Group_4__2__Impl();
@@ -23864,17 +24357,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__EDoubleObject__Group_4__2__Impl"
-    // InternalQuCircuit.g:7869:1: rule__EDoubleObject__Group_4__2__Impl : ( RULE_INT ) ;
+    // InternalQuCircuit.g:8029:1: rule__EDoubleObject__Group_4__2__Impl : ( RULE_INT ) ;
     public final void rule__EDoubleObject__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7873:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:7874:1: ( RULE_INT )
+            // InternalQuCircuit.g:8033:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8034:1: ( RULE_INT )
             {
-            // InternalQuCircuit.g:7874:1: ( RULE_INT )
-            // InternalQuCircuit.g:7875:2: RULE_INT
+            // InternalQuCircuit.g:8034:1: ( RULE_INT )
+            // InternalQuCircuit.g:8035:2: RULE_INT
             {
              before(grammarAccess.getEDoubleObjectAccess().getINTTerminalRuleCall_4_2()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -23901,17 +24394,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__NameAssignment_1"
-    // InternalQuCircuit.g:7885:1: rule__QuantumCircuit__NameAssignment_1 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8045:1: rule__QuantumCircuit__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__QuantumCircuit__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7889:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:7890:2: ( ruleEString )
+            // InternalQuCircuit.g:8049:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8050:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:7890:2: ( ruleEString )
-            // InternalQuCircuit.g:7891:3: ruleEString
+            // InternalQuCircuit.g:8050:2: ( ruleEString )
+            // InternalQuCircuit.g:8051:3: ruleEString
             {
              before(grammarAccess.getQuantumCircuitAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -23941,26 +24434,26 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__QuantumCircuit__NameAssignment_1"
 
 
-    // $ANTLR start "rule__QuantumCircuit__QuantumRegistersAssignment_3"
-    // InternalQuCircuit.g:7900:1: rule__QuantumCircuit__QuantumRegistersAssignment_3 : ( ruleQuantumRegister ) ;
-    public final void rule__QuantumCircuit__QuantumRegistersAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__QuantumCircuit__QuantumRegistersAssignment_2"
+    // InternalQuCircuit.g:8060:1: rule__QuantumCircuit__QuantumRegistersAssignment_2 : ( ruleSimplifiedQuantumRegister ) ;
+    public final void rule__QuantumCircuit__QuantumRegistersAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7904:1: ( ( ruleQuantumRegister ) )
-            // InternalQuCircuit.g:7905:2: ( ruleQuantumRegister )
+            // InternalQuCircuit.g:8064:1: ( ( ruleSimplifiedQuantumRegister ) )
+            // InternalQuCircuit.g:8065:2: ( ruleSimplifiedQuantumRegister )
             {
-            // InternalQuCircuit.g:7905:2: ( ruleQuantumRegister )
-            // InternalQuCircuit.g:7906:3: ruleQuantumRegister
+            // InternalQuCircuit.g:8065:2: ( ruleSimplifiedQuantumRegister )
+            // InternalQuCircuit.g:8066:3: ruleSimplifiedQuantumRegister
             {
-             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_3_0()); 
+             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersSimplifiedQuantumRegisterParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
-            ruleQuantumRegister();
+            ruleSimplifiedQuantumRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_3_0()); 
+             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersSimplifiedQuantumRegisterParserRuleCall_2_0()); 
 
             }
 
@@ -23979,29 +24472,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__QuantumCircuit__QuantumRegistersAssignment_3"
+    // $ANTLR end "rule__QuantumCircuit__QuantumRegistersAssignment_2"
 
 
-    // $ANTLR start "rule__QuantumCircuit__QuantumRegistersAssignment_4"
-    // InternalQuCircuit.g:7915:1: rule__QuantumCircuit__QuantumRegistersAssignment_4 : ( ruleQuantumRegister ) ;
-    public final void rule__QuantumCircuit__QuantumRegistersAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__QuantumCircuit__QuantumRegistersAssignment_4_0"
+    // InternalQuCircuit.g:8075:1: rule__QuantumCircuit__QuantumRegistersAssignment_4_0 : ( ruleQuantumRegister ) ;
+    public final void rule__QuantumCircuit__QuantumRegistersAssignment_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7919:1: ( ( ruleQuantumRegister ) )
-            // InternalQuCircuit.g:7920:2: ( ruleQuantumRegister )
+            // InternalQuCircuit.g:8079:1: ( ( ruleQuantumRegister ) )
+            // InternalQuCircuit.g:8080:2: ( ruleQuantumRegister )
             {
-            // InternalQuCircuit.g:7920:2: ( ruleQuantumRegister )
-            // InternalQuCircuit.g:7921:3: ruleQuantumRegister
+            // InternalQuCircuit.g:8080:2: ( ruleQuantumRegister )
+            // InternalQuCircuit.g:8081:3: ruleQuantumRegister
             {
-             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_4_0()); 
+             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_4_0_0()); 
             pushFollow(FOLLOW_2);
             ruleQuantumRegister();
 
             state._fsp--;
 
-             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_4_0()); 
+             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_4_0_0()); 
 
             }
 
@@ -24020,21 +24513,62 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__QuantumCircuit__QuantumRegistersAssignment_4"
+    // $ANTLR end "rule__QuantumCircuit__QuantumRegistersAssignment_4_0"
+
+
+    // $ANTLR start "rule__QuantumCircuit__QuantumRegistersAssignment_4_1"
+    // InternalQuCircuit.g:8090:1: rule__QuantumCircuit__QuantumRegistersAssignment_4_1 : ( ruleQuantumRegister ) ;
+    public final void rule__QuantumCircuit__QuantumRegistersAssignment_4_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:8094:1: ( ( ruleQuantumRegister ) )
+            // InternalQuCircuit.g:8095:2: ( ruleQuantumRegister )
+            {
+            // InternalQuCircuit.g:8095:2: ( ruleQuantumRegister )
+            // InternalQuCircuit.g:8096:3: ruleQuantumRegister
+            {
+             before(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_4_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleQuantumRegister();
+
+            state._fsp--;
+
+             after(grammarAccess.getQuantumCircuitAccess().getQuantumRegistersQuantumRegisterParserRuleCall_4_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__QuantumCircuit__QuantumRegistersAssignment_4_1"
 
 
     // $ANTLR start "rule__QuantumCircuit__ClassicRegistersAssignment_5"
-    // InternalQuCircuit.g:7930:1: rule__QuantumCircuit__ClassicRegistersAssignment_5 : ( ruleClassicRegister ) ;
+    // InternalQuCircuit.g:8105:1: rule__QuantumCircuit__ClassicRegistersAssignment_5 : ( ruleClassicRegister ) ;
     public final void rule__QuantumCircuit__ClassicRegistersAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7934:1: ( ( ruleClassicRegister ) )
-            // InternalQuCircuit.g:7935:2: ( ruleClassicRegister )
+            // InternalQuCircuit.g:8109:1: ( ( ruleClassicRegister ) )
+            // InternalQuCircuit.g:8110:2: ( ruleClassicRegister )
             {
-            // InternalQuCircuit.g:7935:2: ( ruleClassicRegister )
-            // InternalQuCircuit.g:7936:3: ruleClassicRegister
+            // InternalQuCircuit.g:8110:2: ( ruleClassicRegister )
+            // InternalQuCircuit.g:8111:3: ruleClassicRegister
             {
              before(grammarAccess.getQuantumCircuitAccess().getClassicRegistersClassicRegisterParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -24065,17 +24599,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__LayersAssignment_6"
-    // InternalQuCircuit.g:7945:1: rule__QuantumCircuit__LayersAssignment_6 : ( ruleLayer ) ;
+    // InternalQuCircuit.g:8120:1: rule__QuantumCircuit__LayersAssignment_6 : ( ruleLayer ) ;
     public final void rule__QuantumCircuit__LayersAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7949:1: ( ( ruleLayer ) )
-            // InternalQuCircuit.g:7950:2: ( ruleLayer )
+            // InternalQuCircuit.g:8124:1: ( ( ruleLayer ) )
+            // InternalQuCircuit.g:8125:2: ( ruleLayer )
             {
-            // InternalQuCircuit.g:7950:2: ( ruleLayer )
-            // InternalQuCircuit.g:7951:3: ruleLayer
+            // InternalQuCircuit.g:8125:2: ( ruleLayer )
+            // InternalQuCircuit.g:8126:3: ruleLayer
             {
              before(grammarAccess.getQuantumCircuitAccess().getLayersLayerParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -24106,17 +24640,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumCircuit__LayersAssignment_7"
-    // InternalQuCircuit.g:7960:1: rule__QuantumCircuit__LayersAssignment_7 : ( ruleLayer ) ;
+    // InternalQuCircuit.g:8135:1: rule__QuantumCircuit__LayersAssignment_7 : ( ruleLayer ) ;
     public final void rule__QuantumCircuit__LayersAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7964:1: ( ( ruleLayer ) )
-            // InternalQuCircuit.g:7965:2: ( ruleLayer )
+            // InternalQuCircuit.g:8139:1: ( ( ruleLayer ) )
+            // InternalQuCircuit.g:8140:2: ( ruleLayer )
             {
-            // InternalQuCircuit.g:7965:2: ( ruleLayer )
-            // InternalQuCircuit.g:7966:3: ruleLayer
+            // InternalQuCircuit.g:8140:2: ( ruleLayer )
+            // InternalQuCircuit.g:8141:3: ruleLayer
             {
              before(grammarAccess.getQuantumCircuitAccess().getLayersLayerParserRuleCall_7_0()); 
             pushFollow(FOLLOW_2);
@@ -24147,17 +24681,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__NameAssignment_2"
-    // InternalQuCircuit.g:7975:1: rule__QuantumRegister__NameAssignment_2 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8150:1: rule__QuantumRegister__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__QuantumRegister__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7979:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:7980:2: ( ruleEString )
+            // InternalQuCircuit.g:8154:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8155:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:7980:2: ( ruleEString )
-            // InternalQuCircuit.g:7981:3: ruleEString
+            // InternalQuCircuit.g:8155:2: ( ruleEString )
+            // InternalQuCircuit.g:8156:3: ruleEString
             {
              before(grammarAccess.getQuantumRegisterAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24188,17 +24722,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__QuantumRegister__NumberOfQubitsAssignment_4_1"
-    // InternalQuCircuit.g:7990:1: rule__QuantumRegister__NumberOfQubitsAssignment_4_1 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:8165:1: rule__QuantumRegister__NumberOfQubitsAssignment_4_1 : ( RULE_INT ) ;
     public final void rule__QuantumRegister__NumberOfQubitsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:7994:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:7995:2: ( RULE_INT )
+            // InternalQuCircuit.g:8169:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8170:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:7995:2: ( RULE_INT )
-            // InternalQuCircuit.g:7996:3: RULE_INT
+            // InternalQuCircuit.g:8170:2: ( RULE_INT )
+            // InternalQuCircuit.g:8171:3: RULE_INT
             {
              before(grammarAccess.getQuantumRegisterAccess().getNumberOfQubitsINTTerminalRuleCall_4_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -24224,18 +24758,55 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__QuantumRegister__NumberOfQubitsAssignment_4_1"
 
 
+    // $ANTLR start "rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2"
+    // InternalQuCircuit.g:8180:1: rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2 : ( RULE_INT ) ;
+    public final void rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalQuCircuit.g:8184:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8185:2: ( RULE_INT )
+            {
+            // InternalQuCircuit.g:8185:2: ( RULE_INT )
+            // InternalQuCircuit.g:8186:3: RULE_INT
+            {
+             before(grammarAccess.getSimplifiedQuantumRegisterAccess().getNumberOfQubitsINTTerminalRuleCall_2_0()); 
+            match(input,RULE_INT,FOLLOW_2); 
+             after(grammarAccess.getSimplifiedQuantumRegisterAccess().getNumberOfQubitsINTTerminalRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__SimplifiedQuantumRegister__NumberOfQubitsAssignment_2"
+
+
     // $ANTLR start "rule__ClassicRegister__NameAssignment_2"
-    // InternalQuCircuit.g:8005:1: rule__ClassicRegister__NameAssignment_2 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8195:1: rule__ClassicRegister__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__ClassicRegister__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8009:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8010:2: ( ruleEString )
+            // InternalQuCircuit.g:8199:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8200:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:8010:2: ( ruleEString )
-            // InternalQuCircuit.g:8011:3: ruleEString
+            // InternalQuCircuit.g:8200:2: ( ruleEString )
+            // InternalQuCircuit.g:8201:3: ruleEString
             {
              before(grammarAccess.getClassicRegisterAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24266,17 +24837,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ClassicRegister__NumberOfBitsAssignment_4_1"
-    // InternalQuCircuit.g:8020:1: rule__ClassicRegister__NumberOfBitsAssignment_4_1 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:8210:1: rule__ClassicRegister__NumberOfBitsAssignment_4_1 : ( RULE_INT ) ;
     public final void rule__ClassicRegister__NumberOfBitsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8024:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:8025:2: ( RULE_INT )
+            // InternalQuCircuit.g:8214:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8215:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:8025:2: ( RULE_INT )
-            // InternalQuCircuit.g:8026:3: RULE_INT
+            // InternalQuCircuit.g:8215:2: ( RULE_INT )
+            // InternalQuCircuit.g:8216:3: RULE_INT
             {
              before(grammarAccess.getClassicRegisterAccess().getNumberOfBitsINTTerminalRuleCall_4_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -24303,17 +24874,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__NameAssignment_2"
-    // InternalQuCircuit.g:8035:1: rule__Layer__NameAssignment_2 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8225:1: rule__Layer__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Layer__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8039:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8040:2: ( ruleEString )
+            // InternalQuCircuit.g:8229:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8230:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:8040:2: ( ruleEString )
-            // InternalQuCircuit.g:8041:3: ruleEString
+            // InternalQuCircuit.g:8230:2: ( ruleEString )
+            // InternalQuCircuit.g:8231:3: ruleEString
             {
              before(grammarAccess.getLayerAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24344,17 +24915,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__QuantumOperationsAssignment_4"
-    // InternalQuCircuit.g:8050:1: rule__Layer__QuantumOperationsAssignment_4 : ( ruleQuantumOperation ) ;
+    // InternalQuCircuit.g:8240:1: rule__Layer__QuantumOperationsAssignment_4 : ( ruleQuantumOperation ) ;
     public final void rule__Layer__QuantumOperationsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8054:1: ( ( ruleQuantumOperation ) )
-            // InternalQuCircuit.g:8055:2: ( ruleQuantumOperation )
+            // InternalQuCircuit.g:8244:1: ( ( ruleQuantumOperation ) )
+            // InternalQuCircuit.g:8245:2: ( ruleQuantumOperation )
             {
-            // InternalQuCircuit.g:8055:2: ( ruleQuantumOperation )
-            // InternalQuCircuit.g:8056:3: ruleQuantumOperation
+            // InternalQuCircuit.g:8245:2: ( ruleQuantumOperation )
+            // InternalQuCircuit.g:8246:3: ruleQuantumOperation
             {
              before(grammarAccess.getLayerAccess().getQuantumOperationsQuantumOperationParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -24385,17 +24956,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__QuantumOperationsAssignment_5_1"
-    // InternalQuCircuit.g:8065:1: rule__Layer__QuantumOperationsAssignment_5_1 : ( ruleQuantumOperation ) ;
+    // InternalQuCircuit.g:8255:1: rule__Layer__QuantumOperationsAssignment_5_1 : ( ruleQuantumOperation ) ;
     public final void rule__Layer__QuantumOperationsAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8069:1: ( ( ruleQuantumOperation ) )
-            // InternalQuCircuit.g:8070:2: ( ruleQuantumOperation )
+            // InternalQuCircuit.g:8259:1: ( ( ruleQuantumOperation ) )
+            // InternalQuCircuit.g:8260:2: ( ruleQuantumOperation )
             {
-            // InternalQuCircuit.g:8070:2: ( ruleQuantumOperation )
-            // InternalQuCircuit.g:8071:3: ruleQuantumOperation
+            // InternalQuCircuit.g:8260:2: ( ruleQuantumOperation )
+            // InternalQuCircuit.g:8261:3: ruleQuantumOperation
             {
              before(grammarAccess.getLayerAccess().getQuantumOperationsQuantumOperationParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24426,17 +24997,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__NameAssignment_1"
-    // InternalQuCircuit.g:8080:1: rule__StatePreparation__NameAssignment_1 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8270:1: rule__StatePreparation__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__StatePreparation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8084:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8085:2: ( ruleEString )
+            // InternalQuCircuit.g:8274:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8275:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:8085:2: ( ruleEString )
-            // InternalQuCircuit.g:8086:3: ruleEString
+            // InternalQuCircuit.g:8275:2: ( ruleEString )
+            // InternalQuCircuit.g:8276:3: ruleEString
             {
              before(grammarAccess.getStatePreparationAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24467,17 +25038,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__OperationsAssignment_4"
-    // InternalQuCircuit.g:8095:1: rule__StatePreparation__OperationsAssignment_4 : ( ruleOperation ) ;
+    // InternalQuCircuit.g:8285:1: rule__StatePreparation__OperationsAssignment_4 : ( ruleOperation ) ;
     public final void rule__StatePreparation__OperationsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8099:1: ( ( ruleOperation ) )
-            // InternalQuCircuit.g:8100:2: ( ruleOperation )
+            // InternalQuCircuit.g:8289:1: ( ( ruleOperation ) )
+            // InternalQuCircuit.g:8290:2: ( ruleOperation )
             {
-            // InternalQuCircuit.g:8100:2: ( ruleOperation )
-            // InternalQuCircuit.g:8101:3: ruleOperation
+            // InternalQuCircuit.g:8290:2: ( ruleOperation )
+            // InternalQuCircuit.g:8291:3: ruleOperation
             {
              before(grammarAccess.getStatePreparationAccess().getOperationsOperationParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -24508,17 +25079,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__OperationsAssignment_5_1"
-    // InternalQuCircuit.g:8110:1: rule__StatePreparation__OperationsAssignment_5_1 : ( ruleOperation ) ;
+    // InternalQuCircuit.g:8300:1: rule__StatePreparation__OperationsAssignment_5_1 : ( ruleOperation ) ;
     public final void rule__StatePreparation__OperationsAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8114:1: ( ( ruleOperation ) )
-            // InternalQuCircuit.g:8115:2: ( ruleOperation )
+            // InternalQuCircuit.g:8304:1: ( ( ruleOperation ) )
+            // InternalQuCircuit.g:8305:2: ( ruleOperation )
             {
-            // InternalQuCircuit.g:8115:2: ( ruleOperation )
-            // InternalQuCircuit.g:8116:3: ruleOperation
+            // InternalQuCircuit.g:8305:2: ( ruleOperation )
+            // InternalQuCircuit.g:8306:3: ruleOperation
             {
              before(grammarAccess.getStatePreparationAccess().getOperationsOperationParserRuleCall_5_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24549,17 +25120,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__TargetQubitsAssignment_8"
-    // InternalQuCircuit.g:8125:1: rule__StatePreparation__TargetQubitsAssignment_8 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8315:1: rule__StatePreparation__TargetQubitsAssignment_8 : ( ruleSelector ) ;
     public final void rule__StatePreparation__TargetQubitsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8129:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8130:2: ( ruleSelector )
+            // InternalQuCircuit.g:8319:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8320:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8130:2: ( ruleSelector )
-            // InternalQuCircuit.g:8131:3: ruleSelector
+            // InternalQuCircuit.g:8320:2: ( ruleSelector )
+            // InternalQuCircuit.g:8321:3: ruleSelector
             {
              before(grammarAccess.getStatePreparationAccess().getTargetQubitsSelectorParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
@@ -24590,17 +25161,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__StatePreparation__TargetQubitsAssignment_9_1"
-    // InternalQuCircuit.g:8140:1: rule__StatePreparation__TargetQubitsAssignment_9_1 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8330:1: rule__StatePreparation__TargetQubitsAssignment_9_1 : ( ruleSelector ) ;
     public final void rule__StatePreparation__TargetQubitsAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8144:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8145:2: ( ruleSelector )
+            // InternalQuCircuit.g:8334:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8335:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8145:2: ( ruleSelector )
-            // InternalQuCircuit.g:8146:3: ruleSelector
+            // InternalQuCircuit.g:8335:2: ( ruleSelector )
+            // InternalQuCircuit.g:8336:3: ruleSelector
             {
              before(grammarAccess.getStatePreparationAccess().getTargetQubitsSelectorParserRuleCall_9_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24631,24 +25202,24 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__InverseFormAssignment_1"
-    // InternalQuCircuit.g:8155:1: rule__ElementaryQuantumGate__InverseFormAssignment_1 : ( ( 'inverseForm' ) ) ;
+    // InternalQuCircuit.g:8345:1: rule__ElementaryQuantumGate__InverseFormAssignment_1 : ( ( 'inverseForm' ) ) ;
     public final void rule__ElementaryQuantumGate__InverseFormAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8159:1: ( ( ( 'inverseForm' ) ) )
-            // InternalQuCircuit.g:8160:2: ( ( 'inverseForm' ) )
+            // InternalQuCircuit.g:8349:1: ( ( ( 'inverseForm' ) ) )
+            // InternalQuCircuit.g:8350:2: ( ( 'inverseForm' ) )
             {
-            // InternalQuCircuit.g:8160:2: ( ( 'inverseForm' ) )
-            // InternalQuCircuit.g:8161:3: ( 'inverseForm' )
-            {
-             before(grammarAccess.getElementaryQuantumGateAccess().getInverseFormInverseFormKeyword_1_0()); 
-            // InternalQuCircuit.g:8162:3: ( 'inverseForm' )
-            // InternalQuCircuit.g:8163:4: 'inverseForm'
+            // InternalQuCircuit.g:8350:2: ( ( 'inverseForm' ) )
+            // InternalQuCircuit.g:8351:3: ( 'inverseForm' )
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getInverseFormInverseFormKeyword_1_0()); 
-            match(input,57,FOLLOW_2); 
+            // InternalQuCircuit.g:8352:3: ( 'inverseForm' )
+            // InternalQuCircuit.g:8353:4: 'inverseForm'
+            {
+             before(grammarAccess.getElementaryQuantumGateAccess().getInverseFormInverseFormKeyword_1_0()); 
+            match(input,56,FOLLOW_2); 
              after(grammarAccess.getElementaryQuantumGateAccess().getInverseFormInverseFormKeyword_1_0()); 
 
             }
@@ -24676,17 +25247,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__NameAssignment_2"
-    // InternalQuCircuit.g:8174:1: rule__ElementaryQuantumGate__NameAssignment_2 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8364:1: rule__ElementaryQuantumGate__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__ElementaryQuantumGate__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8178:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8179:2: ( ruleEString )
+            // InternalQuCircuit.g:8368:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8369:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:8179:2: ( ruleEString )
-            // InternalQuCircuit.g:8180:3: ruleEString
+            // InternalQuCircuit.g:8369:2: ( ruleEString )
+            // InternalQuCircuit.g:8370:3: ruleEString
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24717,17 +25288,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__OperationsAssignment_4_1"
-    // InternalQuCircuit.g:8189:1: rule__ElementaryQuantumGate__OperationsAssignment_4_1 : ( ruleOperation ) ;
+    // InternalQuCircuit.g:8379:1: rule__ElementaryQuantumGate__OperationsAssignment_4_1 : ( ruleOperation ) ;
     public final void rule__ElementaryQuantumGate__OperationsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8193:1: ( ( ruleOperation ) )
-            // InternalQuCircuit.g:8194:2: ( ruleOperation )
+            // InternalQuCircuit.g:8383:1: ( ( ruleOperation ) )
+            // InternalQuCircuit.g:8384:2: ( ruleOperation )
             {
-            // InternalQuCircuit.g:8194:2: ( ruleOperation )
-            // InternalQuCircuit.g:8195:3: ruleOperation
+            // InternalQuCircuit.g:8384:2: ( ruleOperation )
+            // InternalQuCircuit.g:8385:3: ruleOperation
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getOperationsOperationParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24758,17 +25329,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__TargetQubitsAssignment_8"
-    // InternalQuCircuit.g:8204:1: rule__ElementaryQuantumGate__TargetQubitsAssignment_8 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8394:1: rule__ElementaryQuantumGate__TargetQubitsAssignment_8 : ( ruleSelector ) ;
     public final void rule__ElementaryQuantumGate__TargetQubitsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8208:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8209:2: ( ruleSelector )
+            // InternalQuCircuit.g:8398:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8399:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8209:2: ( ruleSelector )
-            // InternalQuCircuit.g:8210:3: ruleSelector
+            // InternalQuCircuit.g:8399:2: ( ruleSelector )
+            // InternalQuCircuit.g:8400:3: ruleSelector
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
@@ -24799,17 +25370,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2"
-    // InternalQuCircuit.g:8219:1: rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8409:1: rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2 : ( ruleSelector ) ;
     public final void rule__ElementaryQuantumGate__TargetQubitsAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8223:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8224:2: ( ruleSelector )
+            // InternalQuCircuit.g:8413:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8414:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8224:2: ( ruleSelector )
-            // InternalQuCircuit.g:8225:3: ruleSelector
+            // InternalQuCircuit.g:8414:2: ( ruleSelector )
+            // InternalQuCircuit.g:8415:3: ruleSelector
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_10_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24840,17 +25411,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2"
-    // InternalQuCircuit.g:8234:1: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8424:1: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2 : ( ruleSelector ) ;
     public final void rule__ElementaryQuantumGate__ControlQubitsAssignment_12_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8238:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8239:2: ( ruleSelector )
+            // InternalQuCircuit.g:8428:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8429:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8239:2: ( ruleSelector )
-            // InternalQuCircuit.g:8240:3: ruleSelector
+            // InternalQuCircuit.g:8429:2: ( ruleSelector )
+            // InternalQuCircuit.g:8430:3: ruleSelector
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_2_0()); 
             pushFollow(FOLLOW_2);
@@ -24881,17 +25452,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1"
-    // InternalQuCircuit.g:8249:1: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8439:1: rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1 : ( ruleSelector ) ;
     public final void rule__ElementaryQuantumGate__ControlQubitsAssignment_12_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8253:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8254:2: ( ruleSelector )
+            // InternalQuCircuit.g:8443:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8444:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8254:2: ( ruleSelector )
-            // InternalQuCircuit.g:8255:3: ruleSelector
+            // InternalQuCircuit.g:8444:2: ( ruleSelector )
+            // InternalQuCircuit.g:8445:3: ruleSelector
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24922,17 +25493,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__AngleParameterAssignment_13_1"
-    // InternalQuCircuit.g:8264:1: rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 : ( ruleAngleParameter ) ;
+    // InternalQuCircuit.g:8454:1: rule__ElementaryQuantumGate__AngleParameterAssignment_13_1 : ( ruleAngleParameter ) ;
     public final void rule__ElementaryQuantumGate__AngleParameterAssignment_13_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8268:1: ( ( ruleAngleParameter ) )
-            // InternalQuCircuit.g:8269:2: ( ruleAngleParameter )
+            // InternalQuCircuit.g:8458:1: ( ( ruleAngleParameter ) )
+            // InternalQuCircuit.g:8459:2: ( ruleAngleParameter )
             {
-            // InternalQuCircuit.g:8269:2: ( ruleAngleParameter )
-            // InternalQuCircuit.g:8270:3: ruleAngleParameter
+            // InternalQuCircuit.g:8459:2: ( ruleAngleParameter )
+            // InternalQuCircuit.g:8460:3: ruleAngleParameter
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getAngleParameterAngleParameterParserRuleCall_13_1_0()); 
             pushFollow(FOLLOW_2);
@@ -24962,26 +25533,26 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__ElementaryQuantumGate__AngleParameterAssignment_13_1"
 
 
-    // $ANTLR start "rule__AngleParameter__ThetaAssignment_3_1"
-    // InternalQuCircuit.g:8279:1: rule__AngleParameter__ThetaAssignment_3_1 : ( ruleEDoubleObject ) ;
-    public final void rule__AngleParameter__ThetaAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__AngleParameter__ThetaAssignment_2_1"
+    // InternalQuCircuit.g:8469:1: rule__AngleParameter__ThetaAssignment_2_1 : ( ruleEDoubleObject ) ;
+    public final void rule__AngleParameter__ThetaAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8283:1: ( ( ruleEDoubleObject ) )
-            // InternalQuCircuit.g:8284:2: ( ruleEDoubleObject )
+            // InternalQuCircuit.g:8473:1: ( ( ruleEDoubleObject ) )
+            // InternalQuCircuit.g:8474:2: ( ruleEDoubleObject )
             {
-            // InternalQuCircuit.g:8284:2: ( ruleEDoubleObject )
-            // InternalQuCircuit.g:8285:3: ruleEDoubleObject
+            // InternalQuCircuit.g:8474:2: ( ruleEDoubleObject )
+            // InternalQuCircuit.g:8475:3: ruleEDoubleObject
             {
-             before(grammarAccess.getAngleParameterAccess().getThetaEDoubleObjectParserRuleCall_3_1_0()); 
+             before(grammarAccess.getAngleParameterAccess().getThetaEDoubleObjectParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
             ruleEDoubleObject();
 
             state._fsp--;
 
-             after(grammarAccess.getAngleParameterAccess().getThetaEDoubleObjectParserRuleCall_3_1_0()); 
+             after(grammarAccess.getAngleParameterAccess().getThetaEDoubleObjectParserRuleCall_2_1_0()); 
 
             }
 
@@ -25000,29 +25571,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__AngleParameter__ThetaAssignment_3_1"
+    // $ANTLR end "rule__AngleParameter__ThetaAssignment_2_1"
 
 
-    // $ANTLR start "rule__AngleParameter__PhiAssignment_4_1"
-    // InternalQuCircuit.g:8294:1: rule__AngleParameter__PhiAssignment_4_1 : ( ruleEDoubleObject ) ;
-    public final void rule__AngleParameter__PhiAssignment_4_1() throws RecognitionException {
+    // $ANTLR start "rule__AngleParameter__PhiAssignment_3_1"
+    // InternalQuCircuit.g:8484:1: rule__AngleParameter__PhiAssignment_3_1 : ( ruleEDoubleObject ) ;
+    public final void rule__AngleParameter__PhiAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8298:1: ( ( ruleEDoubleObject ) )
-            // InternalQuCircuit.g:8299:2: ( ruleEDoubleObject )
+            // InternalQuCircuit.g:8488:1: ( ( ruleEDoubleObject ) )
+            // InternalQuCircuit.g:8489:2: ( ruleEDoubleObject )
             {
-            // InternalQuCircuit.g:8299:2: ( ruleEDoubleObject )
-            // InternalQuCircuit.g:8300:3: ruleEDoubleObject
+            // InternalQuCircuit.g:8489:2: ( ruleEDoubleObject )
+            // InternalQuCircuit.g:8490:3: ruleEDoubleObject
             {
-             before(grammarAccess.getAngleParameterAccess().getPhiEDoubleObjectParserRuleCall_4_1_0()); 
+             before(grammarAccess.getAngleParameterAccess().getPhiEDoubleObjectParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleEDoubleObject();
 
             state._fsp--;
 
-             after(grammarAccess.getAngleParameterAccess().getPhiEDoubleObjectParserRuleCall_4_1_0()); 
+             after(grammarAccess.getAngleParameterAccess().getPhiEDoubleObjectParserRuleCall_3_1_0()); 
 
             }
 
@@ -25041,29 +25612,29 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__AngleParameter__PhiAssignment_4_1"
+    // $ANTLR end "rule__AngleParameter__PhiAssignment_3_1"
 
 
-    // $ANTLR start "rule__AngleParameter__LambdaAssignment_5_1"
-    // InternalQuCircuit.g:8309:1: rule__AngleParameter__LambdaAssignment_5_1 : ( ruleEDoubleObject ) ;
-    public final void rule__AngleParameter__LambdaAssignment_5_1() throws RecognitionException {
+    // $ANTLR start "rule__AngleParameter__LambdaAssignment_4_1"
+    // InternalQuCircuit.g:8499:1: rule__AngleParameter__LambdaAssignment_4_1 : ( ruleEDoubleObject ) ;
+    public final void rule__AngleParameter__LambdaAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8313:1: ( ( ruleEDoubleObject ) )
-            // InternalQuCircuit.g:8314:2: ( ruleEDoubleObject )
+            // InternalQuCircuit.g:8503:1: ( ( ruleEDoubleObject ) )
+            // InternalQuCircuit.g:8504:2: ( ruleEDoubleObject )
             {
-            // InternalQuCircuit.g:8314:2: ( ruleEDoubleObject )
-            // InternalQuCircuit.g:8315:3: ruleEDoubleObject
+            // InternalQuCircuit.g:8504:2: ( ruleEDoubleObject )
+            // InternalQuCircuit.g:8505:3: ruleEDoubleObject
             {
-             before(grammarAccess.getAngleParameterAccess().getLambdaEDoubleObjectParserRuleCall_5_1_0()); 
+             before(grammarAccess.getAngleParameterAccess().getLambdaEDoubleObjectParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
             ruleEDoubleObject();
 
             state._fsp--;
 
-             after(grammarAccess.getAngleParameterAccess().getLambdaEDoubleObjectParserRuleCall_5_1_0()); 
+             after(grammarAccess.getAngleParameterAccess().getLambdaEDoubleObjectParserRuleCall_4_1_0()); 
 
             }
 
@@ -25082,21 +25653,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__AngleParameter__LambdaAssignment_5_1"
+    // $ANTLR end "rule__AngleParameter__LambdaAssignment_4_1"
 
 
     // $ANTLR start "rule__Measurement__NameAssignment_1"
-    // InternalQuCircuit.g:8324:1: rule__Measurement__NameAssignment_1 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8514:1: rule__Measurement__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Measurement__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8328:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8329:2: ( ruleEString )
+            // InternalQuCircuit.g:8518:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8519:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:8329:2: ( ruleEString )
-            // InternalQuCircuit.g:8330:3: ruleEString
+            // InternalQuCircuit.g:8519:2: ( ruleEString )
+            // InternalQuCircuit.g:8520:3: ruleEString
             {
              before(grammarAccess.getMeasurementAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25127,17 +25698,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__OperationsAssignment_3_1"
-    // InternalQuCircuit.g:8339:1: rule__Measurement__OperationsAssignment_3_1 : ( ruleOperation ) ;
+    // InternalQuCircuit.g:8529:1: rule__Measurement__OperationsAssignment_3_1 : ( ruleOperation ) ;
     public final void rule__Measurement__OperationsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8343:1: ( ( ruleOperation ) )
-            // InternalQuCircuit.g:8344:2: ( ruleOperation )
+            // InternalQuCircuit.g:8533:1: ( ( ruleOperation ) )
+            // InternalQuCircuit.g:8534:2: ( ruleOperation )
             {
-            // InternalQuCircuit.g:8344:2: ( ruleOperation )
-            // InternalQuCircuit.g:8345:3: ruleOperation
+            // InternalQuCircuit.g:8534:2: ( ruleOperation )
+            // InternalQuCircuit.g:8535:3: ruleOperation
             {
              before(grammarAccess.getMeasurementAccess().getOperationsOperationParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25168,17 +25739,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__TargetQubitsAssignment_7"
-    // InternalQuCircuit.g:8354:1: rule__Measurement__TargetQubitsAssignment_7 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8544:1: rule__Measurement__TargetQubitsAssignment_7 : ( ruleSelector ) ;
     public final void rule__Measurement__TargetQubitsAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8358:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8359:2: ( ruleSelector )
+            // InternalQuCircuit.g:8548:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8549:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8359:2: ( ruleSelector )
-            // InternalQuCircuit.g:8360:3: ruleSelector
+            // InternalQuCircuit.g:8549:2: ( ruleSelector )
+            // InternalQuCircuit.g:8550:3: ruleSelector
             {
              before(grammarAccess.getMeasurementAccess().getTargetQubitsSelectorParserRuleCall_7_0()); 
             pushFollow(FOLLOW_2);
@@ -25209,17 +25780,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__TargetQubitsAssignment_9_2"
-    // InternalQuCircuit.g:8369:1: rule__Measurement__TargetQubitsAssignment_9_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8559:1: rule__Measurement__TargetQubitsAssignment_9_2 : ( ruleSelector ) ;
     public final void rule__Measurement__TargetQubitsAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8373:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8374:2: ( ruleSelector )
+            // InternalQuCircuit.g:8563:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8564:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8374:2: ( ruleSelector )
-            // InternalQuCircuit.g:8375:3: ruleSelector
+            // InternalQuCircuit.g:8564:2: ( ruleSelector )
+            // InternalQuCircuit.g:8565:3: ruleSelector
             {
              before(grammarAccess.getMeasurementAccess().getTargetQubitsSelectorParserRuleCall_9_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25250,17 +25821,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__ClassicBitsAssignment_14"
-    // InternalQuCircuit.g:8384:1: rule__Measurement__ClassicBitsAssignment_14 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8574:1: rule__Measurement__ClassicBitsAssignment_14 : ( ruleSelector ) ;
     public final void rule__Measurement__ClassicBitsAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8388:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8389:2: ( ruleSelector )
+            // InternalQuCircuit.g:8578:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8579:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8389:2: ( ruleSelector )
-            // InternalQuCircuit.g:8390:3: ruleSelector
+            // InternalQuCircuit.g:8579:2: ( ruleSelector )
+            // InternalQuCircuit.g:8580:3: ruleSelector
             {
              before(grammarAccess.getMeasurementAccess().getClassicBitsSelectorParserRuleCall_14_0()); 
             pushFollow(FOLLOW_2);
@@ -25291,17 +25862,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__ClassicBitsAssignment_16_2"
-    // InternalQuCircuit.g:8399:1: rule__Measurement__ClassicBitsAssignment_16_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8589:1: rule__Measurement__ClassicBitsAssignment_16_2 : ( ruleSelector ) ;
     public final void rule__Measurement__ClassicBitsAssignment_16_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8403:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8404:2: ( ruleSelector )
+            // InternalQuCircuit.g:8593:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8594:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8404:2: ( ruleSelector )
-            // InternalQuCircuit.g:8405:3: ruleSelector
+            // InternalQuCircuit.g:8594:2: ( ruleSelector )
+            // InternalQuCircuit.g:8595:3: ruleSelector
             {
              before(grammarAccess.getMeasurementAccess().getClassicBitsSelectorParserRuleCall_16_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25332,17 +25903,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__NameAssignment_1"
-    // InternalQuCircuit.g:8414:1: rule__CompositeQuantumGate__NameAssignment_1 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8604:1: rule__CompositeQuantumGate__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__CompositeQuantumGate__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8418:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8419:2: ( ruleEString )
+            // InternalQuCircuit.g:8608:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8609:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:8419:2: ( ruleEString )
-            // InternalQuCircuit.g:8420:3: ruleEString
+            // InternalQuCircuit.g:8609:2: ( ruleEString )
+            // InternalQuCircuit.g:8610:3: ruleEString
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25373,24 +25944,24 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__InverseFormAssignment_3"
-    // InternalQuCircuit.g:8429:1: rule__CompositeQuantumGate__InverseFormAssignment_3 : ( ( 'inverseForm' ) ) ;
+    // InternalQuCircuit.g:8619:1: rule__CompositeQuantumGate__InverseFormAssignment_3 : ( ( 'inverseForm' ) ) ;
     public final void rule__CompositeQuantumGate__InverseFormAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8433:1: ( ( ( 'inverseForm' ) ) )
-            // InternalQuCircuit.g:8434:2: ( ( 'inverseForm' ) )
+            // InternalQuCircuit.g:8623:1: ( ( ( 'inverseForm' ) ) )
+            // InternalQuCircuit.g:8624:2: ( ( 'inverseForm' ) )
             {
-            // InternalQuCircuit.g:8434:2: ( ( 'inverseForm' ) )
-            // InternalQuCircuit.g:8435:3: ( 'inverseForm' )
-            {
-             before(grammarAccess.getCompositeQuantumGateAccess().getInverseFormInverseFormKeyword_3_0()); 
-            // InternalQuCircuit.g:8436:3: ( 'inverseForm' )
-            // InternalQuCircuit.g:8437:4: 'inverseForm'
+            // InternalQuCircuit.g:8624:2: ( ( 'inverseForm' ) )
+            // InternalQuCircuit.g:8625:3: ( 'inverseForm' )
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getInverseFormInverseFormKeyword_3_0()); 
-            match(input,57,FOLLOW_2); 
+            // InternalQuCircuit.g:8626:3: ( 'inverseForm' )
+            // InternalQuCircuit.g:8627:4: 'inverseForm'
+            {
+             before(grammarAccess.getCompositeQuantumGateAccess().getInverseFormInverseFormKeyword_3_0()); 
+            match(input,56,FOLLOW_2); 
              after(grammarAccess.getCompositeQuantumGateAccess().getInverseFormInverseFormKeyword_3_0()); 
 
             }
@@ -25418,17 +25989,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__OperationsAssignment_4_1"
-    // InternalQuCircuit.g:8448:1: rule__CompositeQuantumGate__OperationsAssignment_4_1 : ( ruleOperation ) ;
+    // InternalQuCircuit.g:8638:1: rule__CompositeQuantumGate__OperationsAssignment_4_1 : ( ruleOperation ) ;
     public final void rule__CompositeQuantumGate__OperationsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8452:1: ( ( ruleOperation ) )
-            // InternalQuCircuit.g:8453:2: ( ruleOperation )
+            // InternalQuCircuit.g:8642:1: ( ( ruleOperation ) )
+            // InternalQuCircuit.g:8643:2: ( ruleOperation )
             {
-            // InternalQuCircuit.g:8453:2: ( ruleOperation )
-            // InternalQuCircuit.g:8454:3: ruleOperation
+            // InternalQuCircuit.g:8643:2: ( ruleOperation )
+            // InternalQuCircuit.g:8644:3: ruleOperation
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getOperationsOperationParserRuleCall_4_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25459,17 +26030,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__TargetQubitsAssignment_8"
-    // InternalQuCircuit.g:8463:1: rule__CompositeQuantumGate__TargetQubitsAssignment_8 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8653:1: rule__CompositeQuantumGate__TargetQubitsAssignment_8 : ( ruleSelector ) ;
     public final void rule__CompositeQuantumGate__TargetQubitsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8467:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8468:2: ( ruleSelector )
+            // InternalQuCircuit.g:8657:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8658:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8468:2: ( ruleSelector )
-            // InternalQuCircuit.g:8469:3: ruleSelector
+            // InternalQuCircuit.g:8658:2: ( ruleSelector )
+            // InternalQuCircuit.g:8659:3: ruleSelector
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
@@ -25500,17 +26071,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__TargetQubitsAssignment_10_2"
-    // InternalQuCircuit.g:8478:1: rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8668:1: rule__CompositeQuantumGate__TargetQubitsAssignment_10_2 : ( ruleSelector ) ;
     public final void rule__CompositeQuantumGate__TargetQubitsAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8482:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8483:2: ( ruleSelector )
+            // InternalQuCircuit.g:8672:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8673:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8483:2: ( ruleSelector )
-            // InternalQuCircuit.g:8484:3: ruleSelector
+            // InternalQuCircuit.g:8673:2: ( ruleSelector )
+            // InternalQuCircuit.g:8674:3: ruleSelector
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getTargetQubitsSelectorParserRuleCall_10_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25541,17 +26112,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__ControlQubitsAssignment_12_2"
-    // InternalQuCircuit.g:8493:1: rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8683:1: rule__CompositeQuantumGate__ControlQubitsAssignment_12_2 : ( ruleSelector ) ;
     public final void rule__CompositeQuantumGate__ControlQubitsAssignment_12_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8497:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8498:2: ( ruleSelector )
+            // InternalQuCircuit.g:8687:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8688:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8498:2: ( ruleSelector )
-            // InternalQuCircuit.g:8499:3: ruleSelector
+            // InternalQuCircuit.g:8688:2: ( ruleSelector )
+            // InternalQuCircuit.g:8689:3: ruleSelector
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25582,17 +26153,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1"
-    // InternalQuCircuit.g:8508:1: rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8698:1: rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1 : ( ruleSelector ) ;
     public final void rule__CompositeQuantumGate__ControlQubitsAssignment_12_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8512:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8513:2: ( ruleSelector )
+            // InternalQuCircuit.g:8702:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8703:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8513:2: ( ruleSelector )
-            // InternalQuCircuit.g:8514:3: ruleSelector
+            // InternalQuCircuit.g:8703:2: ( ruleSelector )
+            // InternalQuCircuit.g:8704:3: ruleSelector
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getControlQubitsSelectorParserRuleCall_12_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25623,17 +26194,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__NameAssignment_1"
-    // InternalQuCircuit.g:8523:1: rule__Loop__NameAssignment_1 : ( ruleEString ) ;
+    // InternalQuCircuit.g:8713:1: rule__Loop__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Loop__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8527:1: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8528:2: ( ruleEString )
+            // InternalQuCircuit.g:8717:1: ( ( ruleEString ) )
+            // InternalQuCircuit.g:8718:2: ( ruleEString )
             {
-            // InternalQuCircuit.g:8528:2: ( ruleEString )
-            // InternalQuCircuit.g:8529:3: ruleEString
+            // InternalQuCircuit.g:8718:2: ( ruleEString )
+            // InternalQuCircuit.g:8719:3: ruleEString
             {
              before(grammarAccess.getLoopAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25664,24 +26235,24 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__InverseFormAssignment_3"
-    // InternalQuCircuit.g:8538:1: rule__Loop__InverseFormAssignment_3 : ( ( 'inverseForm' ) ) ;
+    // InternalQuCircuit.g:8728:1: rule__Loop__InverseFormAssignment_3 : ( ( 'inverseForm' ) ) ;
     public final void rule__Loop__InverseFormAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8542:1: ( ( ( 'inverseForm' ) ) )
-            // InternalQuCircuit.g:8543:2: ( ( 'inverseForm' ) )
+            // InternalQuCircuit.g:8732:1: ( ( ( 'inverseForm' ) ) )
+            // InternalQuCircuit.g:8733:2: ( ( 'inverseForm' ) )
             {
-            // InternalQuCircuit.g:8543:2: ( ( 'inverseForm' ) )
-            // InternalQuCircuit.g:8544:3: ( 'inverseForm' )
-            {
-             before(grammarAccess.getLoopAccess().getInverseFormInverseFormKeyword_3_0()); 
-            // InternalQuCircuit.g:8545:3: ( 'inverseForm' )
-            // InternalQuCircuit.g:8546:4: 'inverseForm'
+            // InternalQuCircuit.g:8733:2: ( ( 'inverseForm' ) )
+            // InternalQuCircuit.g:8734:3: ( 'inverseForm' )
             {
              before(grammarAccess.getLoopAccess().getInverseFormInverseFormKeyword_3_0()); 
-            match(input,57,FOLLOW_2); 
+            // InternalQuCircuit.g:8735:3: ( 'inverseForm' )
+            // InternalQuCircuit.g:8736:4: 'inverseForm'
+            {
+             before(grammarAccess.getLoopAccess().getInverseFormInverseFormKeyword_3_0()); 
+            match(input,56,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getInverseFormInverseFormKeyword_3_0()); 
 
             }
@@ -25709,24 +26280,24 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__IncrementBlockTargetQubitsAssignment_4"
-    // InternalQuCircuit.g:8557:1: rule__Loop__IncrementBlockTargetQubitsAssignment_4 : ( ( 'incrementBlockTargetQubits' ) ) ;
+    // InternalQuCircuit.g:8747:1: rule__Loop__IncrementBlockTargetQubitsAssignment_4 : ( ( 'incrementBlockTargetQubits' ) ) ;
     public final void rule__Loop__IncrementBlockTargetQubitsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8561:1: ( ( ( 'incrementBlockTargetQubits' ) ) )
-            // InternalQuCircuit.g:8562:2: ( ( 'incrementBlockTargetQubits' ) )
+            // InternalQuCircuit.g:8751:1: ( ( ( 'incrementBlockTargetQubits' ) ) )
+            // InternalQuCircuit.g:8752:2: ( ( 'incrementBlockTargetQubits' ) )
             {
-            // InternalQuCircuit.g:8562:2: ( ( 'incrementBlockTargetQubits' ) )
-            // InternalQuCircuit.g:8563:3: ( 'incrementBlockTargetQubits' )
-            {
-             before(grammarAccess.getLoopAccess().getIncrementBlockTargetQubitsIncrementBlockTargetQubitsKeyword_4_0()); 
-            // InternalQuCircuit.g:8564:3: ( 'incrementBlockTargetQubits' )
-            // InternalQuCircuit.g:8565:4: 'incrementBlockTargetQubits'
+            // InternalQuCircuit.g:8752:2: ( ( 'incrementBlockTargetQubits' ) )
+            // InternalQuCircuit.g:8753:3: ( 'incrementBlockTargetQubits' )
             {
              before(grammarAccess.getLoopAccess().getIncrementBlockTargetQubitsIncrementBlockTargetQubitsKeyword_4_0()); 
-            match(input,58,FOLLOW_2); 
+            // InternalQuCircuit.g:8754:3: ( 'incrementBlockTargetQubits' )
+            // InternalQuCircuit.g:8755:4: 'incrementBlockTargetQubits'
+            {
+             before(grammarAccess.getLoopAccess().getIncrementBlockTargetQubitsIncrementBlockTargetQubitsKeyword_4_0()); 
+            match(input,57,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getIncrementBlockTargetQubitsIncrementBlockTargetQubitsKeyword_4_0()); 
 
             }
@@ -25754,24 +26325,24 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__IncrementBlockControlQubitsAssignment_5"
-    // InternalQuCircuit.g:8576:1: rule__Loop__IncrementBlockControlQubitsAssignment_5 : ( ( 'incrementBlockControlQubits' ) ) ;
+    // InternalQuCircuit.g:8766:1: rule__Loop__IncrementBlockControlQubitsAssignment_5 : ( ( 'incrementBlockControlQubits' ) ) ;
     public final void rule__Loop__IncrementBlockControlQubitsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8580:1: ( ( ( 'incrementBlockControlQubits' ) ) )
-            // InternalQuCircuit.g:8581:2: ( ( 'incrementBlockControlQubits' ) )
+            // InternalQuCircuit.g:8770:1: ( ( ( 'incrementBlockControlQubits' ) ) )
+            // InternalQuCircuit.g:8771:2: ( ( 'incrementBlockControlQubits' ) )
             {
-            // InternalQuCircuit.g:8581:2: ( ( 'incrementBlockControlQubits' ) )
-            // InternalQuCircuit.g:8582:3: ( 'incrementBlockControlQubits' )
-            {
-             before(grammarAccess.getLoopAccess().getIncrementBlockControlQubitsIncrementBlockControlQubitsKeyword_5_0()); 
-            // InternalQuCircuit.g:8583:3: ( 'incrementBlockControlQubits' )
-            // InternalQuCircuit.g:8584:4: 'incrementBlockControlQubits'
+            // InternalQuCircuit.g:8771:2: ( ( 'incrementBlockControlQubits' ) )
+            // InternalQuCircuit.g:8772:3: ( 'incrementBlockControlQubits' )
             {
              before(grammarAccess.getLoopAccess().getIncrementBlockControlQubitsIncrementBlockControlQubitsKeyword_5_0()); 
-            match(input,59,FOLLOW_2); 
+            // InternalQuCircuit.g:8773:3: ( 'incrementBlockControlQubits' )
+            // InternalQuCircuit.g:8774:4: 'incrementBlockControlQubits'
+            {
+             before(grammarAccess.getLoopAccess().getIncrementBlockControlQubitsIncrementBlockControlQubitsKeyword_5_0()); 
+            match(input,58,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getIncrementBlockControlQubitsIncrementBlockControlQubitsKeyword_5_0()); 
 
             }
@@ -25799,17 +26370,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__IterationsAssignment_6_1"
-    // InternalQuCircuit.g:8595:1: rule__Loop__IterationsAssignment_6_1 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:8785:1: rule__Loop__IterationsAssignment_6_1 : ( RULE_INT ) ;
     public final void rule__Loop__IterationsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8599:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:8600:2: ( RULE_INT )
+            // InternalQuCircuit.g:8789:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8790:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:8600:2: ( RULE_INT )
-            // InternalQuCircuit.g:8601:3: RULE_INT
+            // InternalQuCircuit.g:8790:2: ( RULE_INT )
+            // InternalQuCircuit.g:8791:3: RULE_INT
             {
              before(grammarAccess.getLoopAccess().getIterationsINTTerminalRuleCall_6_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -25836,24 +26407,24 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__IncrementTargetQubitsAssignment_7"
-    // InternalQuCircuit.g:8610:1: rule__Loop__IncrementTargetQubitsAssignment_7 : ( ( 'incrementTargetQubits' ) ) ;
+    // InternalQuCircuit.g:8800:1: rule__Loop__IncrementTargetQubitsAssignment_7 : ( ( 'incrementTargetQubits' ) ) ;
     public final void rule__Loop__IncrementTargetQubitsAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8614:1: ( ( ( 'incrementTargetQubits' ) ) )
-            // InternalQuCircuit.g:8615:2: ( ( 'incrementTargetQubits' ) )
+            // InternalQuCircuit.g:8804:1: ( ( ( 'incrementTargetQubits' ) ) )
+            // InternalQuCircuit.g:8805:2: ( ( 'incrementTargetQubits' ) )
             {
-            // InternalQuCircuit.g:8615:2: ( ( 'incrementTargetQubits' ) )
-            // InternalQuCircuit.g:8616:3: ( 'incrementTargetQubits' )
-            {
-             before(grammarAccess.getLoopAccess().getIncrementTargetQubitsIncrementTargetQubitsKeyword_7_0()); 
-            // InternalQuCircuit.g:8617:3: ( 'incrementTargetQubits' )
-            // InternalQuCircuit.g:8618:4: 'incrementTargetQubits'
+            // InternalQuCircuit.g:8805:2: ( ( 'incrementTargetQubits' ) )
+            // InternalQuCircuit.g:8806:3: ( 'incrementTargetQubits' )
             {
              before(grammarAccess.getLoopAccess().getIncrementTargetQubitsIncrementTargetQubitsKeyword_7_0()); 
-            match(input,60,FOLLOW_2); 
+            // InternalQuCircuit.g:8807:3: ( 'incrementTargetQubits' )
+            // InternalQuCircuit.g:8808:4: 'incrementTargetQubits'
+            {
+             before(grammarAccess.getLoopAccess().getIncrementTargetQubitsIncrementTargetQubitsKeyword_7_0()); 
+            match(input,59,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getIncrementTargetQubitsIncrementTargetQubitsKeyword_7_0()); 
 
             }
@@ -25881,24 +26452,24 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__IncrementControlQubitsAssignment_8"
-    // InternalQuCircuit.g:8629:1: rule__Loop__IncrementControlQubitsAssignment_8 : ( ( 'incrementControlQubits' ) ) ;
+    // InternalQuCircuit.g:8819:1: rule__Loop__IncrementControlQubitsAssignment_8 : ( ( 'incrementControlQubits' ) ) ;
     public final void rule__Loop__IncrementControlQubitsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8633:1: ( ( ( 'incrementControlQubits' ) ) )
-            // InternalQuCircuit.g:8634:2: ( ( 'incrementControlQubits' ) )
+            // InternalQuCircuit.g:8823:1: ( ( ( 'incrementControlQubits' ) ) )
+            // InternalQuCircuit.g:8824:2: ( ( 'incrementControlQubits' ) )
             {
-            // InternalQuCircuit.g:8634:2: ( ( 'incrementControlQubits' ) )
-            // InternalQuCircuit.g:8635:3: ( 'incrementControlQubits' )
-            {
-             before(grammarAccess.getLoopAccess().getIncrementControlQubitsIncrementControlQubitsKeyword_8_0()); 
-            // InternalQuCircuit.g:8636:3: ( 'incrementControlQubits' )
-            // InternalQuCircuit.g:8637:4: 'incrementControlQubits'
+            // InternalQuCircuit.g:8824:2: ( ( 'incrementControlQubits' ) )
+            // InternalQuCircuit.g:8825:3: ( 'incrementControlQubits' )
             {
              before(grammarAccess.getLoopAccess().getIncrementControlQubitsIncrementControlQubitsKeyword_8_0()); 
-            match(input,61,FOLLOW_2); 
+            // InternalQuCircuit.g:8826:3: ( 'incrementControlQubits' )
+            // InternalQuCircuit.g:8827:4: 'incrementControlQubits'
+            {
+             before(grammarAccess.getLoopAccess().getIncrementControlQubitsIncrementControlQubitsKeyword_8_0()); 
+            match(input,60,FOLLOW_2); 
              after(grammarAccess.getLoopAccess().getIncrementControlQubitsIncrementControlQubitsKeyword_8_0()); 
 
             }
@@ -25926,17 +26497,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__TargetQubitsBlockSizeAssignment_9_1"
-    // InternalQuCircuit.g:8648:1: rule__Loop__TargetQubitsBlockSizeAssignment_9_1 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:8838:1: rule__Loop__TargetQubitsBlockSizeAssignment_9_1 : ( RULE_INT ) ;
     public final void rule__Loop__TargetQubitsBlockSizeAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8652:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:8653:2: ( RULE_INT )
+            // InternalQuCircuit.g:8842:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8843:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:8653:2: ( RULE_INT )
-            // InternalQuCircuit.g:8654:3: RULE_INT
+            // InternalQuCircuit.g:8843:2: ( RULE_INT )
+            // InternalQuCircuit.g:8844:3: RULE_INT
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsBlockSizeINTTerminalRuleCall_9_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -25963,17 +26534,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__ControlQubitsBlockSizeAssignment_10_1"
-    // InternalQuCircuit.g:8663:1: rule__Loop__ControlQubitsBlockSizeAssignment_10_1 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:8853:1: rule__Loop__ControlQubitsBlockSizeAssignment_10_1 : ( RULE_INT ) ;
     public final void rule__Loop__ControlQubitsBlockSizeAssignment_10_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8667:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:8668:2: ( RULE_INT )
+            // InternalQuCircuit.g:8857:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8858:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:8668:2: ( RULE_INT )
-            // InternalQuCircuit.g:8669:3: RULE_INT
+            // InternalQuCircuit.g:8858:2: ( RULE_INT )
+            // InternalQuCircuit.g:8859:3: RULE_INT
             {
              before(grammarAccess.getLoopAccess().getControlQubitsBlockSizeINTTerminalRuleCall_10_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -26000,17 +26571,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__ControlQubitsIterationTypeAssignment_11_1"
-    // InternalQuCircuit.g:8678:1: rule__Loop__ControlQubitsIterationTypeAssignment_11_1 : ( ruleITERATION_TYPE ) ;
+    // InternalQuCircuit.g:8868:1: rule__Loop__ControlQubitsIterationTypeAssignment_11_1 : ( ruleITERATION_TYPE ) ;
     public final void rule__Loop__ControlQubitsIterationTypeAssignment_11_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8682:1: ( ( ruleITERATION_TYPE ) )
-            // InternalQuCircuit.g:8683:2: ( ruleITERATION_TYPE )
+            // InternalQuCircuit.g:8872:1: ( ( ruleITERATION_TYPE ) )
+            // InternalQuCircuit.g:8873:2: ( ruleITERATION_TYPE )
             {
-            // InternalQuCircuit.g:8683:2: ( ruleITERATION_TYPE )
-            // InternalQuCircuit.g:8684:3: ruleITERATION_TYPE
+            // InternalQuCircuit.g:8873:2: ( ruleITERATION_TYPE )
+            // InternalQuCircuit.g:8874:3: ruleITERATION_TYPE
             {
              before(grammarAccess.getLoopAccess().getControlQubitsIterationTypeITERATION_TYPEEnumRuleCall_11_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26041,17 +26612,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__TargetQubitsIterationTypeAssignment_12_1"
-    // InternalQuCircuit.g:8693:1: rule__Loop__TargetQubitsIterationTypeAssignment_12_1 : ( ruleITERATION_TYPE ) ;
+    // InternalQuCircuit.g:8883:1: rule__Loop__TargetQubitsIterationTypeAssignment_12_1 : ( ruleITERATION_TYPE ) ;
     public final void rule__Loop__TargetQubitsIterationTypeAssignment_12_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8697:1: ( ( ruleITERATION_TYPE ) )
-            // InternalQuCircuit.g:8698:2: ( ruleITERATION_TYPE )
+            // InternalQuCircuit.g:8887:1: ( ( ruleITERATION_TYPE ) )
+            // InternalQuCircuit.g:8888:2: ( ruleITERATION_TYPE )
             {
-            // InternalQuCircuit.g:8698:2: ( ruleITERATION_TYPE )
-            // InternalQuCircuit.g:8699:3: ruleITERATION_TYPE
+            // InternalQuCircuit.g:8888:2: ( ruleITERATION_TYPE )
+            // InternalQuCircuit.g:8889:3: ruleITERATION_TYPE
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsIterationTypeITERATION_TYPEEnumRuleCall_12_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26082,17 +26653,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__IncrementByAssignment_13_1"
-    // InternalQuCircuit.g:8708:1: rule__Loop__IncrementByAssignment_13_1 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:8898:1: rule__Loop__IncrementByAssignment_13_1 : ( RULE_INT ) ;
     public final void rule__Loop__IncrementByAssignment_13_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8712:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:8713:2: ( RULE_INT )
+            // InternalQuCircuit.g:8902:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:8903:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:8713:2: ( RULE_INT )
-            // InternalQuCircuit.g:8714:3: RULE_INT
+            // InternalQuCircuit.g:8903:2: ( RULE_INT )
+            // InternalQuCircuit.g:8904:3: RULE_INT
             {
              before(grammarAccess.getLoopAccess().getIncrementByINTTerminalRuleCall_13_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -26119,17 +26690,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__OperationsAssignment_14_2"
-    // InternalQuCircuit.g:8723:1: rule__Loop__OperationsAssignment_14_2 : ( ruleOperation ) ;
+    // InternalQuCircuit.g:8913:1: rule__Loop__OperationsAssignment_14_2 : ( ruleOperation ) ;
     public final void rule__Loop__OperationsAssignment_14_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8727:1: ( ( ruleOperation ) )
-            // InternalQuCircuit.g:8728:2: ( ruleOperation )
+            // InternalQuCircuit.g:8917:1: ( ( ruleOperation ) )
+            // InternalQuCircuit.g:8918:2: ( ruleOperation )
             {
-            // InternalQuCircuit.g:8728:2: ( ruleOperation )
-            // InternalQuCircuit.g:8729:3: ruleOperation
+            // InternalQuCircuit.g:8918:2: ( ruleOperation )
+            // InternalQuCircuit.g:8919:3: ruleOperation
             {
              before(grammarAccess.getLoopAccess().getOperationsOperationParserRuleCall_14_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26160,17 +26731,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__OperationsAssignment_14_3_1"
-    // InternalQuCircuit.g:8738:1: rule__Loop__OperationsAssignment_14_3_1 : ( ruleOperation ) ;
+    // InternalQuCircuit.g:8928:1: rule__Loop__OperationsAssignment_14_3_1 : ( ruleOperation ) ;
     public final void rule__Loop__OperationsAssignment_14_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8742:1: ( ( ruleOperation ) )
-            // InternalQuCircuit.g:8743:2: ( ruleOperation )
+            // InternalQuCircuit.g:8932:1: ( ( ruleOperation ) )
+            // InternalQuCircuit.g:8933:2: ( ruleOperation )
             {
-            // InternalQuCircuit.g:8743:2: ( ruleOperation )
-            // InternalQuCircuit.g:8744:3: ruleOperation
+            // InternalQuCircuit.g:8933:2: ( ruleOperation )
+            // InternalQuCircuit.g:8934:3: ruleOperation
             {
              before(grammarAccess.getLoopAccess().getOperationsOperationParserRuleCall_14_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26201,17 +26772,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__TargetQubitsAssignment_18"
-    // InternalQuCircuit.g:8753:1: rule__Loop__TargetQubitsAssignment_18 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8943:1: rule__Loop__TargetQubitsAssignment_18 : ( ruleSelector ) ;
     public final void rule__Loop__TargetQubitsAssignment_18() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8757:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8758:2: ( ruleSelector )
+            // InternalQuCircuit.g:8947:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8948:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8758:2: ( ruleSelector )
-            // InternalQuCircuit.g:8759:3: ruleSelector
+            // InternalQuCircuit.g:8948:2: ( ruleSelector )
+            // InternalQuCircuit.g:8949:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsSelectorParserRuleCall_18_0()); 
             pushFollow(FOLLOW_2);
@@ -26242,17 +26813,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__TargetQubitsAssignment_20_2"
-    // InternalQuCircuit.g:8768:1: rule__Loop__TargetQubitsAssignment_20_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8958:1: rule__Loop__TargetQubitsAssignment_20_2 : ( ruleSelector ) ;
     public final void rule__Loop__TargetQubitsAssignment_20_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8772:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8773:2: ( ruleSelector )
+            // InternalQuCircuit.g:8962:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8963:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8773:2: ( ruleSelector )
-            // InternalQuCircuit.g:8774:3: ruleSelector
+            // InternalQuCircuit.g:8963:2: ( ruleSelector )
+            // InternalQuCircuit.g:8964:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getTargetQubitsSelectorParserRuleCall_20_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26283,17 +26854,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__ControlQubitsAssignment_22_2"
-    // InternalQuCircuit.g:8783:1: rule__Loop__ControlQubitsAssignment_22_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8973:1: rule__Loop__ControlQubitsAssignment_22_2 : ( ruleSelector ) ;
     public final void rule__Loop__ControlQubitsAssignment_22_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8787:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8788:2: ( ruleSelector )
+            // InternalQuCircuit.g:8977:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8978:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8788:2: ( ruleSelector )
-            // InternalQuCircuit.g:8789:3: ruleSelector
+            // InternalQuCircuit.g:8978:2: ( ruleSelector )
+            // InternalQuCircuit.g:8979:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getControlQubitsSelectorParserRuleCall_22_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26324,17 +26895,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__ControlQubitsAssignment_22_3_1"
-    // InternalQuCircuit.g:8798:1: rule__Loop__ControlQubitsAssignment_22_3_1 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:8988:1: rule__Loop__ControlQubitsAssignment_22_3_1 : ( ruleSelector ) ;
     public final void rule__Loop__ControlQubitsAssignment_22_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8802:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8803:2: ( ruleSelector )
+            // InternalQuCircuit.g:8992:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:8993:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8803:2: ( ruleSelector )
-            // InternalQuCircuit.g:8804:3: ruleSelector
+            // InternalQuCircuit.g:8993:2: ( ruleSelector )
+            // InternalQuCircuit.g:8994:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getControlQubitsSelectorParserRuleCall_22_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26365,17 +26936,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__FixedControlQubitsAssignment_23_2"
-    // InternalQuCircuit.g:8813:1: rule__Loop__FixedControlQubitsAssignment_23_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9003:1: rule__Loop__FixedControlQubitsAssignment_23_2 : ( ruleSelector ) ;
     public final void rule__Loop__FixedControlQubitsAssignment_23_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8817:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8818:2: ( ruleSelector )
+            // InternalQuCircuit.g:9007:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9008:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8818:2: ( ruleSelector )
-            // InternalQuCircuit.g:8819:3: ruleSelector
+            // InternalQuCircuit.g:9008:2: ( ruleSelector )
+            // InternalQuCircuit.g:9009:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getFixedControlQubitsSelectorParserRuleCall_23_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26406,17 +26977,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__FixedControlQubitsAssignment_23_3_1"
-    // InternalQuCircuit.g:8828:1: rule__Loop__FixedControlQubitsAssignment_23_3_1 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9018:1: rule__Loop__FixedControlQubitsAssignment_23_3_1 : ( ruleSelector ) ;
     public final void rule__Loop__FixedControlQubitsAssignment_23_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8832:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8833:2: ( ruleSelector )
+            // InternalQuCircuit.g:9022:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9023:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8833:2: ( ruleSelector )
-            // InternalQuCircuit.g:8834:3: ruleSelector
+            // InternalQuCircuit.g:9023:2: ( ruleSelector )
+            // InternalQuCircuit.g:9024:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getFixedControlQubitsSelectorParserRuleCall_23_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26447,17 +27018,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__FixedTargetQubitsAssignment_24_2"
-    // InternalQuCircuit.g:8843:1: rule__Loop__FixedTargetQubitsAssignment_24_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9033:1: rule__Loop__FixedTargetQubitsAssignment_24_2 : ( ruleSelector ) ;
     public final void rule__Loop__FixedTargetQubitsAssignment_24_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8847:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8848:2: ( ruleSelector )
+            // InternalQuCircuit.g:9037:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9038:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8848:2: ( ruleSelector )
-            // InternalQuCircuit.g:8849:3: ruleSelector
+            // InternalQuCircuit.g:9038:2: ( ruleSelector )
+            // InternalQuCircuit.g:9039:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getFixedTargetQubitsSelectorParserRuleCall_24_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26488,17 +27059,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__FixedTargetQubitsAssignment_24_3_1"
-    // InternalQuCircuit.g:8858:1: rule__Loop__FixedTargetQubitsAssignment_24_3_1 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9048:1: rule__Loop__FixedTargetQubitsAssignment_24_3_1 : ( ruleSelector ) ;
     public final void rule__Loop__FixedTargetQubitsAssignment_24_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8862:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8863:2: ( ruleSelector )
+            // InternalQuCircuit.g:9052:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9053:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8863:2: ( ruleSelector )
-            // InternalQuCircuit.g:8864:3: ruleSelector
+            // InternalQuCircuit.g:9053:2: ( ruleSelector )
+            // InternalQuCircuit.g:9054:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getFixedTargetQubitsSelectorParserRuleCall_24_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26529,21 +27100,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__LoopAssignment_26"
-    // InternalQuCircuit.g:8873:1: rule__Loop__LoopAssignment_26 : ( ( ruleEString ) ) ;
+    // InternalQuCircuit.g:9063:1: rule__Loop__LoopAssignment_26 : ( ( ruleEString ) ) ;
     public final void rule__Loop__LoopAssignment_26() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8877:1: ( ( ( ruleEString ) ) )
-            // InternalQuCircuit.g:8878:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9067:1: ( ( ( ruleEString ) ) )
+            // InternalQuCircuit.g:9068:2: ( ( ruleEString ) )
             {
-            // InternalQuCircuit.g:8878:2: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8879:3: ( ruleEString )
+            // InternalQuCircuit.g:9068:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9069:3: ( ruleEString )
             {
              before(grammarAccess.getLoopAccess().getLoopConcreteLoopOperationCrossReference_26_0()); 
-            // InternalQuCircuit.g:8880:3: ( ruleEString )
-            // InternalQuCircuit.g:8881:4: ruleEString
+            // InternalQuCircuit.g:9070:3: ( ruleEString )
+            // InternalQuCircuit.g:9071:4: ruleEString
             {
              before(grammarAccess.getLoopAccess().getLoopConcreteLoopOperationEStringParserRuleCall_26_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26578,17 +27149,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__LoopTargetQubitsAssignment_30"
-    // InternalQuCircuit.g:8892:1: rule__Loop__LoopTargetQubitsAssignment_30 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9082:1: rule__Loop__LoopTargetQubitsAssignment_30 : ( ruleSelector ) ;
     public final void rule__Loop__LoopTargetQubitsAssignment_30() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8896:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8897:2: ( ruleSelector )
+            // InternalQuCircuit.g:9086:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9087:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8897:2: ( ruleSelector )
-            // InternalQuCircuit.g:8898:3: ruleSelector
+            // InternalQuCircuit.g:9087:2: ( ruleSelector )
+            // InternalQuCircuit.g:9088:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getLoopTargetQubitsSelectorParserRuleCall_30_0()); 
             pushFollow(FOLLOW_2);
@@ -26619,17 +27190,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__LoopTargetQubitsAssignment_32_2"
-    // InternalQuCircuit.g:8907:1: rule__Loop__LoopTargetQubitsAssignment_32_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9097:1: rule__Loop__LoopTargetQubitsAssignment_32_2 : ( ruleSelector ) ;
     public final void rule__Loop__LoopTargetQubitsAssignment_32_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8911:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8912:2: ( ruleSelector )
+            // InternalQuCircuit.g:9101:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9102:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8912:2: ( ruleSelector )
-            // InternalQuCircuit.g:8913:3: ruleSelector
+            // InternalQuCircuit.g:9102:2: ( ruleSelector )
+            // InternalQuCircuit.g:9103:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getLoopTargetQubitsSelectorParserRuleCall_32_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26660,17 +27231,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__LoopControlQubitsAssignment_34_3"
-    // InternalQuCircuit.g:8922:1: rule__Loop__LoopControlQubitsAssignment_34_3 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9112:1: rule__Loop__LoopControlQubitsAssignment_34_3 : ( ruleSelector ) ;
     public final void rule__Loop__LoopControlQubitsAssignment_34_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8926:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8927:2: ( ruleSelector )
+            // InternalQuCircuit.g:9116:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9117:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8927:2: ( ruleSelector )
-            // InternalQuCircuit.g:8928:3: ruleSelector
+            // InternalQuCircuit.g:9117:2: ( ruleSelector )
+            // InternalQuCircuit.g:9118:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getLoopControlQubitsSelectorParserRuleCall_34_3_0()); 
             pushFollow(FOLLOW_2);
@@ -26701,17 +27272,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__LoopControlQubitsAssignment_34_5_2"
-    // InternalQuCircuit.g:8937:1: rule__Loop__LoopControlQubitsAssignment_34_5_2 : ( ruleSelector ) ;
+    // InternalQuCircuit.g:9127:1: rule__Loop__LoopControlQubitsAssignment_34_5_2 : ( ruleSelector ) ;
     public final void rule__Loop__LoopControlQubitsAssignment_34_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8941:1: ( ( ruleSelector ) )
-            // InternalQuCircuit.g:8942:2: ( ruleSelector )
+            // InternalQuCircuit.g:9131:1: ( ( ruleSelector ) )
+            // InternalQuCircuit.g:9132:2: ( ruleSelector )
             {
-            // InternalQuCircuit.g:8942:2: ( ruleSelector )
-            // InternalQuCircuit.g:8943:3: ruleSelector
+            // InternalQuCircuit.g:9132:2: ( ruleSelector )
+            // InternalQuCircuit.g:9133:3: ruleSelector
             {
              before(grammarAccess.getLoopAccess().getLoopControlQubitsSelectorParserRuleCall_34_5_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26742,21 +27313,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__OperationAssignment_0"
-    // InternalQuCircuit.g:8952:1: rule__Operation__OperationAssignment_0 : ( ( ruleEString ) ) ;
+    // InternalQuCircuit.g:9142:1: rule__Operation__OperationAssignment_0 : ( ( ruleEString ) ) ;
     public final void rule__Operation__OperationAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8956:1: ( ( ( ruleEString ) ) )
-            // InternalQuCircuit.g:8957:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9146:1: ( ( ( ruleEString ) ) )
+            // InternalQuCircuit.g:9147:2: ( ( ruleEString ) )
             {
-            // InternalQuCircuit.g:8957:2: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8958:3: ( ruleEString )
+            // InternalQuCircuit.g:9147:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9148:3: ( ruleEString )
             {
              before(grammarAccess.getOperationAccess().getOperationConcreteQuantumOperationCrossReference_0_0()); 
-            // InternalQuCircuit.g:8959:3: ( ruleEString )
-            // InternalQuCircuit.g:8960:4: ruleEString
+            // InternalQuCircuit.g:9149:3: ( ruleEString )
+            // InternalQuCircuit.g:9150:4: ruleEString
             {
              before(grammarAccess.getOperationAccess().getOperationConcreteQuantumOperationEStringParserRuleCall_0_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26791,21 +27362,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Operation__QuboAssignment_1_1"
-    // InternalQuCircuit.g:8971:1: rule__Operation__QuboAssignment_1_1 : ( ( ruleEString ) ) ;
+    // InternalQuCircuit.g:9161:1: rule__Operation__QuboAssignment_1_1 : ( ( ruleEString ) ) ;
     public final void rule__Operation__QuboAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8975:1: ( ( ( ruleEString ) ) )
-            // InternalQuCircuit.g:8976:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9165:1: ( ( ( ruleEString ) ) )
+            // InternalQuCircuit.g:9166:2: ( ( ruleEString ) )
             {
-            // InternalQuCircuit.g:8976:2: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8977:3: ( ruleEString )
+            // InternalQuCircuit.g:9166:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9167:3: ( ruleEString )
             {
              before(grammarAccess.getOperationAccess().getQuboQuboCrossReference_1_1_0()); 
-            // InternalQuCircuit.g:8978:3: ( ruleEString )
-            // InternalQuCircuit.g:8979:4: ruleEString
+            // InternalQuCircuit.g:9168:3: ( ruleEString )
+            // InternalQuCircuit.g:9169:4: ruleEString
             {
              before(grammarAccess.getOperationAccess().getQuboQuboEStringParserRuleCall_1_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26840,21 +27411,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__RegisterAssignment_1_0"
-    // InternalQuCircuit.g:8990:1: rule__ElementSelector__RegisterAssignment_1_0 : ( ( ruleEString ) ) ;
+    // InternalQuCircuit.g:9180:1: rule__ElementSelector__RegisterAssignment_1_0 : ( ( ruleEString ) ) ;
     public final void rule__ElementSelector__RegisterAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:8994:1: ( ( ( ruleEString ) ) )
-            // InternalQuCircuit.g:8995:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9184:1: ( ( ( ruleEString ) ) )
+            // InternalQuCircuit.g:9185:2: ( ( ruleEString ) )
             {
-            // InternalQuCircuit.g:8995:2: ( ( ruleEString ) )
-            // InternalQuCircuit.g:8996:3: ( ruleEString )
+            // InternalQuCircuit.g:9185:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9186:3: ( ruleEString )
             {
              before(grammarAccess.getElementSelectorAccess().getRegisterRegisterCrossReference_1_0_0()); 
-            // InternalQuCircuit.g:8997:3: ( ruleEString )
-            // InternalQuCircuit.g:8998:4: ruleEString
+            // InternalQuCircuit.g:9187:3: ( ruleEString )
+            // InternalQuCircuit.g:9188:4: ruleEString
             {
              before(grammarAccess.getElementSelectorAccess().getRegisterRegisterEStringParserRuleCall_1_0_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26889,17 +27460,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementSelector__IndexAssignment_2"
-    // InternalQuCircuit.g:9009:1: rule__ElementSelector__IndexAssignment_2 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:9199:1: rule__ElementSelector__IndexAssignment_2 : ( RULE_INT ) ;
     public final void rule__ElementSelector__IndexAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:9013:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:9014:2: ( RULE_INT )
+            // InternalQuCircuit.g:9203:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:9204:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:9014:2: ( RULE_INT )
-            // InternalQuCircuit.g:9015:3: RULE_INT
+            // InternalQuCircuit.g:9204:2: ( RULE_INT )
+            // InternalQuCircuit.g:9205:3: RULE_INT
             {
              before(grammarAccess.getElementSelectorAccess().getIndexINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -26926,21 +27497,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__RegisterAssignment_1_0"
-    // InternalQuCircuit.g:9024:1: rule__RangeSelector__RegisterAssignment_1_0 : ( ( ruleEString ) ) ;
+    // InternalQuCircuit.g:9214:1: rule__RangeSelector__RegisterAssignment_1_0 : ( ( ruleEString ) ) ;
     public final void rule__RangeSelector__RegisterAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:9028:1: ( ( ( ruleEString ) ) )
-            // InternalQuCircuit.g:9029:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9218:1: ( ( ( ruleEString ) ) )
+            // InternalQuCircuit.g:9219:2: ( ( ruleEString ) )
             {
-            // InternalQuCircuit.g:9029:2: ( ( ruleEString ) )
-            // InternalQuCircuit.g:9030:3: ( ruleEString )
+            // InternalQuCircuit.g:9219:2: ( ( ruleEString ) )
+            // InternalQuCircuit.g:9220:3: ( ruleEString )
             {
              before(grammarAccess.getRangeSelectorAccess().getRegisterRegisterCrossReference_1_0_0()); 
-            // InternalQuCircuit.g:9031:3: ( ruleEString )
-            // InternalQuCircuit.g:9032:4: ruleEString
+            // InternalQuCircuit.g:9221:3: ( ruleEString )
+            // InternalQuCircuit.g:9222:4: ruleEString
             {
              before(grammarAccess.getRangeSelectorAccess().getRegisterRegisterEStringParserRuleCall_1_0_0_1()); 
             pushFollow(FOLLOW_2);
@@ -26975,17 +27546,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__BeginAssignment_2"
-    // InternalQuCircuit.g:9043:1: rule__RangeSelector__BeginAssignment_2 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:9233:1: rule__RangeSelector__BeginAssignment_2 : ( RULE_INT ) ;
     public final void rule__RangeSelector__BeginAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:9047:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:9048:2: ( RULE_INT )
+            // InternalQuCircuit.g:9237:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:9238:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:9048:2: ( RULE_INT )
-            // InternalQuCircuit.g:9049:3: RULE_INT
+            // InternalQuCircuit.g:9238:2: ( RULE_INT )
+            // InternalQuCircuit.g:9239:3: RULE_INT
             {
              before(grammarAccess.getRangeSelectorAccess().getBeginINTTerminalRuleCall_2_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -27012,17 +27583,17 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__RangeSelector__EndAssignment_4"
-    // InternalQuCircuit.g:9058:1: rule__RangeSelector__EndAssignment_4 : ( RULE_INT ) ;
+    // InternalQuCircuit.g:9248:1: rule__RangeSelector__EndAssignment_4 : ( RULE_INT ) ;
     public final void rule__RangeSelector__EndAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:9062:1: ( ( RULE_INT ) )
-            // InternalQuCircuit.g:9063:2: ( RULE_INT )
+            // InternalQuCircuit.g:9252:1: ( ( RULE_INT ) )
+            // InternalQuCircuit.g:9253:2: ( RULE_INT )
             {
-            // InternalQuCircuit.g:9063:2: ( RULE_INT )
-            // InternalQuCircuit.g:9064:3: RULE_INT
+            // InternalQuCircuit.g:9253:2: ( RULE_INT )
+            // InternalQuCircuit.g:9254:3: RULE_INT
             {
              before(grammarAccess.getRangeSelectorAccess().getEndINTTerminalRuleCall_4_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -27055,47 +27626,47 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000A80000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000AC0000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000A80002L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000140000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000440000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000068042000000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000001040000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000002L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000009000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000021000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0200000000000030L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x000000000C000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000600040000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000007000040000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0180000000000040L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x020000000C000000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000220000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000002880000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000000028C0000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000002880002L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000140000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001040000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000034108000000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004040000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000024000000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000084000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0100000000000030L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000030000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000600040000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000003800040000L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x00C0000000000040L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0100000030000000L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000200040000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x3E0FE00008000000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0030080200000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0040000000040000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x1F07F00020000000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0018040200000000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0020000000040000L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x000000000000E000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000101000000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000004400000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0040000000000000L});
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0080000000000040L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0040000000000040L});
 
 }

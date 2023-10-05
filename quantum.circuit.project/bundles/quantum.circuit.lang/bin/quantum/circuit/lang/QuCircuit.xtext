@@ -8,9 +8,9 @@ import "http://www.eclipse.org/Qubo" as qubo
 
 QuantumCircuit returns QuantumCircuit:
 	'QuantumCircuit'
-	name=EString
+	name=EString (quantumRegisters+=SimplifiedQuantumRegister)?
 	'{'
-		quantumRegisters+=QuantumRegister (quantumRegisters+=QuantumRegister)*  
+		(quantumRegisters+=QuantumRegister (quantumRegisters+=QuantumRegister)*)? 
 		(classicRegisters+=ClassicRegister)*
 		layers+=Layer (layers+=Layer)*
 	'}'
@@ -23,6 +23,11 @@ QuantumRegister returns QuantumRegister:
 	'{'
 		('NumberOfQubits' numberOfQubits=INT)?
 	'}';
+
+SimplifiedQuantumRegister returns QuantumRegister:
+	{QuantumRegister} 
+	'(' numberOfQubits=INT ')'
+;
 
 
 ClassicRegister returns ClassicRegister:
@@ -69,7 +74,6 @@ ElementaryQuantumGate returns ElementaryQuantumGate:
 	
 AngleParameter returns AngleParameter:
 	{AngleParameter}
-	'AngleParameter'
 	'{'
 		('theta' theta=EDoubleObject)?
 		('phi' phi=EDoubleObject)?

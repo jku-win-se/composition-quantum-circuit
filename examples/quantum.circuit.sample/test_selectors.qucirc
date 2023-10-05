@@ -1,0 +1,14 @@
+QuantumCircuit test_selectors {
+	QuantumRegister qr1 {
+		NumberOfQubits 4
+	}
+	QuantumRegister qr2 {
+		NumberOfQubits 4
+	}	
+	Layer L1 {
+		ElementaryQuantumGate e1 {
+			operation Hadamard
+			targetQubits [(qr1,1),(qr1,4),(qr2,2-4)]
+		}
+	}
+}

@@ -1,0 +1,8 @@
+QuantumCircuit default_register (4) {
+	Layer L1 {
+		ElementaryQuantumGate e1 {
+			operation Hadamard
+			targetQubits [(0-3)]
+		}
+	}
+}
