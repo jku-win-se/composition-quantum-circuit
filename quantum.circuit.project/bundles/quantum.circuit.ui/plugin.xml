@@ -16,6 +16,15 @@
             name="Quantum Circuit Project"
             project="true">
       </wizard>
+      <wizard
+            category="quantum.circuit.ui.category"
+            class="quantum.circuit.ui.wizard.qubo.QuboWizard"
+            hasPages="true"
+            icon="icons/qubo-matrix-icon.png"
+            id="quantum.circuit.project.qubo.wizard"
+            name="Generate Random Qubo"
+            project="false">
+      </wizard>
    </extension>
 
 </plugin>

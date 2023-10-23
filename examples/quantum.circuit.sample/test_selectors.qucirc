@@ -10,5 +10,5 @@ QuantumCircuit test_selectors {
 			operation Hadamard
 			targetQubits [(qr1,1),(qr1,4),(qr2,2-4)]
 		}
-	}
+	}	
 }

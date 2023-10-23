@@ -61,5 +61,4 @@ public class QuantumCircuitCreationPage extends WizardPage{
 	public String getProjectName() {
 		return projectName;
 	}
-
 }

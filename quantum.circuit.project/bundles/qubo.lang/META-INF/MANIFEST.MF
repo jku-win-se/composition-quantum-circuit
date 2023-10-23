@@ -16,15 +16,17 @@ Require-Bundle: qubo.mm,
  quantum.circuit.mm;bundle-version="0.1.0",
  quantum.operation.library.mm,
  quantum.operation.contribution;bundle-version="1.0.0",
- quantum.operation.definition;bundle-version="1.0.0"
+ quantum.operation.definition;bundle-version="1.0.0",
+ org.eclipse.emf.ecore
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: qubo.lang,
  qubo.lang.formatting2,
  qubo.lang.generator,
- qubo.lang.scoping,
- qubo.lang.validation,
  qubo.lang.parser.antlr,
- qubo.lang.services,
+ qubo.lang.parser.antlr.internal,
+ qubo.lang.scoping,
  qubo.lang.serializer,
- qubo.lang.parser.antlr.internal
+ qubo.lang.services,
+ qubo.lang.utils,
+ qubo.lang.validation
 Import-Package: org.apache.log4j

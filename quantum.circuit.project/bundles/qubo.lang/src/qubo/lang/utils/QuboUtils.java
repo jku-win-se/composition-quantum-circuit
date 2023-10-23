@@ -1,8 +1,14 @@
 package qubo.lang.utils;
 
+import java.io.IOException;
+import java.util.Collections;
 import java.util.Random;
 
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.xtext.resource.XtextResourceSet;
 
 import quantum.operation.contribution.utils.QuantumOperationContributionUtils;
 import qucircuit.ElementSelector;
@@ -11,7 +17,11 @@ import qucircuit.QucircuitFactory;
 import qucircuit.QuantumCircuit;
 import qucircuit.QuantumRegister;
 import quope.QuantumOperationLibrary;
+import qubo.Column;
+import qubo.Matrix;
 import qubo.Qubo;
+import qubo.Row;
+import qubo.impl.QuboFactoryImpl;
 
 public class QuboUtils {
 	
@@ -97,5 +107,40 @@ public class QuboUtils {
 		}
 		quCircuit.getLayers().add(diagonalRzLayer);
 		return quCircuit;		
+	}
+	
+	/*
+	 * Create a Random Qubo Matrix
+	 * TODO It is possible to use DoubleRange?
+	 * */
+	
+	public static Qubo createRandomQubo(final String name, final int numColumns) {
+		final Qubo quboMatrix = QuboFactoryImpl.eINSTANCE.createQubo();
+		quboMatrix.setName(name);
+		final Matrix matrix = QuboFactoryImpl.eINSTANCE.createMatrix();
+		Random randomFloat = new Random();
+		for(int i=numColumns;i>0;i--) {
+			final Row row = QuboFactoryImpl.eINSTANCE.createRow();
+			matrix.getRows().add(row);
+			for (int j = 0; j < i; j++) {
+				final Column column = QuboFactoryImpl.eINSTANCE.createColumn();
+				row.getColumns().add(column);
+				column.setValue(randomFloat.nextDouble()*10);				
+			}
+		}		
+		quboMatrix.setMatrix(matrix);
+		return quboMatrix;
+	}
+		
+	public static Resource createSaveQuboResource(URI uri, Qubo quboMatrix) {
+		final ResourceSet resourceSet = new XtextResourceSet();
+		final Resource quboMatrixResource = resourceSet.createResource(uri);
+		quboMatrixResource.getContents().add(quboMatrix);
+		try {
+			quboMatrixResource.save(Collections.EMPTY_MAP);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return quboMatrixResource;		
 	}
 }
