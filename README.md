@@ -1,5 +1,8 @@
 # Composition-based Quantum Circuit Design (CoQuaDe) 
 
+Wiki Page
+  - https://github.com/jku-win-se/composition-quantum-circuit/wiki
+
 This repository contains the meta-models for the Composition of Quantum Circuits
   - Quantum Circuit Meta-model: bundles\quantum.circuit.mm\model\QuCircuit.ecore
   - Library Meta-model: bundles\quantum.operation.library.mm\model\quantumOpe.ecore
