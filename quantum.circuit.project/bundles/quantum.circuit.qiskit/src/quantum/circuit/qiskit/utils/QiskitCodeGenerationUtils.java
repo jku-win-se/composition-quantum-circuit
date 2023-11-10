@@ -11,6 +11,7 @@ import qucircuit.CompositeQuantumGate;
 import qucircuit.ElementSelector;
 import qucircuit.Selector;
 import qucircuit.RangeSelector;
+import qucircuit.Register;
 import qucircuit.Operation;
 import qucircuit.QuantumCircuit;
 import qucircuit.QuantumRegister;
@@ -50,8 +51,9 @@ public class QiskitCodeGenerationUtils {
 		var rangeOfValues = new StringBuilder().append("[");
 		for (Selector index : indexes) {
 			if (index instanceof ElementSelector indexObject) {
+				final Register register = (index.getRegister() == null)?registerIndexes.keySet().iterator().next():index.getRegister();
 				rangeOfValues.append(indexObject.getIndex() + 
-						registerIndexes.get(index.getRegister())).append(",");
+						registerIndexes.get(register)).append(",");				
 			}
 			else if (index instanceof RangeSelector indexRangeObject) {
 				for (int i = indexRangeObject.getBegin(); i <= indexRangeObject.getEnd(); i++) {

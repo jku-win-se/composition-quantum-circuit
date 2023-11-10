@@ -261,6 +261,10 @@ public class LoopGeneration implements QiskitLoopOperation {
 			return "dict(size=len(loop_tqubits))";
 		}
 		
+		if(opName.equals(Grover.class.getSimpleName())) {
+			return "dict(qubits=len(loop_tqubits))";
+		}
+			
 		if (opName.equals(MixerUnitaryQAOA.class.getSimpleName())) {
 			return "dict(size=" + qucircuit.getName() + ".num_qubits)";
 		}
@@ -305,7 +309,7 @@ public class LoopGeneration implements QiskitLoopOperation {
 		} else if (opName.equals(QFTElement.class.getSimpleName())) {
 			return "c_gate.qft_elements";
 		} else if (opName.equals(Grover.class.getSimpleName())) {
-			return "c_gate.grover4";
+			return "c_gate.grover";
 		}
 		
 		return "<<< UNSUPPORTED GATE IN LOOP>>>";

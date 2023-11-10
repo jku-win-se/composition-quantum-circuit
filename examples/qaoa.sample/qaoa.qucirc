@@ -3,16 +3,16 @@ QuantumCircuit QAOA {
 		NumberOfQubits 4
 	}
 	ClassicRegister cr {
-		NumberOfBits 4
+		NumberOfBits 4 
 	}
-	Layer L1 {
-		ElementaryQuantumGate e1 {
+	Layer {
+		ElementaryQuantumGate {
 			operation Hadamard
 			targetQubits [(0-3)]
 		}
 	}	
-	Layer L2 {
-		Loop SimpleLoop1 {
+	Layer {
+		Loop {
 			iterations 2
 			operations (CostUnitary(SampleMatrix),MixerUnitaryQAOA)
 			targetQubits [(0-3)] 
@@ -20,8 +20,8 @@ QuantumCircuit QAOA {
 			loopTargetQubits [(0-3)]			 
 		}
 	}
-	Layer L3 {
-		Measurement M1 { 
+	Layer {
+		Measurement {  
 			operation MeasurementCompBasis
 			targetQubits [(0-3)]
 			classicBits [(0-3)]

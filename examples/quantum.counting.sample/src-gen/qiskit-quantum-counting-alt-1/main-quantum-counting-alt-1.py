@@ -30,7 +30,7 @@ target_qubits = [0,1,2,3,4,5,6,7]
 loop_tqubits = [4,5,6,7]
 loop_cqubits = [0,1,2,3]
 overall_control_qubits = None
-QuantumCounting.append(l_gate.Power_2_loop(gate=c_gate.grover4, gate_args=[], gate_kwargs={},target_qubits=loop_tqubits, control_qubits=loop_cqubits, increment_c=True, increment_t=True, overall_control_qubits=overall_control_qubits, inverse=False), target_qubits)
+QuantumCounting.append(l_gate.Power_2_loop(gate=c_gate.grover, gate_args=[], gate_kwargs=dict(qubits=len(loop_tqubits)),target_qubits=loop_tqubits, control_qubits=loop_cqubits, increment_c=True, increment_t=True, overall_control_qubits=overall_control_qubits, inverse=False), target_qubits)
 
 # Layer L3
 target_qubits = [0,1,2,3]

@@ -169,7 +169,7 @@ public class QuCircuitSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 * Constraint:
 	 *     (
 	 *         inverseForm?='inverseForm'? 
-	 *         name=EString 
+	 *         name=EString? 
 	 *         operations+=Operation? 
 	 *         targetQubits+=Selector 
 	 *         targetQubits+=Selector* 
@@ -189,7 +189,7 @@ public class QuCircuitSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     Layer returns Layer
 	 *
 	 * Constraint:
-	 *     (name=EString quantumOperations+=QuantumOperation quantumOperations+=QuantumOperation*)
+	 *     (name=EString? quantumOperations+=QuantumOperation quantumOperations+=QuantumOperation*)
 	 * </pre>
 	 */
 	protected void sequence_Layer(ISerializationContext context, Layer semanticObject) {
@@ -205,7 +205,7 @@ public class QuCircuitSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=EString 
+	 *         name=EString? 
 	 *         inverseForm?='inverseForm'? 
 	 *         incrementBlockTargetQubits?='incrementBlockTargetQubits'? 
 	 *         incrementBlockControlQubits?='incrementBlockControlQubits'? 
@@ -243,7 +243,7 @@ public class QuCircuitSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=EString 
+	 *         name=EString? 
 	 *         operations+=Operation? 
 	 *         targetQubits+=Selector 
 	 *         targetQubits+=Selector* 

@@ -12,5 +12,4 @@ public class GeneralLoop extends AbstractLoopOperation {
 	public boolean allowsMultipleOperations() {
 		return false; 
 	}
-
 }

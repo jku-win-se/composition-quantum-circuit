@@ -1554,7 +1554,7 @@ rule__Layer__Group__2__Impl
 :
 (
 	{ before(grammarAccess.getLayerAccess().getNameAssignment_2()); }
-	(rule__Layer__NameAssignment_2)
+	(rule__Layer__NameAssignment_2)?
 	{ after(grammarAccess.getLayerAccess().getNameAssignment_2()); }
 )
 ;
@@ -2229,7 +2229,7 @@ rule__ElementaryQuantumGate__Group__2__Impl
 :
 (
 	{ before(grammarAccess.getElementaryQuantumGateAccess().getNameAssignment_2()); }
-	(rule__ElementaryQuantumGate__NameAssignment_2)
+	(rule__ElementaryQuantumGate__NameAssignment_2)?
 	{ after(grammarAccess.getElementaryQuantumGateAccess().getNameAssignment_2()); }
 )
 ;
@@ -3336,7 +3336,7 @@ rule__Measurement__Group__1__Impl
 :
 (
 	{ before(grammarAccess.getMeasurementAccess().getNameAssignment_1()); }
-	(rule__Measurement__NameAssignment_1)
+	(rule__Measurement__NameAssignment_1)?
 	{ after(grammarAccess.getMeasurementAccess().getNameAssignment_1()); }
 )
 ;
@@ -4848,7 +4848,7 @@ rule__Loop__Group__1__Impl
 :
 (
 	{ before(grammarAccess.getLoopAccess().getNameAssignment_1()); }
-	(rule__Loop__NameAssignment_1)
+	(rule__Loop__NameAssignment_1)?
 	{ after(grammarAccess.getLoopAccess().getNameAssignment_1()); }
 )
 ;

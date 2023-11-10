@@ -9,7 +9,7 @@ QuantumCircuit QuantumCounting{
 		}
 	}
 	Layer L2 {
-		Loop loop1 {
+		Loop loop1 { 
 			operations (Grover)
 			targetQubits [(qr,0-3),(qr1,0-3)]
 			loop Power2Loop	

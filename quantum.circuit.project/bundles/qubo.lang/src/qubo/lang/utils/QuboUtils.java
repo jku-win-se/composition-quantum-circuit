@@ -118,7 +118,7 @@ public class QuboUtils {
 		final Qubo quboMatrix = QuboFactoryImpl.eINSTANCE.createQubo();
 		quboMatrix.setName(name);
 		final Matrix matrix = QuboFactoryImpl.eINSTANCE.createMatrix();
-		Random randomFloat = new Random();
+		final Random randomFloat = new Random();
 		for(int i=numColumns;i>0;i--) {
 			final Row row = QuboFactoryImpl.eINSTANCE.createRow();
 			matrix.getRows().add(row);

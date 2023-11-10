@@ -297,7 +297,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//Layer returns Layer:
 		//    {Layer}
 		//    'Layer'
-		//    name=EString
+		//    (name=EString)?
 		//    '{'
 		//        quantumOperations+=QuantumOperation ( "," quantumOperations+=QuantumOperation)*
 		//    '}';
@@ -305,7 +305,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		
 		//{Layer}
 		//'Layer'
-		//name=EString
+		//(name=EString)?
 		//'{'
 		//    quantumOperations+=QuantumOperation ( "," quantumOperations+=QuantumOperation)*
 		//'}'
@@ -317,7 +317,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//'Layer'
 		public Keyword getLayerKeyword_1() { return cLayerKeyword_1; }
 		
-		//name=EString
+		//(name=EString)?
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
@@ -535,7 +535,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//ElementaryQuantumGate returns ElementaryQuantumGate:
 		//    'ElementaryQuantumGate'
 		//    (inverseForm?='inverseForm')?
-		//    name=EString
+		//    (name=EString)?
 		//    '{'
 		//        ('operation' operations+=Operation)?
 		//        'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
@@ -547,7 +547,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		
 		//'ElementaryQuantumGate'
 		//(inverseForm?='inverseForm')?
-		//name=EString
+		//(name=EString)?
 		//'{'
 		//    ('operation' operations+=Operation)?
 		//    'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
@@ -566,7 +566,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//'inverseForm'
 		public Keyword getInverseFormInverseFormKeyword_1_0() { return cInverseFormInverseFormKeyword_1_0; }
 		
-		//name=EString
+		//(name=EString)?
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
@@ -794,7 +794,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		
 		//Measurement returns Measurement:
 		//    'Measurement'
-		//    name=EString
+		//    (name=EString)?
 		//    '{'
 		//        ('operation' operations+=Operation)?
 		//        'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
@@ -804,7 +804,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Measurement'
-		//name=EString
+		//(name=EString)?
 		//'{'
 		//    ('operation' operations+=Operation)?
 		//    'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
@@ -816,7 +816,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//'Measurement'
 		public Keyword getMeasurementKeyword_0() { return cMeasurementKeyword_0; }
 		
-		//name=EString
+		//(name=EString)?
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//EString
@@ -1215,7 +1215,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		
 		//Loop returns LoopOperation:
 		//    'Loop'
-		//    name=EString
+		//    (name=EString)?
 		//    '{'
 		//        (inverseForm?='inverseForm')?
 		//        (incrementBlockTargetQubits?='incrementBlockTargetQubits')?
@@ -1242,7 +1242,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		@Override public ParserRule getRule() { return rule; }
 		
 		//    'Loop'
-		//    name=EString
+		//    (name=EString)?
 		//    '{'
 		//        (inverseForm?='inverseForm')?
 		//        (incrementBlockTargetQubits?='incrementBlockTargetQubits')?
@@ -1271,7 +1271,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 		//'Loop'
 		public Keyword getLoopKeyword_0() { return cLoopKeyword_0; }
 		
-		//name=EString
+		//(name=EString)?
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//EString
@@ -2338,7 +2338,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 	//Layer returns Layer:
 	//    {Layer}
 	//    'Layer'
-	//    name=EString
+	//    (name=EString)?
 	//    '{'
 	//        quantumOperations+=QuantumOperation ( "," quantumOperations+=QuantumOperation)*
 	//    '}';
@@ -2381,7 +2381,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 	//ElementaryQuantumGate returns ElementaryQuantumGate:
 	//    'ElementaryQuantumGate'
 	//    (inverseForm?='inverseForm')?
-	//    name=EString
+	//    (name=EString)?
 	//    '{'
 	//        ('operation' operations+=Operation)?
 	//        'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
@@ -2414,7 +2414,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	//Measurement returns Measurement:
 	//    'Measurement'
-	//    name=EString
+	//    (name=EString)?
 	//    '{'
 	//        ('operation' operations+=Operation)?
 	//        'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
@@ -2450,7 +2450,7 @@ public class QuCircuitGrammarAccess extends AbstractElementFinder.AbstractGramma
 	
 	//Loop returns LoopOperation:
 	//    'Loop'
-	//    name=EString
+	//    (name=EString)?
 	//    '{'
 	//        (inverseForm?='inverseForm')?
 	//        (incrementBlockTargetQubits?='incrementBlockTargetQubits')?

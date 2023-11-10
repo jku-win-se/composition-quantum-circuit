@@ -227,6 +227,40 @@ class CompositeGate:
                 grover=grover.control()
         return grover
     
+    
+    def grover(self, qubits=4, control_qubits=None, inverse=False):
+        qc = QuantumCircuit(qubits)
+        # Oracle
+        qc.h([2,3])
+        qc.ccx(0,1,2)
+        qc.h(2)
+        qc.x(2)
+        qc.ccx(0,2,3)
+        qc.x(2)
+        qc.h(3)
+        qc.x([1,3])
+        qc.h(2)
+        qc.mct([0,1,3],2)
+        qc.x([1,3])
+        qc.h(2)
+        # Diffuser
+        qc.h(range(qubits))
+        qc.x(range(qubits))
+        qc.z(qubits-1)
+        qc.mct(list(range(qubits-1)),qubits-1)
+        qc.x(range(qubits))
+        qc.h(range(qubits))
+        qc.z(qubits-1)
+        grover=qc.to_gate()
+        grover.label="Grover"
+        if inverse==True:
+            grover=grover.inverse()
+        if control_qubits!=None:
+            for i in range(len(control_qubits)):
+                grover=grover.control()
+        return grover
+    
+    
     def qft(self,size=None, control_qubits=None, inverse=False):
         #size=len(target_qubits)
         n = size

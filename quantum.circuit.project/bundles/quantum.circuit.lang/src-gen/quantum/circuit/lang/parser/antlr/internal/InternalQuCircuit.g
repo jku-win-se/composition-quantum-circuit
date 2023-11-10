@@ -486,7 +486,7 @@ ruleLayer returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		otherlv_3='{'
 		{
 			newLeafNode(otherlv_3, grammarAccess.getLayerAccess().getLeftCurlyBracketKeyword_3());
@@ -811,7 +811,7 @@ ruleElementaryQuantumGate returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		otherlv_3='{'
 		{
 			newLeafNode(otherlv_3, grammarAccess.getElementaryQuantumGateAccess().getLeftCurlyBracketKeyword_3());
@@ -1150,7 +1150,7 @@ ruleMeasurement returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		otherlv_2='{'
 		{
 			newLeafNode(otherlv_2, grammarAccess.getMeasurementAccess().getLeftCurlyBracketKeyword_2());
@@ -1588,7 +1588,7 @@ ruleLoop returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		otherlv_2='{'
 		{
 			newLeafNode(otherlv_2, grammarAccess.getLoopAccess().getLeftCurlyBracketKeyword_2());

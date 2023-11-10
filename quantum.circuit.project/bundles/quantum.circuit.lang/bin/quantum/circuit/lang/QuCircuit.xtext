@@ -41,7 +41,7 @@ ClassicRegister returns ClassicRegister:
 Layer returns Layer:
 	{Layer}
 	'Layer'
-	name=EString
+	(name=EString)?
 	'{'
 		quantumOperations+=QuantumOperation ( "," quantumOperations+=QuantumOperation)*
 	'}';
@@ -63,7 +63,7 @@ StatePreparation returns StatePreparation:
 ElementaryQuantumGate returns ElementaryQuantumGate:
 	'ElementaryQuantumGate'
 	(inverseForm?='inverseForm')?
-	name=EString
+	(name=EString)?
 	'{'
 		('operation' operations+=Operation)?
 		'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']'
@@ -82,7 +82,7 @@ AngleParameter returns AngleParameter:
 
 Measurement returns Measurement:
 	'Measurement'
-	name=EString
+	(name=EString)?
 	'{'
 		('operation' operations+=Operation)?
 		'targetQubits' '[' '(' targetQubits+=Selector ')' ( "," '(' targetQubits+=Selector ')')* ']' 
@@ -104,7 +104,7 @@ CompositeQuantumGate returns CompositeQuantumGate:
 	
 Loop returns LoopOperation:
 	'Loop'
-	name=EString
+	(name=EString)?
 	'{'	
 		(inverseForm?='inverseForm')?
 		(incrementBlockTargetQubits?='incrementBlockTargetQubits')?

@@ -4751,7 +4751,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1515:1: ( rule__Layer__Group__1__Impl rule__Layer__Group__2 )
             // InternalQuCircuit.g:1516:2: rule__Layer__Group__1__Impl rule__Layer__Group__2
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_18);
             rule__Layer__Group__1__Impl();
 
             state._fsp--;
@@ -4826,7 +4826,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1542:1: ( rule__Layer__Group__2__Impl rule__Layer__Group__3 )
             // InternalQuCircuit.g:1543:2: rule__Layer__Group__2__Impl rule__Layer__Group__3
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_18);
             rule__Layer__Group__2__Impl();
 
             state._fsp--;
@@ -4855,27 +4855,38 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Layer__Group__2__Impl"
-    // InternalQuCircuit.g:1550:1: rule__Layer__Group__2__Impl : ( ( rule__Layer__NameAssignment_2 ) ) ;
+    // InternalQuCircuit.g:1550:1: rule__Layer__Group__2__Impl : ( ( rule__Layer__NameAssignment_2 )? ) ;
     public final void rule__Layer__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:1554:1: ( ( ( rule__Layer__NameAssignment_2 ) ) )
-            // InternalQuCircuit.g:1555:1: ( ( rule__Layer__NameAssignment_2 ) )
+            // InternalQuCircuit.g:1554:1: ( ( ( rule__Layer__NameAssignment_2 )? ) )
+            // InternalQuCircuit.g:1555:1: ( ( rule__Layer__NameAssignment_2 )? )
             {
-            // InternalQuCircuit.g:1555:1: ( ( rule__Layer__NameAssignment_2 ) )
-            // InternalQuCircuit.g:1556:2: ( rule__Layer__NameAssignment_2 )
+            // InternalQuCircuit.g:1555:1: ( ( rule__Layer__NameAssignment_2 )? )
+            // InternalQuCircuit.g:1556:2: ( rule__Layer__NameAssignment_2 )?
             {
              before(grammarAccess.getLayerAccess().getNameAssignment_2()); 
-            // InternalQuCircuit.g:1557:2: ( rule__Layer__NameAssignment_2 )
-            // InternalQuCircuit.g:1557:3: rule__Layer__NameAssignment_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Layer__NameAssignment_2();
+            // InternalQuCircuit.g:1557:2: ( rule__Layer__NameAssignment_2 )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            state._fsp--;
+            if ( ((LA13_0>=RULE_STRING && LA13_0<=RULE_ID)) ) {
+                alt13=1;
+            }
+            switch (alt13) {
+                case 1 :
+                    // InternalQuCircuit.g:1557:3: rule__Layer__NameAssignment_2
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Layer__NameAssignment_2();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -4911,7 +4922,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1569:1: ( rule__Layer__Group__3__Impl rule__Layer__Group__4 )
             // InternalQuCircuit.g:1570:2: rule__Layer__Group__3__Impl rule__Layer__Group__4
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_19);
             rule__Layer__Group__3__Impl();
 
             state._fsp--;
@@ -4986,7 +4997,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1596:1: ( rule__Layer__Group__4__Impl rule__Layer__Group__5 )
             // InternalQuCircuit.g:1597:2: rule__Layer__Group__4__Impl rule__Layer__Group__5
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Layer__Group__4__Impl();
 
             state._fsp--;
@@ -5071,7 +5082,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1623:1: ( rule__Layer__Group__5__Impl rule__Layer__Group__6 )
             // InternalQuCircuit.g:1624:2: rule__Layer__Group__5__Impl rule__Layer__Group__6
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_20);
             rule__Layer__Group__5__Impl();
 
             state._fsp--;
@@ -5114,21 +5125,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLayerAccess().getGroup_5()); 
             // InternalQuCircuit.g:1638:2: ( rule__Layer__Group_5__0 )*
-            loop13:
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==26) ) {
-                    alt13=1;
+                if ( (LA14_0==26) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
             	    // InternalQuCircuit.g:1638:3: rule__Layer__Group_5__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Layer__Group_5__0();
 
             	    state._fsp--;
@@ -5138,7 +5149,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -5244,7 +5255,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1677:1: ( rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1 )
             // InternalQuCircuit.g:1678:2: rule__Layer__Group_5__0__Impl rule__Layer__Group_5__1
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_19);
             rule__Layer__Group_5__0__Impl();
 
             state._fsp--;
@@ -5559,7 +5570,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1785:1: ( rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3 )
             // InternalQuCircuit.g:1786:2: rule__StatePreparation__Group__2__Impl rule__StatePreparation__Group__3
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_22);
             rule__StatePreparation__Group__2__Impl();
 
             state._fsp--;
@@ -5709,7 +5720,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1839:1: ( rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5 )
             // InternalQuCircuit.g:1840:2: rule__StatePreparation__Group__4__Impl rule__StatePreparation__Group__5
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__StatePreparation__Group__4__Impl();
 
             state._fsp--;
@@ -5794,7 +5805,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1866:1: ( rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6 )
             // InternalQuCircuit.g:1867:2: rule__StatePreparation__Group__5__Impl rule__StatePreparation__Group__6
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_23);
             rule__StatePreparation__Group__5__Impl();
 
             state._fsp--;
@@ -5837,21 +5848,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getStatePreparationAccess().getGroup_5()); 
             // InternalQuCircuit.g:1881:2: ( rule__StatePreparation__Group_5__0 )*
-            loop14:
+            loop15:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA14_0==26) ) {
-                    alt14=1;
+                if ( (LA15_0==26) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt15) {
             	case 1 :
             	    // InternalQuCircuit.g:1881:3: rule__StatePreparation__Group_5__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__StatePreparation__Group_5__0();
 
             	    state._fsp--;
@@ -5861,7 +5872,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop15;
                 }
             } while (true);
 
@@ -5897,7 +5908,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1893:1: ( rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7 )
             // InternalQuCircuit.g:1894:2: rule__StatePreparation__Group__6__Impl rule__StatePreparation__Group__7
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__StatePreparation__Group__6__Impl();
 
             state._fsp--;
@@ -5972,7 +5983,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1920:1: ( rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8 )
             // InternalQuCircuit.g:1921:2: rule__StatePreparation__Group__7__Impl rule__StatePreparation__Group__8
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__StatePreparation__Group__7__Impl();
 
             state._fsp--;
@@ -6047,7 +6058,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1947:1: ( rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9 )
             // InternalQuCircuit.g:1948:2: rule__StatePreparation__Group__8__Impl rule__StatePreparation__Group__9
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__StatePreparation__Group__8__Impl();
 
             state._fsp--;
@@ -6132,7 +6143,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:1974:1: ( rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10 )
             // InternalQuCircuit.g:1975:2: rule__StatePreparation__Group__9__Impl rule__StatePreparation__Group__10
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__StatePreparation__Group__9__Impl();
 
             state._fsp--;
@@ -6175,21 +6186,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getStatePreparationAccess().getGroup_9()); 
             // InternalQuCircuit.g:1989:2: ( rule__StatePreparation__Group_9__0 )*
-            loop15:
+            loop16:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA15_0==26) ) {
-                    alt15=1;
+                if ( (LA16_0==26) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt16) {
             	case 1 :
             	    // InternalQuCircuit.g:1989:3: rule__StatePreparation__Group_9__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__StatePreparation__Group_9__0();
 
             	    state._fsp--;
@@ -6199,7 +6210,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop16;
                 }
             } while (true);
 
@@ -6235,7 +6246,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2001:1: ( rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11 )
             // InternalQuCircuit.g:2002:2: rule__StatePreparation__Group__10__Impl rule__StatePreparation__Group__11
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             rule__StatePreparation__Group__10__Impl();
 
             state._fsp--;
@@ -6535,7 +6546,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2109:1: ( rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1 )
             // InternalQuCircuit.g:2110:2: rule__StatePreparation__Group_9__0__Impl rule__StatePreparation__Group_9__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__StatePreparation__Group_9__0__Impl();
 
             state._fsp--;
@@ -6690,7 +6701,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2163:1: ( rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1 )
             // InternalQuCircuit.g:2164:2: rule__ElementaryQuantumGate__Group__0__Impl rule__ElementaryQuantumGate__Group__1
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             rule__ElementaryQuantumGate__Group__0__Impl();
 
             state._fsp--;
@@ -6765,7 +6776,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2190:1: ( rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2 )
             // InternalQuCircuit.g:2191:2: rule__ElementaryQuantumGate__Group__1__Impl rule__ElementaryQuantumGate__Group__2
             {
-            pushFollow(FOLLOW_27);
+            pushFollow(FOLLOW_28);
             rule__ElementaryQuantumGate__Group__1__Impl();
 
             state._fsp--;
@@ -6808,13 +6819,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getInverseFormAssignment_1()); 
             // InternalQuCircuit.g:2205:2: ( rule__ElementaryQuantumGate__InverseFormAssignment_1 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==56) ) {
-                alt16=1;
+            if ( (LA17_0==56) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
                     // InternalQuCircuit.g:2205:3: rule__ElementaryQuantumGate__InverseFormAssignment_1
                     {
@@ -6861,7 +6872,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2217:1: ( rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3 )
             // InternalQuCircuit.g:2218:2: rule__ElementaryQuantumGate__Group__2__Impl rule__ElementaryQuantumGate__Group__3
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_28);
             rule__ElementaryQuantumGate__Group__2__Impl();
 
             state._fsp--;
@@ -6890,27 +6901,38 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__ElementaryQuantumGate__Group__2__Impl"
-    // InternalQuCircuit.g:2225:1: rule__ElementaryQuantumGate__Group__2__Impl : ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) ) ;
+    // InternalQuCircuit.g:2225:1: rule__ElementaryQuantumGate__Group__2__Impl : ( ( rule__ElementaryQuantumGate__NameAssignment_2 )? ) ;
     public final void rule__ElementaryQuantumGate__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:2229:1: ( ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) ) )
-            // InternalQuCircuit.g:2230:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) )
+            // InternalQuCircuit.g:2229:1: ( ( ( rule__ElementaryQuantumGate__NameAssignment_2 )? ) )
+            // InternalQuCircuit.g:2230:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 )? )
             {
-            // InternalQuCircuit.g:2230:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 ) )
-            // InternalQuCircuit.g:2231:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )
+            // InternalQuCircuit.g:2230:1: ( ( rule__ElementaryQuantumGate__NameAssignment_2 )? )
+            // InternalQuCircuit.g:2231:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )?
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getNameAssignment_2()); 
-            // InternalQuCircuit.g:2232:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )
-            // InternalQuCircuit.g:2232:3: rule__ElementaryQuantumGate__NameAssignment_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__ElementaryQuantumGate__NameAssignment_2();
+            // InternalQuCircuit.g:2232:2: ( rule__ElementaryQuantumGate__NameAssignment_2 )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            state._fsp--;
+            if ( ((LA18_0>=RULE_STRING && LA18_0<=RULE_ID)) ) {
+                alt18=1;
+            }
+            switch (alt18) {
+                case 1 :
+                    // InternalQuCircuit.g:2232:3: rule__ElementaryQuantumGate__NameAssignment_2
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__ElementaryQuantumGate__NameAssignment_2();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -6946,7 +6968,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2244:1: ( rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4 )
             // InternalQuCircuit.g:2245:2: rule__ElementaryQuantumGate__Group__3__Impl rule__ElementaryQuantumGate__Group__4
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__ElementaryQuantumGate__Group__3__Impl();
 
             state._fsp--;
@@ -7021,7 +7043,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2271:1: ( rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5 )
             // InternalQuCircuit.g:2272:2: rule__ElementaryQuantumGate__Group__4__Impl rule__ElementaryQuantumGate__Group__5
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__ElementaryQuantumGate__Group__4__Impl();
 
             state._fsp--;
@@ -7064,13 +7086,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_4()); 
             // InternalQuCircuit.g:2286:2: ( rule__ElementaryQuantumGate__Group_4__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA17_0==28) ) {
-                alt17=1;
+            if ( (LA19_0==28) ) {
+                alt19=1;
             }
-            switch (alt17) {
+            switch (alt19) {
                 case 1 :
                     // InternalQuCircuit.g:2286:3: rule__ElementaryQuantumGate__Group_4__0
                     {
@@ -7117,7 +7139,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2298:1: ( rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6 )
             // InternalQuCircuit.g:2299:2: rule__ElementaryQuantumGate__Group__5__Impl rule__ElementaryQuantumGate__Group__6
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__ElementaryQuantumGate__Group__5__Impl();
 
             state._fsp--;
@@ -7267,7 +7289,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2352:1: ( rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8 )
             // InternalQuCircuit.g:2353:2: rule__ElementaryQuantumGate__Group__7__Impl rule__ElementaryQuantumGate__Group__8
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group__7__Impl();
 
             state._fsp--;
@@ -7427,7 +7449,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2406:1: ( rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10 )
             // InternalQuCircuit.g:2407:2: rule__ElementaryQuantumGate__Group__9__Impl rule__ElementaryQuantumGate__Group__10
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__ElementaryQuantumGate__Group__9__Impl();
 
             state._fsp--;
@@ -7502,7 +7524,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2433:1: ( rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11 )
             // InternalQuCircuit.g:2434:2: rule__ElementaryQuantumGate__Group__10__Impl rule__ElementaryQuantumGate__Group__11
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__ElementaryQuantumGate__Group__10__Impl();
 
             state._fsp--;
@@ -7545,21 +7567,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_10()); 
             // InternalQuCircuit.g:2448:2: ( rule__ElementaryQuantumGate__Group_10__0 )*
-            loop18:
+            loop20:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA18_0==26) ) {
-                    alt18=1;
+                if ( (LA20_0==26) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt20) {
             	case 1 :
             	    // InternalQuCircuit.g:2448:3: rule__ElementaryQuantumGate__Group_10__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__ElementaryQuantumGate__Group_10__0();
 
             	    state._fsp--;
@@ -7569,7 +7591,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop18;
+            	    break loop20;
                 }
             } while (true);
 
@@ -7605,7 +7627,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2460:1: ( rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12 )
             // InternalQuCircuit.g:2461:2: rule__ElementaryQuantumGate__Group__11__Impl rule__ElementaryQuantumGate__Group__12
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__ElementaryQuantumGate__Group__11__Impl();
 
             state._fsp--;
@@ -7680,7 +7702,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2487:1: ( rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13 )
             // InternalQuCircuit.g:2488:2: rule__ElementaryQuantumGate__Group__12__Impl rule__ElementaryQuantumGate__Group__13
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__ElementaryQuantumGate__Group__12__Impl();
 
             state._fsp--;
@@ -7723,21 +7745,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_12()); 
             // InternalQuCircuit.g:2502:2: ( rule__ElementaryQuantumGate__Group_12__0 )*
-            loop19:
+            loop21:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA19_0==33) ) {
-                    alt19=1;
+                if ( (LA21_0==33) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt21) {
             	case 1 :
             	    // InternalQuCircuit.g:2502:3: rule__ElementaryQuantumGate__Group_12__0
             	    {
-            	    pushFollow(FOLLOW_30);
+            	    pushFollow(FOLLOW_31);
             	    rule__ElementaryQuantumGate__Group_12__0();
 
             	    state._fsp--;
@@ -7747,7 +7769,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop21;
                 }
             } while (true);
 
@@ -7783,7 +7805,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2514:1: ( rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14 )
             // InternalQuCircuit.g:2515:2: rule__ElementaryQuantumGate__Group__13__Impl rule__ElementaryQuantumGate__Group__14
             {
-            pushFollow(FOLLOW_29);
+            pushFollow(FOLLOW_30);
             rule__ElementaryQuantumGate__Group__13__Impl();
 
             state._fsp--;
@@ -7826,13 +7848,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_13()); 
             // InternalQuCircuit.g:2529:2: ( rule__ElementaryQuantumGate__Group_13__0 )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA20_0==34) ) {
-                alt20=1;
+            if ( (LA22_0==34) ) {
+                alt22=1;
             }
-            switch (alt20) {
+            switch (alt22) {
                 case 1 :
                     // InternalQuCircuit.g:2529:3: rule__ElementaryQuantumGate__Group_13__0
                     {
@@ -8179,7 +8201,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2649:1: ( rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2 )
             // InternalQuCircuit.g:2650:2: rule__ElementaryQuantumGate__Group_10__1__Impl rule__ElementaryQuantumGate__Group_10__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group_10__1__Impl();
 
             state._fsp--;
@@ -8409,7 +8431,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2730:1: ( rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1 )
             // InternalQuCircuit.g:2731:2: rule__ElementaryQuantumGate__Group_12__0__Impl rule__ElementaryQuantumGate__Group_12__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__ElementaryQuantumGate__Group_12__0__Impl();
 
             state._fsp--;
@@ -8484,7 +8506,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2757:1: ( rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2 )
             // InternalQuCircuit.g:2758:2: rule__ElementaryQuantumGate__Group_12__1__Impl rule__ElementaryQuantumGate__Group_12__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group_12__1__Impl();
 
             state._fsp--;
@@ -8559,7 +8581,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2784:1: ( rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3 )
             // InternalQuCircuit.g:2785:2: rule__ElementaryQuantumGate__Group_12__2__Impl rule__ElementaryQuantumGate__Group_12__3
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__ElementaryQuantumGate__Group_12__2__Impl();
 
             state._fsp--;
@@ -8644,7 +8666,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2811:1: ( rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4 )
             // InternalQuCircuit.g:2812:2: rule__ElementaryQuantumGate__Group_12__3__Impl rule__ElementaryQuantumGate__Group_12__4
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__ElementaryQuantumGate__Group_12__3__Impl();
 
             state._fsp--;
@@ -8687,21 +8709,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getElementaryQuantumGateAccess().getGroup_12_3()); 
             // InternalQuCircuit.g:2826:2: ( rule__ElementaryQuantumGate__Group_12_3__0 )*
-            loop21:
+            loop23:
             do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA21_0==26) ) {
-                    alt21=1;
+                if ( (LA23_0==26) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt21) {
+                switch (alt23) {
             	case 1 :
             	    // InternalQuCircuit.g:2826:3: rule__ElementaryQuantumGate__Group_12_3__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__ElementaryQuantumGate__Group_12_3__0();
 
             	    state._fsp--;
@@ -8711,7 +8733,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop21;
+            	    break loop23;
                 }
             } while (true);
 
@@ -8817,7 +8839,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:2865:1: ( rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1 )
             // InternalQuCircuit.g:2866:2: rule__ElementaryQuantumGate__Group_12_3__0__Impl rule__ElementaryQuantumGate__Group_12_3__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__ElementaryQuantumGate__Group_12_3__0__Impl();
 
             state._fsp--;
@@ -9202,7 +9224,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3000:1: ( rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2 )
             // InternalQuCircuit.g:3001:2: rule__AngleParameter__Group__1__Impl rule__AngleParameter__Group__2
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__AngleParameter__Group__1__Impl();
 
             state._fsp--;
@@ -9277,7 +9299,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3027:1: ( rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3 )
             // InternalQuCircuit.g:3028:2: rule__AngleParameter__Group__2__Impl rule__AngleParameter__Group__3
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__AngleParameter__Group__2__Impl();
 
             state._fsp--;
@@ -9320,13 +9342,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getAngleParameterAccess().getGroup_2()); 
             // InternalQuCircuit.g:3042:2: ( rule__AngleParameter__Group_2__0 )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA22_0==35) ) {
-                alt22=1;
+            if ( (LA24_0==35) ) {
+                alt24=1;
             }
-            switch (alt22) {
+            switch (alt24) {
                 case 1 :
                     // InternalQuCircuit.g:3042:3: rule__AngleParameter__Group_2__0
                     {
@@ -9373,7 +9395,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3054:1: ( rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4 )
             // InternalQuCircuit.g:3055:2: rule__AngleParameter__Group__3__Impl rule__AngleParameter__Group__4
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__AngleParameter__Group__3__Impl();
 
             state._fsp--;
@@ -9416,13 +9438,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getAngleParameterAccess().getGroup_3()); 
             // InternalQuCircuit.g:3069:2: ( rule__AngleParameter__Group_3__0 )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA23_0==36) ) {
-                alt23=1;
+            if ( (LA25_0==36) ) {
+                alt25=1;
             }
-            switch (alt23) {
+            switch (alt25) {
                 case 1 :
                     // InternalQuCircuit.g:3069:3: rule__AngleParameter__Group_3__0
                     {
@@ -9469,7 +9491,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3081:1: ( rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5 )
             // InternalQuCircuit.g:3082:2: rule__AngleParameter__Group__4__Impl rule__AngleParameter__Group__5
             {
-            pushFollow(FOLLOW_31);
+            pushFollow(FOLLOW_32);
             rule__AngleParameter__Group__4__Impl();
 
             state._fsp--;
@@ -9512,13 +9534,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getAngleParameterAccess().getGroup_4()); 
             // InternalQuCircuit.g:3096:2: ( rule__AngleParameter__Group_4__0 )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA24_0==37) ) {
-                alt24=1;
+            if ( (LA26_0==37) ) {
+                alt26=1;
             }
-            switch (alt24) {
+            switch (alt26) {
                 case 1 :
                     // InternalQuCircuit.g:3096:3: rule__AngleParameter__Group_4__0
                     {
@@ -9635,7 +9657,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3135:1: ( rule__AngleParameter__Group_2__0__Impl rule__AngleParameter__Group_2__1 )
             // InternalQuCircuit.g:3136:2: rule__AngleParameter__Group_2__0__Impl rule__AngleParameter__Group_2__1
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__AngleParameter__Group_2__0__Impl();
 
             state._fsp--;
@@ -9790,7 +9812,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3189:1: ( rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1 )
             // InternalQuCircuit.g:3190:2: rule__AngleParameter__Group_3__0__Impl rule__AngleParameter__Group_3__1
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__AngleParameter__Group_3__0__Impl();
 
             state._fsp--;
@@ -9945,7 +9967,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3243:1: ( rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1 )
             // InternalQuCircuit.g:3244:2: rule__AngleParameter__Group_4__0__Impl rule__AngleParameter__Group_4__1
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__AngleParameter__Group_4__0__Impl();
 
             state._fsp--;
@@ -10100,7 +10122,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3297:1: ( rule__Measurement__Group__0__Impl rule__Measurement__Group__1 )
             // InternalQuCircuit.g:3298:2: rule__Measurement__Group__0__Impl rule__Measurement__Group__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_18);
             rule__Measurement__Group__0__Impl();
 
             state._fsp--;
@@ -10175,7 +10197,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3324:1: ( rule__Measurement__Group__1__Impl rule__Measurement__Group__2 )
             // InternalQuCircuit.g:3325:2: rule__Measurement__Group__1__Impl rule__Measurement__Group__2
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_18);
             rule__Measurement__Group__1__Impl();
 
             state._fsp--;
@@ -10204,27 +10226,38 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Measurement__Group__1__Impl"
-    // InternalQuCircuit.g:3332:1: rule__Measurement__Group__1__Impl : ( ( rule__Measurement__NameAssignment_1 ) ) ;
+    // InternalQuCircuit.g:3332:1: rule__Measurement__Group__1__Impl : ( ( rule__Measurement__NameAssignment_1 )? ) ;
     public final void rule__Measurement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:3336:1: ( ( ( rule__Measurement__NameAssignment_1 ) ) )
-            // InternalQuCircuit.g:3337:1: ( ( rule__Measurement__NameAssignment_1 ) )
+            // InternalQuCircuit.g:3336:1: ( ( ( rule__Measurement__NameAssignment_1 )? ) )
+            // InternalQuCircuit.g:3337:1: ( ( rule__Measurement__NameAssignment_1 )? )
             {
-            // InternalQuCircuit.g:3337:1: ( ( rule__Measurement__NameAssignment_1 ) )
-            // InternalQuCircuit.g:3338:2: ( rule__Measurement__NameAssignment_1 )
+            // InternalQuCircuit.g:3337:1: ( ( rule__Measurement__NameAssignment_1 )? )
+            // InternalQuCircuit.g:3338:2: ( rule__Measurement__NameAssignment_1 )?
             {
              before(grammarAccess.getMeasurementAccess().getNameAssignment_1()); 
-            // InternalQuCircuit.g:3339:2: ( rule__Measurement__NameAssignment_1 )
-            // InternalQuCircuit.g:3339:3: rule__Measurement__NameAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Measurement__NameAssignment_1();
+            // InternalQuCircuit.g:3339:2: ( rule__Measurement__NameAssignment_1 )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            state._fsp--;
+            if ( ((LA27_0>=RULE_STRING && LA27_0<=RULE_ID)) ) {
+                alt27=1;
+            }
+            switch (alt27) {
+                case 1 :
+                    // InternalQuCircuit.g:3339:3: rule__Measurement__NameAssignment_1
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Measurement__NameAssignment_1();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -10260,7 +10293,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3351:1: ( rule__Measurement__Group__2__Impl rule__Measurement__Group__3 )
             // InternalQuCircuit.g:3352:2: rule__Measurement__Group__2__Impl rule__Measurement__Group__3
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__Measurement__Group__2__Impl();
 
             state._fsp--;
@@ -10335,7 +10368,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3378:1: ( rule__Measurement__Group__3__Impl rule__Measurement__Group__4 )
             // InternalQuCircuit.g:3379:2: rule__Measurement__Group__3__Impl rule__Measurement__Group__4
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_29);
             rule__Measurement__Group__3__Impl();
 
             state._fsp--;
@@ -10378,13 +10411,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getMeasurementAccess().getGroup_3()); 
             // InternalQuCircuit.g:3393:2: ( rule__Measurement__Group_3__0 )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA25_0==28) ) {
-                alt25=1;
+            if ( (LA28_0==28) ) {
+                alt28=1;
             }
-            switch (alt25) {
+            switch (alt28) {
                 case 1 :
                     // InternalQuCircuit.g:3393:3: rule__Measurement__Group_3__0
                     {
@@ -10431,7 +10464,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3405:1: ( rule__Measurement__Group__4__Impl rule__Measurement__Group__5 )
             // InternalQuCircuit.g:3406:2: rule__Measurement__Group__4__Impl rule__Measurement__Group__5
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Measurement__Group__4__Impl();
 
             state._fsp--;
@@ -10581,7 +10614,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3459:1: ( rule__Measurement__Group__6__Impl rule__Measurement__Group__7 )
             // InternalQuCircuit.g:3460:2: rule__Measurement__Group__6__Impl rule__Measurement__Group__7
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group__6__Impl();
 
             state._fsp--;
@@ -10741,7 +10774,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3513:1: ( rule__Measurement__Group__8__Impl rule__Measurement__Group__9 )
             // InternalQuCircuit.g:3514:2: rule__Measurement__Group__8__Impl rule__Measurement__Group__9
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Measurement__Group__8__Impl();
 
             state._fsp--;
@@ -10816,7 +10849,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3540:1: ( rule__Measurement__Group__9__Impl rule__Measurement__Group__10 )
             // InternalQuCircuit.g:3541:2: rule__Measurement__Group__9__Impl rule__Measurement__Group__10
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Measurement__Group__9__Impl();
 
             state._fsp--;
@@ -10859,21 +10892,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getMeasurementAccess().getGroup_9()); 
             // InternalQuCircuit.g:3555:2: ( rule__Measurement__Group_9__0 )*
-            loop26:
+            loop29:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA26_0==26) ) {
-                    alt26=1;
+                if ( (LA29_0==26) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt29) {
             	case 1 :
             	    // InternalQuCircuit.g:3555:3: rule__Measurement__Group_9__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Measurement__Group_9__0();
 
             	    state._fsp--;
@@ -10883,7 +10916,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop29;
                 }
             } while (true);
 
@@ -10919,7 +10952,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3567:1: ( rule__Measurement__Group__10__Impl rule__Measurement__Group__11 )
             // InternalQuCircuit.g:3568:2: rule__Measurement__Group__10__Impl rule__Measurement__Group__11
             {
-            pushFollow(FOLLOW_33);
+            pushFollow(FOLLOW_34);
             rule__Measurement__Group__10__Impl();
 
             state._fsp--;
@@ -10994,7 +11027,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3594:1: ( rule__Measurement__Group__11__Impl rule__Measurement__Group__12 )
             // InternalQuCircuit.g:3595:2: rule__Measurement__Group__11__Impl rule__Measurement__Group__12
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Measurement__Group__11__Impl();
 
             state._fsp--;
@@ -11144,7 +11177,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3648:1: ( rule__Measurement__Group__13__Impl rule__Measurement__Group__14 )
             // InternalQuCircuit.g:3649:2: rule__Measurement__Group__13__Impl rule__Measurement__Group__14
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group__13__Impl();
 
             state._fsp--;
@@ -11304,7 +11337,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3702:1: ( rule__Measurement__Group__15__Impl rule__Measurement__Group__16 )
             // InternalQuCircuit.g:3703:2: rule__Measurement__Group__15__Impl rule__Measurement__Group__16
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Measurement__Group__15__Impl();
 
             state._fsp--;
@@ -11379,7 +11412,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3729:1: ( rule__Measurement__Group__16__Impl rule__Measurement__Group__17 )
             // InternalQuCircuit.g:3730:2: rule__Measurement__Group__16__Impl rule__Measurement__Group__17
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Measurement__Group__16__Impl();
 
             state._fsp--;
@@ -11422,21 +11455,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getMeasurementAccess().getGroup_16()); 
             // InternalQuCircuit.g:3744:2: ( rule__Measurement__Group_16__0 )*
-            loop27:
+            loop30:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA27_0==26) ) {
-                    alt27=1;
+                if ( (LA30_0==26) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt27) {
+                switch (alt30) {
             	case 1 :
             	    // InternalQuCircuit.g:3744:3: rule__Measurement__Group_16__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Measurement__Group_16__0();
 
             	    state._fsp--;
@@ -11446,7 +11479,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop30;
                 }
             } while (true);
 
@@ -11482,7 +11515,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3756:1: ( rule__Measurement__Group__17__Impl rule__Measurement__Group__18 )
             // InternalQuCircuit.g:3757:2: rule__Measurement__Group__17__Impl rule__Measurement__Group__18
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_27);
             rule__Measurement__Group__17__Impl();
 
             state._fsp--;
@@ -11857,7 +11890,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3891:1: ( rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2 )
             // InternalQuCircuit.g:3892:2: rule__Measurement__Group_9__1__Impl rule__Measurement__Group_9__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group_9__1__Impl();
 
             state._fsp--;
@@ -12162,7 +12195,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:3999:1: ( rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2 )
             // InternalQuCircuit.g:4000:2: rule__Measurement__Group_16__1__Impl rule__Measurement__Group_16__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Measurement__Group_16__1__Impl();
 
             state._fsp--;
@@ -12552,7 +12585,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4134:1: ( rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3 )
             // InternalQuCircuit.g:4135:2: rule__CompositeQuantumGate__Group__2__Impl rule__CompositeQuantumGate__Group__3
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             rule__CompositeQuantumGate__Group__2__Impl();
 
             state._fsp--;
@@ -12627,7 +12660,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4161:1: ( rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4 )
             // InternalQuCircuit.g:4162:2: rule__CompositeQuantumGate__Group__3__Impl rule__CompositeQuantumGate__Group__4
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             rule__CompositeQuantumGate__Group__3__Impl();
 
             state._fsp--;
@@ -12670,13 +12703,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getInverseFormAssignment_3()); 
             // InternalQuCircuit.g:4176:2: ( rule__CompositeQuantumGate__InverseFormAssignment_3 )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA28_0==56) ) {
-                alt28=1;
+            if ( (LA31_0==56) ) {
+                alt31=1;
             }
-            switch (alt28) {
+            switch (alt31) {
                 case 1 :
                     // InternalQuCircuit.g:4176:3: rule__CompositeQuantumGate__InverseFormAssignment_3
                     {
@@ -12723,7 +12756,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4188:1: ( rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5 )
             // InternalQuCircuit.g:4189:2: rule__CompositeQuantumGate__Group__4__Impl rule__CompositeQuantumGate__Group__5
             {
-            pushFollow(FOLLOW_34);
+            pushFollow(FOLLOW_35);
             rule__CompositeQuantumGate__Group__4__Impl();
 
             state._fsp--;
@@ -12766,13 +12799,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_4()); 
             // InternalQuCircuit.g:4203:2: ( rule__CompositeQuantumGate__Group_4__0 )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA29_0==28) ) {
-                alt29=1;
+            if ( (LA32_0==28) ) {
+                alt32=1;
             }
-            switch (alt29) {
+            switch (alt32) {
                 case 1 :
                     // InternalQuCircuit.g:4203:3: rule__CompositeQuantumGate__Group_4__0
                     {
@@ -12819,7 +12852,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4215:1: ( rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6 )
             // InternalQuCircuit.g:4216:2: rule__CompositeQuantumGate__Group__5__Impl rule__CompositeQuantumGate__Group__6
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__CompositeQuantumGate__Group__5__Impl();
 
             state._fsp--;
@@ -12969,7 +13002,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4269:1: ( rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8 )
             // InternalQuCircuit.g:4270:2: rule__CompositeQuantumGate__Group__7__Impl rule__CompositeQuantumGate__Group__8
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group__7__Impl();
 
             state._fsp--;
@@ -13129,7 +13162,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4323:1: ( rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10 )
             // InternalQuCircuit.g:4324:2: rule__CompositeQuantumGate__Group__9__Impl rule__CompositeQuantumGate__Group__10
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__CompositeQuantumGate__Group__9__Impl();
 
             state._fsp--;
@@ -13204,7 +13237,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4350:1: ( rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11 )
             // InternalQuCircuit.g:4351:2: rule__CompositeQuantumGate__Group__10__Impl rule__CompositeQuantumGate__Group__11
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__CompositeQuantumGate__Group__10__Impl();
 
             state._fsp--;
@@ -13247,21 +13280,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_10()); 
             // InternalQuCircuit.g:4365:2: ( rule__CompositeQuantumGate__Group_10__0 )*
-            loop30:
+            loop33:
             do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA30_0==26) ) {
-                    alt30=1;
+                if ( (LA33_0==26) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt30) {
+                switch (alt33) {
             	case 1 :
             	    // InternalQuCircuit.g:4365:3: rule__CompositeQuantumGate__Group_10__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__CompositeQuantumGate__Group_10__0();
 
             	    state._fsp--;
@@ -13271,7 +13304,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop33;
                 }
             } while (true);
 
@@ -13307,7 +13340,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4377:1: ( rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12 )
             // InternalQuCircuit.g:4378:2: rule__CompositeQuantumGate__Group__11__Impl rule__CompositeQuantumGate__Group__12
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__CompositeQuantumGate__Group__11__Impl();
 
             state._fsp--;
@@ -13382,7 +13415,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4404:1: ( rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13 )
             // InternalQuCircuit.g:4405:2: rule__CompositeQuantumGate__Group__12__Impl rule__CompositeQuantumGate__Group__13
             {
-            pushFollow(FOLLOW_35);
+            pushFollow(FOLLOW_36);
             rule__CompositeQuantumGate__Group__12__Impl();
 
             state._fsp--;
@@ -13425,13 +13458,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_12()); 
             // InternalQuCircuit.g:4419:2: ( rule__CompositeQuantumGate__Group_12__0 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA31_0==33) ) {
-                alt31=1;
+            if ( (LA34_0==33) ) {
+                alt34=1;
             }
-            switch (alt31) {
+            switch (alt34) {
                 case 1 :
                     // InternalQuCircuit.g:4419:3: rule__CompositeQuantumGate__Group_12__0
                     {
@@ -13778,7 +13811,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4539:1: ( rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2 )
             // InternalQuCircuit.g:4540:2: rule__CompositeQuantumGate__Group_10__1__Impl rule__CompositeQuantumGate__Group_10__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group_10__1__Impl();
 
             state._fsp--;
@@ -14008,7 +14041,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4620:1: ( rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1 )
             // InternalQuCircuit.g:4621:2: rule__CompositeQuantumGate__Group_12__0__Impl rule__CompositeQuantumGate__Group_12__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__CompositeQuantumGate__Group_12__0__Impl();
 
             state._fsp--;
@@ -14083,7 +14116,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4647:1: ( rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2 )
             // InternalQuCircuit.g:4648:2: rule__CompositeQuantumGate__Group_12__1__Impl rule__CompositeQuantumGate__Group_12__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group_12__1__Impl();
 
             state._fsp--;
@@ -14158,7 +14191,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4674:1: ( rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3 )
             // InternalQuCircuit.g:4675:2: rule__CompositeQuantumGate__Group_12__2__Impl rule__CompositeQuantumGate__Group_12__3
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__CompositeQuantumGate__Group_12__2__Impl();
 
             state._fsp--;
@@ -14243,7 +14276,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4701:1: ( rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4 )
             // InternalQuCircuit.g:4702:2: rule__CompositeQuantumGate__Group_12__3__Impl rule__CompositeQuantumGate__Group_12__4
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__CompositeQuantumGate__Group_12__3__Impl();
 
             state._fsp--;
@@ -14286,21 +14319,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getCompositeQuantumGateAccess().getGroup_12_3()); 
             // InternalQuCircuit.g:4716:2: ( rule__CompositeQuantumGate__Group_12_3__0 )*
-            loop32:
+            loop35:
             do {
-                int alt32=2;
-                int LA32_0 = input.LA(1);
+                int alt35=2;
+                int LA35_0 = input.LA(1);
 
-                if ( (LA32_0==26) ) {
-                    alt32=1;
+                if ( (LA35_0==26) ) {
+                    alt35=1;
                 }
 
 
-                switch (alt32) {
+                switch (alt35) {
             	case 1 :
             	    // InternalQuCircuit.g:4716:3: rule__CompositeQuantumGate__Group_12_3__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__CompositeQuantumGate__Group_12_3__0();
 
             	    state._fsp--;
@@ -14310,7 +14343,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop32;
+            	    break loop35;
                 }
             } while (true);
 
@@ -14416,7 +14449,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4755:1: ( rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1 )
             // InternalQuCircuit.g:4756:2: rule__CompositeQuantumGate__Group_12_3__0__Impl rule__CompositeQuantumGate__Group_12_3__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__CompositeQuantumGate__Group_12_3__0__Impl();
 
             state._fsp--;
@@ -14571,7 +14604,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4809:1: ( rule__Loop__Group__0__Impl rule__Loop__Group__1 )
             // InternalQuCircuit.g:4810:2: rule__Loop__Group__0__Impl rule__Loop__Group__1
             {
-            pushFollow(FOLLOW_3);
+            pushFollow(FOLLOW_18);
             rule__Loop__Group__0__Impl();
 
             state._fsp--;
@@ -14646,7 +14679,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4836:1: ( rule__Loop__Group__1__Impl rule__Loop__Group__2 )
             // InternalQuCircuit.g:4837:2: rule__Loop__Group__1__Impl rule__Loop__Group__2
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_18);
             rule__Loop__Group__1__Impl();
 
             state._fsp--;
@@ -14675,27 +14708,38 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__Loop__Group__1__Impl"
-    // InternalQuCircuit.g:4844:1: rule__Loop__Group__1__Impl : ( ( rule__Loop__NameAssignment_1 ) ) ;
+    // InternalQuCircuit.g:4844:1: rule__Loop__Group__1__Impl : ( ( rule__Loop__NameAssignment_1 )? ) ;
     public final void rule__Loop__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalQuCircuit.g:4848:1: ( ( ( rule__Loop__NameAssignment_1 ) ) )
-            // InternalQuCircuit.g:4849:1: ( ( rule__Loop__NameAssignment_1 ) )
+            // InternalQuCircuit.g:4848:1: ( ( ( rule__Loop__NameAssignment_1 )? ) )
+            // InternalQuCircuit.g:4849:1: ( ( rule__Loop__NameAssignment_1 )? )
             {
-            // InternalQuCircuit.g:4849:1: ( ( rule__Loop__NameAssignment_1 ) )
-            // InternalQuCircuit.g:4850:2: ( rule__Loop__NameAssignment_1 )
+            // InternalQuCircuit.g:4849:1: ( ( rule__Loop__NameAssignment_1 )? )
+            // InternalQuCircuit.g:4850:2: ( rule__Loop__NameAssignment_1 )?
             {
              before(grammarAccess.getLoopAccess().getNameAssignment_1()); 
-            // InternalQuCircuit.g:4851:2: ( rule__Loop__NameAssignment_1 )
-            // InternalQuCircuit.g:4851:3: rule__Loop__NameAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Loop__NameAssignment_1();
+            // InternalQuCircuit.g:4851:2: ( rule__Loop__NameAssignment_1 )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            state._fsp--;
+            if ( ((LA36_0>=RULE_STRING && LA36_0<=RULE_ID)) ) {
+                alt36=1;
+            }
+            switch (alt36) {
+                case 1 :
+                    // InternalQuCircuit.g:4851:3: rule__Loop__NameAssignment_1
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Loop__NameAssignment_1();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -14731,7 +14775,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4863:1: ( rule__Loop__Group__2__Impl rule__Loop__Group__3 )
             // InternalQuCircuit.g:4864:2: rule__Loop__Group__2__Impl rule__Loop__Group__3
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__2__Impl();
 
             state._fsp--;
@@ -14806,7 +14850,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4890:1: ( rule__Loop__Group__3__Impl rule__Loop__Group__4 )
             // InternalQuCircuit.g:4891:2: rule__Loop__Group__3__Impl rule__Loop__Group__4
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__3__Impl();
 
             state._fsp--;
@@ -14849,13 +14893,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getInverseFormAssignment_3()); 
             // InternalQuCircuit.g:4905:2: ( rule__Loop__InverseFormAssignment_3 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA33_0==56) ) {
-                alt33=1;
+            if ( (LA37_0==56) ) {
+                alt37=1;
             }
-            switch (alt33) {
+            switch (alt37) {
                 case 1 :
                     // InternalQuCircuit.g:4905:3: rule__Loop__InverseFormAssignment_3
                     {
@@ -14902,7 +14946,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4917:1: ( rule__Loop__Group__4__Impl rule__Loop__Group__5 )
             // InternalQuCircuit.g:4918:2: rule__Loop__Group__4__Impl rule__Loop__Group__5
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__4__Impl();
 
             state._fsp--;
@@ -14945,13 +14989,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getIncrementBlockTargetQubitsAssignment_4()); 
             // InternalQuCircuit.g:4932:2: ( rule__Loop__IncrementBlockTargetQubitsAssignment_4 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA34_0==57) ) {
-                alt34=1;
+            if ( (LA38_0==57) ) {
+                alt38=1;
             }
-            switch (alt34) {
+            switch (alt38) {
                 case 1 :
                     // InternalQuCircuit.g:4932:3: rule__Loop__IncrementBlockTargetQubitsAssignment_4
                     {
@@ -14998,7 +15042,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4944:1: ( rule__Loop__Group__5__Impl rule__Loop__Group__6 )
             // InternalQuCircuit.g:4945:2: rule__Loop__Group__5__Impl rule__Loop__Group__6
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__5__Impl();
 
             state._fsp--;
@@ -15041,13 +15085,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getIncrementBlockControlQubitsAssignment_5()); 
             // InternalQuCircuit.g:4959:2: ( rule__Loop__IncrementBlockControlQubitsAssignment_5 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA35_0==58) ) {
-                alt35=1;
+            if ( (LA39_0==58) ) {
+                alt39=1;
             }
-            switch (alt35) {
+            switch (alt39) {
                 case 1 :
                     // InternalQuCircuit.g:4959:3: rule__Loop__IncrementBlockControlQubitsAssignment_5
                     {
@@ -15094,7 +15138,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4971:1: ( rule__Loop__Group__6__Impl rule__Loop__Group__7 )
             // InternalQuCircuit.g:4972:2: rule__Loop__Group__6__Impl rule__Loop__Group__7
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__6__Impl();
 
             state._fsp--;
@@ -15137,13 +15181,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_6()); 
             // InternalQuCircuit.g:4986:2: ( rule__Loop__Group_6__0 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA36_0==44) ) {
-                alt36=1;
+            if ( (LA40_0==44) ) {
+                alt40=1;
             }
-            switch (alt36) {
+            switch (alt40) {
                 case 1 :
                     // InternalQuCircuit.g:4986:3: rule__Loop__Group_6__0
                     {
@@ -15190,7 +15234,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:4998:1: ( rule__Loop__Group__7__Impl rule__Loop__Group__8 )
             // InternalQuCircuit.g:4999:2: rule__Loop__Group__7__Impl rule__Loop__Group__8
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__7__Impl();
 
             state._fsp--;
@@ -15233,13 +15277,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getIncrementTargetQubitsAssignment_7()); 
             // InternalQuCircuit.g:5013:2: ( rule__Loop__IncrementTargetQubitsAssignment_7 )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA37_0==59) ) {
-                alt37=1;
+            if ( (LA41_0==59) ) {
+                alt41=1;
             }
-            switch (alt37) {
+            switch (alt41) {
                 case 1 :
                     // InternalQuCircuit.g:5013:3: rule__Loop__IncrementTargetQubitsAssignment_7
                     {
@@ -15286,7 +15330,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5025:1: ( rule__Loop__Group__8__Impl rule__Loop__Group__9 )
             // InternalQuCircuit.g:5026:2: rule__Loop__Group__8__Impl rule__Loop__Group__9
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__8__Impl();
 
             state._fsp--;
@@ -15329,13 +15373,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getIncrementControlQubitsAssignment_8()); 
             // InternalQuCircuit.g:5040:2: ( rule__Loop__IncrementControlQubitsAssignment_8 )?
-            int alt38=2;
-            int LA38_0 = input.LA(1);
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA38_0==60) ) {
-                alt38=1;
+            if ( (LA42_0==60) ) {
+                alt42=1;
             }
-            switch (alt38) {
+            switch (alt42) {
                 case 1 :
                     // InternalQuCircuit.g:5040:3: rule__Loop__IncrementControlQubitsAssignment_8
                     {
@@ -15382,7 +15426,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5052:1: ( rule__Loop__Group__9__Impl rule__Loop__Group__10 )
             // InternalQuCircuit.g:5053:2: rule__Loop__Group__9__Impl rule__Loop__Group__10
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__9__Impl();
 
             state._fsp--;
@@ -15425,13 +15469,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_9()); 
             // InternalQuCircuit.g:5067:2: ( rule__Loop__Group_9__0 )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            if ( (LA39_0==45) ) {
-                alt39=1;
+            if ( (LA43_0==45) ) {
+                alt43=1;
             }
-            switch (alt39) {
+            switch (alt43) {
                 case 1 :
                     // InternalQuCircuit.g:5067:3: rule__Loop__Group_9__0
                     {
@@ -15478,7 +15522,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5079:1: ( rule__Loop__Group__10__Impl rule__Loop__Group__11 )
             // InternalQuCircuit.g:5080:2: rule__Loop__Group__10__Impl rule__Loop__Group__11
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__10__Impl();
 
             state._fsp--;
@@ -15521,13 +15565,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_10()); 
             // InternalQuCircuit.g:5094:2: ( rule__Loop__Group_10__0 )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA40_0==46) ) {
-                alt40=1;
+            if ( (LA44_0==46) ) {
+                alt44=1;
             }
-            switch (alt40) {
+            switch (alt44) {
                 case 1 :
                     // InternalQuCircuit.g:5094:3: rule__Loop__Group_10__0
                     {
@@ -15574,7 +15618,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5106:1: ( rule__Loop__Group__11__Impl rule__Loop__Group__12 )
             // InternalQuCircuit.g:5107:2: rule__Loop__Group__11__Impl rule__Loop__Group__12
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__11__Impl();
 
             state._fsp--;
@@ -15617,13 +15661,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_11()); 
             // InternalQuCircuit.g:5121:2: ( rule__Loop__Group_11__0 )?
-            int alt41=2;
-            int LA41_0 = input.LA(1);
+            int alt45=2;
+            int LA45_0 = input.LA(1);
 
-            if ( (LA41_0==47) ) {
-                alt41=1;
+            if ( (LA45_0==47) ) {
+                alt45=1;
             }
-            switch (alt41) {
+            switch (alt45) {
                 case 1 :
                     // InternalQuCircuit.g:5121:3: rule__Loop__Group_11__0
                     {
@@ -15670,7 +15714,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5133:1: ( rule__Loop__Group__12__Impl rule__Loop__Group__13 )
             // InternalQuCircuit.g:5134:2: rule__Loop__Group__12__Impl rule__Loop__Group__13
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__12__Impl();
 
             state._fsp--;
@@ -15713,13 +15757,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_12()); 
             // InternalQuCircuit.g:5148:2: ( rule__Loop__Group_12__0 )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA42_0==48) ) {
-                alt42=1;
+            if ( (LA46_0==48) ) {
+                alt46=1;
             }
-            switch (alt42) {
+            switch (alt46) {
                 case 1 :
                     // InternalQuCircuit.g:5148:3: rule__Loop__Group_12__0
                     {
@@ -15766,7 +15810,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5160:1: ( rule__Loop__Group__13__Impl rule__Loop__Group__14 )
             // InternalQuCircuit.g:5161:2: rule__Loop__Group__13__Impl rule__Loop__Group__14
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__13__Impl();
 
             state._fsp--;
@@ -15809,13 +15853,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_13()); 
             // InternalQuCircuit.g:5175:2: ( rule__Loop__Group_13__0 )?
-            int alt43=2;
-            int LA43_0 = input.LA(1);
+            int alt47=2;
+            int LA47_0 = input.LA(1);
 
-            if ( (LA43_0==49) ) {
-                alt43=1;
+            if ( (LA47_0==49) ) {
+                alt47=1;
             }
-            switch (alt43) {
+            switch (alt47) {
                 case 1 :
                     // InternalQuCircuit.g:5175:3: rule__Loop__Group_13__0
                     {
@@ -15862,7 +15906,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5187:1: ( rule__Loop__Group__14__Impl rule__Loop__Group__15 )
             // InternalQuCircuit.g:5188:2: rule__Loop__Group__14__Impl rule__Loop__Group__15
             {
-            pushFollow(FOLLOW_36);
+            pushFollow(FOLLOW_37);
             rule__Loop__Group__14__Impl();
 
             state._fsp--;
@@ -15905,13 +15949,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_14()); 
             // InternalQuCircuit.g:5202:2: ( rule__Loop__Group_14__0 )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA44_0==50) ) {
-                alt44=1;
+            if ( (LA48_0==50) ) {
+                alt48=1;
             }
-            switch (alt44) {
+            switch (alt48) {
                 case 1 :
                     // InternalQuCircuit.g:5202:3: rule__Loop__Group_14__0
                     {
@@ -15958,7 +16002,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5214:1: ( rule__Loop__Group__15__Impl rule__Loop__Group__16 )
             // InternalQuCircuit.g:5215:2: rule__Loop__Group__15__Impl rule__Loop__Group__16
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group__15__Impl();
 
             state._fsp--;
@@ -16108,7 +16152,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5268:1: ( rule__Loop__Group__17__Impl rule__Loop__Group__18 )
             // InternalQuCircuit.g:5269:2: rule__Loop__Group__17__Impl rule__Loop__Group__18
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group__17__Impl();
 
             state._fsp--;
@@ -16268,7 +16312,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5322:1: ( rule__Loop__Group__19__Impl rule__Loop__Group__20 )
             // InternalQuCircuit.g:5323:2: rule__Loop__Group__19__Impl rule__Loop__Group__20
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group__19__Impl();
 
             state._fsp--;
@@ -16343,7 +16387,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5349:1: ( rule__Loop__Group__20__Impl rule__Loop__Group__21 )
             // InternalQuCircuit.g:5350:2: rule__Loop__Group__20__Impl rule__Loop__Group__21
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group__20__Impl();
 
             state._fsp--;
@@ -16386,21 +16430,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_20()); 
             // InternalQuCircuit.g:5364:2: ( rule__Loop__Group_20__0 )*
-            loop45:
+            loop49:
             do {
-                int alt45=2;
-                int LA45_0 = input.LA(1);
+                int alt49=2;
+                int LA49_0 = input.LA(1);
 
-                if ( (LA45_0==26) ) {
-                    alt45=1;
+                if ( (LA49_0==26) ) {
+                    alt49=1;
                 }
 
 
-                switch (alt45) {
+                switch (alt49) {
             	case 1 :
             	    // InternalQuCircuit.g:5364:3: rule__Loop__Group_20__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Loop__Group_20__0();
 
             	    state._fsp--;
@@ -16410,7 +16454,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop45;
+            	    break loop49;
                 }
             } while (true);
 
@@ -16446,7 +16490,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5376:1: ( rule__Loop__Group__21__Impl rule__Loop__Group__22 )
             // InternalQuCircuit.g:5377:2: rule__Loop__Group__21__Impl rule__Loop__Group__22
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_38);
             rule__Loop__Group__21__Impl();
 
             state._fsp--;
@@ -16521,7 +16565,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5403:1: ( rule__Loop__Group__22__Impl rule__Loop__Group__23 )
             // InternalQuCircuit.g:5404:2: rule__Loop__Group__22__Impl rule__Loop__Group__23
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_38);
             rule__Loop__Group__22__Impl();
 
             state._fsp--;
@@ -16564,13 +16608,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_22()); 
             // InternalQuCircuit.g:5418:2: ( rule__Loop__Group_22__0 )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA46_0==33) ) {
-                alt46=1;
+            if ( (LA50_0==33) ) {
+                alt50=1;
             }
-            switch (alt46) {
+            switch (alt50) {
                 case 1 :
                     // InternalQuCircuit.g:5418:3: rule__Loop__Group_22__0
                     {
@@ -16617,7 +16661,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5430:1: ( rule__Loop__Group__23__Impl rule__Loop__Group__24 )
             // InternalQuCircuit.g:5431:2: rule__Loop__Group__23__Impl rule__Loop__Group__24
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_38);
             rule__Loop__Group__23__Impl();
 
             state._fsp--;
@@ -16660,13 +16704,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_23()); 
             // InternalQuCircuit.g:5445:2: ( rule__Loop__Group_23__0 )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA47_0==51) ) {
-                alt47=1;
+            if ( (LA51_0==51) ) {
+                alt51=1;
             }
-            switch (alt47) {
+            switch (alt51) {
                 case 1 :
                     // InternalQuCircuit.g:5445:3: rule__Loop__Group_23__0
                     {
@@ -16713,7 +16757,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5457:1: ( rule__Loop__Group__24__Impl rule__Loop__Group__25 )
             // InternalQuCircuit.g:5458:2: rule__Loop__Group__24__Impl rule__Loop__Group__25
             {
-            pushFollow(FOLLOW_37);
+            pushFollow(FOLLOW_38);
             rule__Loop__Group__24__Impl();
 
             state._fsp--;
@@ -16756,13 +16800,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_24()); 
             // InternalQuCircuit.g:5472:2: ( rule__Loop__Group_24__0 )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA48_0==52) ) {
-                alt48=1;
+            if ( (LA52_0==52) ) {
+                alt52=1;
             }
-            switch (alt48) {
+            switch (alt52) {
                 case 1 :
                     // InternalQuCircuit.g:5472:3: rule__Loop__Group_24__0
                     {
@@ -16884,7 +16928,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5511:1: ( rule__Loop__Group__26__Impl rule__Loop__Group__27 )
             // InternalQuCircuit.g:5512:2: rule__Loop__Group__26__Impl rule__Loop__Group__27
             {
-            pushFollow(FOLLOW_38);
+            pushFollow(FOLLOW_39);
             rule__Loop__Group__26__Impl();
 
             state._fsp--;
@@ -16969,7 +17013,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5538:1: ( rule__Loop__Group__27__Impl rule__Loop__Group__28 )
             // InternalQuCircuit.g:5539:2: rule__Loop__Group__27__Impl rule__Loop__Group__28
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group__27__Impl();
 
             state._fsp--;
@@ -17119,7 +17163,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5592:1: ( rule__Loop__Group__29__Impl rule__Loop__Group__30 )
             // InternalQuCircuit.g:5593:2: rule__Loop__Group__29__Impl rule__Loop__Group__30
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group__29__Impl();
 
             state._fsp--;
@@ -17279,7 +17323,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5646:1: ( rule__Loop__Group__31__Impl rule__Loop__Group__32 )
             // InternalQuCircuit.g:5647:2: rule__Loop__Group__31__Impl rule__Loop__Group__32
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group__31__Impl();
 
             state._fsp--;
@@ -17354,7 +17398,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5673:1: ( rule__Loop__Group__32__Impl rule__Loop__Group__33 )
             // InternalQuCircuit.g:5674:2: rule__Loop__Group__32__Impl rule__Loop__Group__33
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group__32__Impl();
 
             state._fsp--;
@@ -17397,21 +17441,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_32()); 
             // InternalQuCircuit.g:5688:2: ( rule__Loop__Group_32__0 )*
-            loop49:
+            loop53:
             do {
-                int alt49=2;
-                int LA49_0 = input.LA(1);
+                int alt53=2;
+                int LA53_0 = input.LA(1);
 
-                if ( (LA49_0==26) ) {
-                    alt49=1;
+                if ( (LA53_0==26) ) {
+                    alt53=1;
                 }
 
 
-                switch (alt49) {
+                switch (alt53) {
             	case 1 :
             	    // InternalQuCircuit.g:5688:3: rule__Loop__Group_32__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Loop__Group_32__0();
 
             	    state._fsp--;
@@ -17421,7 +17465,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop49;
+            	    break loop53;
                 }
             } while (true);
 
@@ -17457,7 +17501,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5700:1: ( rule__Loop__Group__33__Impl rule__Loop__Group__34 )
             // InternalQuCircuit.g:5701:2: rule__Loop__Group__33__Impl rule__Loop__Group__34
             {
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_40);
             rule__Loop__Group__33__Impl();
 
             state._fsp--;
@@ -17532,7 +17576,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5727:1: ( rule__Loop__Group__34__Impl rule__Loop__Group__35 )
             // InternalQuCircuit.g:5728:2: rule__Loop__Group__34__Impl rule__Loop__Group__35
             {
-            pushFollow(FOLLOW_39);
+            pushFollow(FOLLOW_40);
             rule__Loop__Group__34__Impl();
 
             state._fsp--;
@@ -17575,13 +17619,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_34()); 
             // InternalQuCircuit.g:5742:2: ( rule__Loop__Group_34__0 )?
-            int alt50=2;
-            int LA50_0 = input.LA(1);
+            int alt54=2;
+            int LA54_0 = input.LA(1);
 
-            if ( (LA50_0==53) ) {
-                alt50=1;
+            if ( (LA54_0==53) ) {
+                alt54=1;
             }
-            switch (alt50) {
+            switch (alt54) {
                 case 1 :
                     // InternalQuCircuit.g:5742:3: rule__Loop__Group_34__0
                     {
@@ -18163,7 +18207,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5943:1: ( rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1 )
             // InternalQuCircuit.g:5944:2: rule__Loop__Group_11__0__Impl rule__Loop__Group_11__1
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_41);
             rule__Loop__Group_11__0__Impl();
 
             state._fsp--;
@@ -18318,7 +18362,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:5997:1: ( rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1 )
             // InternalQuCircuit.g:5998:2: rule__Loop__Group_12__0__Impl rule__Loop__Group_12__1
             {
-            pushFollow(FOLLOW_40);
+            pushFollow(FOLLOW_41);
             rule__Loop__Group_12__0__Impl();
 
             state._fsp--;
@@ -18778,7 +18822,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6159:1: ( rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3 )
             // InternalQuCircuit.g:6160:2: rule__Loop__Group_14__2__Impl rule__Loop__Group_14__3
             {
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_42);
             rule__Loop__Group_14__2__Impl();
 
             state._fsp--;
@@ -18863,7 +18907,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6186:1: ( rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4 )
             // InternalQuCircuit.g:6187:2: rule__Loop__Group_14__3__Impl rule__Loop__Group_14__4
             {
-            pushFollow(FOLLOW_41);
+            pushFollow(FOLLOW_42);
             rule__Loop__Group_14__3__Impl();
 
             state._fsp--;
@@ -18906,21 +18950,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_14_3()); 
             // InternalQuCircuit.g:6201:2: ( rule__Loop__Group_14_3__0 )*
-            loop51:
+            loop55:
             do {
-                int alt51=2;
-                int LA51_0 = input.LA(1);
+                int alt55=2;
+                int LA55_0 = input.LA(1);
 
-                if ( (LA51_0==26) ) {
-                    alt51=1;
+                if ( (LA55_0==26) ) {
+                    alt55=1;
                 }
 
 
-                switch (alt51) {
+                switch (alt55) {
             	case 1 :
             	    // InternalQuCircuit.g:6201:3: rule__Loop__Group_14_3__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Loop__Group_14_3__0();
 
             	    state._fsp--;
@@ -18930,7 +18974,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop51;
+            	    break loop55;
                 }
             } while (true);
 
@@ -19266,7 +19310,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6321:1: ( rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2 )
             // InternalQuCircuit.g:6322:2: rule__Loop__Group_20__1__Impl rule__Loop__Group_20__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_20__1__Impl();
 
             state._fsp--;
@@ -19496,7 +19540,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6402:1: ( rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1 )
             // InternalQuCircuit.g:6403:2: rule__Loop__Group_22__0__Impl rule__Loop__Group_22__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_22__0__Impl();
 
             state._fsp--;
@@ -19571,7 +19615,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6429:1: ( rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2 )
             // InternalQuCircuit.g:6430:2: rule__Loop__Group_22__1__Impl rule__Loop__Group_22__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_22__1__Impl();
 
             state._fsp--;
@@ -19646,7 +19690,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6456:1: ( rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3 )
             // InternalQuCircuit.g:6457:2: rule__Loop__Group_22__2__Impl rule__Loop__Group_22__3
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_22__2__Impl();
 
             state._fsp--;
@@ -19731,7 +19775,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6483:1: ( rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4 )
             // InternalQuCircuit.g:6484:2: rule__Loop__Group_22__3__Impl rule__Loop__Group_22__4
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_22__3__Impl();
 
             state._fsp--;
@@ -19774,21 +19818,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_22_3()); 
             // InternalQuCircuit.g:6498:2: ( rule__Loop__Group_22_3__0 )*
-            loop52:
+            loop56:
             do {
-                int alt52=2;
-                int LA52_0 = input.LA(1);
+                int alt56=2;
+                int LA56_0 = input.LA(1);
 
-                if ( (LA52_0==26) ) {
-                    alt52=1;
+                if ( (LA56_0==26) ) {
+                    alt56=1;
                 }
 
 
-                switch (alt52) {
+                switch (alt56) {
             	case 1 :
             	    // InternalQuCircuit.g:6498:3: rule__Loop__Group_22_3__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Loop__Group_22_3__0();
 
             	    state._fsp--;
@@ -19798,7 +19842,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop52;
+            	    break loop56;
                 }
             } while (true);
 
@@ -19904,7 +19948,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6537:1: ( rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1 )
             // InternalQuCircuit.g:6538:2: rule__Loop__Group_22_3__0__Impl rule__Loop__Group_22_3__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_22_3__0__Impl();
 
             state._fsp--;
@@ -20059,7 +20103,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6591:1: ( rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1 )
             // InternalQuCircuit.g:6592:2: rule__Loop__Group_23__0__Impl rule__Loop__Group_23__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_23__0__Impl();
 
             state._fsp--;
@@ -20134,7 +20178,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6618:1: ( rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2 )
             // InternalQuCircuit.g:6619:2: rule__Loop__Group_23__1__Impl rule__Loop__Group_23__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_23__1__Impl();
 
             state._fsp--;
@@ -20209,7 +20253,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6645:1: ( rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3 )
             // InternalQuCircuit.g:6646:2: rule__Loop__Group_23__2__Impl rule__Loop__Group_23__3
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_23__2__Impl();
 
             state._fsp--;
@@ -20294,7 +20338,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6672:1: ( rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4 )
             // InternalQuCircuit.g:6673:2: rule__Loop__Group_23__3__Impl rule__Loop__Group_23__4
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_23__3__Impl();
 
             state._fsp--;
@@ -20337,21 +20381,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_23_3()); 
             // InternalQuCircuit.g:6687:2: ( rule__Loop__Group_23_3__0 )*
-            loop53:
+            loop57:
             do {
-                int alt53=2;
-                int LA53_0 = input.LA(1);
+                int alt57=2;
+                int LA57_0 = input.LA(1);
 
-                if ( (LA53_0==26) ) {
-                    alt53=1;
+                if ( (LA57_0==26) ) {
+                    alt57=1;
                 }
 
 
-                switch (alt53) {
+                switch (alt57) {
             	case 1 :
             	    // InternalQuCircuit.g:6687:3: rule__Loop__Group_23_3__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Loop__Group_23_3__0();
 
             	    state._fsp--;
@@ -20361,7 +20405,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop53;
+            	    break loop57;
                 }
             } while (true);
 
@@ -20467,7 +20511,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6726:1: ( rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1 )
             // InternalQuCircuit.g:6727:2: rule__Loop__Group_23_3__0__Impl rule__Loop__Group_23_3__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_23_3__0__Impl();
 
             state._fsp--;
@@ -20622,7 +20666,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6780:1: ( rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1 )
             // InternalQuCircuit.g:6781:2: rule__Loop__Group_24__0__Impl rule__Loop__Group_24__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_24__0__Impl();
 
             state._fsp--;
@@ -20697,7 +20741,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6807:1: ( rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2 )
             // InternalQuCircuit.g:6808:2: rule__Loop__Group_24__1__Impl rule__Loop__Group_24__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_24__1__Impl();
 
             state._fsp--;
@@ -20772,7 +20816,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6834:1: ( rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3 )
             // InternalQuCircuit.g:6835:2: rule__Loop__Group_24__2__Impl rule__Loop__Group_24__3
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_24__2__Impl();
 
             state._fsp--;
@@ -20857,7 +20901,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6861:1: ( rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4 )
             // InternalQuCircuit.g:6862:2: rule__Loop__Group_24__3__Impl rule__Loop__Group_24__4
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_24__3__Impl();
 
             state._fsp--;
@@ -20900,21 +20944,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_24_3()); 
             // InternalQuCircuit.g:6876:2: ( rule__Loop__Group_24_3__0 )*
-            loop54:
+            loop58:
             do {
-                int alt54=2;
-                int LA54_0 = input.LA(1);
+                int alt58=2;
+                int LA58_0 = input.LA(1);
 
-                if ( (LA54_0==26) ) {
-                    alt54=1;
+                if ( (LA58_0==26) ) {
+                    alt58=1;
                 }
 
 
-                switch (alt54) {
+                switch (alt58) {
             	case 1 :
             	    // InternalQuCircuit.g:6876:3: rule__Loop__Group_24_3__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Loop__Group_24_3__0();
 
             	    state._fsp--;
@@ -20924,7 +20968,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop54;
+            	    break loop58;
                 }
             } while (true);
 
@@ -21030,7 +21074,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6915:1: ( rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1 )
             // InternalQuCircuit.g:6916:2: rule__Loop__Group_24_3__0__Impl rule__Loop__Group_24_3__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_24_3__0__Impl();
 
             state._fsp--;
@@ -21260,7 +21304,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:6996:1: ( rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2 )
             // InternalQuCircuit.g:6997:2: rule__Loop__Group_32__1__Impl rule__Loop__Group_32__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_32__1__Impl();
 
             state._fsp--;
@@ -21490,7 +21534,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7077:1: ( rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1 )
             // InternalQuCircuit.g:7078:2: rule__Loop__Group_34__0__Impl rule__Loop__Group_34__1
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_24);
             rule__Loop__Group_34__0__Impl();
 
             state._fsp--;
@@ -21640,7 +21684,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7131:1: ( rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3 )
             // InternalQuCircuit.g:7132:2: rule__Loop__Group_34__2__Impl rule__Loop__Group_34__3
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_34__2__Impl();
 
             state._fsp--;
@@ -21800,7 +21844,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7185:1: ( rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5 )
             // InternalQuCircuit.g:7186:2: rule__Loop__Group_34__4__Impl rule__Loop__Group_34__5
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_34__4__Impl();
 
             state._fsp--;
@@ -21875,7 +21919,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7212:1: ( rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6 )
             // InternalQuCircuit.g:7213:2: rule__Loop__Group_34__5__Impl rule__Loop__Group_34__6
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_26);
             rule__Loop__Group_34__5__Impl();
 
             state._fsp--;
@@ -21918,21 +21962,21 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getLoopAccess().getGroup_34_5()); 
             // InternalQuCircuit.g:7227:2: ( rule__Loop__Group_34_5__0 )*
-            loop55:
+            loop59:
             do {
-                int alt55=2;
-                int LA55_0 = input.LA(1);
+                int alt59=2;
+                int LA59_0 = input.LA(1);
 
-                if ( (LA55_0==26) ) {
-                    alt55=1;
+                if ( (LA59_0==26) ) {
+                    alt59=1;
                 }
 
 
-                switch (alt55) {
+                switch (alt59) {
             	case 1 :
             	    // InternalQuCircuit.g:7227:3: rule__Loop__Group_34_5__0
             	    {
-            	    pushFollow(FOLLOW_20);
+            	    pushFollow(FOLLOW_21);
             	    rule__Loop__Group_34_5__0();
 
             	    state._fsp--;
@@ -21942,7 +21986,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             	    break;
 
             	default :
-            	    break loop55;
+            	    break loop59;
                 }
             } while (true);
 
@@ -22123,7 +22167,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7293:1: ( rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2 )
             // InternalQuCircuit.g:7294:2: rule__Loop__Group_34_5__1__Impl rule__Loop__Group_34_5__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__Loop__Group_34_5__1__Impl();
 
             state._fsp--;
@@ -22476,13 +22520,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getOperationAccess().getGroup_1()); 
             // InternalQuCircuit.g:7415:2: ( rule__Operation__Group_1__0 )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA56_0==21) ) {
-                alt56=1;
+            if ( (LA60_0==21) ) {
+                alt60=1;
             }
-            switch (alt56) {
+            switch (alt60) {
                 case 1 :
                     // InternalQuCircuit.g:7415:3: rule__Operation__Group_1__0
                     {
@@ -22759,7 +22803,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7509:1: ( rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1 )
             // InternalQuCircuit.g:7510:2: rule__ElementSelector__Group__0__Impl rule__ElementSelector__Group__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__ElementSelector__Group__0__Impl();
 
             state._fsp--;
@@ -22834,7 +22878,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7536:1: ( rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2 )
             // InternalQuCircuit.g:7537:2: rule__ElementSelector__Group__1__Impl rule__ElementSelector__Group__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__ElementSelector__Group__1__Impl();
 
             state._fsp--;
@@ -22877,13 +22921,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getElementSelectorAccess().getGroup_1()); 
             // InternalQuCircuit.g:7551:2: ( rule__ElementSelector__Group_1__0 )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( ((LA57_0>=RULE_STRING && LA57_0<=RULE_ID)) ) {
-                alt57=1;
+            if ( ((LA61_0>=RULE_STRING && LA61_0<=RULE_ID)) ) {
+                alt61=1;
             }
-            switch (alt57) {
+            switch (alt61) {
                 case 1 :
                     // InternalQuCircuit.g:7551:3: rule__ElementSelector__Group_1__0
                     {
@@ -23010,7 +23054,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7590:1: ( rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1 )
             // InternalQuCircuit.g:7591:2: rule__ElementSelector__Group_1__0__Impl rule__ElementSelector__Group_1__1
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_43);
             rule__ElementSelector__Group_1__0__Impl();
 
             state._fsp--;
@@ -23165,7 +23209,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7644:1: ( rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1 )
             // InternalQuCircuit.g:7645:2: rule__RangeSelector__Group__0__Impl rule__RangeSelector__Group__1
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__RangeSelector__Group__0__Impl();
 
             state._fsp--;
@@ -23240,7 +23284,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7671:1: ( rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2 )
             // InternalQuCircuit.g:7672:2: rule__RangeSelector__Group__1__Impl rule__RangeSelector__Group__2
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_25);
             rule__RangeSelector__Group__1__Impl();
 
             state._fsp--;
@@ -23283,13 +23327,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getRangeSelectorAccess().getGroup_1()); 
             // InternalQuCircuit.g:7686:2: ( rule__RangeSelector__Group_1__0 )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( ((LA58_0>=RULE_STRING && LA58_0<=RULE_ID)) ) {
-                alt58=1;
+            if ( ((LA62_0>=RULE_STRING && LA62_0<=RULE_ID)) ) {
+                alt62=1;
             }
-            switch (alt58) {
+            switch (alt62) {
                 case 1 :
                     // InternalQuCircuit.g:7686:3: rule__RangeSelector__Group_1__0
                     {
@@ -23336,7 +23380,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7698:1: ( rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3 )
             // InternalQuCircuit.g:7699:2: rule__RangeSelector__Group__2__Impl rule__RangeSelector__Group__3
             {
-            pushFollow(FOLLOW_43);
+            pushFollow(FOLLOW_44);
             rule__RangeSelector__Group__2__Impl();
 
             state._fsp--;
@@ -23576,7 +23620,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7779:1: ( rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1 )
             // InternalQuCircuit.g:7780:2: rule__RangeSelector__Group_1__0__Impl rule__RangeSelector__Group_1__1
             {
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_43);
             rule__RangeSelector__Group_1__0__Impl();
 
             state._fsp--;
@@ -23731,7 +23775,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7833:1: ( rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1 )
             // InternalQuCircuit.g:7834:2: rule__EDoubleObject__Group__0__Impl rule__EDoubleObject__Group__1
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__EDoubleObject__Group__0__Impl();
 
             state._fsp--;
@@ -23774,13 +23818,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getEDoubleObjectAccess().getHyphenMinusKeyword_0()); 
             // InternalQuCircuit.g:7848:2: ( '-' )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            if ( (LA59_0==54) ) {
-                alt59=1;
+            if ( (LA63_0==54) ) {
+                alt63=1;
             }
-            switch (alt59) {
+            switch (alt63) {
                 case 1 :
                     // InternalQuCircuit.g:7848:3: '-'
                     {
@@ -23823,7 +23867,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7860:1: ( rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2 )
             // InternalQuCircuit.g:7861:2: rule__EDoubleObject__Group__1__Impl rule__EDoubleObject__Group__2
             {
-            pushFollow(FOLLOW_32);
+            pushFollow(FOLLOW_33);
             rule__EDoubleObject__Group__1__Impl();
 
             state._fsp--;
@@ -23866,13 +23910,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getEDoubleObjectAccess().getINTTerminalRuleCall_1()); 
             // InternalQuCircuit.g:7875:2: ( RULE_INT )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA60_0==RULE_INT) ) {
-                alt60=1;
+            if ( (LA64_0==RULE_INT) ) {
+                alt64=1;
             }
-            switch (alt60) {
+            switch (alt64) {
                 case 1 :
                     // InternalQuCircuit.g:7875:3: RULE_INT
                     {
@@ -23990,7 +24034,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7914:1: ( rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4 )
             // InternalQuCircuit.g:7915:2: rule__EDoubleObject__Group__3__Impl rule__EDoubleObject__Group__4
             {
-            pushFollow(FOLLOW_44);
+            pushFollow(FOLLOW_45);
             rule__EDoubleObject__Group__3__Impl();
 
             state._fsp--;
@@ -24103,13 +24147,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getEDoubleObjectAccess().getGroup_4()); 
             // InternalQuCircuit.g:7955:2: ( rule__EDoubleObject__Group_4__0 )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( ((LA61_0>=11 && LA61_0<=12)) ) {
-                alt61=1;
+            if ( ((LA65_0>=11 && LA65_0<=12)) ) {
+                alt65=1;
             }
-            switch (alt61) {
+            switch (alt65) {
                 case 1 :
                     // InternalQuCircuit.g:7955:3: rule__EDoubleObject__Group_4__0
                     {
@@ -24156,7 +24200,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7968:1: ( rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1 )
             // InternalQuCircuit.g:7969:2: rule__EDoubleObject__Group_4__0__Impl rule__EDoubleObject__Group_4__1
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_46);
             rule__EDoubleObject__Group_4__0__Impl();
 
             state._fsp--;
@@ -24241,7 +24285,7 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             // InternalQuCircuit.g:7995:1: ( rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2 )
             // InternalQuCircuit.g:7996:2: rule__EDoubleObject__Group_4__1__Impl rule__EDoubleObject__Group_4__2
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_46);
             rule__EDoubleObject__Group_4__1__Impl();
 
             state._fsp--;
@@ -24284,13 +24328,13 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
             {
              before(grammarAccess.getEDoubleObjectAccess().getHyphenMinusKeyword_4_1()); 
             // InternalQuCircuit.g:8010:2: ( '-' )?
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA62_0==54) ) {
-                alt62=1;
+            if ( (LA66_0==54) ) {
+                alt66=1;
             }
-            switch (alt62) {
+            switch (alt66) {
                 case 1 :
                     // InternalQuCircuit.g:8010:3: '-'
                     {
@@ -27640,33 +27684,34 @@ public class InternalQuCircuitParser extends AbstractInternalContentAssistParser
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001040000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000034108000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004040000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000024000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000084000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0100000000000030L});
-    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000030000000L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000600040000L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000003800040000L});
-    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x00C0000000000040L});
-    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0100000030000000L});
-    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000200040000L});
-    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x1F07F00020000000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0018040200000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0020000000040000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x000000000000E000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000004400000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0040000000000040L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000020030L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000034108000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004040000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000024000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000084000000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0100000000020030L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000030000000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000600040000L});
+    public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000003800040000L});
+    public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x00C0000000000040L});
+    public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0100000030000000L});
+    public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000200040000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x1F07F00020000000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0018040200000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0020000000040000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x000000000000E000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000004400000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0040000000000040L});
 
 }
